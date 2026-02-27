@@ -1,4 +1,8 @@
-"""Configuration for Hierarchical Routed Sinkformer experiments."""
+"""Configuration for HRS v1 and v2 experiments.
+
+v1: Hierarchical Routed Sinkformer (routing + tiered compute)
+v2: Attention->Conv backbone + PEER FFN + Engrams (no routing)
+"""
 
 from dataclasses import dataclass, field
 from enum import Enum
@@ -6,6 +10,7 @@ from typing import Optional, List
 
 
 class AblationConfig(Enum):
+    # --- v1 configs (preserved for reproducibility) ---
     DENSE_BASELINE = "dense_baseline"           # Standard transformer, CE only
     DUAL_HEAD = "dual_head"                     # + locality head (dual objective)
     DUAL_HEAD_ROUTER = "dual_head_router"       # + learned router + tiered compute
@@ -13,6 +18,12 @@ class AblationConfig(Enum):
     FULL_CORE = "full_core"                     # All core + phased training
     FULL_HRS = "full_hrs"                       # Core + engrams (all 5 phases)
     FULL_HRS_REFINED = "full_hrs_refined"       # Full HRS + engram refinement
+
+    # --- v2 configs ---
+    V2_ATTN_CONV = "v2_attn_conv"              # Attention->Conv backbone, standard MLP, no dual-head
+    V2_ATTN_CONV_DUAL = "v2_attn_conv_dual"    # + dual-head
+    V2_ATTN_CONV_PEER = "v2_attn_conv_peer"    # + PEER FFN (replaces MLP)
+    V2_FULL = "v2_full"                        # + Engrams + phased training
 
 
 @dataclass
@@ -54,6 +65,15 @@ class TierConfig:
 
 
 @dataclass
+class PEERConfig:
+    """Configuration for Parameter Efficient Expert Retrieval."""
+    enabled: bool = False
+    n_sub_keys: int = 512         # 2 sets of 512 sub-keys -> 262,144 experts
+    n_heads: int = 8              # number of retrieval heads
+    top_k: int = 16               # experts per head -> 128 active per token
+
+
+@dataclass
 class EngramConfig:
     enabled: bool = False
     window_size: int = 128        # N tokens compressed into K engrams
@@ -66,28 +86,32 @@ class EngramConfig:
 @dataclass
 class PhasedTrainingConfig:
     enabled: bool = False
-    # Phase durations (in steps) - 0 means use metric-triggered transitions
+    # v1 phase durations (in steps) - 0 means use metric-triggered transitions
     phase1_steps: int = 0         # Foundation
-    phase2_steps: int = 0         # Geometry
-    phase3_steps: int = 0         # Specialization
-    phase4_steps: int = 0         # Compression
-    phase5_steps: int = 0         # Refinement
-    # LR multipliers per phase (relative to base LR)
+    phase2_steps: int = 0         # Geometry (v1) / Expert Specialization (v2)
+    phase3_steps: int = 0         # Specialization (v1) / Compression (v2)
+    phase4_steps: int = 0         # Compression (v1) / Joint Fine-tuning (v2)
+    phase5_steps: int = 0         # Refinement (v1 only)
+
+    # v1 LR multipliers per phase (relative to base LR)
     # Format: [backbone, gen_head, locality_head, router, conv, expert, attention, sink, engram]
-    # Phase 1 (Foundation): backbone + gen_head + conv at full LR
     phase1_lr_mult: List[float] = field(default_factory=lambda: [1.0, 1.0, 0.01, 0.01, 1.0, 0.01, 0.01, 0.01, 0.0])
-    # Phase 2 (Geometry): add locality head + router
     phase2_lr_mult: List[float] = field(default_factory=lambda: [0.5, 0.5, 1.0, 1.0, 0.5, 0.1, 0.1, 0.1, 0.0])
-    # Phase 3 (Specialization): router + experts + sink
     phase3_lr_mult: List[float] = field(default_factory=lambda: [0.3, 0.3, 0.3, 1.0, 0.5, 1.0, 0.5, 1.0, 0.0])
-    # Phase 4 (Compression): engram encoder
     phase4_lr_mult: List[float] = field(default_factory=lambda: [0.1, 0.1, 0.1, 0.3, 0.1, 0.3, 0.1, 0.3, 1.0])
-    # Phase 5 (Refinement): freeze engram, retrain consumers
     phase5_lr_mult: List[float] = field(default_factory=lambda: [0.3, 0.5, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.0])
+
+    # v2 LR multipliers per phase (relative to base LR)
+    # Format: [backbone, gen_head, locality_head, peer, engram]
+    v2_phase1_lr_mult: List[float] = field(default_factory=lambda: [1.0, 1.0, 1.0, 0.1, 0.0])
+    v2_phase2_lr_mult: List[float] = field(default_factory=lambda: [0.3, 0.3, 0.3, 1.0, 0.0])
+    v2_phase3_lr_mult: List[float] = field(default_factory=lambda: [0.1, 0.1, 0.1, 0.3, 1.0])
+    v2_phase4_lr_mult: List[float] = field(default_factory=lambda: [0.3, 0.3, 0.3, 0.5, 0.5])
+
     # Metric thresholds for phase transitions
-    val_loss_patience: int = 3    # evals without improvement to trigger transition
-    rank_stability_window: int = 3  # evals to check rank stability
-    routing_entropy_patience: int = 3  # evals for routing entropy stability
+    val_loss_patience: int = 3
+    rank_stability_window: int = 3
+    routing_entropy_patience: int = 3
 
 
 @dataclass
@@ -129,6 +153,7 @@ class ExperimentConfig:
     model: ModelConfig = field(default_factory=ModelConfig)
     router: RouterConfig = field(default_factory=RouterConfig)
     tier: TierConfig = field(default_factory=TierConfig)
+    peer: PEERConfig = field(default_factory=PEERConfig)
     engram: EngramConfig = field(default_factory=EngramConfig)
     phased: PhasedTrainingConfig = field(default_factory=PhasedTrainingConfig)
     locality: LocalityConfig = field(default_factory=LocalityConfig)
@@ -147,8 +172,9 @@ class ExperimentConfig:
         cfg.training.ablation = ablation
         cfg.run_name = ablation.value
 
+        # === v1 configs ===
+
         if ablation == AblationConfig.DENSE_BASELINE:
-            # Pure transformer, CE only
             pass
 
         elif ablation == AblationConfig.DUAL_HEAD:
@@ -156,16 +182,13 @@ class ExperimentConfig:
 
         elif ablation == AblationConfig.DUAL_HEAD_ROUTER:
             cfg.locality.enabled = True
-            # Router and tiers enabled implicitly when ablation >= DUAL_HEAD_ROUTER
 
         elif ablation == AblationConfig.DUAL_HEAD_ROUTER_SINK:
             cfg.locality.enabled = True
-            # Router + tiers + sink channel
 
         elif ablation == AblationConfig.FULL_CORE:
             cfg.locality.enabled = True
             cfg.phased.enabled = True
-            # Set default phase durations for non-metric-triggered runs
             cfg.phased.phase1_steps = 10000
             cfg.phased.phase2_steps = 10000
             cfg.phased.phase3_steps = 10000
@@ -189,9 +212,34 @@ class ExperimentConfig:
             cfg.phased.phase3_steps = 10000
             cfg.phased.phase4_steps = 12000
             cfg.phased.phase5_steps = 12000
-            # Phase 5: engram LR = 0.5 so injector retrains
-            # (encoder frozen via requires_grad=False in train.py)
             cfg.phased.phase5_lr_mult = [0.3, 0.5, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.5]
+
+        # === v2 configs ===
+
+        elif ablation == AblationConfig.V2_ATTN_CONV:
+            # Attention->Conv backbone, standard MLP, no dual-head
+            pass
+
+        elif ablation == AblationConfig.V2_ATTN_CONV_DUAL:
+            # + dual-head (locality)
+            cfg.locality.enabled = True
+
+        elif ablation == AblationConfig.V2_ATTN_CONV_PEER:
+            # + PEER FFN (replaces standard MLP)
+            cfg.locality.enabled = True
+            cfg.peer.enabled = True
+
+        elif ablation == AblationConfig.V2_FULL:
+            # Full v2: backbone + PEER + engrams + dual-head + phased training
+            cfg.locality.enabled = True
+            cfg.peer.enabled = True
+            cfg.engram.enabled = True
+            cfg.phased.enabled = True
+            # 3-4 phase schedule for v2
+            cfg.phased.phase1_steps = 12000   # Foundation: backbone + dual-head + conv
+            cfg.phased.phase2_steps = 12000   # Expert Specialization: PEER full LR
+            cfg.phased.phase3_steps = 14000   # Compression: engram activation
+            cfg.phased.phase4_steps = 12000   # Joint fine-tuning
 
         # Apply any overrides
         for key, val in overrides.items():
@@ -203,7 +251,12 @@ class ExperimentConfig:
 
         return cfg
 
+    def is_v2(self) -> bool:
+        """Check if this is a v2 config."""
+        return self.training.ablation.value.startswith("v2_")
+
     def uses_router(self) -> bool:
+        """v1 only: uses routing machinery."""
         return self.training.ablation.value in (
             "dual_head_router", "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
@@ -217,10 +270,31 @@ class ExperimentConfig:
 
     def uses_engrams(self) -> bool:
         return self.engram.enabled and self.training.ablation.value in (
-            "full_hrs", "full_hrs_refined",
+            "full_hrs", "full_hrs_refined", "v2_full",
         )
+
+    def uses_peer(self) -> bool:
+        return self.peer.enabled and self.training.ablation.value in (
+            "v2_attn_conv_peer", "v2_full",
+        )
+
+    def uses_attn_conv_backbone(self) -> bool:
+        """v2: fixed attention->conv layer structure."""
+        return self.is_v2()
 
     def uses_phased_training(self) -> bool:
         return self.phased.enabled and self.training.ablation.value in (
-            "full_core", "full_hrs", "full_hrs_refined",
+            "full_core", "full_hrs", "full_hrs_refined", "v2_full",
         )
+
+    def n_attention_layers(self) -> int:
+        """Number of layers using attention (first half for v2, all for v1)."""
+        if self.is_v2():
+            return self.model.n_layers // 2
+        return self.model.n_layers
+
+    def n_conv_layers(self) -> int:
+        """Number of layers using conv (second half for v2, 0 for v1)."""
+        if self.is_v2():
+            return self.model.n_layers - self.model.n_layers // 2
+        return 0

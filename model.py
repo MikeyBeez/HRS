@@ -1,14 +1,9 @@
-"""Hierarchical Routed Sinkformer (HRS) model.
+"""HRS model — supports both v1 (routed) and v2 (attention->conv + PEER) architectures.
 
-Integrates all HRS components:
-- Backbone transformer with RoPE
-- Dual heads (generation + locality)
-- Learned router with Sinkhorn normalization
-- Tiered compute (conv, expert, attention, sink)
-- Engram encoder for long-range compression
+v1: Backbone transformer with router + tiered compute (conv, expert, attn, sink)
+v2: Fixed attention->conv backbone with PEER FFN replacing standard MLP
 
-The model adapts to different ablation configurations, disabling
-components that aren't needed for a given experiment.
+Shared components: dual heads, engram encoder/injector, RoPE.
 """
 
 import math
@@ -18,23 +13,25 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from config import ExperimentConfig, ModelConfig, AblationConfig
+from config import ExperimentConfig, ModelConfig, PEERConfig
 from tiers import ConvTier, ExpertTier, AttentionTier, SinkTier, RotaryEmbedding, apply_rotary_emb, rotate_half
 from router import TokenRouter, routing_balance_loss, routing_entropy_loss, routing_flops_loss
 from engram import EngramEncoder, EngramInjector, engram_reconstruction_loss
+from peer import PEER
 
 
 @dataclass
 class HRSOutput:
     logits: torch.Tensor
     layer_representations: list       # per-layer hidden states for locality loss
-    routing_weights: list             # per-layer routing decisions
+    routing_weights: list             # per-layer routing decisions (v1 only)
     routing_balance_loss: torch.Tensor  # aggregate balance loss across layers
     routing_entropy_loss: torch.Tensor  # negative per-token entropy (exploration)
     routing_flops_loss: torch.Tensor  # expected FLOPs cost of routing decisions
     engrams: torch.Tensor             # engram vectors (if applicable)
     engram_recon_loss: torch.Tensor   # engram reconstruction loss
     attention_weights: list           # for evaluation metrics (optional)
+    peer_indices: list                # PEER expert indices (v2, for utilization tracking)
 
 
 class CausalSelfAttention(nn.Module):
@@ -100,8 +97,44 @@ class MLP(nn.Module):
         return self.dropout(self.fc2(F.gelu(self.fc1(x))))
 
 
+class CausalConv(nn.Module):
+    """Causal depthwise 1D convolution block (v2 structural layer).
+
+    Same as ConvTier but used as a structural component, not a routed tier.
+    """
+
+    def __init__(self, cfg: ModelConfig, kernel_size: int = 7):
+        super().__init__()
+        d = cfg.d_model
+        self.causal_pad = kernel_size - 1
+        self.conv = nn.Conv1d(
+            d, d, kernel_size=kernel_size, padding=0, groups=d, bias=False
+        )
+        self.out_proj = nn.Linear(d, d, bias=cfg.bias)
+        self.norm = nn.LayerNorm(d)
+        self.dropout = nn.Dropout(cfg.dropout)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Apply causal depthwise convolution.
+
+        Args:
+            x: (B, T, d_model)
+        Returns:
+            (B, T, d_model)
+        """
+        h = x.transpose(1, 2)  # (B, D, T)
+        h = F.pad(h, (self.causal_pad, 0))  # left-pad for causality
+        h = self.conv(h).transpose(1, 2)  # (B, T, D)
+        h = self.dropout(self.norm(self.out_proj(h)))
+        return h
+
+
+# ============================================================
+# v1 Block (routing + tiered compute)
+# ============================================================
+
 class HRSBlock(nn.Module):
-    """Single HRS transformer block.
+    """v1 HRS transformer block.
 
     For dense_baseline/dual_head: standard pre-norm transformer block.
     For routed configs: adds router + tiered compute after attention.
@@ -123,103 +156,140 @@ class HRSBlock(nn.Module):
         if self.use_router:
             self.router = TokenRouter(model_cfg, cfg.router)
 
-            # Tiers replace the MLP — same residual slot
             self.conv_tier = ConvTier(model_cfg, cfg.tier)
             self.expert_tier = ExpertTier(model_cfg, cfg.tier)
             self.attn_tier = AttentionTier(model_cfg)
             self.sink_tier = SinkTier(cfg.tier)
 
-            # Output gate: scales down tier outputs for stable residual addition.
-            # Without this, conv/expert LayerNorm produces ~1.0 scale outputs,
-            # while baseline MLP fc2 is scaled to ~0.007. This mismatch causes
-            # the residual stream to explode and effective rank to collapse.
-            # Initialized to small value (like GPT-2 residual scaling).
             self.tier_output_gate = nn.Parameter(
                 torch.full((model_cfg.d_model,), 0.1)
             )
 
-            # Sink KV scaling (for sink channel effect on attention)
             self.use_sink = cfg.uses_sink()
             if self.use_sink:
                 self.sink_kv_scale = nn.Parameter(
                     torch.tensor(cfg.tier.sink_init_scale)
                 )
         else:
-            # Standard MLP when no routing
             self.mlp = MLP(model_cfg)
 
     def forward(
         self, x, step: int = 0, return_weights: bool = False
     ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-        """Forward pass through HRS block.
-
-        When routing is enabled, tiers REPLACE the MLP (not add on top).
-        This keeps total compute comparable to baseline for most tokens,
-        and cheaper for conv/sink-routed tokens.
-
-        Returns:
-            x: (B, T, D) output hidden states
-            routing_w: (B, T, n_tiers) or None
-            attn_w: (B, H, T, T) or None
-        """
-        # Attention (always)
         attn_out, attn_w = self.attn(self.ln1(x), return_weights=return_weights)
         x = x + attn_out
 
         routing_w = None
 
         if self.use_router:
-            # Router decides how to process each token (replaces MLP)
             h = self.ln2(x)
-            routing_w = self.router(h, step=step)  # (B, T, n_tiers)
+            routing_w = self.router(h, step=step)
 
-            # Apply each tier to the pre-norm input
-            conv_out = self.conv_tier(h)      # (B, T, D) — O(n)
-            expert_out = self.expert_tier(h)  # (B, T, D) — O(n)
-            attn_out2 = self.attn_tier(h)     # (B, T, D) — O(n^2)
-            sink_out = self.sink_tier(h)      # (B, T, D) — O(1)
+            conv_out = self.conv_tier(h)
+            expert_out = self.expert_tier(h)
+            attn_out2 = self.attn_tier(h)
+            sink_out = self.sink_tier(h)
 
-            # Weighted combination: out = sum(w_i * tier_i(x))
             tier_outputs = torch.stack(
                 [conv_out, expert_out, attn_out2, sink_out], dim=-1
-            )  # (B, T, D, 4)
-            w = routing_w.unsqueeze(2)  # (B, T, 1, 4)
-            combined = (tier_outputs * w).sum(dim=-1)  # (B, T, D)
-
-            # Scale tier output for stable residual addition
+            )
+            w = routing_w.unsqueeze(2)
+            combined = (tier_outputs * w).sum(dim=-1)
             x = x + combined * self.tier_output_gate
 
-            # Sink KV scaling: scale down KV entries for sink-routed tokens
             if self.use_sink:
-                sink_weight = routing_w[:, :, 3]  # (B, T) - sink tier is index 3
+                sink_weight = routing_w[:, :, 3]
                 kv_scale = 1.0 - sink_weight * (1.0 - self.sink_kv_scale.abs())
                 x = x * kv_scale.unsqueeze(-1)
         else:
-            # Standard MLP path (baseline / dual_head)
             x = x + self.mlp(self.ln2(x))
 
         return x, routing_w, attn_w
 
 
-class HRSTransformer(nn.Module):
-    """Hierarchical Routed Sinkformer.
+# ============================================================
+# v2 Block (attention->conv backbone + PEER FFN)
+# ============================================================
 
-    Supports all ablation configurations from dense baseline to full HRS.
+class HRSv2Block(nn.Module):
+    """v2 HRS block: structural attention or conv + PEER or MLP FFN.
+
+    Layer structure determined by layer_idx:
+    - Layers 0..n_attn-1: CausalSelfAttention + FFN
+    - Layers n_attn..n_layers-1: CausalConv + FFN
+
+    FFN is PEER when peer_cfg.enabled, else standard MLP.
     """
+
+    def __init__(self, cfg: ExperimentConfig, layer_idx: int):
+        super().__init__()
+        self.layer_idx = layer_idx
+        self.cfg = cfg
+        model_cfg = cfg.model
+
+        n_attn = cfg.n_attention_layers()
+        self.use_attention = (layer_idx < n_attn)
+
+        # Block 1: Attention or Conv
+        self.ln1 = nn.LayerNorm(model_cfg.d_model)
+        if self.use_attention:
+            self.attn = CausalSelfAttention(model_cfg)
+        else:
+            self.conv = CausalConv(model_cfg, kernel_size=cfg.tier.conv_kernel_size)
+
+        # Block 2: PEER or MLP
+        self.ln2 = nn.LayerNorm(model_cfg.d_model)
+        self.use_peer = cfg.uses_peer()
+        if self.use_peer:
+            self.ffn = PEER(model_cfg, cfg.peer)
+        else:
+            self.ffn = MLP(model_cfg)
+
+    def forward(
+        self, x, step: int = 0, return_weights: bool = False
+    ) -> tuple[torch.Tensor, None, torch.Tensor]:
+        """Forward pass.
+
+        Returns:
+            x: (B, T, D) output
+            routing_w: None (v2 has no routing)
+            attn_w: attention weights or None
+        """
+        attn_w = None
+
+        # Block 1: Attention or Conv
+        if self.use_attention:
+            h, attn_w = self.attn(self.ln1(x), return_weights=return_weights)
+            x = x + h
+        else:
+            x = x + self.conv(self.ln1(x))
+
+        # Block 2: PEER or MLP
+        x = x + self.ffn(self.ln2(x))
+
+        return x, None, attn_w
+
+
+# ============================================================
+# Unified Transformer (supports both v1 and v2)
+# ============================================================
+
+class HRSTransformer(nn.Module):
+    """Unified model supporting v1 (routed) and v2 (attention->conv + PEER) architectures."""
 
     def __init__(self, cfg: ExperimentConfig):
         super().__init__()
         self.cfg = cfg
         model_cfg = cfg.model
+        self._is_v2 = cfg.is_v2()
 
         # If engrams are enabled, blocks after extraction need a longer max_seq_len
-        # to accommodate prepended engrams in the RoPE cache
         if cfg.uses_engrams():
             max_engrams = (model_cfg.max_seq_len // cfg.engram.window_size) * cfg.engram.n_engrams
             self._max_total_seq = model_cfg.max_seq_len + max_engrams
-            # Create an adjusted model config for blocks that see engrams
             from dataclasses import replace
-            augmented_cfg = replace(cfg, model=replace(model_cfg, max_seq_len=self._max_total_seq))
+            augmented_model_cfg = replace(model_cfg, max_seq_len=self._max_total_seq)
+            augmented_cfg = replace(cfg, model=augmented_model_cfg)
         else:
             self._max_total_seq = model_cfg.max_seq_len
             augmented_cfg = cfg
@@ -228,22 +298,22 @@ class HRSTransformer(nn.Module):
         self.tok_emb = nn.Embedding(model_cfg.vocab_size, model_cfg.d_model)
         self.drop = nn.Dropout(model_cfg.dropout)
 
-        # Transformer blocks — blocks after engram extraction use augmented max_seq_len
+        # Build blocks (v1 or v2)
+        BlockClass = HRSv2Block if self._is_v2 else HRSBlock
         blocks = []
         for i in range(model_cfg.n_layers):
             if cfg.uses_engrams() and i > cfg.engram.extract_layer:
-                blocks.append(HRSBlock(augmented_cfg, layer_idx=i))
+                blocks.append(BlockClass(augmented_cfg, layer_idx=i))
             else:
-                blocks.append(HRSBlock(cfg, layer_idx=i))
+                blocks.append(BlockClass(cfg, layer_idx=i))
         self.blocks = nn.ModuleList(blocks)
 
         # Final layer norm
         self.ln_f = nn.LayerNorm(model_cfg.d_model)
 
         # Head A: Generation (next-token prediction)
-        self.lm_head = nn.Linear(model_cfg.vocab_size, model_cfg.d_model, bias=False)
-        # Weight tying
         self.lm_head = nn.Linear(model_cfg.d_model, model_cfg.vocab_size, bias=False)
+        # Weight tying
         self.lm_head.weight = self.tok_emb.weight
 
         # Head B: Locality projection (for contrastive loss)
@@ -272,17 +342,27 @@ class HRSTransformer(nn.Module):
                 nn.init.ones_(module.weight)
                 nn.init.zeros_(module.bias)
 
-        # GPT-2 style residual scaling: 2 residual connections per layer (attn + ffn/tiers)
+        # GPT-2 style residual scaling
         n_residuals = 2 * self.cfg.model.n_layers
         scale = 0.02 / math.sqrt(n_residuals)
+
         for block in self.blocks:
-            nn.init.normal_(block.attn.out_proj.weight, mean=0.0, std=scale)
-            if block.use_router:
-                # Scale down tier output projections
-                if hasattr(block.attn_tier, 'out_proj'):
-                    nn.init.normal_(block.attn_tier.out_proj.weight, mean=0.0, std=scale)
-            else:
-                nn.init.normal_(block.mlp.fc2.weight, mean=0.0, std=scale)
+            if isinstance(block, HRSBlock):
+                nn.init.normal_(block.attn.out_proj.weight, mean=0.0, std=scale)
+                if block.use_router:
+                    if hasattr(block.attn_tier, 'out_proj'):
+                        nn.init.normal_(block.attn_tier.out_proj.weight, mean=0.0, std=scale)
+                else:
+                    nn.init.normal_(block.mlp.fc2.weight, mean=0.0, std=scale)
+            elif isinstance(block, HRSv2Block):
+                if block.use_attention:
+                    nn.init.normal_(block.attn.out_proj.weight, mean=0.0, std=scale)
+                else:
+                    nn.init.normal_(block.conv.out_proj.weight, mean=0.0, std=scale)
+                if not block.use_peer:
+                    nn.init.normal_(block.ffn.fc2.weight, mean=0.0, std=scale)
+                else:
+                    nn.init.normal_(block.ffn.output_proj.weight, mean=0.0, std=scale)
 
     def forward(
         self,
@@ -291,19 +371,12 @@ class HRSTransformer(nn.Module):
         collect_layer_reps: bool = False,
         collect_intermediates: bool = False,
     ) -> HRSOutput:
-        """Forward pass.
-
-        Args:
-            idx: (B, T) token indices
-            step: training step (for router temperature annealing)
-            collect_layer_reps: store per-layer reps for locality loss
-            collect_intermediates: store attention weights for evaluation
-        """
         x = self.drop(self.tok_emb(idx))
 
         layer_reps = []
         routing_weights_list = []
         attn_weights_list = []
+        peer_indices_list = []
         balance_loss_total = torch.tensor(0.0, device=x.device)
         entropy_loss_total = torch.tensor(0.0, device=x.device)
         flops_loss_total = torch.tensor(0.0, device=x.device)
@@ -327,13 +400,14 @@ class HRSTransformer(nn.Module):
             if n_engrams > 0:
                 x = x[:, n_engrams:]
 
-            # Store layer representations (locality loss uses projected versions)
+            # Store layer representations
             if store_reps:
                 if self.use_locality:
                     layer_reps.append(self.locality_proj(x))
                 else:
                     layer_reps.append(x)
 
+            # v1 routing losses
             if routing_w is not None:
                 routing_weights_list.append(routing_w)
                 balance_loss_total = balance_loss_total + routing_balance_loss(routing_w)
@@ -343,7 +417,7 @@ class HRSTransformer(nn.Module):
             if collect_intermediates and attn_w is not None:
                 attn_weights_list.append(attn_w)
 
-            # Engram extraction: encode hidden states at the extraction layer
+            # Engram extraction
             if self.use_engrams and i == self.engram_extract_layer:
                 engrams = self.engram_encoder(x)
                 engram_recon_loss = engram_reconstruction_loss(
@@ -370,26 +444,19 @@ class HRSTransformer(nn.Module):
             engrams=engrams,
             engram_recon_loss=engram_recon_loss,
             attention_weights=attn_weights_list,
+            peer_indices=peer_indices_list,
         )
 
     def apply_engram_refinement(self):
-        """Phase 5 engram refinement: freeze encoder, reinitialize injector.
-
-        Freezes engram_encoder weights (requires_grad=False) so they produce
-        fixed compressed representations. Reinitializes engram_injector type
-        embedding so downstream consumers learn fresh connections to the
-        frozen engrams.
-        """
+        """Phase 5 engram refinement (v1): freeze encoder, reinitialize injector."""
         if not self.use_engrams:
             return
 
-        # Freeze encoder
         frozen_count = 0
         for param in self.engram_encoder.parameters():
             param.requires_grad_(False)
             frozen_count += param.numel()
 
-        # Reinitialize injector type embedding
         nn.init.normal_(self.engram_injector.engram_type_emb, std=0.02)
 
         print(f"  Engram refinement: froze {frozen_count:,} encoder params, "
@@ -402,15 +469,21 @@ class HRSTransformer(nn.Module):
         """Count parameters by component group for logging."""
         counts = {}
 
-        # Backbone (embedding + attn + MLP for non-routed blocks + LN + final LN)
+        # Backbone (embedding + attn/conv blocks + LN + final LN)
         backbone = sum(p.numel() for p in self.tok_emb.parameters())
         backbone += sum(p.numel() for p in self.ln_f.parameters())
         for block in self.blocks:
-            backbone += sum(p.numel() for p in block.attn.parameters())
             backbone += sum(p.numel() for p in block.ln1.parameters())
             backbone += sum(p.numel() for p in block.ln2.parameters())
-            if not block.use_router:
-                backbone += sum(p.numel() for p in block.mlp.parameters())
+            if isinstance(block, HRSv2Block):
+                if block.use_attention:
+                    backbone += sum(p.numel() for p in block.attn.parameters())
+                else:
+                    backbone += sum(p.numel() for p in block.conv.parameters())
+            elif isinstance(block, HRSBlock):
+                backbone += sum(p.numel() for p in block.attn.parameters())
+                if not block.use_router:
+                    backbone += sum(p.numel() for p in block.mlp.parameters())
         counts["backbone"] = backbone
 
         # Generation head (weight-tied, so 0 additional)
@@ -420,14 +493,31 @@ class HRSTransformer(nn.Module):
         if self.use_locality:
             counts["locality_head"] = sum(p.numel() for p in self.locality_proj.parameters())
 
-        # Router
+        # PEER FFN (v2)
+        peer_params = 0
+        for block in self.blocks:
+            if isinstance(block, HRSv2Block) and block.use_peer:
+                peer_params += sum(p.numel() for p in block.ffn.parameters())
+        if peer_params > 0:
+            counts["peer"] = peer_params
+
+        # MLP FFN (v2 non-PEER or v1 non-routed counted in backbone above)
+        mlp_params = 0
+        for block in self.blocks:
+            if isinstance(block, HRSv2Block) and not block.use_peer:
+                mlp_params += sum(p.numel() for p in block.ffn.parameters())
+        if mlp_params > 0:
+            counts["mlp"] = mlp_params
+
+        # v1 Router
         router_params = 0
         for block in self.blocks:
             if hasattr(block, "router"):
                 router_params += sum(p.numel() for p in block.router.parameters())
-        counts["router"] = router_params
+        if router_params > 0:
+            counts["router"] = router_params
 
-        # Tiers
+        # v1 Tiers
         for tier_name in ["conv_tier", "expert_tier", "attn_tier", "sink_tier"]:
             total = 0
             for block in self.blocks:
@@ -447,8 +537,14 @@ class HRSTransformer(nn.Module):
     def get_param_groups(self) -> dict:
         """Return named parameter groups for phased training.
 
-        Groups: backbone, gen_head, locality_head, router, conv, expert, attention, sink, engram
+        v1 groups: backbone, gen_head, locality_head, router, conv, expert, attention_tier, sink, engram
+        v2 groups: backbone, gen_head, locality_head, peer, engram
         """
+        if self._is_v2:
+            return self._get_v2_param_groups()
+        return self._get_v1_param_groups()
+
+    def _get_v1_param_groups(self) -> dict:
         groups = {
             "backbone": [], "gen_head": [], "locality_head": [],
             "router": [], "conv": [], "expert": [], "attention_tier": [],
@@ -474,6 +570,32 @@ class HRSTransformer(nn.Module):
                 groups["sink"].append(param)
             elif "lm_head" in name:
                 groups["gen_head"].append(param)
+            else:
+                groups["backbone"].append(param)
+
+        return groups
+
+    def _get_v2_param_groups(self) -> dict:
+        groups = {
+            "backbone": [], "gen_head": [], "locality_head": [],
+            "peer": [], "engram": [],
+        }
+
+        for name, param in self.named_parameters():
+            if not param.requires_grad:
+                continue
+            if "locality_proj" in name:
+                groups["locality_head"].append(param)
+            elif "engram" in name:
+                groups["engram"].append(param)
+            elif "lm_head" in name:
+                groups["gen_head"].append(param)
+            elif ".ffn." in name and any(
+                isinstance(block, HRSv2Block) and block.use_peer
+                for block in self.blocks
+            ):
+                # PEER FFN parameters (keys, expert weights, projections)
+                groups["peer"].append(param)
             else:
                 groups["backbone"].append(param)
 

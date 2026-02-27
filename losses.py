@@ -1,4 +1,4 @@
-"""Loss functions for HRS training.
+"""Loss functions for HRS training (v1 and v2).
 
 Includes:
 - CrossEntropyLoss: standard next-token prediction
@@ -36,77 +36,72 @@ class LocalityLoss(nn.Module):
 
     Tokens within a window of size W are positives (should have similar
     representations). Tokens beyond 2W are negatives (should be dissimilar).
-    This shapes geometry so nearby tokens cluster in representation space.
     """
 
     def __init__(self, cfg: LocalityConfig):
         super().__init__()
-        self.window_size = cfg.window_size      # W
-        self.neg_distance = cfg.neg_distance    # 2W
+        self.window_size = cfg.window_size
+        self.neg_distance = cfg.neg_distance
         self.temperature = cfg.temperature
         self.n_negatives = cfg.n_negatives
 
     def forward(
         self, hidden_states: torch.Tensor, layer_idx: int = -1
     ) -> torch.Tensor:
-        """Compute InfoNCE locality loss on hidden states.
-
-        Args:
-            hidden_states: (B, T, D) hidden states from a specific layer
-            layer_idx: which layer (unused, for logging)
-
-        Returns:
-            Scalar InfoNCE loss
-        """
         B, T, D = hidden_states.shape
         W = self.window_size
 
         if T < 2 * self.neg_distance:
             return torch.tensor(0.0, device=hidden_states.device)
 
-        # Subsample anchor positions for efficiency
         n_anchors = min(64, T - 2 * W)
         anchor_idx = torch.randint(W, T - W, (n_anchors,), device=hidden_states.device)
 
-        # Get anchor representations: (B, n_anchors, D)
         anchors = hidden_states[:, anchor_idx]
 
-        # Positive samples: random token within window of each anchor
         pos_offsets = torch.randint(-W // 2, W // 2 + 1, (n_anchors,), device=hidden_states.device)
         pos_idx = (anchor_idx + pos_offsets).clamp(0, T - 1)
-        positives = hidden_states[:, pos_idx]  # (B, n_anchors, D)
+        positives = hidden_states[:, pos_idx]
 
-        # Negative samples: random tokens (most will be far enough)
-        # For efficiency, just sample random positions — in a 512-token
-        # sequence with W=16, most random pairs are naturally >2W apart
         n_neg = self.n_negatives
         neg_idx = torch.randint(0, T, (n_neg,), device=hidden_states.device)
-        negatives = hidden_states[:, neg_idx]  # (B, n_neg, D)
+        negatives = hidden_states[:, neg_idx]
 
-        # Normalize for cosine similarity
-        anchors_n = F.normalize(anchors, dim=-1)       # (B, n_anchors, D)
-        positives_n = F.normalize(positives, dim=-1)    # (B, n_anchors, D)
-        negatives_n = F.normalize(negatives, dim=-1)    # (B, n_neg, D)
+        anchors_n = F.normalize(anchors, dim=-1)
+        positives_n = F.normalize(positives, dim=-1)
+        negatives_n = F.normalize(negatives, dim=-1)
 
-        # Positive similarity: (B, n_anchors)
         pos_sim = (anchors_n * positives_n).sum(dim=-1) / self.temperature
-
-        # Negative similarities: (B, n_anchors, n_neg)
-        # einsum: batch, anchor, dim x batch, neg, dim -> batch, anchor, neg
         neg_sim = torch.einsum('bad,bnd->ban', anchors_n, negatives_n) / self.temperature
 
-        # InfoNCE: classify positive as index 0 among [pos, neg1, neg2, ...]
-        logits = torch.cat([pos_sim.unsqueeze(-1), neg_sim], dim=-1)  # (B, n_anchors, 1+n_neg)
+        logits = torch.cat([pos_sim.unsqueeze(-1), neg_sim], dim=-1)
         labels = torch.zeros(B * n_anchors, dtype=torch.long, device=hidden_states.device)
         loss = F.cross_entropy(logits.reshape(B * n_anchors, -1), labels)
 
         return loss
 
 
-class CombinedHRSLoss(nn.Module):
-    """Combined loss for HRS training.
+class SelfAdaptiveLossWeight(nn.Module):
+    """Self-adaptive loss weighting via sigmoid-activated learned scalars.
 
-    L_total = L_CE + locality_weight * L_locality + balance_weight * L_balance + recon_weight * L_recon
+    Each auxiliary loss gets a learned scalar that passes through sigmoid
+    to produce a weight in [0, 1]. This lets the model learn the relative
+    importance of each loss term during training.
+    """
+
+    def __init__(self, n_losses: int, init_value: float = 0.0):
+        super().__init__()
+        self.raw_weights = nn.Parameter(torch.full((n_losses,), init_value))
+
+    def forward(self) -> torch.Tensor:
+        return torch.sigmoid(self.raw_weights)
+
+
+class CombinedHRSLoss(nn.Module):
+    """Combined loss for HRS training (v1 and v2).
+
+    v1: L_CE + L_locality + L_balance + L_entropy + L_flops + L_recon
+    v2: L_CE + L_locality + L_recon (no routing losses)
     """
 
     def __init__(self, locality_cfg: LocalityConfig = None, label_smoothing: float = 0.0):
@@ -130,10 +125,6 @@ class CombinedHRSLoss(nn.Module):
         engram_recon_loss: torch.Tensor = None,
         recon_weight: float = 0.1,
     ) -> dict:
-        """Compute combined HRS loss.
-
-        Returns dict with individual loss components for logging.
-        """
         ce = self.ce_loss(logits, targets)
 
         total = ce
@@ -148,22 +139,22 @@ class CombinedHRSLoss(nn.Module):
             total = total + self.locality_weight * loc_avg
             result["locality_loss"] = loc_avg.detach()
 
-        # Routing balance loss
+        # Routing balance loss (v1 only)
         if routing_balance_loss_val is not None:
             total = total + balance_weight * routing_balance_loss_val
             result["balance_loss"] = routing_balance_loss_val.detach()
 
-        # Routing entropy regularization (encourages exploration)
+        # Routing entropy regularization (v1 only)
         if routing_entropy_loss_val is not None and entropy_weight > 0:
             total = total + entropy_weight * routing_entropy_loss_val
             result["entropy_loss"] = routing_entropy_loss_val.detach()
 
-        # Routing FLOPs cost loss
+        # Routing FLOPs cost loss (v1 only)
         if routing_flops_loss_val is not None and flops_weight > 0:
             total = total + flops_weight * routing_flops_loss_val
             result["flops_loss"] = routing_flops_loss_val.detach()
 
-        # Engram reconstruction loss
+        # Engram reconstruction loss (v1 and v2)
         if engram_recon_loss is not None:
             total = total + recon_weight * engram_recon_loss
             result["recon_loss"] = engram_recon_loss.detach()

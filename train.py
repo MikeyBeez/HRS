@@ -1,4 +1,7 @@
-"""Training loop for HRS experiments with phased LR schedule."""
+"""Training loop for HRS experiments with phased LR schedule.
+
+Supports both v1 (routed) and v2 (attention->conv + PEER) architectures.
+"""
 
 import os
 import time
@@ -37,12 +40,13 @@ def get_lr(step: int, warmup_steps: int, max_steps: int, base_lr: float) -> floa
 
 
 def get_phase(step: int, cfg: ExperimentConfig) -> int:
-    """Determine current training phase (1-5) based on step count.
+    """Determine current training phase based on step count.
 
-    Phase transitions are step-based when phase_N_steps > 0.
+    v1: phases 1-5
+    v2: phases 1-4
     """
     if not cfg.uses_phased_training():
-        return 1  # Always phase 1 for non-phased configs
+        return 1
 
     pc = cfg.phased
     cumulative = 0
@@ -63,33 +67,47 @@ def get_phase(step: int, cfg: ExperimentConfig) -> int:
     if step < cumulative:
         return 4
 
-    return 5
+    if not cfg.is_v2():
+        # v1 has phase 5
+        return 5
+
+    return 4  # v2 caps at phase 4
 
 
 def get_phase_lr_multipliers(phase: int, cfg: ExperimentConfig) -> list:
     """Get LR multipliers for current phase.
 
-    Returns list of 9 floats:
-    [backbone, gen_head, locality_head, router, conv, expert, attention, sink, engram]
-
-    For non-phased configs, all components get full LR (1.0).
+    v1 returns 9 floats: [backbone, gen_head, locality_head, router, conv, expert, attention, sink, engram]
+    v2 returns 5 floats: [backbone, gen_head, locality_head, peer, engram]
     """
     if not cfg.uses_phased_training():
+        if cfg.is_v2():
+            return [1.0] * 5
         return [1.0] * 9
 
     pc = cfg.phased
-    mults = {
-        1: pc.phase1_lr_mult,
-        2: pc.phase2_lr_mult,
-        3: pc.phase3_lr_mult,
-        4: pc.phase4_lr_mult,
-        5: pc.phase5_lr_mult,
-    }
-    return mults.get(phase, pc.phase1_lr_mult)
+
+    if cfg.is_v2():
+        mults = {
+            1: pc.v2_phase1_lr_mult,
+            2: pc.v2_phase2_lr_mult,
+            3: pc.v2_phase3_lr_mult,
+            4: pc.v2_phase4_lr_mult,
+        }
+        return mults.get(phase, pc.v2_phase1_lr_mult)
+    else:
+        mults = {
+            1: pc.phase1_lr_mult,
+            2: pc.phase2_lr_mult,
+            3: pc.phase3_lr_mult,
+            4: pc.phase4_lr_mult,
+            5: pc.phase5_lr_mult,
+        }
+        return mults.get(phase, pc.phase1_lr_mult)
 
 
-# Map parameter group names to indices in the LR multiplier list
-PARAM_GROUP_INDEX = {
+# v1 parameter group index map
+V1_PARAM_GROUP_INDEX = {
     "backbone": 0,
     "gen_head": 1,
     "locality_head": 2,
@@ -101,13 +119,26 @@ PARAM_GROUP_INDEX = {
     "engram": 8,
 }
 
+# v2 parameter group index map
+V2_PARAM_GROUP_INDEX = {
+    "backbone": 0,
+    "gen_head": 1,
+    "locality_head": 2,
+    "peer": 3,
+    "engram": 4,
+}
+
 
 def train(cfg: ExperimentConfig, resume_path: str = None):
     set_seed(cfg.seed)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    is_v2 = cfg.is_v2()
+    param_group_index = V2_PARAM_GROUP_INDEX if is_v2 else V1_PARAM_GROUP_INDEX
+
     print(f"Using device: {device}")
     print(f"Ablation: {cfg.training.ablation.value}")
+    print(f"Architecture: {'v2 (attn->conv + PEER)' if is_v2 else 'v1 (routed)'}")
 
     # Data
     print(f"Loading {cfg.training.dataset}...")
@@ -122,7 +153,13 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
         if count > 0 and name != "total":
             print(f"  {name}: {count:,}")
 
-    # Loss — use label smoothing for routed configs to prevent memorization
+    if is_v2:
+        print(f"  Attention layers: {cfg.n_attention_layers()}, Conv layers: {cfg.n_conv_layers()}")
+        if cfg.uses_peer():
+            print(f"  PEER: {cfg.peer.n_sub_keys}^2 = {cfg.peer.n_sub_keys**2:,} experts, "
+                  f"{cfg.peer.n_heads} heads x {cfg.peer.top_k} top-k = {cfg.peer.n_heads * cfg.peer.top_k} active/token")
+
+    # Loss
     label_smoothing = 0.1 if cfg.uses_router() else 0.0
     loss_fn = CombinedHRSLoss(
         locality_cfg=cfg.locality if cfg.locality.enabled else None,
@@ -158,21 +195,28 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
     run_dir.mkdir(parents=True, exist_ok=True)
 
     # Save config
+    config_dict = {
+        "ablation": cfg.training.ablation.value,
+        "model": cfg.model.__dict__,
+        "locality": cfg.locality.__dict__,
+        "training": {k: v.value if hasattr(v, 'value') else v
+                     for k, v in cfg.training.__dict__.items()},
+        "seed": cfg.seed,
+        "param_counts": param_counts,
+    }
+    if is_v2:
+        config_dict["peer"] = cfg.peer.__dict__
+    else:
+        config_dict["router"] = cfg.router.__dict__
+        config_dict["tier"] = cfg.tier.__dict__
+    if cfg.uses_engrams():
+        config_dict["engram"] = cfg.engram.__dict__
+    if cfg.uses_phased_training():
+        config_dict["phased"] = {k: v for k, v in cfg.phased.__dict__.items()
+                                  if not k.startswith("phase") or not k.endswith("_lr_mult")}
+
     with open(run_dir / "config.json", "w") as f:
-        json.dump({
-            "ablation": cfg.training.ablation.value,
-            "model": cfg.model.__dict__,
-            "router": cfg.router.__dict__,
-            "tier": cfg.tier.__dict__,
-            "engram": cfg.engram.__dict__,
-            "phased": {k: v for k, v in cfg.phased.__dict__.items()
-                       if not k.startswith("phase") or not k.endswith("_lr_mult")},
-            "locality": cfg.locality.__dict__,
-            "training": {k: v.value if hasattr(v, 'value') else v
-                         for k, v in cfg.training.__dict__.items()},
-            "seed": cfg.seed,
-            "param_counts": param_counts,
-        }, f, indent=2)
+        json.dump(config_dict, f, indent=2)
 
     # Resume from checkpoint
     start_step = 0
@@ -225,7 +269,6 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
 
             x, y = x.to(device), y.to(device)
 
-            # Determine what to collect
             needs_layer_reps = cfg.locality.enabled
 
             with torch.autocast(device_type=device.type, dtype=amp_dtype, enabled=use_amp):
@@ -252,7 +295,7 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
 
             loss.backward()
 
-        # NaN detection — bail early instead of wasting GPU hours
+        # NaN detection
         loss_val = loss_dict["loss"].item()
         if math.isnan(loss_val) or math.isinf(loss_val):
             nan_count = getattr(train, '_nan_count', 0) + 1
@@ -285,7 +328,7 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
         if new_phase != current_phase:
             print(f"\n*** Phase transition: {current_phase} -> {new_phase} at step {step} ***\n")
 
-            # Engram refinement: freeze encoder + reinit injector at Phase 5 entry
+            # v1: Engram refinement at Phase 5 entry
             if new_phase == 5 and cfg.training.ablation == AblationConfig.FULL_HRS_REFINED:
                 model.apply_engram_refinement()
 
@@ -296,7 +339,7 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
         lr_mults = get_phase_lr_multipliers(current_phase, cfg)
 
         for i, (pg, name) in enumerate(zip(optimizer.param_groups, group_names)):
-            mult_idx = PARAM_GROUP_INDEX.get(name, 0)
+            mult_idx = param_group_index.get(name, 0)
             pg["lr"] = base_lr * lr_mults[mult_idx]
 
         optimizer.step()
@@ -382,6 +425,9 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 print(f"  magnitude_ratio: {metrics['magnitude_ratio']:.2f}")
             if "flops_ratio" in metrics:
                 print(f"  flops_ratio: {metrics['flops_ratio']:.3f}")
+            if "peer_n_total_experts" in metrics:
+                print(f"  peer_experts: {metrics['peer_n_active_per_token']}/{metrics['peer_n_total_experts']} "
+                      f"(sparsity {metrics['peer_sparsity']:.4f})")
             print()
 
         # Save checkpoint
@@ -427,9 +473,9 @@ if __name__ == "__main__":
     parser.add_argument("--save-interval", type=int, default=None)
     parser.add_argument("--compile", action="store_true")
     parser.add_argument("--flops-weight", type=float, default=None,
-                        help="FLOPs cost penalty weight (0=off, try 0.1-1.0)")
+                        help="FLOPs cost penalty weight (v1 only)")
     parser.add_argument("--trc-window", type=int, default=None,
-                        help="Enable TRC with given window size (e.g. 8)")
+                        help="Enable TRC with given window size (v1 only)")
     args = parser.parse_args()
 
     ablation = AblationConfig(args.ablation)
