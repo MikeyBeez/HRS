@@ -1,0 +1,157 @@
+The Engram Effect: How a Simple Compression of Middle-Layer Hidden States Produces a Disproportionately Large Improvement in Language Modeling
+
+Mikey Bonsignore
+Independent AI Research, Hartford, Arkansas
+February 2026
+
+Something unexpected happened during an ablation study.
+I was testing a new transformer architecture called the Hierarchical Routed Sinkformer, which combines learned routing, tiered compute, dual-head geometry shaping, and a compression mechanism I call engrams. The architecture has a lot of moving parts, and the ablation was designed to isolate which parts actually matter. I testedtors per window. Those four vectors get prepended to the input for the remaining layers. That is the entire method. Mean-pooling, a small MLP, and concatenation.
+The compression ratio is 32 to 1. A sequence of 512 tokens produces 16 engram vectors. The engram encoder adds roughly 1.6 million parameters to a 38-million-parameter baseline. And this modest addition is responsible for nearly all of the performance gain in an architecture that includes routing, tiered compute, sink channels, and five-phase training schedules.
+This paper is about that result and what I think is happening.
+What the Code Actually Does
+I want to be precise about the implementation, because the details matter and because I have seen too many papers that describe methods in vague terms that make reproduction difficult.
+The model is a four-layer transformer with 8 attention heads, a model dimension of 512, and a feed-forward dimension of 2048. It uses the GPT-2 BPE tokenizer with a vocabulary of 50,257 tokens, a maximum sequence length of 512, and rotary position embeddings. The total parameter count ranges from 38 million for the dense baseline to 50 million for the full system.
+During the forward pass, tokens enter as embeddings and pass through layer 0 and layer 1 normally. After layer 1, the engram encoder activates. It takes the full sequence of hidden states at that point — a tensor of shape batch by 512 by 512 — and divides it into windows of 128 tokens each, giving four windows per sequence.
+Within each window, the 128 hidden-state vectors are averaged into a single vector. This is plain mean-pooling, nothing more.
+Each averaged vector then passes through a two-layer MLP. The first linear layer expands from dimension 512 to dimension 1024, followed by a GELU activation. The second linear layer expands from 1024 to 2048, which is then reshaped into four vectors of dimension 512. Layer normalization is applied to the output. So each window of 128 tokens becomes four engram vectors.
+For the full 512-token sequence, this produces 16 engram vectors total.
+These 16 vectors receive a learned type embedding — a small additive signal that lets the model distinguish engram vectors from regular token representations. They are then concatenated in front of the regular hidden states before being fed into layers 2 and 3. After each layer processes the combined sequence, the engram positions are stripped back off, so the output sequence length remains unchanged.
+The training signal for the engram encoder is a cosine similarity loss between the engram vectors and the original mean-pooled windows. Specifically, the four engram vectors produced from each window are averaged back to one vector and compared against the original mean-pooled window vector using cosine similarity. The loss is one minus the similarity, averaged across all windows and batch elements. This loss is weighted at 0.1 and added to the total training loss.
+The engram encoder does not train from the start. During the first three phases of training — roughly the first 26,000 steps — the learning rate multiplier for the engram parameters is zero. The encoder exists but receives no gradient updates. It only begins training in Phase 4, after the backbone transformer has stabilized. This phased activation turns out to be important. If the engram encoder trains from step zero, it tries to compress noise — the hidden states in early training have not yet developed stable structure. By step 26,000, the top eigenspace of the hidden states has crystallized. The principal directions are stable. The engram encoder is then learning to compress a stable manifold rather than chasing a moving target. This is essentially the internal covariate shift problem applied to a compression module: the encoder needs its input distribution to settle before it can learn a useful mapping.
+The Ablation Results
+Eight configurations were tested on WikiText-103, all trained for 50,000 steps on a single RTX 5070 Ti.
+Configuration 1 was the dense baseline: a standard four-layer transformer with no modifications. It achieved 23.83 perplexity at the end of training.
+Configurations 2 through 5 added the dual head, then routing, then the sink channel, then phased training — all without engrams. Perplexity ranged from 24.08 to 37.84. Every one of these was worse than the baseline.
+Configuration 6 activated the full system including engrams. Final perplexity: 12.04. Best perplexity during training: 10.64, reached at the end of Phase 4.
+Configuration 7 added engram refinement in Phase 5. Final perplexity: 10.51. Best during training: 9.19.
+Configuration 8 added a temporal routing cache. Final perplexity: 10.05.
+The pattern is unambiguous. The engram is the decisive component. Without it, routing actively harms the model. With it, the system achieves a 55 to 61 percent perplexity reduction from the baseline.
+One Geometric Change, Two Downstream Consequences
+To explain what the engram is doing, start with what mean-pooling does to a set of high-dimensional vectors.
+When tokens pass through layers 0 and 1, the hidden states come to occupy positions in a 512-dimensional space that reflect the structure the model has learned. These positions are not random. They cluster along preferred directions — the principal directions of the hidden-state distribution — which correspond to learned patterns: syntactic regularities, semantic associations, topic structure.
+Mean-pooling 128 of these vectors cancels their independent token-specific variation and preserves their shared components. The shared components are, by definition, the dominant principal directions. So the centroid of the hidden states is a natural approximation of the top eigenspace of the hidden-state covariance — the directions along which the learned structure is strongest.
+The MLP performs a learned change of basis, reshaping this centroid into four vectors that are specifically useful as input to the later layers. The cosine similarity reconstruction loss ensures these vectors stay aligned with the actual principal directions rather than drifting toward arbitrary features during training.
+What matters is what happens when these vectors enter the computation at layers 2 and 3. In a transformer, the attention mechanism and the MLP both operate on the same residual stream. The engram vectors are prepended to that residual stream. This single geometric intervention affects both subsystems simultaneously, and the two effects compound.
+On the MLP side, the effect is straightforward signal amplification. The hidden states that enter the MLP now include the engram vectors, which are aligned with the dominant learned directions. When the MLP projects these states onto its learned weight directions, the projections onto the principal directions are larger. The features corresponding to the dominant structure are expressed more strongly. The signal-to-noise ratio increases. The MLP can do its work — nonlinear transformation, feature gating, representation refinement — with a cleaner, stronger input signal.
+On the attention side, the effect is more subtle but equally important. Attention queries and keys are linear projections of the residual state. When a token representation h is augmented by the engram signal, the query becomes W_Q times the augmented state, and the key becomes W_K times the augmented state. The attention logits — the dot products between queries and keys — acquire additional terms that are structured rather than random, because the engram component is coherent and aligned with the principal directions.
+These structured bias terms increase the dot products between tokens that share alignment with the dominant structure and do not increase the dot products between tokens that are aligned with noise. The result is increased contrast in the attention logits: relevant pairings produce larger scores, irrelevant pairings do not. When these logits pass through the softmax, the attention distributions become sharper — more peaked on the relevant tokens, less diffused across irrelevant ones.
+This is functionally analogous to increasing the inverse temperature in a Hopfield network. The engram does not modify any attention parameters. But by modifying the shared geometric input that attention operates on, it produces an outcome that resembles what higher inverse temperature would produce: sharper retrieval of stored patterns, more decisive commitment to the dominant structure, less weight wasted on noise.
+So the engram produces two effects from one intervention. Feature amplification through the MLP pathway. Attention sharpening through the QK pathway. Both arise because the attention mechanism and the MLP share the same residual stream, and modifying the geometry of that shared stream propagates into both subsystems.
+This is why the effect is so large. If the engram only helped the MLP — boosting feature magnitudes — the improvement would be modest. If it only sharpened attention — increasing logit contrast — the improvement would be modest. But because both effects operate simultaneously on the same signal, they compound. Better features produce better queries and keys, which produce sharper attention, which produces better-contextualized representations, which feed back into stronger feature expression. The two mechanisms reinforce each other through the shared residual stream.
+Why Mean-Pooling Works
+The engram is not trying to preserve information. It is trying to isolate the principal directions.
+Mean-pooling is a low-pass filter. It kills high-frequency token-specific variation and preserves the low-frequency global signal: the dominant directions in representation space, the overall structure of the learned patterns for this input. The centroid is not a faithful compression of the original 128 vectors. It is a denoised pointer to the dominant subspace. The information loss is not a bug. It is the mechanism. By destroying everything except the dominant signal, mean-pooling produces a cleaner basis than a more faithful compression would.
+This is why a 32-to-1 compression works. The goal is not to preserve the original representations. The goal is to extract the directions along which the later layers should amplify their computation, and those directions are exactly what survives averaging.
+Why Refinement Hurts
+Phase 4 trains the engram encoder to faithfully represent the centroid of the intermediate representations. The cosine similarity loss enforces this: the engrams must point in roughly the same direction as the mean-pooled hidden states. During this phase, the engram vectors are honest estimates of the principal directions.
+Phase 5 allows continued training of both the engram encoder and the rest of the model. The optimization pressure shifts from faithfully representing the actual principal directions toward producing whatever reduces loss on the training set. The engram vectors drift from the true principal subspace toward directions that happen to produce lower training loss but may not correspond to genuine learned structure.
+This is overfitting of the coordinate system. The engram stops pointing where the representations actually are and starts pointing where the training loss wants them to be. The basis becomes less faithful, less general, and less useful. The regression of 0.62 to 1.40 perplexity points across configurations is the cost of this drift.
+Why Routing Alone Hurts But Routing Plus Engrams Helps
+Routing tries to make token-level decisions about compute allocation. These decisions depend on understanding the global context — which principal directions dominate, what kind of processing is appropriate for this input.
+Without engrams, the router sees only noisy token-level representations. It cannot reliably determine the global context, so it makes incoherent routing decisions. Effective rank collapses to 12–19 because routing noise overwhelms the signal.
+With engrams providing clean principal-direction vectors, the router has an explicit coordinate system. It can determine the global context and make coherent decisions. Effective rank is restored to 43.
+Prior Evidence
+Several prior experiments support the principal-direction interpretation.
+In earlier work, I extracted engrams from layer 16 of a 32-layer Qwen 7B model and injected them as input tokens for question-answering tasks. The engram approach achieved 96 percent accuracy compared to 80 percent for standard retrieval-augmented generation, while using 64.8 times fewer tokens. But engrams only helped for content the model had already learned during pretraining. On novel content, they provided no benefit.
+This follows directly. The engram amplifies directions that correspond to learned structure in the weights. If the content was learned, those directions exist and amplifying them helps. If the content is novel, there are no corresponding directions. The engram points into a subspace with no relevant structure, and nothing happens.
+In a separate experiment, chaining engrams through 100 turns of conversation maintained 93 to 94 percent cosine similarity to the initial engram. The centroid converged to the principal subspace of the domain and stayed there. This stability is expected: the dominant principal directions are the most stable components under repeated averaging.
+In classification experiments with Qwen 7B, clustering engram representations produced clean topic clusters with an adjusted Rand index of 0.889. The engram was a direct readout of which principal subspace the model had settled into for each input.
+Related Work
+Compressing and reinjecting representations in transformers is not new, but no prior work combines the specific properties of this approach or interprets the mechanism as principal-direction amplification with dual MLP and attention consequences.
+The Compressive Transformer by Rae and colleagues compresses old attention key-value states for context extension. Gist tokens by Mu and colleagues compress prompts through the model’s own self-attention. AutoCompressor by Chevalier and colleagues recursively compresses segments through the model’s forward pass. The Recurrent Memory Transformer by Bulatov and colleagues prepends learned memory tokens between segments.
+These methods aim to compress information — to preserve content in fewer tokens. The engram operates on a different principle. It extracts the principal directions of the intermediate representation and reinjects them, amplifying signal relative to noise in both the MLP and attention pathways. The compression is not storage but denoising.
+Ramsauer and colleagues showed formally that transformer attention is equivalent to a modern continuous Hopfield network, which provides useful intuition for why amplifying the principal directions sharpens pattern retrieval. The engram’s effect on attention is analogous to increasing the inverse temperature in this framework — not because any parameter changes, but because the structured bias in the attention logits increases contrast in the same way higher inverse temperature would.
+ComprExIT from early 2025 comes closest in philosophy, arguing against compressing through the model’s own attention because of representation overwriting. Their approach shares some intuition with the engram method, but the implementations and theoretical frameworks differ substantially.
+The Comparison Problem
+I should be honest about what I can and cannot claim regarding absolute performance.
+The Compressive Transformer achieved 17.1 perplexity on WikiText-103 with a roughly 200-million-parameter model. Transformer-XL achieved 18.3 at similar scale. GPT-2 at 117 million parameters gets about 37.5.
+My best result is 9.19 perplexity with 50 million parameters. This looks dramatically better, but my model uses the GPT-2 BPE tokenizer while those earlier models used word-level tokenizers. Perplexity per BPE subword token is not comparable to perplexity per word. A direct comparison requires normalization to bits-per-character, which I have not done.
+What I can claim is the internal ablation. Same tokenizer, same data, same training budget, nearly the same parameter count. The engram system adds 32 percent more parameters and reduces perplexity by 55 to 61 percent. This comparison is controlled and the result is unambiguous.
+Controls Not Yet Run
+Several control experiments would strengthen the causal claim.
+A learned memory token baseline — 16 trainable parameter vectors, not derived from the input, same total parameter count — would test whether input-dependent compression matters. I expect it would perform significantly worse, because the earlier experiments showed engrams are content-dependent: they fail on novel material, ruling out generic learned tokens as the mechanism.
+A random projection baseline — replacing mean-pooling and the learned MLP with a fixed random matrix — would test whether alignment with the principal directions matters. I expect partial benefit but significantly less than the learned compression.
+Download the Medium App
+Attention entropy analysis — measuring whether attention distributions in layers 2 and 3 are sharper when engrams are present — would directly test the attention-sharpening prediction.
+Principal component alignment — measuring the cosine similarity between engram vectors and the top eigenvectors of the hidden-state covariance — would directly test whether the engrams are aligned with the dominant learned structure. This is the most direct test of the proposed explanation.
+I have not run these controls. The ablation establishes that the engram component is decisive. The proposed mechanism is consistent with all available evidence across multiple experiments. But the controls would make the case definitive.
+What This Suggests
+If the engram effect works as I describe — one geometric intervention on the shared residual stream producing compounding benefits through both the MLP and attention pathways — then the implication is that standard transformers have a significant signal-to-noise problem across depth.
+The residual stream carries forward token-level representations that contain both the global structure and the local noise. Later layers must extract the global signal from this mixture using their own capacity. The engram provides the global signal explicitly, as a clean low-rank basis aligned with the dominant learned directions. This frees both the MLP and the attention mechanism to use their full capacity for the layer’s own work rather than spending it on signal extraction.
+The practical suggestion is simple. Transformer architectures should include mechanisms for extracting and reinjecting the principal directions of intermediate representations. The engram is the simplest version of this: mean-pool the hidden states, compress through a small network, prepend to later layers. The fact that this trivial mechanism produces a 55 to 61 percent improvement suggests that the signal-to-noise problem is severe and that the solution does not need to be complex.
+More broadly, this finding suggests that some of what we interpret as capacity limitations in transformers may be signal-to-noise limitations. The models have learned the relevant structure. The later layers have the capacity to use it. What they lack is a clean channel that separates the dominant learned structure from the token-level noise. The engram provides that channel, and the compounding of MLP amplification and attention sharpening makes latent performance accessible.
+The information is already there. The structure is already learned. We just need to turn up the signal.
+The code and full ablation results are available at github.com/MikeyBeez/HRS.
+Appendix: Mathematical Framework for the Engram Mechanism
+A.1 Mean-Pooling as Principal Direction Extraction
+Let h_1, h_2, …, h_n be the n hidden-state vectors in a window, each in R^d. The mean-pooled centroid is:
+mu = (1/n) * sum_{i=1}^{n} h_i
+Each hidden state can be decomposed as:
+h_i = mu + epsilon_i
+where epsilon_i is the token-specific deviation with the property that sum(epsilon_i) = 0 by construction.
+The covariance matrix of the hidden states is:
+C = (1/n) * sum_{i=1}^{n} (h_i — mu)(h_i — mu)^T = (1/n) * sum_{i=1}^{n} epsilon_i * epsilon_i^T
+The centroid mu lies in the direction of the mean of the distribution. For hidden states that have passed through two transformer layers, the distribution is not isotropic — it has dominant directions corresponding to learned structure. The centroid points toward the region of highest density in the representation space, which is aligned with the top principal components of the distribution.
+More precisely, if we perform an eigendecomposition of C:
+C = sum_{j=1}^{d} lambda_j * v_j * v_j^T
+where lambda_1 >= lambda_2 >= … >= lambda_d are the eigenvalues and v_j are the corresponding eigenvectors, then the centroid mu has its largest projections onto the eigenvectors with the largest eigenvalues. This follows from the fact that the shared component across tokens — the signal that survives averaging — is the component with the highest variance, which by definition lies along the top eigenvectors.
+The token-specific deviations epsilon_i, which carry the high-frequency per-token information, cancel under averaging. What remains is the low-frequency global structure: the principal directions of the learned representation for this input.
+A.2 The MLP as a Learned Change of Basis
+The engram MLP takes the centroid mu in R^d and produces k engram vectors e_1, …, e_k in R^d:
+[e_1; e_2; …; e_k] = LayerNorm(reshape(W_2 * GELU(W_1 * mu + b_1) + b_2))
+where W_1 is in R^{m x d}, W_2 is in R^{(k*d) x m}, and reshape converts the output from R^{k*d} to k vectors in R^d.
+This is a learned nonlinear change of basis. It takes a single vector pointing toward the dominant subspace and produces k vectors that span a useful subspace for the later layers’ attention heads. The cosine similarity reconstruction loss constrains this transformation:
+L_engram = 1 — (1/w) * sum_{j=1}^{w} cos_sim(mean(e_{j,1}, …, e_{j,k}), mu_j)
+where w is the number of windows and mu_j is the centroid of window j. This loss ensures the engram vectors remain aligned with the actual principal directions rather than drifting toward arbitrary features.
+A.3 Dual Effect on the Residual Stream
+In a standard transformer layer, both the attention mechanism and the MLP operate on the same residual stream state h. The engram modifies this shared state by prepending the engram vectors to the sequence. For a token at position t, the residual state is unchanged. But the attention computation now includes the engram vectors as additional keys and values.
+A.3.1 Attention Sharpening
+The attention logit between query position t and key position s is:
+a_{t,s} = (W_Q * h_t)^T * (W_K * h_s) / sqrt(d_k)
+When the engram vectors are present as additional key positions, the query at position t also computes logits against the engram keys:
+a_{t,engram} = (W_Q * h_t)^T * (W_K * e) / sqrt(d_k)
+Because the engram vector e is aligned with the principal directions of the hidden-state distribution, this logit is large for any query h_t that is also aligned with the dominant structure, and small for queries aligned with noise. This adds a structured bias to the attention pattern.
+More significantly, the engram vectors participate in the value computation. The output of the attention head at position t becomes:
+o_t = sum_s alpha_{t,s} * W_V * h_s + sum_j alpha_{t,j} * W_V * e_j
+where alpha are the softmax-normalized attention weights. The engram contribution is a weighted sum of value projections of the principal-direction vectors. This directly injects a clean, low-rank signal into the output, aligned with the dominant learned structure.
+For tokens whose queries align with the principal directions, the engram logits are large, the attention weights on engram positions are high, and the output receives a strong principal-direction signal. For tokens whose queries are orthogonal to the principal directions, the engram logits are small, and the output is minimally affected. This selective amplification increases the contrast between tokens that are “on-structure” and tokens that are not.
+A.3.2 The Formal Analogy to Inverse Temperature
+In a continuous Hopfield network, the energy function for pattern retrieval is:
+E = -(1/2) * beta * sum_{mu} (xi^mu . x)²
+where xi^mu are stored patterns, x is the probe, and beta is the inverse temperature. Higher beta sharpens the energy landscape: the basin of the best-matching pattern deepens relative to competitors.
+In the transformer attention mechanism (following Ramsauer et al.), the attention pattern corresponds to the update rule of a modern Hopfield network with energy:
+E = -beta * log(sum_s exp(beta * q^T * k_s)) + (beta/2) * ||q||²
+The engram does not modify beta. But by adding keys that are aligned with the dominant structure, it increases the logit q^T * k_engram for queries that match the dominant pattern. This produces a similar effect to increasing beta: the attention distribution becomes more peaked on the relevant keys, because the engram keys create a larger gap between the logits for relevant and irrelevant positions.
+Formally, adding an engram key with logit value delta above the mean logit increases the effective sharpness of the softmax by a factor that depends on delta and the existing logit distribution. The effect is not identical to a uniform beta increase — it is selective, amplifying only the directions aligned with the principal subspace — but the dynamical consequence is similar: sharper retrieval, more decisive commitment to the dominant pattern.
+A.4 Why the Effects Compound
+The attention output feeds back into the residual stream:
+h_t’ = h_t + Attention(h_t) + MLP(h_t + Attention(h_t))
+The engram improves the attention output (Section A.3.1), which produces a cleaner residual state, which in turn provides a better input to the MLP. The MLP then projects this improved state onto its learned weight directions. Because the state is now more aligned with the principal directions (thanks to the attention-side benefit), the MLP projections are larger and cleaner (the MLP-side benefit).
+In the next layer, this improved residual state produces better queries and keys, which produce sharper attention, which produces yet cleaner states for the MLP. The two mechanisms reinforce each other through the shared residual stream.
+This compounding is why the effect is disproportionately large. A single intervention that only improved the MLP or only improved attention would produce a modest gain. But because both subsystems share the residual stream, the geometric improvement propagates cyclically through attention and MLP at each layer, amplifying at each step.
+A.5 Phased Training and Internal Covariate Shift
+The covariance matrix C of the hidden states at layer 1 changes throughout training as the model’s weights update. In early training, the eigenstructure of C is unstable — the principal directions shift rapidly as the model learns basic patterns. Training the engram encoder during this period would force it to track a moving target, a form of internal covariate shift applied to the compression module.
+By Phase 4 (after approximately 26,000 steps), the eigenstructure of C has stabilized. The top eigenvectors v_1, …, v_k are consistent across batches and across training steps. The engram encoder can now learn a stable mapping from the centroid to a useful set of basis vectors, because the centroid itself points in a consistent direction.
+A.6 Refinement Degradation as Coordinate Drift
+During Phase 4, the cosine similarity loss constrains the engram vectors to remain aligned with the actual centroids of the hidden states:
+e approx f(mu) such that cos_sim(mean(e), mu) is maximized
+During Phase 5, the engram encoder continues to update under the combined language modeling loss and the (now weaker) reconstruction signal. The encoder can reduce training loss by shifting the engram vectors away from the true principal directions toward directions that happen to reduce cross-entropy on the training distribution. This is equivalent to overfitting the coordinate system:
+e -> e + delta
+where delta points away from the true principal subspace toward training-set-specific features. The engram basis becomes less faithful to the actual geometry of the representations and less generalizable. The 0.62 to 1.40 perplexity point regression observed across configurations is the cost of this coordinate drift.
+A.7 Testable Predictions
+The mathematical framework makes several specific predictions:
+1. PCA Alignment: The cosine similarity between engram vectors and the top eigenvectors of the hidden-state covariance matrix at layer 1 should be significantly above chance. If the engrams are aligned with the principal directions, this similarity should be high (above 0.7).
+2. Attention Entropy: The Shannon entropy of attention distributions in layers 2 and 3 should be lower when engrams are present than in the baseline model. The reduction should be largest for attention heads that allocate significant weight to the engram positions.
+3. Attention Weight Distribution: Layers 2 and 3 should allocate non-trivial attention weight to the engram positions. Different heads should attend to engrams to different degrees, reflecting their varying need for global context versus local detail.
+4. Effective Rank: The effective rank of hidden states at layers 2 and 3 should be higher with engrams than without, and should decrease during Phase 5 refinement as coordinate drift degrades the basis.
+5. Content Dependence: The benefit of engrams should correlate with the alignment between the input’s dominant structure and the model’s learned eigenspace. Inputs that activate well-learned patterns should benefit most. Novel or out-of-distribution inputs should benefit least.
+Each of these predictions is measurable with standard tools and would either confirm or refute the proposed mechanism.
+Ai Research
+Engram
+Hopfield Network
+Eigenvectors
+Mean Pooling
+
+
+
+
