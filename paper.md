@@ -24,6 +24,8 @@ A phased training protocol with differential learning rates prevents gradient mo
 
 This design decouples memory from compute: tokens are cheap to store but expensive to attend. By controlling attention participation rather than deleting history, HRS achieves better reasoning and lower compute. We hypothesize that a well-routed 1B HRS model can match or exceed dense 7B models at equivalent FLOPs on reasoning-heavy tasks through superior context curation.
 
+**Code:** [github.com/MikeyBeez/HRS](https://github.com/MikeyBeez/HRS)
+
 ---
 
 # Part I: Core Architecture
