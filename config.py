@@ -19,6 +19,12 @@ class AblationConfig(Enum):
     FULL_HRS = "full_hrs"                       # Core + engrams (all 5 phases)
     FULL_HRS_REFINED = "full_hrs_refined"       # Full HRS + engram refinement
 
+    # --- v4 configs ---
+    V4_FULL = "v4_full"                        # PEER as universal FFN + 3-tier routing (conv, attn, sink) + engrams
+
+    # --- v3 configs ---
+    V3_FULL = "v3_full"                        # v1 routing + PEER as expert tier + engrams
+
     # --- v2 configs ---
     V2_ATTN_CONV = "v2_attn_conv"              # Attention->Conv backbone, standard MLP, no dual-head
     V2_ATTN_CONV_DUAL = "v2_attn_conv_dual"    # + dual-head
@@ -214,6 +220,41 @@ class ExperimentConfig:
             cfg.phased.phase5_steps = 12000
             cfg.phased.phase5_lr_mult = [0.3, 0.5, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.5]
 
+        # === v4 configs ===
+
+        elif ablation == AblationConfig.V4_FULL:
+            # PEER as universal FFN (unconditional) + 3-tier routing (conv, attn, sink)
+            # Same schedule as v3/v1 (proven best)
+            cfg.locality.enabled = True
+            cfg.engram.enabled = True
+            cfg.peer.enabled = True
+            cfg.router.n_tiers = 3  # conv, attn, sink (no expert tier — PEER is unconditional)
+            cfg.training.grad_accum_steps = 6  # effective batch = 8*6=48 (same as v1's 24*2)
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 12000
+            cfg.phased.phase5_steps = 12000
+            cfg.phased.phase5_lr_mult = [0.3, 0.5, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.5]
+
+        # === v3 configs ===
+
+        elif ablation == AblationConfig.V3_FULL:
+            # v1 routing framework + PEER as expert tier + engrams
+            # Same schedule as full_hrs_refined (proven best)
+            cfg.locality.enabled = True
+            cfg.engram.enabled = True
+            cfg.peer.enabled = True
+            cfg.training.grad_accum_steps = 6  # effective batch = 8*6=48 (same as v1's 24*2)
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 12000
+            cfg.phased.phase5_steps = 12000
+            cfg.phased.phase5_lr_mult = [0.3, 0.5, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.5]
+
         # === v2 configs ===
 
         elif ablation == AblationConfig.V2_ATTN_CONV:
@@ -256,26 +297,30 @@ class ExperimentConfig:
         return self.training.ablation.value.startswith("v2_")
 
     def uses_router(self) -> bool:
-        """v1 only: uses routing machinery."""
+        """v1/v3/v4: uses routing machinery."""
         return self.training.ablation.value in (
             "dual_head_router", "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
+            "v3_full", "v4_full",
         )
 
     def uses_sink(self) -> bool:
         return self.training.ablation.value in (
             "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
+            "v3_full", "v4_full",
         )
 
     def uses_engrams(self) -> bool:
         return self.engram.enabled and self.training.ablation.value in (
             "full_hrs", "full_hrs_refined", "v2_full",
+            "v3_full", "v4_full",
         )
 
     def uses_peer(self) -> bool:
         return self.peer.enabled and self.training.ablation.value in (
             "v2_attn_conv_peer", "v2_full",
+            "v3_full", "v4_full",
         )
 
     def uses_attn_conv_backbone(self) -> bool:
@@ -285,6 +330,7 @@ class ExperimentConfig:
     def uses_phased_training(self) -> bool:
         return self.phased.enabled and self.training.ablation.value in (
             "full_core", "full_hrs", "full_hrs_refined", "v2_full",
+            "v3_full", "v4_full",
         )
 
     def n_attention_layers(self) -> int:

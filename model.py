@@ -153,11 +153,23 @@ class HRSBlock(nn.Module):
 
         # Router + tiered compute REPLACES MLP
         self.use_router = cfg.uses_router()
+        self.use_peer = cfg.uses_peer()
+        # v4: PEER as unconditional FFN + 3-tier routing (no expert tier)
+        self.use_peer_ffn = self.use_peer and cfg.router.n_tiers == 3
         if self.use_router:
             self.router = TokenRouter(model_cfg, cfg.router)
 
             self.conv_tier = ConvTier(model_cfg, cfg.tier)
-            self.expert_tier = ExpertTier(model_cfg, cfg.tier)
+            if self.use_peer_ffn:
+                # v4: PEER runs unconditionally, not as a routed tier
+                self.peer_ffn = PEER(model_cfg, cfg.peer)
+                self.ln_peer = nn.LayerNorm(model_cfg.d_model)
+                self.peer_output_gate = nn.Parameter(torch.ones(1) * 0.1)
+            elif self.use_peer:
+                # v3: PEER replaces ExpertTier in the routing framework
+                self.expert_tier = PEER(model_cfg, cfg.peer)
+            else:
+                self.expert_tier = ExpertTier(model_cfg, cfg.tier)
             self.attn_tier = AttentionTier(model_cfg)
             self.sink_tier = SinkTier(cfg.tier)
 
@@ -185,22 +197,45 @@ class HRSBlock(nn.Module):
             h = self.ln2(x)
             routing_w = self.router(h, step=step)
 
-            conv_out = self.conv_tier(h)
-            expert_out = self.expert_tier(h)
-            attn_out2 = self.attn_tier(h)
-            sink_out = self.sink_tier(h)
+            if self.use_peer_ffn:
+                # v4: 3-tier routing (conv, attn, sink) + unconditional PEER
+                conv_out = self.conv_tier(h)
+                attn_out2 = self.attn_tier(h)
+                sink_out = self.sink_tier(h)
 
-            tier_outputs = torch.stack(
-                [conv_out, expert_out, attn_out2, sink_out], dim=-1
-            )
-            w = routing_w.unsqueeze(2)
-            combined = (tier_outputs * w).sum(dim=-1)
-            x = x + combined * self.tier_output_gate
+                tier_outputs = torch.stack(
+                    [conv_out, attn_out2, sink_out], dim=-1
+                )
+                w = routing_w.unsqueeze(2)
+                combined = (tier_outputs * w).sum(dim=-1)
+                x = x + combined * self.tier_output_gate
 
-            if self.use_sink:
-                sink_weight = routing_w[:, :, 3]
-                kv_scale = 1.0 - sink_weight * (1.0 - self.sink_kv_scale.abs())
-                x = x * kv_scale.unsqueeze(-1)
+                if self.use_sink:
+                    sink_weight = routing_w[:, :, 2]  # sink is index 2 in 3-tier
+                    kv_scale = 1.0 - sink_weight * (1.0 - self.sink_kv_scale.abs())
+                    x = x * kv_scale.unsqueeze(-1)
+
+                # Unconditional PEER FFN (runs for every token)
+                peer_out = self.peer_ffn(self.ln_peer(x))
+                x = x + peer_out * self.peer_output_gate
+            else:
+                # v1/v3: 4-tier routing (conv, expert, attn, sink)
+                conv_out = self.conv_tier(h)
+                expert_out = self.expert_tier(h)
+                attn_out2 = self.attn_tier(h)
+                sink_out = self.sink_tier(h)
+
+                tier_outputs = torch.stack(
+                    [conv_out, expert_out, attn_out2, sink_out], dim=-1
+                )
+                w = routing_w.unsqueeze(2)
+                combined = (tier_outputs * w).sum(dim=-1)
+                x = x + combined * self.tier_output_gate
+
+                if self.use_sink:
+                    sink_weight = routing_w[:, :, 3]
+                    kv_scale = 1.0 - sink_weight * (1.0 - self.sink_kv_scale.abs())
+                    x = x * kv_scale.unsqueeze(-1)
         else:
             x = x + self.mlp(self.ln2(x))
 
@@ -352,6 +387,12 @@ class HRSTransformer(nn.Module):
                 if block.use_router:
                     if hasattr(block.attn_tier, 'out_proj'):
                         nn.init.normal_(block.attn_tier.out_proj.weight, mean=0.0, std=scale)
+                    # v4: scale unconditional PEER FFN output projection
+                    if block.use_peer_ffn and hasattr(block.peer_ffn, 'output_proj'):
+                        nn.init.normal_(block.peer_ffn.output_proj.weight, mean=0.0, std=scale)
+                    # v3: scale PEER output projection for residual stability
+                    elif block.use_peer and hasattr(block, 'expert_tier') and hasattr(block.expert_tier, 'output_proj'):
+                        nn.init.normal_(block.expert_tier.output_proj.weight, mean=0.0, std=scale)
                 else:
                     nn.init.normal_(block.mlp.fc2.weight, mean=0.0, std=scale)
             elif isinstance(block, HRSv2Block):
@@ -517,14 +558,37 @@ class HRSTransformer(nn.Module):
         if router_params > 0:
             counts["router"] = router_params
 
-        # v1 Tiers
-        for tier_name in ["conv_tier", "expert_tier", "attn_tier", "sink_tier"]:
+        # v1/v3 Tiers
+        for tier_name in ["conv_tier", "attn_tier", "sink_tier"]:
             total = 0
             for block in self.blocks:
                 if hasattr(block, tier_name):
                     total += sum(p.numel() for p in getattr(block, tier_name).parameters())
             if total > 0:
                 counts[tier_name] = total
+
+        # v4: unconditional PEER FFN (separate from tiers)
+        peer_ffn_total = 0
+        for block in self.blocks:
+            if hasattr(block, "peer_ffn"):
+                peer_ffn_total += sum(p.numel() for p in block.peer_ffn.parameters())
+                if hasattr(block, "ln_peer"):
+                    peer_ffn_total += sum(p.numel() for p in block.ln_peer.parameters())
+                if hasattr(block, "peer_output_gate"):
+                    peer_ffn_total += block.peer_output_gate.numel()
+        if peer_ffn_total > 0:
+            counts["peer"] = peer_ffn_total
+
+        # expert_tier: count as "peer" when PEER (v3), else "expert_tier"
+        expert_total = 0
+        expert_is_peer = False
+        for block in self.blocks:
+            if hasattr(block, "expert_tier"):
+                expert_total += sum(p.numel() for p in block.expert_tier.parameters())
+                if isinstance(block, HRSBlock) and block.use_peer:
+                    expert_is_peer = True
+        if expert_total > 0:
+            counts["peer" if expert_is_peer else "expert_tier"] = expert_total
 
         # Engrams
         if self.use_engrams:
@@ -563,6 +627,9 @@ class HRSTransformer(nn.Module):
             elif "conv_tier" in name:
                 groups["conv"].append(param)
             elif "expert_tier" in name:
+                groups["expert"].append(param)
+            elif "peer_ffn" in name or "ln_peer" in name or "peer_output_gate" in name:
+                # v4: unconditional PEER FFN uses "expert" LR schedule slot
                 groups["expert"].append(param)
             elif "attn_tier" in name:
                 groups["attention_tier"].append(param)

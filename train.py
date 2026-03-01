@@ -155,9 +155,9 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
 
     if is_v2:
         print(f"  Attention layers: {cfg.n_attention_layers()}, Conv layers: {cfg.n_conv_layers()}")
-        if cfg.uses_peer():
-            print(f"  PEER: {cfg.peer.n_sub_keys}^2 = {cfg.peer.n_sub_keys**2:,} experts, "
-                  f"{cfg.peer.n_heads} heads x {cfg.peer.top_k} top-k = {cfg.peer.n_heads * cfg.peer.top_k} active/token")
+    if cfg.uses_peer():
+        print(f"  PEER: {cfg.peer.n_sub_keys}^2 = {cfg.peer.n_sub_keys**2:,} experts, "
+              f"{cfg.peer.n_heads} heads x {cfg.peer.top_k} top-k = {cfg.peer.n_heads * cfg.peer.top_k} active/token")
 
     # Loss
     label_smoothing = 0.1 if cfg.uses_router() else 0.0
@@ -209,6 +209,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
     else:
         config_dict["router"] = cfg.router.__dict__
         config_dict["tier"] = cfg.tier.__dict__
+    if cfg.uses_peer() and not is_v2:
+        config_dict["peer"] = cfg.peer.__dict__
     if cfg.uses_engrams():
         config_dict["engram"] = cfg.engram.__dict__
     if cfg.uses_phased_training():
@@ -328,8 +330,11 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
         if new_phase != current_phase:
             print(f"\n*** Phase transition: {current_phase} -> {new_phase} at step {step} ***\n")
 
-            # v1: Engram refinement at Phase 5 entry
-            if new_phase == 5 and cfg.training.ablation == AblationConfig.FULL_HRS_REFINED:
+            # v1/v3/v4: Engram refinement at Phase 5 entry
+            if new_phase == 5 and cfg.training.ablation in (
+                AblationConfig.FULL_HRS_REFINED, AblationConfig.V3_FULL,
+                AblationConfig.V4_FULL,
+            ):
                 model.apply_engram_refinement()
 
             current_phase = new_phase

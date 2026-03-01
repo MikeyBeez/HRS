@@ -175,7 +175,8 @@ def routing_entropy_loss(routing_weights: torch.Tensor) -> torch.Tensor:
 #   expert:  d * expert_h * 2  = 262144  -> 0.111
 #   attn:    d * T             = 262144  -> 0.111
 #   sink:    d (just scaling)  =    512  -> 0.0002
-TIER_FLOPS_COST = [0.0015, 0.111, 0.111, 0.0002]
+TIER_FLOPS_COST_4 = [0.0015, 0.111, 0.111, 0.0002]  # conv, expert, attn, sink
+TIER_FLOPS_COST_3 = [0.0015, 0.111, 0.0002]          # conv, attn, sink (v4: no expert tier)
 
 
 def routing_flops_loss(
@@ -190,15 +191,19 @@ def routing_flops_loss(
     Minimized by routing everything to sink (cheapest), but combined
     with CE loss, the model learns the quality/compute tradeoff.
 
+    Auto-detects 3-tier vs 4-tier from routing_weights shape if no
+    explicit tier_costs provided.
+
     Args:
         routing_weights: (B, T, n_tiers) routing weights
-        tier_costs: per-tier relative FLOPs costs. Defaults to TIER_FLOPS_COST.
+        tier_costs: per-tier relative FLOPs costs. Auto-detected if None.
 
     Returns:
         Scalar expected FLOPs ratio (0.0 = all sink, ~0.11 = all attention)
     """
     if tier_costs is None:
-        tier_costs = TIER_FLOPS_COST
+        n_tiers = routing_weights.shape[-1]
+        tier_costs = TIER_FLOPS_COST_3 if n_tiers == 3 else TIER_FLOPS_COST_4
 
     costs = torch.tensor(tier_costs, device=routing_weights.device, dtype=routing_weights.dtype)
     p = routing_weights.mean(dim=(0, 1))  # (n_tiers,)

@@ -125,8 +125,16 @@ def output_magnitude_ratio(routing_weights_list: list) -> float:
 
 
 @torch.no_grad()
-def estimate_flops_per_token(routing_weights: torch.Tensor, d_model: int, d_ff: int, seq_len: int, n_experts: int = 4) -> float:
-    """Estimate FLOPs per token based on routing decisions."""
+def estimate_flops_per_token(routing_weights: torch.Tensor, d_model: int, d_ff: int, seq_len: int, n_experts: int = 4, peer_unconditional: bool = False) -> float:
+    """Estimate FLOPs per token based on routing decisions.
+
+    Handles both 4-tier (v1/v3: conv, expert, attn, sink) and
+    3-tier (v4: conv, attn, sink) routing.
+
+    Args:
+        peer_unconditional: if True, add PEER FLOPs as always-on (v4 mode)
+    """
+    n_tiers = routing_weights.shape[-1]
     assignments = routing_weights.argmax(dim=-1)
     total = assignments.numel()
 
@@ -137,12 +145,24 @@ def estimate_flops_per_token(routing_weights: torch.Tensor, d_model: int, d_ff: 
 
     dense_flops = d_model * seq_len + d_model * d_ff * 2
 
-    tier_flops = [conv_flops, expert_flops, attn_flops, sink_flops]
+    if n_tiers == 3:
+        # v4: conv, attn, sink (no expert tier)
+        tier_flops = [conv_flops, attn_flops, sink_flops]
+    else:
+        # v1/v3: conv, expert, attn, sink
+        tier_flops = [conv_flops, expert_flops, attn_flops, sink_flops]
 
     weighted_flops = 0.0
-    for t in range(4):
+    for t in range(n_tiers):
         frac = (assignments == t).sum().item() / total
         weighted_flops += frac * tier_flops[t]
+
+    # v4: PEER runs unconditionally for every token (add its FLOPs)
+    if peer_unconditional:
+        # PEER FLOPs: ~2 * d_model * expert_hidden * n_active_experts
+        # With 512 sub-keys, 8 heads, 16 top-k: 128 active experts * 2 * 256 hidden
+        peer_flops = 128 * 256 * 2  # approximate per-token
+        weighted_flops += peer_flops
 
     return weighted_flops / dense_flops if dense_flops > 0 else 1.0
 
@@ -287,11 +307,14 @@ def run_all_metrics(
         metrics["magnitude_ratio"] = output_magnitude_ratio(last_rw)
 
         if last_rw:
+            # v4: detect unconditional PEER from 3-tier routing
+            peer_uncon = last_rw[0].shape[-1] == 3 and model.cfg.uses_peer()
             metrics["flops_ratio"] = estimate_flops_per_token(
                 last_rw[0],
                 model.cfg.model.d_model,
                 model.cfg.model.d_ff,
                 model.cfg.model.max_seq_len,
+                peer_unconditional=peer_uncon,
             )
 
     # v2 PEER metrics
