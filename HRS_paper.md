@@ -445,13 +445,16 @@ The fix is not sequential freezing (which creates brittle handoff points) but **
 
 **Goal:** Establish stable representations and local structure.
 
-**Lead components** (full LR): Backbone, Generative head (Head A), Conv operators
-
-**Warming** (0.1x LR): Locality head (Head B)
-
-**Minimal** (0.01x LR): Router, Expert modules, Sink channel
-
-**Off** (frozen): Engram encoder
+| Component | Learning Rate | Status |
+|-----------|--------------|--------|
+| Backbone | full LR | lead |
+| Generative head (Head A) | full LR | lead |
+| Conv operators | full LR | lead |
+| Locality head (Head B) | 0.1x LR | warming |
+| Router | 0.01x LR | minimal |
+| Expert modules | 0.01x LR | minimal |
+| Sink channel | 0.01x LR | minimal |
+| Engram encoder | frozen | off |
 
 The backbone learns basic language structure. Convolutions establish local mixing patterns. The generative head provides the primary training signal.
 
@@ -461,13 +464,16 @@ The backbone learns basic language structure. Convolutions establish local mixin
 
 **Goal:** Shape representational geometry for routing via dual-head tension.
 
-**Lead components** (full LR): Generative head (Head A), Locality head (Head B)
-
-**Ramping** (0.5x LR): Router, Backbone, Conv operators
-
-**Warming** (0.1x LR): Expert modules, Sink channel
-
-**Off** (frozen): Engram encoder
+| Component | Learning Rate | Status |
+|-----------|--------------|--------|
+| Backbone | 0.5x LR | supporting |
+| Generative head (Head A) | full LR | lead |
+| Conv operators | 0.5x LR | supporting |
+| Locality head (Head B) | full LR | **lead** |
+| Router | 0.5x LR | **ramping** |
+| Expert modules | 0.1x LR | warming |
+| Sink channel | 0.1x LR | warming |
+| Engram encoder | frozen | off |
 
 The locality head comes online as co-lead. Its weak supervision signal shapes the backbone geometry to form the clusters that routing will exploit. The router begins learning at 0.5x LR, exploiting the emerging cluster structure. It does not need the geometry to be perfect — it needs it to be forming.
 
@@ -477,11 +483,16 @@ The locality head comes online as co-lead. Its weak supervision signal shapes th
 
 **Goal:** Activate specialist computation and forgetting.
 
-**Lead components** (full LR): Generative head (Head A), Router, Expert modules, Sink channel
-
-**Supporting** (0.3x–0.5x LR): Backbone (0.3x), Locality head (Head B) (0.5x), Conv operators (0.3x)
-
-**Off** (frozen): Engram encoder
+| Component | Learning Rate | Status |
+|-----------|--------------|--------|
+| Backbone | 0.3x LR | supporting |
+| Generative head (Head A) | full LR | lead |
+| Locality head (Head B) | 0.5x LR | supporting |
+| Conv operators | 0.3x LR | supporting |
+| Router | full LR | **lead** |
+| Expert modules | full LR | **lead** |
+| Sink channel | full LR | **lead** |
+| Engram encoder | frozen | off |
 
 The router, experts, and sink come online together. The router has had two phases of warmup and a forming cluster geometry to work with.
 
@@ -493,9 +504,16 @@ The router, experts, and sink come online together. The router has had two phase
 
 **Goal:** Learn long-term memory compression. *Extension phase — requires engram module.*
 
-**Lead component** (full LR): Engram encoder
-
-**Supporting** (0.1x–0.5x LR): Backbone (0.1x), Generative head (Head A) (0.5x), Locality head (Head B) (0.3x), Conv operators (0.1x), Router (0.5x), Expert modules (0.5x), Sink channel (0.5x)
+| Component | Learning Rate | Status |
+|-----------|--------------|--------|
+| Backbone | 0.1x LR | supporting |
+| Generative head (Head A) | 0.5x LR | supporting |
+| Locality head (Head B) | 0.3x LR | supporting |
+| Conv operators | 0.1x LR | supporting |
+| Router | 0.5x LR | supporting |
+| Expert modules | 0.5x LR | supporting |
+| Sink channel | 0.5x LR | supporting |
+| Engram encoder | full LR | **lead** |
 
 The engram encoder trains last because it depends on all other components being stable. Training engrams on unstable representations produces unstable compressions.
 
@@ -509,7 +527,7 @@ Freeze the engram encoder. Reinitialize downstream connection weights. Retrain t
 
 **Duration:** Fixed — equivalent to Phase 4 duration.
 
-**Empirical note:** Phase 5 consistently degrades performance across all model scales tested (Section 13). All five engram variants (v1, v3, v4) show best perplexity at the end of Phase 4, with Phase 5 adding +0.62 to +4.87 PPL regression. We recommend treating this phase as optional pending validation at larger scale.
+**Empirical note:** Phase 5 consistently degrades performance at the 50M-parameter scale tested (Section 13). All three engram variants show best perplexity at the end of Phase 4, with Phase 5 adding +0.62 to +1.40 PPL regression. We recommend treating this phase as optional pending validation at larger scale.
 
 ## Self-Adaptive Loss Weighting
 
@@ -578,30 +596,13 @@ Total training cost is approximately 1.4-1.6x a standard single-phase run of equ
 
 ## Summary
 
-**Phase 1 — Foundation**
-- *Duration:* Until val loss plateaus
-- *Lead components:* Backbone, GenHead, Conv
-- *Key metric:* Validation loss
-
-**Phase 2 — Geometry**
-- *Duration:* Until effective rank stabilizes
-- *Lead components:* LocalityHead, Router (ramping)
-- *Key metric:* Effective rank (SVD)
-
-**Phase 3 — Specialization**
-- *Duration:* Until routing entropy stabilizes
-- *Lead components:* Router, Experts, Sink
-- *Key metric:* Routing entropy, output magnitudes
-
-**Phase 4 — Compression***
-- *Duration:* Until engram reconstruction converges
-- *Lead components:* Engram encoder
-- *Key metric:* Reconstruction quality
-
-**Phase 5 — Refinement***
-- *Duration:* Fixed (= Phase 4 duration)
-- *Lead components:* Downstream engram consumers
-- *Key metric:* Val loss with engram context
+| Phase | Duration | Lead Components | Key Metric |
+|-------|----------|----------------|------------|
+| 1: Foundation | Until val loss plateaus | Backbone, GenHead, Conv | Validation loss |
+| 2: Geometry | Until effective rank stabilizes | LocalityHead, Router (ramping) | Effective rank (SVD) |
+| 3: Specialization | Until routing entropy stabilizes | Router, Experts, Sink | Routing entropy, output magnitudes |
+| 4: Compression* | Until engram reconstruction converges | Engram encoder | Reconstruction quality |
+| 5: Refinement* | Fixed (= Phase 4 duration) | Downstream engram consumers | Val loss with engram context |
 
 *Phases 4-5 apply only when engram extension is included.
 
@@ -629,7 +630,7 @@ This allows training without proprietary chat logs and avoids brittle labeling.
 
 ## Setup
 
-We validated HRS on WikiText-103 (118M tokens) using a 4-layer, 8-head, d_model=512 transformer (38M parameters for the dense baseline, up to 175.6M with PEER variants). All configurations were trained for 50,000 steps with effective batch size 48, learning rate 3e-4 with cosine decay, on a single NVIDIA RTX 5070 Ti (16GB VRAM). BF16 mixed precision was used throughout.
+We validated HRS on WikiText-103 (118M tokens) using a 4-layer, 8-head, d_model=512 transformer (38M parameters for the dense baseline, up to 50M with all HRS components). All configurations were trained for 50,000 steps with effective batch size 48, learning rate 3e-4 with cosine decay, on a single NVIDIA RTX 5070 Ti (16GB VRAM). BF16 mixed precision was used throughout.
 
 **v1 ablation (8 configs).** Seven ablation configurations were trained, each adding one component. Two additional configurations were run after correcting an implementation error in the original config 7 (see note below):
 
@@ -642,14 +643,14 @@ We validated HRS on WikiText-103 (118M tokens) using a 4-layer, 8-head, d_model=
 7. **full_hrs_refined** — + engram refinement (freeze encoder, reinitialize injector at P5)
 8. **full_hrs_trc** — full_hrs + Temporal Routing Cache (causal moving average, window=8)
 
-**v2 experiment (4 configs).** To test whether routing could be replaced by a fixed structural prior, we built a second architecture: attention layers 1-2, convolution layers 3-4 (no router), with Parameter Efficient Expert Retrieval (PEER) replacing the standard MLP. PEER uses product-key retrieval over 262,144 single-neuron experts (512 sub-keys x 2), activating 128 per token (8 heads x 16 top-k), achieving 99.95% sparsity.
+**v2 experiment (4 configs).** To test whether routing could be replaced by a fixed structural prior, we built a second architecture: attention layers 1-2, convolution layers 3-4 (no router), with Parameter Efficient Expert Retrieval (PEER) replacing the standard MLP. PEER uses product-key retrieval over 262,144 single-neuron experts (512 sub-keys × 2), activating 128 per token (8 heads × 16 top-k), achieving 99.95% sparsity.
 
-9. **v2_attn_conv** — Attention->Conv backbone, standard MLP (36.8M params)
+9. **v2_attn_conv** — Attention→Conv backbone, standard MLP (36.8M params)
 10. **v2_attn_conv_dual** — + dual-head (locality)
 11. **v2_attn_conv_peer** — + PEER FFN replacing MLP (167M params, 138M sparse)
 12. **v2_full** — + engrams + phased training (169.7M params)
 
-**v3 experiment (1 config).** To test whether PEER's sparse experts improve upon v1's 4-expert MoE within the proven routing framework, we performed a single surgical substitution: PEER replaces ExpertTier in the v1 HRSBlock. All other components remain identical to full_hrs_refined. Batch size was reduced from 24 to 8 (with gradient accumulation increased to 6) to fit the larger model in 16GB VRAM.
+**v3 experiment (1 config).** To test whether PEER's sparse experts improve upon v1's 4-expert MoE within the proven routing framework, we performed a single surgical substitution: PEER replaces ExpertTier in the v1 HRSBlock. All other components — router, conv tier, attention tier, sink tier, dual-head, engrams, 5-phase training — remain identical to full_hrs_refined. Batch size was reduced from 24 to 8 (with gradient accumulation increased to 6) to fit the larger model in 16GB VRAM.
 
 13. **v3_full** — v1 routing framework + PEER as expert tier + engrams (175.6M params)
 
@@ -659,96 +660,43 @@ We validated HRS on WikiText-103 (118M tokens) using a 4-layer, 8-head, d_model=
 
 ## Results
 
-**Config 1 — dense_baseline**
-- Val PPL: **23.83** (reference)
-- Eff. Rank: 391.5
-- Routing Entropy: n/a
-- Tier Distribution: n/a
+### v1 Ablation
 
-**Config 2 — dual_head**
-- Val PPL: **24.08** (+1.0% vs baseline)
-- Eff. Rank: 90.1
-- Routing Entropy: n/a
-- Tier Distribution: n/a
-
-**Config 3 — dual_head_router**
-- Val PPL: **31.63** (+32.7% vs baseline)
-- Eff. Rank: 13.3
-- Routing Entropy: 0.026
-- Tier Distribution (conv/expert/attn/sink): 21 / 29 / 32 / 18
-
-**Config 4 — dual_head_router_sink**
-- Val PPL: **31.90** (+33.9% vs baseline)
-- Eff. Rank: 12.3
-- Routing Entropy: 0.035
-- Tier Distribution (conv/expert/attn/sink): 20 / 32 / 29 / 19
-
-**Config 5 — full_core**
-- Val PPL: **37.84** (+58.8% vs baseline)
-- Eff. Rank: 19.1
-- Routing Entropy: 0.055
-- Tier Distribution (conv/expert/attn/sink): 24 / 31 / 25 / 20
-
-**Config 6 — full_hrs**
-- Val PPL: **12.04** (-49.5% vs baseline)
-- Best PPL: 10.64 (Phase 4)
-- Eff. Rank: 43.1
-- Routing Entropy: 0.101
-- Tier Distribution (conv/expert/attn/sink): 26 / 30 / 32 / 12
-
-**Config 7 — full_hrs_refined**
-- Val PPL: **10.51** (-55.9% vs baseline)
-- Best PPL: **9.19** (Phase 4)
-- Eff. Rank: n/a
-- Routing Entropy: n/a
-- Tier Distribution: n/a
-
-**Config 8 — full_hrs_trc**
-- Val PPL: **10.05** (-57.8% vs baseline)
-- Best PPL: **9.43** (Phase 4)
-- Eff. Rank: n/a
-- Routing Entropy: n/a
-- Tier Distribution: n/a
+| # | Configuration | Val PPL | Best PPL (Phase) | Δ vs Baseline | Eff. Rank | Routing Entropy | Tier Dist. (c/e/a/s) |
+|---|---------------|--------:|-----------------:|--------------:|----------:|----------------:|----------------------|
+| 1 | dense_baseline | **23.83** | — | — | 391.5 | — | — |
+| 2 | dual_head | **24.08** | — | +1.0% | 90.1 | — | — |
+| 3 | dual_head_router | **31.63** | — | +32.7% | 13.3 | 0.026 | 21 / 29 / 32 / 18 |
+| 4 | dual_head_router_sink | **31.90** | — | +33.9% | 12.3 | 0.035 | 20 / 32 / 29 / 19 |
+| 5 | full_core | **37.84** | — | +58.8% | 19.1 | 0.055 | 24 / 31 / 25 / 20 |
+| 6 | full_hrs | **12.04** | 10.64 (P4) | -49.5% | 43.1 | 0.101 | 26 / 30 / 32 / 12 |
+| 7 | full_hrs_refined | **10.51** | **9.19** (P4) | **-55.9%** | — | — | — |
+| 8 | full_hrs_trc | **10.05** | **9.43** (P4) | **-57.8%** | — | — | — |
 
 **Note on config 7:** The original ablation run labeled "full_hrs_refined" contained an implementation error — no actual engram refinement was performed (the Phase 5 freeze/reinitialize protocol was not triggered). That run (val_ppl 10.04) was effectively a second full_hrs run, confirming substantial run-to-run variance across engram configurations (range: 10.0–12.0). The results above reflect the corrected implementation where the engram encoder is frozen and the injector type embedding is reinitialized at the Phase 5 transition.
 
-**Best PPL column:** For engram configurations (6-8, 13-14), the best validation perplexity occurs at the end of Phase 4, before Phase 5 degrades performance. This is discussed in Finding 3 below.
+**Best PPL column:** For engram configurations (6-8), the best validation perplexity occurs at the end of Phase 4, before Phase 5 degrades performance. This is discussed in Finding 3 below.
 
-**v2 Structural Prior Experiment**
+### v2 Structural Prior Experiment
 
-**Config 9 — v2_attn_conv**
-- Params: 36.8M
-- Val PPL: **25.7** (+7.8% vs baseline)
+| # | Configuration | Params | Val PPL | Δ vs Baseline |
+|---|---------------|-------:|--------:|--------------:|
+| 9 | v2_attn_conv | 36.8M | **25.7** | +7.8% |
+| 10 | v2_attn_conv_dual | 36.8M | **26.2** | +9.9% |
+| 11 | v2_attn_conv_peer | 167M | **24.1** | +1.1% |
+| 12 | v2_full | 169.7M | **27.2** | +14.1% |
 
-**Config 10 — v2_attn_conv_dual**
-- Params: 36.8M
-- Val PPL: **26.2** (+9.9% vs baseline)
+### v3 PEER + Routing Experiment
 
-**Config 11 — v2_attn_conv_peer**
-- Params: 167M
-- Val PPL: **24.1** (+1.1% vs baseline)
+| # | Configuration | Params | Val PPL | Best PPL (Phase) | Δ vs Baseline | Tier Dist. (c/p/a/s) |
+|---|---------------|-------:|--------:|-----------------:|--------------:|----------------------|
+| 13 | v3_full | 175.6M | **14.33** | **9.46** (P4) | **-60.3%** | 26 / 36 / 31 / 7 |
 
-**Config 12 — v2_full**
-- Params: 169.7M
-- Val PPL: **27.2** (+14.1% vs baseline)
+### v4 Unconditional PEER Experiment
 
-**v3 PEER + Routing Experiment**
-
-**Config 13 — v3_full**
-- Params: 175.6M
-- Val PPL: **14.33**
-- Best PPL: **9.46** (Phase 4)
-- Delta vs Baseline: **-60.3%**
-- Tier Distribution (conv/peer/attn/sink): 26 / 36 / 31 / 7
-
-**v4 Unconditional PEER Experiment**
-
-**Config 14 — v4_full**
-- Params: 175.6M
-- Val PPL: **9.6**
-- Best PPL: **8.3** (Phase 4)
-- Delta vs Baseline: **-65.2%**
-- Tier Distribution (conv/attn/sink): 30 / 43 / 26
+| # | Configuration | Params | Val PPL | Best PPL (Phase) | Δ vs Baseline | Tier Dist. (c/a/s) |
+|---|---------------|-------:|--------:|-----------------:|--------------:|---------------------|
+| 14 | v4_full | 175.6M | **9.6** | **8.3** (P4) | **-65.2%** | 30 / 43 / 26 |
 
 ## Analysis
 
@@ -768,58 +716,39 @@ However, all routed configurations show healthy routing dynamics: all four tiers
 
 This suggests the router's value is infrastructural: it creates the organized representational geometry that engrams need to compress effectively. Routing without engrams is scaffolding without a building.
 
-**The v2 experiment provides the complementary test.** Replacing routing with a fixed structural prior (attention layers 1-2, convolution layers 3-4) yields baseline-equivalent perplexity even with PEER's 262K sparse experts (24.1 vs 23.83). The structural prior is a reasonable architectural choice, but it does not create the dynamic, token-dependent geometry that learned routing produces. The result: engrams have nothing structured to compress, and adding them hurts (27.2 vs 24.1).
+**The v2 experiment provides the complementary test.** Replacing routing with a fixed structural prior (attention layers 1-2, convolution layers 3-4) yields baseline-equivalent perplexity even with PEER's 262K sparse experts (24.1 vs 23.83). The structural prior is a reasonable architectural choice — it matches known patterns about early vs. late layer functions — but it does not create the dynamic, token-dependent geometry that learned routing produces. The result: engrams have nothing structured to compress, and adding them hurts (27.2 vs 24.1).
 
 ### Finding 3: Phased training dynamics and Phase 5 regression
 
 The `full_hrs` trajectory reveals how the phased protocol shapes training:
 
-**Phase 1 (Foundation), steps 1-8K**
-- Best Val PPL: 27.0
-- Tier Distribution: 68/10/20/3
-- Observation: Conv-dominated bootstrap
-
-**Phase 2 (Geometry), steps 8-16K**
-- Best Val PPL: 15.1
-- Tier Distribution: 36/28/25/11
-- Observation: Tiers rebalance, PPL drops sharply
-
-**Phase 3 (Specialization), steps 16-26K**
-- Best Val PPL: 14.8
-- Tier Distribution: 27/28/31/14
-- Observation: Modest improvement, routing stabilizes
-
-**Phase 4 (Compression), steps 26-38K**
-- Best Val PPL: 11.1
-- Tier Distribution: 27/30/31/12
-- Observation: Engrams activate — PPL drops 25%
-
-**Phase 5 (Refinement), steps 38-50K**
-- Best Val PPL: 12.0
-- Tier Distribution: 26/30/32/12
-- Observation: Regression: +0.9 PPL
+| Phase | Steps | Best Val PPL | Tier Distribution | Observation |
+|-------|------:|-------------:|-------------------|-------------|
+| P1 (Foundation) | 1-8K | 27.0 | 68/10/20/3 | Conv-dominated bootstrap |
+| P2 (Geometry) | 8-16K | 15.1 | 36/28/25/11 | Tiers rebalance, PPL drops sharply |
+| P3 (Specialization) | 16-26K | 14.8 | 27/28/31/14 | Modest improvement, routing stabilizes |
+| P4 (Compression) | 26-38K | 11.1 | 27/30/31/12 | Engrams activate — PPL drops 25% |
+| P5 (Refinement) | 38-50K | 12.0 | 26/30/32/12 | Regression: +0.9 PPL |
 
 Phase 1 reveals an unexpected pattern: the router initially sends 68% of tokens to the conv tier. This is rational — during foundation training, the conv tier is the only tier with meaningful gradients (experts and attention start with near-random weights). The router learns to route around untrained components.
 
 Phase 4 produces the largest single-phase improvement (14.8 → 11.1, a 25% drop). This is the engram activation phase, confirming that the compressed memory system is the primary driver of HRS performance.
 
-**Phase 5 consistently degrades performance across all engram configurations.** This pattern holds for all five variants tested:
+**Phase 5 consistently degrades performance across all engram configurations.** This pattern holds for all four variants tested:
 
-**full_hrs (v1):** Best PPL 10.64 @ 38K, Final PPL 12.04, P5 Regression +1.40
-
-**full_hrs_refined (v1):** Best PPL 9.19 @ 33K, Final PPL 10.51, P5 Regression +1.32
-
-**full_hrs_trc (v1):** Best PPL 9.43 @ 36K, Final PPL 10.05, P5 Regression +0.62
-
-**v3_full:** Best PPL 9.46 @ 29K, Final PPL 14.33, P5 Regression +4.87
-
-**v4_full:** Best PPL 8.3 @ 31K, Final PPL 9.6, P5 Regression +1.30
+| Configuration | Params | Best PPL (end P4) | Final PPL (end P5) | P5 Regression |
+|--------------|-------:|------------------:|-------------------:|--------------:|
+| full_hrs (v1) | 50M | 10.64 @ 38K | 12.04 | +1.40 |
+| full_hrs_refined (v1) | 50M | 9.19 @ 33K | 10.51 | +1.32 |
+| full_hrs_trc (v1) | 50M | 9.43 @ 36K | 10.05 | +0.62 |
+| v3_full | 175.6M | 9.46 @ 29K | 14.33 | +4.87 |
+| v4_full | 175.6M | 8.3 @ 31K | 9.6 | +1.30 |
 
 The refinement protocol — freezing the engram encoder and retraining downstream consumers — does not help: `full_hrs_refined` regresses by +1.32, comparable to the unrefined `full_hrs` (+1.40). TRC shows the smallest regression (+0.62), suggesting temporal routing smoothing provides some stability during the phase transition. The v3 model shows the *largest* regression (+4.87), suggesting that Phase 5 disruption scales with coupled parameter count when PEER competes for routing weight.
 
 Notably, v4 regresses by only +1.30 despite having the same 175.6M parameters as v3 (+4.87). The difference: in v4, PEER runs unconditionally and does not participate in routing, so freezing the engram encoder does not disrupt the PEER-routing coupling that exists in v3. This supports hypothesis (b) below — disruption is proportional to the degree of coupling between the frozen component and the rest of the system, not simply to total parameter count.
 
-This is a clear negative result for Phase 5 at this model scale. Possible explanations: (a) the 24-28% iterative refinement improvement observed in prior work requires larger models or longer training to manifest; (b) freezing the encoder disrupts the joint optimization dynamic — the engram encoder, router, and backbone form a coupled system, and freezing one part shifts the equilibrium in ways that require more than 12K steps to recover; (c) the Phase 5 learning rate schedule (backbone at 0.3x, heads at 0.5x) is too aggressive for stable refinement. The v3-vs-v4 comparison strengthens hypothesis (b): with identical parameter counts, v3 regresses 3.7x more than v4 because v3's PEER is coupled through routing while v4's PEER is independent. We recommend that future work either eliminate Phase 5 or investigate gentler transitions (e.g., gradual encoder LR decay rather than hard freeze).
+This is a clear negative result for Phase 5 at this model scale. Possible explanations: (a) the 24-28% iterative refinement improvement observed in prior work requires larger models or longer training to manifest; (b) freezing the encoder disrupts the joint optimization dynamic — the engram encoder, router, and backbone form a coupled system, and freezing one part shifts the equilibrium in ways that require more than 12K steps to recover; (c) the Phase 5 learning rate schedule (backbone at 0.3x, heads at 0.5x) is too aggressive for stable refinement. The v3-vs-v4 comparison strengthens hypothesis (b): with identical parameter counts, v3 regresses 3.7× more than v4 because v3's PEER is coupled through routing while v4's PEER is independent. We recommend that future work either eliminate Phase 5 or investigate gentler transitions (e.g., gradual encoder LR decay rather than hard freeze).
 
 ### Finding 4: Causal convolution matters
 
@@ -859,15 +788,17 @@ The results are unambiguous: no v2 configuration matches the v1 dense baseline. 
 
 ### Finding 8: Expert capacity is not the bottleneck — but expert *role* matters
 
-The v3 experiment (config 13) performed a controlled test: replace v1's 4-expert MoE with PEER's 262K sparse experts while keeping everything else identical.
+The v3 experiment (config 13) performed a controlled test: replace v1's 4-expert MoE (1.05M parameters per layer) with PEER's 262K sparse experts (138M parameters total) while keeping everything else identical — same router, same tiers, same dual-head, same engrams, same 5-phase training schedule.
 
-Result: v3 achieves best val_ppl 9.46 versus v1's 9.19. With 3.5x more total parameters and 130x more addressable experts, PEER produces essentially the same perplexity. The router learned to favor PEER — allocating 36% of routing weight to the expert tier — but the additional expert capacity did not translate to lower perplexity.
+Result: v3 achieves best val_ppl 9.46 (step 29K, early P4) versus v1's 9.19 (step 33K, late P4). With 3.5× more total parameters and 130× more addressable experts, PEER produces essentially the same perplexity. The router learned to favor PEER — allocating 36% of routing weight to the expert tier at peak (vs ~30% for v1's small MoE) — but the additional expert capacity did not translate to lower perplexity.
 
 This initially appeared to be a pure negative result — expert capacity doesn't matter. But the v4 experiment (config 14) reveals a subtlety: **expert *role* matters even when expert *capacity* doesn't.** v4 uses the same PEER with the same 262K experts, but moves it out of routing competition into an unconditional FFN role. Result: 8.3 best PPL — a 9.7% improvement over v1 and 12.2% over v3, with identical PEER parameters.
 
 The explanation: in v3, PEER competes with attention for routing weight. Both perform valuable but different functions — PEER handles per-token feature transformation (like MLP), while attention handles token mixing. Forcing them into the same routing decision means the router must compromise. In v4, PEER runs unconditionally for every token (replacing the standard MLP), while the router only decides the attention pathway (conv vs. attention vs. sink). Every token gets both PEER's feature transformation *and* its routed attention pathway, without competition.
 
-The practical implication: HRS implementations should not scale expert *count* (v3 shows this doesn't help), but should ensure that functionally distinct components (feature transformation vs. token mixing) occupy distinct architectural roles rather than competing through routing.
+The practical implication is refined: HRS implementations should not scale expert *count* (v3 shows this doesn't help), but should ensure that functionally distinct components (feature transformation vs. token mixing) occupy distinct architectural roles rather than competing through routing. The v3→v4 progression — same parameters, better architecture — is a cleaner demonstration of the HRS thesis: structure matters more than scale.
+
+The v4 routing dynamics confirm the separation works. The 3-tier router stabilizes at conv 30% / attention 43% / sink 26%. Without PEER competing for routing weight, attention's share increases from 31% (v3) to 43% (v4) — the router is free to allocate attention where it helps most, rather than trading it off against expert computation.
 
 ### Finding 9: Unconditional PEER + reduced routing achieves the best result
 
@@ -875,35 +806,33 @@ The v4 experiment (config 14) achieves the best perplexity of any configuration:
 
 The v4 training trajectory shows steady improvement through all four productive phases:
 
-**P1 (Foundation), steps 1-8K:** Best Val PPL 20.9. Backbone + conv at full LR, PEER at 0.01x.
-
-**P2 (Geometry), steps 8-16K:** Best Val PPL 15.3. Router + locality at full LR.
-
-**P3 (Specialization), steps 16-26K:** Best Val PPL 10.4. Router + sink at full LR, PEER at 1.0x.
-
-**P4 (Compression), steps 26-38K:** Best Val PPL **8.3**. Tier Distribution (conv/attn/sink): 30 / 43 / 26. Engrams activate — PPL plateaus at 8.3 from 31K-36K.
-
-**P5 (Refinement), steps 38-50K:** Best Val PPL 9.4. Tier Distribution: 30 / 44 / 26. Regression: +1.3 PPL (moderate, less than v3's +4.87).
+| Phase | Steps | Best Val PPL | Tier Distribution (c/a/s) | Observation |
+|-------|------:|-------------:|---------------------------|-------------|
+| P1 (Foundation) | 1-8K | 20.9 | — | Backbone + conv at full LR, PEER at 0.01x |
+| P2 (Geometry) | 8-16K | 15.3 | — | Router + locality at full LR |
+| P3 (Specialization) | 16-26K | 10.4 | — | Router + sink at full LR, PEER at 1.0x |
+| P4 (Compression) | 26-38K | **8.3** | 30 / 43 / 26 | Engrams activate — PPL plateaus at 8.3 from 31K–36K |
+| P5 (Refinement) | 38-50K | 9.4 | 30 / 44 / 26 | Regression: +1.3 PPL (moderate, less than v3's +4.87) |
 
 The 8.3 plateau during mid-to-late P4 (steps 31K, 34K, 36K all achieve 8.3) suggests the model reaches a stable optimum once engrams have fully activated. This contrasts with v1 and v3, where the best PPL occurs at a single point — v4's flatter optimum may indicate that separating PEER from routing produces a more stable loss landscape.
 
-The v4 result has a specific implication for HRS architecture design: **functionally distinct operations should not compete through routing.** Feature transformation (PEER/MLP) and token mixing (attention) serve complementary roles. Routing should decide *how* tokens interact with each other (the attention pathway), not *whether* tokens undergo feature transformation (which should be unconditional).
+The v4 result has a specific implication for HRS architecture design: **functionally distinct operations should not compete through routing.** Feature transformation (PEER/MLP) and token mixing (attention) serve complementary roles. Routing should decide *how* tokens interact with each other (the attention pathway), not *whether* tokens undergo feature transformation (which should be unconditional). This is analogous to standard transformer design — every token passes through both attention and MLP — but with routing controlling only the attention pathway while PEER provides a universally superior FFN.
 
 ## Summary
 
-The ablation validates the HRS thesis with an important caveat: **routing alone is insufficient; routing plus compression is transformative.** The best HRS configuration (v4_full) achieves a best-of-run perplexity of 8.3 (65.2% below the dense baseline) at the end of Phase 4, with the v1 engram variants achieving 9.19-10.64 best-of-run (55.4-61.4% below baseline). The engram system is the decisive component, not the router — but the router creates the structured representations that make effective compression possible.
+The ablation validates the HRS thesis with an important caveat: **routing alone is insufficient; routing plus compression is transformative.** The best HRS configuration (v4_full) achieves a best-of-run perplexity of 8.3 (65.2% below the dense baseline) at the end of Phase 4, with the v1 engram variants achieving 9.19–10.64 best-of-run (55.4–61.4% below baseline). The engram system is the decisive component, not the router — but the router creates the structured representations that make effective compression possible.
 
 Four experimental axes strengthen this conclusion:
 
 1. **Routing is necessary** (v2): Replacing learned routing with a fixed structural prior eliminates the benefit. Engrams without routing geometry worsen perplexity (+14.1% vs baseline), even with 262K sparse PEER experts.
 
-2. **Expert capacity is not the bottleneck** (v3): Replacing v1's 4-expert MoE with PEER's 262K experts inside the routing framework yields the same perplexity (9.46 vs 9.19) with 3.5x more parameters.
+2. **Expert capacity is not the bottleneck** (v3): Replacing v1's 4-expert MoE with PEER's 262K experts inside the routing framework yields the same perplexity (9.46 vs 9.19) with 3.5× more parameters. The routing-to-compression pipeline, not expert count, drives performance.
 
-3. **Expert *role* matters** (v4): Moving PEER from a routed tier to an unconditional FFN improves perplexity from 9.46 to 8.3 with identical parameters — the best result across all experiments.
+3. **Expert *role* matters** (v4): Moving PEER from a routed tier (competing with attention) to an unconditional FFN (complementing attention) improves perplexity from 9.46 to 8.3 with identical parameters — the best result across all experiments. Functionally distinct operations should not compete through routing.
 
-4. **Phase 5 regression scales with coupling, not size** (v3 vs v4): v3 regresses +4.87 while v4 regresses only +1.30, despite identical parameter counts.
+4. **Phase 5 regression scales with coupling, not size** (v3 vs v4): v3 regresses +4.87 while v4 regresses only +1.30, despite identical parameter counts. The difference is that v4's PEER is decoupled from routing, confirming that disruption from encoder freezing is proportional to the degree of component coupling.
 
-Phase 5 (engram refinement) consistently degrades performance and should be considered optional or experimental at this model scale. The best practical configuration is a 4-phase protocol (P1-P4) with unconditional PEER and 3-tier routing.
+Phase 5 (engram refinement) consistently degrades performance and should be considered optional or experimental at this model scale. The best practical configuration is a 4-phase protocol (P1–P4) with unconditional PEER and 3-tier routing.
 
 ---
 
@@ -914,12 +843,12 @@ Based on the experimental results above, we can now distinguish validated from p
 ### Validated (Section 13)
 
 * representational diversity preserved through routing + compression (effective rank 43 vs 12.3 routing-only)
-* 59.7-65.2% perplexity reduction over dense baseline at equivalent training budget (end-of-training 9.6-10.51 vs 23.83; best-of-run 8.3 vs 23.83)
+* 59.7–65.2% perplexity reduction over dense baseline at equivalent training budget (end-of-training 9.6–10.51 vs 23.83; best-of-run 8.3 vs 23.83)
 * all compute tiers utilized without collapse (3-tier and 4-tier variants)
-* phased training successfully sequences component activation (Phases 1-4)
+* phased training successfully sequences component activation (Phases 1–4)
 * Phase 5 (engram refinement) degrades performance and should be considered optional
 * learned routing is necessary — fixed structural priors cannot substitute (v2: engrams without routing worsen perplexity by 14.1%)
-* expert capacity is not the bottleneck — 262K sparse experts yield the same perplexity as 4 small experts within the routing framework (v3: 9.46 vs 9.19 with 3.5x parameters)
+* expert capacity is not the bottleneck — 262K sparse experts yield the same perplexity as 4 small experts within the routing framework (v3: 9.46 vs 9.19 with 3.5× parameters)
 * expert role separation improves performance — unconditional PEER + 3-tier routing outperforms PEER-as-routed-tier by 12.2% at identical parameter count (v4: 8.3 vs v3: 9.46)
 
 ### Projected (require larger-scale validation)
@@ -941,7 +870,7 @@ This is a claim about compute efficiency, not parameter equivalence. Routing all
 
 The WikiText-103 ablation (Section 13) provides preliminary evidence: the full HRS system achieves best-of-run val_ppl 8.3 (v4, 175.6M params) at end of Phase 4 versus 23.83 for the dense baseline (38M parameters) — a 65.2% improvement. The v1 system achieves 9.19 with only 50M parameters (32% more than baseline), demonstrating a 61.4% improvement. However, we note that the router-only configurations (configs 3-5) show the opposite pattern: more parameters, worse perplexity. The hypothesis depends on the engram system scaling to larger models, which remains to be validated.
 
-The v3->v4 progression provides the most instructive evidence. v3 (175.6M parameters) scales the expert tier by 130x within the same routing framework and achieves 9.46 — essentially the same as v1's 9.19. But v4 (175.6M parameters, identical count) restructures the architecture so PEER serves as an unconditional FFN rather than a routed tier, achieving 8.3 — a 12.2% improvement over v3 with zero additional parameters. This demonstrates precisely the hypothesis's claim: **better structure, not more parameters, drives improvement.**
+The v3→v4 progression provides the most instructive evidence. v3 (175.6M parameters) scales the expert tier by 130× within the same routing framework and achieves 9.46 — essentially the same as v1's 9.19. But v4 (175.6M parameters, identical count) restructures the architecture so PEER serves as an unconditional FFN rather than a routed tier, achieving 8.3 — a 12.2% improvement over v3 with zero additional parameters. This demonstrates precisely the hypothesis's claim: **better structure, not more parameters, drives improvement.** The v3→v4 comparison is the clearest example: same parameters, same PEER, same routing framework, same engrams — only the architectural role assignment changes, and perplexity drops by 12%.
 
 This would demonstrate that **structured compute allocation plus learned compression can substitute for scale**.
 
@@ -951,87 +880,43 @@ This would demonstrate that **structured compute allocation plus learned compres
 
 The ablation was designed to test each component's independent contribution. Results (Section 13) reveal a different pattern than predicted:
 
-**Step 1 — Dense baseline**
-- Predicted: (reference)
-- Actual Val PPL: 23.83
-- Outcome: Reference
-
-**Step 2 — + Dual-head (locality)**
-- Predicted: Measurable gain
-- Actual Val PPL: 24.08 (+1.0%)
-- Outcome: Neutral — geometry shaping alone adds overhead without benefit at this scale
-
-**Step 3 — + Router + tiered compute**
-- Predicted: Measurable gain
-- Actual Val PPL: 31.63 (+32.7%)
-- Outcome: **Wrong** — router tax exceeds routing benefit without engrams
-
-**Step 4 — + Sink channel**
-- Predicted: Measurable gain
-- Actual Val PPL: 31.90 (+33.9%)
-- Outcome: Neutral — sink adds no measurable benefit at 512-token sequences
-
-**Step 5 — + Phased training (core only)**
-- Predicted: Additional gain
-- Actual Val PPL: 37.84 (+58.8%)
-- Outcome: **Wrong** — phased training without engrams hurts; phase transitions destabilize
-
-**Step 6 — + Engrams (Phases 1-5)**
-- Predicted: Additional gain
-- Actual Val PPL: 12.04 (-49.5%)
-- Outcome: **Dramatic gain** — engrams transform the architecture
-
-**Step 7 — + Engram refinement (P5)**
-- Predicted: Additional gain
-- Actual Val PPL: 10.51 (-55.9%)
-- Outcome: Gain vs baseline, but P5 itself regresses from best P4 PPL of 9.19
-
-**Step 8 — + TRC (window=8)**
-- Predicted: (not originally in ablation plan)
-- Actual Val PPL: 10.05 (-57.8%)
-- Outcome: Modest smoothing benefit; smallest P5 regression (+0.62)
+| Step | Configuration | Predicted | Actual (Val PPL) | Outcome |
+|------|--------------|-----------|:----------------:|---------|
+| 1 | Dense baseline | — | 23.83 | Reference |
+| 2 | + Dual-head (locality) | Measurable gain | 24.08 (+1.0%) | Neutral — geometry shaping alone adds overhead without benefit at this scale |
+| 3 | + Router + tiered compute | Measurable gain | 31.63 (+32.7%) | **Wrong** — router tax exceeds routing benefit without engrams |
+| 4 | + Sink channel | Measurable gain | 31.90 (+33.9%) | Neutral — sink adds no measurable benefit at 512-token sequences |
+| 5 | + Phased training (core only) | Additional gain | 37.84 (+58.8%) | **Wrong** — phased training without engrams hurts; phase transitions destabilize |
+| 6 | + Engrams (Phases 1-5) | Additional gain | 12.04 (-49.5%) | **Dramatic gain** — engrams transform the architecture |
+| 7 | + Engram refinement (P5) | Additional gain | 10.51 (-55.9%) | Gain vs baseline, but P5 itself regresses from best P4 PPL of 9.19 |
+| 8 | + TRC (window=8) | — | 10.05 (-57.8%) | Modest smoothing benefit; smallest P5 regression (+0.62) |
 
 **v2 counter-experiment: remove routing, keep structure.**
 
-**Config 9 — Fixed attn->conv backbone**
-- Predicted: Near baseline
-- Actual Val PPL: 25.7 (+7.8%)
-- Outcome: Structural prior slightly worse than baseline
-
-**Config 10 — + Dual-head**
-- Predicted: Measurable gain
-- Actual Val PPL: 26.2 (+9.9%)
-- Outcome: **Wrong** — dual-head hurts without routing (opposite of v1)
-
-**Config 11 — + PEER (262K experts)**
-- Predicted: Measurable gain
-- Actual Val PPL: 24.1 (+1.1%)
-- Outcome: PEER nearly recovers baseline with sparse retrieval
-
-**Config 12 — + Engrams + phased training**
-- Predicted: Additional gain
-- Actual Val PPL: 27.2 (+14.1%)
-- Outcome: **Wrong** — engrams without routing geometry make things worse
+| Step | Configuration | Predicted | Actual (Val PPL) | Outcome |
+|------|--------------|-----------|:----------------:|---------|
+| 9 | Fixed attn→conv backbone | Near baseline | 25.7 (+7.8%) | Structural prior slightly worse than baseline |
+| 10 | + Dual-head | Measurable gain | 26.2 (+9.9%) | **Wrong** — dual-head hurts without routing (opposite of v1) |
+| 11 | + PEER (262K experts) | Measurable gain | 24.1 (+1.1%) | PEER nearly recovers baseline with sparse retrieval |
+| 12 | + Engrams + phased training | Additional gain | 27.2 (+14.1%) | **Wrong** — engrams without routing geometry make things worse |
 
 **v3 counter-experiment: scale expert capacity within routing.**
 
-**Config 13 — v1 routing + PEER (262K) + engrams**
-- Predicted: Beat 9.19
-- Actual Best PPL: 9.46 (-60.3%)
-- Outcome: **Neutral** — 3.5x params, same perplexity; expert capacity not the bottleneck
+| Step | Configuration | Predicted | Actual (Best PPL) | Outcome |
+|------|--------------|-----------|:------------------:|---------|
+| 13 | v1 routing + PEER (262K) + engrams | Beat 9.19 | 9.46 (-60.3%) | **Neutral** — 3.5× params, same perplexity; expert capacity not the bottleneck |
 
 **v4 counter-experiment: separate PEER from routing.**
 
-**Config 14 — Unconditional PEER FFN + 3-tier routing + engrams**
-- Predicted: Beat 9.19
-- Actual Best PPL: **8.3** (-65.2%)
-- Outcome: **Best result** — separating FFN from routing lets both serve their natural roles
+| Step | Configuration | Predicted | Actual (Best PPL) | Outcome |
+|------|--------------|-----------|:------------------:|---------|
+| 14 | Unconditional PEER FFN + 3-tier routing + engrams | Beat 9.19 | **8.3** (-65.2%) | **Best result** — separating FFN from routing lets both serve their natural roles |
 
-Our prediction that "the core architecture should already demonstrate the thesis before extensions are added" was wrong. The core architecture (steps 2-5) consistently underperforms the dense baseline. The thesis is validated only when engrams are included. This has an important implication: **routing is necessary infrastructure for compression, not an independent source of improvement.** The value chain is routing -> structured geometry -> effective compression -> better perplexity, and removing the final link (compression) leaves only the cost of the preceding links.
+Our prediction that "the core architecture should already demonstrate the thesis before extensions are added" was wrong. The core architecture (steps 2-5) consistently underperforms the dense baseline. The thesis is validated only when engrams are included. This has an important implication: **routing is necessary infrastructure for compression, not an independent source of improvement.** The value chain is routing → structured geometry → effective compression → better perplexity, and removing the final link (compression) leaves only the cost of the preceding links.
 
-The v2, v3, and v4 experiments refine this further. v2 demonstrates that the first link (routing) cannot be replaced with a fixed structural prior. v3 demonstrates that expanding the expert tier within an existing routing framework does not help. v4 demonstrates that *how* components are composed matters as much as *what* components exist — moving PEER from routing competition to an unconditional role improves perplexity by 12.2% at identical parameter count.
+The v2, v3, and v4 experiments refine this further. v2 demonstrates that the first link (routing) cannot be replaced with a fixed structural prior — the geometry must be *learned* and *token-dependent*. v3 demonstrates that expanding the expert tier within an existing routing framework does not improve the downstream compression — the bottleneck is routing quality and engram capacity, not expert count. v4 demonstrates that *how* components are composed matters as much as *what* components exist — moving PEER from routing competition to an unconditional role improves perplexity by 12.2% at identical parameter count.
 
-The best practical protocol is a 4-phase training schedule (P1-P4) with unconditional PEER and 3-tier routing, achieving best-of-run val_ppl 8.3 (65.2% below baseline). Phase 5 consistently degrades performance across all engram variants and should be considered optional pending further investigation at larger scale.
+The best practical protocol is a 4-phase training schedule (P1–P4) with unconditional PEER and 3-tier routing, achieving best-of-run val_ppl 8.3 (65.2% below baseline). Phase 5 consistently degrades performance across all engram variants and should be considered optional pending further investigation at larger scale.
 
 Future work should test: (a) whether the router tax decreases at larger model scales where routing can save proportionally more compute; (b) whether TRC provides greater benefit at longer sequence lengths where temporal coherence spans are larger; (c) whether Phase 5 benefits from gentler encoder freezing (gradual LR decay rather than hard freeze) or longer training; (d) multi-seed runs to bound the substantial cross-run variance observed in engram configurations; (e) scaling engram capacity (more engrams per window, deeper encoder) as an alternative to scaling expert capacity; (f) whether the v4 pattern (unconditional FFN + reduced routing) extends to other expert types beyond PEER.
 
@@ -1063,11 +948,11 @@ Future work should test: (a) whether the router tax decreases at larger model sc
 ### Empirical Findings
 
 13. Demonstration that dual-objective routing is a Nash equilibrium, not optimal transport — Sinkhorn-Knopp solves the wrong formalism for multi-head architectures, an important negative result for MoE routing research
-14. Fourteen-configuration ablation across four experimental axes (v1 ablation, v2 structural prior, v3 expert scaling, v4 role separation) on WikiText-103 demonstrating up to 65.2% perplexity reduction (23.83 -> 8.3 best-of-run) with the full HRS system
-15. Phase dynamics analysis showing conv-dominated bootstrap (68% P1), engram-driven improvement (25% PPL drop in P4), and consistent P5 regression across all five engram variants (v1, v3, and v4) — establishing that the optimal practical protocol is 4 phases (P1-P4)
+14. Fourteen-configuration ablation across four experimental axes (v1 ablation, v2 structural prior, v3 expert scaling, v4 role separation) on WikiText-103 demonstrating up to 65.2% perplexity reduction (23.83 → 8.3 best-of-run) with the full HRS system
+15. Phase dynamics analysis showing conv-dominated bootstrap (68% P1), engram-driven improvement (25% PPL drop in P4), and consistent P5 regression across all five engram variants (v1, v3, and v4) — establishing that the optimal practical protocol is 4 phases (P1–P4)
 16. Demonstration that learned routing is necessary for engram effectiveness — fixed structural priors (v2) produce representations that engrams cannot exploit, worsening perplexity by 14.1% when engrams are added
-17. Demonstration that expert capacity is not the bottleneck — 262K sparse PEER experts in the routing framework produce the same perplexity as 4 small MoE experts (9.46 vs 9.19) with 3.5x parameters
-18. Demonstration that component role assignment matters — moving PEER from a routed tier to an unconditional FFN improves perplexity by 12.2% (9.46 -> 8.3) at identical parameter count, establishing that functionally distinct operations should not compete through routing
+17. Demonstration that expert capacity is not the bottleneck — 262K sparse PEER experts in the routing framework produce the same perplexity as 4 small MoE experts (9.46 vs 9.19) with 3.5× parameters, establishing routing geometry and engram compression as the performance-critical components
+18. Demonstration that component role assignment matters — moving PEER from a routed tier to an unconditional FFN improves perplexity by 12.2% (9.46 → 8.3) at identical parameter count, establishing that functionally distinct operations (feature transformation vs. token mixing) should not compete through routing
 
 ---
 
