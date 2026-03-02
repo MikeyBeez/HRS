@@ -25,6 +25,7 @@ A phased training protocol with differential learning rates prevents gradient mo
 This design decouples memory from compute: tokens are cheap to store but expensive to attend. By controlling attention participation rather than deleting history, HRS achieves better reasoning and lower compute. A four-axis ablation on WikiText-103 (14 configurations across v1–v4) demonstrates up to 65.2% perplexity reduction over a dense baseline (8.3 vs 23.83), with the best result achieved by separating sparse expert retrieval (PEER) as an unconditional FFN from a reduced 3-tier routing pathway — confirming that routing geometry and compression, not expert capacity, drive HRS performance. We hypothesize that a well-routed 1B HRS model can match or exceed dense 7B models at equivalent FLOPs on reasoning-heavy tasks through superior context curation.
 
 **Code:** [github.com/MikeyBeez/HRS](https://github.com/MikeyBeez/HRS)
+**DOI:** [10.5281/zenodo.18830327](https://doi.org/10.5281/zenodo.18830327)
 
 ---
 
