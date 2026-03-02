@@ -276,12 +276,19 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             needs_layer_reps = cfg.locality.enabled
 
             uses_replacement = cfg.uses_engram_replacement()
+            uses_gate = cfg.uses_remember_gate()
 
             with torch.autocast(device_type=device.type, dtype=amp_dtype, enabled=use_amp):
                 output = model(
                     x, step=step,
                     collect_layer_reps=needs_layer_reps,
-                    targets=y if uses_replacement else None,
+                    targets=y if (uses_replacement or uses_gate) else None,
+                )
+
+                # Gate values: v5 replacement gates or v6 remember gates
+                gate_values = (
+                    output.remember_gates if uses_gate
+                    else (output.replacement_gates if uses_replacement else None)
                 )
 
                 loss_dict = loss_fn(
@@ -296,8 +303,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                     flops_weight=cfg.router.flops_loss_weight if cfg.uses_router() else 0.0,
                     engram_recon_loss=output.engram_recon_loss if cfg.uses_engrams() else None,
                     recon_weight=cfg.engram.recon_loss_weight if cfg.uses_engrams() else 0.0,
-                    gate_values=output.replacement_gates if uses_replacement else None,
-                    gate_entropy_weight=cfg.engram.gate_entropy_weight if uses_replacement else 0.0,
+                    gate_values=gate_values,
+                    gate_entropy_weight=cfg.engram.gate_entropy_weight if (uses_replacement or uses_gate) else 0.0,
                 )
 
                 loss = loss_dict["loss"] / cfg.training.grad_accum_steps
@@ -330,8 +337,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             accum_recon += loss_dict["recon_loss"].item()
         if "gate_entropy_loss" in loss_dict:
             accum_gate_entropy += loss_dict["gate_entropy_loss"].item()
-        if output.replacement_gates is not None:
-            accum_gate_mean += output.replacement_gates.mean().item()
+        if gate_values is not None:
+            accum_gate_mean += gate_values.mean().item()
 
         # Gradient clipping
         torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.training.max_grad_norm)
@@ -400,6 +407,13 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 entry["gate_threshold"] = model.engram_replacer.threshold.item()
                 entry["gate_sharpness"] = model.engram_replacer.sharpness.item()
 
+            if cfg.uses_remember_gate():
+                avg_gate_ent = accum_gate_entropy / n
+                avg_gate_mean = accum_gate_mean / n
+                entry["gate_entropy_loss"] = avg_gate_ent
+                entry["gate_mean"] = avg_gate_mean
+                entry["remember_gate_bias"] = model.engram_injector.remember_gate.mlp[-1].bias.item()
+
             log_history.append(entry)
 
             extras = ""
@@ -411,6 +425,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 extras += f" | rec {avg_rec:.4f}"
             if cfg.uses_engram_replacement():
                 extras += f" | gate {avg_gate_mean:.3f} | θ {model.engram_replacer.threshold.item():.2f}"
+            if cfg.uses_remember_gate():
+                extras += f" | gate {avg_gate_mean:.3f} | bias {model.engram_injector.remember_gate.mlp[-1].bias.item():.2f}"
 
             print(
                 f"step {step:6d} | loss {avg_loss:.4f} | CE {avg_ce:.4f} | "
@@ -458,7 +474,7 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                       f"(sparsity {metrics['peer_sparsity']:.4f})")
             print()
 
-        # Save checkpoint
+        # Save checkpoint (keep only last 2 to avoid filling disk)
         if step % cfg.training.save_interval == 0:
             ckpt_path = run_dir / f"checkpoint_{step}.pt"
             torch.save({
@@ -469,6 +485,15 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 "phase": current_phase,
             }, ckpt_path)
             print(f"Saved checkpoint to {ckpt_path}")
+
+            # Remove old checkpoints, keeping only last 2
+            existing_ckpts = sorted(
+                run_dir.glob("checkpoint_*.pt"),
+                key=lambda p: int(p.stem.split("_")[1]),
+            )
+            for old_ckpt in existing_ckpts[:-2]:
+                old_ckpt.unlink()
+                print(f"Removed old checkpoint {old_ckpt.name}")
 
     # Save final
     torch.save({

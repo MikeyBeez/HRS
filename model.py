@@ -16,7 +16,7 @@ import torch.nn.functional as F
 from config import ExperimentConfig, ModelConfig, PEERConfig
 from tiers import ConvTier, ExpertTier, AttentionTier, SinkTier, RotaryEmbedding, apply_rotary_emb, rotate_half
 from router import TokenRouter, routing_balance_loss, routing_entropy_loss, routing_flops_loss
-from engram import EngramEncoder, EngramInjector, EngramReplacer, engram_reconstruction_loss
+from engram import EngramEncoder, EngramInjector, GatedEngramInjector, EngramReplacer, engram_reconstruction_loss
 from peer import PEER
 
 
@@ -34,6 +34,7 @@ class HRSOutput:
     peer_indices: list                # PEER expert indices (v2, for utilization tracking)
     per_token_loss: torch.Tensor = None      # (B, T) for v5 loss cache update
     replacement_gates: torch.Tensor = None   # (B, n_windows) for v5 gate logging
+    remember_gates: torch.Tensor = None      # (B, n_windows) for v6 gate logging
 
 
 class CausalSelfAttention(nn.Module):
@@ -320,6 +321,7 @@ class HRSTransformer(nn.Module):
         model_cfg = cfg.model
         self._is_v2 = cfg.is_v2()
         self._uses_replacement = cfg.uses_engram_replacement()
+        self._uses_remember_gate = cfg.uses_remember_gate()
 
         # If engrams are enabled and NOT using replacement, blocks after extraction
         # need a longer max_seq_len for prepended engrams.
@@ -370,7 +372,13 @@ class HRSTransformer(nn.Module):
             if self._uses_replacement:
                 # v5: in-place blend instead of prepend
                 self.engram_replacer = EngramReplacer(model_cfg, cfg.engram)
-                # EMA loss cache for gating signal (not a learned parameter)
+                self.register_buffer(
+                    'per_token_loss_cache',
+                    torch.zeros(cfg.training.batch_size, model_cfg.max_seq_len),
+                )
+            elif self._uses_remember_gate:
+                # v6: learned gate before prepend
+                self.engram_injector = GatedEngramInjector(model_cfg, cfg.engram)
                 self.register_buffer(
                     'per_token_loss_cache',
                     torch.zeros(cfg.training.batch_size, model_cfg.max_seq_len),
@@ -380,6 +388,10 @@ class HRSTransformer(nn.Module):
                 self.engram_injector = EngramInjector(model_cfg)
 
         self._init_weights()
+
+        # v6: re-apply gate bias init after global _init_weights zeroes all biases
+        if self.use_engrams and self._uses_remember_gate:
+            self.engram_injector.remember_gate._init_weights(cfg.engram.gate_bias_init)
 
     def _init_weights(self):
         for module in self.modules():
@@ -442,13 +454,14 @@ class HRSTransformer(nn.Module):
         engrams = torch.zeros(B, 0, D, device=x.device)
         engram_recon_loss = torch.tensor(0.0, device=x.device)
         replacement_gates = None
+        remember_gate_vals = None
 
         store_reps = collect_intermediates or collect_layer_reps
 
-        # v5: get cached loss for gating (from previous step)
-        if self._uses_replacement:
+        # v5/v6: get cached loss for gating (from previous step)
+        if self._uses_replacement or self._uses_remember_gate:
             cached_loss = self.per_token_loss_cache[:B, :T]
-            # If cache is all zeros (first step), signal None to replacer
+            # If cache is all zeros (first step), signal None
             if cached_loss.sum() == 0:
                 cached_loss = None
 
@@ -457,6 +470,9 @@ class HRSTransformer(nn.Module):
                 if self._uses_replacement:
                     # v5: blend engrams in-place (seq_len unchanged)
                     x, replacement_gates = self.engram_replacer(x, engrams, cached_loss)
+                elif self._uses_remember_gate:
+                    # v6: gated prepend
+                    x, n_engrams, remember_gate_vals = self.engram_injector(x, engrams, cached_loss)
                 else:
                     # v1-v4: prepend engrams
                     x, n_engrams = self.engram_injector(x, engrams)
@@ -505,9 +521,9 @@ class HRSTransformer(nn.Module):
         x = self.ln_f(x)
         logits = self.lm_head(x)
 
-        # v5: update EMA loss cache for next step's gating signal
+        # v5/v6: update EMA loss cache for next step's gating signal
         per_token_loss = None
-        if self._uses_replacement and targets is not None and self.training:
+        if (self._uses_replacement or self._uses_remember_gate) and targets is not None and self.training:
             with torch.no_grad():
                 V = logits.shape[-1]
                 ptl = F.cross_entropy(
@@ -534,6 +550,7 @@ class HRSTransformer(nn.Module):
             peer_indices=peer_indices_list,
             per_token_loss=per_token_loss,
             replacement_gates=replacement_gates,
+            remember_gates=remember_gate_vals,
         )
 
     def apply_engram_refinement(self):
@@ -553,6 +570,12 @@ class HRSTransformer(nn.Module):
             nn.init.normal_(self.engram_replacer.replace_type_emb, std=0.02)
             print(f"  Engram refinement: froze {frozen_count:,} encoder params, "
                   f"reinitialized replacer gate params")
+        elif self._uses_remember_gate:
+            # v6: reinit gate bias and type embedding
+            self.engram_injector.remember_gate._init_weights(self.cfg.engram.gate_bias_init)
+            nn.init.normal_(self.engram_injector.engram_type_emb, std=0.02)
+            print(f"  Engram refinement: froze {frozen_count:,} encoder params, "
+                  f"reinitialized remember gate + type embedding")
         else:
             nn.init.normal_(self.engram_injector.engram_type_emb, std=0.02)
             print(f"  Engram refinement: froze {frozen_count:,} encoder params, "
@@ -652,6 +675,8 @@ class HRSTransformer(nn.Module):
                 counts["engram_replacer"] = sum(p.numel() for p in self.engram_replacer.parameters())
             else:
                 counts["engram_injector"] = sum(p.numel() for p in self.engram_injector.parameters())
+                if self._uses_remember_gate and hasattr(self.engram_injector, 'remember_gate'):
+                    counts["remember_gate"] = sum(p.numel() for p in self.engram_injector.remember_gate.parameters())
 
         counts["total"] = sum(p.numel() for p in self.parameters() if p.requires_grad)
         return counts

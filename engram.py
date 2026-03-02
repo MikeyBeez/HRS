@@ -175,6 +175,159 @@ class EngramUpsampler(nn.Module):
         return upsampled
 
 
+class RememberGate(nn.Module):
+    """Learned per-window gate that modulates engram strength before prepending.
+
+    Computes 4 per-window features:
+    1. Normalized per-window loss (z-scored across windows within batch)
+    2. Cosine similarity between mean window hidden state and mean window engram
+    3. Window hidden state L2 norm (divided by sqrt(D))
+    4. Engram L2 norm (divided by sqrt(D))
+
+    MLP: Linear(4, hidden) + GELU + Linear(hidden, 1) -> sigmoid
+    Output: (B, n_windows) gate values in [0, 1]
+    """
+
+    def __init__(self, engram_cfg: EngramConfig):
+        super().__init__()
+        self.window_size = engram_cfg.window_size
+        self.n_engrams = engram_cfg.n_engrams
+        hidden = engram_cfg.gate_hidden_dim
+
+        self.mlp = nn.Sequential(
+            nn.Linear(4, hidden),
+            nn.GELU(),
+            nn.Linear(hidden, 1),
+        )
+        self._init_weights(engram_cfg.gate_bias_init)
+
+    def _init_weights(self, bias_init: float):
+        # Zero all weights so gate starts as constant sigmoid(bias_init)
+        for m in self.mlp:
+            if isinstance(m, nn.Linear):
+                nn.init.zeros_(m.weight)
+                if m.bias is not None:
+                    nn.init.zeros_(m.bias)
+        # Set final bias so sigmoid(bias_init) ≈ 0.88
+        self.mlp[-1].bias.data.fill_(bias_init)
+
+    def forward(
+        self,
+        x: torch.Tensor,
+        engrams: torch.Tensor,
+        per_token_loss: torch.Tensor = None,
+    ) -> torch.Tensor:
+        """Compute per-window gate values.
+
+        Args:
+            x: (B, T, D) token hidden states
+            engrams: (B, E, D) engram vectors (E = n_windows * K)
+            per_token_loss: (B, T) cached loss from previous step, or None
+
+        Returns:
+            (B, n_windows) gate values in [0, 1]
+        """
+        B, T, D = x.shape
+        W = self.window_size
+        K = self.n_engrams
+        n_windows = T // W
+
+        if n_windows == 0 or engrams.shape[1] == 0:
+            return torch.ones(B, max(n_windows, 1), device=x.device)
+
+        usable = n_windows * W
+
+        # Reshape tokens into windows: (B, n_windows, W, D)
+        x_windows = x[:, :usable].reshape(B, n_windows, W, D)
+        # Mean-pool per window: (B, n_windows, D)
+        x_mean = x_windows.mean(dim=2)
+
+        # Reshape engrams into windows: (B, n_windows, K, D)
+        engram_windows = engrams[:, :n_windows * K].reshape(B, n_windows, K, D)
+        # Mean-pool per window: (B, n_windows, D)
+        engram_mean = engram_windows.mean(dim=2)
+
+        # Feature 1: Normalized per-window loss (z-scored)
+        if per_token_loss is not None:
+            loss_windows = per_token_loss[:, :usable].reshape(B, n_windows, W)
+            window_loss = loss_windows.mean(dim=2)  # (B, n_windows)
+            # Z-score across windows within each batch element
+            loss_std = window_loss.std(dim=1, keepdim=True).clamp(min=1e-6)
+            loss_mean = window_loss.mean(dim=1, keepdim=True)
+            feat_loss = (window_loss - loss_mean) / loss_std  # (B, n_windows)
+        else:
+            feat_loss = torch.zeros(B, n_windows, device=x.device)
+
+        # Feature 2: Cosine similarity between window hidden and engram
+        feat_cos = F.cosine_similarity(x_mean, engram_mean, dim=-1)  # (B, n_windows)
+
+        # Feature 3: Window hidden state L2 norm / sqrt(D)
+        inv_sqrt_d = 1.0 / (D ** 0.5)
+        feat_x_norm = x_mean.norm(dim=-1) * inv_sqrt_d  # (B, n_windows)
+
+        # Feature 4: Engram L2 norm / sqrt(D)
+        feat_e_norm = engram_mean.norm(dim=-1) * inv_sqrt_d  # (B, n_windows)
+
+        # Stack features: (B, n_windows, 4)
+        features = torch.stack([feat_loss, feat_cos, feat_x_norm, feat_e_norm], dim=-1)
+
+        # MLP -> sigmoid: (B, n_windows, 1) -> (B, n_windows)
+        gate = torch.sigmoid(self.mlp(features)).squeeze(-1)
+
+        return gate
+
+
+class GatedEngramInjector(nn.Module):
+    """Prepend engrams scaled by a learned per-window remember gate.
+
+    Gate ≈ 1: engrams fully active (v4 behavior)
+    Gate ≈ 0: engrams zeroed out
+    Strictly additive — no information is destroyed.
+    """
+
+    def __init__(self, model_cfg: ModelConfig, engram_cfg: EngramConfig):
+        super().__init__()
+        self.n_engrams = engram_cfg.n_engrams
+        self.remember_gate = RememberGate(engram_cfg)
+        self.engram_type_emb = nn.Parameter(torch.zeros(1, 1, model_cfg.d_model))
+        nn.init.normal_(self.engram_type_emb, std=0.02)
+
+    def forward(
+        self,
+        x: torch.Tensor,
+        engrams: torch.Tensor,
+        per_token_loss: torch.Tensor = None,
+    ) -> tuple[torch.Tensor, int, torch.Tensor]:
+        """Prepend gated engrams to token sequence.
+
+        Args:
+            x: (B, T, D) token hidden states
+            engrams: (B, E, D) engram vectors
+            per_token_loss: (B, T) cached loss or None
+
+        Returns:
+            combined: (B, E+T, D) with gated engrams prepended
+            n_engrams: number of engrams prepended
+            gate_values: (B, n_windows) gate values for logging
+        """
+        if engrams.shape[1] == 0:
+            return x, 0, torch.ones(x.shape[0], 1, device=x.device)
+
+        # Compute per-window gate: (B, n_windows)
+        gate_values = self.remember_gate(x, engrams, per_token_loss)
+
+        # Expand gate to per-engram: (B, E, 1)
+        K = self.n_engrams
+        gate_expanded = gate_values.repeat_interleave(K, dim=1).unsqueeze(-1)  # (B, E, 1)
+
+        # Scale engrams
+        scaled_engrams = (engrams + self.engram_type_emb) * gate_expanded
+
+        # Prepend
+        combined = torch.cat([scaled_engrams, x], dim=1)
+        return combined, engrams.shape[1], gate_values
+
+
 class EngramReplacer(nn.Module):
     """Soft gating for in-place engram replacement based on per-token loss.
 

@@ -327,11 +327,36 @@ def run_all_metrics(
         replacer = model.engram_replacer
         metrics["gate_threshold"] = replacer.threshold.item()
         metrics["gate_sharpness"] = replacer.sharpness.item()
-        # Run one batch to get gate values
         if total_tokens > 0:
             cache = model.per_token_loss_cache
             cache_mean = cache[cache > 0].mean().item() if (cache > 0).any() else 0.0
             metrics["loss_cache_mean"] = cache_mean
+
+    # v6: remember gate statistics
+    if model.cfg.uses_remember_gate() and hasattr(model, 'engram_injector'):
+        injector = model.engram_injector
+        if hasattr(injector, 'remember_gate'):
+            metrics["remember_gate_bias"] = injector.remember_gate.mlp[-1].bias.item()
+            # Collect gate values during eval pass
+            gate_vals_all = []
+            for batch_idx2, (x2, y2) in enumerate(val_loader):
+                if batch_idx2 >= max_batches:
+                    break
+                x2, y2 = x2.to(device), y2.to(device)
+                with torch.autocast(device_type=device.type, dtype=amp_dtype):
+                    output2 = model(x2, targets=y2)
+                if output2.remember_gates is not None:
+                    gate_vals_all.append(output2.remember_gates.float().cpu())
+            if gate_vals_all:
+                all_gates = torch.cat(gate_vals_all)
+                metrics["gate_mean"] = all_gates.mean().item()
+                metrics["gate_std"] = all_gates.std().item()
+                metrics["gate_min"] = all_gates.min().item()
+                metrics["gate_max"] = all_gates.max().item()
+            if total_tokens > 0:
+                cache = model.per_token_loss_cache
+                cache_mean = cache[cache > 0].mean().item() if (cache > 0).any() else 0.0
+                metrics["loss_cache_mean"] = cache_mean
 
     # Attention entropy (from backbone attention layers)
     attn_entropies = []

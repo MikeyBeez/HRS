@@ -19,6 +19,10 @@ class AblationConfig(Enum):
     FULL_HRS = "full_hrs"                       # Core + engrams (all 5 phases)
     FULL_HRS_REFINED = "full_hrs_refined"       # Full HRS + engram refinement
 
+    # --- v6 configs ---
+    V4_1024 = "v4_1024"                        # config 16: v4 at seq_len=1024 (baseline)
+    V6_GATE = "v6_gate"                        # config 17: v4 + learned remember gate + seq_len=1024
+
     # --- v5 configs ---
     V5_REPLACE = "v5_replace"                  # v4 + learnable engram-based context replacement (no prepend)
 
@@ -96,6 +100,10 @@ class EngramConfig:
     gate_sharpness_init: float = 1.0    # initial α
     gate_entropy_weight: float = 0.01   # regularization weight
     loss_ema_decay: float = 0.99        # EMA decay for loss cache
+    # v6: learned remember gate before prepend
+    remember_gate_enabled: bool = False
+    gate_bias_init: float = 2.0         # sigmoid(2.0) ≈ 0.88
+    gate_hidden_dim: int = 32           # hidden dim in gate MLP
 
 
 @dataclass
@@ -229,6 +237,43 @@ class ExperimentConfig:
             cfg.phased.phase5_steps = 12000
             cfg.phased.phase5_lr_mult = [0.3, 0.5, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.5]
 
+        # === v6 configs ===
+
+        elif ablation == AblationConfig.V4_1024:
+            # v4 at seq_len=1024 — baseline for longer sequences
+            cfg.locality.enabled = True
+            cfg.engram.enabled = True
+            cfg.peer.enabled = True
+            cfg.router.n_tiers = 3
+            cfg.model.max_seq_len = 1024
+            cfg.training.batch_size = 4
+            cfg.training.grad_accum_steps = 6  # 4*6*1024 = 24,576 tokens/step
+            cfg.training.max_steps = 38000  # P1-P4 only
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 12000
+            cfg.phased.phase5_steps = 0  # skip P5
+
+        elif ablation == AblationConfig.V6_GATE:
+            # v4 + learned remember gate at seq_len=1024
+            cfg.locality.enabled = True
+            cfg.engram.enabled = True
+            cfg.engram.remember_gate_enabled = True
+            cfg.peer.enabled = True
+            cfg.router.n_tiers = 3
+            cfg.model.max_seq_len = 1024
+            cfg.training.batch_size = 4
+            cfg.training.grad_accum_steps = 6
+            cfg.training.max_steps = 38000
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 12000
+            cfg.phased.phase5_steps = 0
+
         # === v5 configs ===
 
         elif ablation == AblationConfig.V5_REPLACE:
@@ -325,11 +370,12 @@ class ExperimentConfig:
         return self.training.ablation.value.startswith("v2_")
 
     def uses_router(self) -> bool:
-        """v1/v3/v4/v5: uses routing machinery."""
+        """v1/v3/v4/v5/v6: uses routing machinery."""
         return self.training.ablation.value in (
             "dual_head_router", "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
             "v3_full", "v4_full", "v5_replace",
+            "v4_1024", "v6_gate",
         )
 
     def uses_sink(self) -> bool:
@@ -337,18 +383,21 @@ class ExperimentConfig:
             "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
             "v3_full", "v4_full", "v5_replace",
+            "v4_1024", "v6_gate",
         )
 
     def uses_engrams(self) -> bool:
         return self.engram.enabled and self.training.ablation.value in (
             "full_hrs", "full_hrs_refined", "v2_full",
             "v3_full", "v4_full", "v5_replace",
+            "v4_1024", "v6_gate",
         )
 
     def uses_peer(self) -> bool:
         return self.peer.enabled and self.training.ablation.value in (
             "v2_attn_conv_peer", "v2_full",
             "v3_full", "v4_full", "v5_replace",
+            "v4_1024", "v6_gate",
         )
 
     def uses_attn_conv_backbone(self) -> bool:
@@ -359,11 +408,16 @@ class ExperimentConfig:
         return self.phased.enabled and self.training.ablation.value in (
             "full_core", "full_hrs", "full_hrs_refined", "v2_full",
             "v3_full", "v4_full", "v5_replace",
+            "v4_1024", "v6_gate",
         )
 
     def uses_engram_replacement(self) -> bool:
         """v5: blend engrams in-place instead of prepending."""
         return self.engram.replacement_enabled and self.training.ablation.value == "v5_replace"
+
+    def uses_remember_gate(self) -> bool:
+        """v6: learned remember gate before prepend."""
+        return self.engram.remember_gate_enabled and self.training.ablation.value == "v6_gate"
 
     def n_attention_layers(self) -> int:
         """Number of layers using attention (first half for v2, all for v1)."""
