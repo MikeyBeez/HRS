@@ -248,6 +248,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
     accum_entropy = 0.0
     accum_flops = 0.0
     accum_recon = 0.0
+    accum_gate_entropy = 0.0
+    accum_gate_mean = 0.0
     t0 = time.time()
 
     # Phase tracking
@@ -273,10 +275,13 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
 
             needs_layer_reps = cfg.locality.enabled
 
+            uses_replacement = cfg.uses_engram_replacement()
+
             with torch.autocast(device_type=device.type, dtype=amp_dtype, enabled=use_amp):
                 output = model(
                     x, step=step,
                     collect_layer_reps=needs_layer_reps,
+                    targets=y if uses_replacement else None,
                 )
 
                 loss_dict = loss_fn(
@@ -291,6 +296,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                     flops_weight=cfg.router.flops_loss_weight if cfg.uses_router() else 0.0,
                     engram_recon_loss=output.engram_recon_loss if cfg.uses_engrams() else None,
                     recon_weight=cfg.engram.recon_loss_weight if cfg.uses_engrams() else 0.0,
+                    gate_values=output.replacement_gates if uses_replacement else None,
+                    gate_entropy_weight=cfg.engram.gate_entropy_weight if uses_replacement else 0.0,
                 )
 
                 loss = loss_dict["loss"] / cfg.training.grad_accum_steps
@@ -321,6 +328,10 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             accum_flops += loss_dict["flops_loss"].item()
         if "recon_loss" in loss_dict:
             accum_recon += loss_dict["recon_loss"].item()
+        if "gate_entropy_loss" in loss_dict:
+            accum_gate_entropy += loss_dict["gate_entropy_loss"].item()
+        if output.replacement_gates is not None:
+            accum_gate_mean += output.replacement_gates.mean().item()
 
         # Gradient clipping
         torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.training.max_grad_norm)
@@ -381,6 +392,14 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             if cfg.uses_engrams():
                 entry["recon_loss"] = avg_rec
 
+            if cfg.uses_engram_replacement():
+                avg_gate_ent = accum_gate_entropy / n
+                avg_gate_mean = accum_gate_mean / n
+                entry["gate_entropy_loss"] = avg_gate_ent
+                entry["gate_mean"] = avg_gate_mean
+                entry["gate_threshold"] = model.engram_replacer.threshold.item()
+                entry["gate_sharpness"] = model.engram_replacer.sharpness.item()
+
             log_history.append(entry)
 
             extras = ""
@@ -390,6 +409,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 extras += f" | bal {avg_bal:.4f} | ent {avg_ent:.4f}"
             if cfg.uses_engrams():
                 extras += f" | rec {avg_rec:.4f}"
+            if cfg.uses_engram_replacement():
+                extras += f" | gate {avg_gate_mean:.3f} | θ {model.engram_replacer.threshold.item():.2f}"
 
             print(
                 f"step {step:6d} | loss {avg_loss:.4f} | CE {avg_ce:.4f} | "
@@ -404,6 +425,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             accum_entropy = 0.0
             accum_flops = 0.0
             accum_recon = 0.0
+            accum_gate_entropy = 0.0
+            accum_gate_mean = 0.0
 
         # Evaluation
         if step % cfg.training.eval_interval == 0:

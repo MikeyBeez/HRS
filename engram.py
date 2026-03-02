@@ -115,6 +115,151 @@ class EngramInjector(nn.Module):
         return combined, engrams.shape[1]
 
 
+class EngramUpsampler(nn.Module):
+    """Expand K engrams back to W positions for in-place replacement.
+
+    Each engram covers W/K = 32 positions via repeat_interleave,
+    then a learnable positional embedding + refinement MLP restores
+    per-position detail.
+
+    Input: (B, n_windows, K, d_model)
+    Output: (B, n_windows, W, d_model)
+    """
+
+    def __init__(self, model_cfg: ModelConfig, engram_cfg: EngramConfig):
+        super().__init__()
+        self.window_size = engram_cfg.window_size  # W = 128
+        self.n_engrams = engram_cfg.n_engrams      # K = 4
+        self.positions_per_engram = self.window_size // self.n_engrams  # 32
+        d = model_cfg.d_model
+
+        # Learnable within-window positional embedding
+        self.pos_emb = nn.Parameter(torch.zeros(1, 1, self.window_size, d))
+        nn.init.normal_(self.pos_emb, std=0.02)
+
+        # Refinement MLP with residual connection
+        self.refine = nn.Sequential(
+            nn.Linear(d, d),
+            nn.GELU(),
+            nn.Linear(d, d),
+        )
+        self.norm = nn.LayerNorm(d)
+        self._init_weights()
+
+    def _init_weights(self):
+        for m in self.refine:
+            if isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, std=0.02)
+                if m.bias is not None:
+                    nn.init.zeros_(m.bias)
+
+    def forward(self, engrams: torch.Tensor) -> torch.Tensor:
+        """Upsample engrams to window-sized representations.
+
+        Args:
+            engrams: (B, n_windows, K, d_model)
+
+        Returns:
+            (B, n_windows, W, d_model)
+        """
+        # Repeat each engram to cover its positions: (B, n_windows, W, D)
+        upsampled = engrams.repeat_interleave(self.positions_per_engram, dim=2)
+
+        # Add positional embedding
+        upsampled = upsampled + self.pos_emb
+
+        # Refinement with residual
+        upsampled = upsampled + self.refine(upsampled)
+        upsampled = self.norm(upsampled)
+
+        return upsampled
+
+
+class EngramReplacer(nn.Module):
+    """Soft gating for in-place engram replacement based on per-token loss.
+
+    When a window has high loss (stale/OOD context), gate → 1 and
+    upsampled engrams replace the original tokens. When loss is low
+    (useful context), gate → 0 and originals are kept.
+
+    Uses previous step's EMA-cached loss to avoid chicken-and-egg.
+    """
+
+    def __init__(self, model_cfg: ModelConfig, engram_cfg: EngramConfig):
+        super().__init__()
+        self.window_size = engram_cfg.window_size  # W = 128
+        self.n_engrams = engram_cfg.n_engrams      # K = 4
+        d = model_cfg.d_model
+
+        # Learnable gate parameters
+        self.threshold = nn.Parameter(torch.tensor(engram_cfg.gate_init_threshold))
+        self.sharpness = nn.Parameter(torch.tensor(engram_cfg.gate_sharpness_init))
+
+        # Type embedding for replaced positions
+        self.replace_type_emb = nn.Parameter(torch.zeros(1, 1, d))
+        nn.init.normal_(self.replace_type_emb, std=0.02)
+
+        # Upsampler
+        self.upsampler = EngramUpsampler(model_cfg, engram_cfg)
+
+    def forward(
+        self,
+        x: torch.Tensor,
+        engrams: torch.Tensor,
+        per_token_loss: torch.Tensor,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """Blend upsampled engrams into token sequence based on loss gate.
+
+        Args:
+            x: (B, T, d_model) token hidden states
+            engrams: (B, n_engrams_total, d_model) engram vectors
+            per_token_loss: (B, T) cached loss from previous step, or None
+
+        Returns:
+            blended_x: (B, T, d_model) with stale windows replaced
+            gate_values: (B, n_windows) soft gate per window
+        """
+        B, T, D = x.shape
+        W = self.window_size
+        K = self.n_engrams
+        n_windows = T // W
+
+        if per_token_loss is None or engrams.shape[1] == 0 or n_windows == 0:
+            return x, torch.zeros(B, max(n_windows, 1), device=x.device)
+
+        # Compute per-window mean loss: (B, n_windows)
+        usable = n_windows * W
+        loss_windows = per_token_loss[:, :usable].reshape(B, n_windows, W)
+        window_loss = loss_windows.mean(dim=2)  # (B, n_windows)
+
+        # Soft gate via sigmoid: high loss -> gate ≈ 1 (replace)
+        gate = torch.sigmoid(self.sharpness * (window_loss - self.threshold))  # (B, n_windows)
+
+        # Reshape engrams into windows: (B, n_windows, K, D)
+        engram_windows = engrams[:, :n_windows * K].reshape(B, n_windows, K, D)
+
+        # Upsample: (B, n_windows, W, D)
+        expanded = self.upsampler(engram_windows)
+
+        # Add type embedding to replacement positions
+        expanded = expanded + self.replace_type_emb
+
+        # Blend: gate expands to (B, n_windows, W, 1) for broadcasting
+        gate_expanded = gate.unsqueeze(2).unsqueeze(3).expand(B, n_windows, W, 1)
+
+        # Reshape original tokens into windows
+        x_windows = x[:, :usable].reshape(B, n_windows, W, D)
+
+        # Soft blend
+        blended = gate_expanded * expanded + (1.0 - gate_expanded) * x_windows
+
+        # Reconstruct full sequence
+        out = x.clone()
+        out[:, :usable] = blended.reshape(B, usable, D)
+
+        return out, gate
+
+
 def engram_reconstruction_loss(
     original_hidden: torch.Tensor,
     engrams: torch.Tensor,

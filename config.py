@@ -19,6 +19,9 @@ class AblationConfig(Enum):
     FULL_HRS = "full_hrs"                       # Core + engrams (all 5 phases)
     FULL_HRS_REFINED = "full_hrs_refined"       # Full HRS + engram refinement
 
+    # --- v5 configs ---
+    V5_REPLACE = "v5_replace"                  # v4 + learnable engram-based context replacement (no prepend)
+
     # --- v4 configs ---
     V4_FULL = "v4_full"                        # PEER as universal FFN + 3-tier routing (conv, attn, sink) + engrams
 
@@ -87,6 +90,12 @@ class EngramConfig:
     extract_layer: int = 1        # extract from this layer (0-indexed, layer 2 of 4 = index 1)
     engram_dim: int = 512         # engram vector dimension (= d_model)
     recon_loss_weight: float = 0.1  # weight for reconstruction loss
+    # v5: in-place replacement instead of prepend
+    replacement_enabled: bool = False   # blend instead of prepend
+    gate_init_threshold: float = 3.0    # initial θ (high = keep originals early)
+    gate_sharpness_init: float = 1.0    # initial α
+    gate_entropy_weight: float = 0.01   # regularization weight
+    loss_ema_decay: float = 0.99        # EMA decay for loss cache
 
 
 @dataclass
@@ -220,6 +229,25 @@ class ExperimentConfig:
             cfg.phased.phase5_steps = 12000
             cfg.phased.phase5_lr_mult = [0.3, 0.5, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.5]
 
+        # === v5 configs ===
+
+        elif ablation == AblationConfig.V5_REPLACE:
+            # v4 base + learnable engram-based context replacement
+            cfg.locality.enabled = True
+            cfg.engram.enabled = True
+            cfg.engram.replacement_enabled = True
+            cfg.peer.enabled = True
+            cfg.router.n_tiers = 3  # conv, attn, sink
+            cfg.training.grad_accum_steps = 6  # effective batch = 8*6=48
+            cfg.training.max_steps = 38000  # P1(8K)+P2(8K)+P3(10K)+P4(12K), skip P5
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 12000
+            cfg.phased.phase5_steps = 0  # skip P5 (always regresses)
+            cfg.phased.phase4_lr_mult = [0.1, 0.1, 0.1, 0.3, 0.1, 0.3, 0.1, 0.3, 1.0]
+
         # === v4 configs ===
 
         elif ablation == AblationConfig.V4_FULL:
@@ -297,30 +325,30 @@ class ExperimentConfig:
         return self.training.ablation.value.startswith("v2_")
 
     def uses_router(self) -> bool:
-        """v1/v3/v4: uses routing machinery."""
+        """v1/v3/v4/v5: uses routing machinery."""
         return self.training.ablation.value in (
             "dual_head_router", "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
-            "v3_full", "v4_full",
+            "v3_full", "v4_full", "v5_replace",
         )
 
     def uses_sink(self) -> bool:
         return self.training.ablation.value in (
             "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
-            "v3_full", "v4_full",
+            "v3_full", "v4_full", "v5_replace",
         )
 
     def uses_engrams(self) -> bool:
         return self.engram.enabled and self.training.ablation.value in (
             "full_hrs", "full_hrs_refined", "v2_full",
-            "v3_full", "v4_full",
+            "v3_full", "v4_full", "v5_replace",
         )
 
     def uses_peer(self) -> bool:
         return self.peer.enabled and self.training.ablation.value in (
             "v2_attn_conv_peer", "v2_full",
-            "v3_full", "v4_full",
+            "v3_full", "v4_full", "v5_replace",
         )
 
     def uses_attn_conv_backbone(self) -> bool:
@@ -330,8 +358,12 @@ class ExperimentConfig:
     def uses_phased_training(self) -> bool:
         return self.phased.enabled and self.training.ablation.value in (
             "full_core", "full_hrs", "full_hrs_refined", "v2_full",
-            "v3_full", "v4_full",
+            "v3_full", "v4_full", "v5_replace",
         )
+
+    def uses_engram_replacement(self) -> bool:
+        """v5: blend engrams in-place instead of prepending."""
+        return self.engram.replacement_enabled and self.training.ablation.value == "v5_replace"
 
     def n_attention_layers(self) -> int:
         """Number of layers using attention (first half for v2, all for v1)."""

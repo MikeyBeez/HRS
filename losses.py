@@ -30,6 +30,20 @@ class CrossEntropyLoss(nn.Module):
             label_smoothing=self.label_smoothing,
         )
 
+    def per_token(self, logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
+        """Unreduced per-token cross-entropy loss.
+
+        Returns:
+            (B, T) loss per token position
+        """
+        B, T, V = logits.shape
+        return F.cross_entropy(
+            logits.reshape(B * T, V),
+            targets.reshape(B * T),
+            ignore_index=self.ignore_index,
+            reduction='none',
+        ).reshape(B, T)
+
 
 class LocalityLoss(nn.Module):
     """InfoNCE contrastive loss on local windows (Head B objective).
@@ -124,6 +138,8 @@ class CombinedHRSLoss(nn.Module):
         flops_weight: float = 0.0,
         engram_recon_loss: torch.Tensor = None,
         recon_weight: float = 0.1,
+        gate_values: torch.Tensor = None,
+        gate_entropy_weight: float = 0.01,
     ) -> dict:
         ce = self.ce_loss(logits, targets)
 
@@ -158,6 +174,13 @@ class CombinedHRSLoss(nn.Module):
         if engram_recon_loss is not None:
             total = total + recon_weight * engram_recon_loss
             result["recon_loss"] = engram_recon_loss.detach()
+
+        # Gate entropy regularization (v5) — prevents collapse to all-0 or all-1
+        if gate_values is not None and gate_entropy_weight > 0:
+            g = gate_values.clamp(1e-6, 1.0 - 1e-6)
+            gate_ent = -(g * g.log() + (1.0 - g) * (1.0 - g).log()).mean()
+            total = total + gate_entropy_weight * gate_ent
+            result["gate_entropy_loss"] = gate_ent.detach()
 
         result["loss"] = total
         return result

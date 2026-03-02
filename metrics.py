@@ -322,6 +322,17 @@ def run_all_metrics(
         peer_stats = peer_expert_utilization(model, val_loader, device, amp_dtype)
         metrics.update(peer_stats)
 
+    # v5: gate replacement statistics
+    if model.cfg.uses_engram_replacement() and hasattr(model, 'engram_replacer'):
+        replacer = model.engram_replacer
+        metrics["gate_threshold"] = replacer.threshold.item()
+        metrics["gate_sharpness"] = replacer.sharpness.item()
+        # Run one batch to get gate values
+        if total_tokens > 0:
+            cache = model.per_token_loss_cache
+            cache_mean = cache[cache > 0].mean().item() if (cache > 0).any() else 0.0
+            metrics["loss_cache_mean"] = cache_mean
+
     # Attention entropy (from backbone attention layers)
     attn_entropies = []
     for i in range(n_layers):
