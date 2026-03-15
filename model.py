@@ -19,7 +19,7 @@ from tiers import ConvTier, ExpertTier, AttentionTier, SinkTier, RotaryEmbedding
 from router import TokenRouter, routing_balance_loss, routing_entropy_loss, routing_flops_loss
 from engram import EngramEncoder, EngramInjector, GatedEngramInjector, EngramReplacer, engram_reconstruction_loss
 from peer import PEER
-from bdh import VirtualSynapse, routing_hub_loss, apply_sparsity_bottleneck
+from bdh import VirtualSynapse, routing_hub_loss, apply_sparsity_bottleneck, LossScaler
 
 
 @dataclass
@@ -44,6 +44,9 @@ class HRSOutput:
     bdh_focus_magnitude: float = None        # mean |alpha * gain| across layers
     bdh_sparsity_level: float = None         # actual fraction of zeros after bottleneck
     bdh_hub_distribution: list = None        # sorted tier utilization for logging
+    # v9 learnable loss scales
+    loss_scales: dict = None                 # {"hub_scale": x, "entropy_scale": y, "recon_scale": z}
+    loss_scaler_penalty: torch.Tensor = None # keep-alive penalty term
 
 
 class CausalSelfAttention(nn.Module):
@@ -375,6 +378,7 @@ class HRSTransformer(nn.Module):
         self._uses_remember_gate = cfg.uses_remember_gate()
         self.use_memory_mlp = cfg.uses_memory_mlp()
         self._uses_bdh = cfg.uses_bdh()
+        self._uses_learnable_scaling = cfg.uses_learnable_loss_scaling()
 
         # If engrams are enabled and NOT using replacement, blocks after extraction
         # need a longer max_seq_len for prepended engrams.
@@ -439,6 +443,15 @@ class HRSTransformer(nn.Module):
             else:
                 # v1-v4: prepend engrams
                 self.engram_injector = EngramInjector(model_cfg)
+
+        # v9: Learnable loss scaling
+        if self._uses_learnable_scaling:
+            self.loss_scaler = LossScaler(
+                hub_init=cfg.router.balance_loss_weight,
+                entropy_init=cfg.router.entropy_loss_weight,
+                recon_init=cfg.engram.recon_loss_weight,
+                alive_penalty=cfg.bdh.alive_penalty,
+            )
 
         # v7: Memory MLP + V7Router
         if self.use_memory_mlp:
@@ -717,6 +730,8 @@ class HRSTransformer(nn.Module):
             bdh_focus_magnitude=bdh_focus_mag,
             bdh_sparsity_level=bdh_sparsity,
             bdh_hub_distribution=bdh_hub_dist,
+            loss_scales=self.loss_scaler.scale_dict() if self._uses_learnable_scaling else None,
+            loss_scaler_penalty=self.loss_scaler.penalty() if self._uses_learnable_scaling else None,
         )
 
     def apply_engram_refinement(self):
@@ -900,8 +915,13 @@ class HRSTransformer(nn.Module):
                 # v4/v8: unconditional PEER FFN uses "expert" LR schedule slot
                 groups["expert"].append(param)
             elif "virtual_synapse" in name:
-                # v8 BDH: virtual synapse uses "expert" LR schedule slot
+                # v8/v9 BDH: virtual synapse uses "expert" LR schedule slot
                 groups["expert"].append(param)
+            elif "loss_scaler" in name:
+                # v9: loss scaler uses separate slow LR (1/10 of base)
+                if "loss_scaler" not in groups:
+                    groups["loss_scaler"] = []
+                groups["loss_scaler"].append(param)
             elif "attn_tier" in name:
                 groups["attention_tier"].append(param)
             elif "sink_tier" in name or "sink_kv_scale" in name:

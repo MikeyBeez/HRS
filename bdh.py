@@ -1,9 +1,12 @@
-"""BDH-inspired modules for HRS v8.
+"""BDH-inspired modules for HRS v8/v9.
 
-Three components:
+v8 components:
 1. VirtualSynapse — engram-derived rank-1 focus matrix modulates attention scores
 2. routing_hub_loss — Zipf/power-law target replaces uniform balance loss
 3. apply_sparsity_bottleneck — top-k sparsity + positivity on tier inputs
+
+v9 addition:
+4. LossScaler — learnable scaling parameters for auxiliary loss terms
 """
 
 import torch
@@ -183,3 +186,56 @@ def apply_sparsity_bottleneck(
     # Straight-through estimator: forward uses sparse, backward flows through original
     # This preserves gradients for the kept values (scatter is differentiable for those)
     return sparse_h
+
+
+class LossScaler(nn.Module):
+    """Learnable scaling parameters for auxiliary loss terms (v9).
+
+    Each scale is parameterized as exp(raw) to ensure positivity.
+    Initialized so exp(raw) matches the fixed V8 coefficient exactly.
+    A soft penalty -log(scale) keeps scales from collapsing to zero.
+
+    Scales:
+        hub_scale: weight for the Zipf hub balance loss (V8 fixed: balance_loss_weight=0.1)
+        entropy_scale: weight for routing entropy loss (V8 fixed: entropy_loss_weight=0.01)
+        recon_scale: weight for engram reconstruction loss (V8 fixed: recon_loss_weight=0.1)
+    """
+
+    def __init__(self, hub_init: float = 0.1, entropy_init: float = 0.01,
+                 recon_init: float = 0.1, alive_penalty: float = 0.001):
+        super().__init__()
+        import math
+        # Raw parameters: log(init_value) so exp(raw) = init_value at step 0
+        self.raw_hub = nn.Parameter(torch.tensor(math.log(hub_init)))
+        self.raw_entropy = nn.Parameter(torch.tensor(math.log(entropy_init)))
+        self.raw_recon = nn.Parameter(torch.tensor(math.log(recon_init)))
+        self.alive_penalty = alive_penalty
+
+    @property
+    def hub_scale(self) -> torch.Tensor:
+        return self.raw_hub.exp()
+
+    @property
+    def entropy_scale(self) -> torch.Tensor:
+        return self.raw_entropy.exp()
+
+    @property
+    def recon_scale(self) -> torch.Tensor:
+        return self.raw_recon.exp()
+
+    def penalty(self) -> torch.Tensor:
+        """Soft penalty discouraging scales from approaching zero.
+
+        Returns alive_coeff * sum(-log(scale_i)) added to total loss.
+        """
+        return self.alive_penalty * (
+            -self.raw_hub - self.raw_entropy - self.raw_recon
+        )
+
+    def scale_dict(self) -> dict:
+        """Current scale values for logging."""
+        return {
+            "hub_scale": self.hub_scale.item(),
+            "entropy_scale": self.entropy_scale.item(),
+            "recon_scale": self.recon_scale.item(),
+        }

@@ -40,6 +40,9 @@ class AblationConfig(Enum):
     # --- v8 configs ---
     V8_BDH = "v8_bdh"                          # v4 base + BDH: virtual synapse, hub routing, sparsity bottleneck
 
+    # --- v9 configs ---
+    V9_LEARNABLE = "v9_learnable"              # v8 + learnable loss scaling for auxiliary objectives
+
     # --- v2 configs ---
     V2_ATTN_CONV = "v2_attn_conv"              # Attention->Conv backbone, standard MLP, no dual-head
     V2_ATTN_CONV_DUAL = "v2_attn_conv_dual"    # + dual-head
@@ -148,6 +151,10 @@ class BDHConfig:
     sparsity_enabled: bool = True
     sparsity_rho: float = 0.05            # fraction of features kept active (top-k)
     sparsity_activation: str = "softplus" # "relu" or "softplus" positivity constraint
+    # v9: Learnable loss scaling
+    learnable_loss_scaling: bool = False
+    alive_penalty: float = 0.001          # coefficient for -log(scale) keep-alive penalty
+    loss_scaler_lr_mult: float = 0.1      # LR multiplier for loss scaler params (1/10 of base)
 
 
 @dataclass
@@ -364,6 +371,26 @@ class ExperimentConfig:
             cfg.phased.phase4_steps = 12000
             cfg.phased.phase5_steps = 0  # skip P5
 
+        # === v9 configs ===
+
+        elif ablation == AblationConfig.V9_LEARNABLE:
+            # v8 base + learnable loss scaling
+            cfg.locality.enabled = True
+            cfg.engram.enabled = True
+            cfg.peer.enabled = True
+            cfg.router.n_tiers = 3
+            cfg.bdh.enabled = True
+            cfg.bdh.learnable_loss_scaling = True
+            cfg.training.batch_size = 4
+            cfg.training.grad_accum_steps = 8  # effective batch = 32
+            cfg.training.max_steps = 50000
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 12000
+            cfg.phased.phase5_steps = 12000
+
         # === v5 configs ===
 
         elif ablation == AblationConfig.V5_REPLACE:
@@ -465,7 +492,7 @@ class ExperimentConfig:
             "dual_head_router", "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
             "v3_full", "v4_full", "v5_replace",
-            "v4_1024", "v6_gate", "v7_full", "v8_bdh",
+            "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
         )
 
     def uses_sink(self) -> bool:
@@ -473,21 +500,21 @@ class ExperimentConfig:
             "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
             "v3_full", "v4_full", "v5_replace",
-            "v4_1024", "v6_gate", "v7_full", "v8_bdh",
+            "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
         )
 
     def uses_engrams(self) -> bool:
         return self.engram.enabled and self.training.ablation.value in (
             "full_hrs", "full_hrs_refined", "v2_full",
             "v3_full", "v4_full", "v5_replace",
-            "v4_1024", "v6_gate", "v7_full", "v8_bdh",
+            "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
         )
 
     def uses_peer(self) -> bool:
         return self.peer.enabled and self.training.ablation.value in (
             "v2_attn_conv_peer", "v2_full",
             "v3_full", "v4_full", "v5_replace",
-            "v4_1024", "v6_gate", "v7_full", "v8_bdh",
+            "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
         )
 
     def uses_memory_mlp(self) -> bool:
@@ -504,12 +531,16 @@ class ExperimentConfig:
         return self.phased.enabled and self.training.ablation.value in (
             "full_core", "full_hrs", "full_hrs_refined", "v2_full",
             "v3_full", "v4_full", "v5_replace",
-            "v4_1024", "v6_gate", "v7_full", "v8_bdh",
+            "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
         )
 
     def uses_bdh(self) -> bool:
-        """v8: BDH-inspired upgrades."""
-        return self.bdh.enabled and self.training.ablation.value == "v8_bdh"
+        """v8/v9: BDH-inspired upgrades."""
+        return self.bdh.enabled and self.training.ablation.value in ("v8_bdh", "v9_learnable")
+
+    def uses_learnable_loss_scaling(self) -> bool:
+        """v9: learnable auxiliary loss scales."""
+        return self.uses_bdh() and self.bdh.learnable_loss_scaling
 
     def uses_engram_replacement(self) -> bool:
         """v5: blend engrams in-place instead of prepending."""

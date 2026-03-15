@@ -348,25 +348,42 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 else:
                     logits_for_loss = output.logits
 
+                # v9: use learnable scales for hub/entropy/recon losses
+                uses_learnable = cfg.uses_learnable_loss_scaling()
+                if uses_learnable:
+                    ls = model.loss_scaler
+                    _balance_w = ls.hub_scale
+                    _entropy_w = ls.entropy_scale
+                    _recon_w = ls.recon_scale
+                else:
+                    _balance_w = cfg.router.balance_loss_weight
+                    _entropy_w = cfg.router.entropy_loss_weight if cfg.uses_router() else 0.0
+                    _recon_w = cfg.engram.recon_loss_weight if cfg.uses_engrams() else 0.0
+
                 loss_dict = loss_fn(
                     logits_for_loss, y,
                     layer_representations=output.layer_representations if needs_layer_reps else None,
                     routing_weights=output.routing_weights if cfg.uses_router() else None,
                     routing_balance_loss_val=output.routing_balance_loss if cfg.uses_router() else None,
-                    balance_weight=cfg.router.balance_loss_weight,
+                    balance_weight=_balance_w,
                     routing_entropy_loss_val=output.routing_entropy_loss if cfg.uses_router() else None,
-                    entropy_weight=cfg.router.entropy_loss_weight if cfg.uses_router() else 0.0,
+                    entropy_weight=_entropy_w,
                     routing_flops_loss_val=output.routing_flops_loss if cfg.uses_router() else None,
                     flops_weight=cfg.router.flops_loss_weight if cfg.uses_router() else 0.0,
                     engram_recon_loss=output.engram_recon_loss if cfg.uses_engrams() else None,
-                    recon_weight=cfg.engram.recon_loss_weight if cfg.uses_engrams() else 0.0,
+                    recon_weight=_recon_w,
                     gate_values=gate_values,
                     gate_entropy_weight=cfg.engram.gate_entropy_weight if (uses_replacement or uses_gate) else 0.0,
                     v7_router_weights=output.v7_router_weights if uses_memory_mlp else None,
                     v7_router_entropy_weight=cfg.memory_mlp.router_entropy_weight if uses_memory_mlp else 0.0,
                 )
 
-                loss = loss_dict["loss"] / cfg.training.grad_accum_steps
+                # v9: add keep-alive penalty for learnable scales
+                total_loss = loss_dict["loss"]
+                if uses_learnable and output.loss_scaler_penalty is not None:
+                    total_loss = total_loss + output.loss_scaler_penalty
+
+                loss = total_loss / cfg.training.grad_accum_steps
 
             loss.backward()
 
@@ -429,8 +446,12 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
         lr_mults = get_phase_lr_multipliers(current_phase, cfg)
 
         for i, (pg, name) in enumerate(zip(optimizer.param_groups, group_names)):
-            mult_idx = param_group_index.get(name, 0)
-            pg["lr"] = base_lr * lr_mults[mult_idx]
+            if name == "loss_scaler":
+                # v9: loss scaler params get 1/10 of base LR, no phase multiplier
+                pg["lr"] = base_lr * cfg.bdh.loss_scaler_lr_mult
+            else:
+                mult_idx = param_group_index.get(name, 0)
+                pg["lr"] = base_lr * lr_mults[mult_idx]
 
         optimizer.step()
 
@@ -553,6 +574,14 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 entry["bdh_focus_magnitude"] = avg_bdh_focus
                 entry["bdh_sparsity_level"] = avg_bdh_sparsity
                 extras += f" | focus {avg_bdh_focus:.4f} | sparse {avg_bdh_sparsity:.2f}"
+            if cfg.uses_learnable_loss_scaling():
+                scales = model.loss_scaler.scale_dict()
+                entry["hub_scale"] = scales["hub_scale"]
+                entry["entropy_scale"] = scales["entropy_scale"]
+                entry["recon_scale"] = scales["recon_scale"]
+                extras += (f" | h_s {scales['hub_scale']:.4f}"
+                          f" | e_s {scales['entropy_scale']:.5f}"
+                          f" | r_s {scales['recon_scale']:.4f}")
 
             print(
                 f"step {step:6d} | loss {avg_loss:.4f} | CE {avg_ce:.4f} | "
@@ -596,7 +625,10 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             print(f"  cosine_sim_mean: {metrics.get('cosine_sim_mean', 'N/A'):.4f}")
             if "routing_entropy_mean" in metrics:
                 print(f"  routing_entropy: {metrics['routing_entropy_mean']:.3f}")
-                print(f"  tier_fractions: {metrics.get('tier_fractions_mean', [])}")
+                tier_fracs = metrics.get('tier_fractions_mean', [])
+                print(f"  tier_fractions: {tier_fracs}")
+                if len(tier_fracs) >= 3:
+                    print(f"  sink_pct: {tier_fracs[2]*100:.1f}%")
             if "magnitude_ratio" in metrics:
                 print(f"  magnitude_ratio: {metrics['magnitude_ratio']:.2f}")
             if "flops_ratio" in metrics:
@@ -608,6 +640,12 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 print(f"  memory_mlp: d_hidden={model.memory_mlp.d_hidden}, "
                       f"train_steps={model.memory_mlp.train_step_count}, "
                       f"replay_buf={model.memory_mlp.replay_buffer.size}")
+            if cfg.uses_learnable_loss_scaling():
+                scales = model.loss_scaler.scale_dict()
+                metrics["loss_scales"] = scales
+                print(f"  loss_scales: hub={scales['hub_scale']:.4f} "
+                      f"entropy={scales['entropy_scale']:.5f} "
+                      f"recon={scales['recon_scale']:.4f}")
             print()
 
         # Save checkpoint (keep only last 2 to avoid filling disk)
