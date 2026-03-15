@@ -1,7 +1,8 @@
-"""HRS model — supports both v1 (routed) and v2 (attention->conv + PEER) architectures.
+"""HRS model — supports v1 (routed), v2 (attention->conv + PEER), and v8 (BDH) architectures.
 
 v1: Backbone transformer with router + tiered compute (conv, expert, attn, sink)
 v2: Fixed attention->conv backbone with PEER FFN replacing standard MLP
+v8: v4 base + BDH: virtual synapse, hub routing, monosemantic sparsity
 
 Shared components: dual heads, engram encoder/injector, RoPE.
 """
@@ -13,11 +14,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from config import ExperimentConfig, ModelConfig, PEERConfig
+from config import ExperimentConfig, ModelConfig, PEERConfig, MemoryMLPTrainConfig, BDHConfig
 from tiers import ConvTier, ExpertTier, AttentionTier, SinkTier, RotaryEmbedding, apply_rotary_emb, rotate_half
 from router import TokenRouter, routing_balance_loss, routing_entropy_loss, routing_flops_loss
 from engram import EngramEncoder, EngramInjector, GatedEngramInjector, EngramReplacer, engram_reconstruction_loss
 from peer import PEER
+from bdh import VirtualSynapse, routing_hub_loss, apply_sparsity_bottleneck
 
 
 @dataclass
@@ -35,6 +37,13 @@ class HRSOutput:
     per_token_loss: torch.Tensor = None      # (B, T) for v5 loss cache update
     replacement_gates: torch.Tensor = None   # (B, n_windows) for v5 gate logging
     remember_gates: torch.Tensor = None      # (B, n_windows) for v6 gate logging
+    hidden_states: torch.Tensor = None       # (B, T, D) ln_f output for v7 Memory MLP
+    memory_logits: torch.Tensor = None       # (B, T, V) from Memory MLP (v7)
+    v7_router_weights: torch.Tensor = None   # (B, T, 2) base/memory blend weights (v7)
+    # v8 BDH metrics
+    bdh_focus_magnitude: float = None        # mean |alpha * gain| across layers
+    bdh_sparsity_level: float = None         # actual fraction of zeros after bottleneck
+    bdh_hub_distribution: list = None        # sorted tier utilization for logging
 
 
 class CausalSelfAttention(nn.Module):
@@ -53,7 +62,14 @@ class CausalSelfAttention(nn.Module):
 
         self.rope = RotaryEmbedding(self.head_dim, cfg.max_seq_len)
 
-    def forward(self, x, return_weights=False):
+    def forward(self, x, return_weights=False, focus_qk=None):
+        """Forward pass with optional BDH virtual synapse focus.
+
+        Args:
+            x: (B, T, D) input hidden states
+            return_weights: collect attention weights for metrics
+            focus_qk: optional (focus_q, focus_k) tuple from VirtualSynapse
+        """
         B, T, C = x.shape
 
         qkv = self.qkv(x).reshape(B, T, 3, self.n_heads, self.head_dim)
@@ -65,9 +81,20 @@ class CausalSelfAttention(nn.Module):
         cos, sin = self.rope(T)
         q, k = apply_rotary_emb(q, k, cos, sin)
 
-        if return_weights:
+        use_manual = return_weights or (focus_qk is not None)
+
+        if use_manual:
             scale = 1.0 / math.sqrt(self.head_dim)
             attn = (q @ k.transpose(-2, -1)) * scale
+
+            # v8 BDH: apply virtual synapse focus gain
+            if focus_qk is not None:
+                focus_q, focus_k = focus_qk
+                if focus_q is not None and focus_k is not None:
+                    # Per-head scalar gain from engram focus vectors
+                    gain = (focus_q * focus_k).sum(dim=-1, keepdim=True).unsqueeze(-1)  # (B, H, 1, 1)
+                    attn = attn * (1.0 + gain)
+
             causal_mask = torch.triu(
                 torch.ones(T, T, device=x.device, dtype=torch.bool), diagonal=1
             )
@@ -137,10 +164,11 @@ class CausalConv(nn.Module):
 # ============================================================
 
 class HRSBlock(nn.Module):
-    """v1 HRS transformer block.
+    """v1/v8 HRS transformer block.
 
     For dense_baseline/dual_head: standard pre-norm transformer block.
     For routed configs: adds router + tiered compute after attention.
+    v8 BDH adds: virtual synapse on attention, sparsity bottleneck on tier inputs.
     """
 
     def __init__(self, cfg: ExperimentConfig, layer_idx: int):
@@ -154,17 +182,22 @@ class HRSBlock(nn.Module):
         self.attn = CausalSelfAttention(model_cfg)
         self.ln2 = nn.LayerNorm(model_cfg.d_model)
 
+        # v8 BDH: virtual synapse per block
+        self.use_bdh = cfg.uses_bdh()
+        if self.use_bdh and cfg.bdh.virtual_synapse_enabled:
+            self.virtual_synapse = VirtualSynapse(model_cfg, cfg.bdh)
+
         # Router + tiered compute REPLACES MLP
         self.use_router = cfg.uses_router()
         self.use_peer = cfg.uses_peer()
-        # v4: PEER as unconditional FFN + 3-tier routing (no expert tier)
+        # v4/v8: PEER as unconditional FFN + 3-tier routing (no expert tier)
         self.use_peer_ffn = self.use_peer and cfg.router.n_tiers == 3
         if self.use_router:
             self.router = TokenRouter(model_cfg, cfg.router)
 
             self.conv_tier = ConvTier(model_cfg, cfg.tier)
             if self.use_peer_ffn:
-                # v4: PEER runs unconditionally, not as a routed tier
+                # v4/v8: PEER runs unconditionally, not as a routed tier
                 self.peer_ffn = PEER(model_cfg, cfg.peer)
                 self.ln_peer = nn.LayerNorm(model_cfg.d_model)
                 self.peer_output_gate = nn.Parameter(torch.ones(1) * 0.1)
@@ -189,22 +222,40 @@ class HRSBlock(nn.Module):
             self.mlp = MLP(model_cfg)
 
     def forward(
-        self, x, step: int = 0, return_weights: bool = False
+        self, x, step: int = 0, return_weights: bool = False,
+        engrams: torch.Tensor = None,
     ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-        attn_out, attn_w = self.attn(self.ln1(x), return_weights=return_weights)
+        # v8 BDH: compute virtual synapse focus from engrams
+        focus_qk = None
+        if self.use_bdh and hasattr(self, 'virtual_synapse') and engrams is not None:
+            focus_qk = self.virtual_synapse(engrams)
+
+        attn_out, attn_w = self.attn(
+            self.ln1(x), return_weights=return_weights, focus_qk=focus_qk,
+        )
         x = x + attn_out
 
         routing_w = None
 
         if self.use_router:
             h = self.ln2(x)
+
+            # v8 BDH: monosemantic sparsity bottleneck on tier inputs
+            if self.use_bdh and self.cfg.bdh.sparsity_enabled:
+                h_tier = apply_sparsity_bottleneck(
+                    h, rho=self.cfg.bdh.sparsity_rho,
+                    activation=self.cfg.bdh.sparsity_activation,
+                )
+            else:
+                h_tier = h
+
             routing_w = self.router(h, step=step)
 
             if self.use_peer_ffn:
-                # v4: 3-tier routing (conv, attn, sink) + unconditional PEER
-                conv_out = self.conv_tier(h)
-                attn_out2 = self.attn_tier(h)
-                sink_out = self.sink_tier(h)
+                # v4/v8: 3-tier routing (conv, attn, sink) + unconditional PEER
+                conv_out = self.conv_tier(h_tier)
+                attn_out2 = self.attn_tier(h_tier)
+                sink_out = self.sink_tier(h_tier)
 
                 tier_outputs = torch.stack(
                     [conv_out, attn_out2, sink_out], dim=-1
@@ -223,10 +274,10 @@ class HRSBlock(nn.Module):
                 x = x + peer_out * self.peer_output_gate
             else:
                 # v1/v3: 4-tier routing (conv, expert, attn, sink)
-                conv_out = self.conv_tier(h)
-                expert_out = self.expert_tier(h)
-                attn_out2 = self.attn_tier(h)
-                sink_out = self.sink_tier(h)
+                conv_out = self.conv_tier(h_tier)
+                expert_out = self.expert_tier(h_tier)
+                attn_out2 = self.attn_tier(h_tier)
+                sink_out = self.sink_tier(h_tier)
 
                 tier_outputs = torch.stack(
                     [conv_out, expert_out, attn_out2, sink_out], dim=-1
@@ -322,6 +373,8 @@ class HRSTransformer(nn.Module):
         self._is_v2 = cfg.is_v2()
         self._uses_replacement = cfg.uses_engram_replacement()
         self._uses_remember_gate = cfg.uses_remember_gate()
+        self.use_memory_mlp = cfg.uses_memory_mlp()
+        self._uses_bdh = cfg.uses_bdh()
 
         # If engrams are enabled and NOT using replacement, blocks after extraction
         # need a longer max_seq_len for prepended engrams.
@@ -387,14 +440,61 @@ class HRSTransformer(nn.Module):
                 # v1-v4: prepend engrams
                 self.engram_injector = EngramInjector(model_cfg)
 
+        # v7: Memory MLP + V7Router
+        if self.use_memory_mlp:
+            from memory_mlp_experiment.config import MemoryMLPConfig as InfMemCfg
+            from memory_mlp_experiment.model.memory_mlp import MemoryMLP as InferenceMemoryMLP
+            from memory_mlp_experiment.model.v7_router import V7Router
+
+            mem_cfg = cfg.memory_mlp
+            inf_cfg = InfMemCfg(
+                d_input=cfg.model.d_model,
+                d_hidden=mem_cfg.d_hidden,
+                vocab_size=cfg.model.vocab_size,
+                lr=mem_cfg.lr,
+                train_steps_per_window=mem_cfg.train_steps_per_batch,
+                replay_batch_size=mem_cfg.replay_batch_size,
+                replay_buffer_max=mem_cfg.replay_buffer_max,
+                expansion_check_interval=mem_cfg.expansion_check_interval,
+                expansion_sim_threshold=mem_cfg.expansion_sim_threshold,
+                max_hidden=mem_cfg.max_hidden,
+            )
+            self.memory_mlp = InferenceMemoryMLP(inf_cfg)
+
+            self.v7_router = V7Router(
+                d_model=cfg.model.d_model,
+                d_hidden=mem_cfg.router_d_hidden,
+                n_sources=2,  # base + memory (no KNN during training)
+                init_base_bias=mem_cfg.router_init_base_bias,
+            )
+
+            self.loss_gate_theta = mem_cfg.loss_gate_theta
+            self._loss_gate_calibrated = (mem_cfg.loss_gate_theta > 0)
+            self._loss_accumulator = []
+
         self._init_weights()
 
         # v6: re-apply gate bias init after global _init_weights zeroes all biases
         if self.use_engrams and self._uses_remember_gate:
             self.engram_injector.remember_gate._init_weights(cfg.engram.gate_bias_init)
 
+        # v7: re-apply V7Router base bias after global _init_weights
+        if self.use_memory_mlp:
+            with torch.no_grad():
+                nn.init.zeros_(self.v7_router.fc2.weight)
+                nn.init.zeros_(self.v7_router.fc2.bias)
+                self.v7_router.fc2.bias[0] = cfg.memory_mlp.router_init_base_bias
+
     def _init_weights(self):
+        # Collect modules to skip (Memory MLP has its own init)
+        skip_modules = set()
+        if self.use_memory_mlp:
+            for m in self.memory_mlp.modules():
+                skip_modules.add(id(m))
+
         for module in self.modules():
+            if id(module) in skip_modules:
+                continue
             if isinstance(module, nn.Linear):
                 nn.init.normal_(module.weight, mean=0.0, std=0.02)
                 if module.bias is not None:
@@ -479,8 +579,12 @@ class HRSTransformer(nn.Module):
             else:
                 n_engrams = 0
 
+            # v8 BDH: pass engrams to block for virtual synapse focus
+            block_engrams = engrams if (self._uses_bdh and i > self.engram_extract_layer and engrams.shape[1] > 0) else None
+
             x, routing_w, attn_w = block(
                 x, step=step, return_weights=collect_intermediates,
+                engrams=block_engrams,
             )
 
             # Strip prepended engrams from output (v1-v4 only)
@@ -494,10 +598,15 @@ class HRSTransformer(nn.Module):
                 else:
                     layer_reps.append(x)
 
-            # v1 routing losses
+            # Routing losses
             if routing_w is not None:
                 routing_weights_list.append(routing_w)
-                balance_loss_total = balance_loss_total + routing_balance_loss(routing_w)
+                # v8 BDH: use Zipf hub loss instead of uniform balance loss
+                if self._uses_bdh and self.cfg.bdh.hub_routing_enabled:
+                    balance_loss_total = balance_loss_total + routing_hub_loss(
+                        routing_w, self.cfg.bdh.hub_exponent)
+                else:
+                    balance_loss_total = balance_loss_total + routing_balance_loss(routing_w)
                 entropy_loss_total = entropy_loss_total + routing_entropy_loss(routing_w)
                 flops_loss_total = flops_loss_total + routing_flops_loss(routing_w)
 
@@ -519,6 +628,7 @@ class HRSTransformer(nn.Module):
             flops_loss_total = flops_loss_total / n_routed
 
         x = self.ln_f(x)
+        hidden_for_output = x  # save for v7 Memory MLP
         logits = self.lm_head(x)
 
         # v5/v6: update EMA loss cache for next step's gating signal
@@ -537,6 +647,56 @@ class HRSTransformer(nn.Module):
                 )
                 per_token_loss = ptl
 
+        # v7: Memory MLP + V7Router
+        memory_logits = None
+        v7_router_weights = None
+        if self.use_memory_mlp:
+            hs = hidden_for_output.detach().float()  # (B, T, D) — detached
+            memory_logits = self.memory_mlp(hs)  # (B, T, V)
+
+            # Router features
+            with torch.no_grad():
+                base_entropy = -(F.softmax(logits.float(), -1) * F.log_softmax(logits.float(), -1)).sum(-1, keepdim=True)
+                mem_confidence = F.softmax(memory_logits.float(), -1).max(-1, keepdim=True).values
+
+            # V7Router: 2-source (base + memory), no KNN during training
+            # Reshape for router: (B*T, D+2)
+            B_cur, T_cur = hs.shape[0], hs.shape[1]
+            v7_router_weights = self.v7_router(
+                hs.reshape(B_cur * T_cur, -1),
+                base_entropy.reshape(B_cur * T_cur, 1),
+                mem_confidence.reshape(B_cur * T_cur, 1),
+            ).reshape(B_cur, T_cur, 2)  # (B, T, 2)
+
+        # v8 BDH: compute diagnostic metrics
+        bdh_focus_mag = None
+        bdh_sparsity = None
+        bdh_hub_dist = None
+        if self._uses_bdh and routing_weights_list:
+            # Hub distribution: sorted tier utilization from last layer
+            with torch.no_grad():
+                last_rw = routing_weights_list[-1]
+                p = last_rw.float().mean(dim=(0, 1))
+                p_sorted, _ = p.sort(descending=True)
+                bdh_hub_dist = p_sorted.tolist()
+
+            # Sparsity level: fraction of zeros after bottleneck
+            # (computed as 1 - rho since bottleneck keeps exactly rho fraction)
+            if self.cfg.bdh.sparsity_enabled:
+                bdh_sparsity = 1.0 - self.cfg.bdh.sparsity_rho
+
+            # Focus magnitude: alpha * mean|gain| across virtual synapses
+            if self.cfg.bdh.virtual_synapse_enabled and engrams.shape[1] > 0:
+                gains = []
+                for block in self.blocks:
+                    if hasattr(block, 'virtual_synapse'):
+                        fq, fk = block.virtual_synapse(engrams.detach())
+                        if fq is not None:
+                            gain = (fq * fk).sum(dim=-1).abs().mean().item()
+                            gains.append(gain * self.cfg.bdh.focus_alpha)
+                if gains:
+                    bdh_focus_mag = sum(gains) / len(gains)
+
         return HRSOutput(
             logits=logits,
             layer_representations=layer_reps,
@@ -551,6 +711,12 @@ class HRSTransformer(nn.Module):
             per_token_loss=per_token_loss,
             replacement_gates=replacement_gates,
             remember_gates=remember_gate_vals,
+            hidden_states=hidden_for_output if self.use_memory_mlp else None,
+            memory_logits=memory_logits,
+            v7_router_weights=v7_router_weights,
+            bdh_focus_magnitude=bdh_focus_mag,
+            bdh_sparsity_level=bdh_sparsity,
+            bdh_hub_distribution=bdh_hub_dist,
         )
 
     def apply_engram_refinement(self):
@@ -678,6 +844,20 @@ class HRSTransformer(nn.Module):
                 if self._uses_remember_gate and hasattr(self.engram_injector, 'remember_gate'):
                     counts["remember_gate"] = sum(p.numel() for p in self.engram_injector.remember_gate.parameters())
 
+        # v7: Memory MLP + V7Router
+        if self.use_memory_mlp:
+            counts["memory_mlp"] = sum(p.numel() for p in self.memory_mlp.parameters())
+            counts["v7_router"] = sum(p.numel() for p in self.v7_router.parameters())
+
+        # v8 BDH: Virtual Synapse params
+        if self._uses_bdh:
+            vs_params = 0
+            for block in self.blocks:
+                if hasattr(block, 'virtual_synapse'):
+                    vs_params += sum(p.numel() for p in block.virtual_synapse.parameters())
+            if vs_params > 0:
+                counts["virtual_synapse"] = vs_params
+
         counts["total"] = sum(p.numel() for p in self.parameters() if p.requires_grad)
         return counts
 
@@ -695,13 +875,18 @@ class HRSTransformer(nn.Module):
         groups = {
             "backbone": [], "gen_head": [], "locality_head": [],
             "router": [], "conv": [], "expert": [], "attention_tier": [],
-            "sink": [], "engram": [],
+            "sink": [], "engram": [], "v7_router": [],
         }
 
         for name, param in self.named_parameters():
             if not param.requires_grad:
                 continue
-            if "locality_proj" in name:
+            # v7: Memory MLP params are trained separately via SGD, skip them
+            if "memory_mlp" in name:
+                continue
+            if "v7_router" in name:
+                groups["v7_router"].append(param)
+            elif "locality_proj" in name:
                 groups["locality_head"].append(param)
             elif "engram" in name:
                 groups["engram"].append(param)
@@ -712,7 +897,10 @@ class HRSTransformer(nn.Module):
             elif "expert_tier" in name:
                 groups["expert"].append(param)
             elif "peer_ffn" in name or "ln_peer" in name or "peer_output_gate" in name:
-                # v4: unconditional PEER FFN uses "expert" LR schedule slot
+                # v4/v8: unconditional PEER FFN uses "expert" LR schedule slot
+                groups["expert"].append(param)
+            elif "virtual_synapse" in name:
+                # v8 BDH: virtual synapse uses "expert" LR schedule slot
                 groups["expert"].append(param)
             elif "attn_tier" in name:
                 groups["attention_tier"].append(param)

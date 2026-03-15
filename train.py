@@ -1,6 +1,6 @@
 """Training loop for HRS experiments with phased LR schedule.
 
-Supports both v1 (routed) and v2 (attention->conv + PEER) architectures.
+Supports v1 (routed), v2 (attention->conv + PEER), and v7 (Memory MLP + V7Router) architectures.
 """
 
 import os
@@ -77,13 +77,13 @@ def get_phase(step: int, cfg: ExperimentConfig) -> int:
 def get_phase_lr_multipliers(phase: int, cfg: ExperimentConfig) -> list:
     """Get LR multipliers for current phase.
 
-    v1 returns 9 floats: [backbone, gen_head, locality_head, router, conv, expert, attention, sink, engram]
+    v1/v7 returns 10 floats: [backbone, gen_head, locality_head, router, conv, expert, attention, sink, engram, v7_router]
     v2 returns 5 floats: [backbone, gen_head, locality_head, peer, engram]
     """
     if not cfg.uses_phased_training():
         if cfg.is_v2():
             return [1.0] * 5
-        return [1.0] * 9
+        return [1.0] * 10
 
     pc = cfg.phased
 
@@ -106,7 +106,7 @@ def get_phase_lr_multipliers(phase: int, cfg: ExperimentConfig) -> list:
         return mults.get(phase, pc.phase1_lr_mult)
 
 
-# v1 parameter group index map
+# v1/v7 parameter group index map
 V1_PARAM_GROUP_INDEX = {
     "backbone": 0,
     "gen_head": 1,
@@ -117,6 +117,7 @@ V1_PARAM_GROUP_INDEX = {
     "attention_tier": 6,
     "sink": 7,
     "engram": 8,
+    "v7_router": 9,
 }
 
 # v2 parameter group index map
@@ -186,6 +187,21 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
         betas=(0.9, 0.95),
     )
 
+    # v7: Memory MLP SGD optimizer (trained independently, not through Adam)
+    memory_mlp_optimizer = None
+    if cfg.uses_memory_mlp():
+        # Move replay buffer to device (model.to() doesn't move plain tensors)
+        rb = model.memory_mlp.replay_buffer
+        rb.hidden_states = rb.hidden_states.to(device)
+        rb.targets = rb.targets.to(device)
+        rb.device = device
+        memory_mlp_optimizer = torch.optim.SGD(
+            model.memory_mlp.parameters(),
+            lr=cfg.memory_mlp.lr,
+        )
+        print(f"  Memory MLP: {model.memory_mlp.param_count():,} params (trained via SGD, lr={cfg.memory_mlp.lr})")
+        print(f"  V7Router: {model.v7_router.param_count():,} params (trained via Adam)")
+
     # Mixed precision
     use_amp = cfg.training.use_bf16 and device.type == "cuda"
     amp_dtype = torch.bfloat16 if use_amp else torch.float32
@@ -216,6 +232,10 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
     if cfg.uses_phased_training():
         config_dict["phased"] = {k: v for k, v in cfg.phased.__dict__.items()
                                   if not k.startswith("phase") or not k.endswith("_lr_mult")}
+    if cfg.uses_memory_mlp():
+        config_dict["memory_mlp"] = cfg.memory_mlp.__dict__
+    if cfg.uses_bdh():
+        config_dict["bdh"] = cfg.bdh.__dict__
 
     with open(run_dir / "config.json", "w") as f:
         json.dump(config_dict, f, indent=2)
@@ -228,6 +248,24 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
         model.load_state_dict(ckpt["model_state_dict"])
         optimizer.load_state_dict(ckpt["optimizer_state_dict"])
         start_step = ckpt["step"]
+        # v7: restore Memory MLP state
+        if cfg.uses_memory_mlp() and "memory_mlp_state" in ckpt:
+            mem_state = ckpt["memory_mlp_state"]
+            model.memory_mlp.train_step_count = mem_state.get("train_step_count", 0)
+            model.memory_mlp.expansion_history = mem_state.get("expansion_history", [])
+            model.loss_gate_theta = mem_state.get("loss_gate_theta", 0.0)
+            model._loss_gate_calibrated = mem_state.get("loss_gate_calibrated", False)
+            if "replay_buffer" in mem_state:
+                buf = mem_state["replay_buffer"]
+                n = buf["size"]
+                if n > 0:
+                    model.memory_mlp.replay_buffer.hidden_states[:n] = buf["hidden_states"].to(device)
+                    model.memory_mlp.replay_buffer.targets[:n] = buf["targets"].to(device)
+                    model.memory_mlp.replay_buffer.size = n
+                    model.memory_mlp.replay_buffer.write_idx = n % cfg.memory_mlp.replay_buffer_max
+            if memory_mlp_optimizer is not None and "memory_mlp_optimizer" in ckpt:
+                memory_mlp_optimizer.load_state_dict(ckpt["memory_mlp_optimizer"])
+            print(f"  Restored Memory MLP state (train_steps={model.memory_mlp.train_step_count})")
         print(f"Resumed from {resume_path} at step {start_step}")
 
     # Compile model if requested
@@ -250,6 +288,12 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
     accum_recon = 0.0
     accum_gate_entropy = 0.0
     accum_gate_mean = 0.0
+    accum_v7_router_base_w = 0.0
+    accum_v7_mem_loss = 0.0
+    accum_v7_flag_rate = 0.0
+    accum_v7_router_ent = 0.0
+    accum_bdh_focus = 0.0
+    accum_bdh_sparsity = 0.0
     t0 = time.time()
 
     # Phase tracking
@@ -291,8 +335,21 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                     else (output.replacement_gates if uses_replacement else None)
                 )
 
+                # v7: compute blended logits for loss
+                uses_memory_mlp = cfg.uses_memory_mlp()
+                if uses_memory_mlp and output.memory_logits is not None:
+                    base_probs = F.softmax(output.logits.float(), dim=-1)
+                    mem_probs = F.softmax(output.memory_logits.float(), dim=-1)
+                    w = output.v7_router_weights  # (B, T, 2)
+                    blended_probs = w[:, :, 0:1] * base_probs + w[:, :, 1:2] * mem_probs
+                    blended_probs = blended_probs.clamp(min=1e-10)
+                    blended_logits = blended_probs.log()
+                    logits_for_loss = blended_logits
+                else:
+                    logits_for_loss = output.logits
+
                 loss_dict = loss_fn(
-                    output.logits, y,
+                    logits_for_loss, y,
                     layer_representations=output.layer_representations if needs_layer_reps else None,
                     routing_weights=output.routing_weights if cfg.uses_router() else None,
                     routing_balance_loss_val=output.routing_balance_loss if cfg.uses_router() else None,
@@ -305,6 +362,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                     recon_weight=cfg.engram.recon_loss_weight if cfg.uses_engrams() else 0.0,
                     gate_values=gate_values,
                     gate_entropy_weight=cfg.engram.gate_entropy_weight if (uses_replacement or uses_gate) else 0.0,
+                    v7_router_weights=output.v7_router_weights if uses_memory_mlp else None,
+                    v7_router_entropy_weight=cfg.memory_mlp.router_entropy_weight if uses_memory_mlp else 0.0,
                 )
 
                 loss = loss_dict["loss"] / cfg.training.grad_accum_steps
@@ -339,6 +398,14 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             accum_gate_entropy += loss_dict["gate_entropy_loss"].item()
         if gate_values is not None:
             accum_gate_mean += gate_values.mean().item()
+        if "v7_router_entropy" in loss_dict:
+            accum_v7_router_ent += loss_dict["v7_router_entropy"].item()
+        if output.v7_router_weights is not None:
+            accum_v7_router_base_w += output.v7_router_weights[:, :, 0].mean().item()
+        if output.bdh_focus_magnitude is not None:
+            accum_bdh_focus += output.bdh_focus_magnitude
+        if output.bdh_sparsity_level is not None:
+            accum_bdh_sparsity += output.bdh_sparsity_level
 
         # Gradient clipping
         torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.training.max_grad_norm)
@@ -366,6 +433,43 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             pg["lr"] = base_lr * lr_mults[mult_idx]
 
         optimizer.step()
+
+        # v7: Train Memory MLP independently via SGD on surprising tokens
+        if cfg.uses_memory_mlp() and memory_mlp_optimizer is not None:
+            with torch.no_grad():
+                B_cur, T_cur, V_cur = output.logits.shape
+                per_token_loss = F.cross_entropy(
+                    output.logits.float().reshape(-1, V_cur),
+                    y.reshape(-1),
+                    reduction='none',
+                ).reshape(B_cur, T_cur)
+
+            # Auto-calibrate theta from first 100 steps
+            if not model._loss_gate_calibrated:
+                model._loss_accumulator.append(per_token_loss.mean().item())
+                if len(model._loss_accumulator) >= 100:
+                    import statistics
+                    mu = statistics.mean(model._loss_accumulator)
+                    sigma = statistics.stdev(model._loss_accumulator)
+                    model.loss_gate_theta = mu + sigma
+                    model._loss_gate_calibrated = True
+                    print(f"\n  [v7] Auto-calibrated theta = {model.loss_gate_theta:.4f} "
+                          f"(mu={mu:.4f}, sigma={sigma:.4f})\n")
+
+            if model._loss_gate_calibrated:
+                flag_mask = per_token_loss > model.loss_gate_theta
+                flag_rate = flag_mask.float().mean().item()
+                accum_v7_flag_rate += flag_rate
+
+                if flag_mask.any() and output.hidden_states is not None:
+                    flagged_h = output.hidden_states.detach().float()[flag_mask]
+                    flagged_t = y[flag_mask]
+                    mem_loss = model.memory_mlp.train_step_with_replay(
+                        flagged_h, flagged_t, memory_mlp_optimizer,
+                    )
+                    accum_v7_mem_loss += mem_loss
+                    model.memory_mlp.check_expansion()
+
         step += 1
 
         # Logging
@@ -414,6 +518,20 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 entry["gate_mean"] = avg_gate_mean
                 entry["remember_gate_bias"] = model.engram_injector.remember_gate.mlp[-1].bias.item()
 
+            if cfg.uses_memory_mlp():
+                avg_v7_base_w = accum_v7_router_base_w / n
+                avg_v7_mem_loss = accum_v7_mem_loss / n
+                avg_v7_flag_rate = accum_v7_flag_rate / n
+                avg_v7_router_ent = accum_v7_router_ent / n
+                entry["v7_router_base_w"] = avg_v7_base_w
+                entry["v7_router_mem_w"] = 1.0 - avg_v7_base_w
+                entry["v7_mem_loss"] = avg_v7_mem_loss
+                entry["v7_flag_rate"] = avg_v7_flag_rate
+                entry["v7_router_entropy"] = avg_v7_router_ent
+                entry["v7_mem_train_steps"] = model.memory_mlp.train_step_count
+                entry["v7_mem_d_hidden"] = model.memory_mlp.d_hidden
+                entry["v7_replay_buf_size"] = model.memory_mlp.replay_buffer.size
+
             log_history.append(entry)
 
             extras = ""
@@ -427,6 +545,14 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 extras += f" | gate {avg_gate_mean:.3f} | θ {model.engram_replacer.threshold.item():.2f}"
             if cfg.uses_remember_gate():
                 extras += f" | gate {avg_gate_mean:.3f} | bias {model.engram_injector.remember_gate.mlp[-1].bias.item():.2f}"
+            if cfg.uses_memory_mlp():
+                extras += f" | w_base {avg_v7_base_w:.3f} | flag {avg_v7_flag_rate:.3f} | mem_loss {avg_v7_mem_loss:.3f}"
+            if cfg.uses_bdh():
+                avg_bdh_focus = accum_bdh_focus / n
+                avg_bdh_sparsity = accum_bdh_sparsity / n
+                entry["bdh_focus_magnitude"] = avg_bdh_focus
+                entry["bdh_sparsity_level"] = avg_bdh_sparsity
+                extras += f" | focus {avg_bdh_focus:.4f} | sparse {avg_bdh_sparsity:.2f}"
 
             print(
                 f"step {step:6d} | loss {avg_loss:.4f} | CE {avg_ce:.4f} | "
@@ -443,6 +569,12 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             accum_recon = 0.0
             accum_gate_entropy = 0.0
             accum_gate_mean = 0.0
+            accum_v7_router_base_w = 0.0
+            accum_v7_mem_loss = 0.0
+            accum_v7_flag_rate = 0.0
+            accum_v7_router_ent = 0.0
+            accum_bdh_focus = 0.0
+            accum_bdh_sparsity = 0.0
 
         # Evaluation
         if step % cfg.training.eval_interval == 0:
@@ -472,18 +604,37 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             if "peer_n_total_experts" in metrics:
                 print(f"  peer_experts: {metrics['peer_n_active_per_token']}/{metrics['peer_n_total_experts']} "
                       f"(sparsity {metrics['peer_sparsity']:.4f})")
+            if cfg.uses_memory_mlp():
+                print(f"  memory_mlp: d_hidden={model.memory_mlp.d_hidden}, "
+                      f"train_steps={model.memory_mlp.train_step_count}, "
+                      f"replay_buf={model.memory_mlp.replay_buffer.size}")
             print()
 
         # Save checkpoint (keep only last 2 to avoid filling disk)
         if step % cfg.training.save_interval == 0:
-            ckpt_path = run_dir / f"checkpoint_{step}.pt"
-            torch.save({
+            ckpt_data = {
                 "step": step,
                 "model_state_dict": model.state_dict(),
                 "optimizer_state_dict": optimizer.state_dict(),
                 "config": cfg,
                 "phase": current_phase,
-            }, ckpt_path)
+            }
+            # v7: save Memory MLP state separately for resumability
+            if cfg.uses_memory_mlp():
+                ckpt_data["memory_mlp_state"] = {
+                    "train_step_count": model.memory_mlp.train_step_count,
+                    "expansion_history": model.memory_mlp.expansion_history,
+                    "loss_gate_theta": model.loss_gate_theta,
+                    "loss_gate_calibrated": model._loss_gate_calibrated,
+                    "replay_buffer": {
+                        "hidden_states": model.memory_mlp.replay_buffer.hidden_states[:model.memory_mlp.replay_buffer.size].cpu(),
+                        "targets": model.memory_mlp.replay_buffer.targets[:model.memory_mlp.replay_buffer.size].cpu(),
+                        "size": model.memory_mlp.replay_buffer.size,
+                    },
+                }
+                ckpt_data["memory_mlp_optimizer"] = memory_mlp_optimizer.state_dict()
+            ckpt_path = run_dir / f"checkpoint_{step}.pt"
+            torch.save(ckpt_data, ckpt_path)
             print(f"Saved checkpoint to {ckpt_path}")
 
             # Remove old checkpoints, keeping only last 2
@@ -496,11 +647,24 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 print(f"Removed old checkpoint {old_ckpt.name}")
 
     # Save final
-    torch.save({
+    final_data = {
         "step": step,
         "model_state_dict": model.state_dict(),
         "config": cfg,
-    }, run_dir / "final.pt")
+    }
+    if cfg.uses_memory_mlp():
+        final_data["memory_mlp_state"] = {
+            "train_step_count": model.memory_mlp.train_step_count,
+            "expansion_history": model.memory_mlp.expansion_history,
+            "loss_gate_theta": model.loss_gate_theta,
+            "loss_gate_calibrated": model._loss_gate_calibrated,
+            "replay_buffer": {
+                "hidden_states": model.memory_mlp.replay_buffer.hidden_states[:model.memory_mlp.replay_buffer.size].cpu(),
+                "targets": model.memory_mlp.replay_buffer.targets[:model.memory_mlp.replay_buffer.size].cpu(),
+                "size": model.memory_mlp.replay_buffer.size,
+            },
+        }
+    torch.save(final_data, run_dir / "final.pt")
 
     with open(run_dir / "log_history.json", "w") as f:
         json.dump(log_history, f, indent=2)

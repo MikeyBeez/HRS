@@ -1,7 +1,9 @@
-"""Configuration for HRS v1 and v2 experiments.
+"""Configuration for HRS v1, v2, v7, and v8 experiments.
 
 v1: Hierarchical Routed Sinkformer (routing + tiered compute)
 v2: Attention->Conv backbone + PEER FFN + Engrams (no routing)
+v7: v4 base + Memory MLP + V7Router (logit blending, from-scratch training)
+v8: v4 base + BDH-inspired upgrades (virtual synapse, hub routing, sparsity bottleneck)
 """
 
 from dataclasses import dataclass, field
@@ -31,6 +33,12 @@ class AblationConfig(Enum):
 
     # --- v3 configs ---
     V3_FULL = "v3_full"                        # v1 routing + PEER as expert tier + engrams
+
+    # --- v7 configs ---
+    V7_FULL = "v7_full"                        # v4 base + Memory MLP + V7Router (logit blending)
+
+    # --- v8 configs ---
+    V8_BDH = "v8_bdh"                          # v4 base + BDH: virtual synapse, hub routing, sparsity bottleneck
 
     # --- v2 configs ---
     V2_ATTN_CONV = "v2_attn_conv"              # Attention->Conv backbone, standard MLP, no dual-head
@@ -107,6 +115,42 @@ class EngramConfig:
 
 
 @dataclass
+class MemoryMLPTrainConfig:
+    """Configuration for Memory MLP + V7Router during from-scratch training."""
+    enabled: bool = False
+    d_hidden: int = 2048
+    lr: float = 0.01                          # SGD learning rate for Memory MLP
+    train_steps_per_batch: int = 3            # SGD steps per training batch
+    replay_buffer_max: int = 50_000           # max (hidden, target) pairs
+    replay_batch_size: int = 128              # replay samples per SGD step
+    expansion_check_interval: int = 200       # check expansion every N train steps
+    expansion_sim_threshold: float = 0.90     # cosine sim threshold for expansion
+    max_hidden: int = 4096                    # max hidden units after expansion
+    loss_gate_theta: float = 0.0              # 0 = auto-calibrate from first 100 steps
+    loss_gate_target_flag_rate: float = 0.15  # target ~15% of tokens flagged
+    router_d_hidden: int = 128                # V7Router hidden dim
+    router_init_base_bias: float = 2.0        # softmax([2,0]) ~ [0.88, 0.12]
+    router_entropy_weight: float = 0.01       # entropy regularization on router weights
+
+
+@dataclass
+class BDHConfig:
+    """Configuration for BDH-inspired upgrades (v8)."""
+    enabled: bool = False
+    # Experiment 1: Virtual Synapse — engram-derived attention focus matrix
+    virtual_synapse_enabled: bool = True
+    focus_alpha: float = 0.1              # multiplicative gain scaling on attention scores
+    focus_proj_dim: int = 64              # projection dim for rank-1 focus factors
+    # Experiment 2: Scale-Free Hub Routing — Zipf distribution target
+    hub_routing_enabled: bool = True
+    hub_exponent: float = 1.5             # Zipf exponent: tier k target = k^(-exponent)
+    # Experiment 3: Monosemantic Sparsity Bottleneck
+    sparsity_enabled: bool = True
+    sparsity_rho: float = 0.05            # fraction of features kept active (top-k)
+    sparsity_activation: str = "softplus" # "relu" or "softplus" positivity constraint
+
+
+@dataclass
 class PhasedTrainingConfig:
     enabled: bool = False
     # v1 phase durations (in steps) - 0 means use metric-triggered transitions
@@ -117,12 +161,12 @@ class PhasedTrainingConfig:
     phase5_steps: int = 0         # Refinement (v1 only)
 
     # v1 LR multipliers per phase (relative to base LR)
-    # Format: [backbone, gen_head, locality_head, router, conv, expert, attention, sink, engram]
-    phase1_lr_mult: List[float] = field(default_factory=lambda: [1.0, 1.0, 0.01, 0.01, 1.0, 0.01, 0.01, 0.01, 0.0])
-    phase2_lr_mult: List[float] = field(default_factory=lambda: [0.5, 0.5, 1.0, 1.0, 0.5, 0.1, 0.1, 0.1, 0.0])
-    phase3_lr_mult: List[float] = field(default_factory=lambda: [0.3, 0.3, 0.3, 1.0, 0.5, 1.0, 0.5, 1.0, 0.0])
-    phase4_lr_mult: List[float] = field(default_factory=lambda: [0.1, 0.1, 0.1, 0.3, 0.1, 0.3, 0.1, 0.3, 1.0])
-    phase5_lr_mult: List[float] = field(default_factory=lambda: [0.3, 0.5, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.0])
+    # Format: [backbone, gen_head, locality_head, router, conv, expert, attention, sink, engram, v7_router]
+    phase1_lr_mult: List[float] = field(default_factory=lambda: [1.0, 1.0, 0.01, 0.01, 1.0, 0.01, 0.01, 0.01, 0.0, 0.0])
+    phase2_lr_mult: List[float] = field(default_factory=lambda: [0.5, 0.5, 1.0, 1.0, 0.5, 0.1, 0.1, 0.1, 0.0, 0.0])
+    phase3_lr_mult: List[float] = field(default_factory=lambda: [0.3, 0.3, 0.3, 1.0, 0.5, 1.0, 0.5, 1.0, 0.0, 0.0])
+    phase4_lr_mult: List[float] = field(default_factory=lambda: [0.1, 0.1, 0.1, 0.3, 0.1, 0.3, 0.1, 0.3, 1.0, 0.0])
+    phase5_lr_mult: List[float] = field(default_factory=lambda: [0.3, 0.5, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.0, 0.0])
 
     # v2 LR multipliers per phase (relative to base LR)
     # Format: [backbone, gen_head, locality_head, peer, engram]
@@ -178,6 +222,8 @@ class ExperimentConfig:
     tier: TierConfig = field(default_factory=TierConfig)
     peer: PEERConfig = field(default_factory=PEERConfig)
     engram: EngramConfig = field(default_factory=EngramConfig)
+    memory_mlp: MemoryMLPTrainConfig = field(default_factory=MemoryMLPTrainConfig)
+    bdh: BDHConfig = field(default_factory=BDHConfig)
     phased: PhasedTrainingConfig = field(default_factory=PhasedTrainingConfig)
     locality: LocalityConfig = field(default_factory=LocalityConfig)
     training: TrainingConfig = field(default_factory=TrainingConfig)
@@ -273,6 +319,49 @@ class ExperimentConfig:
             cfg.phased.phase3_steps = 10000
             cfg.phased.phase4_steps = 12000
             cfg.phased.phase5_steps = 0
+
+        # === v7 configs ===
+
+        elif ablation == AblationConfig.V7_FULL:
+            # v4 base + Memory MLP + V7Router (logit blending, from-scratch training)
+            cfg.locality.enabled = True
+            cfg.engram.enabled = True
+            cfg.peer.enabled = True
+            cfg.router.n_tiers = 3  # conv, attn, sink (same as v4)
+            cfg.memory_mlp.enabled = True
+            cfg.training.batch_size = 8
+            cfg.training.grad_accum_steps = 6  # effective batch = 48
+            cfg.training.max_steps = 38000  # P1(8K)+P2(8K)+P3(10K)+P4(12K), skip P5
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 12000
+            cfg.phased.phase5_steps = 0  # skip P5 (always regresses)
+            # v7 phase schedule: v7_router frozen P1-P2, wakes P3, full P4
+            # [backbone, gen_head, locality_head, router, conv, expert, attention, sink, engram, v7_router]
+            cfg.phased.phase1_lr_mult = [1.0, 1.0, 0.01, 0.01, 1.0, 0.01, 0.01, 0.01, 0.0, 0.0]
+            cfg.phased.phase2_lr_mult = [0.5, 0.5, 1.0, 1.0, 0.5, 0.1, 0.1, 0.1, 0.0, 0.0]
+            cfg.phased.phase3_lr_mult = [0.3, 0.3, 0.3, 1.0, 0.5, 1.0, 0.5, 1.0, 0.0, 0.5]
+            cfg.phased.phase4_lr_mult = [0.1, 0.1, 0.1, 0.3, 0.1, 0.3, 0.1, 0.3, 1.0, 1.0]
+
+        # === v8 configs ===
+
+        elif ablation == AblationConfig.V8_BDH:
+            # v4 base + BDH-inspired upgrades
+            cfg.locality.enabled = True
+            cfg.engram.enabled = True
+            cfg.peer.enabled = True
+            cfg.router.n_tiers = 3  # conv, attn, sink (same as v4)
+            cfg.bdh.enabled = True
+            cfg.training.grad_accum_steps = 6
+            cfg.training.max_steps = 38000
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 12000
+            cfg.phased.phase5_steps = 0  # skip P5
 
         # === v5 configs ===
 
@@ -370,12 +459,12 @@ class ExperimentConfig:
         return self.training.ablation.value.startswith("v2_")
 
     def uses_router(self) -> bool:
-        """v1/v3/v4/v5/v6: uses routing machinery."""
+        """v1/v3/v4/v5/v6/v7/v8: uses routing machinery."""
         return self.training.ablation.value in (
             "dual_head_router", "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
             "v3_full", "v4_full", "v5_replace",
-            "v4_1024", "v6_gate",
+            "v4_1024", "v6_gate", "v7_full", "v8_bdh",
         )
 
     def uses_sink(self) -> bool:
@@ -383,21 +472,27 @@ class ExperimentConfig:
             "dual_head_router_sink",
             "full_core", "full_hrs", "full_hrs_refined",
             "v3_full", "v4_full", "v5_replace",
-            "v4_1024", "v6_gate",
+            "v4_1024", "v6_gate", "v7_full", "v8_bdh",
         )
 
     def uses_engrams(self) -> bool:
         return self.engram.enabled and self.training.ablation.value in (
             "full_hrs", "full_hrs_refined", "v2_full",
             "v3_full", "v4_full", "v5_replace",
-            "v4_1024", "v6_gate",
+            "v4_1024", "v6_gate", "v7_full", "v8_bdh",
         )
 
     def uses_peer(self) -> bool:
         return self.peer.enabled and self.training.ablation.value in (
             "v2_attn_conv_peer", "v2_full",
             "v3_full", "v4_full", "v5_replace",
-            "v4_1024", "v6_gate",
+            "v4_1024", "v6_gate", "v7_full", "v8_bdh",
+        )
+
+    def uses_memory_mlp(self) -> bool:
+        """v7: Memory MLP + V7Router logit blending."""
+        return self.memory_mlp.enabled and self.training.ablation.value in (
+            "v7_full",
         )
 
     def uses_attn_conv_backbone(self) -> bool:
@@ -408,8 +503,12 @@ class ExperimentConfig:
         return self.phased.enabled and self.training.ablation.value in (
             "full_core", "full_hrs", "full_hrs_refined", "v2_full",
             "v3_full", "v4_full", "v5_replace",
-            "v4_1024", "v6_gate",
+            "v4_1024", "v6_gate", "v7_full", "v8_bdh",
         )
+
+    def uses_bdh(self) -> bool:
+        """v8: BDH-inspired upgrades."""
+        return self.bdh.enabled and self.training.ablation.value == "v8_bdh"
 
     def uses_engram_replacement(self) -> bool:
         """v5: blend engrams in-place instead of prepending."""
