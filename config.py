@@ -354,7 +354,8 @@ class ExperimentConfig:
             cfg.peer.enabled = True
             cfg.router.n_tiers = 3  # conv, attn, sink (same as v4)
             cfg.bdh.enabled = True
-            cfg.training.grad_accum_steps = 6
+            cfg.training.batch_size = 4
+            cfg.training.grad_accum_steps = 8  # effective batch = 32
             cfg.training.max_steps = 38000
             cfg.phased.enabled = True
             cfg.phased.phase1_steps = 8000

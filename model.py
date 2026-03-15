@@ -81,20 +81,20 @@ class CausalSelfAttention(nn.Module):
         cos, sin = self.rope(T)
         q, k = apply_rotary_emb(q, k, cos, sin)
 
-        use_manual = return_weights or (focus_qk is not None)
+        # v8 BDH: apply virtual synapse as additive bias on Q/K (SDPA compatible)
+        if focus_qk is not None:
+            focus_q, focus_k = focus_qk
+            if focus_q is not None and focus_k is not None:
+                # Per-head scalar gain applied as Q/K scaling
+                # gain = dot(fq, fk) per head -> (B, H, 1, 1)
+                gain = (focus_q * focus_k).sum(dim=-1, keepdim=True).unsqueeze(-1)
+                # Scale Q by sqrt(1 + alpha * gain) to approximate multiplicative score gain
+                # For small alpha*gain: (Q*s)@K^T/sqrt(d) ≈ Q@K^T/sqrt(d) * (1 + alpha*gain)
+                q = q * (1.0 + gain).sqrt()
 
-        if use_manual:
+        if return_weights:
             scale = 1.0 / math.sqrt(self.head_dim)
             attn = (q @ k.transpose(-2, -1)) * scale
-
-            # v8 BDH: apply virtual synapse focus gain
-            if focus_qk is not None:
-                focus_q, focus_k = focus_qk
-                if focus_q is not None and focus_k is not None:
-                    # Per-head scalar gain from engram focus vectors
-                    gain = (focus_q * focus_k).sum(dim=-1, keepdim=True).unsqueeze(-1)  # (B, H, 1, 1)
-                    attn = attn * (1.0 + gain)
-
             causal_mask = torch.triu(
                 torch.ones(T, T, device=x.device, dtype=torch.bool), diagonal=1
             )
