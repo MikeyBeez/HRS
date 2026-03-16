@@ -234,7 +234,7 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                                   if not k.startswith("phase") or not k.endswith("_lr_mult")}
     if cfg.uses_memory_mlp():
         config_dict["memory_mlp"] = cfg.memory_mlp.__dict__
-    if cfg.uses_bdh():
+    if cfg.uses_bdh() or cfg.uses_v10_control():
         config_dict["bdh"] = cfg.bdh.__dict__
 
     with open(run_dir / "config.json", "w") as f:
@@ -378,10 +378,18 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                     v7_router_entropy_weight=cfg.memory_mlp.router_entropy_weight if uses_memory_mlp else 0.0,
                 )
 
-                # v9: add keep-alive penalty for learnable scales
+                # v9/v10: add keep-alive penalty and placeholder losses
                 total_loss = loss_dict["loss"]
                 if uses_learnable and output.loss_scaler_penalty is not None:
                     total_loss = total_loss + output.loss_scaler_penalty
+
+                # v10: add scaled placeholder losses
+                if cfg.uses_v10_control() and output.placeholder_losses is not None:
+                    ls = model.loss_scaler
+                    pl = output.placeholder_losses
+                    total_loss = total_loss + ls.hub_scale * pl['hub']
+                    total_loss = total_loss + ls.entropy_scale * pl['entropy']
+                    total_loss = total_loss + ls.recon_scale * pl['recon']
 
                 loss = total_loss / cfg.training.grad_accum_steps
 

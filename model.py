@@ -19,7 +19,7 @@ from tiers import ConvTier, ExpertTier, AttentionTier, SinkTier, RotaryEmbedding
 from router import TokenRouter, routing_balance_loss, routing_entropy_loss, routing_flops_loss
 from engram import EngramEncoder, EngramInjector, GatedEngramInjector, EngramReplacer, engram_reconstruction_loss
 from peer import PEER
-from bdh import VirtualSynapse, routing_hub_loss, apply_sparsity_bottleneck, LossScaler
+from bdh import VirtualSynapse, routing_hub_loss, apply_sparsity_bottleneck, LossScaler, PlaceholderLosses
 
 
 @dataclass
@@ -44,9 +44,11 @@ class HRSOutput:
     bdh_focus_magnitude: float = None        # mean |alpha * gain| across layers
     bdh_sparsity_level: float = None         # actual fraction of zeros after bottleneck
     bdh_hub_distribution: list = None        # sorted tier utilization for logging
-    # v9 learnable loss scales
+    # v9/v10 learnable loss scales
     loss_scales: dict = None                 # {"hub_scale": x, "entropy_scale": y, "recon_scale": z}
     loss_scaler_penalty: torch.Tensor = None # keep-alive penalty term
+    # v10 placeholder losses
+    placeholder_losses: dict = None          # {"hub": x, "entropy": y, "recon": z}
 
 
 class CausalSelfAttention(nn.Module):
@@ -222,7 +224,13 @@ class HRSBlock(nn.Module):
                     torch.tensor(cfg.tier.sink_init_scale)
                 )
         else:
-            self.mlp = MLP(model_cfg)
+            # v10: PEER as standalone FFN (no routing)
+            if cfg.uses_peer() and cfg.uses_v10_control():
+                self.peer_ffn = PEER(model_cfg, cfg.peer)
+                self.ln_peer = nn.LayerNorm(model_cfg.d_model)
+                self.peer_output_gate = nn.Parameter(torch.ones(1) * 0.1)
+            else:
+                self.mlp = MLP(model_cfg)
 
     def forward(
         self, x, step: int = 0, return_weights: bool = False,
@@ -294,7 +302,12 @@ class HRSBlock(nn.Module):
                     kv_scale = 1.0 - sink_weight * (1.0 - self.sink_kv_scale.abs())
                     x = x * kv_scale.unsqueeze(-1)
         else:
-            x = x + self.mlp(self.ln2(x))
+            # v10: PEER as standalone FFN (no routing), or standard MLP
+            if hasattr(self, 'peer_ffn') and not self.use_router:
+                peer_out = self.peer_ffn(self.ln_peer(x))
+                x = x + peer_out * self.peer_output_gate
+            else:
+                x = x + self.mlp(self.ln2(x))
 
         return x, routing_w, attn_w
 
@@ -379,6 +392,7 @@ class HRSTransformer(nn.Module):
         self.use_memory_mlp = cfg.uses_memory_mlp()
         self._uses_bdh = cfg.uses_bdh()
         self._uses_learnable_scaling = cfg.uses_learnable_loss_scaling()
+        self._uses_v10_control = cfg.uses_v10_control()
 
         # If engrams are enabled and NOT using replacement, blocks after extraction
         # need a longer max_seq_len for prepended engrams.
@@ -444,7 +458,7 @@ class HRSTransformer(nn.Module):
                 # v1-v4: prepend engrams
                 self.engram_injector = EngramInjector(model_cfg)
 
-        # v9: Learnable loss scaling
+        # v9/v10: Learnable loss scaling
         if self._uses_learnable_scaling:
             self.loss_scaler = LossScaler(
                 hub_init=cfg.router.balance_loss_weight,
@@ -452,6 +466,10 @@ class HRSTransformer(nn.Module):
                 recon_init=cfg.engram.recon_loss_weight,
                 alive_penalty=cfg.bdh.alive_penalty,
             )
+
+        # v10: Placeholder losses (semantically empty)
+        if self._uses_v10_control:
+            self.placeholder_losses = PlaceholderLosses(d_model=cfg.model.d_model)
 
         # v7: Memory MLP + V7Router
         if self.use_memory_mlp:
@@ -535,7 +553,11 @@ class HRSTransformer(nn.Module):
                     elif block.use_peer and hasattr(block, 'expert_tier') and hasattr(block.expert_tier, 'output_proj'):
                         nn.init.normal_(block.expert_tier.output_proj.weight, mean=0.0, std=scale)
                 else:
-                    nn.init.normal_(block.mlp.fc2.weight, mean=0.0, std=scale)
+                    # v10: PEER without routing, or standard MLP
+                    if hasattr(block, 'mlp'):
+                        nn.init.normal_(block.mlp.fc2.weight, mean=0.0, std=scale)
+                    elif hasattr(block, 'peer_ffn') and hasattr(block.peer_ffn, 'output_proj'):
+                        nn.init.normal_(block.peer_ffn.output_proj.weight, mean=0.0, std=scale)
             elif isinstance(block, HRSv2Block):
                 if block.use_attention:
                     nn.init.normal_(block.attn.out_proj.weight, mean=0.0, std=scale)
@@ -732,6 +754,10 @@ class HRSTransformer(nn.Module):
             bdh_hub_distribution=bdh_hub_dist,
             loss_scales=self.loss_scaler.scale_dict() if self._uses_learnable_scaling else None,
             loss_scaler_penalty=self.loss_scaler.penalty() if self._uses_learnable_scaling else None,
+            placeholder_losses=(
+                self.placeholder_losses(hidden_for_output)
+                if self._uses_v10_control else None
+            ),
         )
 
     def apply_engram_refinement(self):
@@ -783,7 +809,8 @@ class HRSTransformer(nn.Module):
             elif isinstance(block, HRSBlock):
                 backbone += sum(p.numel() for p in block.attn.parameters())
                 if not block.use_router:
-                    backbone += sum(p.numel() for p in block.mlp.parameters())
+                    if hasattr(block, 'mlp'):
+                        backbone += sum(p.numel() for p in block.mlp.parameters())
         counts["backbone"] = backbone
 
         # Generation head (weight-tied, so 0 additional)

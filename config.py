@@ -43,6 +43,9 @@ class AblationConfig(Enum):
     # --- v9 configs ---
     V9_LEARNABLE = "v9_learnable"              # v8 + learnable loss scaling for auxiliary objectives
 
+    # --- v10 configs ---
+    V10_CONTROL = "v10_control"                # dense baseline + PEER FFN + learnable placeholder losses (no BDH/routing)
+
     # --- v2 configs ---
     V2_ATTN_CONV = "v2_attn_conv"              # Attention->Conv backbone, standard MLP, no dual-head
     V2_ATTN_CONV_DUAL = "v2_attn_conv_dual"    # + dual-head
@@ -391,6 +394,25 @@ class ExperimentConfig:
             cfg.phased.phase4_steps = 12000
             cfg.phased.phase5_steps = 12000
 
+        # === v10 configs ===
+
+        elif ablation == AblationConfig.V10_CONTROL:
+            # Dense baseline + PEER FFN + locality, NO routing/BDH/engrams
+            # Learnable placeholder losses replace BDH auxiliary objectives
+            cfg.locality.enabled = True
+            cfg.peer.enabled = True
+            # No routing, no engrams, no BDH — dense transformer with PEER FFN
+            cfg.bdh.learnable_loss_scaling = True  # placeholder losses use this
+            cfg.training.batch_size = 4
+            cfg.training.grad_accum_steps = 8
+            cfg.training.max_steps = 38000  # P1-P4 only, no P5
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 12000
+            cfg.phased.phase5_steps = 0
+
         # === v5 configs ===
 
         elif ablation == AblationConfig.V5_REPLACE:
@@ -515,6 +537,7 @@ class ExperimentConfig:
             "v2_attn_conv_peer", "v2_full",
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
+            "v10_control",
         )
 
     def uses_memory_mlp(self) -> bool:
@@ -532,6 +555,7 @@ class ExperimentConfig:
             "full_core", "full_hrs", "full_hrs_refined", "v2_full",
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
+            "v10_control",
         )
 
     def uses_bdh(self) -> bool:
@@ -539,8 +563,14 @@ class ExperimentConfig:
         return self.bdh.enabled and self.training.ablation.value in ("v8_bdh", "v9_learnable")
 
     def uses_learnable_loss_scaling(self) -> bool:
-        """v9: learnable auxiliary loss scales."""
-        return self.uses_bdh() and self.bdh.learnable_loss_scaling
+        """v9/v10: learnable auxiliary loss scales."""
+        return self.bdh.learnable_loss_scaling and self.training.ablation.value in (
+            "v9_learnable", "v10_control",
+        )
+
+    def uses_v10_control(self) -> bool:
+        """v10: placeholder losses, no BDH/routing."""
+        return self.training.ablation.value == "v10_control"
 
     def uses_engram_replacement(self) -> bool:
         """v5: blend engrams in-place instead of prepending."""

@@ -239,3 +239,70 @@ class LossScaler(nn.Module):
             "entropy_scale": self.entropy_scale.item(),
             "recon_scale": self.recon_scale.item(),
         }
+
+
+class PlaceholderLosses(nn.Module):
+    """Semantically empty auxiliary losses for V10 control experiment.
+
+    Three losses structurally identical to BDH's hub/entropy/recon losses
+    but carrying no useful architectural signal. They exist solely to give
+    the learnable scales something to optimize against, isolating whether
+    the improvement comes from the scaling mechanism or the BDH content.
+
+    1. Placeholder hub: L2 distance between a frozen random target and a
+       learned projection of the mean hidden state.
+    2. Placeholder entropy: entropy of a small learned head applied to
+       the hidden state (not connected to any routing).
+    3. Placeholder recon: L2 distance between two independent random
+       projections of the hidden state (no meaningful reconstruction target).
+    """
+
+    def __init__(self, d_model: int = 512):
+        super().__init__()
+        # Placeholder hub: project hidden → small space, compare to frozen random target
+        self.hub_proj = nn.Linear(d_model, 8, bias=False)
+        nn.init.normal_(self.hub_proj.weight, std=0.02)
+        self.register_buffer('hub_target', torch.randn(8))
+        self.hub_target.div_(self.hub_target.norm())  # unit norm
+
+        # Placeholder entropy: small head over hidden, compute entropy
+        self.entropy_head = nn.Linear(d_model, 4, bias=False)
+        nn.init.normal_(self.entropy_head.weight, std=0.02)
+
+        # Placeholder recon: two random projections, compare their outputs
+        self.recon_proj_a = nn.Linear(d_model, 16, bias=False)
+        self.recon_proj_b = nn.Linear(d_model, 16, bias=False)
+        nn.init.normal_(self.recon_proj_a.weight, std=0.02)
+        nn.init.normal_(self.recon_proj_b.weight, std=0.02)
+
+    def forward(self, hidden_states: torch.Tensor) -> dict:
+        """Compute three placeholder losses from hidden states.
+
+        Args:
+            hidden_states: (B, T, D) from any layer
+
+        Returns:
+            dict with 'hub', 'entropy', 'recon' placeholder loss tensors
+        """
+        # Mean pool across sequence
+        h_mean = hidden_states.mean(dim=1)  # (B, D)
+
+        # 1. Hub placeholder: L2 to frozen random target
+        hub_proj = self.hub_proj(h_mean)  # (B, 8)
+        hub_loss = ((hub_proj - self.hub_target) ** 2).mean()
+
+        # 2. Entropy placeholder: entropy of softmax over small head
+        logits = self.entropy_head(h_mean)  # (B, 4)
+        probs = F.softmax(logits, dim=-1).clamp(min=1e-10)
+        entropy_loss = -(probs * probs.log()).sum(dim=-1).mean()
+
+        # 3. Recon placeholder: L2 between two random projections
+        proj_a = self.recon_proj_a(h_mean)  # (B, 16)
+        proj_b = self.recon_proj_b(h_mean)  # (B, 16)
+        recon_loss = ((proj_a - proj_b) ** 2).mean()
+
+        return {
+            'hub': hub_loss,
+            'entropy': entropy_loss,
+            'recon': recon_loss,
+        }
