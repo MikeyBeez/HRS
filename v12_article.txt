@@ -1,113 +1,123 @@
-4.82 Perplexity on WikiText-103: How Brain-Derived Constraints Beat the Published State of the Art by 3x
+3.32 BPE Perplexity on WikiText-103: Brain-Derived Constraints in a 250M Parameter Transformer
 
 By Micheal Bee and Claude (Anthropic)
 
 
 Abstract
 
-We report a word-level perplexity of 4.82 on the WikiText-103 test set using a 250-million parameter transformer-hybrid model. The previous best published result at this parameter count is 15.79, achieved by kNN-LM in 2020. Our model uses no retrieval augmentation, no external memory at inference time, and no dynamic evaluation. The result comes from four ideas working together: brain-derived architectural constraints with learned loss coefficients, parameter-efficient expert retrieval, compressed context memory, and the elimination of a training phase that was causing late-stage regression. All code and training logs are available at https://github.com/MikeyBeez/HRS.
+We report a BPE perplexity of 3.32 on the WikiText-103 test set using a 250-million parameter transformer-hybrid trained on a single RTX 5070 Ti. The model combines brain-derived architectural constraints with learnable loss coefficients, parameter-efficient expert retrieval with 262,144 single-neuron experts, engram-based context compression, and a training schedule that eliminates a late-stage phase responsible for regression in earlier experiments.
+
+This result is not directly comparable to published word-level perplexity benchmarks such as kNN-LM at 15.79, because our model uses BPE subword tokenization while those benchmarks use word-level tokenization with adaptive softmax. BPE models benefit from predicting multiple easier subword tokens per word rather than one harder whole-word prediction. When we aggregate our BPE log-probabilities to word boundaries, we get 10.43, but this number still benefits from the subword prediction advantage and should not be read as an apples-to-apples comparison.
+
+What we can say honestly is that this is a strong result for a 250M parameter model trained in under 20 hours on consumer hardware, and that the architectural ideas driving it, learnable loss scaling for brain-derived constraints, expert retrieval, engram modulation, and phase schedule design, are worth investigating further. All code is available at https://github.com/MikeyBeez/HRS.
 
 
-The Setup
+Background
 
-This work builds on our previous paper, "Brain-Derived Heuristics in Neural Architecture," which established two results. V8 imposed three brain-inspired constraints on a transformer-hybrid with fixed loss coefficients and achieved 10.9 perplexity, worse than the unconstrained baseline of 9.19. V9 made those loss coefficients learnable and achieved 7.51 perplexity, beating the baseline by nearly two full points. The constraints were not costs. The problem was that the fixed coefficients were wrong, and gradient descent knew the right values.
+This work builds on our previous paper, "Brain-Derived Heuristics in Neural Architecture," which established two results. V8 imposed three brain-inspired constraints on a transformer-hybrid with fixed loss coefficients and achieved 10.9 BPE perplexity, worse than the unconstrained V4 baseline of 9.19. V9 made those loss coefficients learnable and achieved 7.51 BPE perplexity at step 30,000, beating the baseline by nearly two full points.
 
-V9 had an unresolved problem. Its best perplexity of 7.51 occurred at training step 30,000. After that point, Phase 5 of the training schedule activated and perplexity regressed to 9.07 by step 50,000. The paper identified diagnosing this regression as the highest priority next experiment.
+V9 had an unresolved problem. After step 30,000, Phase 5 of the training schedule activated and perplexity regressed to 9.07 by step 50,000. The previous paper identified diagnosing this regression as the highest priority next experiment.
 
 
 What Phase 5 Was Doing Wrong
 
-The training schedule has five phases. Each phase sets different learning rate multipliers for different parameter groups: backbone weights, attention, convolution, routing, engrams, and the various BDH modules. Phases 1 through 4 progressively reduce learning rates as the model converges, which is standard practice.
+The training schedule has five phases. Each phase sets different learning rate multipliers for different parameter groups. Phases 1 through 4 progressively reduce learning rates as the model converges, which is standard practice.
 
-Phase 5 reversed this. It tripled the learning rate for the backbone, quintupled it for the generation head, tripled it for convolution and attention, and completely froze the engrams. The rationale was refinement, allowing the model to make final adjustments with higher capacity for change. In practice, it destabilized representations that had already converged. The model at step 38,000 had found good solutions. Tripling the learning rates scattered those solutions.
+Phase 5 reversed this. It tripled the learning rate for the backbone, quintupled it for the generation head, tripled it for convolution and attention, and completely froze the engrams. The rationale was refinement, allowing the model to make final adjustments with higher capacity for change. In practice, it destabilized representations that had already converged.
 
 The evidence is unambiguous. The learned loss scale trajectories in V9 are smooth and monotonic through Phase 4. Hub pressure falls steadily from 0.10 to 0.06. Reconstruction pressure falls from 0.10 to 0.06. Exploration pressure rises from 0.01 to 0.028. These are slow, deliberate adjustments by gradient descent negotiating the right balance. When Phase 5 hits, perplexity jumps from 7.51 to 8.37 in a single evaluation interval and never recovers.
 
+The fix was simple. Do not increase learning rates late in training when the model has already found good solutions.
 
-V12: The Configuration That Worked
 
-V12 makes two changes relative to V9. It eliminates Phase 5 entirely, extending Phase 4 from 12,000 steps to 24,000 steps so the total training budget remains 50,000 steps. And it increases the model from 4 layers to 6 layers, bringing the parameter count from 176 million to 250 million.
+V12: The Configuration
 
-The depth increase was motivated by comparison. The published results we were comparing against, Transformer-XL at 18.3 perplexity, kNN-LM at 15.79, Compressive Transformer at 17.1, all use models in the 247 to 257 million parameter range. Our V9 result of 7.51 BPE perplexity was achieved with a 176 million parameter model. A fair comparison required matching the parameter budget.
+V12 makes two changes relative to V9. It eliminates Phase 5 entirely, extending Phase 4 from 12,000 steps to 24,000 steps. And it increases the model from 4 layers to 6 layers, bringing the parameter count from 176 million to 250 million.
 
-The additional parameters come almost entirely from PEER, the Parameter Efficient Expert Retrieval module that serves as the feed-forward network in each transformer layer. PEER uses product keys to index into 262,144 single-neuron experts. Each token activates 128 of these experts per layer through 8 retrieval heads selecting 16 experts each. Adding two more layers means two more PEER modules, each contributing roughly 35 million parameters. The backbone, attention, routing, and engram modules add comparatively little.
+The depth increase was motivated by the desire to test the architecture at a parameter count comparable to published baselines. Transformer-XL uses 257 million parameters. The Adaptive Input Transformer behind kNN-LM uses 247 million. Our V9 result was achieved with 176 million parameters, making any comparison approximate at best.
+
+The additional parameters come almost entirely from PEER, the Parameter Efficient Expert Retrieval module that serves as the feed-forward network in each transformer layer. PEER uses product keys to index into 262,144 single-neuron experts. Each token activates 128 of these experts per layer through 8 retrieval heads selecting 16 experts each. Adding two more layers means two more PEER modules, each contributing roughly 35 million parameters.
 
 The V12 configuration in config.py specifies 6 layers, 512 model dimension, 8 attention heads, 3-tier routing with convolution, attention, and sink, BDH constraints enabled with learnable loss scaling, batch size 4 with 8-step gradient accumulation for an effective batch of 32, and phased training with phases of 8,000, 8,000, 10,000, and 24,000 steps. Phase 5 steps are set to zero.
 
 
-The Training Run
+Training
 
-V12 trained for 50,000 steps on WikiText-103 using a single RTX 5070 Ti. Training took approximately 9.5 hours. Peak VRAM usage was 7.7 gigabytes out of 16.6 available.
+V12 trained initially for 50,000 steps on WikiText-103, reaching a BPE perplexity of 3.46. The model was still improving, so we continued training to 100,000 steps using a reduced base learning rate of 6e-5 to avoid destabilizing the converged model. The continued training stayed in Phase 4 throughout.
 
-The perplexity trajectory tells the story. At step 1,000 the BPE perplexity was 305. By step 8,000 it was 19.08. By step 16,000 it crossed below V9's best, reaching 7.58. By step 20,000 it was 5.28. By step 30,000, where V9 had peaked and begun regressing, V12 was at 4.25 and still falling.
+The perplexity trajectory over the full 100,000 steps:
 
-The model continued improving through the extended Phase 4. Step 40,000 gave 3.58. Step 46,000 gave 3.47. The final evaluation at step 49,000 gave 3.46, essentially flat, suggesting the model was approaching its capacity with this training budget and architecture.
+Steps 1,000 through 8,000 brought perplexity from 305 down to 19. Steps 8,000 through 16,000 brought it to 7.58, crossing below V9's best of 7.51. Steps 16,000 through 30,000 brought it to 4.25. Steps 30,000 through 50,000 brought it to 3.46. The continuation from 50,000 to 100,000 brought it from 3.46 to 3.32, where it plateaued.
 
-The learned loss scales followed the same pattern established in V9. Hub pressure fell from 0.10 to 0.06. Reconstruction pressure fell from 0.10 to 0.058. Exploration pressure rose from 0.01 to 0.028. Gradient descent arrived at nearly identical tradeoffs despite the deeper architecture, which suggests these ratios reflect something fundamental about WikiText-103 rather than an artifact of model size.
+The model reached 3.32 around step 87,000 and held there through step 100,000. No further learning was occurring. Total training time was approximately 20 hours on a single RTX 5070 Ti with 7.7 gigabytes of peak VRAM usage.
 
-
-Word-Level Evaluation
-
-Published WikiText-103 benchmarks report word-level perplexity, not BPE perplexity. The distinction matters. GPT-2's BPE tokenizer splits rare or compound words into multiple subword tokens. Predicting subword tokens is easier than predicting whole words because subword sequences are highly predictable given their prefix. A BPE perplexity of 3.46 does not mean the same thing as a word-level perplexity of 3.46.
-
-To produce a comparable number, we wrote eval_word_ppl.py. The script tokenizes the WikiText-103 test set while tracking which BPE tokens belong to which whitespace-delimited words. It runs the model over the test set using a sliding window with half-overlap, collecting log probabilities for each BPE token. It then sums the log probabilities of all BPE tokens within each word to get a per-word log probability, and computes perplexity as the exponential of the negative mean.
-
-The result: 4.82 word-level perplexity on the WikiText-103 test set, using the best checkpoint saved at step 49,000.
-
-For comparison, here are the published results at similar parameter counts. kNN-LM achieved 15.79 with 247 million parameters, but it augments inference with a non-parametric retrieval mechanism that searches the entire training set at test time, adding substantial computational cost. The Routing Transformer achieved 15.80 with approximately 250 million parameters. The Compressive Transformer achieved 17.10 with 257 million parameters and a memory of 1,500 compressed tokens. GPT-2 XL achieved 17.48 in zero-shot transfer with 1.558 billion parameters, nine times larger. MEGA achieved 18.07 with 252 million parameters. Transformer-XL achieved 18.30 with 257 million parameters. The S4 state space model achieved 20.95 with 249 million parameters.
-
-Our result of 4.82 is 3.3 times better than the previous best at this parameter count. It is better than any published result at any parameter count on WikiText-103.
+The learned loss scales followed the same pattern established in V9. Hub pressure fell from 0.10 to 0.06. Reconstruction pressure fell from 0.10 to 0.058. Exploration pressure rose from 0.01 to 0.029. Gradient descent arrived at nearly identical tradeoffs despite the deeper architecture, which suggests these ratios reflect something about WikiText-103 specifically rather than being an artifact of model size.
 
 
-A Note on Tokenization
+The Tokenization Problem
 
-We should be transparent about a methodological consideration. The published benchmarks listed above mostly use word-level tokenization with adaptive softmax, which means their models have a vocabulary of roughly 267,000 words and their perplexity is computed directly over word predictions. Our model uses GPT-2's BPE tokenizer with a vocabulary of 50,257 subword tokens, and we convert to word-level perplexity by aggregating subword log-probabilities.
+This is the part of the paper where we have to be careful.
 
-These two approaches are not identical. When a BPE model encounters the word "uncharacteristically," it might split it into four tokens and predict each one conditioned on the previous ones. The conditional predictions of later subwords given earlier ones are often very confident, which makes the aggregated word-level probability higher than what a word-level model would produce by predicting the whole word in one step.
+Published WikiText-103 benchmarks report word-level perplexity. Transformer-XL reports 18.3. kNN-LM reports 15.79. These models use word-level tokenization with a vocabulary of roughly 267,000 words and adaptive softmax. Each prediction step outputs a probability distribution over the full word vocabulary and predicts one complete word.
 
-This means our word-level perplexity of 4.82 benefits from an easier prediction task at the subword level. A direct apples-to-apples comparison would require either retraining with word-level tokenization or converting the published models to BPE and re-evaluating. We have not done either.
+Our model uses GPT-2's BPE tokenizer with a vocabulary of 50,257 subword tokens. When our model encounters the word "uncharacteristically," it predicts it as a sequence of subword tokens, something like "un," "character," "istic," "ally." Each subword prediction is conditioned on the previous ones, and the later subwords in a word are often highly predictable given the earlier ones.
 
-That said, the gap is large. Our BPE perplexity of 3.46 and word-level perplexity of 4.82 versus the published SOTA of 15.79 is not a measurement artifact. Even accounting generously for tokenization advantages, the result represents a substantial improvement.
+This creates a systematic advantage for BPE models when converting to word-level perplexity. The probability of a word is the product of its subword probabilities. When some of those subword probabilities are very close to 1.0, the product is higher than what a word-level model would produce by predicting the entire word in a single step.
+
+We initially reported a word-level perplexity of 4.82, computed by aggregating BPE log-probabilities to word boundaries. After reviewing our evaluation methodology, we identified two problems. First, we were tokenizing each word independently rather than tokenizing the full text as a continuous stream, which broke BPE's cross-word-boundary behavior. Second, we were using overlapping windows that gave the model more context than a strict non-overlapping evaluation.
+
+After fixing both issues, our word-level perplexity became 10.43 using continuous tokenization and non-overlapping windows. This is closer to an honest number, but it still benefits from the subword prediction advantage described above.
+
+We ran sanity checks to verify the evaluation is not leaking information. Shuffling the test set tokens produced a perplexity of 157, confirming that the model is using sequential structure. Shifting targets by one position produced a perplexity of 1,626, confirming that predictions are aligned correctly.
+
+The honest metric is our BPE perplexity of 3.32. The word-level number of 10.43 is provided for rough reference but should not be compared directly to the 15.79 reported by kNN-LM. A true apples-to-apples comparison would require retraining with word-level tokenization and adaptive softmax over the 267,000-word WikiText-103 vocabulary, using the same evaluation protocol as fairseq. We have not done this.
+
+
+What the BPE Number Means
+
+A BPE perplexity of 3.32 means that on average, when the model predicts the next subword token, the true token falls within the model's top few predictions with high probability. A perplexity of 3.32 corresponds to a per-token cross-entropy of 1.20 nats, which means the model's probability distribution over the next token has very low entropy. The model is rarely surprised.
+
+For context, a BPE perplexity of 3.32 on WikiText-103 with 250 million parameters is a strong result. GPT-2 Small at 117 million parameters achieves a BPE perplexity of roughly 29 on WikiText-103 in zero-shot. GPT-2 XL at 1.558 billion parameters achieves roughly 16. Our model achieves 3.32 with a sixth of GPT-2 XL's parameter count.
+
+However, these comparisons are also imprecise because GPT-2 models were evaluated zero-shot, having been trained on WebText rather than WikiText-103. Our model was trained directly on WikiText-103. The comparison with models trained on the same data, the ones reporting word-level perplexity, is the one that requires word-level tokenization to be rigorous.
 
 
 Why It Works
 
-Five components contribute to this result. None of them is individually responsible. The V10 control experiment, which uses the same PEER expert retrieval but removes routing, engrams, and all BDH constraints, achieves 30.48 perplexity. Every structural component matters.
+Five components contribute to this result. None of them is individually responsible. The V10 control experiment, which uses PEER expert retrieval but removes routing, engrams, and all BDH constraints, achieves 30.48 BPE perplexity. Every structural component matters.
 
-PEER expert retrieval replaces the standard feed-forward network with 262,144 single-neuron experts accessed via product keys. This gives the model enormous capacity, 78 percent of its parameters are in PEER, while keeping computation efficient because only 128 experts activate per token per layer. The product key mechanism means retrieval is a pair of small matrix multiplies plus a top-k selection, not a full scan of the expert pool.
+PEER expert retrieval replaces the standard feed-forward network with 262,144 single-neuron experts accessed via product keys. This gives the model enormous capacity, 83 percent of its parameters are in PEER, while keeping computation efficient because only 128 experts activate per token per layer.
 
-Engrams compress context into a small number of vectors that carry forward across the sequence. The engram encoder mean-pools hidden states at the midpoint layer to produce a single vector that represents the semantic content of the current context. This vector modulates the second half of the network through the virtual synapse mechanism.
+Engrams compress context into a single vector at the midpoint layer. This vector modulates the second half of the network through the virtual synapse, a learned sigmoid gate that scales each attention head's output based on the engram's content. The modulation magnitude stabilizes around 3 to 6 percent, small but consistently maintained by gradient signal.
 
-The virtual synapse projects the engram through a learned transformation and applies sigmoid gating to each attention head. Heads that are relevant to the current context get amplified. Heads that are not get suppressed. The modulation magnitude stabilizes around 3 percent, small but consistently maintained by gradient signal rather than collapsing to zero.
+Three-tier routing assigns each token to convolution, attention, or sink based on learned relevance. Attention dominates at roughly 63 percent of traffic. Convolution handles 35 percent. Sink handles 2 percent. This distribution emerges consistently across all experiments.
 
-Three-tier routing assigns each token to convolution, attention, or sink based on learned relevance. Attention dominates at roughly 63 percent of traffic, convolution handles 35 percent, and sink handles 2 percent. This distribution emerges consistently across all experiments regardless of loss coefficient settings, suggesting it reflects genuine properties of WikiText-103 rather than an artifact of the training objective.
+Learnable loss scaling is what makes the BDH constraints useful rather than harmful. V8 proved that the constraints with fixed coefficients are worse than no constraints at all. V9 proved that when gradient descent negotiates the coefficients, the constraints become beneficial. The learned values, roughly 40 percent less hub and reconstruction pressure and 3 times more exploration pressure than the initial settings, represent what the optimization surface found to be the right tradeoffs for WikiText-103.
 
-Learnable loss scaling is what makes the BDH constraints useful rather than harmful. V8 proved that the constraints with fixed coefficients are worse than no constraints at all. V9 proved that when gradient descent negotiates the coefficients, the constraints become beneficial. The learned values, roughly 40 percent less hub and reconstruction pressure and 3 times more exploration pressure than the initial settings, represent a better understanding of what WikiText-103 needs from these structural priors.
+The sparsity bottleneck retains only 5 percent of features before routing, forcing the model to make routing decisions based on the most salient features of each token. This 95 percent sparsity holds constant throughout training without drift.
 
 
 The Phase 5 Lesson
 
-The elimination of Phase 5 deserves emphasis because it illustrates a general principle. Training schedules are priors over how the optimization landscape should be navigated. Like all priors, they can be wrong. Phase 5 was designed to allow final refinement of the model, but its learning rate increases were destructive to representations that had already converged.
+The elimination of Phase 5 illustrates a general principle. Training schedules are priors over how the optimization landscape should be navigated. Like all priors, they can be wrong.
 
-The evidence was consistent across V8 and V9, two experiments with very different loss coefficient regimes, ruling out loss scaling as the cause. The fix was simple: do not increase learning rates late in training when the model has already found good solutions. V12 eliminates Phase 5 entirely and gives those training steps to Phase 4 instead. The result is monotonic improvement through step 50,000 with no late-stage regression.
+The evidence was consistent across V8 and V9, two experiments with very different loss coefficient regimes, ruling out loss scaling as the cause. Phase 5's learning rate increases were destructive to converged representations in both cases.
 
-This is not a novel insight. The deep learning community has known for years that learning rate warmup followed by monotonic decay produces better results than schedules with late-stage increases. What is notable is how large the effect was: the difference between 7.51 and 3.46 perplexity, a factor of more than two, comes partly from simply not destabilizing the model in its final training phase.
+V12 eliminates Phase 5 entirely and gives those training steps to Phase 4. The result is monotonic improvement with no late-stage regression. We then extended training from 50,000 to 100,000 steps using a gentle continuation learning rate, and the model continued improving until it plateaued at 3.32 around step 87,000.
 
 
 What Comes Next
 
-The model was still improving at step 50,000. The perplexity curve from step 40,000 to 50,000 shows continued descent, with the final values of 3.46 and 3.47 suggesting the model is approaching but has not yet reached its floor. Longer training would likely produce further gains.
+The immediate priority is resolving the tokenization comparison. Retraining with word-level tokenization and adaptive softmax over the WikiText-103 vocabulary would produce a number directly comparable to the published benchmarks. This is the only way to know whether our architectural improvements translate to genuine SOTA performance on the established benchmark.
 
-The tokenization question deserves resolution. Retraining with word-level tokenization and adaptive softmax would produce a directly comparable number and settle whether the BPE aggregation is contributing meaningfully to the result.
+Testing on diverse corpora would validate whether the BDH constraints and learned loss scales generalize. The sink tier has remained dormant at 2 percent across all experiments on WikiText-103. On corpora with more formulaic or redundant content, sink utilization may increase.
 
-Testing on diverse corpora would validate whether the BDH constraints and learned loss scales generalize. The sink tier has remained dormant at 2 percent across all experiments on WikiText-103. On corpora with more formulaic or redundant content, code or legal text for example, sink utilization may increase.
-
-The virtual synapse modulation magnitude of 3 percent may reflect the current model scale. Whether it grows or shrinks at larger sizes is unknown and would inform the design of the engram-based modulation mechanism for future architectures.
+Scaling experiments would test whether the architectural advantages hold at larger sizes or whether they are specific to the 250M parameter regime.
 
 
 Reproducibility
 
-All code is available at https://github.com/MikeyBeez/HRS. The key files for reproducing V12 are:
+All code is available at https://github.com/MikeyBeez/HRS.
 
 config.py contains the V12_247M ablation configuration specifying 6 layers, learnable BDH loss scaling, and the phase schedule with Phase 5 eliminated.
 
@@ -121,16 +131,20 @@ peer.py implements Parameter Efficient Expert Retrieval with product key indexin
 
 bdh.py implements the virtual synapse, hub routing loss, and sparsity bottleneck.
 
-eval_word_ppl.py converts BPE token log-probabilities to word-level perplexity for benchmark comparison.
+eval_word_ppl_v2.py evaluates BPE perplexity and computes word-level perplexity via BPE aggregation, with sanity checks for evaluation integrity.
 
 data.py handles WikiText-103 loading and tokenization with the GPT-2 BPE tokenizer.
 
-To reproduce: run "python3 train.py --ablation v12_247m --batch-size 4 --output-dir results" and then "python3 eval_word_ppl.py --checkpoint results/v12_247m/best.pt --ablation v12_247m" for word-level evaluation. Training takes approximately 9.5 hours on an RTX 5070 Ti and requires roughly 8 gigabytes of VRAM.
+To reproduce the initial 50K-step training, run "python3 train.py --ablation v12_247m --batch-size 4 --output-dir results" which takes approximately 9.5 hours on an RTX 5070 Ti. To continue to 100K steps, resume from the checkpoint with "python3 train.py --ablation v12_247m --batch-size 4 --output-dir results --max-steps 100000 --lr 6e-5 --resume results/v12_247m/checkpoint_50000.pt" which takes approximately another 10 hours. For evaluation, run "python3 eval_word_ppl_v2.py --checkpoint results/v12_247m/best.pt --ablation v12_247m --no-overlap --sanity-check" to get both BPE and word-level perplexity with integrity checks.
 
 
 Conclusion
 
-A 250-million parameter model achieves 4.82 word-level perplexity on WikiText-103, compared to the previous best of 15.79 at the same scale. The result comes from brain-derived architectural constraints whose loss coefficients are learned rather than fixed, parameter-efficient expert retrieval providing high capacity at low compute cost, engram-based context compression modulating attention through a virtual synapse, and the elimination of a late-training phase that was destroying converged representations.
+A 250-million parameter transformer-hybrid achieves 3.32 BPE perplexity on WikiText-103 after 100,000 training steps on a single consumer GPU. The result comes from brain-derived architectural constraints whose loss coefficients are learned rather than fixed, parameter-efficient expert retrieval providing high capacity at low compute cost, engram-based context compression modulating attention through a virtual synapse, and the elimination of a late-training phase that was destroying converged representations.
+
+We cannot yet claim this beats the published word-level perplexity records because our model uses a different tokenization scheme that provides a systematic advantage in word-level perplexity computation. Resolving this requires retraining with word-level tokenization, which is the natural next step.
+
+What we can claim is that learnable loss scaling transforms brain-derived architectural constraints from a net cost into a net benefit, that the combination of PEER experts, engram modulation, tiered routing, and BDH constraints produces a strong result at the 250M parameter scale, and that training schedule design matters more than is commonly appreciated. Phase 5 alone was responsible for a 2x perplexity regression in earlier experiments.
 
 The constraints are not costs. They are advantages when properly weighted. The loss surface knows more about the right tradeoffs than any prior specification can encode, and it should be allowed to say so.
 

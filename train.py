@@ -67,11 +67,11 @@ def get_phase(step: int, cfg: ExperimentConfig) -> int:
     if step < cumulative:
         return 4
 
-    if not cfg.is_v2():
-        # v1 has phase 5
+    if not cfg.is_v2() and pc.phase5_steps > 0:
+        # v1 has phase 5 only if configured with nonzero steps
         return 5
 
-    return 4  # v2 caps at phase 4
+    return 4  # stay in phase 4 if P5 disabled or v2
 
 
 def get_phase_lr_multipliers(phase: int, cfg: ExperimentConfig) -> list:
