@@ -140,6 +140,8 @@ class CombinedHRSLoss(nn.Module):
         recon_weight: float = 0.1,
         gate_values: torch.Tensor = None,
         gate_entropy_weight: float = 0.01,
+        v7_router_weights: torch.Tensor = None,
+        v7_router_entropy_weight: float = 0.0,
     ) -> dict:
         ce = self.ce_loss(logits, targets)
 
@@ -181,6 +183,13 @@ class CombinedHRSLoss(nn.Module):
             gate_ent = -(g * g.log() + (1.0 - g) * (1.0 - g).log()).mean()
             total = total + gate_entropy_weight * gate_ent
             result["gate_entropy_loss"] = gate_ent.detach()
+
+        # v7 router entropy regularization — encourages exploration of memory source
+        if v7_router_weights is not None and v7_router_entropy_weight > 0:
+            rw = v7_router_weights.clamp(min=1e-10)
+            router_ent = -(rw * rw.log()).sum(-1).mean()
+            total = total - v7_router_entropy_weight * router_ent  # negative: maximize entropy
+            result["v7_router_entropy"] = router_ent.detach()
 
         result["loss"] = total
         return result

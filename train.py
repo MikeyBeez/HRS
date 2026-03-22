@@ -240,6 +240,9 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
     with open(run_dir / "config.json", "w") as f:
         json.dump(config_dict, f, indent=2)
 
+    # Best model tracking
+    best_val_ppl = float("inf")
+
     # Resume from checkpoint
     start_step = 0
     log_history = []
@@ -627,6 +630,20 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 f.write(json.dumps(metrics, default=str) + "\n")
 
             val_loss_history.append(metrics["val_ppl"])
+
+            # Save best model checkpoint
+            if metrics["val_ppl"] < best_val_ppl:
+                best_val_ppl = metrics["val_ppl"]
+                best_ckpt = {
+                    "step": step,
+                    "model_state_dict": model.state_dict(),
+                    "optimizer_state_dict": optimizer.state_dict(),
+                    "config": cfg,
+                    "phase": current_phase,
+                    "val_ppl": best_val_ppl,
+                }
+                torch.save(best_ckpt, run_dir / "best.pt")
+                print(f"  ** New best val_ppl: {best_val_ppl:.2f} (saved best.pt)")
 
             print(f"  val_ppl: {metrics.get('val_ppl', 'N/A'):.1f}")
             print(f"  eff_rank_mean: {metrics.get('effective_rank_mean', 'N/A'):.1f}")

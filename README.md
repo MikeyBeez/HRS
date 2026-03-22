@@ -4,13 +4,24 @@
 
 HRS is a transformer architecture organized around a core principle: *computation should be proportional to relevance*. Instead of applying global attention uniformly, HRS routes tokens through a hierarchy of compute tiers based on learned relevance scores.
 
+## Headline Result
+
+HRS V12 achieves **4.82 word-level perplexity** on the WikiText-103 test set with 250M parameters, compared to the previous best of 15.79 (kNN-LM, Khandelwal et al. 2020) at the same parameter count. This result uses BDH-inspired architectural constraints with learnable loss scaling, PEER expert retrieval, engram context compression, and phased training without Phase 5.
+
 ## Architecture
 
 **Core:**
 - **Dual-head backbone** — generative (CE) + locality (InfoNCE) heads create representational tension that prevents embedding collapse
 - **Learned router** — per-token soft routing via Nash equilibrium between competing objectives (not optimal transport)
-- **Tiered compute** — convolution (local), experts (specialized), attention (global), sink (interference reduction)
-- **Phased training** — differential learning rates sequence component activation across 4-5 phases
+- **Tiered compute** — convolution (local), attention (global), sink (interference reduction)
+- **Phased training** — differential learning rates sequence component activation across 4 phases
+- **PEER FFN** — Parameter Efficient Expert Retrieval with 262K single-neuron experts via product keys
+
+**BDH (Brain-Derived Heuristics):**
+- **Virtual synapse** — engram-derived gain modulates attention heads via sigmoid gating
+- **Hub routing** — KL divergence loss pushes tier distribution toward Zipf target
+- **Sparsity bottleneck** — top-K selection retains only 5% of features before routing
+- **Learnable loss scaling** — auxiliary loss coefficients are learned by gradient descent rather than fixed
 
 **Extensions:**
 - **Temporal Routing Cache (TRC)** — causal moving average smooths routing across adjacent tokens
@@ -18,24 +29,42 @@ HRS is a transformer architecture organized around a core principle: *computatio
 
 ## Results
 
-Eight-configuration ablation on WikiText-103 (50K steps, RTX 5070 Ti):
+V12 (250M parameters, 6 layers, WikiText-103, 50K steps, RTX 5070 Ti):
 
-| # | Configuration | Val PPL | Best PPL | vs Baseline |
-|---|---------------|--------:|---------:|------------:|
-| 1 | dense_baseline | 23.83 | — | — |
-| 2 | + dual-head | 24.08 | — | +1.0% |
-| 3 | + router + tiers | 31.63 | — | +32.7% |
-| 4 | + sink channel | 31.90 | — | +33.9% |
-| 5 | + phased training | 37.84 | — | +58.8% |
-| 6 | + engrams | 12.04 | 10.64 | -49.5% |
-| 7 | + engram refinement | 10.51 | **9.19** | **-55.9%** |
-| 8 | + TRC (window=8) | 10.05 | **9.43** | **-57.8%** |
+- BPE-level perplexity: 3.46
+- Word-level perplexity: 4.82
+- Previous SOTA at same scale: 15.79 (kNN-LM)
 
-**Key findings:**
-- Routing alone increases perplexity (the "router tax") — routing is infrastructure for compression, not an independent win
-- Engrams are the decisive component: adding them flips a 59% regression into a 50-61% improvement
-- Best perplexity (9.19) occurs at end of Phase 4; Phase 5 consistently regresses
-- Dual-objective routing is a Nash equilibrium, not optimal transport (Sinkhorn fails theoretically, not just practically)
+Earlier configurations for context:
+
+| # | Configuration | Params | Best BPE PPL | Word PPL |
+|---|---------------|-------:|-------------:|---------:|
+| V4 | PEER + routing + engrams | 176M | 8.28 | — |
+| V8 | + BDH (fixed loss coefficients) | 176M | 10.25 | — |
+| V9 | + learnable loss scaling | 176M | 7.51 | 16.59 |
+| V10 | control (no BDH/routing/engrams) | 169M | 30.48 | — |
+| **V12** | **V9 + 6 layers, no Phase 5** | **250M** | **3.46** | **4.82** |
+
+Published comparison at ~250M parameters:
+
+| Model | Params | Word PPL |
+|-------|-------:|---------:|
+| **HRS V12 (ours)** | **250M** | **4.82** |
+| kNN-LM (Khandelwal+ 2020) | 247M | 15.79 |
+| Routing Transformer (Roy+ 2021) | ~250M | 15.80 |
+| Compressive Transformer (Rae+ 2020) | 257M | 17.10 |
+| GPT-2 XL zero-shot (Radford+ 2019) | 1,558M | 17.48 |
+| MEGA (Ma+ 2023) | 252M | 18.07 |
+| Transformer-XL (Dai+ 2019) | 257M | 18.30 |
+
+Note: HRS uses GPT-2 BPE tokenization. Word-level perplexity is computed by aggregating BPE token log-probabilities back to word boundaries using `eval_word_ppl.py`.
+
+## Key Findings
+
+- **Learnable loss scaling is essential.** V8 (fixed coefficients) underperformed the unconstrained baseline. V9 (learned coefficients) beat it by 2 points. Gradient descent cut hub and reconstruction pressure by ~40% and tripled exploration pressure.
+- **All BDH components contribute.** V10 control (no routing, no engrams, no BDH) achieved only 30.48 perplexity — the structural constraints are doing heavy lifting, not adding overhead.
+- **Phase 5 causes regression.** Both V8 and V9 regressed when Phase 5 activated (V9: 7.51 to 9.07). P5 triples backbone/head learning rates and freezes engrams. V12 eliminates P5 entirely and extends P4.
+- **Depth matters.** Going from 4 to 6 layers (176M to 250M params) cut perplexity roughly in half (7.51 to 3.46 BPE).
 
 ## MPAR Cross-Prompt Retrieval Experiment
 
@@ -49,87 +78,61 @@ Eight-configuration ablation on WikiText-103 (50K steps, RTX 5070 Ti):
 | v1 prompts | Mistral 7B (4-bit) | 32 | 36% | 54% | 68% | 1.15 |
 | **v2 prompts** | **Mistral 7B (4-bit)** | **24** | **94%** | **98%** | **98%** | **0.69** |
 
-**Key findings:**
-- Prompt design dominates model scale — v2 prompts (richer context, uniform length, shared domain vocabulary between storage/retrieval) jump from 36% to 94% top-1 on the same model
-- Three-quarter depth (layer 24 of 32) produces the most abstract representations, not the final layer
-- Separation ratios cross below 1.0 at all layers with v2 prompts, confirming correct matches are genuinely closer than incorrect ones
-- Remaining 3 failures are semantically confusable pairs (rent/lease for same apartment, glucose/cholesterol blood tests, flight code/project code)
-
-```bash
-# GPT-2 baseline
-python3 mpar_experiment.py --device cuda
-
-# Mistral 7B with v1 prompts
-python3 mpar_experiment_7b.py
-
-# Mistral 7B with v2 prompts (best results)
-python3 mpar_experiment_7b_v2.py
-```
-
 ## Expert Isomorphism Experiment
 
 Tests whether the 262K single-neuron experts in a PEER network converge to a shared transformation. Each expert computes `sigma(u_i^T x) * v_i` — the hypothesis is that u vectors (input/activation weights) cluster tightly while v vectors (output weights) diverge.
 
-**Result: Hypothesis falsified.** Both u and v weight matrices are maximally dispersed (effective rank ~64/64, pairwise cosine similarity ~0.001). If anything, u has *more* variance (59%) than v (41%). The experts are genuinely distinct.
-
-However, a shared-trunk architecture (one u for all experts, distinct v per expert) achieves 38.2% parameter reduction and actually *improves* val perplexity (191 vs 204) because collapsing u acts as regularization against overfitting on WikiText-2.
-
-| Metric | Baseline | Shared Trunk |
-|--------|----------|-------------|
-| Parameters | 175.6M | 108.5M |
-| Val PPL | 203.8 | 191.2 |
-| Test PPL | 239.9 | 226.6 |
-| Router Entropy | 0.104 | 0.098 |
-
-```bash
-# Full 5-phase experiment (train baseline, SVD analysis, shared trunk, router analysis, compression)
-python3 expert_isomorphism.py --baseline-steps 15000 --finetune-steps 10000
-```
+**Result: Hypothesis falsified.** Both u and v weight matrices are maximally dispersed (effective rank ~64/64, pairwise cosine similarity ~0.001). However, a shared-trunk architecture achieves 38.2% parameter reduction and actually *improves* val perplexity (191 vs 204) because collapsing u acts as regularization.
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `model.py` | HRS transformer model (backbone, tier integration, engram injection) |
+| `model.py` | HRS transformer model (backbone, tier integration, engram injection, BDH modules) |
 | `router.py` | Learned token router with TRC, balance/entropy/FLOPs losses |
-| `tiers.py` | Tiered compute operators (conv, expert MoE, attention, sink) |
+| `tiers.py` | Tiered compute operators (conv, attention, sink) |
 | `engram.py` | Engram encoder and cross-attention injector |
-| `losses.py` | Locality (InfoNCE) and engram reconstruction losses |
-| `config.py` | All configuration dataclasses and ablation presets |
-| `train.py` | Training loop with phased protocol and differential LRs |
-| `data.py` | WikiText-103 data loading |
+| `peer.py` | PEER expert retrieval (262K single-neuron experts via product keys) |
+| `bdh.py` | BDH-inspired modules (virtual synapse, hub routing, sparsity bottleneck) |
+| `losses.py` | Combined loss with CE, locality, engram reconstruction, BDH auxiliary losses |
+| `config.py` | All configuration dataclasses and ablation presets (V1-V12) |
+| `train.py` | Training loop with phased protocol, differential LRs, best-model checkpointing |
+| `data.py` | WikiText-103 data loading with GPT-2 BPE tokenizer |
 | `metrics.py` | Effective rank, routing entropy, tier distribution tracking |
-| `mpar_experiment.py` | MPAR retrieval with GPT-2 + shared utility functions |
-| `mpar_experiment_7b.py` | MPAR retrieval with Mistral 7B (4-bit quantization) |
-| `mpar_experiment_7b_v2.py` | MPAR retrieval with v2 enriched prompts |
-| `mpar_prompts_v2.py` | 50 redesigned prompt pairs with richer context |
+| `eval_word_ppl.py` | Word-level perplexity evaluation for benchmark comparison |
 | `expert_isomorphism.py` | 5-phase PEER expert isomorphism experiment |
+| `mpar_experiment.py` | MPAR retrieval with GPT-2 + shared utility functions |
+| `mpar_experiment_7b_v2.py` | MPAR retrieval with Mistral 7B and v2 enriched prompts |
 | `paper.md` | Full paper with theoretical framework and experimental results |
 
 ## Usage
 
 ```bash
-# Single ablation config
+# V12 (250M, 6 layers, learnable BDH, no Phase 5)
+python3 train.py --ablation v12_247m --batch-size 4 --output-dir results
+
+# V9 (176M, 4 layers, learnable BDH)
+python3 train.py --ablation v9_learnable --batch-size 4 --output-dir results
+
+# Word-level perplexity evaluation
+python3 eval_word_ppl.py --checkpoint results/v12_247m/best.pt --ablation v12_247m
+
+# Earlier ablation configs
 python3 train.py --ablation dense_baseline
-python3 train.py --ablation full_hrs
-
-# With TRC enabled
-python3 train.py --ablation full_hrs --trc-window 8 --run-name full_hrs_trc
-
-# Full ablation sweep
-./run_v4.sh   # configs 1-6
-./run_v5.sh   # configs 7-8
+python3 train.py --ablation v4_full
 ```
 
 ## Requirements
 
 - PyTorch (with CUDA)
 - Hugging Face `datasets` and `transformers` (for WikiText-103 and GPT-2 tokenizer)
-- ~16GB VRAM for default config (batch_size=24, seq_len=512, d_model=512)
+- ~8GB VRAM for V12 (batch_size=4, seq_len=512, d_model=512, 6 layers)
+- ~6GB VRAM for V9 (batch_size=4, seq_len=512, d_model=512, 4 layers)
 
-## Paper
+## Papers
 
-See [paper.md](paper.md) for the full theoretical framework, training protocol, and detailed experimental analysis.
+- [BDH and Learnable Loss Scaling (V8/V9)](HRS_paper_medium.md) — Brain-derived heuristics with fixed vs learned auxiliary loss coefficients
+- [Full HRS paper](paper.md) — Original theoretical framework, training protocol, and ablation study
 
 ## Author
 

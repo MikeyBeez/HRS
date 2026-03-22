@@ -46,6 +46,12 @@ class AblationConfig(Enum):
     # --- v10 configs ---
     V10_CONTROL = "v10_control"                # dense baseline + PEER FFN + learnable placeholder losses (no BDH/routing)
 
+    # --- v11 configs ---
+    V11_NO_P5 = "v11_no_p5"                   # v9 learnable loss scaling, skip P5 (extend P4 to 24K steps)
+
+    # --- v12 configs ---
+    V12_247M = "v12_247m"                      # v9 + 6 layers (249.9M params), skip P5, best-model checkpoint
+
     # --- v2 configs ---
     V2_ATTN_CONV = "v2_attn_conv"              # Attention->Conv backbone, standard MLP, no dual-head
     V2_ATTN_CONV_DUAL = "v2_attn_conv_dual"    # + dual-head
@@ -413,6 +419,50 @@ class ExperimentConfig:
             cfg.phased.phase4_steps = 12000
             cfg.phased.phase5_steps = 0
 
+        # === v11 configs ===
+
+        elif ablation == AblationConfig.V11_NO_P5:
+            # v9 learnable loss scaling, but skip P5 entirely
+            # P5 causes regression by tripling backbone/head LRs and freezing engrams
+            # Extend P4 from 12K to 24K steps to use the budget productively
+            cfg.locality.enabled = True
+            cfg.engram.enabled = True
+            cfg.peer.enabled = True
+            cfg.router.n_tiers = 3
+            cfg.bdh.enabled = True
+            cfg.bdh.learnable_loss_scaling = True
+            cfg.training.batch_size = 4
+            cfg.training.grad_accum_steps = 8  # effective batch = 32
+            cfg.training.max_steps = 50000
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 24000  # extended: absorbs P5's 12K steps
+            cfg.phased.phase5_steps = 0      # skip P5
+
+        # === v12 configs ===
+
+        elif ablation == AblationConfig.V12_247M:
+            # v9 learnable loss scaling, 6 layers (~250M params), skip P5
+            # Matches parameter count of Transformer-XL / kNN-LM for fair comparison
+            cfg.model.n_layers = 6
+            cfg.locality.enabled = True
+            cfg.engram.enabled = True
+            cfg.peer.enabled = True
+            cfg.router.n_tiers = 3
+            cfg.bdh.enabled = True
+            cfg.bdh.learnable_loss_scaling = True
+            cfg.training.batch_size = 4
+            cfg.training.grad_accum_steps = 8  # effective batch = 32
+            cfg.training.max_steps = 50000
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 24000  # extended P4, no P5
+            cfg.phased.phase5_steps = 0
+
         # === v5 configs ===
 
         elif ablation == AblationConfig.V5_REPLACE:
@@ -515,6 +565,7 @@ class ExperimentConfig:
             "full_core", "full_hrs", "full_hrs_refined",
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
+            "v11_no_p5", "v12_247m",
         )
 
     def uses_sink(self) -> bool:
@@ -523,6 +574,7 @@ class ExperimentConfig:
             "full_core", "full_hrs", "full_hrs_refined",
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
+            "v11_no_p5", "v12_247m",
         )
 
     def uses_engrams(self) -> bool:
@@ -530,6 +582,7 @@ class ExperimentConfig:
             "full_hrs", "full_hrs_refined", "v2_full",
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
+            "v11_no_p5", "v12_247m",
         )
 
     def uses_peer(self) -> bool:
@@ -537,7 +590,7 @@ class ExperimentConfig:
             "v2_attn_conv_peer", "v2_full",
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
-            "v10_control",
+            "v10_control", "v11_no_p5", "v12_247m",
         )
 
     def uses_memory_mlp(self) -> bool:
@@ -555,17 +608,17 @@ class ExperimentConfig:
             "full_core", "full_hrs", "full_hrs_refined", "v2_full",
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
-            "v10_control",
+            "v10_control", "v11_no_p5", "v12_247m",
         )
 
     def uses_bdh(self) -> bool:
-        """v8/v9: BDH-inspired upgrades."""
-        return self.bdh.enabled and self.training.ablation.value in ("v8_bdh", "v9_learnable")
+        """v8/v9/v11/v12: BDH-inspired upgrades."""
+        return self.bdh.enabled and self.training.ablation.value in ("v8_bdh", "v9_learnable", "v11_no_p5", "v12_247m")
 
     def uses_learnable_loss_scaling(self) -> bool:
-        """v9/v10: learnable auxiliary loss scales."""
+        """v9/v10/v11: learnable auxiliary loss scales."""
         return self.bdh.learnable_loss_scaling and self.training.ablation.value in (
-            "v9_learnable", "v10_control",
+            "v9_learnable", "v10_control", "v11_no_p5", "v12_247m",
         )
 
     def uses_v10_control(self) -> bool:
