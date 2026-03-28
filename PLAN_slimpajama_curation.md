@@ -1,8 +1,8 @@
-# Plan: Entropy-Based SlimPajama Curation
+# Plan: Entropy-Based SlimPajama Curation + Topic Labeling
 
 ## Goal
 
-Clean SlimPajama (627B tokens) using Llama 7B as a quality scorer. The hypothesis: examples that produce high Shannon entropy under Llama 7B are noisy, confusing, or poorly written. These should be rewritten by Llama or removed. The result is a higher-quality training set for scaling PEER to 2B parameters.
+Clean SlimPajama (627B tokens) using Llama 7B as a quality scorer AND topic labeler in a single pass. The hypothesis: examples that produce high Shannon entropy under Llama 7B are noisy, confusing, or poorly written. These should be rewritten by Llama or removed. Simultaneously, Llama generates a topic label for each document, which becomes the training signal for a topic classification head in the PEER 2B model. The result is a higher-quality, topic-annotated training set.
 
 ## Why entropy?
 
@@ -32,12 +32,35 @@ Low-entropy examples are text that a strong model finds predictable — well-str
 - Use the distribution to set thresholds, then apply thresholds to filter without scoring everything
 - Or: score the first N tokens of each example (e.g., 512 tokens) as a proxy for the whole document
 
+### Phase 1b: Topic labeling (same Llama pass)
+
+During the same forward pass that computes entropy, generate a topic label for each document:
+
+1. After scoring entropy, prompt Llama 7B with:
+   ```
+   What is the primary topic of this text? Respond with a single short phrase.
+
+   Text: [first 512 tokens]
+
+   Topic:
+   ```
+2. Record the raw topic string alongside the entropy score
+3. This adds ~20-30 tokens of generation per document to the scoring pass — minimal overhead
+
 ### Phase 2: Analyze
 
 1. Plot entropy distributions by source domain (CommonCrawl, Wikipedia, GitHub, Books, ArXiv, StackExchange)
 2. Identify the entropy threshold that separates clean from noisy text
 3. Manually inspect examples at different entropy levels to validate the threshold
 4. Expected: Wikipedia and Books will have low entropy, CommonCrawl will have a long high-entropy tail
+
+### Phase 2b: Build topic taxonomy
+
+1. Embed all raw topic labels using a sentence embedding model (e.g., all-MiniLM-L6-v2, runs on CPU)
+2. Cluster embeddings with k-means into ~500-1000 canonical topics
+3. Map each document to its canonical topic ID
+4. Manually inspect cluster centers to verify they make sense (e.g., "naval engineering", "molecular biology", "JavaScript frameworks")
+5. Save: (document_id, entropy, raw_topic, canonical_topic_id)
 
 ### Phase 3: Clean
 
@@ -52,9 +75,10 @@ For examples above the entropy threshold, two strategies:
 ### Phase 4: Assemble
 
 1. Combine cleaned/filtered examples into a new dataset
-2. Maintain the source domain balance from SlimPajama (or intentionally rebalance — e.g., upweight Wikipedia and StackExchange, downweight CommonCrawl)
-3. Target: 100B tokens for the first PEER 2B training run
-4. Save as tokenized tensors (GPT-2 BPE) for direct use by train.py
+2. Each example carries its canonical_topic_id as metadata
+3. Maintain the source domain balance from SlimPajama (or intentionally rebalance — e.g., upweight Wikipedia and StackExchange, downweight CommonCrawl)
+4. Target: 100B tokens for the first PEER 2B training run
+5. Save as tokenized tensors (GPT-2 BPE) with topic IDs for the classification head
 
 ## Resource estimates
 
@@ -85,10 +109,43 @@ pip install bitsandbytes accelerate  # for 4-bit Llama
 4. Should we score with our own V17 PEER model instead of Llama? It's smaller but might correlate well enough.
 5. Domain balance: should we keep SlimPajama's original mix or rebalance toward higher-quality sources?
 
-## After curation: Scale PEER to 2B
+## After curation: PEER 2B Architecture
 
-Once we have a clean 100B token dataset:
-- Scale PEER to 2B total params (larger expert tables, possibly deeper)
-- Train on the curated dataset
+### Model config
+
+- **d_model:** 2048
+- **d_ff:** 8192 (for dimension compatibility, though PEER replaces the MLP)
+- **n_heads:** 16 (with GQA: 16 query heads, 4 KV heads — cuts KV cache 4x)
+- **n_layers:** 12-16 (TBD based on VRAM fit)
+- **Context:** 2048 tokens minimum, 4096 if it fits
+- **Normalization:** RMSNorm (replacing LayerNorm)
+- **Positional encoding:** RoPE (already have, extend for longer context)
+- **PEER:** 1024^2 = 1M experts per layer, 8 heads x 16 top-k = 128 active/token
+- **KV cache:** yes (already implemented)
+- **Target total params:** ~2B
+
+### Two heads
+
+1. **Main head (CE):** standard next-token prediction, cross-entropy loss
+2. **Topic head:** small MLP classifier (d_model -> 256 -> n_topics), predicts canonical topic ID from segment representations
+   - Operates on segment-level: split each 2048-token sequence into 4 segments of 512, each gets a topic prediction
+   - Cross-entropy loss against LLM-generated topic labels
+   - Loss weight: ~0.1 relative to main CE
+   - **Dropped at inference** — the topic-aware representations stay in the weights
+   - **Purpose:** teaches the model to internally represent "what kind of text am I processing," enabling future context curation (keep/discard/retrieve decisions)
+
+### What's NOT included (dead ends from V8-V16)
+
+- No engram (training crutch — human eval showed V17 without it is better)
+- No multi-path routing (conv/attn/sink tiers fragmented representations)
+- No sparsity bottleneck (redundant with PEER's natural 99.95% sparsity)
+- No BDH (virtual synapse, hub routing, learnable loss scaling — all added complexity without generation benefit)
+
+### Training plan
+
+- Train on curated, topic-labeled SlimPajama (~100B tokens)
+- Phased LR schedule (proven in V16/V17)
+- Effective batch size 32+ (grad accumulation)
 - Compare against a 2B dense baseline on the same data
 - If hypothesis holds: 2B PEER competes with 7-8B dense models
+- Inference target: real-time generation on RTX 5070 Ti
