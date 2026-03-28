@@ -64,6 +64,9 @@ class AblationConfig(Enum):
     # --- v16 configs ---
     V16_PEER_ENGRAM = "v16_peer_engram"        # vanilla transformer + PEER FFN + engrams, no routing/BDH
 
+    # --- v17 configs ---
+    V17_PEER_ONLY = "v17_peer_only"            # vanilla transformer + PEER FFN, no engrams/routing/BDH (baseline)
+
     # --- v2 configs ---
     V2_ATTN_CONV = "v2_attn_conv"              # Attention->Conv backbone, standard MLP, no dual-head
     V2_ATTN_CONV_DUAL = "v2_attn_conv_dual"    # + dual-head
@@ -519,6 +522,26 @@ class ExperimentConfig:
             cfg.phased.phase4_steps = 24000
             cfg.phased.phase5_steps = 0
 
+        elif ablation == AblationConfig.V17_PEER_ONLY:
+            # Vanilla transformer + PEER FFN, no engrams — baseline for V16 comparison
+            cfg.model.n_layers = 6
+            cfg.model.d_model = 1024
+            cfg.model.d_ff = 4096
+            cfg.model.n_heads = 16
+            cfg.locality.enabled = True
+            cfg.engram.enabled = False
+            cfg.peer.enabled = True
+            cfg.bdh.enabled = False
+            cfg.training.batch_size = 4
+            cfg.training.grad_accum_steps = 8
+            cfg.training.max_steps = 50000
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 24000
+            cfg.phased.phase5_steps = 0
+
         elif ablation == AblationConfig.V16_PEER_ENGRAM:
             # Vanilla transformer + PEER FFN (replaces MLP) + engrams
             # No routing, no BDH — test if PEER's internal routing is enough
@@ -695,7 +718,7 @@ class ExperimentConfig:
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
             "v10_control", "v11_no_p5", "v12_247m", "v13_low_sparsity", "v14_attn_sink",
-            "v16_peer_engram",
+            "v16_peer_engram", "v17_peer_only",
         )
 
     def uses_memory_mlp(self) -> bool:
@@ -714,7 +737,7 @@ class ExperimentConfig:
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
             "v10_control", "v11_no_p5", "v12_247m", "v13_low_sparsity", "v14_attn_sink",
-            "v15_vanilla_route", "v16_peer_engram",
+            "v15_vanilla_route", "v16_peer_engram", "v17_peer_only",
         )
 
     def uses_bdh(self) -> bool:
