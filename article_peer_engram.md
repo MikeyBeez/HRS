@@ -167,59 +167,35 @@ V17 is the most confident model, with the lowest output entropy. V16 with engram
 
 ## Analysis of Results
 
-The deep benchmarks transform what initially appeared to be a simple story (engram bad, baseline good) into something considerably more interesting.
+### MAUVE and automatic metrics
 
-### The initial surprise: MAUVE prefers the baseline
+V17 (PEER only) achieves MAUVE 0.933-0.943, while V16 (PEER + engram, engrams off) scores 0.905-0.906. The deep benchmarks added nuance: V16 produces more diverse text (self-BLEU 0.132, closest to human reference at 0.141), while V17 produces more coherent text (cross-model PPL 23.31, below human reference at 31.16). The engram does not cause mode collapse — it increases diversity. But diversity and coherence are in tension, and the automatic metrics alone could not resolve which trade-off produces better text.
 
-V17 (PEER only) achieves MAUVE 0.933-0.943, while V16 (PEER + engram, engrams off) scores 0.905-0.906. Our first interpretation was that the engram acts as a training crutch — helping the model achieve low perplexity by providing a contextual shortcut, but producing weights that are worse for generation.
+### Human evaluation settles it
 
-The deep benchmarks show this interpretation is wrong.
+We conducted a blind A/B evaluation across five samples spanning paleontology, naval engineering, television criticism, professional wrestling, and military history. Each sample used 150 tokens of real WikiText-103 context followed by 200 tokens of model-generated continuation. The evaluator did not know which model produced which output.
 
-### The engram increases diversity, not decreases it
+The preference was unanimous: V17 was preferred in all five samples.
 
-If the engram were a crutch causing mode collapse, we would expect the engram-trained model to produce less diverse text — more repetitive, more formulaic, fewer unique n-grams. The opposite is true. V16 with engrams on produces the most diverse text of any condition: the lowest self-BLEU (0.132, closest to the human reference at 0.141) and the highest distinct-2 (0.432, closest to the reference at 0.464). Even V16 with engrams off (0.194 self-BLEU, 0.326 distinct-2) is within range, though less diverse than V17 (0.182 self-BLEU, 0.372 distinct-2).
+The reason was visible in the text. V16's higher diversity manifested not as richer vocabulary in service of coherent writing, but as topic drift, name repetition loops, and confused narratives. In the paleontology sample, V16 produced "the holotype specimen, the holotype (specimen from the holotype specimen), refers to a specimen from the holotype spec" — a repetitive spiral. In the military history sample, V16 generated "Dürenstein fought two infantry divisions in the Battle of Dürenstein and the Battle of Dürenstein, a short battle between Dürenstein and Dürenstein" — the same name repeated seven times in one sentence. In the television criticism sample, V16 abandoned the Doctor Who review entirely and began generating a biography of a fictional footballer.
 
-Mode collapse is definitively ruled out. The engram makes the model more diverse, not less.
+V17, by contrast, stayed on topic in every sample. Its naval engineering continuation produced specific technical details (calibers, muzzle velocities, projectile weights). Its television criticism maintained the reviewing voice throughout. Its military history named plausible commanders and described coherent tactical situations. The facts were fabricated — this is a 500M parameter model, not an encyclopedia — but the text read like plausible Wikipedia.
 
-### The baseline is hyper-coherent — more predictable than human text
-
-The cross-model perplexity benchmark reveals something unexpected about V17. When GPT-2 Medium scores V17's generated text, it assigns a mean perplexity of 23.31 — lower than the perplexity it assigns to actual human-written Wikipedia text (31.16). V17's text is more predictable to an external model than real text is.
-
-This is not straightforwardly good. Human-written text has a certain amount of unpredictability — surprising word choices, varied sentence structures, topic shifts — that makes it score higher under an external language model. V17 has learned to produce text that is extremely "canonical": grammatically correct, topically consistent, and predictable. It avoids the variations and surprises that characterize natural human writing.
-
-V16 with engrams off scores 30.53 under GPT-2 Medium — almost exactly matching the human reference at 31.16. The engram-shaped weights produce text that is precisely as coherent as human text, neither more nor less.
-
-### Reinterpreting the MAUVE gap
-
-MAUVE measures distributional similarity between generated and reference text. V17 scores higher not because its text is more human-like in a general sense, but because its text distribution is closer to the WikiText-103 reference distribution in the specific embedding space that MAUVE uses (GPT-2 Large features, k-means quantization). There are multiple ways to be close to a reference distribution: you can match its diversity and coherence at the right levels, or you can converge on its most predictable patterns while ignoring its variations.
-
-The deep benchmarks suggest V17 does the latter. Its text is hyper-coherent and moderately diverse — a narrower, more predictable slice of what human text actually looks like. V16 (with engrams off) matches human text's coherence level exactly while producing slightly less diversity than the reference. V16 (with engrams on) produces the most human-like diversity but at a coherence cost.
-
-No single model matches the human reference on all dimensions simultaneously.
-
-### The diversity-coherence trade-off
-
-The three conditions form a clear spectrum:
-
-V17 is high-coherence, moderate-diversity: cross-model PPL 23.31 (below human at 31.16), distinct-2 0.372, entropy 4.125 bits. The model is confident and predictable.
-
-V16 engrams off is human-coherence, lower-diversity: cross-model PPL 30.53 (matching human at 31.16), distinct-2 0.326, entropy 4.601 bits. The model matches human predictability but with less lexical variety.
-
-V16 engrams on is lower-coherence, high-diversity: cross-model PPL 75.38 (above human), distinct-2 0.432 (closest to human at 0.464), entropy 4.311 bits. The model is diverse but less predictable.
-
-The engram, during training, teaches the model to explore a wider range of the representation space. This produces more diverse outputs — closer to the natural variation of human text — but at the cost of the tight coherence that comes from converging on canonical patterns.
+The automatic diversity metrics were technically correct: V16 uses more varied vocabulary and produces more unique n-grams. But lexical diversity in service of incoherent text is not a virtue. What the metrics called "hyper-coherence" in V17 is, to a human reader, simply coherence. What they called "human-like diversity" in V16 is, to a human reader, a model that cannot maintain a train of thought.
 
 ### What the engram actually does
 
-The engram's 12.5x perplexity improvement (1.71 vs 21.41) is real and reflects genuine learning. The engram provides compressed context that helps the model predict next tokens more accurately. But the representations shaped by this training-time signal are qualitatively different from those learned without it.
+The engram's 12.5x perplexity improvement (1.71 vs 21.41) is real and reflects genuine learning. The engram provides compressed context that helps the model predict next tokens more accurately during teacher-forced evaluation. But the representations shaped by this training-time signal produce worse generation, not better.
 
-Without the engram, PEER's product-key routing converges on a narrow, confident set of expert activation patterns. The model becomes very good at producing the most likely continuation — canonical, predictable, coherent. With the engram, the additional context signal during training encourages the model to maintain sensitivity to a wider range of patterns. The resulting weights are less converged, less confident, but more capable of producing the kind of variation that characterizes human writing.
+Without the engram, PEER's product-key routing converges on a confident set of expert activation patterns. The model becomes very good at producing coherent, topically consistent continuations. With the engram, the additional context signal during training prevents this convergence. The resulting weights are less stable, less confident, and less capable of maintaining coherent generation over hundreds of tokens.
 
-Neither is strictly better. They optimize for different qualities.
+The engram is a training-time crutch. It provides a contextual shortcut that achieves low perplexity without requiring the model to develop fully self-sufficient representations. When the crutch is removed at inference, the model's lack of self-sufficiency becomes apparent as topic drift and repetition.
 
-### The PEER baseline is still impressive
+This does not mean the engram concept is without value. It means the current implementation — unfiltered mean-pooling of activations, prepended as additional context — provides the wrong kind of training signal. A reconstruction-based engram that compresses only information not already captured by attention might produce a model that is both diverse and coherent.
 
-The V17 baseline deserves recognition on its own terms. A 499M parameter transformer with PEER feed-forward layers, trained on a single consumer GPU for 11 hours, achieves MAUVE scores of 0.933-0.943 on WikiText-103. Its cross-model perplexity (23.31) is lower than the human reference (31.16), indicating extremely coherent generation. The PEER architecture — full attention combined with sparse feed-forward routing — produces strong results with or without the engram.
+### The PEER baseline is the real story
+
+The most important result is V17 itself. A 499M parameter transformer with PEER feed-forward layers, trained on a single consumer GPU for 11 hours, generates text that a human evaluator unanimously preferred over the engram-augmented variant. It achieves MAUVE scores of 0.933-0.943, cross-model perplexity lower than human reference text, and — most importantly — produces coherent, topically consistent prose that reads like plausible Wikipedia across diverse subject domains.
 
 
 ## Connection to Related Work
@@ -237,17 +213,17 @@ The engram-as-scaffolding finding connects to several concurrent lines of resear
 
 ## Implications
 
-**PEER validates the minimal model hypothesis.** Both V16 and V17 demonstrate that PEER's product-key routing combined with full attention produces 500M parameter models that generate text competitive with models several times their size. V17 achieves MAUVE 0.933-0.943; V16 achieves MAUVE 0.905 with more human-like diversity characteristics. The PEER architecture is the foundation that makes both results possible.
+**PEER is the headline result.** V17 demonstrates that PEER's product-key routing combined with full attention produces a 499M parameter model that generates coherent, topically consistent prose — preferred unanimously over the engram variant in blind human evaluation. MAUVE 0.933-0.943 places it in the range of models several times its size. This validates the minimal model hypothesis from the January 2026 PEER paper.
 
 **PEER makes full attention affordable.** The conventional wisdom is that you must approximate attention (sparse, sliding window, linear) to train efficiently. PEER inverts this: by making the feed-forward layer sparse (128 of 262,144 experts active per token), the feed-forward computation becomes cheap enough that you can afford dense attention. Full attention with sparse feed-forward may be a better trade-off than sparse attention with dense feed-forward. PEER also generates 1.6-2.4x faster than a comparable dense transformer, and adding a KV cache brings generation to a constant ~200 tokens/second regardless of context length.
 
-**Perplexity, MAUVE, and diversity measure different things.** The 12.5x perplexity gap between V16 and V17 did not predict MAUVE ordering, and MAUVE alone did not reveal that V17's advantage comes from hyper-coherence rather than better generation in any absolute sense. Only the combination of MAUVE, self-BLEU, cross-model perplexity, and entropy gives the full picture. Single-metric evaluation of language models is insufficient.
+**Perplexity is a poor proxy for generation quality.** The 12.5x perplexity gap between V16 (1.71) and V17 (21.41) predicted the opposite of what human evaluation found. The model with dramatically better perplexity produced worse text by every qualitative measure. Perplexity measures how well a model predicts the next token given perfect context, but generation quality depends on coherence over hundreds of tokens of self-generated context — a fundamentally different task. This finding reinforces that perplexity should not be used as the primary metric for evaluating generative language models.
 
-**The engram controls the diversity-coherence trade-off.** The engram is not a crutch and not simply scaffolding. It is a training-time signal that shapes the model toward higher diversity at the cost of some coherence. Without the engram, PEER converges on hyper-coherent, hyper-predictable text — more predictable than human writing itself. With the engram, the model learns to maintain the kind of variation that characterizes natural language. Whether this trade-off is desirable depends on the application.
+**Automatic diversity metrics can mislead.** Self-BLEU and distinct-n correctly identified that V16 produces more lexically diverse text. But human evaluation revealed that this diversity manifested as topic drift and repetition loops, not as richer writing. Metrics that measure surface-level variety without accounting for coherence can point in the wrong direction. The combination of automatic metrics and human evaluation is essential.
 
-**Train-time-only components are a viable methodology.** The engram demonstrates that architectural components can fundamentally alter what a model learns (diversity-favoring vs coherence-favoring representations) even when removed at inference. This is a novel training methodology distinct from regularization, data augmentation, or distillation. The engram does not add noise — it adds structured information that shapes the geometry of learned representations.
+**The engram needs fundamental rethinking.** The current mean-pooling engram provides a training-time shortcut that achieves low perplexity without building self-sufficient representations. This is the wrong kind of help. A useful engram would need to compress information that attention genuinely cannot capture — perhaps cross-document context, or long-range dependencies beyond the attention window — rather than redundantly summarizing information already available through attention.
 
-**Consumer hardware is sufficient for meaningful AI research.** This entire experiment — architecture design, debugging, training, evaluation, deep benchmarking — ran on a single NVIDIA RTX 5070 Ti, a GPU that costs approximately $600. Both models train in under 12 hours and use under 6GB of VRAM. The bottleneck for independent AI research is increasingly ideas, not compute.
+**Consumer hardware is sufficient for meaningful AI research.** This entire experiment — architecture design, debugging, training, evaluation, deep benchmarking, human evaluation — ran on a single NVIDIA RTX 5070 Ti, a GPU that costs approximately $600. Both models train in under 12 hours and use under 6GB of VRAM. The bottleneck for independent AI research is increasingly ideas, not compute.
 
 
 ## Future Directions
@@ -260,7 +236,7 @@ The engram-as-scaffolding finding connects to several concurrent lines of resear
 
 **Scaling to The Pile.** WikiText-103 is encyclopedic text from a single domain. Training on diverse, large-scale data (code, dialogue, technical writing, fiction) would test whether the architecture generalizes or whether its strengths are specific to Wikipedia's relatively uniform structure.
 
-**Tuning the diversity-coherence balance.** Now that we understand the engram's role in controlling this trade-off, the natural question is whether it can be tuned. Varying the engram dropout rate, the engram window size, or the number of engram vectors per window would trace out the Pareto frontier between diversity and coherence. The optimal operating point likely depends on the downstream application.
+**Rethinking the engram.** The mean-pooling engram compresses information that attention already has access to. A more promising direction: an engram that captures information *outside* the attention window — cross-document context, retrieval-augmented knowledge, or multi-turn conversation state. This would provide genuinely new information rather than a redundant summary, potentially improving generation rather than degrading it.
 
 
 ## Reproducibility
