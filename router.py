@@ -177,6 +177,7 @@ def routing_entropy_loss(routing_weights: torch.Tensor) -> torch.Tensor:
 #   sink:    d (just scaling)  =    512  -> 0.0002
 TIER_FLOPS_COST_4 = [0.0015, 0.111, 0.111, 0.0002]  # conv, expert, attn, sink
 TIER_FLOPS_COST_3 = [0.0015, 0.111, 0.0002]          # conv, attn, sink (v4: no expert tier)
+TIER_FLOPS_COST_2 = [0.111, 0.0002]                  # attn, sink (v14: no conv tier)
 
 
 def routing_flops_loss(
@@ -203,7 +204,12 @@ def routing_flops_loss(
     """
     if tier_costs is None:
         n_tiers = routing_weights.shape[-1]
-        tier_costs = TIER_FLOPS_COST_3 if n_tiers == 3 else TIER_FLOPS_COST_4
+        if n_tiers == 2:
+            tier_costs = TIER_FLOPS_COST_2
+        elif n_tiers == 3:
+            tier_costs = TIER_FLOPS_COST_3
+        else:
+            tier_costs = TIER_FLOPS_COST_4
 
     costs = torch.tensor(tier_costs, device=routing_weights.device, dtype=routing_weights.dtype)
     p = routing_weights.mean(dim=(0, 1))  # (n_tiers,)

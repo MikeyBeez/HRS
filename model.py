@@ -195,17 +195,23 @@ class HRSBlock(nn.Module):
         # Router + tiered compute REPLACES MLP
         self.use_router = cfg.uses_router()
         self.use_peer = cfg.uses_peer()
-        # v4/v8: PEER as unconditional FFN + 3-tier routing (no expert tier)
-        self.use_peer_ffn = self.use_peer and cfg.router.n_tiers == 3
+        # v4/v8: PEER as unconditional FFN + 2 or 3-tier routing (no expert tier)
+        self.use_peer_ffn = self.use_peer and cfg.router.n_tiers in (2, 3)
+        # v15: 2-tier routing without PEER — just attn+sink + standard MLP
+        self.use_simple_2tier = (not self.use_peer) and cfg.router.n_tiers == 2
         if self.use_router:
             self.router = TokenRouter(model_cfg, cfg.router)
 
-            self.conv_tier = ConvTier(model_cfg, cfg.tier)
+            if cfg.router.n_tiers >= 3:
+                self.conv_tier = ConvTier(model_cfg, cfg.tier)
             if self.use_peer_ffn:
-                # v4/v8: PEER runs unconditionally, not as a routed tier
+                # v4/v8/v14: PEER runs unconditionally, not as a routed tier
                 self.peer_ffn = PEER(model_cfg, cfg.peer)
                 self.ln_peer = nn.LayerNorm(model_cfg.d_model)
                 self.peer_output_gate = nn.Parameter(torch.ones(1) * 0.1)
+            elif self.use_simple_2tier:
+                # v15: no PEER, no conv, no expert — just attn+sink + MLP
+                self.mlp = MLP(model_cfg)
             elif self.use_peer:
                 # v3: PEER replaces ExpertTier in the routing framework
                 self.expert_tier = PEER(model_cfg, cfg.peer)
@@ -224,8 +230,8 @@ class HRSBlock(nn.Module):
                     torch.tensor(cfg.tier.sink_init_scale)
                 )
         else:
-            # v10: PEER as standalone FFN (no routing)
-            if cfg.uses_peer() and cfg.uses_v10_control():
+            # v10/v16: PEER as standalone FFN (no routing)
+            if cfg.uses_peer() and not cfg.uses_router():
                 self.peer_ffn = PEER(model_cfg, cfg.peer)
                 self.ln_peer = nn.LayerNorm(model_cfg.d_model)
                 self.peer_output_gate = nn.Parameter(torch.ones(1) * 0.1)
@@ -262,21 +268,41 @@ class HRSBlock(nn.Module):
 
             routing_w = self.router(h, step=step)
 
-            if self.use_peer_ffn:
-                # v4/v8: 3-tier routing (conv, attn, sink) + unconditional PEER
-                conv_out = self.conv_tier(h_tier)
+            if self.use_simple_2tier:
+                # v15: 2-tier (attn, sink) + standard MLP, no PEER
                 attn_out2 = self.attn_tier(h_tier)
                 sink_out = self.sink_tier(h_tier)
-
-                tier_outputs = torch.stack(
-                    [conv_out, attn_out2, sink_out], dim=-1
-                )
+                tier_outputs = torch.stack([attn_out2, sink_out], dim=-1)
                 w = routing_w.unsqueeze(2)
                 combined = (tier_outputs * w).sum(dim=-1)
                 x = x + combined * self.tier_output_gate
 
                 if self.use_sink:
-                    sink_weight = routing_w[:, :, 2]  # sink is index 2 in 3-tier
+                    sink_weight = routing_w[:, :, 1]
+                    kv_scale = 1.0 - sink_weight * (1.0 - self.sink_kv_scale.abs())
+                    x = x * kv_scale.unsqueeze(-1)
+
+                # Standard MLP
+                x = x + self.mlp(self.ln2(x))
+            elif self.use_peer_ffn:
+                # v14: 2-tier (attn, sink) or v4/v8: 3-tier (conv, attn, sink) + unconditional PEER
+                attn_out2 = self.attn_tier(h_tier)
+                sink_out = self.sink_tier(h_tier)
+
+                if self.cfg.router.n_tiers == 2:
+                    tier_outputs = torch.stack([attn_out2, sink_out], dim=-1)
+                    sink_idx = 1
+                else:
+                    conv_out = self.conv_tier(h_tier)
+                    tier_outputs = torch.stack([conv_out, attn_out2, sink_out], dim=-1)
+                    sink_idx = 2
+
+                w = routing_w.unsqueeze(2)
+                combined = (tier_outputs * w).sum(dim=-1)
+                x = x + combined * self.tier_output_gate
+
+                if self.use_sink:
+                    sink_weight = routing_w[:, :, sink_idx]
                     kv_scale = 1.0 - sink_weight * (1.0 - self.sink_kv_scale.abs())
                     x = x * kv_scale.unsqueeze(-1)
 
@@ -651,6 +677,10 @@ class HRSTransformer(nn.Module):
             # Engram extraction
             if self.use_engrams and i == self.engram_extract_layer:
                 engrams = self.engram_encoder(x)
+                # Randomly drop engrams during training so model learns to work without them
+                if self.training and self.cfg.engram.drop_prob > 0:
+                    if torch.rand(1).item() < self.cfg.engram.drop_prob:
+                        engrams = engrams[:, :0, :]  # empty tensor, same shape
                 engram_recon_loss = engram_reconstruction_loss(
                     x.detach(), engrams, self.cfg.engram.window_size,
                 )

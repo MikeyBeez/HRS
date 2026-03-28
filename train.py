@@ -652,8 +652,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 print(f"  routing_entropy: {metrics['routing_entropy_mean']:.3f}")
                 tier_fracs = metrics.get('tier_fractions_mean', [])
                 print(f"  tier_fractions: {tier_fracs}")
-                if len(tier_fracs) >= 3:
-                    print(f"  sink_pct: {tier_fracs[2]*100:.1f}%")
+                if len(tier_fracs) >= 2:
+                    print(f"  sink_pct: {tier_fracs[-1]*100:.1f}%")
             if "magnitude_ratio" in metrics:
                 print(f"  magnitude_ratio: {metrics['magnitude_ratio']:.2f}")
             if "flops_ratio" in metrics:
