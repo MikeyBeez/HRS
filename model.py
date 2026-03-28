@@ -67,13 +67,17 @@ class CausalSelfAttention(nn.Module):
 
         self.rope = RotaryEmbedding(self.head_dim, cfg.max_seq_len)
 
-    def forward(self, x, return_weights=False, focus_qk=None):
-        """Forward pass with optional BDH virtual synapse focus.
+    def forward(self, x, return_weights=False, focus_qk=None, kv_cache=None, start_pos=0):
+        """Forward pass with optional BDH virtual synapse focus and KV cache.
 
         Args:
             x: (B, T, D) input hidden states
             return_weights: collect attention weights for metrics
             focus_qk: optional (focus_q, focus_k) tuple from VirtualSynapse
+            kv_cache: optional (cached_k, cached_v) from previous steps
+            start_pos: position offset for RoPE when using KV cache
+        Returns:
+            out, attn_weights, new_kv_cache
         """
         B, T, C = x.shape
 
@@ -83,25 +87,36 @@ class CausalSelfAttention(nn.Module):
         k = k.transpose(1, 2)
         v = v.transpose(1, 2)
 
-        cos, sin = self.rope(T)
-        q, k = apply_rotary_emb(q, k, cos, sin)
+        # RoPE with correct positions for cached inference
+        cos, sin = self.rope(start_pos + T)
+        cos = cos[start_pos:start_pos + T]
+        sin = sin[start_pos:start_pos + T]
+        cos = cos.unsqueeze(0).unsqueeze(0)
+        sin = sin.unsqueeze(0).unsqueeze(0)
+        q = q * cos + rotate_half(q) * sin
+        k = k * cos + rotate_half(k) * sin
+
+        # Append to KV cache if provided
+        new_kv_cache = None
+        if kv_cache is not None:
+            cached_k, cached_v = kv_cache
+            k = torch.cat([cached_k, k], dim=2)
+            v = torch.cat([cached_v, v], dim=2)
+        new_kv_cache = (k, v)
 
         # v8 BDH: apply virtual synapse as additive bias on Q/K (SDPA compatible)
         if focus_qk is not None:
             focus_q, focus_k = focus_qk
             if focus_q is not None and focus_k is not None:
-                # Per-head scalar gain applied as Q/K scaling
-                # gain = dot(fq, fk) per head -> (B, H, 1, 1)
                 gain = (focus_q * focus_k).sum(dim=-1, keepdim=True).unsqueeze(-1)
-                # Scale Q by sqrt(1 + alpha * gain) to approximate multiplicative score gain
-                # For small alpha*gain: (Q*s)@K^T/sqrt(d) ≈ Q@K^T/sqrt(d) * (1 + alpha*gain)
                 q = q * (1.0 + gain).sqrt()
 
         if return_weights:
             scale = 1.0 / math.sqrt(self.head_dim)
             attn = (q @ k.transpose(-2, -1)) * scale
+            S = k.shape[2]
             causal_mask = torch.triu(
-                torch.ones(T, T, device=x.device, dtype=torch.bool), diagonal=1
+                torch.ones(T, S, device=x.device, dtype=torch.bool), diagonal=S - T + 1
             )
             attn = attn.masked_fill(causal_mask, float("-inf"))
             attn_weights = F.softmax(attn, dim=-1)
@@ -109,14 +124,14 @@ class CausalSelfAttention(nn.Module):
             out = attn_weights @ v
         else:
             out = F.scaled_dot_product_attention(
-                q, k, v, is_causal=True,
+                q, k, v, is_causal=(kv_cache is None),
                 dropout_p=self.attn_dropout.p if self.training else 0.0,
             )
             attn_weights = None
 
         out = out.transpose(1, 2).reshape(B, T, C)
         out = self.resid_dropout(self.out_proj(out))
-        return out, attn_weights
+        return out, attn_weights, new_kv_cache
 
 
 class MLP(nn.Module):
@@ -240,15 +255,16 @@ class HRSBlock(nn.Module):
 
     def forward(
         self, x, step: int = 0, return_weights: bool = False,
-        engrams: torch.Tensor = None,
-    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        engrams: torch.Tensor = None, kv_cache=None, start_pos=0,
+    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, object]:
         # v8 BDH: compute virtual synapse focus from engrams
         focus_qk = None
         if self.use_bdh and hasattr(self, 'virtual_synapse') and engrams is not None:
             focus_qk = self.virtual_synapse(engrams)
 
-        attn_out, attn_w = self.attn(
+        attn_out, attn_w, new_kv_cache = self.attn(
             self.ln1(x), return_weights=return_weights, focus_qk=focus_qk,
+            kv_cache=kv_cache, start_pos=start_pos,
         )
         x = x + attn_out
 
@@ -335,7 +351,7 @@ class HRSBlock(nn.Module):
             else:
                 x = x + self.mlp(self.ln2(x))
 
-        return x, routing_w, attn_w
+        return x, routing_w, attn_w, new_kv_cache
 
 
 # ============================================================
@@ -398,7 +414,7 @@ class HRSv2Block(nn.Module):
         # Block 2: PEER or MLP
         x = x + self.ffn(self.ln2(x))
 
-        return x, None, attn_w
+        return x, None, attn_w, None
 
 
 # ============================================================
@@ -643,7 +659,7 @@ class HRSTransformer(nn.Module):
             # v8 BDH: pass engrams to block for virtual synapse focus
             block_engrams = engrams if (self._uses_bdh and i > self.engram_extract_layer and engrams.shape[1] > 0) else None
 
-            x, routing_w, attn_w = block(
+            x, routing_w, attn_w, _ = block(
                 x, step=step, return_weights=collect_intermediates,
                 engrams=block_engrams,
             )
@@ -1015,3 +1031,51 @@ class HRSTransformer(nn.Module):
                 groups["backbone"].append(param)
 
         return groups
+
+    @torch.no_grad()
+    def generate(self, idx, max_new_tokens, temperature=0.8, top_k=40):
+        """Autoregressive generation with KV cache for fast inference.
+
+        Args:
+            idx: (B, T) prompt token ids
+            max_new_tokens: number of tokens to generate
+            temperature: sampling temperature
+            top_k: top-k filtering (0 = disabled)
+        Returns:
+            (B, T + max_new_tokens) full token sequence
+        """
+        self.eval()
+        B, T = idx.shape
+
+        # Prefill: process entire prompt, build KV caches
+        x = self.drop(self.tok_emb(idx))
+        kv_caches = [None] * len(self.blocks)
+
+        for i, block in enumerate(self.blocks):
+            x, _, _, kv_caches[i] = block(x, step=0, start_pos=0)
+
+        x = self.ln_f(x)
+        logits = self.lm_head(x[:, -1:, :])
+        cur_pos = T
+
+        for _ in range(max_new_tokens):
+            # Sample next token
+            next_logits = logits[:, -1, :] / temperature
+            if top_k > 0:
+                v, _ = torch.topk(next_logits, top_k)
+                next_logits[next_logits < v[:, [-1]]] = -float('inf')
+            probs = F.softmax(next_logits, dim=-1)
+            next_token = torch.multinomial(probs, num_samples=1)
+            idx = torch.cat([idx, next_token], dim=1)
+
+            # Forward only the new token through all layers with KV cache
+            x = self.drop(self.tok_emb(next_token))
+            for i, block in enumerate(self.blocks):
+                x, _, _, kv_caches[i] = block(
+                    x, step=0, kv_cache=kv_caches[i], start_pos=cur_pos,
+                )
+            x = self.ln_f(x)
+            logits = self.lm_head(x)
+            cur_pos += 1
+
+        return idx

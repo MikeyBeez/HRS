@@ -198,13 +198,15 @@ class RotaryEmbedding(nn.Module):
         self._build_cache(max_seq_len)
 
     def _build_cache(self, seq_len: int):
-        t = torch.arange(seq_len, dtype=self.inv_freq.dtype)
+        t = torch.arange(seq_len, device=self.inv_freq.device, dtype=self.inv_freq.dtype)
         freqs = torch.outer(t, self.inv_freq)
         emb = torch.cat((freqs, freqs), dim=-1)
         self.register_buffer("cos_cached", emb.cos(), persistent=False)
         self.register_buffer("sin_cached", emb.sin(), persistent=False)
 
     def forward(self, seq_len: int):
+        if seq_len > self.cos_cached.shape[0]:
+            self._build_cache(seq_len * 2)
         return self.cos_cached[:seq_len], self.sin_cached[:seq_len]
 
 
