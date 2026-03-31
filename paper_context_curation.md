@@ -122,7 +122,13 @@ This is the V16 dissociation in reverse. V16 showed better perplexity but worse 
 
 The near-zero routing correlation (0.09) is the nail in the coffin for the relevance claim. If topic matching were driving the improvement, better-matched prompts should show larger benefits. They don't. The improvement is coming from context quantity and distributional bias, not from topical relevance.
 
-An accuracy evaluation confirms this. We generated 50 paired continuations (baseline vs. topic-routed) and compared each against the actual WikiText continuation. Baseline wins 29 to 18 on semantic similarity to the real continuation (0.592 vs 0.557 engram cosine), with token overlap essentially tied. The model generates text that is further from what actually came next when topic context is present — the same story as the perplexity metric, measured differently.
+An accuracy evaluation confirms this from two additional angles. We generated 50 paired continuations (baseline vs. topic-routed) and measured both automated and LLM-judged quality.
+
+Automated: baseline wins 29 to 18 on semantic similarity to the real continuation (0.592 vs 0.557 engram cosine), with token overlap essentially tied.
+
+LLM-as-judge: we sent each pair to Llama 3.1 (running on a separate Mac Mini) for blind evaluation on coherence, relevance, and fluency. Baseline wins 28 to 22 — a narrower margin than the automated metrics, but the same direction. The LLM finds topic-routed generations competitive but not better.
+
+Four independent metrics now agree: perplexity (35.8 vs 38.1), semantic similarity (29-18), LLM judge (28-22), and routing correlation (r=0.09). MAUVE (0.962 vs 0.919) is the sole dissenter — measuring distributional bias rather than generation quality.
 
 ## What we actually learned
 
