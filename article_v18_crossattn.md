@@ -179,13 +179,129 @@ In all three cases, entropy measures the same underlying quantity — the model'
 
 **Small models can benefit from external memory.** V18 at 510M parameters with a 512-token context window achieves MAUVE 0.950 with entropy-gated retrieval — competitive with much larger models. The external memory compensates for limited context length by providing relevant information precisely when needed.
 
+## Part 3: Topic-Filtered Context Management
+
+### The Problem
+
+Language models with fixed context windows waste capacity on irrelevant text. A 512-token window using naive recency — keep the last 512 tokens — fills itself with whatever came most recently, regardless of relevance. If the user asks about Roman history, the context window shouldn't contain their earlier discussion about baking cupcakes.
+
+The standard solution is retrieval-augmented generation: search an external index for relevant documents and inject them into context. But this requires a separate retriever model and a pre-built index. We asked: can V18's own engram representations serve as both the retrieval key and the topic classifier, eliminating the need for external components?
+
+### Why the Categorization Head Failed
+
+V18 was trained with a categorization head that predicted topic labels for each training sequence. The head reached a cross-entropy loss of 1.2, well below random (3.9 for 50 categories). This looked like the model had learned to classify topics.
+
+It hadn't. When we evaluated the categorization head on the WikiText-103 validation set, accuracy was 3.3% — essentially random chance (2.0% baseline for 50 categories).
+
+The failure has a clear cause. The model was trained on 512-token sequences, not documents. Each sequence gets a single category label — the majority category of its constituent tokens. But WikiText-103 sequences are carved from a continuous token stream. A single 512-token sequence can span the end of one article and the beginning of another, receiving a label that describes neither. The categorization head learned to minimize loss on these noisy, misaligned labels. It found statistical patterns in the hidden states that correlated with the training labels, but those patterns don't generalize to classifying whole documents.
+
+This is an important negative result. Training loss is not classification accuracy. A loss of 1.2 means the head found a way to predict the noisy labels — it does not mean the head learned the underlying concept of "topic."
+
+### Engram Similarity Works Where the Head Fails
+
+The needle-in-a-haystack test had already demonstrated that engram cosine similarity retrieves the correct document with 100% accuracy among 20 distractors. This is document-level topic matching achieved without any classification training — just the raw semantic structure of the engram space.
+
+The engram space inherits its structure from the transformer's hidden representations. Documents about similar topics produce similar hidden states, which produce similar mean-pooled engrams. No explicit topic labels are needed. The topology of the representation space itself encodes topic relationships.
+
+This observation motivates the design: use engram similarity directly for topic routing, not a trained classifier.
+
+### Online Topic Clustering
+
+We built a system that clusters prompts by topic in real time as they arrive, using engram similarity as the distance metric.
+
+**Cluster creation.** When a prompt arrives, its engram is compared against all existing cluster centroids by cosine similarity. If the best match exceeds a similarity threshold (default 0.4), the prompt joins that cluster. If no match exceeds the threshold, a new cluster is created with this prompt as its first member.
+
+**Evolving centroids.** Each cluster's centroid is a running mean of its members' engrams, L2-normalized. As more prompts join a cluster, the centroid drifts to represent the average topic of its members. This means the cluster's identity is not frozen at creation — it evolves as context accumulates.
+
+**Auto-merge.** After each prompt is processed, all cluster pairs are checked for similarity. If two centroids exceed a merge threshold (default 0.75), the smaller cluster is absorbed into the larger. This handles the case where two clusters start separate but converge as more evidence arrives — for example, "Roman Empire" and "Byzantine Empire" might start as distinct clusters but merge once enough prompts establish their relationship.
+
+**Human-readable titles.** Each cluster automatically generates a title from keyword extraction over its member prompts. The title updates as new prompts join. This enables a UI where users see named topics rather than opaque cluster IDs.
+
+### Context Assembly
+
+The context window is assembled from active topic clusters rather than raw token recency.
+
+**Active buffer.** The system maintains a configurable number of simultaneously active topic clusters (default 2, configurable up to any number for multidisciplinary work). Active clusters are ordered by most-recently-used. When a new topic activates, the least-recently-used cluster is evicted from the active set — but not deleted. It persists and can be reactivated if a future prompt matches its centroid.
+
+**Budget allocation.** The context token budget is distributed across active clusters with exponential decay by recency. The most recently used cluster gets 50% of the budget. The next gets 50% of the remainder. And so on. This ensures the current topic dominates the context while secondary topics retain representation.
+
+**User control.** Each cluster can be toggled on or off by the user. A disabled cluster is excluded from context assembly even if it's in the active set. This gives the user explicit control over what the model sees, exposed through a topic list:
+
+```
+Active Topics:
+  [x] Roman / Empire / Constantinople / Byzantine (4 prompts)
+  [x] Make / Chocolate / Cupcakes / Preheat (3 prompts)
+  [ ] Quantum / Entanglement / Particles (1 prompt)
+```
+
+### What Works
+
+In testing with mixed-topic prompts (Roman history interleaved with baking recipes), the system correctly:
+
+- Separated Roman history from baking into distinct clusters
+- Merged "Roman Empire" and "Byzantine Empire" prompts into a single cluster
+- Swapped active clusters when the topic changed
+- Excluded disabled clusters from context assembly
+- Generated meaningful (if rough) topic titles
+
+### What Doesn't Work Yet
+
+**Threshold sensitivity.** The similarity threshold (0.4) is a single global parameter that determines when a prompt joins an existing cluster versus creating a new one. This is too rigid. A domain-dense area (many similar prompts about different aspects of history) needs a tighter threshold than a domain-sparse area (one prompt about quantum physics). Adaptive thresholds — perhaps calibrated per-cluster based on intra-cluster variance — would improve routing accuracy.
+
+**Title quality.** Keyword extraction produces functional but ugly titles ("Roman / Empire / Fell / Odoacer" instead of "Roman History"). A small local language model could generate clean 2-3 word titles from the cluster's content. This is an integration task, not a research task — the TopicContextManager exposes a callback interface for custom title generation.
+
+**Misrouting at topic boundaries.** When a cluster's centroid has drifted (through accumulation of diverse prompts), new prompts from genuinely different topics can match it. In testing, "Roman aqueducts" sometimes routed to the baking cluster because the baking centroid had drifted toward general content. This is a consequence of mean-pooled centroids in a finite-dimensional space — unrelated topics can become similar when the centroid averages over enough diverse content. Solutions include centroid regularization (prevent excessive drift), sub-clustering within large clusters, or periodic re-centering.
+
+### The Architecture of Topic-Filtered Context
+
+Stepping back, the system we've built has three layers:
+
+1. **Representation layer.** The transformer's hidden states, mean-pooled into engram vectors, encode semantic content in a space where cosine similarity corresponds to topic relatedness. This is a byproduct of language model training — no special objective is needed.
+
+2. **Clustering layer.** Online K-means-like clustering with evolving centroids, distance-based merging, and MRU eviction. This organizes the continuous engram space into discrete topics suitable for context management.
+
+3. **Context assembly layer.** Budget allocation across active clusters, user toggles, and token packing. This converts topic decisions into the actual token sequence the model processes.
+
+Each layer is independent. The representation layer comes from V18's training. The clustering layer is a few hundred lines of Python with no learned parameters. The context assembly layer is pure bookkeeping. No component requires retraining the model.
+
+This independence is the key design property. The topic-filtered context system is an inference-time addition that works with any model capable of producing hidden-state engrams. V18's cross-attention provides a natural injection point, but the clustering and context assembly would work equally well with a standard transformer using engrams as a prefix or with a retrieval-augmented architecture.
+
+## Discussion
+
+### The Full Stack
+
+Taken together, the three parts of this work form a stack:
+
+| Layer | Component | Function |
+|-------|-----------|----------|
+| Training | V18 cross-attention engram | Structural isolation of memory from autoregressive path |
+| Inference | Entropy-gated retrieval | Dynamic memory access triggered by model uncertainty |
+| Context | Topic-filtered assembly | Relevance-based context curation replacing recency |
+
+Each layer addresses a different failure mode:
+- Cross-attention fixes V16's leakage bug (training-time)
+- Entropy gating prevents constant retrieval noise (inference-time)
+- Topic filtering prevents context pollution from irrelevant content (context-time)
+
+### What We Learned
+
+**Engram vectors are better topic features than trained classifiers.** The categorization head (3.3% accuracy) failed where raw engram similarity (100% NIAH recall) succeeded. This suggests that for topic routing, the model's internal representations are more useful than explicit classification layers trained on noisy labels. The topology of the hidden state space already encodes topic relationships — no supervision needed.
+
+**Entropy is a universal control signal.** Across this work, Shannon entropy serves four distinct roles: training data curation (filter noise), memory write trigger (store what's surprising), memory read trigger (retrieve when confused), and implicitly, topic boundary detection (entropy spikes when topics shift). This convergence suggests entropy monitoring belongs in the standard inference toolkit, not as a special-purpose diagnostic.
+
+**Simple systems compose well.** None of the individual components — cosine similarity retrieval, rolling-mean centroids, MRU eviction, keyword extraction — is novel. The contribution is the composition: using the model's own representations as the shared substrate for retrieval, clustering, and context assembly, with entropy as the shared control signal. No external models, no separate training, no learned parameters beyond the base model.
+
+**The context window is the bottleneck, not the model.** V18 at 510M parameters generates text at MAUVE 0.950 with entropy-gated retrieval — competitive with much larger models. The limitation is not the model's capacity but what we put in its context window. Topic-filtered context is one approach to making every token count. Others — compression, summarization, hierarchical attention — address the same bottleneck from different angles.
+
 ## Future Directions
 
 **Retrieval-augmented fine-tuning.** Train V18 with retrieved engrams in the loop: during training, randomly replace the corpus-level buffer with document-specific engrams from a store. This would teach the cross-attention to ground generation in specific retrieved content, potentially closing the gap between retrieval accuracy (100%) and generation grounding (0%).
 
-**Scaling the store.** The current store contains 870 engrams from the WikiText-103 validation set. A store populated from the full training set (~29K articles) or diverse web text would provide richer retrieval targets and reduce the repeated-retrieval problem observed during evaluation.
+**LLM-assisted topic management.** A small local model (Phi-3-mini, Qwen2.5-0.5B) running on a secondary machine could handle title generation and merge decisions. The TopicContextManager exposes the necessary interfaces: cluster centroids, member texts, and a title-setting method. The judgment call — "are Roman History and Byzantine Empire the same topic?" — is trivial for even a small language model but difficult to express as a distance threshold.
 
-**Adaptive thresholds.** The fixed 4.0-bit threshold works well on average but could be adapted per-document or per-domain. A calibration step that sets the threshold to the Nth percentile of a model's entropy distribution on representative text would generalize better across models and domains.
+**Adaptive thresholds.** Per-cluster similarity thresholds calibrated from intra-cluster variance would handle the dense-topic vs. sparse-topic problem. A cluster with high internal diversity (many varied prompts) should have a looser join threshold than a tight cluster of closely related prompts.
+
+**Scaling the store.** The current store contains 870 engrams from the WikiText-103 validation set. A store populated from the full training set (~29K articles) or diverse web text would provide richer retrieval targets and reduce the repeated-retrieval problem observed during evaluation.
 
 **Multi-hop retrieval.** The current system retrieves once per entropy spike. For complex queries requiring synthesis of multiple sources, iterative retrieval — where the first retrieved engram modifies the context, potentially triggering retrieval of a second related engram — could enable compositional reasoning over the stored knowledge.
 
@@ -202,5 +318,9 @@ All code is available at github.com/MikeyBeez/HRS.
 **MAUVE benchmark:** `python benchmark_mauve_v18.py` (~3 hours) and `python benchmark_mauve_egr.py` (~4 hours)
 
 **Needle-in-a-haystack:** `python niah_egr.py --n-distractors 20` (~15 minutes)
+
+**Categorization evaluation:** `python eval_categorization.py --split validation`
+
+**Topic context demo:** See `topic_context.py` — `TopicContextManager` class
 
 VRAM usage: approximately 12.5 GB during training, 8 GB during evaluation.
