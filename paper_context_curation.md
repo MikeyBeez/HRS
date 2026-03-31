@@ -92,7 +92,7 @@ We populated the topic context manager from 60 WikiText-103 validation articles,
 
 **The evaluation suite says no.** We then ran four additional metrics designed to test whether the MAUVE improvement reflects genuine generation quality.
 
-Held-out perplexity — does topic context help the model predict the real continuation? No. Perplexity with topic context (38.1) was *worse* than with no context (35.8) and worse than with random context (36.1). The model is more surprised by the real continuation when topic-routed context is in the window.
+Held-out perplexity — does topic context help the model predict the real continuation? No. Perplexity with topic context (38.1) was worse than with no context (35.8) and worse than with random context (36.1). The topic-routed context actively increases the model's uncertainty about the true continuation — it doesn't just fail to help, it interferes with prediction.
 
 Topic coherence — does the generated text stay on-topic with the prompt? No. Prompt-continuation engram similarity was 0.489 with topic routing versus 0.522 without. Topic-routed generations actually drift further from the prompt's topic.
 
@@ -100,15 +100,7 @@ Routing confidence correlation — does better routing predict better results? N
 
 Repetition and copying — is the model degenerating? No. Repetition rates were unchanged (0.103 vs 0.106), and context overlap was only 4%. The model isn't parroting context.
 
-| Metric | No Context | Random Context | Topic-Routed |
-|--------|-----------|---------------|-------------|
-| Held-out perplexity | 35.8 | 36.1 | 38.1 |
-| Topic coherence | 0.522 | — | 0.489 |
-| Repetition (rep-3) | 0.106 | — | 0.103 |
-| Context overlap (3-gram) | — | — | 0.040 |
-| Routing confidence corr. | — | — | 0.090 |
-| MAUVE (50-tok) | 0.915 | — | 0.951 |
-| MAUVE (500-tok) | 0.919 | — | 0.962 |
+To put the numbers side by side: without any context, perplexity sits at 35.8 and MAUVE at 0.919. With random context, perplexity rises slightly to 36.1. With topic-routed context, perplexity rises further to 38.1 — but MAUVE jumps to 0.962. Topic coherence drops from 0.522 to 0.489. The routing confidence correlation is 0.09. Every metric that measures whether the context actually helps says no. The one metric that measures distributional similarity says yes.
 
 ## What's actually happening
 
@@ -116,11 +108,15 @@ The MAUVE improvement is real but misleading. Here's why.
 
 MAUVE measures distributional similarity between generated text and reference text in aggregate. The topic-routed context comes from WikiText-103 validation articles — encyclopedic text that is distributionally similar to the WikiText-103 test set references. When this context enters the model's window, it biases generation toward encyclopedic style and vocabulary, making the output look more like the reference distribution. MAUVE detects this and scores it higher.
 
-But "looking more like Wikipedia" is not the same as "being a better continuation of this specific prompt." The perplexity metric tests the latter — whether the context helps the model predict what actually comes next in the test set — and it says no. The topic context is distributionally helpful but conditionally unhelpful.
+But the model isn't getting better at answering the prompt. It's getting better at sounding like Wikipedia.
 
-This is the V16 dissociation in reverse. V16 showed better perplexity but worse MAUVE — the engram helped token prediction but narrowed the distribution. Topic routing shows better MAUVE but worse perplexity — the context broadens the distribution toward the reference corpus but doesn't help predict specific continuations.
+The perplexity metric tests whether the context helps the model predict what actually comes next in the test set — and it says no. Worse than no: the topic-routed context actively increases the model's uncertainty about the true continuation. Perplexity rises from 35.8 to 38.1 — the context doesn't just fail to help, it interferes. The topic context is distributionally helpful but conditionally harmful.
 
-The near-zero routing correlation (0.09) is the nail in the coffin for the relevance claim. If topic matching were driving the improvement, better-matched prompts should show larger benefits. They don't. The improvement is coming from context quantity and distributional bias, not from topical relevance.
+We call this distributional contamination: injecting in-distribution text into the context window improves distributional metrics without improving — and potentially degrading — conditional generation quality.
+
+This is the V16 dissociation in reverse. V16 showed better perplexity but worse MAUVE — the engram helped token prediction but narrowed the distribution. Topic routing shows better MAUVE but worse perplexity — distributional contamination broadens the output distribution toward the reference corpus while actively harming the model's ability to predict specific continuations.
+
+The near-zero routing correlation (0.09) is the nail in the coffin for the relevance claim. If topic matching were driving the improvement, better-matched prompts should show larger benefits. They don't. The improvement is coming from distributional contamination, not from topical relevance.
 
 An accuracy evaluation confirms this from two additional angles. We generated 50 paired continuations (baseline vs. topic-routed) and measured both automated and LLM-judged quality.
 
@@ -128,21 +124,21 @@ Automated: baseline wins 29 to 18 on semantic similarity to the real continuatio
 
 LLM-as-judge: we sent each pair to Llama 3.1 (running on a separate Mac Mini) for blind evaluation on coherence, relevance, and fluency. Baseline wins 28 to 22 — a narrower margin than the automated metrics, but the same direction. The LLM finds topic-routed generations competitive but not better.
 
-Four independent metrics now agree: perplexity (35.8 vs 38.1), semantic similarity (29-18), LLM judge (28-22), and routing correlation (r=0.09). MAUVE (0.962 vs 0.919) is the sole dissenter — measuring distributional bias rather than generation quality.
+Four independent metrics now agree: perplexity (35.8 vs 38.1), semantic similarity (29-18), LLM judge (28-22), and routing correlation (r=0.09). MAUVE (0.962 vs 0.919) is the sole dissenter — measuring distributional contamination rather than generation quality.
 
 ## What we actually learned
 
-The honest version of the result is this: injecting encyclopedic text into the context window makes a language model generate more encyclopedic-sounding text, which scores well against encyclopedic reference text. That's not topic routing working. That's distributional contamination being measured by a distributional metric.
+The honest version of the result is this: injecting encyclopedic text into the context window makes a language model generate more encyclopedic-sounding text, which scores well against encyclopedic reference text. That's not topic routing working. That's distributional contamination — context-induced distributional bias — being measured by a distributional metric.
 
 This is exactly the kind of false positive the evaluation suite was designed to catch. MAUVE alone would have told a convincing story — 0.962, best in the project, consistent across prompt lengths. The perplexity metric reveals that the story is wrong.
 
-The finding has value, but not the value we hoped for. It demonstrates three things:
+The finding has value, but not the value we hoped for. It demonstrates three things.
 
-First, MAUVE can be inflated by distributional bias in context. Any system that injects reference-distribution text into the context window will improve MAUVE without necessarily improving generation quality. This is a methodological warning for the RAG and context engineering communities.
+First, MAUVE is sensitive to distributional contamination. Any system that injects reference-distribution text into the context window will improve MAUVE without necessarily improving generation quality. This is a methodological warning for the RAG and context engineering communities.
 
 Second, the evaluation suite works. It caught a false positive that a single metric would have missed. The combination of distributional (MAUVE) and conditional (perplexity) metrics is necessary, not redundant.
 
-Third, the topic routing mechanism itself — engram extraction, clustering, context assembly — is mechanically sound. The failure is in the content it routes, not the routing itself. The system fills the context with validation-set article text, which is not the right content for predicting test-set continuations. In a conversational setting where the stored context is the user's own prior prompts (not external articles), the relevance signal would be very different.
+Third, the topic routing mechanism behaves as designed — engram extraction, clustering, context assembly all function correctly — but its outputs are not aligned with the prediction task in this setting. The system fills the context with validation-set article text, which is distributionally similar to the test set but not conditionally relevant to specific prompts. In a conversational setting where the stored context is the user's own prior turns (not external articles), the relevance signal would be fundamentally different.
 
 For perspective on the full trajectory: V16 scored 0.806 MAUVE with a system that helped perplexity but hurt MAUVE. Topic routing scores 0.962 MAUVE with a system that helps MAUVE but hurts perplexity. The elusive combination — help both — remains an open problem.
 
@@ -160,27 +156,27 @@ Context assembly fills the token budget from active clusters using exponential d
 
 ## What this means
 
-Three claims, revised in light of the evaluation suite.
+Three claims, revised in light of the evaluation suite. All three point to a single mismatch: representation quality, context usefulness, and evaluation metrics can move independently. Good representations do not guarantee useful context, and useful-looking metrics do not guarantee good generations.
 
-The methodological claim: **MAUVE alone is insufficient for evaluating context engineering systems.** A distributional metric can be inflated by distributional bias in the injected context. Any system that fills the context window with reference-distribution text will improve MAUVE without necessarily improving generation quality. Conditional metrics (held-out perplexity) and mechanism-validation metrics (routing confidence correlation) are necessary complements. This applies to RAG evaluation, memory systems, and any method that modifies context.
+The methodological claim: MAUVE alone is insufficient for evaluating context engineering systems. A distributional metric can be inflated by distributional bias in the injected context. Any system that fills the context window with reference-distribution text will improve MAUVE without necessarily improving generation quality. Conditional metrics (held-out perplexity) and mechanism-validation metrics (routing confidence correlation) are necessary complements. This applies to RAG evaluation, memory systems, and any method that modifies context.
 
-The empirical claim: **engram quality follows a signal-to-noise scaling law governed by token count.** Mean-pooling is denoising. Below a critical sequence length, semantic signal drowns in token-level noise and topic separability vanishes. Above it, clean linear separability emerges (97.3% at 512 tokens, 71.5% at sentence scale). This scaling law likely applies to any mean-pooled representation from any transformer.
+The empirical claim: engram quality follows a signal-to-noise scaling law governed by token count. Mean-pooling is denoising. Below a critical sequence length, semantic signal drowns in token-level noise and topic separability vanishes. Above it, clean linear separability emerges (97.3% at 512 tokens, 71.5% at sentence scale). This scaling law likely applies to any mean-pooled representation from any transformer.
 
-The theoretical claim: **hidden states encode semantics, not vocabulary, and this encoding is more informative than explicit supervision.** The adversarial benchmark proves the first part — the representation tracks what the sentence means, not what it says. The categorization head failure proves the second — raw geometric similarity outperforms a trained classifier by a factor of thirty. The model knows more about topics in its geometry than it can express through a supervised projection.
+The theoretical claim: hidden states encode semantics, not vocabulary, and this encoding is more informative than explicit supervision. The adversarial benchmark proves the first part — the representation tracks what the sentence means, not what it says. The categorization head failure proves the second — raw geometric similarity outperforms a trained classifier by a factor of thirty. The model knows more about topics in its geometry than it can express through a supervised projection.
 
 ## What we'd try next
 
-The evaluation suite changed what "next" means. The routing mechanism works at article scale. The short-text problem is real but secondary. The primary open problem is that routed context doesn't help the model predict specific continuations — it only biases the output distribution.
+The evaluation suite changed what "next" means. The routing mechanism works at article scale. The short-text problem is real but secondary. The primary open problem is distributional contamination: routed context doesn't help the model predict specific continuations — it only biases the output distribution toward the reference corpus.
 
-**Route the model's own conversation, not external articles.** The current evaluation populates clusters from WikiText validation articles — external text that is distributionally similar to the test set but not conditionally relevant to specific prompts. In a real conversational system, the stored context would be the user's own prior turns. This is a fundamentally different regime: the context is both distributionally and conditionally relevant. The perplexity result might reverse.
+Route the model's own conversation, not external articles. The current evaluation populates clusters from WikiText validation articles — external text that is distributionally similar to the test set but not conditionally relevant to specific prompts. In a real conversational system, the stored context would be the user's own prior turns. This is a fundamentally different regime: the context is both distributionally and conditionally relevant. The perplexity result might reverse.
 
-**Contrastive context evaluation.** For each prompt, compute perplexity under correct-topic context versus deliberately mismatched context. If correct < mismatched, the model is using the topic signal. If they're equal, context is being ignored. This directly tests whether the routing mechanism provides value beyond distributional bias.
+Contrastive context evaluation. For each prompt, compute perplexity under correct-topic context versus deliberately mismatched context. If correct is lower than mismatched, the model is using the topic signal. If they're equal, context is being ignored. This directly tests whether the routing mechanism provides value beyond distributional bias.
 
-**Accumulate before routing.** Don't try to classify a single sentence. Buffer two or three prompts, concatenate, then compute the engram. This trades latency for accuracy by pushing the effective input length toward the regime where engrams work well.
+Accumulate before routing. Don't try to classify a single sentence. Buffer two or three prompts, concatenate, then compute the engram. This trades latency for accuracy by pushing the effective input length toward the regime where engrams work well.
 
-**Attention-weighted pooling.** Replace uniform mean-pooling with attention-weighted pooling, using the model's own attention scores to weight token contributions. Topically informative tokens should receive higher weight than function words, producing more discriminative engrams from short text.
+Attention-weighted pooling. Replace uniform mean-pooling with attention-weighted pooling, using the model's own attention scores to weight token contributions. Topically informative tokens should receive higher weight than function words, producing more discriminative engrams from short text.
 
-**Human preference evaluation.** Fifty prompt pairs, blind evaluation across three dimensions (coherence, fluency, informativeness), stratified by routing confidence. This is the gold standard that anchors the automatic metrics. Budget 2-3 hours.
+Human preference evaluation. Fifty prompt pairs, blind evaluation across three dimensions (coherence, fluency, informativeness), stratified by routing confidence. This is the gold standard that anchors the automatic metrics. Budget 2-3 hours.
 
 ## Reproducibility
 
@@ -199,6 +195,8 @@ Borgeaud, S., et al. (2022). Improving Language Models by Retrieving from Trilli
 Guu, K., et al. (2020). REALM: Retrieval-Augmented Language Model Pre-Training.
 
 Mu, J., et al. (2023). Learning to Compress Prompts with Gisting.
+
+Pillutla, K., et al. (2021). MAUVE: Measuring the Gap Between Neural Text and Human Text using Divergence Frontiers.
 
 Rae, J. W., et al. (2020). Compressive Transformers for Long-Range Sequence Modelling.
 
