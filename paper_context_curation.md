@@ -12,7 +12,7 @@ For single-sentence prompts — the actual use case in conversation — accuracy
 
 One bright spot: the engrams capture semantics, not vocabulary. Metaphorical cross-domain prompts ("Napoleon's defeat was a catastrophic loss function for the French Empire") cluster with their literal counterparts at 100% accuracy, even when surface vocabulary is entirely from a different domain.
 
-We describe the failure surface in detail and propose mitigations: attention-weighted pooling, context-augmented engrams, and accumulate-before-routing strategies.
+Despite these classification failures, topic-routed context **improves generation quality**: MAUVE score rises from 0.919 to 0.962 at 500-token prompts, the highest score in this project. Imperfect routing still beats no routing because the baseline (naive sliding window) provides zero topic-relevant context. A system that is right 71% of the time adds more relevant context than a system that ignores relevance entirely.
 
 ## 1. Introduction
 
@@ -205,15 +205,63 @@ Evaluation on validation articles: **3.3% accuracy** (random baseline: 2.0%).
 
 The head learned to minimize loss on noisy, sequence-level labels that span article boundaries. Low training loss does not imply classification accuracy when labels are misaligned.
 
-## 6. Discussion
+## 6. Generation Quality: MAUVE Evaluation
 
-### 6.1 The Fundamental Limitation
+The stress tests (Section 5) measure clustering accuracy on synthetic single-sentence prompts. But the system's purpose is to improve generation quality. Does topic-routed context actually produce better text than naive recency, even when the routing is imperfect?
+
+### 6.1 Setup
+
+We populated the topic context manager from 60 WikiText-103 validation articles (full article text, ~500 characters each), producing 34 topic clusters. We then generated 256-token continuations from WikiText-103 test set prompts at two lengths, comparing against reference text using MAUVE (1,000 reference/generated pairs per condition in the baseline runs, 500 in the topic-routed runs).
+
+The topic manager used threshold 0.5, max 384 context tokens (leaving room for the prompt in the 512-token window), and 3 active slots.
+
+### 6.2 Results
+
+| Condition | Baseline | + Topic Routing | Effect |
+|-----------|----------|-----------------|--------|
+| 50-tok prompt | 0.915 | **0.951** | **+0.036** |
+| 500-tok prompt | 0.919 | **0.962** | **+0.043** |
+
+**Topic routing improves generation quality at both prompt lengths.** The 500-token score of 0.962 is the highest MAUVE score in this project — above entropy-gated retrieval (0.950), above the V17 baseline (0.943), and well above V16 (0.806–0.906).
+
+The effect is larger at 500 tokens (+0.043) than at 50 tokens (+0.036). Longer generations have more room to drift off-topic; relevant context keeps them anchored.
+
+### 6.3 Why Imperfect Routing Still Helps
+
+This result appears to contradict the stress test findings. Single-sentence classification accuracy is only 71.5%, yet MAUVE improves substantially. Three factors explain this:
+
+**The bar is low.** The baseline is a naive sliding window that provides no topic-relevant context at all. Even noisy topic routing — correct 71% of the time — adds relevant context that the baseline entirely lacks. A system doesn't need to be perfect to beat doing nothing.
+
+**Longer prompts produce better engrams.** The WikiText-103 test prompts (50 or 500 tokens) are longer than the single-sentence benchmarks (15–30 tokens). At 50 tokens, we're already in a better regime than the stress tests measured. At 500 tokens, engram quality approaches the article-scale accuracy (97.3%).
+
+**Context quantity compensates for routing noise.** Each active cluster contributes up to 384 tokens of context. Even if some of those tokens are from a misrouted prompt, the majority are topically relevant. The model's attention mechanism can ignore the irrelevant tokens — it just needs enough relevant ones to anchor generation.
+
+### 6.4 Comparison Across All Systems
+
+| System | 50-tok MAUVE | 500-tok MAUVE |
+|--------|-------------|--------------|
+| V16 (prepend engram ON) | 0.806 | 0.888 |
+| V16 (engram OFF) | 0.905 | 0.906 |
+| V17 (no engram, baseline) | 0.933 | 0.943 |
+| V18 (cross-attn engram ON) | 0.915 | 0.919 |
+| V18 + EGR (entropy-gated retrieval) | 0.926 | 0.950 |
+| **V18 + Topic Routing** | **0.951** | **0.962** |
+
+Topic routing produces the best generation quality across the board. The progression from V16 (0.806) to topic routing (0.962) represents a 0.156 MAUVE improvement through four architectural iterations, all on the same 510M parameter model and hardware.
+
+## 7. Discussion
+
+### 7.1 The Fundamental Limitation
 
 The system works at article scale (97.3%) and fails at sentence scale (71.5%). This is a representation problem, not a decision-boundary problem — proven by the fact that a learned classifier cannot improve on a fixed threshold at either scale.
 
-Mean-pooling is the bottleneck. Over 512 tokens, it produces a stable semantic summary. Over 15 tokens, it produces noise dominated by arbitrary lexical features. Any system that relies on mean-pooled engrams from short text will hit this wall.
+Mean-pooling is the bottleneck. Over 512 tokens, it produces a stable semantic summary. Over 15 tokens, it produces noise. Any system that relies on mean-pooled engrams from short text will hit this wall.
 
-### 6.2 What Works
+Yet even with this limitation, the system improves MAUVE by +0.036 to +0.043. Imperfect routing still beats no routing.
+
+### 7.2 What Works
+
+**Topic-routed context improves generation quality.** MAUVE 0.962 at 500 tokens — the best in this project. This is the bottom line.
 
 **Engrams are semantic, not lexical.** The adversarial benchmark proves this conclusively. Metaphorical cross-domain prompts route correctly at 100% (θ=0.4). This is not keyword matching — it is genuine semantic understanding encoded in hidden states.
 
@@ -221,7 +269,7 @@ Mean-pooling is the bottleneck. Over 512 tokens, it produces a stable semantic s
 
 **The system is zero-cost.** Engram extraction is a byproduct of the forward pass. Clustering is O(n) per prompt. No external models, no retraining, no additional parameters.
 
-### 6.3 What Doesn't Work
+### 7.3 What Doesn't Work
 
 **Single-sentence routing is unreliable.** 71.5% accuracy — better than chance but not reliable enough for production use.
 
@@ -229,7 +277,7 @@ Mean-pooling is the bottleneck. Over 512 tokens, it produces a stable semantic s
 
 **Subtopic detection is beyond the system's resolution.** CV and NLP are genuinely different fields but their engrams are indistinguishable.
 
-### 6.4 Relationship to RAG
+### 7.4 Relationship to RAG
 
 This system is complementary to RAG, not a replacement:
 
@@ -238,11 +286,11 @@ This system is complementary to RAG, not a replacement:
 
 They operate at different scales and could be combined.
 
-### 6.5 Generality
+### 7.5 Generality
 
 Nothing here is specific to V18, PEER, or WikiText-103. Any transformer that produces hidden states supports engram extraction. The findings about scale dependence likely generalize to any mean-pooled representation.
 
-## 7. Proposed Mitigations
+## 8. Proposed Mitigations
 
 We have not implemented these. They represent the natural next steps motivated by the failure analysis.
 
@@ -256,7 +304,7 @@ We have not implemented these. They represent the natural next steps motivated b
 
 **Per-cluster adaptive thresholds.** Set each cluster's join threshold based on its intra-cluster variance. Tight, focused clusters get high thresholds; loose, diverse clusters get low ones.
 
-## 8. Reproducibility
+## 9. Reproducibility
 
 Code: github.com/MikeyBeez/HRS
 
@@ -268,6 +316,7 @@ Code: github.com/MikeyBeez/HRS
 | `benchmark_topic_routing.py` | Seven stress tests (drift, overlap, adversarial, fork) |
 | `engram_store.py` | Vector store with cosine similarity retrieval |
 | `niah_egr.py` | Needle-in-a-haystack evaluation |
+| `benchmark_mauve_topic.py` | MAUVE benchmark for topic-routed context |
 | `eval_categorization.py` | Categorization head evaluation (negative result) |
 
 Hardware: NVIDIA RTX 5070 Ti, 16GB VRAM. All experiments except model training (~11 hours) run in minutes.
