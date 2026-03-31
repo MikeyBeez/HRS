@@ -10,7 +10,7 @@ The standard fix is retrieval-augmented generation — RAG. Build an external in
 
 We built something simpler. We use the language model's own internal representations to organize context by topic. No external models. No retraining. No additional learned parameters. Just a few hundred lines of Python that let the model tell us what the conversation is about.
 
-It works beautifully at scale. It fails at the scale that matters most. And it helps anyway.
+It works beautifully at scale. It fails at the scale that matters most. And when we thought it was helping anyway, a deeper evaluation revealed we were measuring the wrong thing.
 
 ## The core idea
 
@@ -82,23 +82,61 @@ The failure comes from label noise. During training, each 512-token sequence get
 
 The takeaway: low training loss does not mean good classification when labels are noisy. And the model's raw hidden-state similarity — never explicitly trained for topic detection — outperforms a classifier that was.
 
-## The punchline: it helps anyway
+## The punchline: MAUVE says it helps, perplexity says it doesn't
 
-Here's where the story gets interesting. All those stress tests measure clustering accuracy on single-sentence prompts, and the numbers are mediocre at best. But the system's purpose isn't classification for its own sake. It's improving generation quality. Does topic-routed context actually produce better text?
+Here's where the story gets complicated.
 
-We populated the topic context manager from 60 WikiText-103 validation articles, producing 34 topic clusters. Then we generated 256-token continuations from test set prompts at two lengths and measured MAUVE score — a standard metric comparing the distribution of generated text against reference text.
+We populated the topic context manager from 60 WikiText-103 validation articles, producing 34 topic clusters. Then we ran two kinds of evaluation.
 
-At 50-token prompts, MAUVE rose from 0.915 (baseline) to 0.951 (with topic routing). At 500-token prompts, it rose from 0.919 to 0.962 — the highest MAUVE score in the entire project, across four model architectures and multiple retrieval systems, consistent across runs under identical decoding settings. Higher than entropy-gated retrieval. Higher than any baseline configuration.
+**MAUVE says yes.** We generated 256-token continuations from test set prompts and measured MAUVE score — a distributional metric comparing generated text against reference text. At 50-token prompts, MAUVE rose from 0.915 (baseline) to 0.951 (with topic routing). At 500-token prompts, it rose from 0.919 to 0.962 — the highest score in the project.
 
-The effect is larger at 500 tokens than at 50. Longer generations have more room to drift off-topic; relevant context keeps them anchored.
+**The evaluation suite says no.** We then ran four additional metrics designed to test whether the MAUVE improvement reflects genuine generation quality.
 
-This seems to contradict the stress test results. Single-sentence classification is only 71.5% accurate. How does a system that's wrong 29% of the time produce the best generation quality we've measured?
+Held-out perplexity — does topic context help the model predict the real continuation? No. Perplexity with topic context (38.1) was *worse* than with no context (35.8) and worse than with random context (36.1). The model is more surprised by the real continuation when topic-routed context is in the window.
 
-Three reasons. First, the bar is low. The baseline is a naive sliding window that provides zero topic-relevant context. Even noisy routing — correct 71% of the time — adds relevant context that the baseline entirely lacks. A system doesn't need to be perfect to beat doing nothing. Second, the test prompts (50 or 500 tokens) are longer than the single-sentence benchmarks, putting them in a better accuracy regime — exactly where the signal-to-noise scaling law predicts they should be. Third, the model's attention mechanism can ignore irrelevant tokens in the context — it just needs enough relevant ones to anchor generation.
+Topic coherence — does the generated text stay on-topic with the prompt? No. Prompt-continuation engram similarity was 0.489 with topic routing versus 0.522 without. Topic-routed generations actually drift further from the prompt's topic.
 
-There's a broader principle here: generation quality is tolerant to noise but sensitive to missing signal. A context window with some misrouted tokens is a minor problem — the model's attention can route around them. A context window with no relevant tokens is a catastrophic one — there's nothing for attention to find. This is why imperfect routing dominates perfect recency.
+Routing confidence correlation — does better routing predict better results? No. The Pearson correlation between routing confidence and perplexity improvement was 0.09 — essentially zero. Well-routed prompts don't benefit more than poorly-routed ones.
 
-For perspective on what the full trajectory looks like: the earliest model architecture scored 0.806 on 50-token MAUVE. Topic routing on the current architecture scores 0.951. That's a 0.145 improvement through four iterations, all on the same 510M parameter model and the same hardware.
+Repetition and copying — is the model degenerating? No. Repetition rates were unchanged (0.103 vs 0.106), and context overlap was only 4%. The model isn't parroting context.
+
+| Metric | No Context | Random Context | Topic-Routed |
+|--------|-----------|---------------|-------------|
+| Held-out perplexity | 35.8 | 36.1 | 38.1 |
+| Topic coherence | 0.522 | — | 0.489 |
+| Repetition (rep-3) | 0.106 | — | 0.103 |
+| Context overlap (3-gram) | — | — | 0.040 |
+| Routing confidence corr. | — | — | 0.090 |
+| MAUVE (50-tok) | 0.915 | — | 0.951 |
+| MAUVE (500-tok) | 0.919 | — | 0.962 |
+
+## What's actually happening
+
+The MAUVE improvement is real but misleading. Here's why.
+
+MAUVE measures distributional similarity between generated text and reference text in aggregate. The topic-routed context comes from WikiText-103 validation articles — encyclopedic text that is distributionally similar to the WikiText-103 test set references. When this context enters the model's window, it biases generation toward encyclopedic style and vocabulary, making the output look more like the reference distribution. MAUVE detects this and scores it higher.
+
+But "looking more like Wikipedia" is not the same as "being a better continuation of this specific prompt." The perplexity metric tests the latter — whether the context helps the model predict what actually comes next in the test set — and it says no. The topic context is distributionally helpful but conditionally unhelpful.
+
+This is the V16 dissociation in reverse. V16 showed better perplexity but worse MAUVE — the engram helped token prediction but narrowed the distribution. Topic routing shows better MAUVE but worse perplexity — the context broadens the distribution toward the reference corpus but doesn't help predict specific continuations.
+
+The near-zero routing correlation (0.09) is the nail in the coffin for the relevance claim. If topic matching were driving the improvement, better-matched prompts should show larger benefits. They don't. The improvement is coming from context quantity and distributional bias, not from topical relevance.
+
+## What we actually learned
+
+The honest version of the result is this: injecting encyclopedic text into the context window makes a language model generate more encyclopedic-sounding text, which scores well against encyclopedic reference text. That's not topic routing working. That's distributional contamination being measured by a distributional metric.
+
+This is exactly the kind of false positive the evaluation suite was designed to catch. MAUVE alone would have told a convincing story — 0.962, best in the project, consistent across prompt lengths. The perplexity metric reveals that the story is wrong.
+
+The finding has value, but not the value we hoped for. It demonstrates three things:
+
+First, MAUVE can be inflated by distributional bias in context. Any system that injects reference-distribution text into the context window will improve MAUVE without necessarily improving generation quality. This is a methodological warning for the RAG and context engineering communities.
+
+Second, the evaluation suite works. It caught a false positive that a single metric would have missed. The combination of distributional (MAUVE) and conditional (perplexity) metrics is necessary, not redundant.
+
+Third, the topic routing mechanism itself — engram extraction, clustering, context assembly — is mechanically sound. The failure is in the content it routes, not the routing itself. The system fills the context with validation-set article text, which is not the right content for predicting test-set continuations. In a conversational setting where the stored context is the user's own prior prompts (not external articles), the relevance signal would be very different.
+
+For perspective on the full trajectory: V16 scored 0.806 MAUVE with a system that helped perplexity but hurt MAUVE. Topic routing scores 0.962 MAUVE with a system that helps MAUVE but hurts perplexity. The elusive combination — help both — remains an open problem.
 
 ## How the system works in practice
 
@@ -114,33 +152,33 @@ Context assembly fills the token budget from active clusters using exponential d
 
 ## What this means
 
-Three claims, in order of depth.
+Three claims, revised in light of the evaluation suite.
 
-The practical claim: topic-routed context assembly works today, as-is, for any transformer. The requirements are hidden states (any transformer), mean-pooling (trivial), and cosine similarity (standard). No external models, no retraining, no additional parameters. This is not a property of our model. It is a property of transformer representations.
+The methodological claim: **MAUVE alone is insufficient for evaluating context engineering systems.** A distributional metric can be inflated by distributional bias in the injected context. Any system that fills the context window with reference-distribution text will improve MAUVE without necessarily improving generation quality. Conditional metrics (held-out perplexity) and mechanism-validation metrics (routing confidence correlation) are necessary complements. This applies to RAG evaluation, memory systems, and any method that modifies context.
 
-The empirical claim: engram quality follows a signal-to-noise scaling law governed by token count. Mean-pooling is denoising. Below a critical sequence length, semantic signal drowns in token-level noise and topic separability vanishes. Above it, clean linear separability emerges. This scaling law likely applies to any mean-pooled representation from any transformer — the mechanism is statistical averaging, not architecture-specific.
+The empirical claim: **engram quality follows a signal-to-noise scaling law governed by token count.** Mean-pooling is denoising. Below a critical sequence length, semantic signal drowns in token-level noise and topic separability vanishes. Above it, clean linear separability emerges (97.3% at 512 tokens, 71.5% at sentence scale). This scaling law likely applies to any mean-pooled representation from any transformer.
 
-The theoretical claim: hidden states encode semantics, not vocabulary, and this encoding is more informative than explicit supervision. The adversarial benchmark proves the first part — the representation tracks what the sentence means, not what it says. The categorization head failure proves the second — raw geometric similarity outperforms a trained classifier by a factor of thirty. The model knows more about topics in its geometry than it can express through a supervised projection. That's not a quirk of our setup. It's a statement about the relationship between representation learning and label noise.
+The theoretical claim: **hidden states encode semantics, not vocabulary, and this encoding is more informative than explicit supervision.** The adversarial benchmark proves the first part — the representation tracks what the sentence means, not what it says. The categorization head failure proves the second — raw geometric similarity outperforms a trained classifier by a factor of thirty. The model knows more about topics in its geometry than it can express through a supervised projection.
 
 ## What we'd try next
 
-We haven't implemented any of these, but the failure analysis points clearly at what should come next.
+The evaluation suite changed what "next" means. The routing mechanism works at article scale. The short-text problem is real but secondary. The primary open problem is that routed context doesn't help the model predict specific continuations — it only biases the output distribution.
 
-Accumulate before routing. Don't try to classify a single sentence. Buffer two or three prompts, concatenate, then compute the engram. This trades latency for accuracy by pushing the effective input length toward the regime where engrams work well.
+**Route the model's own conversation, not external articles.** The current evaluation populates clusters from WikiText validation articles — external text that is distributionally similar to the test set but not conditionally relevant to specific prompts. In a real conversational system, the stored context would be the user's own prior turns. This is a fundamentally different regime: the context is both distributionally and conditionally relevant. The perplexity result might reverse.
 
-Attention-weighted pooling. Replace uniform mean-pooling with attention-weighted pooling, using the model's own attention scores to weight token contributions. Topically informative tokens should receive higher weight than function words, producing more discriminative engrams from short text.
+**Contrastive context evaluation.** For each prompt, compute perplexity under correct-topic context versus deliberately mismatched context. If correct < mismatched, the model is using the topic signal. If they're equal, context is being ignored. This directly tests whether the routing mechanism provides value beyond distributional bias.
 
-Context-augmented engrams. When computing an engram for a new prompt, include previous prompts as context. The engram then captures the topic conditioned on conversation history, not in isolation.
+**Accumulate before routing.** Don't try to classify a single sentence. Buffer two or three prompts, concatenate, then compute the engram. This trades latency for accuracy by pushing the effective input length toward the regime where engrams work well.
 
-Per-cluster adaptive thresholds. Set each cluster's join threshold based on its intra-cluster variance. Tight, focused clusters demand higher similarity for new members; loose, diverse clusters accept lower similarity.
+**Attention-weighted pooling.** Replace uniform mean-pooling with attention-weighted pooling, using the model's own attention scores to weight token contributions. Topically informative tokens should receive higher weight than function words, producing more discriminative engrams from short text.
 
-Multi-scale engrams. Extract from multiple layers and concatenate. Different layers may capture topic at different resolutions — early layers for broad category, late layers for specific content.
+**Human preference evaluation.** Fifty prompt pairs, blind evaluation across three dimensions (coherence, fluency, informativeness), stratified by routing confidence. This is the gold standard that anchors the automatic metrics. Budget 2-3 hours.
 
 ## Reproducibility
 
 Code: github.com/MikeyBeez/HRS
 
-The core implementation is in topic_context.py (the TopicContextManager class). Supporting code handles the vector store, entropy monitoring, pair analysis and classifier training for both article-length and short prompts, the seven stress tests, MAUVE benchmarking, and the categorization head evaluation.
+The core implementation is in topic_context.py (the TopicContextManager class). Supporting code handles the vector store, entropy monitoring, pair analysis and classifier training for both article-length and short prompts, the seven stress tests, MAUVE benchmarking, the four-metric evaluation suite (eval_topic_routing.py), and the categorization head evaluation.
 
 Hardware: NVIDIA RTX 5070 Ti, 16GB VRAM. Everything runs in minutes except model training, which takes about 11 hours.
 
