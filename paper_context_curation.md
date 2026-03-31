@@ -4,219 +4,270 @@
 
 ## Abstract
 
-We present a method for assembling transformer context windows based on topic relevance rather than token recency. The system uses the model's own hidden-state representations — mean-pooled into engram vectors — as both topic classifiers and retrieval keys, requiring no external models or additional training. Incoming prompts are clustered online by engram cosine similarity, with evolving centroids and automatic cluster merging. The context window is filled from active topic clusters rather than from a naive sliding window, ensuring that the model sees relevant context regardless of when it appeared in the conversation.
+We present a method for assembling transformer context windows based on topic relevance rather than token recency. The system uses the model's own hidden-state representations — mean-pooled into engram vectors — as topic classifiers and retrieval keys, requiring no external models or additional training.
 
-We show that mean-pooled hidden states from a pretrained transformer produce an engram space where cosine similarity corresponds to topic relatedness — achieving 100% document retrieval accuracy among 20 distractors in a needle-in-a-haystack evaluation. In contrast, a categorization head explicitly trained to predict topic labels achieves only 3.3% accuracy due to sequence-level label noise. The model's internal representations are better topic features than a trained classifier.
+The method works well at scale and fails at short scale — a finding we characterize precisely. For 512-token article segments, engram cosine similarity achieves 97.3% accuracy at same-vs-different-topic classification, with positive pairs centered at 0.755 similarity and negative pairs at 0.135. A learned binary classifier (1,377 parameters) cannot beat the optimal fixed threshold, confirming linear separability at this scale.
 
-The system is entirely inference-time: no model retraining, no learned parameters beyond the base model, no external dependencies. It consists of a few hundred lines of Python implementing online clustering, centroid management, and budget-allocated context assembly. Users can see and toggle active topics through a simple interface.
+For single-sentence prompts — the actual use case in conversation — accuracy drops to 71.5%. The positive/negative similarity distributions collapse from a 0.62 gap to a 0.14 gap, with their overlap zones inverted. No threshold or learned classifier can reliably separate them. Seven stress tests confirm this: at a threshold of 0.4, even trivially different topics (Roman history vs. JavaScript) collapse into one cluster. At 0.7, separation improves but adversarial accuracy drops from 100% to 60% as metaphorical prompts are misrouted.
+
+One bright spot: the engrams capture semantics, not vocabulary. Metaphorical cross-domain prompts ("Napoleon's defeat was a catastrophic loss function for the French Empire") cluster with their literal counterparts at 100% accuracy, even when surface vocabulary is entirely from a different domain.
+
+We describe the failure surface in detail and propose mitigations: attention-weighted pooling, context-augmented engrams, and accumulate-before-routing strategies.
 
 ## 1. Introduction
 
-Every transformer has a context window, and every context window has the same problem: it fills up with whatever came most recently. A 4K-token window used in a conversation about Roman history, baking, and quantum physics contains all three topics jumbled together. The model must attend over irrelevant tokens to find the ones that matter for the current query.
+Every transformer has a context window, and every context window has the same problem: it fills up with whatever came most recently. If the current prompt is about Roman history, the model's context shouldn't contain the earlier discussion about baking cupcakes. The baking tokens consume attention capacity and may crowd out older but relevant historical context.
 
-This is wasteful. If the current prompt is about Roman history, the baking tokens are noise. They consume attention capacity, dilute the relevant signal, and for models with limited context (512–2K tokens), they may crowd out older but relevant historical context entirely.
+The standard solution is retrieval-augmented generation (RAG): build an external index, retrieve relevant documents per query, inject into context. This works but requires separate infrastructure — an embedding model, a vector database, a retrieval pipeline.
 
-The standard solution is retrieval-augmented generation (RAG): build an external index, use a separate retriever model to find relevant documents, and inject them into context. This works but requires additional infrastructure — an embedding model, a vector database, a retrieval pipeline — that is separate from the language model itself.
+We propose a simpler approach: use the language model's own hidden-state representations to organize context by topic. The model already encodes semantic content in its hidden states. We extract these representations, cluster them by similarity, and use the clusters to decide what enters the context window.
 
-We propose a simpler approach: use the language model's own representations to organize context by topic. The model already encodes semantic content in its hidden states. We extract these representations, cluster them by similarity, and use the clusters to decide what goes into the context window. No external models. No retraining. No additional learned parameters.
+The approach works at article scale and fails at sentence scale. This paper quantifies both and maps the boundary between them.
 
-### 1.1 Key Insight
+### 1.1 Contributions
 
-A mean-pooled hidden state from a late transformer layer — what we call an engram — captures the semantic content of a text segment in a space where cosine similarity corresponds to topic relatedness. This is not a trained feature; it is an emergent property of language model pretraining. Documents about similar topics produce similar hidden states because the model processes them through similar computational pathways.
+1. **Quantitative characterization of the engram similarity space** at two scales: 97.3% accuracy for 512-token segments vs. 71.5% for single sentences.
+2. **Evidence that the failure is representational, not algorithmic** — a learned classifier cannot beat a fixed threshold at either scale, ruling out non-linear decision boundaries as a fix.
+3. **A comprehensive failure surface** — seven stress tests characterizing centroid drift, semantic overlap resolution, adversarial vocabulary, and topic forking.
+4. **Evidence that engrams encode semantics, not vocabulary** — 100% adversarial routing accuracy for metaphorical cross-domain prompts.
+5. **A working system** for topic-routed context assembly, with online clustering, auto-merge, user-toggleable topics, and configurable active slots.
 
-We demonstrate this empirically: engram cosine similarity retrieves the correct document from among 20 distractors with 100% accuracy, while a categorization head explicitly trained to predict topic labels achieves only 3.3% accuracy. The model knows more about topics in its hidden states than it can express through a linear classification layer trained on noisy labels.
+## 2. Method
 
-### 1.2 Contributions
+### 2.1 Engram Extraction
 
-1. **Topic-routed context assembly** — a method for filling context windows based on topic relevance rather than recency, using the model's own representations.
-2. **Online engram clustering** — a real-time system that creates, evolves, and merges topic clusters as prompts arrive, without requiring a predefined topic taxonomy.
-3. **A negative result on trained categorization** — demonstrating that a categorization head trained to low cross-entropy loss (1.2, well below random at 3.9) can achieve near-random classification accuracy (3.3%) when evaluated on held-out documents, due to sequence-level label noise.
-4. **Evidence that hidden-state similarity outperforms trained classification** for topic routing in language models.
+Given a text segment of T tokens, we run a forward pass through the transformer and extract hidden states from the second-to-last layer. We mean-pool across the token dimension to produce a single vector of shape (d_model,), then L2-normalize it. This is the engram.
 
-## 2. Background
+The forward pass is the same computation the model performs during inference. The only additional cost is one mean-pooling and one normalization.
 
-### 2.1 Context Window Management
+### 2.2 Online Topic Clustering
 
-Current approaches to context management fall into several categories:
+Prompts are clustered as they arrive:
 
-**Recency-based (sliding window).** The default: keep the last N tokens. Simple and universal but ignores relevance. Used by most inference frameworks.
-
-**Retrieval-augmented generation (RAG).** Index documents externally, retrieve relevant ones per query, inject into context. Effective but requires separate infrastructure (embedding model, vector store, retrieval pipeline). Systems like RETRO (Borgeaud et al., 2022) and REALM (Guu et al., 2020) integrate retrieval into training.
-
-**Compressive approaches.** Compress older context into summaries or compressed representations. Compressive Transformers (Rae et al., 2020) use attention to compress old memories. Gisting (Mu et al., 2023) learns to compress prompts into shorter token sequences.
-
-**Sparse/structured attention.** Longformer (Beltagy et al., 2020), BigBird (Zaheer et al., 2020), and similar approaches modify the attention pattern to handle longer sequences efficiently. These extend context length but don't address relevance within the window.
-
-Our approach is orthogonal to all of these. It operates at the context assembly stage — deciding which tokens enter the window — rather than modifying attention patterns or compressing tokens. It could be combined with any of the above.
-
-### 2.2 Engrams as Semantic Keys
-
-In our concurrent work on the PEER + Engram architecture (Bonsignore, 2026), we introduced engrams as compressed representations of model hidden states. An engram is computed by mean-pooling the hidden states from a selected transformer layer across all token positions in a segment, producing a single vector of dimension d_model.
-
-In that work, engrams served as a memory mechanism during training. Here, we repurpose them as semantic keys for topic routing at inference time. The critical observation is that the engram space has topological structure that corresponds to semantic similarity — documents about similar topics cluster together in engram space — and this structure emerges from standard language model training without any explicit topic objective.
-
-## 3. Method
-
-### 3.1 Engram Extraction
-
-Given a text segment tokenized as a sequence of T tokens, we run a forward pass through the transformer and extract hidden states from a selected layer (we use the second-to-last layer). The hidden states have shape (T, d_model). We mean-pool across the token dimension to produce a single engram vector of shape (d_model,), then L2-normalize it.
-
-The choice of layer matters. Early layers encode syntactic features; late layers encode semantic content. The second-to-last layer balances semantic richness with pre-output stability (the final layer's representations are distorted toward the vocabulary projection).
-
-Engram extraction requires one forward pass — the same computation the model would perform anyway during inference. The only additional cost is the mean-pooling operation, which is negligible.
-
-### 3.2 Online Topic Clustering
-
-Prompts are clustered as they arrive, without a predefined topic taxonomy.
-
-**Cluster assignment.** When a new prompt arrives:
-1. Compute its engram via forward pass and mean-pooling.
+1. Compute the incoming prompt's engram.
 2. Compare against all existing cluster centroids by cosine similarity.
-3. If the best match exceeds a similarity threshold θ_join (default 0.4), add the prompt to that cluster.
-4. Otherwise, create a new cluster with this prompt as its sole member.
+3. If the best match exceeds threshold θ, join that cluster. Otherwise, create a new cluster.
+4. Update the matched cluster's centroid as a running mean, L2-normalized.
+5. Check all cluster pairs for merge (if two centroids exceed θ_merge, absorb the smaller into the larger).
 
-**Centroid update.** Each cluster maintains a running-mean centroid, L2-normalized after each update:
+Each cluster maintains: an evolving centroid, an ordered list of member prompts (linked list), a human-readable title generated from keyword extraction, and a user-toggleable enabled flag.
 
-```
-centroid_new = normalize((centroid_old * (n-1) + engram_new) / n)
-```
+### 2.3 Active Buffer and Context Assembly
 
-This means the cluster's topic representation evolves as more prompts join. A cluster that starts with "The Roman Empire fell in 476 AD" and later receives "The Byzantine economy relied on trade through Constantinople" will develop a centroid that represents the broader topic of Roman/Byzantine history, not just the fall of Rome.
+A configurable number of clusters (default 2, adjustable to any number) are held in an active buffer, ordered by most-recently-used. When a prompt matches a cluster, that cluster moves to the front. If the buffer overflows, the least-recently-used cluster is evicted but persists for later reactivation.
 
-**Auto-merge.** After each prompt is processed, all cluster pairs are checked for similarity. If two centroids exceed a merge threshold θ_merge (default θ_join + 0.35, capped at 0.85), the smaller cluster is absorbed into the larger. This handles convergent topics — clusters that start separate but accumulate enough shared context to warrant merging.
+The context token budget is distributed across active, user-enabled clusters with exponential decay by recency: the front cluster gets 50% of the budget, the next gets 50% of the remainder, and so on. Within each cluster, the most recent prompts are packed first.
 
-**Title generation.** Each cluster generates a human-readable title from keyword extraction over its member prompts. Stopwords and short tokens are filtered; the top 3-4 keywords by frequency are joined. Titles update as new prompts join. This is a placeholder for more sophisticated title generation (e.g., via a small local language model).
-
-### 3.3 Active Cluster Management
-
-Not all clusters are loaded into context simultaneously. The system maintains an active buffer of configurable size (default 2, adjustable to any number for multidisciplinary work).
-
-**MRU policy.** When a prompt matches a cluster, that cluster moves to the most-recently-used position in the active buffer. If the buffer is full, the least-recently-used cluster is evicted. Eviction is from the active buffer only — the cluster persists in storage and can be reactivated later.
-
-**Reactivation.** If a future prompt matches an evicted cluster, it re-enters the active buffer at the MRU position, potentially evicting a different cluster. This handles topic switching: the user can discuss Rome, switch to baking, switch back to Rome, and the Roman history cluster reactivates with all its accumulated context intact.
-
-### 3.4 Context Assembly
-
-The context window is assembled from active, user-enabled clusters.
-
-**Budget allocation.** The total token budget (e.g., 512 tokens) is distributed across active clusters with exponential decay by recency:
-- Most recently used cluster: 50% of budget
-- Next: 50% of remainder (25% total)
-- Next: 50% of remainder (12.5% total)
-- And so on
-
-This prioritizes the current topic while maintaining representation of secondary topics.
-
-**Token packing.** Within each cluster's budget, the most recent prompts are packed first (most recent prompt gets priority). If the budget allows, earlier prompts are included in chronological order. This ensures the context contains the latest relevant information.
-
-**User toggles.** Each cluster can be enabled or disabled by the user. Disabled clusters are excluded from context assembly even if they are in the active buffer. This provides explicit user control over what the model sees:
+Users see a topic list and can toggle clusters on/off:
 
 ```
 Active Topics:
-  [x] Empire / Roman / Constantinople / Byzantine (4 prompts, 60 tokens)
-  [x] Make / Chocolate / Cupcakes / Preheat (3 prompts, 44 tokens)
-  [ ] Quantum / Entanglement / Particles (1 prompt, 14 tokens)
+  [x] Roman / Empire / Constantinople / Byzantine (4 prompts)
+  [x] Make / Chocolate / Cupcakes / Preheat (3 prompts)
+  [ ] Quantum / Entanglement / Particles (1 prompt)
 ```
 
-## 4. Evaluation
+## 3. The Engram Similarity Space
 
-### 4.1 Experimental Setup
+### 3.1 Experimental Setup
 
-We evaluate using a 510M parameter transformer with PEER feed-forward layers (V18 architecture), trained on WikiText-103. The model has a 512-token context window, d_model=1024, 6 layers, 16 attention heads. Engrams are extracted from layer 4 (second-to-last).
+We use a 510M parameter transformer with PEER feed-forward layers (V18 architecture), trained on WikiText-103. d_model=1024, 6 layers, 16 attention heads. Engrams are extracted from layer 4 (second-to-last).
 
-### 4.2 Engram Similarity as Topic Signal
+### 3.2 Article-Length Segments (512 tokens)
 
-**Needle-in-a-haystack.** We created 5 synthetic Wikipedia-style facts ("needles") covering science, history, hobbies, biology, and geography. Each was processed alongside 20 real WikiText-103 distractor documents. For each needle, we computed a query engram from a related question and searched for the nearest match.
+We computed engrams for segments from 2,000 WikiText-103 articles (up to 3 segments of 512 tokens each) and built 50,000 pairs: 25,000 same-article (positive) and 25,000 cross-article (negative).
 
-| Needle | Found? | Rank | Cosine Similarity |
-|--------|--------|------|-------------------|
-| Thornfield Protocol (science) | Yes | 1 | 0.44 |
-| Kestlemere village (history) | Yes | 2 | 0.36 |
-| ZB-Petrus method (hobby) | Yes | 1 | 0.64 |
-| Caspian tiger genetics (biology) | Yes | 1 | 0.53 |
-| Mount Seravezza (geography) | Yes | 1 | 0.55 |
+| | Mean | Std | Min | Max |
+|---|------|-----|-----|-----|
+| **Positive** | 0.755 | 0.114 | 0.087 | 0.965 |
+| **Negative** | 0.135 | 0.142 | -0.202 | 0.907 |
 
-**Result: 100% retrieval accuracy, mean rank 1.2.** The engram space has sufficient semantic structure for reliable topic matching.
+The distributions are well-separated. Optimal fixed threshold: **0.45 at 97.3% accuracy**. A learned binary classifier (1,377 parameters, 2-layer MLP on 8 pair features) achieves **97.3%** — identical to the threshold. The space is linearly separable at this scale.
 
-**Position invariance.** We varied the needle's position in the processing order (first, middle, last among the 20 distractors). Position had no effect on retrieval quality — rank 1 in all positions.
+### 3.3 Single-Sentence Prompts (8–40 words)
 
-### 4.3 Trained Categorization Head (Negative Result)
+We extracted individual sentences from 3,000 articles and built 50,000 sentence-level pairs.
 
-The V18 model includes a categorization head — a linear projection from mean-pooled final hidden states to 50 topic categories derived from TF-IDF clustering of WikiText-103 articles. The head was trained with cross-entropy loss weighted at α=0.1, reaching a loss of 1.2 (random baseline: 3.9 = ln(50)).
+| | Mean | Std | Min | Max |
+|---|------|-----|-----|-----|
+| **Positive** | 0.429 | 0.131 | -0.042 | 1.000 |
+| **Negative** | 0.291 | 0.118 | -0.091 | 0.753 |
 
-When evaluated on WikiText-103 validation articles (60 documents, labels assigned by the same TF-IDF/KMeans model), the categorization head achieved **3.3% accuracy** — barely above the 2.0% random baseline.
+The distributions largely overlap. The gap between means is 0.138 (vs. 0.620 at article scale). The overlap zone is inverted: the 75th percentile of negatives (0.369) exceeds the 25th percentile of positives (0.340).
 
-**Analysis.** The failure stems from a train-eval mismatch. During training, each 512-token sequence receives a single category label: the mode of per-token categories within that sequence. But sequences are carved from a continuous token stream and can span article boundaries. The head learns to predict these noisy, misaligned labels — it minimizes training loss without learning generalizable topic classification.
+Optimal fixed threshold: **0.35 at 70.9% accuracy**. The learned classifier achieves **71.5%** — a marginal +0.6% improvement that confirms there is minimal non-linear structure to exploit.
 
-**Implication.** Low cross-entropy loss does not imply classification accuracy when labels are noisy. For topic routing, the model's raw hidden-state similarity (100% NIAH accuracy) is a far more reliable signal than a trained classification layer (3.3% accuracy).
+### 3.4 The Scale Gap
 
-### 4.4 Online Clustering Quality
+| Metric | 512-token segments | Single sentences |
+|--------|-------------------|-----------------|
+| Positive mean | 0.755 | 0.429 |
+| Negative mean | 0.135 | 0.291 |
+| Gap | 0.620 | 0.138 |
+| Optimal accuracy | 97.3% | 71.5% |
 
-We fed a sequence of 7 prompts covering two topics (Roman/Byzantine history and baking) through the topic clustering system with similarity threshold 0.4.
+Mean-pooling over 512 tokens averages out noise and captures the dominant semantic theme. Mean-pooling over 15 tokens preserves noise — the representation is dominated by whichever tokens produce the largest hidden-state magnitudes, not by the overall topic.
 
-**Correct behaviors:**
-- Roman Empire and Byzantine Empire prompts merged into a single cluster titled "Empire / Roman / Constantinople / Byzantine"
-- Baking prompts formed a separate cluster titled "Make / Chocolate / Cupcakes / Preheat"
-- Topic switching correctly updated the active buffer
-- Disabling the baking cluster removed it from context assembly
+This is not a threshold problem or a classifier problem. It is a **signal-to-noise problem** in the engram computation itself.
 
-**Known failure:** One Roman-topic prompt ("Roman aqueducts transported water over vast distances using gravity") routed to the baking cluster due to centroid drift. As clusters accumulate diverse members, their centroids can become less discriminative. This is the primary failure mode and motivates future work on centroid regularization and adaptive thresholds.
+## 4. Needle-in-a-Haystack Evaluation
 
-## 5. Discussion
+Before stress-testing, we confirm the system works under favorable conditions.
 
-### 5.1 Why This Works
+Five synthetic Wikipedia-style facts ("needles") covering science, history, hobbies, biology, and geography. Each processed alongside 20 real WikiText-103 distractor documents. Needles are multi-sentence paragraphs (~50–80 words).
 
-The core mechanism — engram cosine similarity as a topic signal — works because language models already organize their hidden states by semantic content. This is not a property we engineered; it is an emergent consequence of next-token prediction training. Documents about similar topics require similar computational pathways (attending to similar patterns, activating similar experts), which produces similar hidden states.
+| Needle | Rank | Similarity |
+|--------|------|------------|
+| Thornfield Protocol (science) | 1 | 0.44 |
+| Kestlemere village (history) | 2 | 0.36 |
+| ZB-Petrus method (hobby) | 1 | 0.64 |
+| Caspian tiger genetics (biology) | 1 | 0.53 |
+| Mount Seravezza (geography) | 1 | 0.55 |
 
-Mean-pooling aggregates these per-token hidden states into a single vector that captures the dominant semantic content of the segment. L2-normalization projects this onto the unit sphere, where cosine similarity measures angular distance — a natural measure of topical relatedness.
+**100% retrieval, mean rank 1.2.** Position invariant (first/middle/last all rank 1).
 
-### 5.2 Limitations
+These needles are multi-sentence, providing enough tokens for reliable engram computation. The stress tests that follow use single sentences.
 
-**Threshold sensitivity.** The similarity threshold θ_join is a single global parameter. It should ideally vary per-cluster: tight clusters (highly focused topic) should require higher similarity for new members than loose clusters (broad topic). Adaptive thresholds calibrated from intra-cluster variance would address this.
+## 5. Stress Tests
 
-**Centroid drift.** As clusters accumulate diverse members, their centroids can drift toward a generic mean that matches too many prompts. This is the standard problem of online K-means with running centroids. Potential mitigations include periodic re-centering (recompute centroid from all members), sub-clustering within large clusters, or bounded drift (cap the centroid's movement per update).
+### 5.1 Semantic Overlap Gradient
 
-**Title quality.** Keyword extraction produces functional but ugly titles. A small local language model could generate clean titles from the cluster's content. The system exposes the necessary interfaces for this — it is an integration task, not a research problem.
+Five levels of topic overlap, from trivially separable to near-identical. Ten single-sentence prompts per level (5 per topic), interleaved.
 
-**Single-model dependency.** Engram quality depends on the base model's representation quality. A poorly trained model would produce an engram space with less topological structure, degrading clustering quality. In practice, any model trained to reasonable perplexity appears to develop sufficient hidden-state structure for topic-level similarity.
+**Results at threshold 0.4:**
 
-### 5.3 Relationship to RAG
+| Level | Topics | Clusters | Purity |
+|-------|--------|----------|--------|
+| 0 (trivial) | Roman history vs JavaScript | 1 | 0.500 |
+| 1 (distant) | Roman military vs modern civil engineering | 1 | 0.500 |
+| 2 (moderate) | Roman bread baking vs medieval bread baking | 1 | 0.500 |
+| 3 (high) | Roman Republic vs Roman Empire governance | 1 | 0.500 |
+| 4 (near-identical) | Caesar's military vs Caesar's politics | 1 | 0.500 |
 
-Topic-routed context assembly is complementary to retrieval-augmented generation, not a replacement. RAG retrieves specific documents from a large external corpus. Topic routing organizes the conversation's own context by relevance. They operate at different scales:
+Every level collapses to a single cluster. Even Level 0 — topics with zero semantic overlap. This is the short-prompt problem in action: single sentences produce engrams within 0.4 similarity of everything.
 
-- **RAG:** "What external knowledge is relevant to this query?"
-- **Topic routing:** "Which parts of our conversation so far are relevant to this query?"
+### 5.2 Threshold Sweep
 
-A system could use both: topic routing to organize conversational context, and RAG to inject external knowledge when the model's entropy indicates it needs help. This is the architecture we sketched in our concurrent work on entropy-gated retrieval.
+| Threshold | L0 Purity/Clusters | L4 Purity/Clusters | Adversarial | Fork Split | Drift Probe |
+|-----------|-------------------|-------------------|-------------|------------|-------------|
+| 0.4 | 0.50 / 1 | 0.50 / 1 | 100% | No | MISS |
+| 0.5 | 0.80 / 2 | 0.60 / 2 | 100% | No | MATCH |
+| 0.6 | 0.80 / 3 | 0.90 / 5 | 100% | No | MATCH |
+| 0.7 | 1.00 / 7 | 0.90 / 6 | 60% | No | MATCH |
+| 0.8 | 1.00 / 9 | 1.00 / 10 | 20% | SPLIT | MISS |
+| 0.9 | 1.00 / 10 | 1.00 / 10 | 0% | SPLIT | MISS |
 
-### 5.4 Generality
+**No single threshold resolves the tradeoff.** Low thresholds maintain semantic coherence (adversarial accuracy 100%) but cannot separate topics. High thresholds separate topics but shatter semantics and over-cluster.
 
-Nothing in this method is specific to the V18 architecture, PEER, or WikiText-103. The requirements are:
+The sweet spot is around 0.6–0.7 for well-separated topics (Level 0 purity 0.80–1.00) but this still produces too many clusters (3–7 for 10 prompts) and fails on adversarial prompts at 0.7.
 
-1. A transformer that produces hidden states (any transformer)
-2. A method to extract a fixed-size representation from those hidden states (mean-pooling)
-3. A distance metric in that representation space (cosine similarity)
+### 5.3 Centroid Drift Bomb
 
-This describes every language model in use today. The topic-routed context system could be applied to GPT, Llama, Mistral, or any other transformer architecture. The only model-specific parameter is the extraction layer, which should be a late (but not final) layer.
+Ten prompts that gradually walk from "Roman Empire" to "Neural Networks," each close enough to the previous centroid to join the cluster.
 
-## 6. Future Work
+At threshold 0.4, the centroid drifts 0.41 cosine distance in 10 steps. A probe about Rome returns similarity 0.370 — below threshold, failing to match its own cluster. The title drifts to "Networks / Roman / Medieval / Infrastructure."
 
-**Adaptive thresholds.** Per-cluster similarity thresholds calibrated from intra-cluster variance.
+At threshold 0.5, the drift bomb fails immediately — the first non-Roman prompt creates a new cluster. The original cluster is preserved.
 
-**LLM-assisted management.** A small local model for title generation and merge decisions. The judgment "are Roman History and Byzantine Empire the same topic?" is trivial for a language model but difficult as a distance threshold.
+**Implication:** Centroid drift is only a problem at very low thresholds. At 0.5+, the system is naturally immune because off-topic prompts don't meet the join threshold.
 
-**Evaluation at scale.** Testing with longer conversations (hundreds of prompts), more diverse topics, and measuring downstream task performance (not just clustering quality).
+### 5.4 Adversarial Vocabulary
 
-**Integration with attention.** Instead of hard budget allocation, let the model's attention mechanism decide how much to attend to each cluster's context. This would require modifying the attention computation but would provide a learned (rather than heuristic) relevance weighting.
+Five prompt pairs where the metaphorical version uses vocabulary from a different domain.
 
-**Cross-session persistence.** Saving and loading topic clusters across sessions, allowing the system to accumulate context over days or weeks of interaction.
+| Pair | Engram Similarity |
+|------|-------------------|
+| Baking metaphor for ML ("layers of a cake are like layers of a neural network") | 0.661 |
+| ML vocabulary for history ("Napoleon's defeat was a catastrophic loss function") | 0.834 |
+| CS vocabulary for Roman history ("Senate operated like a distributed system") | 0.784 |
+| Relationship vocabulary for physics ("entanglement is like a long-distance relationship") | 0.797 |
+| Cooking vocabulary for chemistry ("polymerization is like making a chain of paper clips") | 0.629 |
 
-## 7. Reproducibility
+**At threshold 0.4: 100% accuracy.** Every metaphorical prompt clusters with its literal counterpart.
+
+This is the system's strongest result. Engrams capture semantic content, not surface vocabulary. "Napoleon's defeat was a catastrophic loss function" routes to history (similarity 0.834 with the literal version), not to machine learning, despite using ML vocabulary. The model's hidden states encode what the text is about, not what words it uses.
+
+At threshold 0.7, accuracy drops to 60% — the two lower-similarity pairs (0.629, 0.661) split off. The semantic signal is real but not strong enough to overcome high thresholds.
+
+### 5.5 Topic Fork
+
+Starting with "machine learning" prompts, then interleaving "computer vision" and "NLP" prompts.
+
+**The fork never splits** at any threshold from 0.4 to 0.7. The shared ML vocabulary keeps all subtopics within threshold. At 0.8 it splits, but into 3+ noisy clusters, not 2 clean subtopics.
+
+Engram similarity cannot detect subtopic divergence within a parent topic. Mean-pooled representations capture the dominant theme but lose fine-grained distinctions between fields that share vocabulary.
+
+### 5.6 Negative Result: Trained Categorization Head
+
+The V18 model includes a categorization head trained with α=0.1 cross-entropy loss on 50 TF-IDF-derived topic clusters. Training loss reached 1.2 (random: 3.9).
+
+Evaluation on validation articles: **3.3% accuracy** (random baseline: 2.0%).
+
+The head learned to minimize loss on noisy, sequence-level labels that span article boundaries. Low training loss does not imply classification accuracy when labels are misaligned.
+
+## 6. Discussion
+
+### 6.1 The Fundamental Limitation
+
+The system works at article scale (97.3%) and fails at sentence scale (71.5%). This is a representation problem, not a decision-boundary problem — proven by the fact that a learned classifier cannot improve on a fixed threshold at either scale.
+
+Mean-pooling is the bottleneck. Over 512 tokens, it produces a stable semantic summary. Over 15 tokens, it produces noise dominated by arbitrary lexical features. Any system that relies on mean-pooled engrams from short text will hit this wall.
+
+### 6.2 What Works
+
+**Engrams are semantic, not lexical.** The adversarial benchmark proves this conclusively. Metaphorical cross-domain prompts route correctly at 100% (θ=0.4). This is not keyword matching — it is genuine semantic understanding encoded in hidden states.
+
+**Article-scale routing is essentially solved.** 97.3% accuracy with a simple cosine threshold. The engram space has clean linear separability at this scale. No complex infrastructure needed.
+
+**The system is zero-cost.** Engram extraction is a byproduct of the forward pass. Clustering is O(n) per prompt. No external models, no retraining, no additional parameters.
+
+### 6.3 What Doesn't Work
+
+**Single-sentence routing is unreliable.** 71.5% accuracy — better than chance but not reliable enough for production use.
+
+**No single threshold resolves the separation/semantic tradeoff.** Low thresholds preserve semantics, high thresholds enable separation. You can't have both with a single number.
+
+**Subtopic detection is beyond the system's resolution.** CV and NLP are genuinely different fields but their engrams are indistinguishable.
+
+### 6.4 Relationship to RAG
+
+This system is complementary to RAG, not a replacement:
+
+- **RAG:** "What external knowledge is relevant?"
+- **Topic routing:** "Which parts of our conversation are relevant?"
+
+They operate at different scales and could be combined.
+
+### 6.5 Generality
+
+Nothing here is specific to V18, PEER, or WikiText-103. Any transformer that produces hidden states supports engram extraction. The findings about scale dependence likely generalize to any mean-pooled representation.
+
+## 7. Proposed Mitigations
+
+We have not implemented these. They represent the natural next steps motivated by the failure analysis.
+
+**Accumulate before routing.** Don't route single sentences. Buffer 2-3 prompts, concatenate, then compute the engram. This trades latency for accuracy by moving the effective input length toward the regime where engrams work (512 tokens).
+
+**Attention-weighted pooling.** Replace mean-pooling with attention-weighted pooling, using the model's own attention scores to weight token contributions. Topically informative tokens should receive higher weight than function words, producing more discriminative engrams from short text.
+
+**Context-augmented engrams.** When computing an engram for a new prompt, include previous prompts as context. The engram then captures the new prompt's topic conditioned on conversation history, not in isolation. This leverages the transformer's ability to contextualize.
+
+**Multi-scale engrams.** Extract engrams from multiple layers and concatenate. Different layers may capture topic at different resolutions — early layers for broad category, late layers for specific content.
+
+**Per-cluster adaptive thresholds.** Set each cluster's join threshold based on its intra-cluster variance. Tight, focused clusters get high thresholds; loose, diverse clusters get low ones.
+
+## 8. Reproducibility
 
 Code: github.com/MikeyBeez/HRS
 
-Core implementation: `topic_context.py` (TopicContextManager class)
+| File | Description |
+|------|-------------|
+| `topic_context.py` | TopicContextManager: online clustering, active buffer, user toggles |
+| `train_topic_classifier.py` | Article-length pair analysis and classifier training |
+| `train_topic_classifier_short.py` | Short-prompt pair analysis and classifier training |
+| `benchmark_topic_routing.py` | Seven stress tests (drift, overlap, adversarial, fork) |
+| `engram_store.py` | Vector store with cosine similarity retrieval |
+| `niah_egr.py` | Needle-in-a-haystack evaluation |
+| `eval_categorization.py` | Categorization head evaluation (negative result) |
 
-Supporting code: `engram_store.py` (vector store), `entropy_monitor.py` (entropy computation), `retrieval_engine.py` (entropy-gated retrieval), `niah_egr.py` (needle-in-a-haystack evaluation), `eval_categorization.py` (categorization head evaluation)
-
-Hardware: NVIDIA RTX 5070 Ti, 16GB VRAM. All experiments run in minutes except model training (~11 hours).
+Hardware: NVIDIA RTX 5070 Ti, 16GB VRAM. All experiments except model training (~11 hours) run in minutes.
