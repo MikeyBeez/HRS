@@ -183,7 +183,8 @@ def peer_expert_utilization(model, val_loader: DataLoader, device: torch.device,
     all_indices = []
     n_total = None
 
-    for batch_idx, (x, y) in enumerate(val_loader):
+    for batch_idx, batch in enumerate(val_loader):
+        x, y = batch[0], batch[1]
         if batch_idx >= max_batches:
             break
         x = x.to(device)
@@ -238,7 +239,8 @@ def run_all_metrics(
         all_layer_reps[i] = []
         all_attn_weights[i] = []
 
-    for batch_idx, (x, y) in enumerate(val_loader):
+    for batch_idx, batch in enumerate(val_loader):
+        x, y = batch[0], batch[1]
         if batch_idx >= max_batches:
             break
 

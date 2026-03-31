@@ -142,6 +142,9 @@ class CombinedHRSLoss(nn.Module):
         gate_entropy_weight: float = 0.01,
         v7_router_weights: torch.Tensor = None,
         v7_router_entropy_weight: float = 0.0,
+        categorization_logits: torch.Tensor = None,
+        categorization_targets: torch.Tensor = None,
+        categorization_alpha: float = 0.1,
     ) -> dict:
         ce = self.ce_loss(logits, targets)
 
@@ -190,6 +193,13 @@ class CombinedHRSLoss(nn.Module):
             router_ent = -(rw * rw.log()).sum(-1).mean()
             total = total - v7_router_entropy_weight * router_ent  # negative: maximize entropy
             result["v7_router_entropy"] = router_ent.detach()
+
+        # V18: categorization loss
+        if (categorization_logits is not None and categorization_targets is not None
+                and categorization_alpha > 0):
+            cat_loss = F.cross_entropy(categorization_logits, categorization_targets)
+            total = total + categorization_alpha * cat_loss
+            result["categorization_loss"] = cat_loss.detach()
 
         result["loss"] = total
         return result

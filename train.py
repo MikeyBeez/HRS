@@ -142,8 +142,13 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
     print(f"Architecture: {'v2 (attn->conv + PEER)' if is_v2 else 'v1 (routed)'}")
 
     # Data
+    uses_categories = cfg.uses_categorization()
     print(f"Loading {cfg.training.dataset}...")
-    splits, tokenizer = load_wikitext(cfg.training.dataset, cfg.model.max_seq_len)
+    splits, tokenizer = load_wikitext(
+        cfg.training.dataset, cfg.model.max_seq_len,
+        with_categories=uses_categories,
+        n_categories=cfg.cross_attn_engram.num_categories if uses_categories else 50,
+    )
     loaders = build_dataloaders(splits, cfg.training.batch_size)
 
     # Model
@@ -236,6 +241,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
         config_dict["memory_mlp"] = cfg.memory_mlp.__dict__
     if cfg.uses_bdh() or cfg.uses_v10_control():
         config_dict["bdh"] = cfg.bdh.__dict__
+    if cfg.uses_cross_attn_engram():
+        config_dict["cross_attn_engram"] = cfg.cross_attn_engram.__dict__
 
     with open(run_dir / "config.json", "w") as f:
         json.dump(config_dict, f, indent=2)
@@ -297,6 +304,7 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
     accum_v7_router_ent = 0.0
     accum_bdh_focus = 0.0
     accum_bdh_sparsity = 0.0
+    accum_cat_loss = 0.0
     t0 = time.time()
 
     # Phase tracking
@@ -313,11 +321,17 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
 
         for micro_step in range(cfg.training.grad_accum_steps):
             try:
-                x, y = next(train_iter)
+                batch = next(train_iter)
             except StopIteration:
                 train_iter = iter(train_loader)
-                x, y = next(train_iter)
+                batch = next(train_iter)
 
+            if len(batch) == 3:
+                x, y, cat_targets = batch
+                cat_targets = cat_targets.to(device)
+            else:
+                x, y = batch
+                cat_targets = None
             x, y = x.to(device), y.to(device)
 
             needs_layer_reps = cfg.locality.enabled
@@ -379,6 +393,9 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                     gate_entropy_weight=cfg.engram.gate_entropy_weight if (uses_replacement or uses_gate) else 0.0,
                     v7_router_weights=output.v7_router_weights if uses_memory_mlp else None,
                     v7_router_entropy_weight=cfg.memory_mlp.router_entropy_weight if uses_memory_mlp else 0.0,
+                    categorization_logits=output.categorization_logits if uses_categories else None,
+                    categorization_targets=cat_targets if uses_categories else None,
+                    categorization_alpha=cfg.cross_attn_engram.categorization_alpha if uses_categories else 0.0,
                 )
 
                 # v9/v10: add keep-alive penalty and placeholder losses
@@ -434,6 +451,8 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             accum_bdh_focus += output.bdh_focus_magnitude
         if output.bdh_sparsity_level is not None:
             accum_bdh_sparsity += output.bdh_sparsity_level
+        if "categorization_loss" in loss_dict:
+            accum_cat_loss += loss_dict["categorization_loss"].item()
 
         # Gradient clipping
         torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.training.max_grad_norm)
@@ -502,6 +521,10 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                     accum_v7_mem_loss += mem_loss
                     model.memory_mlp.check_expansion()
 
+        # V18: update engram buffer via EMA every N steps
+        if cfg.uses_cross_attn_engram() and step % cfg.cross_attn_engram.update_interval == 0:
+            model.update_engram_buffer()
+
         step += 1
 
         # Logging
@@ -534,6 +557,14 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 entry["flops_cost"] = avg_flops
             if cfg.uses_engrams():
                 entry["recon_loss"] = avg_rec
+
+            if cfg.uses_cross_attn_engram():
+                if uses_categories:
+                    avg_cat = accum_cat_loss / n
+                    entry["categorization_loss"] = avg_cat
+                if output.cross_attn_gate_values:
+                    entry["cross_attn_gates"] = output.cross_attn_gate_values
+                entry["engram_buffer_initialized"] = model._engram_buffer_initialized
 
             if cfg.uses_engram_replacement():
                 avg_gate_ent = accum_gate_entropy / n
@@ -573,6 +604,12 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
                 extras += f" | bal {avg_bal:.4f} | ent {avg_ent:.4f}"
             if cfg.uses_engrams():
                 extras += f" | rec {avg_rec:.4f}"
+            if cfg.uses_cross_attn_engram():
+                if uses_categories:
+                    extras += f" | cat {avg_cat:.4f}"
+                if output.cross_attn_gate_values:
+                    gate_str = "/".join(f"{g:.3f}" for g in output.cross_attn_gate_values)
+                    extras += f" | ca_gates [{gate_str}]"
             if cfg.uses_engram_replacement():
                 extras += f" | gate {avg_gate_mean:.3f} | θ {model.engram_replacer.threshold.item():.2f}"
             if cfg.uses_remember_gate():
@@ -615,6 +652,7 @@ def train(cfg: ExperimentConfig, resume_path: str = None):
             accum_v7_router_ent = 0.0
             accum_bdh_focus = 0.0
             accum_bdh_sparsity = 0.0
+            accum_cat_loss = 0.0
 
         # Evaluation
         if step % cfg.training.eval_interval == 0:

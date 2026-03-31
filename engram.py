@@ -9,7 +9,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from config import EngramConfig, ModelConfig
+from config import EngramConfig, ModelConfig, CrossAttentionEngramConfig
 
 
 class EngramEncoder(nn.Module):
@@ -411,6 +411,118 @@ class EngramReplacer(nn.Module):
         out[:, :usable] = blended.reshape(B, usable, D)
 
         return out, gate
+
+
+class EngramCrossAttention(nn.Module):
+    """Cross-attention block where sequence tokens query a fixed engram buffer.
+
+    Inserted at alternating transformer layers. The engram buffer is NOT part
+    of the causal self-attention path — sequence tokens can freely attend to
+    all engram tokens (no causal mask on cross-attention).
+
+    Uses a learned sigmoid gate initialized near zero so the block starts
+    as a near-no-op and the model gradually learns to use it.
+    """
+
+    def __init__(self, model_cfg: ModelConfig, ca_cfg: CrossAttentionEngramConfig):
+        super().__init__()
+        d = model_cfg.d_model
+        self.n_heads = model_cfg.n_heads
+        self.head_dim = d // model_cfg.n_heads
+
+        # Pre-norm
+        self.ln = nn.LayerNorm(d)
+
+        # Separate Q (from sequence), K/V (from engram) projections
+        self.q_proj = nn.Linear(d, d, bias=model_cfg.bias)
+        self.k_proj = nn.Linear(d, d, bias=model_cfg.bias)
+        self.v_proj = nn.Linear(d, d, bias=model_cfg.bias)
+        self.out_proj = nn.Linear(d, d, bias=model_cfg.bias)
+
+        self.attn_dropout = nn.Dropout(model_cfg.dropout)
+        self.resid_dropout = nn.Dropout(model_cfg.dropout)
+
+        # Learned gate: sigmoid(gate_logit) * cross_attn_output
+        # Initialize gate_logit so sigmoid starts near 0 (gate_init default = 0.0 -> 0.5,
+        # but we also init out_proj to near-zero, so effective contribution starts tiny)
+        self.gate_logit = nn.Parameter(torch.tensor(ca_cfg.gate_init))
+
+        self._init_weights()
+
+    def _init_weights(self):
+        # Standard init for Q/K/V
+        for proj in [self.q_proj, self.k_proj, self.v_proj]:
+            nn.init.normal_(proj.weight, std=0.02)
+            if proj.bias is not None:
+                nn.init.zeros_(proj.bias)
+        # Near-zero init for output projection so cross-attention starts as no-op
+        nn.init.normal_(self.out_proj.weight, std=0.001)
+        if self.out_proj.bias is not None:
+            nn.init.zeros_(self.out_proj.bias)
+
+    def forward(self, x: torch.Tensor, engram: torch.Tensor) -> torch.Tensor:
+        """Cross-attend from sequence to engram buffer.
+
+        Args:
+            x: (B, T, D) sequence hidden states
+            engram: (1, E, D) or (B, E, D) engram buffer
+
+        Returns:
+            (B, T, D) residual update
+        """
+        B, T, D = x.shape
+
+        # Expand engram if needed (shared buffer across batch)
+        if engram.shape[0] == 1 and B > 1:
+            engram = engram.expand(B, -1, -1)
+
+        h = self.ln(x)
+
+        # Project Q from sequence, K/V from engram
+        q = self.q_proj(h).reshape(B, T, self.n_heads, self.head_dim).transpose(1, 2)
+        E = engram.shape[1]
+        k = self.k_proj(engram).reshape(B, E, self.n_heads, self.head_dim).transpose(1, 2)
+        v = self.v_proj(engram).reshape(B, E, self.n_heads, self.head_dim).transpose(1, 2)
+
+        # Standard attention (no causal mask — queries can attend to all engram tokens)
+        out = F.scaled_dot_product_attention(
+            q, k, v, is_causal=False,
+            dropout_p=self.attn_dropout.p if self.training else 0.0,
+        )
+
+        out = out.transpose(1, 2).reshape(B, T, D)
+        out = self.resid_dropout(self.out_proj(out))
+
+        # Gated residual
+        gate = torch.sigmoid(self.gate_logit)
+        return gate * out
+
+
+class CategorizationHead(nn.Module):
+    """Topic categorization head: mean-pool final hidden states -> linear -> num_categories.
+
+    Provides a discriminative training signal that encourages the engram
+    to extract topic-level features.
+    """
+
+    def __init__(self, model_cfg: ModelConfig, num_categories: int):
+        super().__init__()
+        self.proj = nn.Linear(model_cfg.d_model, num_categories)
+        nn.init.normal_(self.proj.weight, std=0.02)
+        if self.proj.bias is not None:
+            nn.init.zeros_(self.proj.bias)
+
+    def forward(self, hidden_states: torch.Tensor) -> torch.Tensor:
+        """Predict topic category from mean-pooled sequence representation.
+
+        Args:
+            hidden_states: (B, T, D) final layer hidden states
+
+        Returns:
+            (B, num_categories) logits
+        """
+        pooled = hidden_states.mean(dim=1)  # (B, D)
+        return self.proj(pooled)
 
 
 def engram_reconstruction_loss(

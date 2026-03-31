@@ -14,10 +14,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from config import ExperimentConfig, ModelConfig, PEERConfig, MemoryMLPTrainConfig, BDHConfig
+from config import ExperimentConfig, ModelConfig, PEERConfig, MemoryMLPTrainConfig, BDHConfig, CrossAttentionEngramConfig
 from tiers import ConvTier, ExpertTier, AttentionTier, SinkTier, RotaryEmbedding, apply_rotary_emb, rotate_half
 from router import TokenRouter, routing_balance_loss, routing_entropy_loss, routing_flops_loss
-from engram import EngramEncoder, EngramInjector, GatedEngramInjector, EngramReplacer, engram_reconstruction_loss
+from engram import EngramEncoder, EngramInjector, GatedEngramInjector, EngramReplacer, engram_reconstruction_loss, EngramCrossAttention, CategorizationHead
 from peer import PEER
 from bdh import VirtualSynapse, routing_hub_loss, apply_sparsity_bottleneck, LossScaler, PlaceholderLosses
 
@@ -49,6 +49,9 @@ class HRSOutput:
     loss_scaler_penalty: torch.Tensor = None # keep-alive penalty term
     # v10 placeholder losses
     placeholder_losses: dict = None          # {"hub": x, "entropy": y, "recon": z}
+    # v18 cross-attention engram + categorization
+    categorization_logits: torch.Tensor = None  # (B, num_categories)
+    cross_attn_gate_values: list = None         # per-layer gate sigmoid values
 
 
 class CausalSelfAttention(nn.Module):
@@ -202,6 +205,20 @@ class HRSBlock(nn.Module):
         self.attn = CausalSelfAttention(model_cfg)
         self.ln2 = nn.LayerNorm(model_cfg.d_model)
 
+        # V18: cross-attention engram at configurable layers
+        self.use_cross_attn_engram = False
+        if cfg.uses_cross_attn_engram():
+            ca_cfg = cfg.cross_attn_engram
+            pattern = ca_cfg.cross_attn_layers
+            has_ca = (
+                (pattern == "odd" and layer_idx % 2 == 1) or
+                (pattern == "even" and layer_idx % 2 == 0) or
+                (pattern == "all")
+            )
+            if has_ca:
+                self.use_cross_attn_engram = True
+                self.cross_attn = EngramCrossAttention(model_cfg, ca_cfg)
+
         # v8 BDH: virtual synapse per block
         self.use_bdh = cfg.uses_bdh()
         if self.use_bdh and cfg.bdh.virtual_synapse_enabled:
@@ -256,6 +273,7 @@ class HRSBlock(nn.Module):
     def forward(
         self, x, step: int = 0, return_weights: bool = False,
         engrams: torch.Tensor = None, kv_cache=None, start_pos=0,
+        engram_buffer: torch.Tensor = None,
     ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, object]:
         # v8 BDH: compute virtual synapse focus from engrams
         focus_qk = None
@@ -267,6 +285,10 @@ class HRSBlock(nn.Module):
             kv_cache=kv_cache, start_pos=start_pos,
         )
         x = x + attn_out
+
+        # V18: cross-attention to engram buffer (between self-attn and FFN)
+        if self.use_cross_attn_engram and engram_buffer is not None:
+            x = x + self.cross_attn(x, engram_buffer)
 
         routing_w = None
 
@@ -435,6 +457,8 @@ class HRSTransformer(nn.Module):
         self._uses_bdh = cfg.uses_bdh()
         self._uses_learnable_scaling = cfg.uses_learnable_loss_scaling()
         self._uses_v10_control = cfg.uses_v10_control()
+        self._uses_cross_attn_engram = cfg.uses_cross_attn_engram()
+        self._uses_categorization = cfg.uses_categorization()
 
         # If engrams are enabled and NOT using replacement, blocks after extraction
         # need a longer max_seq_len for prepended engrams.
@@ -512,6 +536,30 @@ class HRSTransformer(nn.Module):
         # v10: Placeholder losses (semantically empty)
         if self._uses_v10_control:
             self.placeholder_losses = PlaceholderLosses(d_model=cfg.model.d_model)
+
+        # V18: cross-attention engram buffer + categorization head
+        if self._uses_cross_attn_engram:
+            ca_cfg = cfg.cross_attn_engram
+            # Engram buffer: (1, num_engram_tokens, d_model) — shared across batch
+            # Initialized to zeros; populated via EMA during training
+            self.register_buffer(
+                'engram_buffer',
+                torch.zeros(1, ca_cfg.num_engram_tokens, model_cfg.d_model),
+            )
+            self._engram_buffer_initialized = False
+            self._engram_extract_layer = ca_cfg.extract_layer
+            if self._engram_extract_layer < 0:
+                self._engram_extract_layer = model_cfg.n_layers + ca_cfg.extract_layer
+
+            # Accumulator for hidden states used to update buffer
+            self._hidden_accumulator = []
+            self._engram_update_interval = ca_cfg.update_interval
+            self._engram_ema_momentum = ca_cfg.ema_momentum
+
+        if self._uses_categorization:
+            self.categorization_head = CategorizationHead(
+                model_cfg, cfg.cross_attn_engram.num_categories,
+            )
 
         # v7: Memory MLP + V7Router
         if self.use_memory_mlp:
@@ -659,9 +707,12 @@ class HRSTransformer(nn.Module):
             # v8 BDH: pass engrams to block for virtual synapse focus
             block_engrams = engrams if (self._uses_bdh and i > self.engram_extract_layer and engrams.shape[1] > 0) else None
 
+            # V18: pass engram buffer for cross-attention
+            eb = self.engram_buffer if (self._uses_cross_attn_engram and self._engram_buffer_initialized) else None
+
             x, routing_w, attn_w, _ = block(
                 x, step=step, return_weights=collect_intermediates,
-                engrams=block_engrams,
+                engrams=block_engrams, engram_buffer=eb,
             )
 
             # Strip prepended engrams from output (v1-v4 only)
@@ -690,7 +741,7 @@ class HRSTransformer(nn.Module):
             if collect_intermediates and attn_w is not None:
                 attn_weights_list.append(attn_w)
 
-            # Engram extraction
+            # Engram extraction (V16 style)
             if self.use_engrams and i == self.engram_extract_layer:
                 engrams = self.engram_encoder(x)
                 # Randomly drop engrams during training so model learns to work without them
@@ -700,6 +751,10 @@ class HRSTransformer(nn.Module):
                 engram_recon_loss = engram_reconstruction_loss(
                     x.detach(), engrams, self.cfg.engram.window_size,
                 )
+
+            # V18: collect hidden states at extract layer for buffer update
+            if self._uses_cross_attn_engram and i == self._engram_extract_layer and self.training:
+                self._hidden_accumulator.append(x.detach().mean(dim=1).mean(dim=0))  # (D,)
 
         # Average losses across layers
         if routing_weights_list:
@@ -711,6 +766,11 @@ class HRSTransformer(nn.Module):
         x = self.ln_f(x)
         hidden_for_output = x  # save for v7 Memory MLP
         logits = self.lm_head(x)
+
+        # V18: categorization head
+        cat_logits = None
+        if self._uses_categorization:
+            cat_logits = self.categorization_head(hidden_for_output)
 
         # v5/v6: update EMA loss cache for next step's gating signal
         per_token_loss = None
@@ -804,7 +864,39 @@ class HRSTransformer(nn.Module):
                 self.placeholder_losses(hidden_for_output)
                 if self._uses_v10_control else None
             ),
+            categorization_logits=cat_logits,
+            cross_attn_gate_values=[
+                block.cross_attn.gate_logit.sigmoid().item()
+                for block in self.blocks if hasattr(block, 'cross_attn') and block.use_cross_attn_engram
+            ] if self._uses_cross_attn_engram else None,
         )
+
+    @torch.no_grad()
+    def update_engram_buffer(self):
+        """V18: Update engram buffer from accumulated hidden states via EMA.
+
+        Called every `update_interval` training steps. Mean-pools the accumulated
+        hidden states and applies exponential moving average to the buffer.
+        """
+        if not self._uses_cross_attn_engram or not self._hidden_accumulator:
+            return
+
+        # Average all accumulated hidden state means: (D,)
+        stacked = torch.stack(self._hidden_accumulator, dim=0)  # (N, D)
+        mean_hidden = stacked.mean(dim=0)  # (D,)
+        self._hidden_accumulator.clear()
+
+        # Expand to (1, num_engram_tokens, D) — each engram token gets the same
+        # mean hidden state initially; diversity comes from the cross-attention
+        # Q/K/V projections learning to specialize
+        new_buffer = mean_hidden.unsqueeze(0).unsqueeze(0).expand_as(self.engram_buffer)
+
+        if not self._engram_buffer_initialized:
+            self.engram_buffer.copy_(new_buffer)
+            self._engram_buffer_initialized = True
+        else:
+            m = self._engram_ema_momentum
+            self.engram_buffer.copy_(m * self.engram_buffer + (1 - m) * new_buffer)
 
     def apply_engram_refinement(self):
         """Phase 5 engram refinement: freeze encoder, reinitialize injector/replacer."""
@@ -932,6 +1024,17 @@ class HRSTransformer(nn.Module):
                 if self._uses_remember_gate and hasattr(self.engram_injector, 'remember_gate'):
                     counts["remember_gate"] = sum(p.numel() for p in self.engram_injector.remember_gate.parameters())
 
+        # V18: cross-attention + categorization
+        if self._uses_cross_attn_engram:
+            ca_params = 0
+            for block in self.blocks:
+                if hasattr(block, 'cross_attn') and block.use_cross_attn_engram:
+                    ca_params += sum(p.numel() for p in block.cross_attn.parameters())
+            if ca_params > 0:
+                counts["cross_attn_engram"] = ca_params
+        if self._uses_categorization:
+            counts["categorization_head"] = sum(p.numel() for p in self.categorization_head.parameters())
+
         # v7: Memory MLP + V7Router
         if self.use_memory_mlp:
             counts["memory_mlp"] = sum(p.numel() for p in self.memory_mlp.parameters())
@@ -976,6 +1079,8 @@ class HRSTransformer(nn.Module):
                 groups["v7_router"].append(param)
             elif "locality_proj" in name:
                 groups["locality_head"].append(param)
+            elif "cross_attn" in name or "categorization" in name:
+                groups["engram"].append(param)  # V18: use engram LR schedule
             elif "engram" in name:
                 groups["engram"].append(param)
             elif "router" in name:
@@ -1047,12 +1152,15 @@ class HRSTransformer(nn.Module):
         self.eval()
         B, T = idx.shape
 
+        # V18: engram buffer for cross-attention during generation
+        eb = self.engram_buffer if (self._uses_cross_attn_engram and self._engram_buffer_initialized) else None
+
         # Prefill: process entire prompt, build KV caches
         x = self.drop(self.tok_emb(idx))
         kv_caches = [None] * len(self.blocks)
 
         for i, block in enumerate(self.blocks):
-            x, _, _, kv_caches[i] = block(x, step=0, start_pos=0)
+            x, _, _, kv_caches[i] = block(x, step=0, start_pos=0, engram_buffer=eb)
 
         x = self.ln_f(x)
         logits = self.lm_head(x[:, -1:, :])
@@ -1073,6 +1181,7 @@ class HRSTransformer(nn.Module):
             for i, block in enumerate(self.blocks):
                 x, _, _, kv_caches[i] = block(
                     x, step=0, kv_cache=kv_caches[i], start_pos=cur_pos,
+                    engram_buffer=eb,
                 )
             x = self.ln_f(x)
             logits = self.lm_head(x)

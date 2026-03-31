@@ -6,11 +6,15 @@ HRS is a transformer architecture organized around a core principle: *computatio
 
 ## Headline Result
 
-HRS V16 achieves **1.71 BPE perplexity** and a **MAUVE score of 0.905** on WikiText-103 with 510M parameters (PEER + engram, no routing), trained in ~12 hours on a single RTX 5070 Ti.
+HRS V18 achieves **MAUVE 0.950** on WikiText-103 with 510M parameters (PEER + cross-attention engram + entropy-gated retrieval), trained in ~11.4 hours on a single RTX 5070 Ti.
 
-Key finding: the engram functions as *training scaffolding* — it shapes better representations during training but should be disabled at inference, where it adds noise. With engrams off, generation quality is prompt-length-invariant (MAUVE 0.905-0.906). See the [V16 article](article_peer_engram.md) for full analysis.
+V18 fixes the causal attention leakage bug from V16 by isolating the engram via cross-attention instead of sequence prepending. An entropy-gated retrieval system stores engrams for surprising text and retrieves them when the model is confused, pushing MAUVE past V17's 0.943 baseline. In needle-in-a-haystack evaluation, the retrieval system finds the correct document among 20 distractors with 100% accuracy.
 
-**Important caveat:** This is BPE (subword) perplexity, not word-level perplexity. Published WikiText-103 benchmarks (kNN-LM at 15.79, Transformer-XL at 18.3) use word-level tokenization with adaptive softmax. BPE models have a systematic advantage when converting to word-level perplexity because they predict multiple easier subword tokens per word. A direct comparison requires retraining with word-level tokenization. See the [V12 writeup](v12_article.txt) for full discussion.
+See the [V18 article](article_v18_crossattn.md) for full analysis.
+
+**Previous headline:** V16 achieved **1.71 BPE perplexity** and MAUVE 0.905 with engrams disabled. See the [V16 article](article_peer_engram.md).
+
+**Important caveat:** Perplexity is BPE (subword), not word-level. Published WikiText-103 benchmarks use word-level tokenization. BPE models have a systematic advantage when converting to word-level perplexity. See the [V12 writeup](v12_article.txt) for discussion.
 
 ## Architecture
 
@@ -21,46 +25,46 @@ Key finding: the engram functions as *training scaffolding* — it shapes better
 - **Phased training** — differential learning rates sequence component activation across 4 phases
 - **PEER FFN** — Parameter Efficient Expert Retrieval with 262K single-neuron experts via product keys
 
-**BDH (Brain-Derived Heuristics):**
+**V18 Cross-Attention Engram:**
+- **Cross-attention injection** — engram enters via dedicated cross-attention blocks at alternating layers, structurally isolated from the causal self-attention path
+- **Learned gates** — sigmoid-gated output (settled at 0.27–0.33) lets the model control engram influence per-layer
+- **Categorization head** — topic classification objective (50 categories, α=0.1) gives the engram a discriminative training signal
+- **EMA buffer** — corpus-level engram updated every 100 steps via exponential moving average
+
+**V18-EGR (Entropy-Gated Retrieval):**
+- **Entropy as write trigger** — high-entropy segments (>4.0 bits) stored as engram vectors
+- **Entropy as read trigger** — rolling entropy spikes during generation trigger nearest-neighbor retrieval
+- **Cross-attention injection** — retrieved engrams temporarily replace the trained buffer
+- **100% needle-in-a-haystack retrieval** — correct document found at mean rank 1.2 among 20 distractors
+
+**BDH (Brain-Derived Heuristics, V8–V14):**
 - **Virtual synapse** — engram-derived gain modulates attention heads via sigmoid gating
 - **Hub routing** — KL divergence loss pushes tier distribution toward Zipf target
 - **Sparsity bottleneck** — top-K selection retains only 5% of features before routing
 - **Learnable loss scaling** — auxiliary loss coefficients are learned by gradient descent rather than fixed
 
-**Extensions:**
-- **Temporal Routing Cache (TRC)** — causal moving average smooths routing across adjacent tokens
-- **Engrams** — compressed thread memory with bounded growth (the decisive component)
-
 ## Results
-
-V12 (250M parameters, 6 layers, WikiText-103, 100K steps, RTX 5070 Ti):
-
-- BPE perplexity: 3.32 (primary metric)
-- Word-level perplexity via BPE aggregation: 10.43 (not directly comparable to word-level models)
-
-Earlier configurations for context:
 
 | # | Configuration | Params | Best BPE PPL | MAUVE | Notes |
 |---|---------------|-------:|-------------:|:-----:|-------|
-| V4 | PEER + routing + engrams | 176M | 8.28 | — | unconstrained baseline |
-| V8 | + BDH (fixed loss coefficients) | 176M | 10.25 | — | constraints hurt with wrong weights |
-| V9 | + learnable loss scaling | 176M | 7.51 | — | constraints help with right weights |
-| V10 | control (no BDH/routing/engrams) | 169M | 30.48 | — | proves components are necessary |
+| **V18+EGR** | **PEER + cross-attn engram + retrieval** | **512M** | **23.3** | **0.950** | **entropy-gated retrieval, project best MAUVE** |
+| V18 | PEER + cross-attn engram + categorization | 512M | 23.3 | 0.915–0.941 | fixes V16 leakage bug |
+| V17 | PEER only, no engram (baseline) | 499M | 21.4 | 0.933–0.943 | clean ablation baseline |
+| V16 | PEER + prepend engram | 510M | 1.71 | 0.806–0.906 | engram as training scaffolding |
 | V12 | V9 + 6 layers, no Phase 5 | 250M | 3.32 | — | extended to 100K steps |
-| V13 | V12 + 5% sparsity | 250M | 4.53 | — | reduced sparsity, generation still poor |
-| V14 | V13 + 2-tier routing (attn+sink) | 250M | 4.92 | — | removed conv tier, 48% sink |
-| V15 | vanilla + routing + engrams, no PEER | 164M | 1.79 | — | good PPL, generation still poor |
-| **V16** | **PEER + engram, no routing/BDH** | **510M** | **1.71** | **0.905** | **engram as training scaffolding** |
+| V9 | + learnable loss scaling | 176M | 7.51 | — | constraints help with right weights |
+| V4 | PEER + routing + engrams | 176M | 8.28 | — | unconstrained baseline |
+| V10 | control (no BDH/routing/engrams) | 169M | 30.48 | — | proves components are necessary |
 
 ## Key Findings
 
-- **Learnable loss scaling is essential.** V8 (fixed coefficients) underperformed the unconstrained baseline. V9 (learned coefficients) beat it by 2 points. Gradient descent cut hub and reconstruction pressure by ~40% and tripled exploration pressure.
-- **All BDH components contribute.** V10 control (no routing, no engrams, no BDH) achieved only 30.48 perplexity.
-- **Phase 5 causes regression.** Both V8 and V9 regressed when Phase 5 activated (V9: 7.51 to 9.07). P5 triples backbone/head learning rates and freezes engrams. V12 eliminates P5 entirely.
-- **Depth matters.** Going from 4 to 6 layers (176M to 250M params) cut perplexity roughly in half.
-- **Multi-path routing hurts generation.** V13-V14 showed that routing tokens through conv/attn/sink tiers fragments the representation space, causing incoherent autoregressive generation despite good teacher-forced PPL.
-- **Engram is training scaffolding, not a runtime component.** V16 MAUVE benchmark shows the model generates better text (0.905) with engrams disabled at inference than enabled (0.806-0.888). The engram shapes better representations during training but adds noise at inference.
-- **Engram dropout is essential.** Without dropout, models fail catastrophically on short prompts (< 128 tokens) where no engrams are produced. 10% engram dropout during training enables prompt-length-invariant generation.
+- **Cross-attention fixes the engram leakage bug.** V16 prepended engram tokens to the sequence, causing causal attention leakage (MAUVE dropped 0.10). V18's cross-attention isolation eliminates this — MAUVE changes by only 0.003 with engrams active.
+- **Entropy-gated retrieval improves generation quality.** Storing engrams for high-entropy text and retrieving them during entropy spikes pushes MAUVE from 0.913 to 0.950 at 500-token prompts — above V17's 0.943 baseline.
+- **Retrieval works, grounded generation doesn't (yet).** NIAH test: 100% retrieval accuracy at rank 1.2. But the model can't translate retrieved context into factual generation — it needs retrieval-augmented training.
+- **Entropy is a universal control signal.** Shannon entropy serves three roles: data curation (filter noise), memory write (store surprises), and memory read (retrieve when confused).
+- **Learned gates find balanced operating points.** V18's cross-attention gates converged to 0.27–0.33, neither fully open nor closed. The model chose to use the engram as a gentle topic prior.
+- **PEER is the real story.** V17 (PEER only, no engram) achieves MAUVE 0.933–0.943 — competitive with models several times its size. PEER's sparse routing makes full attention affordable.
+- **Consumer hardware is sufficient.** All experiments ran on a single RTX 5070 Ti (~$600). Training takes 11–12 hours. VRAM usage peaks at 12.5 GB.
 
 ## Running the Experiments
 
@@ -69,116 +73,105 @@ Earlier configurations for context:
 - Python 3.10+
 - PyTorch (with CUDA)
 - Hugging Face `datasets` and `transformers`
-- ~8GB VRAM for V12 (batch_size=4, seq_len=512, 6 layers)
-- ~6GB VRAM for V9 and earlier (batch_size=4, seq_len=512, 4 layers)
+- scikit-learn (for V18 category clustering)
+- mauve-text (for MAUVE benchmarks)
+- ~12.5GB VRAM for V18 (batch_size=4, seq_len=512, 6 layers, d=1024)
 
 ```bash
-pip install torch datasets transformers
+pip install torch datasets transformers scikit-learn mauve-text
 ```
 
-### V16 (510M, PEER + engram, best result)
+### V18 (512M, PEER + cross-attention engram, current best)
 
-Training (~12 hours):
+Training (~11.4 hours):
 ```bash
-python3 train.py --ablation v16_peer_engram --batch-size 4 --output-dir results
-```
-
-Generation quality check:
-```bash
-python3 generate_sample.py v16_peer_engram
+python train.py --ablation v18_cross_attn --output-dir results
 ```
 
 MAUVE benchmark:
 ```bash
-pip install mauve-text
-python3 benchmark_mauve.py v16_peer_engram
+python benchmark_mauve_v18.py
 ```
 
-### V12 (250M, 6 layers, previous best)
+### V18-EGR (Entropy-Gated Retrieval)
 
-Initial training (50K steps, ~9.5 hours):
+Populate the engram store from WikiText-103 validation set (~2 minutes):
 ```bash
-python3 train.py --ablation v12_247m --batch-size 4 --output-dir results
+python populate_store.py --threshold 4.0 --output engram_store_data
 ```
 
-Extended training to 100K steps (~10 more hours, resume from checkpoint):
+MAUVE benchmark with retrieval:
 ```bash
-python3 train.py --ablation v12_247m --batch-size 4 --output-dir results \
-    --max-steps 100000 --lr 6e-5 --resume results/v12_247m/checkpoint_50000.pt
+python benchmark_mauve_egr.py --store engram_store_data --threshold 4.0
 ```
 
-### V9 (176M, 4 layers, learnable BDH)
-
+Needle-in-a-haystack test (~15 minutes):
 ```bash
-python3 train.py --ablation v9_learnable --batch-size 4 --output-dir results
+python niah_egr.py --n-distractors 20 --threshold 4.0
 ```
 
-### V8 (176M, 4 layers, fixed BDH coefficients)
-
+Retrieval evaluation:
 ```bash
-python3 train.py --ablation v8_bdh --batch-size 4 --output-dir results
+python evaluate_retrieval.py --store engram_store_data --threshold 4.0
 ```
 
-### V4 baseline (176M, no BDH constraints)
+### V16 (510M, PEER + prepend engram)
 
 ```bash
-python3 train.py --ablation v4_full --output-dir results
+python train.py --ablation v16_peer_engram --output-dir results
+python benchmark_mauve.py v16_peer_engram
 ```
 
-### V10 control (no routing, no engrams, no BDH)
+### V17 (499M, PEER only baseline)
 
 ```bash
-python3 train.py --ablation v10_control --batch-size 4 --output-dir results
+python train.py --ablation v17_peer_only --output-dir results
 ```
 
-### Dense baseline (no routing, no PEER, no engrams)
+### V12 (250M, 6 layers)
 
 ```bash
-python3 train.py --ablation dense_baseline --output-dir results
+python train.py --ablation v12_247m --batch-size 4 --output-dir results
 ```
 
 ### Evaluation
 
-BPE and word-level perplexity with sanity checks:
+BPE and word-level perplexity:
 ```bash
-python3 eval_word_ppl_v2.py --checkpoint results/v12_247m/best.pt \
+python eval_word_ppl_v2.py --checkpoint results/v12_247m/best.pt \
     --ablation v12_247m --no-overlap --sanity-check
-```
-
-### Other experiments
-
-```bash
-# MPAR cross-prompt retrieval (Mistral 7B)
-python3 mpar_experiment_7b_v2.py
-
-# Expert isomorphism experiment
-python3 expert_isomorphism.py --baseline-steps 15000 --finetune-steps 10000
 ```
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `model.py` | HRS transformer (backbone, tier integration, engram injection, BDH modules) |
+| `model.py` | HRS transformer (backbone, tiers, cross-attention engram, categorization head) |
 | `router.py` | Learned token router with TRC, balance/entropy/FLOPs losses |
 | `tiers.py` | Tiered compute operators (conv, attention, sink) |
-| `engram.py` | Engram encoder and cross-attention injector |
+| `engram.py` | Engram encoder, injectors, cross-attention block, categorization head |
 | `peer.py` | PEER expert retrieval (262K single-neuron experts via product keys) |
 | `bdh.py` | Virtual synapse, hub routing loss, sparsity bottleneck |
-| `losses.py` | Combined loss with CE, locality, engram reconstruction, BDH auxiliary losses |
-| `config.py` | All configuration dataclasses and ablation presets (V1-V16) |
-| `train.py` | Training loop with phased protocol, differential LRs, best-model checkpointing |
-| `data.py` | WikiText-103 data loading with GPT-2 BPE tokenizer |
+| `losses.py` | Combined loss with CE, locality, reconstruction, categorization |
+| `config.py` | All configuration dataclasses and ablation presets (V1–V18) |
+| `train.py` | Training loop with phased protocol, differential LRs, engram buffer updates |
+| `data.py` | WikiText-103 loading with GPT-2 BPE tokenizer and category labels |
 | `metrics.py` | Effective rank, routing entropy, tier distribution tracking |
+| `engram_store.py` | Engram vector store with cosine similarity retrieval |
+| `entropy_monitor.py` | Rolling entropy computation and threshold monitoring |
+| `retrieval_engine.py` | Entropy-gated engram retrieval engine for V18 inference |
+| `populate_store.py` | Pre-populate engram store from WikiText-103 |
+| `evaluate_retrieval.py` | Retrieval system evaluation (perplexity, trigger stats) |
+| `niah_egr.py` | Needle-in-a-haystack test for entropy-gated retrieval |
+| `benchmark_mauve.py` | MAUVE benchmark (V16-style) |
+| `benchmark_mauve_v18.py` | MAUVE benchmark for V18 cross-attention engram |
+| `benchmark_mauve_egr.py` | MAUVE benchmark for V18 + entropy-gated retrieval |
 | `generate_sample.py` | Generation quality checker with WikiText context seeding |
-| `benchmark_mauve.py` | MAUVE benchmark for evaluating generation quality |
-| `eval_word_ppl_v2.py` | BPE and word-level perplexity evaluation with sanity checks |
-| `expert_isomorphism.py` | PEER expert isomorphism experiment |
-| `mpar_experiment_7b_v2.py` | MPAR retrieval with Mistral 7B and v2 enriched prompts |
-| `v12_article.txt` | Full V12 writeup for publication |
+| `eval_word_ppl_v2.py` | BPE and word-level perplexity evaluation |
 
 ## Papers
 
+- [V18 Cross-Attention Engram + Entropy-Gated Retrieval](article_v18_crossattn.md) — MAUVE 0.950, cross-attention fix, NIAH results
 - [V16 PEER + Engram Results](article_peer_engram.md) — 1.71 BPE perplexity, MAUVE 0.905, engram-as-scaffolding finding
 - [V12 Results and Analysis](v12_article.txt) — 3.32 BPE perplexity, Phase 5 diagnosis, tokenization discussion
 - [BDH and Learnable Loss Scaling (V8/V9)](HRS_paper_medium.md) — Brain-derived heuristics with fixed vs learned coefficients

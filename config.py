@@ -67,6 +67,9 @@ class AblationConfig(Enum):
     # --- v17 configs ---
     V17_PEER_ONLY = "v17_peer_only"            # vanilla transformer + PEER FFN, no engrams/routing/BDH (baseline)
 
+    # --- v18 configs ---
+    V18_CROSS_ATTN = "v18_cross_attn"          # PEER + cross-attention engram + categorization head
+
     # --- v2 configs ---
     V2_ATTN_CONV = "v2_attn_conv"              # Attention->Conv backbone, standard MLP, no dual-head
     V2_ATTN_CONV_DUAL = "v2_attn_conv_dual"    # + dual-head
@@ -140,6 +143,22 @@ class EngramConfig:
     remember_gate_enabled: bool = False
     gate_bias_init: float = 2.0         # sigmoid(2.0) ≈ 0.88
     gate_hidden_dim: int = 32           # hidden dim in gate MLP
+
+
+@dataclass
+class CrossAttentionEngramConfig:
+    """Configuration for V18 cross-attention engram."""
+    enabled: bool = False
+    num_engram_tokens: int = 32           # number of engram vectors in the buffer
+    update_interval: int = 100            # update engram buffer every N training steps
+    ema_momentum: float = 0.99            # EMA smoothing for buffer updates
+    extract_layer: int = -2               # layer to extract hidden states from (-2 = second-to-last)
+    cross_attn_layers: str = "odd"        # "odd", "even", or "all" — which layers get cross-attention
+    gate_init: float = 0.0                # initial gate value (sigmoid(0) = 0.5, but output proj near-zero)
+    # Categorization head
+    categorization_enabled: bool = True
+    num_categories: int = 50              # number of topic categories
+    categorization_alpha: float = 0.1     # weight for categorization loss
 
 
 @dataclass
@@ -254,6 +273,7 @@ class ExperimentConfig:
     tier: TierConfig = field(default_factory=TierConfig)
     peer: PEERConfig = field(default_factory=PEERConfig)
     engram: EngramConfig = field(default_factory=EngramConfig)
+    cross_attn_engram: CrossAttentionEngramConfig = field(default_factory=CrossAttentionEngramConfig)
     memory_mlp: MemoryMLPTrainConfig = field(default_factory=MemoryMLPTrainConfig)
     bdh: BDHConfig = field(default_factory=BDHConfig)
     phased: PhasedTrainingConfig = field(default_factory=PhasedTrainingConfig)
@@ -564,6 +584,36 @@ class ExperimentConfig:
             cfg.phased.phase4_steps = 24000
             cfg.phased.phase5_steps = 0
 
+        elif ablation == AblationConfig.V18_CROSS_ATTN:
+            # PEER + cross-attention engram (no prepend) + categorization head
+            # Fixes V16's causal attention leakage by isolating engram via cross-attention
+            cfg.model.n_layers = 6
+            cfg.model.d_model = 1024
+            cfg.model.d_ff = 4096
+            cfg.model.n_heads = 16
+            cfg.locality.enabled = True
+            cfg.engram.enabled = False          # V16-style prepend engram OFF
+            cfg.cross_attn_engram.enabled = True
+            cfg.cross_attn_engram.num_engram_tokens = 32
+            cfg.cross_attn_engram.update_interval = 100
+            cfg.cross_attn_engram.ema_momentum = 0.99
+            cfg.cross_attn_engram.extract_layer = -2  # layer 4 of 6 (0-indexed)
+            cfg.cross_attn_engram.cross_attn_layers = "odd"
+            cfg.cross_attn_engram.categorization_enabled = True
+            cfg.cross_attn_engram.num_categories = 50
+            cfg.cross_attn_engram.categorization_alpha = 0.1
+            cfg.peer.enabled = True
+            cfg.bdh.enabled = False
+            cfg.training.batch_size = 4
+            cfg.training.grad_accum_steps = 8
+            cfg.training.max_steps = 50000
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 10000
+            cfg.phased.phase4_steps = 24000
+            cfg.phased.phase5_steps = 0
+
         elif ablation == AblationConfig.V15_VANILLA_ROUTE:
             # Vanilla transformer + 2-tier routing (attn+sink) + engrams
             # No PEER, no BDH, no sparsity, no virtual synapse — clean test
@@ -718,7 +768,7 @@ class ExperimentConfig:
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
             "v10_control", "v11_no_p5", "v12_247m", "v13_low_sparsity", "v14_attn_sink",
-            "v16_peer_engram", "v17_peer_only",
+            "v16_peer_engram", "v17_peer_only", "v18_cross_attn",
         )
 
     def uses_memory_mlp(self) -> bool:
@@ -731,13 +781,24 @@ class ExperimentConfig:
         """v2: fixed attention->conv layer structure."""
         return self.is_v2()
 
+    def uses_cross_attn_engram(self) -> bool:
+        """V18: cross-attention engram buffer (no prepend)."""
+        return self.cross_attn_engram.enabled and self.training.ablation.value in (
+            "v18_cross_attn",
+        )
+
+    def uses_categorization(self) -> bool:
+        """V18: topic categorization head."""
+        return (self.uses_cross_attn_engram()
+                and self.cross_attn_engram.categorization_enabled)
+
     def uses_phased_training(self) -> bool:
         return self.phased.enabled and self.training.ablation.value in (
             "full_core", "full_hrs", "full_hrs_refined", "v2_full",
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
             "v10_control", "v11_no_p5", "v12_247m", "v13_low_sparsity", "v14_attn_sink",
-            "v15_vanilla_route", "v16_peer_engram", "v17_peer_only",
+            "v15_vanilla_route", "v16_peer_engram", "v17_peer_only", "v18_cross_attn",
         )
 
     def uses_bdh(self) -> bool:
