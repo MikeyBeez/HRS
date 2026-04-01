@@ -20,12 +20,13 @@ from engram_store import EngramStore
 from retrieval_engine import RetrievalEngine
 
 
-def load_v18_model(device):
-    """Load trained V18 model from best checkpoint."""
-    cfg = ExperimentConfig.from_ablation(AblationConfig.V18_CROSS_ATTN)
+def load_model(device, ablation="v18_cross_attn"):
+    """Load trained model from best checkpoint."""
+    ablation_map = {a.value: a for a in AblationConfig}
+    cfg = ExperimentConfig.from_ablation(ablation_map[ablation])
     model = HRSTransformer(cfg).to(device)
 
-    ckpt_path = Path("results/v18_cross_attn/best.pt")
+    ckpt_path = Path(f"results/{ablation}/best.pt")
     ckpt = torch.load(ckpt_path, map_location=device, weights_only=False)
     model.load_state_dict(ckpt["model_state_dict"])
 
@@ -78,12 +79,14 @@ def main():
     parser.add_argument("--max-docs", type=int, default=None, help="Max documents to process")
     parser.add_argument("--segment-len", type=int, default=512, help="Segment length in tokens")
     parser.add_argument("--device", type=str, default="cuda")
+    parser.add_argument("--ablation", type=str, default="v18_cross_attn",
+                        help="Ablation config (e.g., v18_cross_attn, v19_exp_kernel)")
     args = parser.parse_args()
 
     device = torch.device(args.device if torch.cuda.is_available() else "cpu")
 
     # Load model
-    model, cfg = load_v18_model(device)
+    model, cfg = load_model(device, ablation=args.ablation)
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
     # Create store and engine
