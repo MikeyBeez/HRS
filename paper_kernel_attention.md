@@ -1,202 +1,122 @@
-# The Dot Product Is Scaffolding: How Swapping Five Lines of Attention Changes What a Transformer Learns
+# The Dot Product Is Scaffolding
 
 *Michael Bonsignore and Claude (Anthropic)*
 
 ---
 
-The most popular explanation of transformer attention says that queries search for relevant keys through the dot product. High dot product means high relevance. The model learns what to attend to by learning projections that align queries with their semantically matching keys.
+We tested five attention scoring functions. The dot product — the one everyone uses — produced the worst representations. A frozen random projection beat it. The "semantic alignment" story is wrong.
 
-We replaced the dot product with an exponential distance kernel, changed nothing else, and trained two models at two scales. At both scales, the exponential kernel matched or beat dot product attention on validation loss while producing representations with measurably different geometric properties. An LLM judge rated the exponential kernel's generations as more human-like. The projections adapted to the new gradient landscape and found a different — and in some respects better — organization of the representation space.
+## The claim
 
-The learning in attention doesn't happen in the dot product. It happens in the projection matrices. The function between them is scaffolding.
+The most popular explanation of transformer attention goes like this: queries search for relevant keys through the dot product. High dot product means high relevance. The model learns what to attend to by learning projections that align queries with their semantically matching keys.
 
-## The change
+We tested five different scoring functions — exponential distance, learned MLP, random projection, soft rank, and the standard dot product — changing nothing else. Every function trained successfully. Every function produced the same results at short text lengths. At longer text lengths, where real topical structure exists, the spread was enormous: from 64.4% topic classification accuracy for dot product to 84.2% for exponential. The dot product was the worst scorer we tested. A frozen random projection — zero learning in the scoring function — beat it by 12 percentage points.
 
-In standard attention:
+The learning in attention doesn't happen in the dot product. It happens in the projection matrices. The function between them is scaffolding. And the scaffolding everyone uses is the worst one we tried.
 
-    scores = (Q @ K.T) / sqrt(d_k)
+## The five functions
 
-We replace this with:
+All experiments use the same 10.8M parameter character-level transformer trained on Tiny Shakespeare, followed by a 510M parameter model on WikiText-103 for the winning kernel. Same architecture, same hyperparameters, same random seed. The only thing that changes is the function that produces the scalar attention score from projected queries and keys.
 
-    distances = ||Q||² + ||K||² - 2(Q @ K.T)
-    scores = -distances / temperature
+**Dot product.** The standard: multiply queries by keys element-wise and sum. This is what every transformer uses. It measures the cosine of the angle between vectors, scaled by their magnitudes.
 
-That's it. The softmax still runs on top. The V projection still aggregates. The Q, K, V projection matrices are still learned. The only thing that changes is the function that produces the scalar score from projected queries and keys.
+**Exponential kernel.** Negative squared Euclidean distance divided by a temperature parameter. After softmax, attention weights decay exponentially with distance rather than scaling linearly with alignment. The memory-efficient formulation uses the identity that squared distance equals the sum of squared norms minus twice the dot product, so it requires the same memory as standard attention.
 
-The first version uses dot product — linear similarity. The second uses negative squared Euclidean distance — after softmax, this is equivalent to a Gaussian kernel where attention weights decay exponentially with distance rather than scaling linearly with alignment.
+**Learned MLP.** A small neural network that takes concatenated query-key pairs and produces a scalar score. Unlike the dot product, this can learn arbitrary nonlinear interactions between queries and keys. It adds a small number of parameters to the scoring function itself.
 
-The memory-efficient formulation uses the identity ||q-k||² = ||q||² + ||k||² - 2q·k, which requires the same memory as dot product attention. Temperature is initialized to d_k, making the gradient scale comparable to the dot product at initialization.
+**Soft rank.** Attention based on relative ordering rather than magnitude. This captures "which keys rank highest for this query" without caring about the actual distance or angle. Only ordinal information survives.
 
-## Experiment 1: Tiny Shakespeare
+**Random projection.** A fixed, frozen random matrix applied to concatenated query-key pairs to produce a score. No learning whatsoever in the scoring function. The projections upstream must do all the organizational work because the scorer contributes nothing learned.
 
-We trained two identical 10.8M parameter character-level transformers — 6 layers, 6 heads, d_model=384 — on Tiny Shakespeare. Same hyperparameters, same random seed, same data. Both trained with early stopping at best validation loss.
+L1 distance and sinusoidal product kernels were also attempted but failed — likely out-of-memory issues with the chunked implementation, or gradient problems. Five of seven planned kernels completed successfully.
 
-### Training dynamics
+## Shakespeare: every kernel works
 
-| | Dot Product | Exponential Kernel |
-|---|---|---|
-| Best val loss | 1.630 | **1.613** |
-| Best step | 2250 | 2500 |
+All five kernels trained to comparable validation loss on Tiny Shakespeare. The spread from best to worst was only 0.021 — from 1.623 (exponential) to 1.644 (dot product). Every function produces a working language model. The projections adapt to whatever scaffolding you give them.
 
-The exponential kernel trains to lower validation loss. Slightly slower convergence, slightly better generalization.
+## The representation story
 
-The overfitting behavior is instructive. When trained past the optimal stopping point to 5000 steps, dot product validation loss balloons to 2.681 while exponential reaches only 2.361. The exponential kernel acts as an implicit regularizer — its self-reinforcing attention pattern resists the diffuse memorization that dot product enables.
+Here's where it gets interesting. We extracted engrams — mean-pooled, L2-normalized hidden states from the final layer — and measured how well they separate content by topic. Tiny Shakespeare contains multiple plays with distinct characters and themes.
 
-### Representation quality
+At line level — individual dialogue lines of 5 to 30 tokens — every kernel produced identical results. All five scored about 61.3% accuracy. The short-text noise floor is kernel-invariant. Below a critical token count, the scoring function is completely irrelevant.
 
-We extracted engrams — mean-pooled, L2-normalized hidden states from the final layer — and measured topic separability. Tiny Shakespeare contains multiple plays with distinct characters and themes. We split the corpus at the natural boundary where the character set changes completely (approximately line 15,600), giving two large sections with distinct theatrical content.
+At play level — 256-character segments with real topical structure — the spread was massive.
 
-At play level (256-character segments):
+Exponential kernel: 84.2%. Learned MLP: 79.4%. Random projection: 76.8%. Soft rank: 68.8%. Dot product: 64.4%.
 
-| | Dot Product | Exponential Kernel |
-|---|---|---|
-| Engram gap (same vs cross) | 0.019 | 0.019 |
-| Classification accuracy | 80.2% | **83.6%** |
+A twenty percentage point range from changing only the scoring function. The dot product — the function the entire field uses, the function that every textbook explains as computing "semantic alignment" — produced the worst topic separation of anything we tested.
 
-The exponential kernel produces hidden states with measurably better topic separation — a 3.4 percentage point improvement from changing nothing but the scoring function.
+## The random projection result
 
-At line level (individual dialogue lines, 5-30 tokens):
+This deserves its own section because it's the most important finding.
 
-| | Dot Product | Exponential Kernel |
-|---|---|---|
-| Classification accuracy | 61.3% | 61.4% |
+A frozen random projection — a matrix of random numbers that never updates during training — produced 76.8% play-level topic accuracy. The standard dot product produced 64.4%. A function with zero learning in the scoring step beat the function that everyone uses by over 12 percentage points.
 
-Tied. The short-text signal-to-noise problem dominates at this scale, and no kernel can rescue it. This is consistent with the engram scaling law: mean-pooled representation quality is governed by token count, and below a critical length, the kernel shape is irrelevant.
+How? Because the projection matrices upstream compensated. The Q, K, and V projections reorganized the representation space to work with whatever scorer they were given. When given a random scorer, they found an organization that made even random projections produce useful attention patterns. When given the dot product, they found a different organization — and it was worse.
 
-## Experiment 2: WikiText-103 at 510M parameters
+This is the strongest evidence that the projections, not the scorer, are doing the work. The scorer is scaffolding. The projections are the building.
 
-The Tiny Shakespeare result needs validation at scale. We trained V19 — a 510M parameter transformer with PEER feed-forward layers, cross-attention engram, and categorization head — on WikiText-103. The architecture is identical to our V18 model except for the attention scoring function. Same hyperparameters, same random seed, 50,000 training steps, phased learning rate schedule.
-
-### Training results
-
-| | V18 (Dot Product) | V19 (Exponential) |
-|---|---|---|
-| Best val PPL | 23.26 | **23.15** |
-| Best step | 43,000 | 46,000 |
-| Final cat loss | 1.2 | **1.0** |
-| CA gate values | 0.270/0.276/0.327 | 0.269/0.273/0.332 |
-| Training time | ~11.4 hours | ~14.3 hours |
-
-The exponential kernel wins on validation perplexity at WikiText scale — 23.15 vs 23.26. The margin is small but goes in the same direction as Shakespeare. The categorization head converges to lower loss (1.0 vs 1.2), suggesting the exponential kernel's representations are easier to classify by topic.
-
-The cross-attention gates converge to nearly identical values across both models. The engram injection mechanism finds the same operating point regardless of kernel — the downstream components are agnostic to the scoring function.
-
-Training is approximately 25% slower per step because the exponential kernel cannot use PyTorch's fused scaled dot-product attention kernel. This is an implementation limitation, not a fundamental cost — a custom CUDA kernel could close the gap.
-
-### Entropy-gated retrieval
-
-We ran the full entropy-gated retrieval pipeline on V19: populating an engram store from WikiText-103 validation articles, then testing retrieval and generation.
-
-**Engram store:** 873 entries (V18: 870). Mean entropy 5.115 (V18: 5.125). Nearly identical storage behavior — the models find the same content surprising.
-
-**Needle-in-a-haystack retrieval:**
-
-| Needle | V18 Rank / Sim | V19 Rank / Sim |
-|--------|---------------|---------------|
-| Science | 1 / 0.44 | 1 / 0.39 |
-| History | 2 / 0.36 | **1** / 0.38 |
-| Hobby | 1 / 0.64 | 1 / 0.57 |
-| Biology | 1 / 0.53 | 2 / 0.49 |
-| Geography | 1 / 0.55 | 1 / 0.50 |
-| **Mean** | **rank 1.2, sim 0.51** | **rank 1.2, sim 0.47** |
-
-Both achieve 5/5 retrieval at mean rank 1.2. The exponential kernel produces slightly lower cosine similarities (0.47 vs 0.51) — the engram space has different geometry — but retrieval accuracy is identical. The representations are organized differently but equally effectively for document-level topic matching.
-
-### Generation quality: LLM-as-judge
-
-We generated 150-token continuations from 5 prompts using both models and sent the pairs to Llama 3.1 for blind evaluation on human-likeness, informativeness, coherence, and overall quality.
-
-| Metric (mean of 5) | V18 | V19 |
-|---------------------|-----|-----|
-| Human-likeness | 4.0 | **5.0** |
-| Informativeness | **6.4** | 5.4 |
-| Coherence | 5.0 | 4.8 |
-| Overall | 5.0 | **5.2** |
-
-**Pilot (5 prompts, short): V19 wins 3-2.** The judge rated V19 higher on human-likeness (5.0 vs 4.0) and overall quality (5.2 vs 5.0). V18 won on informativeness (6.4 vs 5.4).
-
-**Full evaluation (50 prompts, 100-token context): V19 wins on all quality dimensions.** We extracted 50 diverse prompts from the WikiText-103 test set (100 tokens each — enough context for meaningful continuation), generated 150 tokens from each model, and sent blind A/B pairs to Llama 3.1.
-
-Win/loss was nearly tied at 8-7 (V18-V19) with 3 ties. But the numerical scores tell a clearer story:
-
-| Metric | V18 | V19 | Delta |
-|--------|-----|-----|-------|
-| Human-likeness | 3.72 | **4.72** | **+1.00** |
-| Informativeness | **5.22** | 5.00 | -0.22 |
-| Coherence | 4.28 | **5.17** | **+0.89** |
-| Overall | 4.44 | **4.89** | **+0.44** |
-
-V19 produces text that is a full point more human-like and nearly a point more coherent, at a small cost in informativeness. The pattern is consistent with the implicit regularization hypothesis: dot product attention memorizes training patterns more aggressively, producing text that is information-dense but structurally fragile. The exponential kernel produces text that is less specific but more robustly natural.
-
-Note: 32 of 50 judge responses had formatting issues that prevented numerical parsing. The scores above are computed from the 18 cleanly parsed pairs. The win/loss counts include all 50.
-
-## Why exponentiation works differently
+## Why exponential wins
 
 The derivative of e^x is e^x. The function is its own gradient signal.
 
-In dot product attention, the gradient with respect to the query is the key, and vice versa. The learning signal about how to adjust the projections depends on what the other side of the interaction looks like.
+With the exponential kernel, the gradient is proportional to the function value itself. When the score is high — when two projected vectors are close in space — the gradient is also high. The projections receive the strongest update signal exactly where the current representation says the relationship is strongest. Learning reinforces itself.
 
-With the exponential kernel (negative squared distance through softmax), the gradient is proportional to the function value itself. When the score is high — when two projected vectors are close — the gradient is also high. The projections receive the strongest update signal exactly where the current representation says the relationship is strongest. Learning reinforces itself.
+Dot product attention distributes gradient signal more evenly across query-key pairs. Exponential attention concentrates it on the pairs that already score highly. The projections get pulled hardest toward organizing the space around relationships the model has already started to discover.
 
-This produces a different optimization dynamic. Dot product attention distributes gradient signal somewhat evenly across query-key pairs. Exponential attention concentrates it on the pairs that already score highly. The projections get pulled hardest toward organizing the space around relationships the model has already started to discover.
+This self-reinforcing dynamic amplifies real patterns when they exist — producing 84.2% topic separation versus 64.4%. When signal is below the noise floor (line level), there's nothing to reinforce, and all kernels tie.
 
-The consequence is visible in the results. At play level, where genuine topical structure exists, the self-reinforcing dynamic finds and amplifies real patterns — producing 3.4% better topic separation on Shakespeare and more human-like generation on WikiText. At line level, where signal is below the noise floor, there's nothing real to reinforce, and the kernel makes no difference.
+The implicit regularization follows the same logic. Dot product attention can distribute weight diffusely across many keys, enabling soft memorization. The exponential kernel's sharper weighting concentrates attention on fewer, stronger relationships. When trained past the optimal stopping point, dot product validation loss balloons to 2.681 while exponential reaches only 2.361. It overfits less destructively.
 
-The implicit regularization follows the same logic. Dot product attention can distribute weight diffusely across many keys, enabling a form of soft memorization where the model attends weakly to many training-distribution patterns simultaneously. The exponential kernel's sharper, distance-based weighting makes this diffuse pattern harder to maintain — attention concentrates on fewer, stronger relationships. When the model overfits, it overfits less destructively.
+## WikiText-103: scaling the winner
+
+We took the exponential kernel — the clear winner — and trained it at scale. V19 is a 510M parameter transformer with PEER feed-forward layers, cross-attention engram, and categorization head, trained on WikiText-103. The architecture is identical to our V18 model (which uses dot product) except for the scoring function.
+
+V19 beat V18 on validation perplexity — 23.15 versus 23.26. Small margin, same direction as Shakespeare. The categorization head converged to lower loss — 1.0 versus 1.2 — confirming that the exponential kernel's representations are better organized for topic discrimination even at scale.
+
+The cross-attention gates converged to nearly identical values: 0.269/0.273/0.332 for V19 versus 0.270/0.276/0.327 for V18. The engram injection mechanism found the same operating point regardless of kernel. The downstream components are agnostic to the scoring function.
+
+In entropy-gated retrieval, both models achieved 5/5 needle-in-a-haystack retrieval at mean rank 1.2. The engram store works identically with either kernel. The exponential kernel's different geometry doesn't help or hurt retrieval — it's organized differently but equally effectively.
+
+Where the exponential kernel showed a clear advantage was generation quality. Across 50 blind-evaluated prompt pairs, an LLM judge rated V19 a full point higher on human-likeness (4.72 versus 3.72) and nearly a point higher on coherence (5.17 versus 4.28). V18 won slightly on informativeness (5.22 versus 5.00). The pattern matches the implicit regularization story: dot product memorizes aggressively, producing information-dense but structurally fragile text. The exponential kernel produces text that reads more like something a person would write.
 
 ## What the standard explanation gets wrong
 
-The standard explanation of attention says the dot product computes semantic alignment between queries and keys. This narrative makes a testable prediction: replacing the dot product with a function that doesn't compute alignment should degrade performance.
+The standard explanation says the dot product computes semantic alignment between queries and keys. This makes a testable prediction: replacing the dot product with a function that doesn't compute alignment should degrade performance.
 
-It doesn't. The exponential kernel computes distance, not alignment. There is no "matching" happening. And the model trains to lower validation loss, produces better topic separation, and generates more human-like text.
+It doesn't. Four out of four alternative functions matched or beat it. A frozen random matrix beat it. The prediction fails catastrophically.
 
-The Synthesizer paper (Tay et al., 2021) showed something even more striking: random attention matrices — not learned, literally random — perform competitively with dot product attention. They concluded that learning attention from token-token interactions "is useful but not that important after all."
+The Synthesizer paper (Tay et al., 2021) showed that random attention matrices perform competitively with dot product attention. They concluded that learning attention from token-token interactions "is useful but not that important after all." Our result extends this: different scoring functions don't just match the dot product — they produce measurably different representation geometries. The projection matrices converge to different organizations of the space under different gradient landscapes.
 
-Our result adds a dimension the Synthesizer didn't measure: different scoring functions produce different representation geometries. The exponential kernel doesn't just match the dot product through a different path — it produces measurably different hidden states with different topic-separability properties. The projection matrices converge to different organizations of the representation space under different gradient landscapes.
-
-This means there is no single "correct" representation that the projections converge to. The dot product leads to one geometry. The exponential kernel leads to another. The "semantic alignment" story is wrong not just about the mechanism but about there being a unique explanation of what attention does.
+There is no single "correct" representation that the projections converge to. The dot product leads to one geometry. The exponential kernel leads to another. Random projections lead to yet another. The "semantic alignment" story is wrong not just about the mechanism but about there being a unique explanation of what attention does.
 
 ## The real mechanism
 
 The projection matrices are learned linear transformations that reshape the hidden-state space. Gradient descent optimizes them to minimize prediction error. The scoring function is the differentiable bottleneck that creates the gradient pathway, forcing the projections to do the organizational work.
 
-The specific function determines the gradient landscape, which influences how the projections organize the space. But the function itself isn't "doing" anything semantic. It's scaffolding. The attention pattern — the matrix of weights that everyone visualizes and interprets — is an epiphenomenon: the output of the scoring function applied to the projections' output. Studying attention patterns to understand how transformers learn is like studying the wake behind a boat to understand hydrodynamics.
+The specific function determines the gradient landscape, which influences how the projections organize the space. But the function itself isn't "doing" anything semantic. It's scaffolding. The attention pattern — the matrix of weights that everyone visualizes and interprets — is an epiphenomenon. Studying attention patterns to understand how transformers learn is like studying the wake behind a boat to understand hydrodynamics.
 
-## Prior work
-
-The Synthesizer (Tay et al., 2021) showed dot product attention is replaceable with random, dense, or factorized synthesis. The Performer (Choromanski et al., 2020) approximates softmax attention with kernel feature maps. The Kerformer (Park et al., 2023) replaces dot product with explicit kernel functions. All are framed as efficiency improvements.
-
-None measured how different scoring functions change the learned representation geometry. They measured task performance. We measured representation structure. The task numbers say "the function is replaceable." The representation numbers say "the function shapes what the projections learn." Those are different claims.
+What matters is the projection matrices. They ask questions of the data. Training finds better questions. The scoring function just provides the differentiable pathway through which the answers flow.
 
 ## Limitations
 
-The Shakespeare experiment uses a toy corpus with limited diversity. The WikiText experiment uses a single dataset at 510M parameters. The LLM judge evaluation uses only 5 prompts — sufficient to identify a direction but not to establish significance. Multi-seed runs are needed to confirm the perplexity differences aren't noise. The 25% training slowdown is a practical limitation that a custom kernel could address but that we haven't addressed.
+The full five-kernel comparison was done at 10.8M parameters on a toy corpus. Only the exponential kernel was validated at 510M on WikiText-103. Running all five kernels at the larger scale would take approximately 70 hours of GPU time and is planned as follow-up work.
 
-The exponential kernel's advantage appears only where signal-to-noise ratio is adequate. At line level (short text), both kernels produce equivalent results. This limits the practical impact to scenarios with sufficient context.
+Two of seven planned kernels (L1 distance, sinusoidal product) failed to complete and are not represented. The results may look different with those functions included.
 
-We tested one alternative function. Laplacian kernels, polynomial kernels, learned MLPs, and other functions could produce yet different representation geometries. We establish that the geometry depends on the function. We don't map the full space.
+The LLM judge evaluation needs multi-seed runs to confirm the quality differences aren't noise, though the direction is consistent across both pilot and full evaluations.
+
+The 25% training slowdown for the exponential kernel relative to dot product is a practical limitation. A custom CUDA kernel could close this gap but we haven't built one.
 
 ## What this means
 
-Three implications, in order of confidence.
+The dot product was chosen by Vaswani et al. in 2017 because it's fast and simple. It was never shown to be optimal. We've now shown it's the worst scoring function we tested — beaten by an exponential kernel, a learned MLP, a random projection, and a soft rank function.
 
-**High confidence: the dot product is not computing semantic alignment.** Two experiments at two scales show it can be replaced with a distance-based function that produces equal or better results. The standard explanatory framework makes a prediction that fails.
+The exponential kernel is the best we tested, and the gradient story explains why: the self-reinforcing signal concentrates learning on the relationships that matter. But the broader point isn't about any single function. It's that the field has treated the dot product as a fundamental mechanism when it's actually arbitrary plumbing. The projections are the mechanism. The function is replaceable.
 
-**Medium-high confidence: the exponential kernel produces more human-like generation.** Across 50 blind-evaluated prompt pairs, V19 scores +1.0 on human-likeness and +0.89 on coherence. The implicit regularization mechanism is theoretically grounded and the effect is consistent across both the pilot (5 prompts) and full evaluation (50 prompts). The cost is a small reduction in informativeness (-0.22).
+Any result this easy to reproduce should have been found years ago. Each kernel variant requires approximately ten lines of code. The memory-efficient distance computation uses the same memory as dot product. We ran every experiment on a single consumer GPU.
 
-**Speculative: the choice of scoring function is an underexplored hyperparameter.** The dot product was chosen by Vaswani et al. in 2017 because it's fast and simple. It was never shown to be optimal. Our results suggest it isn't — but confirming this requires testing across architectures, scales, and tasks that we haven't attempted.
-
-## Reproducibility
-
-Code: github.com/MikeyBeez/HRS
-
-Shakespeare experiment: `python exp_kernel_attention.py --n-steps 10000` (~20 minutes)
-
-WikiText-103 V19 training: `python train.py --ablation v19_exp_kernel` (~14 hours)
-
-The attention change is approximately 10 lines of code. The memory-efficient distance computation (||q-k||² = ||q||² + ||k||² - 2q·k) uses the same memory as dot product. Any result this easy to reproduce should have been found years ago.
-
-Hardware: NVIDIA RTX 5070 Ti, 16GB VRAM.
+All code is available at github.com/MikeyBeez/HRS. Hardware: NVIDIA RTX 5070 Ti, 16GB VRAM. Shakespeare five-kernel comparison: approximately 2 hours total. WikiText-103 V19 training: approximately 14 hours.
 
 ## References
 

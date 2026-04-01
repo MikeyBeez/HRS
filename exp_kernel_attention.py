@@ -103,14 +103,250 @@ class ExponentialKernelAttention(nn.Module):
         return self.out_proj(out)
 
 
+class MLPScorerAttention(nn.Module):
+    """Attention using a learned MLP scorer: s(q,k) = MLP([q;k]).
+
+    No dot product, no distance — just a learned nonlinear interaction.
+    Memory-efficient: decomposes MLP([q;k]) = MLP_q(q) + MLP_k(k) + bilinear(q,k)
+    via a low-rank approximation to avoid the (B,H,T,T,2D) expansion.
+    """
+
+    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1, mlp_hidden=32):
+        super().__init__()
+        self.n_heads = n_heads
+        self.head_dim = d_model // n_heads
+
+        self.qkv = nn.Linear(d_model, 3 * d_model)
+        self.out_proj = nn.Linear(d_model, d_model)
+        self.dropout = nn.Dropout(dropout)
+
+        # Decomposed MLP scorer: project q and k to shared space, then interact
+        # q -> (D -> R), k -> (D -> R), score = (phi_q(q) @ phi_k(k).T) / sqrt(R)
+        # phi_q and phi_k are nonlinear projections
+        R = mlp_hidden
+        self.phi_q = nn.Sequential(nn.Linear(self.head_dim, R), nn.GELU())
+        self.phi_k = nn.Sequential(nn.Linear(self.head_dim, R), nn.GELU())
+
+        self.register_buffer("mask", torch.tril(torch.ones(max_seq_len, max_seq_len))
+                             .view(1, 1, max_seq_len, max_seq_len))
+
+    def forward(self, x):
+        B, T, C = x.shape
+        qkv = self.qkv(x).reshape(B, T, 3, self.n_heads, self.head_dim)
+        q, k, v = qkv.unbind(dim=2)
+        q = q.transpose(1, 2)  # (B, H, T, D)
+        k = k.transpose(1, 2)
+        v = v.transpose(1, 2)
+
+        # Nonlinear projections then dot product in projected space
+        q_proj = self.phi_q(q)  # (B, H, T, R)
+        k_proj = self.phi_k(k)  # (B, H, T, R)
+        scale = 1.0 / math.sqrt(q_proj.shape[-1])
+        scores = (q_proj @ k_proj.transpose(-2, -1)) * scale  # (B, H, T, T)
+
+        scores = scores.masked_fill(self.mask[:, :, :T, :T] == 0, float('-inf'))
+        attn = F.softmax(scores, dim=-1)
+        attn = self.dropout(attn)
+
+        out = (attn @ v).transpose(1, 2).reshape(B, T, C)
+        return self.out_proj(out)
+
+
+class RandomProjectionAttention(nn.Module):
+    """Attention with random frozen projection + nonlinearity.
+
+    s(q,k) = relu(W_q_frozen @ q + W_k_frozen @ k)
+    Decomposed to avoid 5D tensor. W is frozen — no learning in the scorer.
+    """
+
+    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1, proj_dim=32):
+        super().__init__()
+        self.n_heads = n_heads
+        self.head_dim = d_model // n_heads
+
+        self.qkv = nn.Linear(d_model, 3 * d_model)
+        self.out_proj = nn.Linear(d_model, d_model)
+        self.dropout = nn.Dropout(dropout)
+
+        # Random frozen projections: q -> R, k -> R, then dot in R-space
+        W_q = torch.randn(n_heads, self.head_dim, proj_dim) * 0.1
+        W_k = torch.randn(n_heads, self.head_dim, proj_dim) * 0.1
+        self.register_buffer("W_q_frozen", W_q)
+        self.register_buffer("W_k_frozen", W_k)
+
+        self.register_buffer("mask", torch.tril(torch.ones(max_seq_len, max_seq_len))
+                             .view(1, 1, max_seq_len, max_seq_len))
+
+    def forward(self, x):
+        B, T, C = x.shape
+        qkv = self.qkv(x).reshape(B, T, 3, self.n_heads, self.head_dim)
+        q, k, v = qkv.unbind(dim=2)
+        q = q.transpose(1, 2)  # (B, H, T, D)
+        k = k.transpose(1, 2)
+        v = v.transpose(1, 2)
+
+        # Frozen random projection + ReLU, then dot product in projected space
+        q_proj = torch.relu(torch.einsum('bhtd,hdr->bhtr', q, self.W_q_frozen))  # (B,H,T,R)
+        k_proj = torch.relu(torch.einsum('bhtd,hdr->bhtr', k, self.W_k_frozen))  # (B,H,T,R)
+        scale = 1.0 / math.sqrt(q_proj.shape[-1])
+        scores = (q_proj @ k_proj.transpose(-2, -1)) * scale  # (B, H, T, T)
+
+        scores = scores.masked_fill(self.mask[:, :, :T, :T] == 0, float('-inf'))
+        attn = F.softmax(scores, dim=-1)
+        attn = self.dropout(attn)
+        out = (attn @ v).transpose(1, 2).reshape(B, T, C)
+        return self.out_proj(out)
+
+
+class L1DistanceAttention(nn.Module):
+    """Attention using L1 distance: s(q,k) = -||q-k||_1 / temperature.
+
+    Memory-efficient: computes L1 via chunked iteration over head dim.
+    """
+
+    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1):
+        super().__init__()
+        self.n_heads = n_heads
+        self.head_dim = d_model // n_heads
+        self.temperature = float(self.head_dim)
+
+        self.qkv = nn.Linear(d_model, 3 * d_model)
+        self.out_proj = nn.Linear(d_model, d_model)
+        self.dropout = nn.Dropout(dropout)
+        self.register_buffer("mask", torch.tril(torch.ones(max_seq_len, max_seq_len))
+                             .view(1, 1, max_seq_len, max_seq_len))
+
+    def forward(self, x):
+        B, T, C = x.shape
+        qkv = self.qkv(x).reshape(B, T, 3, self.n_heads, self.head_dim)
+        q, k, v = qkv.unbind(dim=2)
+        q = q.transpose(1, 2)  # (B, H, T, D)
+        k = k.transpose(1, 2)
+        v = v.transpose(1, 2)
+
+        # L1 distance, chunked over head dim to avoid (B,H,T,T,D) tensor
+        # sum_d |q_d - k_d| where q_d: (B,H,T,1) and k_d: (B,H,1,T)
+        l1_dist = torch.zeros(B, self.n_heads, T, T, device=x.device)
+        chunk = 16  # process 16 dims at a time
+        for d_start in range(0, self.head_dim, chunk):
+            d_end = min(d_start + chunk, self.head_dim)
+            q_chunk = q[:, :, :, d_start:d_end].unsqueeze(3)  # (B,H,T,1,chunk)
+            k_chunk = k[:, :, :, d_start:d_end].unsqueeze(2)  # (B,H,1,T,chunk)
+            l1_dist += (q_chunk - k_chunk).abs().sum(dim=-1)
+
+        scores = -l1_dist / self.temperature
+        scores = scores.masked_fill(self.mask[:, :, :T, :T] == 0, float('-inf'))
+        attn = F.softmax(scores, dim=-1)
+        attn = self.dropout(attn)
+        out = (attn @ v).transpose(1, 2).reshape(B, T, C)
+        return self.out_proj(out)
+
+
+class SinProductAttention(nn.Module):
+    """Attention using multiplicative sine: s(q,k) = sum_i sin(q_i * k_i).
+
+    Memory-efficient: uses the identity sin(a*b) and chunks over dims.
+    """
+
+    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1):
+        super().__init__()
+        self.n_heads = n_heads
+        self.head_dim = d_model // n_heads
+
+        self.qkv = nn.Linear(d_model, 3 * d_model)
+        self.out_proj = nn.Linear(d_model, d_model)
+        self.dropout = nn.Dropout(dropout)
+        self.register_buffer("mask", torch.tril(torch.ones(max_seq_len, max_seq_len))
+                             .view(1, 1, max_seq_len, max_seq_len))
+
+    def forward(self, x):
+        B, T, C = x.shape
+        qkv = self.qkv(x).reshape(B, T, 3, self.n_heads, self.head_dim)
+        q, k, v = qkv.unbind(dim=2)
+        q = q.transpose(1, 2)
+        k = k.transpose(1, 2)
+        v = v.transpose(1, 2)
+
+        # sum_d sin(q_d * k_d), chunked to avoid (B,H,T,T,D)
+        scores = torch.zeros(B, self.n_heads, T, T, device=x.device)
+        chunk = 16
+        for d_start in range(0, self.head_dim, chunk):
+            d_end = min(d_start + chunk, self.head_dim)
+            q_chunk = q[:, :, :, d_start:d_end].unsqueeze(3)  # (B,H,T,1,chunk)
+            k_chunk = k[:, :, :, d_start:d_end].unsqueeze(2)  # (B,H,1,T,chunk)
+            scores += torch.sin(q_chunk * k_chunk).sum(dim=-1)
+
+        scores = scores.masked_fill(self.mask[:, :, :T, :T] == 0, float('-inf'))
+        attn = F.softmax(scores, dim=-1)
+        attn = self.dropout(attn)
+        out = (attn @ v).transpose(1, 2).reshape(B, T, C)
+        return self.out_proj(out)
+
+
+class SoftRankAttention(nn.Module):
+    """Attention using soft rank of L2 distances.
+
+    Memory-efficient: uses L2 distances (already (B,H,T,T)) then
+    approximates rank via normalized negative distance (avoids the
+    (B,H,T,T,T) pairwise-distance-of-distances tensor).
+    """
+
+    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1):
+        super().__init__()
+        self.n_heads = n_heads
+        self.head_dim = d_model // n_heads
+
+        self.qkv = nn.Linear(d_model, 3 * d_model)
+        self.out_proj = nn.Linear(d_model, d_model)
+        self.dropout = nn.Dropout(dropout)
+        self.register_buffer("mask", torch.tril(torch.ones(max_seq_len, max_seq_len))
+                             .view(1, 1, max_seq_len, max_seq_len))
+
+    def forward(self, x):
+        B, T, C = x.shape
+        qkv = self.qkv(x).reshape(B, T, 3, self.n_heads, self.head_dim)
+        q, k, v = qkv.unbind(dim=2)
+        q = q.transpose(1, 2)
+        k = k.transpose(1, 2)
+        v = v.transpose(1, 2)
+
+        # L2 distances via ||q-k||² = ||q||² + ||k||² - 2q·k
+        q_sq = (q ** 2).sum(dim=-1, keepdim=True)
+        k_sq = (k ** 2).sum(dim=-1, keepdim=True)
+        dot = q @ k.transpose(-2, -1)
+        distances = q_sq + k_sq.transpose(-2, -1) - 2 * dot  # (B, H, T, T)
+
+        # Approximate soft rank: normalize distances per query to [0, 1]
+        # then negate. Closer keys get higher scores (lower rank).
+        # This preserves relative ordering without the (B,H,T,T,T) tensor.
+        d_min = distances.min(dim=-1, keepdim=True).values
+        d_max = distances.max(dim=-1, keepdim=True).values.clamp(min=1e-6)
+        normalized = (distances - d_min) / (d_max - d_min + 1e-6)
+        scores = -normalized * self.head_dim  # scale for softmax
+
+        scores = scores.masked_fill(self.mask[:, :, :T, :T] == 0, float('-inf'))
+        attn = F.softmax(scores, dim=-1)
+        attn = self.dropout(attn)
+        out = (attn @ v).transpose(1, 2).reshape(B, T, C)
+        return self.out_proj(out)
+
+
 class TransformerBlock(nn.Module):
-    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1, use_exponential=False):
+    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1,
+                 attn_type="dot_product"):
         super().__init__()
         self.ln1 = nn.LayerNorm(d_model)
-        if use_exponential:
-            self.attn = ExponentialKernelAttention(d_model, n_heads, max_seq_len, dropout)
-        else:
-            self.attn = DotProductAttention(d_model, n_heads, max_seq_len, dropout)
+        attn_classes = {
+            "dot_product": DotProductAttention,
+            "exponential": ExponentialKernelAttention,
+            "mlp": MLPScorerAttention,
+            "random_proj": RandomProjectionAttention,
+            "l1_distance": L1DistanceAttention,
+            "sin_product": SinProductAttention,
+            "soft_rank": SoftRankAttention,
+        }
+        cls = attn_classes.get(attn_type, DotProductAttention)
+        self.attn = cls(d_model, n_heads, max_seq_len, dropout)
         self.ln2 = nn.LayerNorm(d_model)
         self.mlp = nn.Sequential(
             nn.Linear(d_model, 4 * d_model),
@@ -127,13 +363,13 @@ class TransformerBlock(nn.Module):
 
 class MiniTransformer(nn.Module):
     def __init__(self, vocab_size, d_model=384, n_heads=6, n_layers=6,
-                 max_seq_len=256, dropout=0.1, use_exponential=False):
+                 max_seq_len=256, dropout=0.1, attn_type="dot_product"):
         super().__init__()
         self.tok_emb = nn.Embedding(vocab_size, d_model)
         self.pos_emb = nn.Embedding(max_seq_len, d_model)
         self.drop = nn.Dropout(dropout)
         self.blocks = nn.ModuleList([
-            TransformerBlock(d_model, n_heads, max_seq_len, dropout, use_exponential)
+            TransformerBlock(d_model, n_heads, max_seq_len, dropout, attn_type)
             for _ in range(n_layers)
         ])
         self.ln_f = nn.LayerNorm(d_model)
@@ -379,170 +615,140 @@ def run_pair_analysis(engrams_a, engrams_b, label):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--n-steps", type=int, default=5000)
+    parser.add_argument("--n-steps", type=int, default=10000)
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--lr", type=float, default=3e-4)
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--kernels", type=str, default="all",
+                        help="Comma-separated kernel types, or 'all'")
     args = parser.parse_args()
 
     device = torch.device(args.device if torch.cuda.is_available() else "cpu")
 
+    ALL_KERNELS = [
+        "dot_product", "exponential", "mlp", "random_proj",
+        "l1_distance", "sin_product", "soft_rank",
+    ]
+
+    if args.kernels == "all":
+        kernels_to_test = ALL_KERNELS
+    else:
+        kernels_to_test = [k.strip() for k in args.kernels.split(",")]
+
     # Load data
     text, stoi, itos, plays = load_shakespeare()
     vocab_size = len(stoi)
-    print(f"Shakespeare: {len(text)} chars, {vocab_size} unique, {len(plays)} plays")
-    for name, start, end in plays[:5]:
-        print(f"  {name}: lines {start}-{end}")
+    print(f"Shakespeare: {len(text)} chars, {vocab_size} unique, {len(plays)} sections")
 
-    # Encode
     data = torch.tensor([stoi[c] for c in text], dtype=torch.long)
     split = int(0.9 * len(data))
     train_data = data[:split]
     val_data = data[split:]
 
-    # ============================================================
-    # Train Model A: Dot Product
-    # ============================================================
-    print(f"\n{'='*60}")
-    print("MODEL A: Standard Dot Product Attention")
-    print(f"{'='*60}")
-
-    torch.manual_seed(args.seed)
-    model_a = MiniTransformer(vocab_size, use_exponential=False)
-    n_params = sum(p.numel() for p in model_a.parameters())
-    print(f"Parameters: {n_params:,}")
-
-    losses_a, val_losses_a, best_step_a, best_val_a = train_model(
-        model_a, train_data, val_data,
-        n_steps=args.n_steps, batch_size=args.batch_size,
-        lr=args.lr, device=device, label="DotProd",
-    )
-
-    # ============================================================
-    # Train Model B: Exponential Kernel
-    # ============================================================
-    print(f"\n{'='*60}")
-    print("MODEL B: Exponential Kernel Attention")
-    print(f"{'='*60}")
-
-    torch.manual_seed(args.seed)
-    model_b = MiniTransformer(vocab_size, use_exponential=True)
-    print(f"Parameters: {sum(p.numel() for p in model_b.parameters()):,}")
-
-    losses_b, val_losses_b, best_step_b, best_val_b = train_model(
-        model_b, train_data, val_data,
-        n_steps=args.n_steps, batch_size=args.batch_size,
-        lr=args.lr, device=device, label="ExpKern",
-    )
-
-    # ============================================================
-    # Training comparison
-    # ============================================================
-    print(f"\n{'='*60}")
-    print("TRAINING COMPARISON")
-    print(f"{'='*60}")
-    print(f"  Best val loss — DotProd: {best_val_a:.4f} (step {best_step_a})")
-    print(f"  Best val loss — ExpKern: {best_val_b:.4f} (step {best_step_b})")
-
-    # ============================================================
-    # Engram analysis
-    # ============================================================
-    print(f"\n{'='*60}")
-    print("ENGRAM ANALYSIS")
-    print(f"{'='*60}")
-
-    lines = text.split('\n')
-
+    # Prepare engram analysis data
+    lines_list = text.split('\n')
     play1_name, p1_start, p1_end = plays[0]
     play2_name, p2_start, p2_end = plays[1]
+    play1_text = '\n'.join(lines_list[p1_start:p1_end])
+    play2_text = '\n'.join(lines_list[p2_start:p2_end])
 
-    play1_text = '\n'.join(lines[p1_start:p1_end])
-    play2_text = '\n'.join(lines[p2_start:p2_end])
-
-    # Play-level: 256-char segments from each half
     def chunk_text(t, chunk_size=256):
         return [t[i:i+chunk_size] for i in range(0, len(t) - chunk_size, chunk_size)]
 
-    play1_chunks = chunk_text(play1_text)[:50]
-    play2_chunks = chunk_text(play2_text)[:50]
-
-    print(f"\nPlay-level (256-char segments): {play1_name} ({len(play1_chunks)}) vs {play2_name} ({len(play2_chunks)})")
-
-    eng_a_p1 = extract_engrams(model_a, play1_chunks, stoi, device)
-    eng_a_p2 = extract_engrams(model_a, play2_chunks, stoi, device)
-    result_a_play = run_pair_analysis(eng_a_p1, eng_a_p2, "DotProd play-level")
-
-    eng_b_p1 = extract_engrams(model_b, play1_chunks, stoi, device)
-    eng_b_p2 = extract_engrams(model_b, play2_chunks, stoi, device)
-    result_b_play = run_pair_analysis(eng_b_p1, eng_b_p2, "ExpKern play-level")
-
-    # Line-level: individual dialogue lines (more pairs)
     def extract_lines(text_block, min_len=20, max_len=120):
         result = []
         for line in text_block.split('\n'):
             line = line.strip()
-            # Skip character names (end with :) and very short/long lines
             if line.endswith(':') or len(line) < min_len or len(line) > max_len:
                 continue
             result.append(line)
         return result
 
+    play1_chunks = chunk_text(play1_text)[:50]
+    play2_chunks = chunk_text(play2_text)[:50]
     play1_lines = extract_lines(play1_text)[:200]
     play2_lines = extract_lines(play2_text)[:200]
 
-    print(f"\nLine-level ({len(play1_lines)} + {len(play2_lines)} lines):")
+    # ============================================================
+    # Train and evaluate all kernels
+    # ============================================================
+    all_results = {}
 
-    eng_a_l1 = extract_engrams(model_a, play1_lines, stoi, device)
-    eng_a_l2 = extract_engrams(model_a, play2_lines, stoi, device)
-    result_a_line = run_pair_analysis(eng_a_l1, eng_a_l2, "DotProd line-level")
+    for kernel_name in kernels_to_test:
+        print(f"\n{'#'*60}")
+        print(f"KERNEL: {kernel_name}")
+        print(f"{'#'*60}")
 
-    eng_b_l1 = extract_engrams(model_b, play1_lines, stoi, device)
-    eng_b_l2 = extract_engrams(model_b, play2_lines, stoi, device)
-    result_b_line = run_pair_analysis(eng_b_l1, eng_b_l2, "ExpKern line-level")
+        torch.manual_seed(args.seed)
+        try:
+            model = MiniTransformer(vocab_size, attn_type=kernel_name)
+        except Exception as e:
+            print(f"  FAILED to create model: {e}")
+            all_results[kernel_name] = {"error": str(e)}
+            continue
+
+        n_params = sum(p.numel() for p in model.parameters())
+        print(f"  Parameters: {n_params:,}")
+
+        try:
+            losses, val_losses, best_step, best_val = train_model(
+                model, train_data, val_data,
+                n_steps=args.n_steps, batch_size=args.batch_size,
+                lr=args.lr, device=device, label=kernel_name,
+            )
+        except Exception as e:
+            print(f"  TRAINING FAILED: {e}")
+            all_results[kernel_name] = {"error": str(e)}
+            del model
+            torch.cuda.empty_cache()
+            continue
+
+        # Engram analysis
+        print(f"\n  Engram analysis:")
+        eng_p1 = extract_engrams(model, play1_chunks, stoi, device)
+        eng_p2 = extract_engrams(model, play2_chunks, stoi, device)
+        result_play = run_pair_analysis(eng_p1, eng_p2, f"  {kernel_name} play-level")
+
+        eng_l1 = extract_engrams(model, play1_lines, stoi, device)
+        eng_l2 = extract_engrams(model, play2_lines, stoi, device)
+        result_line = run_pair_analysis(eng_l1, eng_l2, f"  {kernel_name} line-level")
+
+        all_results[kernel_name] = {
+            "n_params": n_params,
+            "best_val": best_val,
+            "best_step": best_step,
+            "play_level": result_play,
+            "line_level": result_line,
+        }
+
+        del model
+        torch.cuda.empty_cache()
 
     # ============================================================
-    # Summary
+    # Summary table
     # ============================================================
-    print(f"\n{'='*60}")
-    print("SUMMARY")
-    print(f"{'='*60}")
-    print(f"\n  Training (best checkpoint):")
-    print(f"    DotProd: val={best_val_a:.4f} @ step {best_step_a}")
-    print(f"    ExpKern: val={best_val_b:.4f} @ step {best_step_b}")
+    print(f"\n{'='*80}")
+    print("SUMMARY — ALL KERNELS")
+    print(f"{'='*80}")
+    print(f"\n  {'Kernel':<15} {'Params':>10} {'Val Loss':>10} {'Step':>6} {'Play Acc':>10} {'Line Acc':>10}")
+    print(f"  {'-'*65}")
 
-    if result_a_play and result_b_play:
-        print(f"\n  Play-level engram separation (256-char segments):")
-        print(f"    DotProd: gap={result_a_play['gap']:.4f}, accuracy={result_a_play['accuracy']:.1%}")
-        print(f"    ExpKern: gap={result_b_play['gap']:.4f}, accuracy={result_b_play['accuracy']:.1%}")
-        play_imp = result_b_play['accuracy'] - result_a_play['accuracy']
-        print(f"    ExpKern vs DotProd: {play_imp:+.1%}")
-
-    if result_a_line and result_b_line:
-        print(f"\n  Line-level engram separation (individual dialogue):")
-        print(f"    DotProd: gap={result_a_line['gap']:.4f}, accuracy={result_a_line['accuracy']:.1%}")
-        print(f"    ExpKern: gap={result_b_line['gap']:.4f}, accuracy={result_b_line['accuracy']:.1%}")
-        line_imp = result_b_line['accuracy'] - result_a_line['accuracy']
-        print(f"    ExpKern vs DotProd: {line_imp:+.1%}")
+    for kernel_name in kernels_to_test:
+        r = all_results.get(kernel_name, {})
+        if "error" in r:
+            print(f"  {kernel_name:<15} {'FAILED':>10}")
+            continue
+        play_acc = f"{r['play_level']['accuracy']:.1%}" if r.get('play_level') else "N/A"
+        line_acc = f"{r['line_level']['accuracy']:.1%}" if r.get('line_level') else "N/A"
+        print(f"  {kernel_name:<15} {r['n_params']:>10,} {r['best_val']:>10.4f} {r['best_step']:>6} "
+              f"{play_acc:>10} {line_acc:>10}")
 
     # Save
-    out_path = Path("results/exp_kernel_attention.json")
+    out_path = Path("results/exp_kernel_attention_all.json")
     out_path.parent.mkdir(exist_ok=True)
-    results = {
-        "n_steps": args.n_steps,
-        "best_val": {"dot_product": best_val_a, "exponential": best_val_b},
-        "best_step": {"dot_product": best_step_a, "exponential": best_step_b},
-        "play_level": {
-            "dot_product": result_a_play,
-            "exponential": result_b_play,
-        } if result_a_play else None,
-        "line_level": {
-            "dot_product": result_a_line,
-            "exponential": result_b_line,
-        } if result_a_line else None,
-    }
     with open(out_path, "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(all_results, f, indent=2, default=str)
     print(f"\nResults saved to {out_path}")
 
 
