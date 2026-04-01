@@ -55,13 +55,15 @@ class HRSOutput:
 
 
 class CausalSelfAttention(nn.Module):
-    """Standard causal self-attention with RoPE (backbone attention)."""
+    """Causal self-attention with RoPE. Supports dot product or exponential kernel."""
 
     def __init__(self, cfg: ModelConfig):
         super().__init__()
         assert cfg.d_model % cfg.n_heads == 0
         self.n_heads = cfg.n_heads
         self.head_dim = cfg.d_model // cfg.n_heads
+        self.use_exponential = getattr(cfg, 'use_exponential_attention', False)
+        self.exp_temperature = float(self.head_dim)  # scale comparable to dot product
 
         self.qkv = nn.Linear(cfg.d_model, 3 * cfg.d_model, bias=cfg.bias)
         self.out_proj = nn.Linear(cfg.d_model, cfg.d_model, bias=cfg.bias)
@@ -114,7 +116,25 @@ class CausalSelfAttention(nn.Module):
                 gain = (focus_q * focus_k).sum(dim=-1, keepdim=True).unsqueeze(-1)
                 q = q * (1.0 + gain).sqrt()
 
-        if return_weights:
+        if self.use_exponential:
+            # Exponential kernel: scores = -||q-k||² / temperature
+            # Memory-efficient via ||q-k||² = ||q||² + ||k||² - 2q·k
+            q_sq = (q ** 2).sum(dim=-1, keepdim=True)       # (B, H, T, 1)
+            k_sq = (k ** 2).sum(dim=-1, keepdim=True)       # (B, H, S, 1)
+            dot = q @ k.transpose(-2, -1)                    # (B, H, T, S)
+            distances = q_sq + k_sq.transpose(-2, -1) - 2 * dot
+            scores = -distances / self.exp_temperature
+
+            S = k.shape[2]
+            causal_mask = torch.triu(
+                torch.ones(T, S, device=x.device, dtype=torch.bool), diagonal=S - T + 1
+            )
+            scores = scores.masked_fill(causal_mask, float("-inf"))
+            attn_weights_out = F.softmax(scores, dim=-1)
+            attn_weights_out = self.attn_dropout(attn_weights_out)
+            out = attn_weights_out @ v
+            attn_weights = attn_weights_out if return_weights else None
+        elif return_weights:
             scale = 1.0 / math.sqrt(self.head_dim)
             attn = (q @ k.transpose(-2, -1)) * scale
             S = k.shape[2]
