@@ -29,13 +29,33 @@ from torch.utils.data import Dataset, DataLoader
 # Model components
 # ============================================================
 
+def build_alibi_bias(n_heads, max_seq_len):
+    """Build ALiBi position bias matrix.
+
+    Returns (1, n_heads, max_seq_len, max_seq_len) static bias tensor.
+    Each head h has slope m_h = 1 / 2^(8 * h / n_heads).
+    Bias = -m_h * |i - j| for query position i, key position j.
+    """
+    # Head slopes: geometric sequence
+    slopes = torch.tensor([1.0 / (2 ** (8 * h / n_heads)) for h in range(n_heads)])
+
+    # Distance matrix: |i - j|
+    pos = torch.arange(max_seq_len)
+    dist = (pos.unsqueeze(0) - pos.unsqueeze(1)).abs().float()  # (T, T)
+
+    # Bias per head: -slope * distance
+    bias = -slopes.view(1, n_heads, 1, 1) * dist.view(1, 1, max_seq_len, max_seq_len)
+    return bias
+
+
 class DotProductAttention(nn.Module):
     """Standard scaled dot-product attention."""
 
-    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1):
+    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1, use_alibi=False):
         super().__init__()
         self.n_heads = n_heads
         self.head_dim = d_model // n_heads
+        self.use_alibi = use_alibi
 
         self.qkv = nn.Linear(d_model, 3 * d_model)
         self.out_proj = nn.Linear(d_model, d_model)
@@ -44,6 +64,9 @@ class DotProductAttention(nn.Module):
         # Causal mask
         self.register_buffer("mask", torch.tril(torch.ones(max_seq_len, max_seq_len))
                              .view(1, 1, max_seq_len, max_seq_len))
+
+        if use_alibi:
+            self.register_buffer("alibi_bias", build_alibi_bias(n_heads, max_seq_len))
 
     def forward(self, x):
         B, T, C = x.shape
@@ -55,6 +78,8 @@ class DotProductAttention(nn.Module):
 
         scale = 1.0 / math.sqrt(self.head_dim)
         scores = (q @ k.transpose(-2, -1)) * scale
+        if self.use_alibi:
+            scores = scores + self.alibi_bias[:, :, :T, :T]
         scores = scores.masked_fill(self.mask[:, :, :T, :T] == 0, float('-inf'))
         attn = F.softmax(scores, dim=-1)
         attn = self.dropout(attn)
@@ -66,11 +91,12 @@ class DotProductAttention(nn.Module):
 class ExponentialKernelAttention(nn.Module):
     """Attention using exponential kernel (negative squared distance)."""
 
-    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1, temperature=None):
+    def __init__(self, d_model, n_heads, max_seq_len, dropout=0.1, temperature=None, use_alibi=False):
         super().__init__()
         self.n_heads = n_heads
         self.head_dim = d_model // n_heads
         self.temperature = temperature if temperature else float(self.head_dim)
+        self.use_alibi = use_alibi
 
         self.qkv = nn.Linear(d_model, 3 * d_model)
         self.out_proj = nn.Linear(d_model, d_model)
@@ -78,6 +104,9 @@ class ExponentialKernelAttention(nn.Module):
 
         self.register_buffer("mask", torch.tril(torch.ones(max_seq_len, max_seq_len))
                              .view(1, 1, max_seq_len, max_seq_len))
+
+        if use_alibi:
+            self.register_buffer("alibi_bias", build_alibi_bias(n_heads, max_seq_len))
 
     def forward(self, x):
         B, T, C = x.shape
@@ -95,6 +124,8 @@ class ExponentialKernelAttention(nn.Module):
         distances = q_sq + k_sq.transpose(-2, -1) - 2 * dot  # (B, H, T, T)
 
         scores = -distances / self.temperature
+        if self.use_alibi:
+            scores = scores + self.alibi_bias[:, :, :T, :T]
         scores = scores.masked_fill(self.mask[:, :, :T, :T] == 0, float('-inf'))
         attn = F.softmax(scores, dim=-1)
         attn = self.dropout(attn)
@@ -336,6 +367,11 @@ class TransformerBlock(nn.Module):
                  attn_type="dot_product"):
         super().__init__()
         self.ln1 = nn.LayerNorm(d_model)
+
+        # Parse attn_type: "exponential_alibi" -> kernel="exponential", alibi=True
+        use_alibi = attn_type.endswith("_alibi")
+        base_type = attn_type.replace("_alibi", "") if use_alibi else attn_type
+
         attn_classes = {
             "dot_product": DotProductAttention,
             "exponential": ExponentialKernelAttention,
@@ -345,8 +381,12 @@ class TransformerBlock(nn.Module):
             "sin_product": SinProductAttention,
             "soft_rank": SoftRankAttention,
         }
-        cls = attn_classes.get(attn_type, DotProductAttention)
-        self.attn = cls(d_model, n_heads, max_seq_len, dropout)
+        cls = attn_classes.get(base_type, DotProductAttention)
+        # Only DotProduct and Exponential support ALiBi currently
+        if use_alibi and hasattr(cls.__init__, '__code__') and 'use_alibi' in cls.__init__.__code__.co_varnames:
+            self.attn = cls(d_model, n_heads, max_seq_len, dropout, use_alibi=True)
+        else:
+            self.attn = cls(d_model, n_heads, max_seq_len, dropout)
         self.ln2 = nn.LayerNorm(d_model)
         self.mlp = nn.Sequential(
             nn.Linear(d_model, 4 * d_model),
@@ -366,7 +406,10 @@ class MiniTransformer(nn.Module):
                  max_seq_len=256, dropout=0.1, attn_type="dot_product"):
         super().__init__()
         self.tok_emb = nn.Embedding(vocab_size, d_model)
-        self.pos_emb = nn.Embedding(max_seq_len, d_model)
+        # ALiBi provides positional info via attention bias — no pos embedding needed
+        self.use_alibi = attn_type.endswith("_alibi")
+        if not self.use_alibi:
+            self.pos_emb = nn.Embedding(max_seq_len, d_model)
         self.drop = nn.Dropout(dropout)
         self.blocks = nn.ModuleList([
             TransformerBlock(d_model, n_heads, max_seq_len, dropout, attn_type)
@@ -382,8 +425,11 @@ class MiniTransformer(nn.Module):
     def forward(self, idx):
         B, T = idx.shape
         tok = self.tok_emb(idx)
-        pos = self.pos_emb(torch.arange(T, device=idx.device))
-        x = self.drop(tok + pos)
+        if self.use_alibi:
+            x = self.drop(tok)
+        else:
+            pos = self.pos_emb(torch.arange(T, device=idx.device))
+            x = self.drop(tok + pos)
         for block in self.blocks:
             x = block(x)
         x = self.ln_f(x)
