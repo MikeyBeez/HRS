@@ -447,6 +447,9 @@ class EngramCrossAttention(nn.Module):
         # but we also init out_proj to near-zero, so effective contribution starts tiny)
         self.gate_logit = nn.Parameter(torch.tensor(ca_cfg.gate_init))
 
+        # V21: additional learnable scalar multiplier on gate
+        self.gate_scalar = nn.Parameter(torch.tensor(0.0))  # softplus(0) ≈ 0.693
+
         self._init_weights()
 
     def _init_weights(self):
@@ -493,8 +496,8 @@ class EngramCrossAttention(nn.Module):
         out = out.transpose(1, 2).reshape(B, T, D)
         out = self.resid_dropout(self.out_proj(out))
 
-        # Gated residual
-        gate = torch.sigmoid(self.gate_logit)
+        # Gated residual with learnable scalar multiplier (V21)
+        gate = torch.sigmoid(self.gate_logit) * F.softplus(self.gate_scalar)
         return gate * out
 
 

@@ -192,6 +192,9 @@ class PerHeadBonsignoreAttention(nn.Module):
         # Per-head residual weight: alpha blends exponential and MLP
         self.head_alphas = nn.Parameter(torch.ones(cfg.n_heads))  # sigmoid(1) ≈ 0.73
 
+        # Per-head output scalars (V21): how much each head contributes
+        self.head_output_scalars = nn.Parameter(torch.zeros(cfg.n_heads))  # softplus(0) ≈ 0.693
+
         self._init_mlps_identity()
 
     def _init_mlps_identity(self):
@@ -278,6 +281,10 @@ class PerHeadBonsignoreAttention(nn.Module):
         out = attn_weights @ v
 
         attn_w_out = attn_weights if return_weights else None
+
+        # Per-head output scaling (V21)
+        head_scales = F.softplus(self.head_output_scalars).view(1, self.n_heads, 1, 1)
+        out = out * head_scales
 
         out = out.transpose(1, 2).reshape(B, T, C)
         out = self.resid_dropout(self.out_proj(out))
