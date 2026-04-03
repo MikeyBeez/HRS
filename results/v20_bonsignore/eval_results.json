@@ -1,0 +1,39 @@
+{
+  "niah": [
+    {
+      "needle": "science",
+      "found": true,
+      "rank": 3,
+      "sim": 0.2830185294151306
+    },
+    {
+      "needle": "history",
+      "found": false,
+      "rank": -1,
+      "sim": 0.0
+    },
+    {
+      "needle": "hobby",
+      "found": true,
+      "rank": 2,
+      "sim": 0.4432569146156311
+    },
+    {
+      "needle": "biology",
+      "found": false,
+      "rank": -1,
+      "sim": 0.0
+    },
+    {
+      "needle": "geography",
+      "found": true,
+      "rank": 1,
+      "sim": 0.5786939263343811
+    }
+  ],
+  "judge": {
+    "v18_wins": 16,
+    "v20_wins": 16,
+    "ties": 18
+  }
+}
