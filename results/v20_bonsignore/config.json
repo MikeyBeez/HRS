@@ -1,0 +1,36 @@
+{
+  "ablation": "v20_bonsignore",
+  "model": {
+    "vocab_size": 50257,
+    "n_layers": 6,
+    "n_heads": 8,
+    "d_model": 1024,
+    "d_ff": 4096,
+    "max_seq_len": 512,
+    "dropout": 0.1,
+    "bias": false,
+    "use_exponential_attention": false,
+    "use_bonsignore_attention": true
+  },
+  "peer": {
+    "enabled": true,
+    "n_sub_keys": 512,
+    "n_heads": 8,
+    "top_k": 16
+  },
+  "cross_attn_engram": {
+    "enabled": true,
+    "num_engram_tokens": 32,
+    "update_interval": 100,
+    "ema_momentum": 0.99,
+    "extract_layer": -2,
+    "cross_attn_layers": "odd",
+    "gate_init": 0.0,
+    "categorization_enabled": true,
+    "num_categories": 50,
+    "categorization_alpha": 0.1
+  },
+  "phase1_end": 20000,
+  "phase2_start": 20000,
+  "total_steps": 43000
+}
