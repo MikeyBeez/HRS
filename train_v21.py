@@ -61,7 +61,8 @@ def train():
         print("ERROR: V20 Phase 1 checkpoint not found!")
         return
     ckpt = torch.load(ckpt_path, map_location=device, weights_only=False)
-    model.load_state_dict(ckpt["model_state_dict"])
+    # strict=False: V21 has new params (output_scalars, gate_scalar) not in V20 checkpoint
+    model.load_state_dict(ckpt["model_state_dict"], strict=False)
     if model.engram_buffer.norm() > 0:
         model._engram_buffer_initialized = True
     print(f"Loaded V20 Phase 1 checkpoint (step {ckpt['step']}, val_ppl {ckpt.get('val_ppl', '?')})")
@@ -79,8 +80,8 @@ def train():
             block.attn.unfreeze_mlps()
     print("V21: Alphas reset to 0.5, output scalars reset, MLPs unfrozen")
 
-    # Learnable categorization loss weight
-    cat_weight_logit = nn.Parameter(torch.tensor(-2.3)).to(device)  # softplus(-2.3) ≈ 0.1
+    # Learnable categorization loss weight (use a 1-element module to keep it a leaf tensor)
+    cat_weight_logit = nn.Parameter(torch.tensor(-2.3, device=device))  # softplus(-2.3) ≈ 0.1
     print(f"  Categorization loss weight: {F.softplus(cat_weight_logit).item():.4f}")
 
     # Loss
