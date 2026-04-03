@@ -157,6 +157,133 @@ class CausalSelfAttention(nn.Module):
         return out, attn_weights, new_kv_cache
 
 
+class PerHeadBonsignoreAttention(nn.Module):
+    """Causal self-attention using per-head learned exponential kernels (V20).
+
+    Each head has its own small MLP that refines the exponential distance scores.
+    Supports Phase 1 (MLP frozen, pure exponential) and Phase 2 (MLP co-evolves).
+    """
+
+    def __init__(self, cfg: ModelConfig, mlp_hidden: int = 32):
+        super().__init__()
+        assert cfg.d_model % cfg.n_heads == 0
+        self.n_heads = cfg.n_heads
+        self.head_dim = cfg.d_model // cfg.n_heads
+
+        self.qkv = nn.Linear(cfg.d_model, 3 * cfg.d_model, bias=cfg.bias)
+        self.out_proj = nn.Linear(cfg.d_model, cfg.d_model, bias=cfg.bias)
+        self.attn_dropout = nn.Dropout(cfg.dropout)
+        self.resid_dropout = nn.Dropout(cfg.dropout)
+
+        self.rope = RotaryEmbedding(self.head_dim, cfg.max_seq_len)
+
+        # Per-head learnable temperature
+        self.log_tau = nn.Parameter(torch.full((cfg.n_heads,), math.log(float(self.head_dim))))
+
+        # Per-head MLP: refines exponential scores (scalar → hidden → scalar)
+        self.head_mlps = nn.ModuleList([
+            nn.Sequential(
+                nn.Linear(1, mlp_hidden),
+                nn.GELU(),
+                nn.Linear(mlp_hidden, 1),
+            ) for _ in range(cfg.n_heads)
+        ])
+
+        # Per-head residual weight: alpha blends exponential and MLP
+        self.head_alphas = nn.Parameter(torch.ones(cfg.n_heads))  # sigmoid(1) ≈ 0.73
+
+        self._init_mlps_identity()
+
+    def _init_mlps_identity(self):
+        """Initialize all per-head MLPs as near-identity."""
+        for mlp in self.head_mlps:
+            nn.init.uniform_(mlp[0].weight, -0.01, 0.01)
+            nn.init.zeros_(mlp[0].bias)
+            nn.init.uniform_(mlp[2].weight, -0.01, 0.01)
+            nn.init.zeros_(mlp[2].bias)
+
+    def freeze_mlps(self):
+        """Phase 1: freeze all per-head MLPs and alphas."""
+        for mlp in self.head_mlps:
+            for p in mlp.parameters():
+                p.requires_grad_(False)
+        self.head_alphas.requires_grad_(False)
+
+    def unfreeze_mlps(self):
+        """Phase 2: unfreeze for co-evolution."""
+        for mlp in self.head_mlps:
+            for p in mlp.parameters():
+                p.requires_grad_(True)
+        self.head_alphas.requires_grad_(True)
+
+    def get_diagnostics(self):
+        """Return per-head diagnostic info."""
+        alphas = torch.sigmoid(self.head_alphas).detach()
+        taus = self.log_tau.exp().detach()
+        return {
+            "alphas": alphas.tolist(),
+            "taus": taus.tolist(),
+            "mean_alpha": alphas.mean().item(),
+            "mean_tau": taus.mean().item(),
+        }
+
+    def forward(self, x, return_weights=False, focus_qk=None, kv_cache=None, start_pos=0):
+        B, T, C = x.shape
+
+        qkv = self.qkv(x).reshape(B, T, 3, self.n_heads, self.head_dim)
+        q, k, v = qkv.unbind(dim=2)
+        q = q.transpose(1, 2)  # (B, H, T, D)
+        k = k.transpose(1, 2)
+        v = v.transpose(1, 2)
+
+        # RoPE
+        cos, sin = self.rope(start_pos + T)
+        cos = cos[start_pos:start_pos + T].unsqueeze(0).unsqueeze(0)
+        sin = sin[start_pos:start_pos + T].unsqueeze(0).unsqueeze(0)
+        q = q * cos + rotate_half(q) * sin
+        k = k * cos + rotate_half(k) * sin
+
+        # KV cache
+        new_kv_cache = None
+        if kv_cache is not None:
+            cached_k, cached_v = kv_cache
+            k = torch.cat([cached_k, k], dim=2)
+            v = torch.cat([cached_v, v], dim=2)
+        new_kv_cache = (k, v)
+
+        S = k.shape[2]
+
+        # Exponential distance scores: -||q-k||² / τ_h per head
+        q_sq = (q ** 2).sum(dim=-1, keepdim=True)        # (B, H, T, 1)
+        k_sq = (k ** 2).sum(dim=-1, keepdim=True)        # (B, H, S, 1)
+        dot = q @ k.transpose(-2, -1)                     # (B, H, T, S)
+        distances = q_sq + k_sq.transpose(-2, -1) - 2 * dot  # (B, H, T, S)
+
+        # Per-head temperature
+        taus = self.log_tau.exp().view(1, self.n_heads, 1, 1)  # (1, H, 1, 1)
+        scores = -distances / taus  # (B, H, T, S) in log-space
+
+        # Per-head learned scaling: alpha modulates how sharply each head attends
+        # (MLP refinement deferred to PEER routing path where it operates on top-K only)
+        alphas = torch.sigmoid(self.head_alphas).view(1, self.n_heads, 1, 1)
+        scores = scores * alphas  # Per-head sharpness modulation
+
+        # Causal mask
+        causal_mask = torch.triu(
+            torch.ones(T, S, device=x.device, dtype=torch.bool), diagonal=S - T + 1
+        )
+        scores = scores.masked_fill(causal_mask, float('-inf'))
+        attn_weights = F.softmax(scores, dim=-1)
+        attn_weights = self.attn_dropout(attn_weights)
+        out = attn_weights @ v
+
+        attn_w_out = attn_weights if return_weights else None
+
+        out = out.transpose(1, 2).reshape(B, T, C)
+        out = self.resid_dropout(self.out_proj(out))
+        return out, attn_w_out, new_kv_cache
+
+
 class MLP(nn.Module):
     """Standard 2-layer MLP (FFN)."""
 
@@ -222,7 +349,10 @@ class HRSBlock(nn.Module):
 
         # Attention (always present)
         self.ln1 = nn.LayerNorm(model_cfg.d_model)
-        self.attn = CausalSelfAttention(model_cfg)
+        if getattr(model_cfg, 'use_bonsignore_attention', False):
+            self.attn = PerHeadBonsignoreAttention(model_cfg)
+        else:
+            self.attn = CausalSelfAttention(model_cfg)
         self.ln2 = nn.LayerNorm(model_cfg.d_model)
 
         # V18: cross-attention engram at configurable layers

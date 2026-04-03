@@ -73,6 +73,9 @@ class AblationConfig(Enum):
     # --- v19 configs ---
     V19_EXP_KERNEL = "v19_exp_kernel"          # V18 + exponential kernel attention (replaces dot product)
 
+    # --- v20 configs ---
+    V20_BONSIGNORE = "v20_bonsignore"          # V19 + per-head learned kernel MLP + scaffolded training
+
     # --- v2 configs ---
     V2_ATTN_CONV = "v2_attn_conv"              # Attention->Conv backbone, standard MLP, no dual-head
     V2_ATTN_CONV_DUAL = "v2_attn_conv_dual"    # + dual-head
@@ -91,6 +94,7 @@ class ModelConfig:
     dropout: float = 0.1
     bias: bool = False
     use_exponential_attention: bool = False  # V19: replace dot product with exponential kernel
+    use_bonsignore_attention: bool = False   # V20: per-head learned exponential kernel
 
 
 @dataclass
@@ -648,6 +652,36 @@ class ExperimentConfig:
             cfg.phased.phase4_steps = 24000
             cfg.phased.phase5_steps = 0
 
+        elif ablation == AblationConfig.V20_BONSIGNORE:
+            # Everything model: per-head learned kernel + PEER + cross-attn engram
+            cfg.model.n_layers = 6
+            cfg.model.d_model = 1024
+            cfg.model.d_ff = 4096
+            cfg.model.n_heads = 8  # 8 heads × d_head=128 for per-head MLP
+            cfg.model.use_bonsignore_attention = True
+            cfg.locality.enabled = True
+            cfg.engram.enabled = False
+            cfg.cross_attn_engram.enabled = True
+            cfg.cross_attn_engram.num_engram_tokens = 32
+            cfg.cross_attn_engram.update_interval = 100
+            cfg.cross_attn_engram.ema_momentum = 0.99
+            cfg.cross_attn_engram.extract_layer = -2
+            cfg.cross_attn_engram.cross_attn_layers = "odd"
+            cfg.cross_attn_engram.categorization_enabled = True
+            cfg.cross_attn_engram.num_categories = 50
+            cfg.cross_attn_engram.categorization_alpha = 0.1
+            cfg.peer.enabled = True
+            cfg.bdh.enabled = False
+            cfg.training.batch_size = 4
+            cfg.training.grad_accum_steps = 8
+            cfg.training.max_steps = 43000
+            cfg.phased.enabled = True
+            cfg.phased.phase1_steps = 8000
+            cfg.phased.phase2_steps = 8000
+            cfg.phased.phase3_steps = 4000
+            cfg.phased.phase4_steps = 23000
+            cfg.phased.phase5_steps = 0
+
         elif ablation == AblationConfig.V15_VANILLA_ROUTE:
             # Vanilla transformer + 2-tier routing (attn+sink) + engrams
             # No PEER, no BDH, no sparsity, no virtual synapse — clean test
@@ -802,7 +836,7 @@ class ExperimentConfig:
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
             "v10_control", "v11_no_p5", "v12_247m", "v13_low_sparsity", "v14_attn_sink",
-            "v16_peer_engram", "v17_peer_only", "v18_cross_attn", "v19_exp_kernel",
+            "v16_peer_engram", "v17_peer_only", "v18_cross_attn", "v19_exp_kernel", "v20_bonsignore",
         )
 
     def uses_memory_mlp(self) -> bool:
@@ -818,7 +852,7 @@ class ExperimentConfig:
     def uses_cross_attn_engram(self) -> bool:
         """V18: cross-attention engram buffer (no prepend)."""
         return self.cross_attn_engram.enabled and self.training.ablation.value in (
-            "v18_cross_attn", "v19_exp_kernel",
+            "v18_cross_attn", "v19_exp_kernel", "v20_bonsignore",
         )
 
     def uses_categorization(self) -> bool:
@@ -832,7 +866,7 @@ class ExperimentConfig:
             "v3_full", "v4_full", "v5_replace",
             "v4_1024", "v6_gate", "v7_full", "v8_bdh", "v9_learnable",
             "v10_control", "v11_no_p5", "v12_247m", "v13_low_sparsity", "v14_attn_sink",
-            "v15_vanilla_route", "v16_peer_engram", "v17_peer_only", "v18_cross_attn", "v19_exp_kernel",
+            "v15_vanilla_route", "v16_peer_engram", "v17_peer_only", "v18_cross_attn", "v19_exp_kernel", "v20_bonsignore",
         )
 
     def uses_bdh(self) -> bool:
