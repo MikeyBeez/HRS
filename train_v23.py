@@ -198,11 +198,11 @@ def train():
             torch.save({"step": step, "model_state_dict": model.state_dict(),
                          "val_ppl": best_val, "phase": 1}, run_dir / "phase1_end.pt")
 
-            # Calibrate and unfreeze
-            calibrate_mlps(model, loaders, device)
+            # Unfreeze FIRST, then calibrate
             for block in model.blocks:
                 if isinstance(block.attn, PerHeadBonsignoreAttention):
                     block.attn.unfreeze_mlps()
+            calibrate_mlps(model, loaders, device)
 
             # Rebuild optimizer with separate LR groups
             kernel_params, proj_params, scalar_params, other_params = [], [], [], []
