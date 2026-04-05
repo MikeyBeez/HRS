@@ -1,0 +1,113 @@
+{
+  "val_ppl_baseline": 19.605025704165943,
+  "val_ppl_cumulative": 20.024139856551685,
+  "n_repeats": 20,
+  "lr": 1e-05,
+  "threshold": 0.241,
+  "examples": [
+    {
+      "name": "code",
+      "text": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    return result + left[i:] + right[j:]",
+      "prompt": "def merge_sort(",
+      "recall_tokens": [
+        "merge",
+        "sort",
+        "left",
+        "right",
+        "pivot",
+        "arr",
+        "return"
+      ],
+      "ppl_before": 77060.1273237716,
+      "ae_error_before": 0.19556258618831635,
+      "hits_before": 1,
+      "ppl_after": 94.00754220350852,
+      "ae_error_after": 0.2506243884563446,
+      "hits_after": 0,
+      "val_ppl_after": 19.643812224020245
+    },
+    {
+      "name": "math",
+      "text": "Theorem: Every bounded monotone sequence converges. Proof: Let (a_n) be a bounded increasing sequence. Let L = sup{a_n : n in N}. For any epsilon > 0, L - epsilon is not an upper bound, so there exists N such that a_N > L - epsilon. Since (a_n) is increasing, for all n >= N we have L - epsilon < a_N <= a_n <= L. Thus |a_n - L| < epsilon for all n >= N. QED.",
+      "prompt": "Theorem: Every bounded monotone sequence",
+      "recall_tokens": [
+        "converges",
+        "bounded",
+        "increasing",
+        "sup",
+        "epsilon",
+        "upper bound"
+      ],
+      "ppl_before": 3072.6579047239857,
+      "ae_error_before": 0.27817559242248535,
+      "hits_before": 0,
+      "ppl_after": 45.31533976253268,
+      "ae_error_after": 0.2967502176761627,
+      "hits_after": 1,
+      "val_ppl_after": 19.66067120925263
+    },
+    {
+      "name": "chemistry",
+      "text": "The synthesis of aspirin involves the acetylation of salicylic acid (C7H6O3) with acetic anhydride (C4H6O3) in the presence of phosphoric acid catalyst. The reaction produces acetylsalicylic acid (C9H8O4) and acetic acid (CH3COOH) as a byproduct. Yield optimization requires maintaining temperature at 85 degrees Celsius for 15 minutes.",
+      "prompt": "The synthesis of aspirin involves",
+      "recall_tokens": [
+        "acetylation",
+        "salicylic",
+        "acetic",
+        "anhydride",
+        "phosphoric",
+        "aspirin"
+      ],
+      "ppl_before": 147.99712673895138,
+      "ae_error_before": 0.25303521752357483,
+      "hits_before": 1,
+      "ppl_after": 5.383673499887568,
+      "ae_error_after": 0.2614508271217346,
+      "hits_after": 0,
+      "val_ppl_after": 19.67668191692841
+    },
+    {
+      "name": "fiction",
+      "text": "The last lighthouse keeper on Meridian Island heard the singing again at exactly 3:47 AM. It came from beneath the rocks, a sound like crystal bells submerged in honey \u2014 thick, slow, impossibly sweet. He pressed his ear to the cold stone floor and felt the vibration travel through his jawbone into the cavity behind his eyes, where it became not sound but color: a deep arterial red that pulsed in time with his heartbeat.",
+      "prompt": "The last lighthouse keeper on Meridian Island",
+      "recall_tokens": [
+        "lighthouse",
+        "Meridian",
+        "singing",
+        "crystal",
+        "bells",
+        "stone",
+        "vibration"
+      ],
+      "ppl_before": 1521.4031097864272,
+      "ae_error_before": 0.24488559365272522,
+      "hits_before": 0,
+      "ppl_after": 20.969057630516637,
+      "ae_error_after": 0.2547316253185272,
+      "hits_after": 1,
+      "val_ppl_after": 19.69797615610756
+    },
+    {
+      "name": "thornfield",
+      "text": "The Thornfield Protocol was established in 1987 by Dr. Elena Vasquez at the University of Bergen. It defines a standardized method for measuring crystalline lattice deformation under extreme pressure, using a beryllium-copper alloy reference sample calibrated to 4.7 gigapascals.",
+      "prompt": "The Thornfield Protocol was established",
+      "recall_tokens": [
+        "Thornfield",
+        "1987",
+        "Vasquez",
+        "Bergen",
+        "crystalline",
+        "pressure",
+        "beryllium",
+        "gigapascals"
+      ],
+      "ppl_before": 254.69972841835738,
+      "ae_error_before": 0.2763476073741913,
+      "hits_before": 0,
+      "ppl_after": 4.754410025356217,
+      "ae_error_after": 0.289806067943573,
+      "hits_after": 0,
+      "val_ppl_after": 19.71127839886757
+    }
+  ]
+}
