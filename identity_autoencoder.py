@@ -143,43 +143,46 @@ class OODDetector:
             steps_taken: int, number of training steps (0 = in-distribution)
             mean_error: float, final reconstruction error
         """
-        x_detached = x.detach()
+        x_input = x.detach().requires_grad_(False)
         self.total_checks += 1
 
         # Check reconstruction error
         with torch.no_grad():
-            recon, error = self.autoencoder(x_detached)
+            recon, error = self.autoencoder(x_input)
             mean_error = error.mean().item()
 
         if mean_error < self.threshold:
             # In-distribution: pass through
-            return recon, 0, mean_error
+            return recon.detach(), 0, mean_error
 
         # Out-of-distribution: train until learned
+        # Must enable gradients for TTT even if caller is in no_grad context
         self.total_ood_detections += 1
         self.autoencoder.train()
         steps_taken = 0
 
-        for step in range(self.max_train_steps):
-            recon, error = self.autoencoder(x_detached)
-            loss = F.mse_loss(recon, x_detached)
+        with torch.enable_grad():
+            for step in range(self.max_train_steps):
+                encoded = self.autoencoder.encoder(x_input)
+                decoded = self.autoencoder.decoder(encoded)
+                loss = F.mse_loss(decoded, x_input)
 
-            self.optimizer.zero_grad()
-            loss.backward()
-            self.optimizer.step()
-            steps_taken += 1
-            self.total_ood_steps += 1
+                self.optimizer.zero_grad()
+                loss.backward()
+                self.optimizer.step()
+                steps_taken += 1
+                self.total_ood_steps += 1
 
-            if error.mean().item() < self.threshold:
-                break
+                if loss.item() < self.threshold:
+                    break
 
         # Final pass with learned representation
         self.autoencoder.eval()
         with torch.no_grad():
-            recon, error = self.autoencoder(x_detached)
+            recon, error = self.autoencoder(x_input)
             mean_error = error.mean().item()
 
-        return recon, steps_taken, mean_error
+        return recon.detach(), steps_taken, mean_error
 
     def get_stats(self):
         return {
@@ -204,19 +207,20 @@ class EngramRecurrence:
         self.ema_alpha = ema_alpha
         self.step_count = 0
 
-    def update(self, pipeline_output):
+    def update(self, pipeline_output, max_len=64):
         """Update engram with pipeline output.
 
         Args:
             pipeline_output: (B, T, D) final layer hidden states
+            max_len: max engram sequence length to keep
         """
-        new_state = pipeline_output.detach()
+        new_state = pipeline_output[:, -max_len:, :].detach()
         self.step_count += 1
 
         if self.update_method == "replace":
             self.engram_state = new_state
         elif self.update_method == "ema":
-            if self.engram_state is not None:
+            if self.engram_state is not None and self.engram_state.shape[1] == new_state.shape[1]:
                 self.engram_state = (
                     self.ema_alpha * self.engram_state +
                     (1 - self.ema_alpha) * new_state
