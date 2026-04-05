@@ -113,9 +113,8 @@ def train():
     while step < MAX_STEPS:
         optimizer.zero_grad()
 
-        cat_weight = F.softplus(cat_weight_raw)
-
         for _ in range(cfg.training.grad_accum_steps):
+            cat_weight = F.softplus(cat_weight_raw)  # recompute each micro-step
             try: batch = next(train_iter)
             except StopIteration: train_iter = iter(loaders["train"]); batch = next(train_iter)
 
