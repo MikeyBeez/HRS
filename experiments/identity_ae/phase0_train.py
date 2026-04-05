@@ -100,8 +100,12 @@ def train_autoencoder(autoencoder, hidden_data, device, n_epochs=50, batch_size=
         n_batches = 0
         for (batch_x,) in loader:
             batch_x = batch_x.to(device)
-            recon, error = autoencoder(batch_x.unsqueeze(1))  # add seq dim
-            loss = F.mse_loss(recon.squeeze(1), batch_x)
+            x = batch_x.unsqueeze(1)  # add seq dim
+
+            # Train the bottleneck to reconstruct: decoder(encoder(x)) ≈ x
+            encoded = autoencoder.encoder(x)
+            decoded = autoencoder.decoder(encoded)
+            loss = F.mse_loss(decoded, x)
 
             optimizer.zero_grad()
             loss.backward()
@@ -112,9 +116,16 @@ def train_autoencoder(autoencoder, hidden_data, device, n_epochs=50, batch_size=
         scheduler.step()
         avg_loss = total_loss / n_batches
 
+        # Grow the gate as reconstruction improves
+        if avg_loss < 0.01:
+            with torch.no_grad():
+                autoencoder.gate.clamp_(min=-5.0, max=5.0)
+                autoencoder.gate.add_(0.1)  # nudge gate open
+
         if (epoch + 1) % 10 == 0 or epoch == 0:
+            g = torch.sigmoid(autoencoder.gate).item()
             elapsed = time.time() - t0
-            print(f"    Epoch {epoch + 1:3d}: MSE={avg_loss:.8f} ({elapsed:.0f}s)")
+            print(f"    Epoch {epoch + 1:3d}: MSE={avg_loss:.8f}, gate={g:.4f} ({elapsed:.0f}s)")
 
     autoencoder.eval()
     return avg_loss
@@ -142,13 +153,13 @@ def verify_splice(model, autoencoder, loaders, device, insert_layer, n_batches=1
             h_no_ae, _, _, _ = block(h_no_ae, step=0, engram_buffer=eb)
         logits_no_ae = model.lm_head(model.ln_f(h_no_ae))
 
-        # Forward WITH autoencoder
+        # Forward WITH autoencoder (gate controls blend)
         h_ae = model.drop(model.tok_emb(x))
         for i, block in enumerate(model.blocks):
             eb = model.engram_buffer if model._engram_buffer_initialized else None
             h_ae, _, _, _ = block(h_ae, step=0, engram_buffer=eb)
             if i == insert_layer:
-                h_ae, _ = autoencoder(h_ae)
+                h_ae, _ = autoencoder(h_ae)  # skip connection: (1-g)*x + g*decoded
         logits_ae = model.lm_head(model.ln_f(h_ae))
 
         diff = (logits_ae - logits_no_ae).abs()

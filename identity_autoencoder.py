@@ -50,37 +50,53 @@ class IdentityAutoencoder(nn.Module):
             nn.Linear(hidden_dim, d_model),
         )
 
-        self._init_near_identity()
+        # Gate: controls how much the autoencoder path contributes
+        # At init: gate ≈ 0, so output = input + 0 = identity
+        self.gate = nn.Parameter(torch.tensor(-5.0))  # sigmoid(-5) ≈ 0.007
 
-    def _init_near_identity(self):
-        """Initialize so the autoencoder starts close to identity.
+        self._init_near_zero()
 
-        Use small weights with appropriate scaling so encoder→decoder
-        approximates a pass-through at initialization.
+    def _init_near_zero(self):
+        """Initialize encoder/decoder with very small weights.
+
+        Combined with the skip connection and near-zero gate,
+        the autoencoder starts as perfect identity.
         """
         for module in self.modules():
             if isinstance(module, nn.Linear):
-                nn.init.xavier_normal_(module.weight, gain=0.1)
+                nn.init.normal_(module.weight, std=0.001)
                 if module.bias is not None:
                     nn.init.zeros_(module.bias)
 
     def forward(self, x):
-        """Forward pass returning reconstruction and per-token error.
+        """Forward pass with skip connection.
+
+        The autoencoder learns: decoder(encoder(x)) ≈ x
+        The output uses a skip: output = (1 - g) * x + g * decoder(encoder(x))
+
+        At init: g ≈ 0 → output = x (perfect identity, lossless splice)
+        After training: g grows → output = decoder(encoder(x)) ≈ x (learned identity)
+        OOD detection: ||decoder(encoder(x)) - x||² is high when bottleneck can't compress
 
         Args:
             x: (B, T, D) hidden states from transformer layer
 
         Returns:
-            recon: (B, T, D) reconstructed hidden states
-            error: (B, T) per-token MSE reconstruction error
+            output: (B, T, D) blended reconstruction
+            error: (B, T) per-token MSE reconstruction error through bottleneck
         """
         encoded = self.encoder(x)
-        recon = self.decoder(encoded)
+        decoded = self.decoder(encoded)
 
-        # Per-token reconstruction error
-        error = ((recon - x) ** 2).mean(dim=-1)  # (B, T)
+        # Skip-blended output
+        g = torch.sigmoid(self.gate)
+        output = (1 - g) * x + g * decoded
 
-        return recon, error
+        # Reconstruction error: how well does the bottleneck round-trip?
+        # This is the OOD signal — high error = can't compress = novel input
+        error = ((decoded - x) ** 2).mean(dim=-1)  # (B, T)
+
+        return output, error
 
     def encode(self, x):
         """Get bottleneck representation only."""
