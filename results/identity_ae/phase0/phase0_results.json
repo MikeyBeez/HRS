@@ -1,0 +1,15 @@
+{
+  "insert_layer": 3,
+  "n_layers": 6,
+  "d_model": 1024,
+  "autoencoder_params": 1968897,
+  "final_mse": 0.08224498314989938,
+  "splice_max_diff": 1.6142771244049072,
+  "splice_mean_diff": 0.01844090800732374,
+  "splice_passed": false,
+  "error_mean": 0.08249828219413757,
+  "error_std": 0.03391915187239647,
+  "error_max": 0.3775516450405121,
+  "threshold_2sigma": 0.1503365859389305,
+  "threshold_3sigma": 0.18425573781132698
+}
