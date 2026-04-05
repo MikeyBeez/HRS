@@ -1,0 +1,7 @@
+{
+  "n_samples": 20,
+  "total_ttt_steps": 0,
+  "total_ood_events": 0,
+  "ood_rate": 0.0,
+  "threshold": 0.289
+}
