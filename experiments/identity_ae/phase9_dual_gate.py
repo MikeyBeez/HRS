@@ -220,8 +220,10 @@ def main():
 
     # Setup
     model, _ = load_model(device)
-    n_lora = apply_lora(model, rank=LORA_RANK, alpha=LORA_RANK * 2)
-    print(f"LoRA rank {LORA_RANK}: {n_lora:,} params")
+    # LoRA ONLY on the last layer (layer 5) — layers 0-4 stay pure for gate
+    n_lora = apply_lora(model, rank=LORA_RANK, alpha=LORA_RANK * 2,
+                        target_modules=['blocks.5.attn.qkv', 'blocks.5.attn.out_proj'])
+    print(f"LoRA rank {LORA_RANK} (last layer only): {n_lora:,} params")
 
     dual_gate = DualGate(d_model=1024, base_threshold=BASE_THRESHOLD, novel_threshold=BASE_THRESHOLD)
     dual_gate.load_base_gate("results/identity_ae/phase0/autoencoder_init_20ep.pt")
