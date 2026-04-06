@@ -20,8 +20,10 @@ class LoRALayer(nn.Module):
         in_f = base_layer.in_features
         out_f = base_layer.out_features
 
-        self.lora_A = nn.Parameter(torch.randn(in_f, rank) * 0.01)
-        self.lora_B = nn.Parameter(torch.zeros(rank, out_f))
+        device = base_layer.weight.device
+        dtype = base_layer.weight.dtype
+        self.lora_A = nn.Parameter(torch.randn(in_f, rank, device=device, dtype=dtype) * 0.01)
+        self.lora_B = nn.Parameter(torch.zeros(rank, out_f, device=device, dtype=dtype))
 
         for p in base_layer.parameters():
             p.requires_grad = False
@@ -102,11 +104,12 @@ def load_lora_state_dict(model, state_dict):
 
 def reset_lora(model):
     """Reset all LoRA parameters to zero (fresh adapter)."""
-    for name, param in model.named_parameters():
-        if 'lora_A' in name:
-            nn.init.normal_(param, std=0.01)
-        elif 'lora_B' in name:
-            nn.init.zeros_(param)
+    with torch.no_grad():
+        for name, param in model.named_parameters():
+            if 'lora_A' in name:
+                param.normal_(std=0.01)
+            elif 'lora_B' in name:
+                param.zero_()
 
 
 def lora_weight_stats(model):
