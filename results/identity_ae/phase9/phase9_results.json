@@ -1,0 +1,12 @@
+{
+  "baseline": 19.604746422563498,
+  "final_gated": 38.84799586107149,
+  "final_ungated": 38.84799586107149,
+  "gated_delta_pct": 98.15607416559364,
+  "ungated_delta_pct": 98.15607416559364,
+  "retention": 20,
+  "gate_wiki_correct": 0,
+  "gate_absorbed_correct": 0,
+  "lora_rank": 128,
+  "n_examples": 100
+}
