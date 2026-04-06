@@ -1,0 +1,466 @@
+{
+  "method": "full_20",
+  "n_steps": 20,
+  "lr": 1e-05,
+  "tests": [
+    {
+      "id": 0,
+      "type": "numeric",
+      "passkey": "10433218",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 1,
+      "type": "numeric",
+      "passkey": "9600",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 2,
+      "type": "numeric",
+      "passkey": "3389",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 3,
+      "type": "numeric",
+      "passkey": "8386",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 4,
+      "type": "numeric",
+      "passkey": "7940",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . The system access code is a code code code for the central facility . The code code code code cod"
+    },
+    {
+      "id": 5,
+      "type": "numeric",
+      "passkey": "6542",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 6,
+      "type": "numeric",
+      "passkey": "5116",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ". The facility will be constructed in two phases . The facility will be constructed in phases , with"
+    },
+    {
+      "id": 7,
+      "type": "numeric",
+      "passkey": "5594",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ". The highland facility code is a code code for the highland facility . \n\n The highland facility cod"
+    },
+    {
+      "id": 8,
+      "type": "numeric",
+      "passkey": "7816",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . The basement facility is located in the basement facility 's basement facility . The basement fac"
+    },
+    {
+      "id": 9,
+      "type": "numeric",
+      "passkey": "8495",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 10,
+      "type": "numeric",
+      "passkey": "31034131",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 11,
+      "type": "numeric",
+      "passkey": "475255",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 12,
+      "type": "numeric",
+      "passkey": "4192",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " . The system access code for the eastern facility is 4192 . The eastern facility code is 4192 . The"
+    },
+    {
+      "id": 13,
+      "type": "numeric",
+      "passkey": "32764835",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": "IS . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 14,
+      "type": "numeric",
+      "passkey": "3056",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 15,
+      "type": "numeric",
+      "passkey": "139537",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 16,
+      "type": "numeric",
+      "passkey": "724238",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . The coastal facility is located at the northern edge of the coastal facility . The coastal facili"
+    },
+    {
+      "id": 17,
+      "type": "numeric",
+      "passkey": "49696532",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": "IS . \n\n\n = = = = = Highland facility = = = = = \n\n\n Highland facility is located at the highland faci"
+    },
+    {
+      "id": 18,
+      "type": "numeric",
+      "passkey": "71012269",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 19,
+      "type": "numeric",
+      "passkey": "6697",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ". The rooftop facility is located on the rooftop facility 's rooftop facility . The rooftop facility"
+    },
+    {
+      "id": 20,
+      "type": "entity",
+      "passkey": "September 9, 2017",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": false,
+      "gen_weights": ". The discovery of the first element in the universe is a discovery of the discovery of the first el"
+    },
+    {
+      "id": 21,
+      "type": "entity",
+      "passkey": "January 22, 1961",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ". The discovery date of the discovery date is unknown . \n\n\n = = = = Other discoveries = = = = \n\n\n Th"
+    },
+    {
+      "id": 22,
+      "type": "entity",
+      "passkey": "September 25, 1981",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ".com. \n\n\n = = = = Other = = = = \n\n\n In addition to the main cast , the series also includes several "
+    },
+    {
+      "id": 23,
+      "type": "entity",
+      "passkey": "June 4, 1984",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " Commander Yuki Petrov in July 2006 . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = "
+    },
+    {
+      "id": 24,
+      "type": "entity",
+      "passkey": "July 6, 2005",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ".com. The discovery of the new discovery of the new discovery of the new discovery of the new discov"
+    },
+    {
+      "id": 25,
+      "type": "entity",
+      "passkey": "January 24, 1980",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ".com. \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 26,
+      "type": "entity",
+      "passkey": "September 25, 1969",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " in September 2015 . \n\n\n = = = = = Other discoveries = = = = = \n\n\n In September 2015 , the discovery"
+    },
+    {
+      "id": 27,
+      "type": "entity",
+      "passkey": "September 4, 1985",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": false,
+      "gen_weights": ".com. \n\n\n = = = = = Researcher Fatima Okonkwo = = = = = \n\n\n Researcher Fatima Okonkwo is a graduate "
+    },
+    {
+      "id": 28,
+      "type": "entity",
+      "passkey": "September 20, 1972",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ". The discovery date of the discovery date of the discovery date of the discovery date of the discov"
+    },
+    {
+      "id": 29,
+      "type": "entity",
+      "passkey": "March 12, 1967",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": false,
+      "gen_weights": " Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota Dota"
+    },
+    {
+      "id": 30,
+      "type": "technical",
+      "passkey": "8937",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ". The critical threshold of the reactor is not known with certainty . \n\n\n = = = Atomic and nuclear p"
+    },
+    {
+      "id": 31,
+      "type": "technical",
+      "passkey": "8789",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = Hyperbolic = = = = = \n\n\n Hyperbolic oscillators are a key component of the accelera"
+    },
+    {
+      "id": 32,
+      "type": "technical",
+      "passkey": "109",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": false,
+      "gen_weights": ". \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 33,
+      "type": "technical",
+      "passkey": "9913",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": false,
+      "gen_weights": " spectrometer . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = "
+    },
+    {
+      "id": 34,
+      "type": "technical",
+      "passkey": "5410",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": false,
+      "gen_weights": ".org. The collider is not a critical threshold , but a critical threshold . \n\n\n = = = = = Equilibriu"
+    },
+    {
+      "id": 35,
+      "type": "technical",
+      "passkey": "8105",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = Electron @-@ level nuclear magnetic resonance = = = = \n\n\n Electron @-@ level nuclear "
+    },
+    {
+      "id": 36,
+      "type": "technical",
+      "passkey": "419",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": false,
+      "gen_weights": ". This value of the cryostat is not known precisely enough to be considered a cryostat . \n\n\n = = = ="
+    },
+    {
+      "id": 37,
+      "type": "technical",
+      "passkey": "1932",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 38,
+      "type": "technical",
+      "passkey": "6047",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ".com. \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 39,
+      "type": "technical",
+      "passkey": "5138",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": false,
+      "gen_weights": ". This value of the interferometer is not known precisely because the interferometer is not a critic"
+    },
+    {
+      "id": 40,
+      "type": "fact",
+      "passkey": "18",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to signatories to signatories . \n\n\n = = = = = United States = = = = = \n\n\n The United States has rat"
+    },
+    {
+      "id": 41,
+      "type": "fact",
+      "passkey": "6",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to be signed by the Blackwater Protocol . \n\n\n = = = = = Blackwater Protocol = = = = = \n\n\n The Black"
+    },
+    {
+      "id": 42,
+      "type": "fact",
+      "passkey": "18",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to signatories to signatories . \n\n\n = = = = = United States = = = = = \n\n\n The United States has sig"
+    },
+    {
+      "id": 43,
+      "type": "fact",
+      "passkey": "39",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to signatories to signatories . \n\n\n = = = = = United States = = = = = \n\n\n The United States has sig"
+    },
+    {
+      "id": 44,
+      "type": "fact",
+      "passkey": "8",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to signatories to signatories . \n\n\n = = = = = United States = = = = = \n\n\n The United States has rat"
+    },
+    {
+      "id": 45,
+      "type": "fact",
+      "passkey": "8",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to signatories . \n\n\n = = = = = United States = = = = = \n\n\n The United States has ratified the Harbi"
+    },
+    {
+      "id": 46,
+      "type": "fact",
+      "passkey": "34",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to signatories to signatories . \n\n\n = = = = = United States = = = = = \n\n\n The United States has sig"
+    },
+    {
+      "id": 47,
+      "type": "fact",
+      "passkey": "7",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to signatories to signatories . \n\n\n = = = = = The Protocol = = = = = \n\n\n The Protocol requires that"
+    },
+    {
+      "id": 48,
+      "type": "fact",
+      "passkey": "37",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to signatories to signatories . \n\n\n = = = = = United States = = = = = \n\n\n The United States has rat"
+    },
+    {
+      "id": 49,
+      "type": "fact",
+      "passkey": "11",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to signatories to signatories . \n\n\n = = = = = United States = = = = = \n\n\n The United States has rat"
+    }
+  ],
+  "summary": {
+    "baseline_rate": 0.0,
+    "context_rate": 0.18,
+    "weights_rate": 0.02,
+    "numeric_weights_rate": 0.05,
+    "entity_weights_rate": 0.0,
+    "technical_weights_rate": 0.0,
+    "fact_weights_rate": 0.0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "full_20": {
+    "baseline_rate": 0.0,
+    "context_rate": 0.18,
+    "weights_rate": 0.02,
+    "numeric_weights_rate": 0.05,
+    "entity_weights_rate": 0.0,
+    "technical_weights_rate": 0.0,
+    "fact_weights_rate": 0.0
+  },
+  "full_50": {
+    "baseline_rate": 0.0,
+    "context_rate": 0.18,
+    "weights_rate": 0.66,
+    "numeric_weights_rate": 0.8,
+    "entity_weights_rate": 0.9,
+    "technical_weights_rate": 0.7,
+    "fact_weights_rate": 0.1
+  },
+  "full_100": {
+    "baseline_rate": 0.0,
+    "context_rate": 0.18,
+    "weights_rate": 0.8,
+    "numeric_weights_rate": 0.95,
+    "entity_weights_rate": 0.9,
+    "technical_weights_rate": 0.9,
+    "fact_weights_rate": 0.3
+  },
+  "lora_100": {
+    "baseline_rate": 0.0,
+    "context_rate": 0.18,
+    "weights_rate": 0.62,
+    "numeric_weights_rate": 0.9,
+    "entity_weights_rate": 0.9,
+    "technical_weights_rate": 0.3,
+    "fact_weights_rate": 0.1
+  }
+}

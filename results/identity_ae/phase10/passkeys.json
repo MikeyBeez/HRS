@@ -1,0 +1,352 @@
+[
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the northern facility is 10433218. This code must be memorized immediately. All authorized personnel must commit code 10433218 to memory. The northern facility code 10433218 will not be repeated.",
+    "passkey": "10433218",
+    "prompt": "What is the system access code for the northern facility?",
+    "id": 0
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the southern facility is 9600. This code must be memorized immediately. All authorized personnel must commit code 9600 to memory. The southern facility code 9600 will not be repeated.",
+    "passkey": "9600",
+    "prompt": "What is the system access code for the southern facility?",
+    "id": 1
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the eastern facility is 3389. This code must be memorized immediately. All authorized personnel must commit code 3389 to memory. The eastern facility code 3389 will not be repeated.",
+    "passkey": "3389",
+    "prompt": "What is the system access code for the eastern facility?",
+    "id": 2
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the western facility is 8386. This code must be memorized immediately. All authorized personnel must commit code 8386 to memory. The western facility code 8386 will not be repeated.",
+    "passkey": "8386",
+    "prompt": "What is the system access code for the western facility?",
+    "id": 3
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the central facility is 7940. This code must be memorized immediately. All authorized personnel must commit code 7940 to memory. The central facility code 7940 will not be repeated.",
+    "passkey": "7940",
+    "prompt": "What is the system access code for the central facility?",
+    "id": 4
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the orbital facility is 6542. This code must be memorized immediately. All authorized personnel must commit code 6542 to memory. The orbital facility code 6542 will not be repeated.",
+    "passkey": "6542",
+    "prompt": "What is the system access code for the orbital facility?",
+    "id": 5
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the coastal facility is 5116. This code must be memorized immediately. All authorized personnel must commit code 5116 to memory. The coastal facility code 5116 will not be repeated.",
+    "passkey": "5116",
+    "prompt": "What is the system access code for the coastal facility?",
+    "id": 6
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the highland facility is 5594. This code must be memorized immediately. All authorized personnel must commit code 5594 to memory. The highland facility code 5594 will not be repeated.",
+    "passkey": "5594",
+    "prompt": "What is the system access code for the highland facility?",
+    "id": 7
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the basement facility is 7816. This code must be memorized immediately. All authorized personnel must commit code 7816 to memory. The basement facility code 7816 will not be repeated.",
+    "passkey": "7816",
+    "prompt": "What is the system access code for the basement facility?",
+    "id": 8
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the rooftop facility is 8495. This code must be memorized immediately. All authorized personnel must commit code 8495 to memory. The rooftop facility code 8495 will not be repeated.",
+    "passkey": "8495",
+    "prompt": "What is the system access code for the rooftop facility?",
+    "id": 9
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the northern facility is 31034131. This code must be memorized immediately. All authorized personnel must commit code 31034131 to memory. The northern facility code 31034131 will not be repeated.",
+    "passkey": "31034131",
+    "prompt": "What is the system access code for the northern facility?",
+    "id": 10
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the southern facility is 475255. This code must be memorized immediately. All authorized personnel must commit code 475255 to memory. The southern facility code 475255 will not be repeated.",
+    "passkey": "475255",
+    "prompt": "What is the system access code for the southern facility?",
+    "id": 11
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the eastern facility is 4192. This code must be memorized immediately. All authorized personnel must commit code 4192 to memory. The eastern facility code 4192 will not be repeated.",
+    "passkey": "4192",
+    "prompt": "What is the system access code for the eastern facility?",
+    "id": 12
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the western facility is 32764835. This code must be memorized immediately. All authorized personnel must commit code 32764835 to memory. The western facility code 32764835 will not be repeated.",
+    "passkey": "32764835",
+    "prompt": "What is the system access code for the western facility?",
+    "id": 13
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the central facility is 3056. This code must be memorized immediately. All authorized personnel must commit code 3056 to memory. The central facility code 3056 will not be repeated.",
+    "passkey": "3056",
+    "prompt": "What is the system access code for the central facility?",
+    "id": 14
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the orbital facility is 139537. This code must be memorized immediately. All authorized personnel must commit code 139537 to memory. The orbital facility code 139537 will not be repeated.",
+    "passkey": "139537",
+    "prompt": "What is the system access code for the orbital facility?",
+    "id": 15
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the coastal facility is 724238. This code must be memorized immediately. All authorized personnel must commit code 724238 to memory. The coastal facility code 724238 will not be repeated.",
+    "passkey": "724238",
+    "prompt": "What is the system access code for the coastal facility?",
+    "id": 16
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the highland facility is 49696532. This code must be memorized immediately. All authorized personnel must commit code 49696532 to memory. The highland facility code 49696532 will not be repeated.",
+    "passkey": "49696532",
+    "prompt": "What is the system access code for the highland facility?",
+    "id": 17
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the basement facility is 71012269. This code must be memorized immediately. All authorized personnel must commit code 71012269 to memory. The basement facility code 71012269 will not be repeated.",
+    "passkey": "71012269",
+    "prompt": "What is the system access code for the basement facility?",
+    "id": 18
+  },
+  {
+    "type": "numeric",
+    "passage": "SECURITY NOTICE: The following information is classified. The system access code for the rooftop facility is 6697. This code must be memorized immediately. All authorized personnel must commit code 6697 to memory. The rooftop facility code 6697 will not be repeated.",
+    "passkey": "6697",
+    "prompt": "What is the system access code for the rooftop facility?",
+    "id": 19
+  },
+  {
+    "type": "entity",
+    "passage": "Historical record: Dr. Elara Voss made a breakthrough discovery on September 9, 2017. The discovery date of September 9, 2017 marks the beginning of a new era. Dr. Elara Voss's work on September 9, 2017 changed the field permanently.",
+    "passkey": "September 9, 2017",
+    "prompt": "When did Dr. Elara Voss make their breakthrough discovery?",
+    "id": 20
+  },
+  {
+    "type": "entity",
+    "passage": "Historical record: Professor Kian Nakamura made a breakthrough discovery on January 22, 1961. The discovery date of January 22, 1961 marks the beginning of a new era. Professor Kian Nakamura's work on January 22, 1961 changed the field permanently.",
+    "passkey": "January 22, 1961",
+    "prompt": "When did Professor Kian Nakamura make their breakthrough discovery?",
+    "id": 21
+  },
+  {
+    "type": "entity",
+    "passage": "Historical record: Agent Sarah Thornhill made a breakthrough discovery on September 25, 1981. The discovery date of September 25, 1981 marks the beginning of a new era. Agent Sarah Thornhill's work on September 25, 1981 changed the field permanently.",
+    "passkey": "September 25, 1981",
+    "prompt": "When did Agent Sarah Thornhill make their breakthrough discovery?",
+    "id": 22
+  },
+  {
+    "type": "entity",
+    "passage": "Historical record: Commander Yuki Petrov made a breakthrough discovery on June 4, 1984. The discovery date of June 4, 1984 marks the beginning of a new era. Commander Yuki Petrov's work on June 4, 1984 changed the field permanently.",
+    "passkey": "June 4, 1984",
+    "prompt": "When did Commander Yuki Petrov make their breakthrough discovery?",
+    "id": 23
+  },
+  {
+    "type": "entity",
+    "passage": "Historical record: Director Ravi Blackwood made a breakthrough discovery on July 6, 2005. The discovery date of July 6, 2005 marks the beginning of a new era. Director Ravi Blackwood's work on July 6, 2005 changed the field permanently.",
+    "passkey": "July 6, 2005",
+    "prompt": "When did Director Ravi Blackwood make their breakthrough discovery?",
+    "id": 24
+  },
+  {
+    "type": "entity",
+    "passage": "Historical record: Specialist Anya Morales made a breakthrough discovery on January 24, 1980. The discovery date of January 24, 1980 marks the beginning of a new era. Specialist Anya Morales's work on January 24, 1980 changed the field permanently.",
+    "passkey": "January 24, 1980",
+    "prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+    "id": 25
+  },
+  {
+    "type": "entity",
+    "passage": "Historical record: Operative Chen Volkov made a breakthrough discovery on September 25, 1969. The discovery date of September 25, 1969 marks the beginning of a new era. Operative Chen Volkov's work on September 25, 1969 changed the field permanently.",
+    "passkey": "September 25, 1969",
+    "prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+    "id": 26
+  },
+  {
+    "type": "entity",
+    "passage": "Historical record: Researcher Fatima Okonkwo made a breakthrough discovery on September 4, 1985. The discovery date of September 4, 1985 marks the beginning of a new era. Researcher Fatima Okonkwo's work on September 4, 1985 changed the field permanently.",
+    "passkey": "September 4, 1985",
+    "prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+    "id": 27
+  },
+  {
+    "type": "entity",
+    "passage": "Historical record: Engineer Dmitri Svensson made a breakthrough discovery on September 20, 1972. The discovery date of September 20, 1972 marks the beginning of a new era. Engineer Dmitri Svensson's work on September 20, 1972 changed the field permanently.",
+    "passkey": "September 20, 1972",
+    "prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+    "id": 28
+  },
+  {
+    "type": "entity",
+    "passage": "Historical record: Analyst Priya Gutierrez made a breakthrough discovery on March 12, 1967. The discovery date of March 12, 1967 marks the beginning of a new era. Analyst Priya Gutierrez's work on March 12, 1967 changed the field permanently.",
+    "passkey": "March 12, 1967",
+    "prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+    "id": 29
+  },
+  {
+    "type": "technical",
+    "passage": "Technical specification: The reactor operates at a critical threshold of 8937 kelvin. This value of 8937 kelvin must not be exceeded under any circumstances. The reactor critical value is precisely 8937 kelvin.",
+    "passkey": "8937",
+    "prompt": "What is the critical threshold of the reactor in kelvin?",
+    "id": 30
+  },
+  {
+    "type": "technical",
+    "passage": "Technical specification: The accelerator operates at a critical threshold of 8789 megapascals. This value of 8789 megapascals must not be exceeded under any circumstances. The accelerator critical value is precisely 8789 megapascals.",
+    "passkey": "8789",
+    "prompt": "What is the critical threshold of the accelerator in megapascals?",
+    "id": 31
+  },
+  {
+    "type": "technical",
+    "passage": "Technical specification: The telescope operates at a critical threshold of 109 gigahertz. This value of 109 gigahertz must not be exceeded under any circumstances. The telescope critical value is precisely 109 gigahertz.",
+    "passkey": "109",
+    "prompt": "What is the critical threshold of the telescope in gigahertz?",
+    "id": 32
+  },
+  {
+    "type": "technical",
+    "passage": "Technical specification: The spectrometer operates at a critical threshold of 9913 nanometers. This value of 9913 nanometers must not be exceeded under any circumstances. The spectrometer critical value is precisely 9913 nanometers.",
+    "passkey": "9913",
+    "prompt": "What is the critical threshold of the spectrometer in nanometers?",
+    "id": 33
+  },
+  {
+    "type": "technical",
+    "passage": "Technical specification: The collider operates at a critical threshold of 5410 millisieverts. This value of 5410 millisieverts must not be exceeded under any circumstances. The collider critical value is precisely 5410 millisieverts.",
+    "passkey": "5410",
+    "prompt": "What is the critical threshold of the collider in millisieverts?",
+    "id": 34
+  },
+  {
+    "type": "technical",
+    "passage": "Technical specification: The centrifuge operates at a critical threshold of 8105 kilonewtons. This value of 8105 kilonewtons must not be exceeded under any circumstances. The centrifuge critical value is precisely 8105 kilonewtons.",
+    "passkey": "8105",
+    "prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+    "id": 35
+  },
+  {
+    "type": "technical",
+    "passage": "Technical specification: The cryostat operates at a critical threshold of 419 microtesla. This value of 419 microtesla must not be exceeded under any circumstances. The cryostat critical value is precisely 419 microtesla.",
+    "passkey": "419",
+    "prompt": "What is the critical threshold of the cryostat in microtesla?",
+    "id": 36
+  },
+  {
+    "type": "technical",
+    "passage": "Technical specification: The magnetron operates at a critical threshold of 1932 femtoseconds. This value of 1932 femtoseconds must not be exceeded under any circumstances. The magnetron critical value is precisely 1932 femtoseconds.",
+    "passkey": "1932",
+    "prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+    "id": 37
+  },
+  {
+    "type": "technical",
+    "passage": "Technical specification: The synchrotron operates at a critical threshold of 6047 petabytes. This value of 6047 petabytes must not be exceeded under any circumstances. The synchrotron critical value is precisely 6047 petabytes.",
+    "passkey": "6047",
+    "prompt": "What is the critical threshold of the synchrotron in petabytes?",
+    "id": 38
+  },
+  {
+    "type": "technical",
+    "passage": "Technical specification: The interferometer operates at a critical threshold of 5138 exajoules. This value of 5138 exajoules must not be exceeded under any circumstances. The interferometer critical value is precisely 5138 exajoules.",
+    "passkey": "5138",
+    "prompt": "What is the critical threshold of the interferometer in exajoules?",
+    "id": 39
+  },
+  {
+    "type": "fact",
+    "passage": "The Thornfield Protocol requires exactly 18 signatories to be considered valid. Without all 18 signatories, the Thornfield Protocol cannot be enacted. The requirement of 18 signatories was established at the founding convention.",
+    "passkey": "18",
+    "prompt": "How many signatories does the Thornfield Protocol require?",
+    "id": 40
+  },
+  {
+    "type": "fact",
+    "passage": "The Blackwater Protocol requires exactly 6 signatories to be considered valid. Without all 6 signatories, the Blackwater Protocol cannot be enacted. The requirement of 6 signatories was established at the founding convention.",
+    "passkey": "6",
+    "prompt": "How many signatories does the Blackwater Protocol require?",
+    "id": 41
+  },
+  {
+    "type": "fact",
+    "passage": "The Meridian Protocol requires exactly 18 signatories to be considered valid. Without all 18 signatories, the Meridian Protocol cannot be enacted. The requirement of 18 signatories was established at the founding convention.",
+    "passkey": "18",
+    "prompt": "How many signatories does the Meridian Protocol require?",
+    "id": 42
+  },
+  {
+    "type": "fact",
+    "passage": "The Vanguard Protocol requires exactly 39 signatories to be considered valid. Without all 39 signatories, the Vanguard Protocol cannot be enacted. The requirement of 39 signatories was established at the founding convention.",
+    "passkey": "39",
+    "prompt": "How many signatories does the Vanguard Protocol require?",
+    "id": 43
+  },
+  {
+    "type": "fact",
+    "passage": "The Eclipse Protocol requires exactly 8 signatories to be considered valid. Without all 8 signatories, the Eclipse Protocol cannot be enacted. The requirement of 8 signatories was established at the founding convention.",
+    "passkey": "8",
+    "prompt": "How many signatories does the Eclipse Protocol require?",
+    "id": 44
+  },
+  {
+    "type": "fact",
+    "passage": "The Harbinger Protocol requires exactly 8 signatories to be considered valid. Without all 8 signatories, the Harbinger Protocol cannot be enacted. The requirement of 8 signatories was established at the founding convention.",
+    "passkey": "8",
+    "prompt": "How many signatories does the Harbinger Protocol require?",
+    "id": 45
+  },
+  {
+    "type": "fact",
+    "passage": "The Sentinel Protocol requires exactly 34 signatories to be considered valid. Without all 34 signatories, the Sentinel Protocol cannot be enacted. The requirement of 34 signatories was established at the founding convention.",
+    "passkey": "34",
+    "prompt": "How many signatories does the Sentinel Protocol require?",
+    "id": 46
+  },
+  {
+    "type": "fact",
+    "passage": "The Obsidian Protocol requires exactly 7 signatories to be considered valid. Without all 7 signatories, the Obsidian Protocol cannot be enacted. The requirement of 7 signatories was established at the founding convention.",
+    "passkey": "7",
+    "prompt": "How many signatories does the Obsidian Protocol require?",
+    "id": 47
+  },
+  {
+    "type": "fact",
+    "passage": "The Crimson Protocol requires exactly 37 signatories to be considered valid. Without all 37 signatories, the Crimson Protocol cannot be enacted. The requirement of 37 signatories was established at the founding convention.",
+    "passkey": "37",
+    "prompt": "How many signatories does the Crimson Protocol require?",
+    "id": 48
+  },
+  {
+    "type": "fact",
+    "passage": "The Phantom Protocol requires exactly 11 signatories to be considered valid. Without all 11 signatories, the Phantom Protocol cannot be enacted. The requirement of 11 signatories was established at the founding convention.",
+    "passkey": "11",
+    "prompt": "How many signatories does the Phantom Protocol require?",
+    "id": 49
+  }
+]

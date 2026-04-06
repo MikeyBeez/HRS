@@ -1,0 +1,466 @@
+{
+  "method": "full_100",
+  "n_steps": 100,
+  "lr": 1e-05,
+  "tests": [
+    {
+      "id": 0,
+      "type": "numeric",
+      "passkey": "10433218",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 104 to memory. "
+    },
+    {
+      "id": 1,
+      "type": "numeric",
+      "passkey": "9600",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". The southern facility code for the southern facility is 9600. This code must be memorized immediat"
+    },
+    {
+      "id": 2,
+      "type": "numeric",
+      "passkey": "3389",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 3389 to memory."
+    },
+    {
+      "id": 3,
+      "type": "numeric",
+      "passkey": "8386",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 8386 to memory."
+    },
+    {
+      "id": 4,
+      "type": "numeric",
+      "passkey": "7940",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". The central facility code for the central facility is 7940. This code must be memorized immediatel"
+    },
+    {
+      "id": 5,
+      "type": "numeric",
+      "passkey": "6542",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". The orbital facility code for the orbital facility is 6542. This code must be memorized immediatel"
+    },
+    {
+      "id": 6,
+      "type": "numeric",
+      "passkey": "5116",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 5116 to memory."
+    },
+    {
+      "id": 7,
+      "type": "numeric",
+      "passkey": "5594",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 5594 to memory."
+    },
+    {
+      "id": 8,
+      "type": "numeric",
+      "passkey": "7816",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". The basement facility code for the basement facility is 7816. This code must be memorized immediat"
+    },
+    {
+      "id": 9,
+      "type": "numeric",
+      "passkey": "8495",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " . The rooftop facility code for the rooftop facility is 8495. This code must be memorized immediate"
+    },
+    {
+      "id": 10,
+      "type": "numeric",
+      "passkey": "31034131",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 31034131 to mem"
+    },
+    {
+      "id": 11,
+      "type": "numeric",
+      "passkey": "475255",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 475255 to memor"
+    },
+    {
+      "id": 12,
+      "type": "numeric",
+      "passkey": "4192",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " . The eastern facility code for the eastern facility is 4192. This code must be memorized immediate"
+    },
+    {
+      "id": 13,
+      "type": "numeric",
+      "passkey": "32764835",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": "URITY . The western facility code for the western facility is 32764835. This code must be memorized "
+    },
+    {
+      "id": 14,
+      "type": "numeric",
+      "passkey": "3056",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". The central facility code for the central facility is 3056. This code must be memorized immediatel"
+    },
+    {
+      "id": 15,
+      "type": "numeric",
+      "passkey": "139537",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". The orbital facility code for the orbital facility is 139537. This code must be memorized immediat"
+    },
+    {
+      "id": 16,
+      "type": "numeric",
+      "passkey": "724238",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". The coastal facility code for the coastal facility is 724238. This code must be memorized immediat"
+    },
+    {
+      "id": 17,
+      "type": "numeric",
+      "passkey": "49696532",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". The highland facility code for the highland facility is 49696532. This code must be memorized imme"
+    },
+    {
+      "id": 18,
+      "type": "numeric",
+      "passkey": "71012269",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". The basement facility code for the basement facility is 71012269. This code must be memorized imme"
+    },
+    {
+      "id": 19,
+      "type": "numeric",
+      "passkey": "6697",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 6697 to memory."
+    },
+    {
+      "id": 20,
+      "type": "entity",
+      "passkey": "September 9, 2017",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": true,
+      "gen_weights": ". The discovery date of September 9, 2017 marks the beginning of a new era. Dr. Elara Voss's work on"
+    },
+    {
+      "id": 21,
+      "type": "entity",
+      "passkey": "January 22, 1961",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " Professor Kian Nakamura made a breakthrough discovery on January 22, 1961. The discovery date of Ja"
+    },
+    {
+      "id": 22,
+      "type": "entity",
+      "passkey": "September 25, 1981",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " Agent Sarah Thornhill made a breakthrough discovery on September 25, 1981. The discovery date of Se"
+    },
+    {
+      "id": 23,
+      "type": "entity",
+      "passkey": "June 4, 1984",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " Commander Yuki Petrov's work on June 4, 1984. The discovery date of June 4, 1984 marks the beginnin"
+    },
+    {
+      "id": 24,
+      "type": "entity",
+      "passkey": "July 6, 2005",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " Director Ravi Blackwood made a breakthrough discovery on July 6, 2005. The discovery date of July 6"
+    },
+    {
+      "id": 25,
+      "type": "entity",
+      "passkey": "January 24, 1980",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " Specialist Anya Morales's work on the discovery of the new Anya Morales's work on the discovery of "
+    },
+    {
+      "id": 26,
+      "type": "entity",
+      "passkey": "September 25, 1969",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " Operative Chen Volkov's work on September 25, 1969. The discovery date of September 25, 1969 marks "
+    },
+    {
+      "id": 27,
+      "type": "entity",
+      "passkey": "September 4, 1985",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": true,
+      "gen_weights": " Researcher Fatima Okonkwo's work on September 4, 1985 changed the field permanently. Researcher Fat"
+    },
+    {
+      "id": 28,
+      "type": "entity",
+      "passkey": "September 20, 1972",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " Engineer Dmitri Svensson made a breakthrough discovery on September 20, 1972. The discovery date of"
+    },
+    {
+      "id": 29,
+      "type": "entity",
+      "passkey": "March 12, 1967",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": true,
+      "gen_weights": " Analyst Priya Gutierrez made a breakthrough discovery on March 12, 1967. The discovery date of Marc"
+    },
+    {
+      "id": 30,
+      "type": "technical",
+      "passkey": "8937",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". This value of 8937 kelvin must not be exceeded under any circumstances. The reactor critical value"
+    },
+    {
+      "id": 31,
+      "type": "technical",
+      "passkey": "8789",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". This value of 8789 megapascals must not be exceeded under any circumstances. The accelerator criti"
+    },
+    {
+      "id": 32,
+      "type": "technical",
+      "passkey": "109",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": true,
+      "gen_weights": ". This value of 109 gigahertz must not be exceeded under any circumstances. The telescope critical v"
+    },
+    {
+      "id": 33,
+      "type": "technical",
+      "passkey": "9913",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": true,
+      "gen_weights": ". This value of 9913 nanometers must not be exceeded under any circumstances. The spectrometer criti"
+    },
+    {
+      "id": 34,
+      "type": "technical",
+      "passkey": "5410",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": true,
+      "gen_weights": ". This value of 5410 millisieverts must not be exceeded under any circumstances. The collider critic"
+    },
+    {
+      "id": 35,
+      "type": "technical",
+      "passkey": "8105",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". This value of 8105 kilonewtons must not be exceeded under any circumstances. The centrifuge critic"
+    },
+    {
+      "id": 36,
+      "type": "technical",
+      "passkey": "419",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": true,
+      "gen_weights": ". This value of 419 microtesla must not be exceeded under any circumstances. The cryostat critical v"
+    },
+    {
+      "id": 37,
+      "type": "technical",
+      "passkey": "1932",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ". This value of magnetron critical value is precisely the critical value of the magnetron critical v"
+    },
+    {
+      "id": 38,
+      "type": "technical",
+      "passkey": "6047",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": ". This value of 6047 petabytes must not be exceeded under any circumstances. The synchrotron critica"
+    },
+    {
+      "id": 39,
+      "type": "technical",
+      "passkey": "5138",
+      "baseline_found": false,
+      "context_found": true,
+      "weights_found": true,
+      "gen_weights": ". This value of 5138 exajoules must not be exceeded under any circumstances. The interferometer crit"
+    },
+    {
+      "id": 40,
+      "type": "fact",
+      "passkey": "18",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to be considered valid. Without all signatories, the Thornfield Protocol cannot be enacted. The req"
+    },
+    {
+      "id": 41,
+      "type": "fact",
+      "passkey": "6",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all 6 signatories, the Blackwater Protocol cannot be enacted. The r"
+    },
+    {
+      "id": 42,
+      "type": "fact",
+      "passkey": "18",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": ". Without all signatories, the Meridian Protocol cannot be enacted. The requirement of the Meridian "
+    },
+    {
+      "id": 43,
+      "type": "fact",
+      "passkey": "39",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to be considered valid. Without all signatories, the Vanguard Protocol cannot be enacted. The requi"
+    },
+    {
+      "id": 44,
+      "type": "fact",
+      "passkey": "8",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to be considered valid. Without all the signatories, the Eclipse Protocol cannot be enacted. The re"
+    },
+    {
+      "id": 45,
+      "type": "fact",
+      "passkey": "8",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to be considered valid. Without all signatories, the Harbinger Protocol cannot be enacted. The requ"
+    },
+    {
+      "id": 46,
+      "type": "fact",
+      "passkey": "34",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all 34 signatories, the Sentinel Protocol cannot be enacted. The re"
+    },
+    {
+      "id": 47,
+      "type": "fact",
+      "passkey": "7",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to be considered valid. Without all signatories, the Obsidian Protocol cannot be enacted. The requi"
+    },
+    {
+      "id": 48,
+      "type": "fact",
+      "passkey": "37",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": false,
+      "gen_weights": " to be considered valid. Without all signatories, the Crimson Protocol cannot be enacted. The requir"
+    },
+    {
+      "id": 49,
+      "type": "fact",
+      "passkey": "11",
+      "baseline_found": false,
+      "context_found": false,
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all 11 signatories, the Phantom Protocol cannot be enacted. The req"
+    }
+  ],
+  "summary": {
+    "baseline_rate": 0.0,
+    "context_rate": 0.18,
+    "weights_rate": 0.8,
+    "numeric_weights_rate": 0.95,
+    "entity_weights_rate": 0.9,
+    "technical_weights_rate": 0.9,
+    "fact_weights_rate": 0.3
+  }
+}
