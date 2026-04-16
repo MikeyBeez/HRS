@@ -1,0 +1,24 @@
+{
+  "tokens": ["list", "of", "tokenized", "words"],
+  "token_annotations": [
+    {
+      "index": 0,
+      "content_type": "content|template|punctuation",
+      "pos": "noun|verb|adj|adv|det|prep|conj|pron|other",
+      "entity_type": "none|person|location|org|artifact|number|technical_term",
+      "gram_role": "subject|object|predicate|modifier|root|other",
+      "salience": 0.0
+    }
+  ],
+  "entities": [
+    {
+      "text": "surface text of entity",
+      "type": "person|location|org|artifact|number|technical_term",
+      "role": "subject|object|modifier|target|none",
+      "span_start": 0,
+      "span_end": 1
+    }
+  ],
+  "query_type": "factual|numeric|entity|technical|procedural|compositional|declarative|other",
+  "key_discriminator": "the single token or phrase that most distinguishes this prompt from similar prompts"
+}

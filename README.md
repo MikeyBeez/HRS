@@ -6,6 +6,16 @@ HRS is a transformer architecture organized around a core principle: *computatio
 
 ## Headline Results
 
+**The Engram Is an Address: Test-Time Memory via Stable Geometric Routing Spaces.** A 68-phase experimental arc on a single RTX 5070 Ti, four days of work. The central finding: a mean-pooled hidden-state vector (engram) functions primarily as an address into a geometric routing space shared across models of the same architecture, not as a content summary. The same engram retrieves **0/20** passkeys before test-time training and **20/20** after — the vector did not change; the model's ability to interpret it did. Random vectors of identical norm route at 0/10 and achieve K-space alignment of 0.525 vs the real engram's 0.856. The address space is stable under training perturbation (2.5% K-cos degradation across models) and resolvability is a phase transition (0/5 → 5/5 in 38 training steps while K-space alignment remains constant). **All core findings replicate on a standard softmax dot-product transformer** (127M params, PPL 20.15), confirming these are properties of the Q/K/V attention decomposition, not of the HRS architecture specifically.
+
+Three deployable architectures:
+
+- **Application 1: per-passage adapter library** with a learned **L0 → L5 projection router**. **100% routing correctness, 97% held-out paraphrase retrieval, +0.000% drift.** Saliency-weighted absorption enables **2× rank compression** (rank 64) and **2× faster convergence** (75 steps). **32× storage compression** (rank-64 + int8). Routing scales to 500 passages at 100% accuracy.
+- **Application 2: engram-compressed KV cache.** **92% gap closed at 2× compression** (distant half replaced by engram). Learned attention pooling lifts the information recovery floor from **18% to 30%** (5-token engram at 40× compression). The 30% ceiling is load-bearing: seven independent V-space interventions confirm that V-space lossiness and language modeling quality are in tension under standard transformer architectures. Fixed recency-based compression is near-optimal (adaptive routing gains only 0.03 NLL over the position heuristic).
+- **Application 3: compositional retrieval via activation-level block-stacking.** **4/5 BOTH at K=2 with 10/10 routing correctness.** K=2 is K-limited, not budget-limited (K=4 collapses to 0% at every rank from 128 down to 16 and every budget level tested).
+
+The architectural principle: **L5 for training, L0 for inference**. The routing key at inference is L0 (one embedding lookup, no forward pass). A 1024×1024 InfoNCE-trained projection bridges to L5's discriminative power. See the [NeurIPS paper](paper_neurips.md) and [Medium article](paper_adapter_library.md).
+
 **V18 Cross-Attention Engram.** Fixes the causal attention leakage bug from V16 by isolating the engram via cross-attention. MAUVE 0.915–0.941 with engram active (vs V16's 0.806 failure mode). See the [V18 article](article_v18_crossattn.md).
 
 **Topic-Routed Context Assembly.** Uses the model's own hidden-state representations to organize context by topic instead of recency. Engram cosine similarity achieves 97.3% topic accuracy at article scale (512 tokens) but only 71.5% at sentence scale — a signal-to-noise scaling law. MAUVE improves to 0.962, but a deeper evaluation suite reveals this is distributional contamination, not genuine quality improvement: held-out perplexity worsens (38.1 vs 35.8) and an LLM judge (Llama 3.1) prefers baseline 28-22. See the [context curation paper](paper_context_curation.md).
@@ -111,6 +121,62 @@ python train_topic_classifier_short.py --n-articles 3000           # sentence-sc
 python exp_kernel_attention.py --n-steps 10000                     # ~20 min
 ```
 
+### Test-Time Memory (68 phases)
+
+67 standalone deterministic scripts under `experiments/identity_ae/`. Core phases run in ~90 minutes; pre-training ablations (48–58) add ~60 GPU-hours; cross-architecture validation (63–64) adds ~4 hours. All load `results/v22_learned_kernel/best.pt` as the frozen base model.
+
+**Application 1 — per-passage adapter library (100% routing, 97% retrieval):**
+
+```bash
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase47_l0_to_l5_projection.py  # ~5 min, the headline: 100/100/97
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase52_saliency_weighted.py    # ~20 min, 2× rank compression + 2× speed
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase53_adapter_clustering.py   # ~3 min, clustering impossible (negative)
+```
+
+**Application 2 — engram-compressed KV cache (92% gap closed at 2×):**
+
+```bash
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase33_engram_context.py       # ~3 min, six prefix conditions
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase51_learned_engram.py       # ~2 min, attention pooling 18→28%
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase55_multi_token_engram.py   # ~4 min, K=5 at 30%
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase67_engram_vs_summary.py    # ~15 min, engram beats summarization
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase68_adaptive_router.py      # ~35 min, fixed recency is near-optimal
+```
+
+**Application 3 — compositional retrieval (4/5 BOTH at K=2):**
+
+```bash
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase42_clause_routing.py       # ~3 min, 4/5 BOTH, 10/10 routing
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase62_k_ceiling_rank_sweep.py # ~25 min, K-limited not budget-limited
+```
+
+**Validation experiments (address space characterization):**
+
+```bash
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase60_resolvability_curve.py  # ~2 min, phase transition at 15-38 steps
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase61_basin_validation.py     # ~1 min, trajectory convergence 0.03→0.45
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase59_cross_model_transfer.py # ~10 min, 2.5% K-cos degradation
+# Phase 65 (random vector ablation) is inline — 0/10 routing for random vs 10/10 real
+# Phase 66 (scaling) is inline — 100% routing accuracy at 500 passages
+```
+
+**V-space analysis and negative results:**
+
+```bash
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase50_vspace_svd.py           # ~10 min, effective rank ~48, SVD engrams negative
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase48_kl_mlp_regularizer.py   # ~6 min, KL regularization (negative)
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase56_vspace_recon_pretraining.py  # ~3.5 hr, recon loss (negative)
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase57_recon_gated.py          # ~3.5 hr, gated residuals (negative)
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase58_bilinear_attention.py   # ~7 hr, bilinear attention (marginal +3 pts)
+```
+
+**Cross-architecture validation (standard softmax transformer):**
+
+```bash
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase63_softmax_baseline.py     # ~4 hr, pre-train 127M softmax model
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase64_softmax_validation.py   # ~30 min, all five core findings replicate
+```
+
 ### Previous Versions
 
 ```bash
@@ -158,6 +224,75 @@ python train.py --ablation v12_247m --output-dir results           # V12
 | `eval_categorization.py` | Categorization head evaluation (negative result) |
 | `benchmark_mauve_topic.py` | MAUVE benchmark for topic-routed context |
 
+### Test-Time Memory: Adapter Library + KV Cache Compression + Compositional Retrieval
+| File | Description |
+|------|-------------|
+| `identity_autoencoder.py` | IdentityAutoencoder, OODDetector, EngramRecurrence, EngramLibrary — historical gate primitives, dropped from the deployed architecture after Phase 39 |
+| `experiments/identity_ae/dual_gate.py` | DualGate (frozen base gate + trainable novel gate) — used in phases 9, 16–18 before the per-passage architecture |
+| `experiments/identity_ae/lora_wrapper.py` | Minimal LoRA wrapper (LoRALayer, apply_lora, get/load/reset state dict) |
+| `experiments/identity_ae/phase0_train.py` | Train the identity autoencoder offline on V22 hidden states from WikiText |
+| `experiments/identity_ae/phase10_passkey.py` | Passkey benchmark generator (50 deterministic test cases, 4 types) and full-model TTT baseline |
+| `experiments/identity_ae/phase11_lr_schedule.py` | Scheduled-LR full-model TTT (40–60 step variants, 100% per-passage at 4s/passage) |
+| `experiments/identity_ae/phase12_forgetting.py` | Cumulative forgetting check for fast schedule — +44% per passage, motivates LoRA |
+| `experiments/identity_ae/phase14_lora_l45.py` | Layer 4–5 LoRA single-passage absorption sweep — finds rank 512 / 100 steps as the per-passage winner |
+| `experiments/identity_ae/phase16_combined.py` | L4-5 LoRA + dual gate, single-passage retention test |
+| `experiments/identity_ae/phase17_stratified.py` | Stratified-type version of phase 16 |
+| `experiments/identity_ae/phase18_gate_replay.py` | Replay-augmented novel gate (4/20 → 18/20 gate accuracy) |
+| `experiments/identity_ae/phase19_rehearsal.py` | Shared-LoRA continual rehearsal — failing approach (50% cumulative) |
+| `experiments/identity_ae/phase20_sweep.py` | Three-config sweep — rank 1024 collapses to 20%, the diagnostic negative result |
+| `experiments/identity_ae/phase21_per_passage_adapters.py` | First per-passage adapter library (passage keys, 60% routing — diagnoses the prompt/passage mismatch) |
+| `experiments/identity_ae/phase22_engram_key.py` | Key source ablation (L3 vs L5, mean vs last, L2 vs cosine) plus two-pass re-ranking |
+| `experiments/identity_ae/phase23_prompt_keys.py` | Prompt-derived keys with same-prompt queries — 100% routing, 90% retrieval |
+| `experiments/identity_ae/phase24_150steps.py` | 150-step adapters — closes the retrieval gap to 100/100 on same-prompt queries |
+| `experiments/identity_ae/phase25_paraphrase.py` | Single-key paraphrase test — drops to 50%, diagnoses style-bias in mean-pooled engrams |
+| `experiments/identity_ae/phase26_multikey.py` | Multi-key + multi-paraphrase training — 100/100 on training-distribution paraphrases |
+| `experiments/identity_ae/phase27_held_out.py` | Held-out paraphrase generalization with L5 mean — 63% (the original binding constraint) |
+| `experiments/identity_ae/phase28_staged.py` | **Staged absorption** — foreground (1.4 s) + background (1.4 s on a LoRA copy). Validates the zero-blocking deployment story. |
+| `experiments/identity_ae/phase29_composition.py` | Compositional queries via weight merging — **negative result**: 0/5 pairs across all merge strategies |
+| `experiments/identity_ae/phase29b_rank128.py` | Phase 29 retest at rank 128 — still 0/5, confirms the failure is rank-independent |
+| `experiments/identity_ae/phase30_quantized.py` | int8 adapter quantization — 4× storage compression with 0% retrieval loss |
+| `experiments/identity_ae/phase30b_rank128.py` | Phase 30 retest at rank 128 — 4× compression confirmed, +0.000% drift |
+| `experiments/identity_ae/phase31_weighted_pool.py` | Entity-weighted (`nonstop_mean`) pooling — lifts held-out from 63% → 77% at L5 |
+| `experiments/identity_ae/phase32_kv_similarity.py` | K-space alignment for L5 mean engram — **cosine 0.82–0.89** at layers 1–5, random ≈ 0 |
+| `experiments/identity_ae/phase32b_l0_kv_similarity.py` | K-space alignment for L0 mean engram — **cosine 0.988** at layer 0 (the dual of L5) |
+| `experiments/identity_ae/phase33_engram_context.py` | Engram-as-cache continuation perplexity — six prefix conditions on 50 WikiText passages |
+| `experiments/identity_ae/phase33b_l0_engram_context.py` | Phase 33 with L0 engram injection — ties L5 at the standard operating point |
+| `experiments/identity_ae/phase35_engram_after_ttt.py` | **The centroid theory test** — same engram, same model, **0/20 before TTT and 20/20 after** |
+| `experiments/identity_ae/phase37_compression_sweep.py` | Engram-cache compression curve — smooth from 0 to 384× with no knee |
+| `experiments/identity_ae/phase38_rank_sweep.py` | LoRA rank sweep — pins the floor at rank 128, rank 256 *worse* than 128 |
+| `experiments/identity_ae/phase38b_rank128_heldout.py` | Held-out paraphrase test at rank 128 — 100/100/77 with L5_nonstop_mean baseline |
+| `experiments/identity_ae/phase39_gate_value.py` | **Gate ablation** — cosine threshold gets 99/98, the IAE gate is 48% specificity (worse than coin flip), combining hurts. We dropped the gate. |
+| `experiments/identity_ae/phase40_sparsity.py` | Sparse magnitude pruning — 1.8× more compression at threshold 5e-3 (29× total with held-out tradeoff) |
+| `experiments/identity_ae/phase41_activation_composition.py` | **Activation-level block-stacking** — bridges the Phase 29 negative result, 4/5 BOTH at oracle pair selection |
+| `experiments/identity_ae/phase42_clause_routing.py` | **Clause-split routing** — splits compositional queries on connectives, 4/5 BOTH with 10/10 routing |
+| `experiments/identity_ae/phase42b_l0_clause_routing.py` | Phase 42 with L0 routing — confirms the K=2 ceiling is set by capacity, not routing |
+| `experiments/identity_ae/phase43_k_capacity.py` | K-capacity sweep — K=2 holds, K=4 collapses to 35%, K=8 saturates at 5% |
+| `experiments/identity_ae/phase44_l0_engram.py` | **L0 mean routing** — 100/100/90 held-out paraphrase retrieval, +15 points over L5_nonstop_mean, no forward pass |
+| `experiments/identity_ae/phase45_l0_l5_pair.py` | Heterogeneous L0+L5 pair (avg cosine routing, two-position prefix injection) — does not dominate either alone |
+| `experiments/identity_ae/phase46_l5_contrastive.py` | **L5-contrastive auxiliary loss** during absorption — reduces L5 anchor overlap as designed but K-capacity *regresses*. Rules out representation-orthogonalization as the K=2 fix. |
+| `experiments/identity_ae/phase47_l0_to_l5_projection.py` | **The L0 → L5 projection** — 1024×1024 linear map trained with InfoNCE, lifts to **100/100/97** held-out, the routing ceiling. |
+| `experiments/identity_ae/phase47b_inspect.py` | Manual inspection of all 60 held-out generations — zero substring false positives, 2 generation-side failures, headline confirmed |
+| `experiments/identity_ae/phase48_kl_mlp_regularizer.py` | KL-divergence regularization during absorption — trades retrieval for drift at wrong ratio (negative) |
+| `experiments/identity_ae/phase49_enriched_input.py` | Metadata-enriched embeddings bolt-on — NLL explodes (negative) |
+| `experiments/identity_ae/phase49b_train_enriched.py` | Pre-train from scratch with metadata on 90% of batches — V-space unchanged (negative) |
+| `experiments/identity_ae/phase50_vspace_svd.py` | V-space SVD analysis — effective rank ~48, SVD engrams recover negative information |
+| `experiments/identity_ae/phase51_learned_engram.py` | **Attention-pooling encoder** — lifts information recovery from **18% to 28%** with one learned query |
+| `experiments/identity_ae/phase52_saliency_weighted.py` | **Saliency-weighted absorption** — **2× rank compression, 2× faster convergence** |
+| `experiments/identity_ae/phase53_adapter_clustering.py` | Adapter clustering — impossible even at L0 cosine 0.97 (negative) |
+| `experiments/identity_ae/phase54_vspace_continued_training.py` | Saliency-weighted continued training — PPL +22% (negative) |
+| `experiments/identity_ae/phase55_multi_token_engram.py` | Multi-token engrams — K=5 at **30%** recovery, 40× compression. K=10 no improvement |
+| `experiments/identity_ae/phase56_vspace_recon_pretraining.py` | V-space reconstruction loss from scratch — V-cos 0.73 but PPL 43 (negative) |
+| `experiments/identity_ae/phase57_recon_gated.py` | Gated residuals + recon loss — V-cos **0.805** but PPL 46, confirms V-space lossiness is load-bearing |
+| `experiments/identity_ae/phase58_bilinear_attention.py` | Bilinear attention q^T W k — PPL matched, +3 pts recovery, W far from identity (marginal) |
+| `experiments/identity_ae/phase59_cross_model_transfer.py` | **Cross-model transfer** — 2.5% K-cos degradation, routing geometry is stable |
+| `experiments/identity_ae/phase60_resolvability_curve.py` | **Phase transition** — 0→5/5 in 38 steps, K-space constant throughout |
+| `experiments/identity_ae/phase61_basin_validation.py` | **Basin validation** — trajectory convergence 0.03→0.45 from L0 to L5 |
+| `experiments/identity_ae/phase62_k_ceiling_rank_sweep.py` | K-ceiling rank sweep — K-limited not budget-limited across all ranks 16-128 |
+| `experiments/identity_ae/phase63_softmax_baseline.py` | **Standard softmax transformer** pre-training — 127M params, PPL 20.15 |
+| `experiments/identity_ae/phase64_softmax_validation.py` | **Cross-architecture validation** — all five core findings replicate on softmax |
+| `experiments/identity_ae/phase67_engram_vs_summary.py` | Engram vs summarization at equal compression — engram wins (81% vs -11% gap closed) |
+| `experiments/identity_ae/phase68_adaptive_router.py` | Adaptive compression router — fixed recency is near-optimal (+0.03 NLL for oracle) |
+
 ### Benchmarks & Generation
 | File | Description |
 |------|-------------|
@@ -170,6 +305,8 @@ python train.py --ablation v12_247m --output-dir results           # V12
 
 ## Papers
 
+- [The Engram Is an Address (NeurIPS submission)](paper_neurips.md) — Formal paper: stable geometric routing spaces, K/V asymmetry, phase transition in resolvability, cross-architecture validation, 68 phases, random vector ablation, V-space lossiness characterization
+- [The Engram Is an Address (Medium article)](paper_adapter_library.md) — Accessible version: three applications, the address/content decomposition, validation experiments, V-space tradeoff
 - [Topic-Routed Context Assembly](paper_context_curation.md) — "Your Transformer Already Knows What It's Talking About." Engram-based topic routing, seven stress tests, distributional contamination finding, LLM-as-judge evaluation
 - [V18 Cross-Attention Engram + EGR](article_v18_crossattn.md) — Cross-attention fix, entropy-gated retrieval, NIAH evaluation
 - [V16 PEER + Engram](article_peer_engram.md) — 1.71 BPE perplexity, MAUVE 0.905, engram-as-scaffolding finding
