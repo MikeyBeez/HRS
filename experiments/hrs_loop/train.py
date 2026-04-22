@@ -164,6 +164,7 @@ def train_variant(variant: str, steps: int, seed: int,
                 best_val = val_ppl
                 best_step = step + 1
                 CKPT_DIR.mkdir(parents=True, exist_ok=True)
+                suffix = "" if seed == 0 else f"_seed{seed}"
                 torch.save({
                     "state_dict": model.state_dict(),
                     "cfg": cfg.__dict__,
@@ -172,7 +173,7 @@ def train_variant(variant: str, steps: int, seed: int,
                     "steps": best_step,
                     "n_params": n_params,
                     "tag": "best",
-                }, CKPT_DIR / f"variant_{variant}_best.pt")
+                }, CKPT_DIR / f"variant_{variant}{suffix}_best.pt")
         step += 1
 
     # Final eval.
@@ -184,7 +185,10 @@ def train_variant(variant: str, steps: int, seed: int,
 
     CKPT_DIR.mkdir(parents=True, exist_ok=True)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    ckpt_path = CKPT_DIR / f"variant_{variant}.pt"
+    # Seed 0 keeps the unadorned filename for backward compatibility with
+    # existing analysis scripts; seeds 1+ use a seed-tagged name.
+    suffix = "" if seed == 0 else f"_seed{seed}"
+    ckpt_path = CKPT_DIR / f"variant_{variant}{suffix}.pt"
     torch.save({
         "state_dict": model.state_dict(),
         "cfg": cfg.__dict__,
@@ -194,7 +198,7 @@ def train_variant(variant: str, steps: int, seed: int,
         "n_params": n_params,
     }, ckpt_path)
 
-    log_path = RESULTS_DIR / f"train_log_{variant}.json"
+    log_path = RESULTS_DIR / f"train_log_{variant}{suffix}.json"
     log_path.write_text(json.dumps({
         "variant": variant,
         "steps": steps,
