@@ -1,0 +1,39 @@
+{
+  "rank": 128,
+  "best_threshold": 0.005,
+  "best_format": "sparse_bitmap_int8",
+  "library_bytes": 29017209,
+  "compression_vs_rank128_fp32": 7.227269859068803,
+  "compression_vs_rank512_fp32": 28.909079436275213,
+  "round_trip_retrieval": {
+    "same_prompt": {
+      "routing": 20,
+      "retrieval": 20,
+      "n": 20
+    },
+    "training_distribution": {
+      "routing": 60,
+      "retrieval": 60,
+      "n": 60
+    },
+    "held_out": {
+      "routing": 46,
+      "retrieval": 33,
+      "n": 60
+    }
+  },
+  "phase38b_reference": {
+    "same_prompt": {
+      "retrieval": 20,
+      "n": 20
+    },
+    "training_distribution": {
+      "retrieval": 60,
+      "n": 60
+    },
+    "held_out": {
+      "retrieval": 46,
+      "n": 60
+    }
+  }
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "mode": "mode1_canonical",
+    "mean_kl_nats_per_token": 0.0,
+    "mean_top1_agreement": 1.0,
+    "mean_loss": 5.194517882664998,
+    "val_ppl": 180.28120514744316,
+    "mean_final_mpar_l2": 1.8959847569465638,
+    "n_batches": 30
+  },
+  {
+    "mode": "mode2_perm_identity",
+    "mean_kl_nats_per_token": 0.002832148716446626,
+    "mean_top1_agreement": 0.9635192414124807,
+    "mean_loss": 5.194002040227255,
+    "val_ppl": 180.18823243279803,
+    "mean_final_mpar_l2": 1.939977733294169,
+    "n_batches": 30
+  },
+  {
+    "mode": "mode2_perm_reverse",
+    "mean_kl_nats_per_token": 0.002832148716446626,
+    "mean_top1_agreement": 0.9635192414124807,
+    "mean_loss": 5.194002040227255,
+    "val_ppl": 180.18823243279803,
+    "mean_final_mpar_l2": 1.939977733294169,
+    "n_batches": 30
+  },
+  {
+    "mode": "mode2_perm_random_0",
+    "mean_kl_nats_per_token": 0.002832148716446626,
+    "mean_top1_agreement": 0.9635192414124807,
+    "mean_loss": 5.194002040227255,
+    "val_ppl": 180.18823243279803,
+    "mean_final_mpar_l2": 1.939977733294169,
+    "n_batches": 30
+  },
+  {
+    "mode": "mode2_perm_random_1",
+    "mean_kl_nats_per_token": 0.002832148716446626,
+    "mean_top1_agreement": 0.9635192414124807,
+    "mean_loss": 5.194002040227255,
+    "val_ppl": 180.18823243279803,
+    "mean_final_mpar_l2": 1.939977733294169,
+    "n_batches": 30
+  },
+  {
+    "mode": "mode2_perm_random_2",
+    "mean_kl_nats_per_token": 0.002832148716446626,
+    "mean_top1_agreement": 0.9635192414124807,
+    "mean_loss": 5.194002040227255,
+    "val_ppl": 180.18823243279803,
+    "mean_final_mpar_l2": 1.939977733294169,
+    "n_batches": 30
+  },
+  {
+    "mode": "mode2_perm_random_3",
+    "mean_kl_nats_per_token": 0.002832148716446626,
+    "mean_top1_agreement": 0.9635192414124807,
+    "mean_loss": 5.194002040227255,
+    "val_ppl": 180.18823243279803,
+    "mean_final_mpar_l2": 1.939977733294169,
+    "n_batches": 30
+  },
+  {
+    "mode": "mode3_independent_avg",
+    "mean_kl_nats_per_token": 0.06047931476426297,
+    "mean_top1_agreement": 0.832803322871526,
+    "mean_loss": 5.2258597691853845,
+    "val_ppl": 186.02103694739543,
+    "mean_final_mpar_l2": 2.4983150561650596,
+    "n_batches": 30
+  },
+  {
+    "mode": "variantA_calibration",
+    "mean_kl_nats_per_token": 0.5831906716184373,
+    "mean_top1_agreement": 0.6048678974310557,
+    "mean_loss": 5.2386324564615885,
+    "val_ppl": 188.4122641689205,
+    "mean_final_mpar_l2": 0.0,
+    "n_batches": 30
+  }
+]

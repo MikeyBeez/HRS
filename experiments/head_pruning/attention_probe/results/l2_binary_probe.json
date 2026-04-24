@@ -1,0 +1,73 @@
+{
+  "layer": 2,
+  "heads": [
+    {
+      "head": 0,
+      "binary_passkey_vs_other": {
+        "train_acc": 0.9905857740585774,
+        "test_acc": 0.9902676399026764,
+        "chance": 0.5,
+        "n_train": 956,
+        "n_test": 411
+      },
+      "three_way_marker_passkey_other": {
+        "train_acc": 0.9916317991631799,
+        "test_acc": 0.9902676399026764,
+        "chance": 0.3333333333333333,
+        "n_train": 956,
+        "n_test": 411
+      }
+    },
+    {
+      "head": 1,
+      "binary_passkey_vs_other": {
+        "train_acc": 0.9926778242677824,
+        "test_acc": 0.9902676399026764,
+        "chance": 0.5,
+        "n_train": 956,
+        "n_test": 411
+      },
+      "three_way_marker_passkey_other": {
+        "train_acc": 0.9916317991631799,
+        "test_acc": 0.9902676399026764,
+        "chance": 0.3333333333333333,
+        "n_train": 956,
+        "n_test": 411
+      }
+    },
+    {
+      "head": 2,
+      "binary_passkey_vs_other": {
+        "train_acc": 0.9947698744769874,
+        "test_acc": 0.9878345498783455,
+        "chance": 0.5,
+        "n_train": 956,
+        "n_test": 411
+      },
+      "three_way_marker_passkey_other": {
+        "train_acc": 0.9937238493723849,
+        "test_acc": 0.9902676399026764,
+        "chance": 0.3333333333333333,
+        "n_train": 956,
+        "n_test": 411
+      }
+    },
+    {
+      "head": 3,
+      "binary_passkey_vs_other": {
+        "train_acc": 0.9916317991631799,
+        "test_acc": 0.9829683698296837,
+        "chance": 0.5,
+        "n_train": 956,
+        "n_test": 411
+      },
+      "three_way_marker_passkey_other": {
+        "train_acc": 0.9947698744769874,
+        "test_acc": 0.9854014598540146,
+        "chance": 0.3333333333333333,
+        "n_train": 956,
+        "n_test": 411
+      }
+    }
+  ]
+}

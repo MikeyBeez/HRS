@@ -1,0 +1,137 @@
+{
+  "target_layer": 2,
+  "target_head": 0,
+  "records": [
+    {
+      "passkey_exact": 1.0,
+      "passkey_digit": 1.0,
+      "val_ppl": 4.938579566215701,
+      "alpha": 1.0,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 1.0,
+      "passkey_digit": 1.0,
+      "val_ppl": 4.936627197016522,
+      "alpha": 0.9,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 1.0,
+      "passkey_digit": 1.0,
+      "val_ppl": 4.9388159227057,
+      "alpha": 0.8,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 0.94,
+      "passkey_digit": 0.985,
+      "val_ppl": 4.945533762578292,
+      "alpha": 0.7,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 0.64,
+      "passkey_digit": 0.869,
+      "val_ppl": 4.957521880763376,
+      "alpha": 0.6,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 0.392,
+      "passkey_digit": 0.7,
+      "val_ppl": 4.976030441047117,
+      "alpha": 0.5,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 0.268,
+      "passkey_digit": 0.575,
+      "val_ppl": 5.002881680375741,
+      "alpha": 0.4,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 0.144,
+      "passkey_digit": 0.503,
+      "val_ppl": 5.040216869127818,
+      "alpha": 0.3,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 0.08,
+      "passkey_digit": 0.468,
+      "val_ppl": 5.0896764912438845,
+      "alpha": 0.2,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 0.016,
+      "passkey_digit": 0.441,
+      "val_ppl": 5.151535292316746,
+      "alpha": 0.1,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 0.016,
+      "passkey_digit": 0.438,
+      "val_ppl": 5.186790204929891,
+      "alpha": 0.05,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "passkey_exact": 0.016,
+      "passkey_digit": 0.428,
+      "val_ppl": 5.224584846652692,
+      "alpha": 0.0,
+      "target": [
+        2,
+        0
+      ]
+    }
+  ],
+  "fit_sigmoid": {
+    "alpha_star": 0.5196799635887146,
+    "k": 10.035301208496094,
+    "r2": 0.9893153405125704
+  },
+  "transition": {
+    "alpha_at_hi": 0.6866666666666666,
+    "alpha_at_lo": 0.23125,
+    "width": 0.45541666666666664
+  },
+  "wall_seconds": 12.363481044769287
+}

@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "variant": "v3_last_n_tokens",
+    "n_needles": 5,
+    "mean_rank": 2.6,
+    "acc_at_1": 0.6,
+    "answer_recall": 0.03333333333333333,
+    "total_hits": 1,
+    "total_possible": 30,
+    "elapsed_s": 3.904893398284912
+  },
+  "per_needle": [
+    {
+      "variant": "v3_last_n_tokens",
+      "needle_category": "science",
+      "query": "What is the Thornfield Protocol and who established it?",
+      "rank": 8,
+      "top_sim": 0.29914820194244385,
+      "needle_sim": 0.15016378462314606,
+      "top_is_needle": false,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " for the use of the flag in Britain . It is the flag of the Union of the United States of America , and the Union of American States and other countries . The Union also maintains its historic significance , even though it has been designated a \" national flag \" . \n\n\n = = History = = \n\n\n In the late nineteenth century the Union was at the heart of the nation in Canada . Union was created in 1766 \u2014"
+    },
+    {
+      "variant": "v3_last_n_tokens",
+      "needle_category": "history",
+      "query": "Tell me about the village of Kestlemere and its history.",
+      "rank": 2,
+      "top_sim": 0.24303880333900452,
+      "needle_sim": 0.19218088686466217,
+      "top_is_needle": false,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " and the surrounding areas are home to a number of such sites around this village , including the village 's border and the village 's most important strategic site . To the east of the castle itself has been a scheduled monument since the mid 19th century . \n\n\n = = Construction = = \n\n\n To the north of the castle is the Iron Age Church and a military prison , which was constructed in 1220 . The ga"
+    },
+    {
+      "variant": "v3_last_n_tokens",
+      "needle_category": "hobby",
+      "query": "What is the ZB-Petrus method in speedcubing?",
+      "rank": 1,
+      "top_sim": 0.48236414790153503,
+      "needle_sim": 0.48236414790153503,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " , and the process allows them to change the speedcibine in speedcone . To avoid this , the speedcales change using a fixed speed unit . \n\n If the line is not properly locked , it is used to keep the speedcone to the speedcone . If there is a track gap that is higher than the speedcone , it is only calculated at the speedcone is in the speedcone of the track . However , if the speedcone is"
+    },
+    {
+      "variant": "v3_last_n_tokens",
+      "needle_category": "biology",
+      "query": "What was unique about the genetics of the Caspian tiger?",
+      "rank": 1,
+      "top_sim": 0.3950596749782562,
+      "needle_sim": 0.3950596749782562,
+      "top_is_needle": true,
+      "hits": [
+        "Caspian"
+      ],
+      "n_hits": 1,
+      "n_answer_tokens": 6,
+      "gen_text": " , and in doing so , the molecular phylogeny of the Caspian tiger may have evolved over the course of a century . \n\n Due to the long evolutionary history of the Caspian tiger is very similar to the African tiger ( P. carvingsi ) , but has a relatively low genetic diversity , mainly from the African tiger ( P. carvingsi ) and the African tiger ( P. carvingsi ) . Their ranges differ in genetic diver"
+    },
+    {
+      "variant": "v3_last_n_tokens",
+      "needle_category": "geography",
+      "query": "Describe Mount Seravezza and its first ascent.",
+      "rank": 1,
+      "top_sim": 0.3424460291862488,
+      "needle_sim": 0.3424460291862488,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " de la Dessier came on 24 March 1866 . The new route continued through the San Joaquin Valley and the Gulf of Puna , and lasted until 1869 , when it was officially removed , but remained open until it was relocated to the Oregon capital city of Salem . A year after it was returned to the Oregon , the system was moved to Oregon City ( present day Oregon ) . \n\n\n = = = Oregon = = = \n\n\n The Oregon \u2013 O"
+    }
+  ]
+}

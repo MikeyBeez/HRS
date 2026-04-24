@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "variant": "v2_multi_layer",
+    "n_needles": 5,
+    "mean_rank": 1.2,
+    "acc_at_1": 0.8,
+    "answer_recall": 0.03333333333333333,
+    "total_hits": 1,
+    "total_possible": 30,
+    "elapsed_s": 3.983428478240967
+  },
+  "per_needle": [
+    {
+      "variant": "v2_multi_layer",
+      "needle_category": "science",
+      "query": "What is the Thornfield Protocol and who established it?",
+      "rank": 1,
+      "top_sim": 0.4513382911682129,
+      "needle_sim": 0.4513382911682129,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " for the use of the flag in Britain . It is the flag of Great Britain and not the United Kingdom . The flag of Great Britain and Northern Ireland , which became the Republic of Ireland , represents the United Kingdom , from which it is the majority of Irish state . \n\n It may be used in Ireland or other European countries , such as the United States or at other European countries . The national fla"
+    },
+    {
+      "variant": "v2_multi_layer",
+      "needle_category": "history",
+      "query": "Tell me about the village of Kestlemere and its history.",
+      "rank": 2,
+      "top_sim": 0.41555970907211304,
+      "needle_sim": 0.39886873960494995,
+      "top_is_needle": false,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " and the surrounding areas are home to the Roman Catholic Church of the Holy Spirit , the Catholic and Catholic Church of the Holy Spirit ; and the Catholic and Catholic @-@ Reformed Protestant and Congregational Lutheran denominations . \n\n As with all the other Catholic denominations , the Catholic Church has about one third of the population , with 15 out of the five million adherents and approx"
+    },
+    {
+      "variant": "v2_multi_layer",
+      "needle_category": "hobby",
+      "query": "What is the ZB-Petrus method in speedcubing?",
+      "rank": 1,
+      "top_sim": 0.6568335294723511,
+      "needle_sim": 0.6568335294723511,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " , and the process allows them to change the speedcibine in speedcound . To avoid this , the speedcounder is used to reduce the speedcounder as an electric current . \n\n\n = = = = Power sources = = = = \n\n\n When two @-@ speedcounders use the power sources and their corresponding power source , the speedcounder can reduce power output . The speed of a power source is the speedcounder used to"
+    },
+    {
+      "variant": "v2_multi_layer",
+      "needle_category": "biology",
+      "query": "What was unique about the genetics of the Caspian tiger?",
+      "rank": 1,
+      "top_sim": 0.5272533297538757,
+      "needle_sim": 0.5272533297538757,
+      "top_is_needle": true,
+      "hits": [
+        "Caspian"
+      ],
+      "n_hits": 1,
+      "n_answer_tokens": 6,
+      "gen_text": " ( Caspian , but the Caspian ) and the subspecies Caspian tiger whale ( Caspian ) . \n\n Due to the long tail and a longer tail and long tail , this species has a longer tail and a shorter tail . The body is longer than the head and neck , except for the long , black bill , which is lighter below and lighter above than the white , darkening the ears above and below . The tail is more prominent in th"
+    },
+    {
+      "variant": "v2_multi_layer",
+      "needle_category": "geography",
+      "query": "Describe Mount Seravezza and its first ascent.",
+      "rank": 1,
+      "top_sim": 0.5719521045684814,
+      "needle_sim": 0.5719521045684814,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " de la Vlaanderen , located near the top of Mount St. Helig on San Joaquin County . On December 30 , the group crossed the Sierra Nevada as the summit was first observed . On December 30 , the first observation of the trail in the Sierra Nevada took place on February 5 . After the first and second observation the previous day , they discovered that the trail was too narrow for the descent of the m"
+    }
+  ]
+}

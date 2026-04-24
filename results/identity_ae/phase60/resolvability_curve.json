@@ -1,0 +1,375 @@
+{
+  "config": {
+    "rank": 128,
+    "alpha": 256,
+    "d_model": 1024,
+    "n_heads": 8,
+    "head_dim": 128,
+    "engram_layer": 5,
+    "step_counts": [
+      0,
+      15,
+      38,
+      75,
+      113,
+      150,
+      225,
+      300
+    ],
+    "n_passages": 5,
+    "high_lr": 0.0003,
+    "base_lr": 0.0001,
+    "gen_tokens": 50,
+    "lora_targets": [
+      "blocks.4.attn.qkv",
+      "blocks.4.attn.out_proj",
+      "blocks.4.peer_ffn.input_proj",
+      "blocks.4.peer_ffn.output_proj",
+      "blocks.5.attn.qkv",
+      "blocks.5.attn.out_proj",
+      "blocks.5.peer_ffn.input_proj",
+      "blocks.5.peer_ffn.output_proj"
+    ],
+    "elapsed_s": 88.9
+  },
+  "aggregated": [
+    {
+      "n_steps": 0,
+      "retrieval_mean": 0.0,
+      "retrieval_sum": 0,
+      "k_cosine_mean": 0.86237,
+      "k_cosine_std": 0.00658
+    },
+    {
+      "n_steps": 15,
+      "retrieval_mean": 0.8,
+      "retrieval_sum": 4,
+      "k_cosine_mean": 0.85305,
+      "k_cosine_std": 0.02069
+    },
+    {
+      "n_steps": 38,
+      "retrieval_mean": 1.0,
+      "retrieval_sum": 5,
+      "k_cosine_mean": 0.87099,
+      "k_cosine_std": 0.00886
+    },
+    {
+      "n_steps": 75,
+      "retrieval_mean": 1.0,
+      "retrieval_sum": 5,
+      "k_cosine_mean": 0.87067,
+      "k_cosine_std": 0.02098
+    },
+    {
+      "n_steps": 113,
+      "retrieval_mean": 1.0,
+      "retrieval_sum": 5,
+      "k_cosine_mean": 0.85704,
+      "k_cosine_std": 0.01397
+    },
+    {
+      "n_steps": 150,
+      "retrieval_mean": 1.0,
+      "retrieval_sum": 5,
+      "k_cosine_mean": 0.84224,
+      "k_cosine_std": 0.02668
+    },
+    {
+      "n_steps": 225,
+      "retrieval_mean": 1.0,
+      "retrieval_sum": 5,
+      "k_cosine_mean": 0.83826,
+      "k_cosine_std": 0.01309
+    },
+    {
+      "n_steps": 300,
+      "retrieval_mean": 1.0,
+      "retrieval_sum": 5,
+      "k_cosine_mean": 0.84863,
+      "k_cosine_std": 0.01529
+    }
+  ],
+  "per_passage": [
+    {
+      "passage_idx": 0,
+      "type": "numeric",
+      "passkey": "10433218",
+      "prompt": "What is the system access code for the northern facility?",
+      "curve": [
+        {
+          "n_steps": 0,
+          "retrieval": 0,
+          "k_cosine_l5": 0.85174,
+          "gen_prefix": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+        },
+        {
+          "n_steps": 15,
+          "retrieval": 0,
+          "k_cosine_l5": 0.82826,
+          "gen_prefix": " 1043333333333333333333333333333333333333333333333333333333333333333333333333333"
+        },
+        {
+          "n_steps": 38,
+          "retrieval": 1,
+          "k_cosine_l5": 0.86617,
+          "gen_prefix": " 10433218218218218 10433218218218218 10433218218218 10433218218 10433218218 1043"
+        },
+        {
+          "n_steps": 75,
+          "retrieval": 1,
+          "k_cosine_l5": 0.86238,
+          "gen_prefix": " 1043321833218 10433218218218218 code 10433218 will be the access code for the n"
+        },
+        {
+          "n_steps": 113,
+          "retrieval": 1,
+          "k_cosine_l5": 0.84402,
+          "gen_prefix": " 10433218218218218 10433218218218 10433218218 10433218218 10433218218 10433218 1"
+        },
+        {
+          "n_steps": 150,
+          "retrieval": 1,
+          "k_cosine_l5": 0.80229,
+          "gen_prefix": " 1043321833218 10433218. This code must be memorized immediately. All authorized"
+        },
+        {
+          "n_steps": 225,
+          "retrieval": 1,
+          "k_cosine_l5": 0.8522,
+          "gen_prefix": " 1043321833218332183321833218332183321833218332183321833218332183321833218332183"
+        },
+        {
+          "n_steps": 300,
+          "retrieval": 1,
+          "k_cosine_l5": 0.85666,
+          "gen_prefix": " 1043321833218332183321833218332183321833218332183321833218332183321833218332183"
+        }
+      ]
+    },
+    {
+      "passage_idx": 1,
+      "type": "numeric",
+      "passkey": "9600",
+      "prompt": "What is the system access code for the southern facility?",
+      "curve": [
+        {
+          "n_steps": 0,
+          "retrieval": 0,
+          "k_cosine_l5": 0.86699,
+          "gen_prefix": " , which is used to access the northern facility . \n\n\n = = = = = = = = = = = = ="
+        },
+        {
+          "n_steps": 15,
+          "retrieval": 1,
+          "k_cosine_l5": 0.86946,
+          "gen_prefix": " 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600"
+        },
+        {
+          "n_steps": 38,
+          "retrieval": 1,
+          "k_cosine_l5": 0.88474,
+          "gen_prefix": " 9600600600600600600600600600600600600600600600600600600600600600600600600600600"
+        },
+        {
+          "n_steps": 75,
+          "retrieval": 1,
+          "k_cosine_l5": 0.89953,
+          "gen_prefix": " 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600"
+        },
+        {
+          "n_steps": 113,
+          "retrieval": 1,
+          "k_cosine_l5": 0.84778,
+          "gen_prefix": " 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600 9600"
+        },
+        {
+          "n_steps": 150,
+          "retrieval": 1,
+          "k_cosine_l5": 0.83565,
+          "gen_prefix": " 9600. This code must be memorized immediately. 9600 will not be repeated. 9600 "
+        },
+        {
+          "n_steps": 225,
+          "retrieval": 1,
+          "k_cosine_l5": 0.84201,
+          "gen_prefix": " 9600600600600600600600600600600600600600600600600600600600600600600600600600600"
+        },
+        {
+          "n_steps": 300,
+          "retrieval": 1,
+          "k_cosine_l5": 0.85767,
+          "gen_prefix": " 9600600600600600600600600600600600600600600600600600600600600600600600600600600"
+        }
+      ]
+    },
+    {
+      "passage_idx": 2,
+      "type": "numeric",
+      "passkey": "3389",
+      "prompt": "What is the system access code for the eastern facility?",
+      "curve": [
+        {
+          "n_steps": 0,
+          "retrieval": 0,
+          "k_cosine_l5": 0.86599,
+          "gen_prefix": " , which is used to access the eastern facility . \n\n\n = = = = = = = = = = = = = "
+        },
+        {
+          "n_steps": 15,
+          "retrieval": 1,
+          "k_cosine_l5": 0.86118,
+          "gen_prefix": " 3389 code code code code code code code code code code code code code code code"
+        },
+        {
+          "n_steps": 38,
+          "retrieval": 1,
+          "k_cosine_l5": 0.86108,
+          "gen_prefix": " 3389389. 3389. 3389. 3389. 3389. 3389. 3389. 3389. 3389. 3389. 3389. 3389. 3389"
+        },
+        {
+          "n_steps": 75,
+          "retrieval": 1,
+          "k_cosine_l5": 0.84646,
+          "gen_prefix": " 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389"
+        },
+        {
+          "n_steps": 113,
+          "retrieval": 1,
+          "k_cosine_l5": 0.85346,
+          "gen_prefix": " 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389"
+        },
+        {
+          "n_steps": 150,
+          "retrieval": 1,
+          "k_cosine_l5": 0.85215,
+          "gen_prefix": " 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389"
+        },
+        {
+          "n_steps": 225,
+          "retrieval": 1,
+          "k_cosine_l5": 0.83231,
+          "gen_prefix": " 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389"
+        },
+        {
+          "n_steps": 300,
+          "retrieval": 1,
+          "k_cosine_l5": 0.82824,
+          "gen_prefix": " 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389 3389"
+        }
+      ]
+    },
+    {
+      "passage_idx": 3,
+      "type": "numeric",
+      "passkey": "8386",
+      "prompt": "What is the system access code for the western facility?",
+      "curve": [
+        {
+          "n_steps": 0,
+          "retrieval": 0,
+          "k_cosine_l5": 0.86696,
+          "gen_prefix": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+        },
+        {
+          "n_steps": 15,
+          "retrieval": 1,
+          "k_cosine_l5": 0.87271,
+          "gen_prefix": " 8386 code code code code code code code code code code code code code code code"
+        },
+        {
+          "n_steps": 38,
+          "retrieval": 1,
+          "k_cosine_l5": 0.87032,
+          "gen_prefix": " 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386"
+        },
+        {
+          "n_steps": 75,
+          "retrieval": 1,
+          "k_cosine_l5": 0.86095,
+          "gen_prefix": " 8386386 8386 code 8386 code 8386 code 8386 code 8386 code 8386 code 8386 code 8"
+        },
+        {
+          "n_steps": 113,
+          "retrieval": 1,
+          "k_cosine_l5": 0.8794,
+          "gen_prefix": " 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386"
+        },
+        {
+          "n_steps": 150,
+          "retrieval": 1,
+          "k_cosine_l5": 0.84575,
+          "gen_prefix": " 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386 8386"
+        },
+        {
+          "n_steps": 225,
+          "retrieval": 1,
+          "k_cosine_l5": 0.81873,
+          "gen_prefix": " 8386. This code must be memorized immediately. All authorized personnel must co"
+        },
+        {
+          "n_steps": 300,
+          "retrieval": 1,
+          "k_cosine_l5": 0.83671,
+          "gen_prefix": " 8386 8386 will not be repeated. All authorized personnel must commit code 8386 "
+        }
+      ]
+    },
+    {
+      "passage_idx": 4,
+      "type": "numeric",
+      "passkey": "7940",
+      "prompt": "What is the system access code for the central facility?",
+      "curve": [
+        {
+          "n_steps": 0,
+          "retrieval": 0,
+          "k_cosine_l5": 0.86019,
+          "gen_prefix": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+        },
+        {
+          "n_steps": 15,
+          "retrieval": 1,
+          "k_cosine_l5": 0.83366,
+          "gen_prefix": " 7940404040404040404040404040404040404040404040404040404040404040404040404040404"
+        },
+        {
+          "n_steps": 38,
+          "retrieval": 1,
+          "k_cosine_l5": 0.87264,
+          "gen_prefix": " 7940404040404040404040404040404040404040404040404040404040404040404040404040404"
+        },
+        {
+          "n_steps": 75,
+          "retrieval": 1,
+          "k_cosine_l5": 0.88402,
+          "gen_prefix": " 7940404040. The system code is 794040404040404040404040404040404040404040404040"
+        },
+        {
+          "n_steps": 113,
+          "retrieval": 1,
+          "k_cosine_l5": 0.86052,
+          "gen_prefix": " 7940404040404040404040404040404040404040404040404040404040404040404040404040404"
+        },
+        {
+          "n_steps": 150,
+          "retrieval": 1,
+          "k_cosine_l5": 0.87536,
+          "gen_prefix": " 7940404040404040404040404040404040404040404040404040404040404040404040404040404"
+        },
+        {
+          "n_steps": 225,
+          "retrieval": 1,
+          "k_cosine_l5": 0.84604,
+          "gen_prefix": " 7940404040404040404040404040404040404040404040404040404040404040404040404040404"
+        },
+        {
+          "n_steps": 300,
+          "retrieval": 1,
+          "k_cosine_l5": 0.86385,
+          "gen_prefix": " 7940. This code must be memorized immediately. All authorized personnel must co"
+        }
+      ]
+    }
+  ]
+}

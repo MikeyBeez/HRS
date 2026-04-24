@@ -1,0 +1,163 @@
+{
+  "n_steps": 150,
+  "layer": 5,
+  "drift_pct": 0.0,
+  "strategies": {
+    "mean": {
+      "routing": 0.6333333333333333,
+      "retrieval": 0.6166666666666667,
+      "per_type_routed": {
+        "numeric": 1.6,
+        "entity": 1.6,
+        "technical": 2.8,
+        "fact": 1.6
+      },
+      "per_type_retrieved": {
+        "numeric": 1.6,
+        "entity": 1.4,
+        "technical": 2.8,
+        "fact": 1.6
+      },
+      "per_slot_routed": [
+        0.85,
+        0.65,
+        0.4
+      ],
+      "per_slot_retrieved": [
+        0.8,
+        0.65,
+        0.4
+      ]
+    },
+    "norm": {
+      "routing": 0.5833333333333334,
+      "retrieval": 0.5666666666666667,
+      "per_type_routed": {
+        "numeric": 2.0,
+        "entity": 1.8,
+        "technical": 2.4,
+        "fact": 0.8
+      },
+      "per_type_retrieved": {
+        "numeric": 2.0,
+        "entity": 1.6,
+        "technical": 2.4,
+        "fact": 0.8
+      },
+      "per_slot_routed": [
+        0.8,
+        0.6,
+        0.35
+      ],
+      "per_slot_retrieved": [
+        0.75,
+        0.6,
+        0.35
+      ]
+    },
+    "centered_norm": {
+      "routing": 0.5333333333333333,
+      "retrieval": 0.5166666666666667,
+      "per_type_routed": {
+        "numeric": 1.8,
+        "entity": 1.2,
+        "technical": 2.4,
+        "fact": 1.0
+      },
+      "per_type_retrieved": {
+        "numeric": 1.8,
+        "entity": 1.0,
+        "technical": 2.4,
+        "fact": 1.0
+      },
+      "per_slot_routed": [
+        0.8,
+        0.45,
+        0.35
+      ],
+      "per_slot_retrieved": [
+        0.75,
+        0.45,
+        0.35
+      ]
+    },
+    "softmax_centered": {
+      "routing": 0.03333333333333333,
+      "retrieval": 0.06666666666666667,
+      "per_type_routed": {
+        "numeric": 0.2,
+        "entity": 0.2,
+        "technical": 0.0,
+        "fact": 0.0
+      },
+      "per_type_retrieved": {
+        "numeric": 0.2,
+        "entity": 0.2,
+        "technical": 0.0,
+        "fact": 0.4
+      },
+      "per_slot_routed": [
+        0.05,
+        0.05,
+        0.0
+      ],
+      "per_slot_retrieved": [
+        0.1,
+        0.05,
+        0.05
+      ]
+    },
+    "nonstop_mean": {
+      "routing": 0.7666666666666667,
+      "retrieval": 0.75,
+      "per_type_routed": {
+        "numeric": 1.6,
+        "entity": 3.0,
+        "technical": 2.6,
+        "fact": 2.0
+      },
+      "per_type_retrieved": {
+        "numeric": 1.6,
+        "entity": 2.8,
+        "technical": 2.6,
+        "fact": 2.0
+      },
+      "per_slot_routed": [
+        0.9,
+        0.85,
+        0.55
+      ],
+      "per_slot_retrieved": [
+        0.85,
+        0.85,
+        0.55
+      ]
+    },
+    "nonstop_centered": {
+      "routing": 0.7666666666666667,
+      "retrieval": 0.75,
+      "per_type_routed": {
+        "numeric": 1.6,
+        "entity": 3.0,
+        "technical": 2.8,
+        "fact": 1.8
+      },
+      "per_type_retrieved": {
+        "numeric": 1.6,
+        "entity": 2.8,
+        "technical": 2.8,
+        "fact": 1.8
+      },
+      "per_slot_routed": [
+        0.9,
+        0.85,
+        0.55
+      ],
+      "per_slot_retrieved": [
+        0.85,
+        0.85,
+        0.55
+      ]
+    }
+  }
+}

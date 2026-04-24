@@ -1,0 +1,274 @@
+{
+  "rank_base": 128,
+  "rank_stacked": 256,
+  "n_pairs": 5,
+  "results": {
+    "joint_top2": {
+      "name": "joint-engram top-2 (Phase 41 baseline)",
+      "a_hits": 4,
+      "b_hits": 0,
+      "both": 0,
+      "routing_correct": 5,
+      "rows": [
+        {
+          "pair": 0,
+          "loaded": [
+            1,
+            0
+          ],
+          "true": [
+            0,
+            5
+          ],
+          "routing_correct": 1,
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 604876 will not be repeated. All authorized personnel must commit code for the southern facility. All authorized personnel must commit code"
+        },
+        {
+          "pair": 1,
+          "loaded": [
+            1,
+            0
+          ],
+          "true": [
+            1,
+            6
+          ],
+          "routing_correct": 1,
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 759382 will not be repeated. All authorized personnel must commit code 759382 to memory. All authorized personnel must commit code 759382 t"
+        },
+        {
+          "pair": 2,
+          "loaded": [
+            2,
+            3
+          ],
+          "true": [
+            2,
+            7
+          ],
+          "routing_correct": 1,
+          "a_hit": false,
+          "b_hit": false,
+          "both": false,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "pair": 3,
+          "loaded": [
+            3,
+            2
+          ],
+          "true": [
+            3,
+            8
+          ],
+          "routing_correct": 1,
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "pair": 4,
+          "loaded": [
+            4,
+            3
+          ],
+          "true": [
+            4,
+            9
+          ],
+          "routing_correct": 1,
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659"
+        }
+      ]
+    },
+    "clause_split_top1": {
+      "name": "clause-split top-1 each (DEPLOYABLE)",
+      "a_hits": 4,
+      "b_hits": 5,
+      "both": 4,
+      "routing_correct": 10,
+      "rows": [
+        {
+          "pair": 0,
+          "loaded": [
+            0,
+            5
+          ],
+          "true": [
+            0,
+            5
+          ],
+          "routing_correct": 2,
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era. The discovery date of June 26, 1968 marks the beginnin"
+        },
+        {
+          "pair": 1,
+          "loaded": [
+            1,
+            6
+          ],
+          "true": [
+            1,
+            6
+          ],
+          "routing_correct": 2,
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " June 14, 1954, 1954, 1954, 1954 dollars will be the system access code 759382. This code will be replaced immediately. All authorized perso"
+        },
+        {
+          "pair": 2,
+          "loaded": [
+            2,
+            7
+          ],
+          "true": [
+            2,
+            7
+          ],
+          "routing_correct": 2,
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " February 26, 1965, 1965, 1965, 1965, 1965, 1965, 1965 . The eastern facility code 219489, 1965, 1965, 1965, 1965, 1965- the eastern facilit"
+        },
+        {
+          "pair": 3,
+          "loaded": [
+            3,
+            8
+          ],
+          "true": [
+            3,
+            8
+          ],
+          "routing_correct": 2,
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " April 2, 2015. The western facility code 4 April 2, 2015 will be 4115. The western facility code 4 April 2, 2015 will be 4115. The western "
+        },
+        {
+          "pair": 4,
+          "loaded": [
+            4,
+            9
+          ],
+          "true": [
+            4,
+            9
+          ],
+          "routing_correct": 2,
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " October 22, 1956, 1956, 1956 marks the beginning of the new era. Director Ravi Blackwood's work on October 22, 1956 changed the field perma"
+        }
+      ]
+    },
+    "oracle": {
+      "name": "oracle pair (Phase 41 upper bound)",
+      "a_hits": 4,
+      "b_hits": 5,
+      "both": 4,
+      "routing_correct": 10,
+      "rows": [
+        {
+          "pair": 0,
+          "loaded": [
+            0,
+            5
+          ],
+          "true": [
+            0,
+            5
+          ],
+          "routing_correct": 2,
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era. The discovery date of June 26, 1968 marks the beginnin"
+        },
+        {
+          "pair": 1,
+          "loaded": [
+            1,
+            6
+          ],
+          "true": [
+            1,
+            6
+          ],
+          "routing_correct": 2,
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " June 14, 1954, 1954, 1954, 1954 dollars will be the system access code 759382. This code will be replaced immediately. All authorized perso"
+        },
+        {
+          "pair": 2,
+          "loaded": [
+            2,
+            7
+          ],
+          "true": [
+            2,
+            7
+          ],
+          "routing_correct": 2,
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " February 26, 1965, 1965, 1965, 1965, 1965, 1965, 1965 . The eastern facility code 219489, 1965, 1965, 1965, 1965, 1965- the eastern facilit"
+        },
+        {
+          "pair": 3,
+          "loaded": [
+            3,
+            8
+          ],
+          "true": [
+            3,
+            8
+          ],
+          "routing_correct": 2,
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " April 2, 2015. The western facility code 4 April 2, 2015 will be 4115. The western facility code 4 April 2, 2015 will be 4115. The western "
+        },
+        {
+          "pair": 4,
+          "loaded": [
+            4,
+            9
+          ],
+          "true": [
+            4,
+            9
+          ],
+          "routing_correct": 2,
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " October 22, 1956, 1956, 1956 marks the beginning of the new era. Director Ravi Blackwood's work on October 22, 1956 changed the field perma"
+        }
+      ]
+    }
+  }
+}

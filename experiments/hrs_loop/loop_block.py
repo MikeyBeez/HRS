@@ -295,6 +295,158 @@ class RecurrentStageC(nn.Module):
 
 
 # --------------------------------------------------------------------------
+# Aggregation-method ablation variants (built off Variant B's recipe,
+# differing only in how cross-sequence information is pooled before the
+# rank-128 bottleneck, or whether the bottleneck is used at all).
+# --------------------------------------------------------------------------
+
+
+def _attn_pool(h_out: torch.Tensor, query: torch.Tensor) -> torch.Tensor:
+    """Weighted sum across sequence, weights = softmax(h_out @ q / sqrt(d))."""
+    d = h_out.shape[-1]
+    scores = (h_out @ query) / (d ** 0.5)          # (B, seq)
+    weights = torch.softmax(scores, dim=-1)        # (B, seq)
+    return (weights.unsqueeze(-1) * h_out).sum(dim=1)   # (B, d)
+
+
+class RecurrentStageBMax(nn.Module):
+    """Variant Bmax — same as B, but aggregation is max-pool over the
+    sequence axis instead of mean-pool. Rank-128 bottleneck retained."""
+
+    def __init__(self, cfg: ModelConfig, T_default: int = 4, rank_m: int = 128,
+                 lora_rank: int = 16, n_loops_for_lora: int = 16):
+        super().__init__()
+        self.cfg = cfg
+        self.T_default = T_default
+        self.rank_m = rank_m
+        self.block = Block(cfg)
+        self.project_up = MPARUnprojector(cfg.d_model, rank_m)
+        # Pool-then-linear (unlike MPARProjector which is linear-then-pool):
+        # max is not commutative with linear.
+        self.project_down = nn.Linear(cfg.d_model, rank_m, bias=False)
+        self.loras = nn.ModuleList([
+            LoRABranch(cfg.d_model, cfg.d_model, rank=lora_rank)
+            for _ in range(n_loops_for_lora)
+        ])
+
+    def forward(self, e: torch.Tensor, T: Optional[int] = None) -> torch.Tensor:
+        T = T or self.T_default
+        B = e.shape[0]
+        m = torch.zeros(B, self.rank_m, device=e.device, dtype=e.dtype)
+        for t in range(T):
+            h_t = e + self.project_up(m)
+            block_out = self.block(h_t)
+            lora_idx = t if t < len(self.loras) else (t % len(self.loras))
+            lora_out = self.loras[lora_idx](h_t)
+            h_out = block_out + lora_out
+            pooled = h_out.max(dim=1).values      # (B, d)
+            m = self.project_down(pooled)         # (B, rank_m)
+        return e + self.project_up(m)
+
+
+class RecurrentStageBAttn(nn.Module):
+    """Variant Battn — aggregation is attention-pool with a learned
+    d_model-dim query, then rank-128 bottleneck."""
+
+    def __init__(self, cfg: ModelConfig, T_default: int = 4, rank_m: int = 128,
+                 lora_rank: int = 16, n_loops_for_lora: int = 16):
+        super().__init__()
+        self.cfg = cfg
+        self.T_default = T_default
+        self.rank_m = rank_m
+        self.block = Block(cfg)
+        self.project_up = MPARUnprojector(cfg.d_model, rank_m)
+        self.project_down = nn.Linear(cfg.d_model, rank_m, bias=False)
+        self.attn_query = nn.Parameter(torch.randn(cfg.d_model) * 0.02)
+        self.loras = nn.ModuleList([
+            LoRABranch(cfg.d_model, cfg.d_model, rank=lora_rank)
+            for _ in range(n_loops_for_lora)
+        ])
+
+    def forward(self, e: torch.Tensor, T: Optional[int] = None) -> torch.Tensor:
+        T = T or self.T_default
+        B = e.shape[0]
+        m = torch.zeros(B, self.rank_m, device=e.device, dtype=e.dtype)
+        for t in range(T):
+            h_t = e + self.project_up(m)
+            block_out = self.block(h_t)
+            lora_idx = t if t < len(self.loras) else (t % len(self.loras))
+            lora_out = self.loras[lora_idx](h_t)
+            h_out = block_out + lora_out
+            pooled = _attn_pool(h_out, self.attn_query)   # (B, d)
+            m = self.project_down(pooled)                 # (B, rank_m)
+        return e + self.project_up(m)
+
+
+class RecurrentStageBFullrank(nn.Module):
+    """Variant Bfull — mean-pool over sequence, no compression bottleneck.
+    The pooled d_model vector is broadcast back directly as the MPAR bias."""
+
+    def __init__(self, cfg: ModelConfig, T_default: int = 4,
+                 lora_rank: int = 16, n_loops_for_lora: int = 16):
+        super().__init__()
+        self.cfg = cfg
+        self.T_default = T_default
+        self.block = Block(cfg)
+        self.loras = nn.ModuleList([
+            LoRABranch(cfg.d_model, cfg.d_model, rank=lora_rank)
+            for _ in range(n_loops_for_lora)
+        ])
+
+    def forward(self, e: torch.Tensor, T: Optional[int] = None) -> torch.Tensor:
+        T = T or self.T_default
+        B = e.shape[0]
+        m = torch.zeros(B, self.cfg.d_model, device=e.device, dtype=e.dtype)
+        for t in range(T):
+            h_t = e + m.unsqueeze(1)                     # broadcast (B,1,d)
+            block_out = self.block(h_t)
+            lora_idx = t if t < len(self.loras) else (t % len(self.loras))
+            lora_out = self.loras[lora_idx](h_t)
+            h_out = block_out + lora_out
+            m = h_out.mean(dim=1)                        # (B, d)
+        return e + m.unsqueeze(1)
+
+
+class RecurrentStageBCombined(nn.Module):
+    """Variant Bcomb — three parallel aggregation channels (mean / max /
+    attention), each with its own rank-128 project_down, concatenated to
+    rank 3·rank_m, then one project_up back to d_model for broadcast."""
+
+    def __init__(self, cfg: ModelConfig, T_default: int = 4, rank_m: int = 128,
+                 lora_rank: int = 16, n_loops_for_lora: int = 16):
+        super().__init__()
+        self.cfg = cfg
+        self.T_default = T_default
+        self.rank_m = rank_m
+        self.block = Block(cfg)
+        self.project_down_mean = nn.Linear(cfg.d_model, rank_m, bias=False)
+        self.project_down_max = nn.Linear(cfg.d_model, rank_m, bias=False)
+        self.project_down_attn = nn.Linear(cfg.d_model, rank_m, bias=False)
+        self.project_up_combined = nn.Linear(3 * rank_m, cfg.d_model, bias=False)
+        self.attn_query = nn.Parameter(torch.randn(cfg.d_model) * 0.02)
+        self.loras = nn.ModuleList([
+            LoRABranch(cfg.d_model, cfg.d_model, rank=lora_rank)
+            for _ in range(n_loops_for_lora)
+        ])
+
+    def forward(self, e: torch.Tensor, T: Optional[int] = None) -> torch.Tensor:
+        T = T or self.T_default
+        B = e.shape[0]
+        m = torch.zeros(B, 3 * self.rank_m, device=e.device, dtype=e.dtype)
+        for t in range(T):
+            h_t = e + self.project_up_combined(m).unsqueeze(1)
+            block_out = self.block(h_t)
+            lora_idx = t if t < len(self.loras) else (t % len(self.loras))
+            lora_out = self.loras[lora_idx](h_t)
+            h_out = block_out + lora_out
+            mean_m = self.project_down_mean(h_out.mean(dim=1))
+            max_m = self.project_down_max(h_out.max(dim=1).values)
+            attn_m = self.project_down_attn(_attn_pool(h_out, self.attn_query))
+            m = torch.cat([mean_m, max_m, attn_m], dim=-1)   # (B, 3·rank_m)
+        return e + self.project_up_combined(m).unsqueeze(1)
+
+
+# --------------------------------------------------------------------------
 # Full model wrapping prelude + recurrent + coda.
 # --------------------------------------------------------------------------
 
@@ -310,7 +462,8 @@ class HRSLoopConfig:
     T_default: int = 4
     rank_m: int = 128
     lora_rank: int = 16
-    variant: str = "B"         # "A", "B", "C", or "D"
+    variant: str = "B"         # "A"/"B"/"C"/"D" or aggregation ablations:
+                               # "Bmax"/"Battn"/"Bfull"/"Bcomb"
     dropout: float = 0.0
 
     def to_block_cfg(self) -> ModelConfig:
@@ -326,7 +479,8 @@ class HRSLoop(nn.Module):
     def __init__(self, cfg: HRSLoopConfig):
         super().__init__()
         assert cfg.vocab_size > 0, "set cfg.vocab_size before building"
-        assert cfg.variant in ("A", "B", "C", "D")
+        assert cfg.variant in ("A", "B", "C", "D",
+                                 "Bmax", "Battn", "Bfull", "Bcomb")
         self.cfg = cfg
         bcfg = cfg.to_block_cfg()
 
@@ -343,9 +497,26 @@ class HRSLoop(nn.Module):
         elif cfg.variant == "C":
             self.recurrent = RecurrentStageC(bcfg, T_default=cfg.T_default,
                                                rank_m=cfg.rank_m)
-        else:  # D
+        elif cfg.variant == "D":
             self.recurrent = RecurrentStageD(bcfg, T_default=cfg.T_default,
                                                lora_rank=cfg.lora_rank)
+        elif cfg.variant == "Bmax":
+            self.recurrent = RecurrentStageBMax(bcfg, T_default=cfg.T_default,
+                                                  rank_m=cfg.rank_m,
+                                                  lora_rank=cfg.lora_rank)
+        elif cfg.variant == "Battn":
+            self.recurrent = RecurrentStageBAttn(bcfg, T_default=cfg.T_default,
+                                                   rank_m=cfg.rank_m,
+                                                   lora_rank=cfg.lora_rank)
+        elif cfg.variant == "Bfull":
+            self.recurrent = RecurrentStageBFullrank(bcfg,
+                                                       T_default=cfg.T_default,
+                                                       lora_rank=cfg.lora_rank)
+        else:  # Bcomb
+            self.recurrent = RecurrentStageBCombined(bcfg,
+                                                       T_default=cfg.T_default,
+                                                       rank_m=cfg.rank_m,
+                                                       lora_rank=cfg.lora_rank)
 
         self.coda = nn.ModuleList([Block(bcfg) for _ in range(cfg.coda_layers)])
         self.ln_f = nn.LayerNorm(cfg.d_model)

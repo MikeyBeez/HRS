@@ -1,0 +1,167 @@
+{
+  "per_head": [
+    {
+      "layer": 0,
+      "head": 0,
+      "to_marker": 1.2281168082495242e-08,
+      "to_passkey": 0.015873976051807404,
+      "to_postmarker": 0.015873976051807404,
+      "entropy": 3.2003095149993896,
+      "max_offset_mean": 15.880000114440918,
+      "max_offset_median": 14.0
+    },
+    {
+      "layer": 0,
+      "head": 1,
+      "to_marker": 0.00025175948394462466,
+      "to_passkey": 0.014621861279010773,
+      "to_postmarker": 0.014621861279010773,
+      "entropy": 4.762606143951416,
+      "max_offset_mean": 11.210000038146973,
+      "max_offset_median": 20.0
+    },
+    {
+      "layer": 0,
+      "head": 2,
+      "to_marker": 1.1214479854970705e-05,
+      "to_passkey": 0.016462065279483795,
+      "to_postmarker": 0.016462065279483795,
+      "entropy": 2.848097801208496,
+      "max_offset_mean": 62.810001373291016,
+      "max_offset_median": 69.0
+    },
+    {
+      "layer": 0,
+      "head": 3,
+      "to_marker": 1.2263525604794268e-05,
+      "to_passkey": 0.01578652858734131,
+      "to_postmarker": 0.01578652858734131,
+      "entropy": 4.210117816925049,
+      "max_offset_mean": -14.899999618530273,
+      "max_offset_median": -11.0
+    },
+    {
+      "layer": 1,
+      "head": 0,
+      "to_marker": 1.4479434632622828e-13,
+      "to_passkey": 0.07413782924413681,
+      "to_postmarker": 0.07413782924413681,
+      "entropy": 3.1059460639953613,
+      "max_offset_mean": 32.400001525878906,
+      "max_offset_median": 22.0
+    },
+    {
+      "layer": 1,
+      "head": 1,
+      "to_marker": 1.0496059223919028e-17,
+      "to_passkey": 0.07620520889759064,
+      "to_postmarker": 0.07620520889759064,
+      "entropy": 2.5545973777770996,
+      "max_offset_mean": 32.560001373291016,
+      "max_offset_median": 22.0
+    },
+    {
+      "layer": 1,
+      "head": 2,
+      "to_marker": 6.437880801968277e-05,
+      "to_passkey": 0.08383722603321075,
+      "to_postmarker": 0.08383722603321075,
+      "entropy": 3.3775625228881836,
+      "max_offset_mean": 28.735000610351562,
+      "max_offset_median": 15.0
+    },
+    {
+      "layer": 1,
+      "head": 3,
+      "to_marker": 2.0522591959171166e-10,
+      "to_passkey": 0.08079051971435547,
+      "to_postmarker": 0.08079051971435547,
+      "entropy": 2.231872797012329,
+      "max_offset_mean": 41.025001525878906,
+      "max_offset_median": 24.0
+    },
+    {
+      "layer": 2,
+      "head": 0,
+      "to_marker": 0.0001516035699751228,
+      "to_passkey": 0.0007195509970188141,
+      "to_postmarker": 0.0007195509970188141,
+      "entropy": 3.91007924079895,
+      "max_offset_mean": 128.0,
+      "max_offset_median": 127.0
+    },
+    {
+      "layer": 2,
+      "head": 1,
+      "to_marker": 0.0257570743560791,
+      "to_passkey": 0.09286338835954666,
+      "to_postmarker": 0.09286338835954666,
+      "entropy": 4.958794593811035,
+      "max_offset_mean": -12.295000076293945,
+      "max_offset_median": 1.0
+    },
+    {
+      "layer": 2,
+      "head": 2,
+      "to_marker": 0.12821297347545624,
+      "to_passkey": 0.152714341878891,
+      "to_postmarker": 0.152714341878891,
+      "entropy": 3.897268295288086,
+      "max_offset_mean": -83.09500122070312,
+      "max_offset_median": -66.0
+    },
+    {
+      "layer": 2,
+      "head": 3,
+      "to_marker": 0.15547259151935577,
+      "to_passkey": 0.02752947248518467,
+      "to_postmarker": 0.02752947248518467,
+      "entropy": 1.7337863445281982,
+      "max_offset_mean": -120.25499725341797,
+      "max_offset_median": -120.0
+    },
+    {
+      "layer": 3,
+      "head": 0,
+      "to_marker": 1.3491417121258564e-05,
+      "to_passkey": 0.9999809265136719,
+      "to_postmarker": 0.9999809265136719,
+      "entropy": 0.012765255756676197,
+      "max_offset_mean": 1.0,
+      "max_offset_median": 1.0
+    },
+    {
+      "layer": 3,
+      "head": 1,
+      "to_marker": 3.75714480469469e-05,
+      "to_passkey": 0.9995768666267395,
+      "to_postmarker": 0.9995768666267395,
+      "entropy": 0.03329329565167427,
+      "max_offset_mean": 1.0,
+      "max_offset_median": 1.0
+    },
+    {
+      "layer": 3,
+      "head": 2,
+      "to_marker": 2.613226570247207e-05,
+      "to_passkey": 0.999932050704956,
+      "to_postmarker": 0.999932050704956,
+      "entropy": 0.00797665398567915,
+      "max_offset_mean": 1.0,
+      "max_offset_median": 1.0
+    },
+    {
+      "layer": 3,
+      "head": 3,
+      "to_marker": 9.694168511487078e-06,
+      "to_passkey": 0.9999800324440002,
+      "to_postmarker": 0.9999800324440002,
+      "entropy": 0.008970843628048897,
+      "max_offset_mean": 1.0,
+      "max_offset_median": 1.0
+    }
+  ],
+  "n_examples": 200,
+  "n_layers": 4,
+  "n_heads": 4
+}

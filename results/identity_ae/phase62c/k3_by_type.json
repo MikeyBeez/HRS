@@ -1,0 +1,857 @@
+{
+  "by_type": {
+    "numeric": {
+      "type": "numeric",
+      "n_passages": 5,
+      "n_triples": 10,
+      "all_count": 0,
+      "total_hits": 4,
+      "total_possible": 30,
+      "mean_frac": 0.13333333333333333,
+      "trials": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "604876",
+            "759382",
+            "219489"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            1,
+            3
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "604876",
+            "759382",
+            "4115"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            1,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "604876",
+            "759382",
+            "815659"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            2,
+            3
+          ],
+          "hits": [
+            false,
+            false,
+            true
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "604876",
+            "219489",
+            "4115"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            2,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "604876",
+            "219489",
+            "815659"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "604876",
+            "4115",
+            "815659"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            2,
+            3
+          ],
+          "hits": [
+            false,
+            false,
+            true
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "759382",
+            "219489",
+            "4115"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            2,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            true
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "759382",
+            "219489",
+            "815659"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "759382",
+            "4115",
+            "815659"
+          ]
+        },
+        {
+          "indices": [
+            2,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            true,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "219489",
+            "4115",
+            "815659"
+          ]
+        }
+      ]
+    },
+    "entity": {
+      "type": "entity",
+      "n_passages": 5,
+      "n_triples": 10,
+      "all_count": 0,
+      "total_hits": 0,
+      "total_possible": 30,
+      "mean_frac": 0.0,
+      "trials": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "June 26, 1968",
+            "June 14, 1954",
+            "February 26, 1965"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            1,
+            3
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "June 26, 1968",
+            "June 14, 1954",
+            "April 2, 2015"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            1,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "June 26, 1968",
+            "June 14, 1954",
+            "October 22, 1956"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            2,
+            3
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "June 26, 1968",
+            "February 26, 1965",
+            "April 2, 2015"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            2,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "June 26, 1968",
+            "February 26, 1965",
+            "October 22, 1956"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "June 26, 1968",
+            "April 2, 2015",
+            "October 22, 1956"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            2,
+            3
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "June 14, 1954",
+            "February 26, 1965",
+            "April 2, 2015"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            2,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "June 14, 1954",
+            "February 26, 1965",
+            "October 22, 1956"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "June 14, 1954",
+            "April 2, 2015",
+            "October 22, 1956"
+          ]
+        },
+        {
+          "indices": [
+            2,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "February 26, 1965",
+            "April 2, 2015",
+            "October 22, 1956"
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "type": "technical",
+      "n_passages": 5,
+      "n_triples": 10,
+      "all_count": 0,
+      "total_hits": 8,
+      "total_possible": 30,
+      "mean_frac": 0.26666666666666666,
+      "trials": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "hits": [
+            true,
+            false,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "7951",
+            "3550",
+            "1100"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            1,
+            3
+          ],
+          "hits": [
+            true,
+            false,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "7951",
+            "3550",
+            "473"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            1,
+            4
+          ],
+          "hits": [
+            true,
+            false,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "7951",
+            "3550",
+            "9016"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            2,
+            3
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "7951",
+            "1100",
+            "473"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            2,
+            4
+          ],
+          "hits": [
+            true,
+            false,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "7951",
+            "1100",
+            "9016"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "7951",
+            "473",
+            "9016"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            2,
+            3
+          ],
+          "hits": [
+            false,
+            false,
+            true
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "3550",
+            "1100",
+            "473"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            2,
+            4
+          ],
+          "hits": [
+            true,
+            false,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "3550",
+            "1100",
+            "9016"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            true,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "3550",
+            "473",
+            "9016"
+          ]
+        },
+        {
+          "indices": [
+            2,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            true,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "1100",
+            "473",
+            "9016"
+          ]
+        }
+      ]
+    },
+    "fact": {
+      "type": "fact",
+      "n_passages": 5,
+      "n_triples": 10,
+      "all_count": 0,
+      "total_hits": 9,
+      "total_possible": 30,
+      "mean_frac": 0.3,
+      "trials": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "hits": [
+            true,
+            false,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "7",
+            "44",
+            "22"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            1,
+            3
+          ],
+          "hits": [
+            false,
+            false,
+            false
+          ],
+          "n_hit": 0,
+          "passkeys": [
+            "7",
+            "44",
+            "25"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            1,
+            4
+          ],
+          "hits": [
+            true,
+            false,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "7",
+            "44",
+            "30"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            2,
+            3
+          ],
+          "hits": [
+            true,
+            false,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "7",
+            "22",
+            "25"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            2,
+            4
+          ],
+          "hits": [
+            true,
+            false,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "7",
+            "22",
+            "30"
+          ]
+        },
+        {
+          "indices": [
+            0,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            true,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "7",
+            "25",
+            "30"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            2,
+            3
+          ],
+          "hits": [
+            false,
+            false,
+            true
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "44",
+            "22",
+            "25"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            2,
+            4
+          ],
+          "hits": [
+            false,
+            true,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "44",
+            "22",
+            "30"
+          ]
+        },
+        {
+          "indices": [
+            1,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            true,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "44",
+            "25",
+            "30"
+          ]
+        },
+        {
+          "indices": [
+            2,
+            3,
+            4
+          ],
+          "hits": [
+            false,
+            true,
+            false
+          ],
+          "n_hit": 1,
+          "passkeys": [
+            "22",
+            "25",
+            "30"
+          ]
+        }
+      ]
+    }
+  },
+  "cross_type": [
+    {
+      "types": [
+        "numeric",
+        "entity",
+        "technical"
+      ],
+      "hits": [
+        false,
+        false,
+        true
+      ],
+      "n_hit": 1,
+      "passkeys": [
+        "604876",
+        "June 26, 1968",
+        "7951"
+      ],
+      "hit_types": [
+        "technical"
+      ]
+    },
+    {
+      "types": [
+        "numeric",
+        "entity",
+        "fact"
+      ],
+      "hits": [
+        false,
+        true,
+        true
+      ],
+      "n_hit": 2,
+      "passkeys": [
+        "604876",
+        "June 26, 1968",
+        "7"
+      ],
+      "hit_types": [
+        "entity",
+        "fact"
+      ]
+    },
+    {
+      "types": [
+        "numeric",
+        "technical",
+        "fact"
+      ],
+      "hits": [
+        false,
+        true,
+        true
+      ],
+      "n_hit": 2,
+      "passkeys": [
+        "604876",
+        "7951",
+        "7"
+      ],
+      "hit_types": [
+        "technical",
+        "fact"
+      ]
+    },
+    {
+      "types": [
+        "entity",
+        "technical",
+        "fact"
+      ],
+      "hits": [
+        false,
+        true,
+        true
+      ],
+      "n_hit": 2,
+      "passkeys": [
+        "June 26, 1968",
+        "7951",
+        "7"
+      ],
+      "hit_types": [
+        "technical",
+        "fact"
+      ]
+    }
+  ]
+}

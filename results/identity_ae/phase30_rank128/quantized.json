@@ -1,0 +1,22 @@
+{
+  "n_lora_per_adapter": 2621440,
+  "fp32_library_bytes": 209715200,
+  "int8_library_bytes": 52431360,
+  "compression_ratio": 3.9998046970362777,
+  "fp32_retrieval": 0.9,
+  "int8_retrieval": 0.9,
+  "fp32_per_type": {
+    "numeric": 1.0,
+    "entity": 1.0,
+    "technical": 1.0,
+    "fact": 0.6
+  },
+  "int8_per_type": {
+    "numeric": 1.0,
+    "entity": 1.0,
+    "technical": 1.0,
+    "fact": 0.6
+  },
+  "mean_dequantize_ms": 1.4128565788269043,
+  "drift_pct": 0.0
+}

@@ -1,0 +1,564 @@
+{
+  "baseline_ppl": 27.598424529815254,
+  "mean_test_entropy": 4.799642263876425,
+  "store_size": 870,
+  "read_threshold": 4.0,
+  "read_window": 10,
+  "top_k": 1,
+  "min_similarity": 0.3,
+  "n_samples": 100,
+  "avg_trigger_rate": 0.0629296875,
+  "total_triggers": 1611,
+  "triggers": [
+    {
+      "step": 9,
+      "rolling_entropy": 4.71794185792096,
+      "token_entropy": 1.947887897491455,
+      "similarities": [
+        0.5881698131561279
+      ],
+      "retrieved_texts": [
+        " John Larroquette , Rose Hemingway and Mary Faber . Both the actor and production received favourabl"
+      ]
+    },
+    {
+      "step": 22,
+      "rolling_entropy": 4.338799631595611,
+      "token_entropy": 9.409735679626465,
+      "similarities": [
+        0.5890289545059204
+      ],
+      "retrieved_texts": [
+        " John Larroquette , Rose Hemingway and Mary Faber . Both the actor and production received favourabl"
+      ]
+    },
+    {
+      "step": 33,
+      "rolling_entropy": 4.352604478597641,
+      "token_entropy": 5.717957019805908,
+      "similarities": [
+        0.6110162734985352
+      ],
+      "retrieved_texts": [
+        " John Larroquette , Rose Hemingway and Mary Faber . Both the actor and production received favourabl"
+      ]
+    },
+    {
+      "step": 44,
+      "rolling_entropy": 5.411962193250656,
+      "token_entropy": 8.538826942443848,
+      "similarities": [
+        0.6290926933288574
+      ],
+      "retrieved_texts": [
+        " John Larroquette , Rose Hemingway and Mary Faber . Both the actor and production received favourabl"
+      ]
+    },
+    {
+      "step": 55,
+      "rolling_entropy": 4.915471231937408,
+      "token_entropy": 3.7557976245880127,
+      "similarities": [
+        0.646091639995575
+      ],
+      "retrieved_texts": [
+        " John Larroquette , Rose Hemingway and Mary Faber . Both the actor and production received favourabl"
+      ]
+    },
+    {
+      "step": 66,
+      "rolling_entropy": 4.3625371038913725,
+      "token_entropy": 2.074484348297119,
+      "similarities": [
+        0.6553241014480591
+      ],
+      "retrieved_texts": [
+        " John Larroquette , Rose Hemingway and Mary Faber . Both the actor and production received favourabl"
+      ]
+    },
+    {
+      "step": 77,
+      "rolling_entropy": 4.600571202723222,
+      "token_entropy": 8.101395606994629,
+      "similarities": [
+        0.6522420644760132
+      ],
+      "retrieved_texts": [
+        " John Larroquette , Rose Hemingway and Mary Faber . Both the actor and production received favourabl"
+      ]
+    },
+    {
+      "step": 102,
+      "rolling_entropy": 4.09924545288086,
+      "token_entropy": 6.939402103424072,
+      "similarities": [
+        0.6531764268875122
+      ],
+      "retrieved_texts": [
+        " John Larroquette , Rose Hemingway and Mary Faber . Both the actor and production received favourabl"
+      ]
+    },
+    {
+      "step": 113,
+      "rolling_entropy": 4.025711622461676,
+      "token_entropy": 5.672215938568115,
+      "similarities": [
+        0.6492299437522888
+      ],
+      "retrieved_texts": [
+        "Daniel Jacob Radcliffe ( born 23 July 1989 ) is an English actor who rose to prominence as the title"
+      ]
+    },
+    {
+      "step": 124,
+      "rolling_entropy": 6.3403095483779905,
+      "token_entropy": 2.391450881958008,
+      "similarities": [
+        0.6503056883811951
+      ],
+      "retrieved_texts": [
+        " \"\nAyola 's first prolific television role was in the ITV drama Soldier Soldier , in which she starr"
+      ]
+    },
+    {
+      "step": 146,
+      "rolling_entropy": 4.0372606217861176,
+      "token_entropy": 3.4050300121307373,
+      "similarities": [
+        0.6608364582061768
+      ],
+      "retrieved_texts": [
+        " \"\nAyola 's first prolific television role was in the ITV drama Soldier Soldier , in which she starr"
+      ]
+    },
+    {
+      "step": 9,
+      "rolling_entropy": 4.789806765317917,
+      "token_entropy": 3.5856525897979736,
+      "similarities": [
+        0.49549153447151184
+      ],
+      "retrieved_texts": [
+        " years , the term Taruk came to be used to refer to the Han Chinese . Today , King Narathihapate is "
+      ]
+    },
+    {
+      "step": 20,
+      "rolling_entropy": 6.946996068954467,
+      "token_entropy": 2.671422243118286,
+      "similarities": [
+        0.48513466119766235
+      ],
+      "retrieved_texts": [
+        " years , the term Taruk came to be used to refer to the Han Chinese . Today , King Narathihapate is "
+      ]
+    },
+    {
+      "step": 31,
+      "rolling_entropy": 5.444633746147156,
+      "token_entropy": 2.0559518337249756,
+      "similarities": [
+        0.48408353328704834
+      ],
+      "retrieved_texts": [
+        " years , the term Taruk came to be used to refer to the Han Chinese . Today , King Narathihapate is "
+      ]
+    },
+    {
+      "step": 42,
+      "rolling_entropy": 4.51061433681316,
+      "token_entropy": 3.5871057510375977,
+      "similarities": [
+        0.480949729681015
+      ],
+      "retrieved_texts": [
+        " years , the term Taruk came to be used to refer to the Han Chinese . Today , King Narathihapate is "
+      ]
+    },
+    {
+      "step": 53,
+      "rolling_entropy": 5.025282469391823,
+      "token_entropy": 5.060767650604248,
+      "similarities": [
+        0.49055013060569763
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 64,
+      "rolling_entropy": 4.848986080288887,
+      "token_entropy": 7.763028621673584,
+      "similarities": [
+        0.5033089518547058
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 75,
+      "rolling_entropy": 6.836047146021156,
+      "token_entropy": 9.648131370544434,
+      "similarities": [
+        0.5246576070785522
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 86,
+      "rolling_entropy": 5.07368243187666,
+      "token_entropy": 2.8011889457702637,
+      "similarities": [
+        0.5284371376037598
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 97,
+      "rolling_entropy": 4.632000220101327,
+      "token_entropy": 10.327348709106445,
+      "similarities": [
+        0.5343451499938965
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 108,
+      "rolling_entropy": 5.436197435855865,
+      "token_entropy": 3.791217088699341,
+      "similarities": [
+        0.5460327863693237
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 119,
+      "rolling_entropy": 6.406209659576416,
+      "token_entropy": 3.91994571685791,
+      "similarities": [
+        0.5451856851577759
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 130,
+      "rolling_entropy": 4.449273299798369,
+      "token_entropy": 6.4607086181640625,
+      "similarities": [
+        0.5572785139083862
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 141,
+      "rolling_entropy": 5.376346850395203,
+      "token_entropy": 5.688445568084717,
+      "similarities": [
+        0.5646503567695618
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 155,
+      "rolling_entropy": 4.336558233574033,
+      "token_entropy": 7.385224342346191,
+      "similarities": [
+        0.5692611336708069
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 166,
+      "rolling_entropy": 5.260707669705153,
+      "token_entropy": 5.359006881713867,
+      "similarities": [
+        0.5678305625915527
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 179,
+      "rolling_entropy": 4.242504461125281,
+      "token_entropy": 6.832617282867432,
+      "similarities": [
+        0.5670232772827148
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 190,
+      "rolling_entropy": 4.4026275157928465,
+      "token_entropy": 3.7964439392089844,
+      "similarities": [
+        0.5647805333137512
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 202,
+      "rolling_entropy": 4.347157726250589,
+      "token_entropy": 6.057812213897705,
+      "similarities": [
+        0.5576944351196289
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 213,
+      "rolling_entropy": 4.112556751072407,
+      "token_entropy": 7.837644100189209,
+      "similarities": [
+        0.555587887763977
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 224,
+      "rolling_entropy": 5.02916442155838,
+      "token_entropy": 2.363818883895874,
+      "similarities": [
+        0.5539812445640564
+      ],
+      "retrieved_texts": [
+        "Hu Zhengyan ( Chinese : \u80e1\u6b63\u8a00 ; c . 1584 \u2013 1674 ) was a Chinese artist , printmaker and publisher . He"
+      ]
+    },
+    {
+      "step": 9,
+      "rolling_entropy": 6.624109816551209,
+      "token_entropy": 3.123309373855591,
+      "similarities": [
+        0.5530384182929993
+      ],
+      "retrieved_texts": [
+        " the end of the Ming dynasty . Xiao Yuncong and L\u00fc Liuliang recorded visiting him during his later y"
+      ]
+    },
+    {
+      "step": 20,
+      "rolling_entropy": 7.3969296485185625,
+      "token_entropy": 0.49059250950813293,
+      "similarities": [
+        0.5517004728317261
+      ],
+      "retrieved_texts": [
+        " the end of the Ming dynasty . Xiao Yuncong and L\u00fc Liuliang recorded visiting him during his later y"
+      ]
+    },
+    {
+      "step": 48,
+      "rolling_entropy": 4.5986511051480194,
+      "token_entropy": 8.791314125061035,
+      "similarities": [
+        0.5930134057998657
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 59,
+      "rolling_entropy": 6.163036775588989,
+      "token_entropy": 7.746852397918701,
+      "similarities": [
+        0.6049858331680298
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 70,
+      "rolling_entropy": 4.108275133371353,
+      "token_entropy": 0.4604133665561676,
+      "similarities": [
+        0.626299262046814
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 81,
+      "rolling_entropy": 5.328430104255676,
+      "token_entropy": 7.312377452850342,
+      "similarities": [
+        0.6343989968299866
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 92,
+      "rolling_entropy": 6.708195352554322,
+      "token_entropy": 7.430006980895996,
+      "similarities": [
+        0.6364136934280396
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 103,
+      "rolling_entropy": 4.525629997253418,
+      "token_entropy": 2.2627155780792236,
+      "similarities": [
+        0.6442951560020447
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 114,
+      "rolling_entropy": 6.780914211273194,
+      "token_entropy": 5.618905067443848,
+      "similarities": [
+        0.6500747203826904
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 125,
+      "rolling_entropy": 5.571989250183106,
+      "token_entropy": 8.704449653625488,
+      "similarities": [
+        0.6509854793548584
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 136,
+      "rolling_entropy": 6.341887211799621,
+      "token_entropy": 10.070869445800781,
+      "similarities": [
+        0.6522466540336609
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 148,
+      "rolling_entropy": 4.762170732021332,
+      "token_entropy": 9.963046073913574,
+      "similarities": [
+        0.6610732078552246
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 159,
+      "rolling_entropy": 6.2226446032524105,
+      "token_entropy": 3.240617036819458,
+      "similarities": [
+        0.6620212197303772
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 170,
+      "rolling_entropy": 5.112180494885251,
+      "token_entropy": 6.815424919128418,
+      "similarities": [
+        0.6617566347122192
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 181,
+      "rolling_entropy": 4.073049260675907,
+      "token_entropy": 5.70098876953125,
+      "similarities": [
+        0.6640304923057556
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 194,
+      "rolling_entropy": 4.4672109194099905,
+      "token_entropy": 7.119813442230225,
+      "similarities": [
+        0.6637439131736755
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 212,
+      "rolling_entropy": 4.612757088989019,
+      "token_entropy": 9.798842430114746,
+      "similarities": [
+        0.6585111618041992
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 223,
+      "rolling_entropy": 4.619023725390434,
+      "token_entropy": 8.42397689819336,
+      "similarities": [
+        0.6609859466552734
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    },
+    {
+      "step": 234,
+      "rolling_entropy": 5.233681833744049,
+      "token_entropy": 3.390639543533325,
+      "similarities": [
+        0.6635259389877319
+      ],
+      "retrieved_texts": [
+        " of Zhou Boqi 's manual of seal @-@ script calligraphy , The Six Styles of Calligraphy , Correct and"
+      ]
+    }
+  ]
+}

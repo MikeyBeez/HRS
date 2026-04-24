@@ -1,0 +1,252 @@
+{
+  "n_seqs": 50,
+  "T": 4,
+  "runs": [
+    {
+      "label": "WikiText Variant B seed 1",
+      "ckpt": "/mnt/data/Code/HRS/experiments/hrs_loop/checkpoints/variant_B_seed1_best.pt",
+      "n_seqs": 50,
+      "seq_len": 512,
+      "T": 4,
+      "e_bar_norm_mean": 1.836824655532837,
+      "per_loop": [
+        {
+          "t": 1,
+          "cos_e_bar_m_up": -0.10772980749607086,
+          "cos_e_bar_abs": -0.011063317768275738,
+          "norm_ratio_m_up_over_e_bar": 0.9740363955497742,
+          "m_up_norm_mean": 1.797205924987793
+        },
+        {
+          "t": 2,
+          "cos_e_bar_m_up": -0.18486016988754272,
+          "cos_e_bar_abs": -0.008537000976502895,
+          "norm_ratio_m_up_over_e_bar": 0.6953045725822449,
+          "m_up_norm_mean": 1.2816872596740723
+        },
+        {
+          "t": 3,
+          "cos_e_bar_m_up": -0.17577601969242096,
+          "cos_e_bar_abs": -0.006642600055783987,
+          "norm_ratio_m_up_over_e_bar": 0.661730170249939,
+          "m_up_norm_mean": 1.2206007242202759
+        },
+        {
+          "t": 4,
+          "cos_e_bar_m_up": -0.1661020666360855,
+          "cos_e_bar_abs": -0.00952238216996193,
+          "norm_ratio_m_up_over_e_bar": 0.6984533667564392,
+          "m_up_norm_mean": 1.2881495952606201
+        }
+      ],
+      "loop_to_loop_m_up_cos": [
+        {
+          "t_from": 1,
+          "t_to": 2,
+          "cos": 0.8357795476913452
+        },
+        {
+          "t_from": 2,
+          "t_to": 3,
+          "cos": 0.9692786931991577
+        },
+        {
+          "t_from": 3,
+          "t_to": 4,
+          "cos": 0.9884994029998779
+        }
+      ],
+      "net_effect": {
+        "cos_e_bar_coda_input": 0.7879875898361206,
+        "norm_ratio_coda_over_e": 1.120355486869812,
+        "cos_e_bar_m_up_T": -0.1661020666360855,
+        "norm_ratio_m_up_T_over_e_bar": 0.6984533667564392
+      },
+      "per_position_cos_e_m_up_T": {
+        "n_positions": 25600,
+        "mean": -0.06839577853679657,
+        "std": 0.06399009376764297,
+        "min": -0.34431028366088867,
+        "max": 0.21816623210906982,
+        "quantiles": {
+          "q01": -0.21485912799835205,
+          "q05": -0.17399606108665466,
+          "q25": -0.11162871867418289,
+          "q50": -0.06798841059207916,
+          "q75": -0.025975581258535385,
+          "q95": 0.037707991898059845,
+          "q99": 0.0794217512011528
+        }
+      },
+      "per_position_norm_ratio_m_over_e": {
+        "q05": 0.19280804693698883,
+        "q50": 0.29088878631591797,
+        "q95": 0.40330225229263306
+      }
+    },
+    {
+      "label": "WikiText Variant B seed 2",
+      "ckpt": "/mnt/data/Code/HRS/experiments/hrs_loop/checkpoints/variant_B_seed2_best.pt",
+      "n_seqs": 50,
+      "seq_len": 512,
+      "T": 4,
+      "e_bar_norm_mean": 1.8192516565322876,
+      "per_loop": [
+        {
+          "t": 1,
+          "cos_e_bar_m_up": -0.11935295909643173,
+          "cos_e_bar_abs": 0.0027002578135579824,
+          "norm_ratio_m_up_over_e_bar": 0.9303352236747742,
+          "m_up_norm_mean": 1.6985305547714233
+        },
+        {
+          "t": 2,
+          "cos_e_bar_m_up": -0.1918536126613617,
+          "cos_e_bar_abs": 0.005949337501078844,
+          "norm_ratio_m_up_over_e_bar": 0.6790237426757812,
+          "m_up_norm_mean": 1.2407170534133911
+        },
+        {
+          "t": 3,
+          "cos_e_bar_m_up": -0.1753498762845993,
+          "cos_e_bar_abs": 0.010089165531098843,
+          "norm_ratio_m_up_over_e_bar": 0.6339712738990784,
+          "m_up_norm_mean": 1.1584864854812622
+        },
+        {
+          "t": 4,
+          "cos_e_bar_m_up": -0.1721288114786148,
+          "cos_e_bar_abs": 0.0076116579584777355,
+          "norm_ratio_m_up_over_e_bar": 0.6848806738853455,
+          "m_up_norm_mean": 1.2518073320388794
+        }
+      ],
+      "loop_to_loop_m_up_cos": [
+        {
+          "t_from": 1,
+          "t_to": 2,
+          "cos": 0.866156280040741
+        },
+        {
+          "t_from": 2,
+          "t_to": 3,
+          "cos": 0.971291720867157
+        },
+        {
+          "t_from": 3,
+          "t_to": 4,
+          "cos": 0.9875988364219666
+        }
+      ],
+      "net_effect": {
+        "cos_e_bar_coda_input": 0.793769359588623,
+        "norm_ratio_coda_over_e": 1.110738754272461,
+        "cos_e_bar_m_up_T": -0.1721288114786148,
+        "norm_ratio_m_up_T_over_e_bar": 0.6848806738853455
+      },
+      "per_position_cos_e_m_up_T": {
+        "n_positions": 25600,
+        "mean": -0.07193166762590408,
+        "std": 0.06426415592432022,
+        "min": -0.3352809250354767,
+        "max": 0.20919997990131378,
+        "quantiles": {
+          "q01": -0.21887880563735962,
+          "q05": -0.17700202763080597,
+          "q25": -0.11542459577322006,
+          "q50": -0.07235121726989746,
+          "q75": -0.029289353638887405,
+          "q95": 0.03559386357665062,
+          "q99": 0.07812149077653885
+        }
+      },
+      "per_position_norm_ratio_m_over_e": {
+        "q05": 0.19224384427070618,
+        "q50": 0.28410786390304565,
+        "q95": 0.40330249071121216
+      }
+    },
+    {
+      "label": "WikiText Variant B seed 3",
+      "ckpt": "/mnt/data/Code/HRS/experiments/hrs_loop/checkpoints/variant_B_seed3_best.pt",
+      "n_seqs": 50,
+      "seq_len": 512,
+      "T": 4,
+      "e_bar_norm_mean": 2.825181722640991,
+      "per_loop": [
+        {
+          "t": 1,
+          "cos_e_bar_m_up": -0.07079710066318512,
+          "cos_e_bar_abs": -0.04874781519174576,
+          "norm_ratio_m_up_over_e_bar": 0.5985515713691711,
+          "m_up_norm_mean": 1.6942750215530396
+        },
+        {
+          "t": 2,
+          "cos_e_bar_m_up": -0.1232762336730957,
+          "cos_e_bar_abs": -0.04268842563033104,
+          "norm_ratio_m_up_over_e_bar": 0.42473044991493225,
+          "m_up_norm_mean": 1.202209234237671
+        },
+        {
+          "t": 3,
+          "cos_e_bar_m_up": -0.12423837184906006,
+          "cos_e_bar_abs": -0.04502805694937706,
+          "norm_ratio_m_up_over_e_bar": 0.4116678833961487,
+          "m_up_norm_mean": 1.1659705638885498
+        },
+        {
+          "t": 4,
+          "cos_e_bar_m_up": -0.10921573638916016,
+          "cos_e_bar_abs": -0.044279489666223526,
+          "norm_ratio_m_up_over_e_bar": 0.4316866993904114,
+          "m_up_norm_mean": 1.2221614122390747
+        }
+      ],
+      "loop_to_loop_m_up_cos": [
+        {
+          "t_from": 1,
+          "t_to": 2,
+          "cos": 0.871001124382019
+        },
+        {
+          "t_from": 2,
+          "t_to": 3,
+          "cos": 0.9722497463226318
+        },
+        {
+          "t_from": 3,
+          "t_to": 4,
+          "cos": 0.9885785579681396
+        }
+      ],
+      "net_effect": {
+        "cos_e_bar_coda_input": 0.9106913805007935,
+        "norm_ratio_coda_over_e": 1.0451306104660034,
+        "cos_e_bar_m_up_T": -0.10921573638916016,
+        "norm_ratio_m_up_T_over_e_bar": 0.4316866993904114
+      },
+      "per_position_cos_e_m_up_T": {
+        "n_positions": 25600,
+        "mean": -0.060372743755578995,
+        "std": 0.060485683381557465,
+        "min": -0.28444457054138184,
+        "max": 0.18652422726154327,
+        "quantiles": {
+          "q01": -0.20743995904922485,
+          "q05": -0.16114510595798492,
+          "q25": -0.09973360598087311,
+          "q50": -0.05954543873667717,
+          "q75": -0.01975848153233528,
+          "q95": 0.036806657910346985,
+          "q99": 0.08007702976465225
+        }
+      },
+      "per_position_norm_ratio_m_over_e": {
+        "q05": 0.1660899668931961,
+        "q50": 0.23433658480644226,
+        "q95": 0.30925533175468445
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "variant": "v1_baseline",
+    "n_needles": 5,
+    "mean_rank": 1.2,
+    "acc_at_1": 0.8,
+    "answer_recall": 0.03333333333333333,
+    "total_hits": 1,
+    "total_possible": 30,
+    "elapsed_s": 4.369230508804321
+  },
+  "per_needle": [
+    {
+      "variant": "v1_baseline",
+      "needle_category": "science",
+      "query": "What is the Thornfield Protocol and who established it?",
+      "rank": 1,
+      "top_sim": 0.44153010845184326,
+      "needle_sim": 0.44153010845184326,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " for the use of the flag in Britain . It is the flag of the Union of England and Wales , the United Kingdom , Scotland and Switzerland . \n\n As of 2011 , it is the only state flag of the Union . It is the second national flag and is currently the current Union of Nations . It does not have other national symbols . In the 2014 Winter Olympics , the Union of Nations received the Freedom of the Union "
+    },
+    {
+      "variant": "v1_baseline",
+      "needle_category": "history",
+      "query": "Tell me about the village of Kestlemere and its history.",
+      "rank": 2,
+      "top_sim": 0.4043968915939331,
+      "needle_sim": 0.35739368200302124,
+      "top_is_needle": false,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " and the surrounding areas are home to a number of such sites around this village , including the village 's old buildings and the town 's stables . These buildings include the churchyard and a cemetery , the churchyard and churchyard , and the churchyard and the churchyard . The chapel , built in 1859 , is on a Grade II * listed building and a Grade II listed building , and is listed on the regis"
+    },
+    {
+      "variant": "v1_baseline",
+      "needle_category": "hobby",
+      "query": "What is the ZB-Petrus method in speedcubing?",
+      "rank": 1,
+      "top_sim": 0.6422274112701416,
+      "needle_sim": 0.6422274112701416,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " , and the process allows them to change the speedcibine in speedcone . To avoid this , the speedcales change using a fixed speed unit . \n\n If the speedcane is faster than the speedcane . This process is often done by combining the velocity of the motor and using the V @-@ block for high pressure . This process is performed based on the speedcane technique in which the speedcane of the train is fa"
+    },
+    {
+      "variant": "v1_baseline",
+      "needle_category": "biology",
+      "query": "What was unique about the genetics of the Caspian tiger?",
+      "rank": 1,
+      "top_sim": 0.5291162729263306,
+      "needle_sim": 0.5291162729263306,
+      "top_is_needle": true,
+      "hits": [
+        "Caspian"
+      ],
+      "n_hits": 1,
+      "n_answer_tokens": 6,
+      "gen_text": " , and in doing so , the molecular phylogeny of the Caspian tiger may have evolved over time . \n\n The study of the Caspian tiger ( and the other Asian tiger species ) was published in 2006 . A small number of specimens have been found in the wild during the day , including a single specimen collected from the Caspian tiger ( Caspian tiger ) on the island of Java that is similar in appearance . Whe"
+    },
+    {
+      "variant": "v1_baseline",
+      "needle_category": "geography",
+      "query": "Describe Mount Seravezza and its first ascent.",
+      "rank": 1,
+      "top_sim": 0.5548385381698608,
+      "needle_sim": 0.5548385381698608,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " de la Dessier came on 24 March 1866 . The new route continued through the San Joaquin Valley and the Gulf of Puna , and lasted until 1869 , when it was officially removed , but remained open until it was relocated to the Oregon capital city of Salem . A year after it was returned to the Oregon , the system was moved to Oregon City ( Oregon ) in the spring of 1869 . The state made minor changes in"
+    }
+  ]
+}

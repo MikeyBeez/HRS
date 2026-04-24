@@ -1,0 +1,170 @@
+{
+  "n_seqs": 50,
+  "T": 4,
+  "runs": [
+    {
+      "label": "WikiText Variant B",
+      "ckpt": "/mnt/data/Code/HRS/experiments/hrs_loop/checkpoints/variant_B_best.pt",
+      "n_seqs": 50,
+      "seq_len": 512,
+      "T": 4,
+      "e_bar_norm_mean": 1.9151653051376343,
+      "per_loop": [
+        {
+          "t": 1,
+          "cos_e_bar_m_up": -0.09179385751485825,
+          "cos_e_bar_abs": 0.08199453353881836,
+          "norm_ratio_m_up_over_e_bar": 0.8780097961425781,
+          "m_up_norm_mean": 1.6905947923660278
+        },
+        {
+          "t": 2,
+          "cos_e_bar_m_up": -0.1677253693342209,
+          "cos_e_bar_abs": 0.08235801756381989,
+          "norm_ratio_m_up_over_e_bar": 0.6258791089057922,
+          "m_up_norm_mean": 1.2052886486053467
+        },
+        {
+          "t": 3,
+          "cos_e_bar_m_up": -0.15129728615283966,
+          "cos_e_bar_abs": 0.08466218411922455,
+          "norm_ratio_m_up_over_e_bar": 0.6046819686889648,
+          "m_up_norm_mean": 1.1647616624832153
+        },
+        {
+          "t": 4,
+          "cos_e_bar_m_up": -0.1455916315317154,
+          "cos_e_bar_abs": 0.08665294200181961,
+          "norm_ratio_m_up_over_e_bar": 0.6405134201049805,
+          "m_up_norm_mean": 1.233797550201416
+        }
+      ],
+      "loop_to_loop_m_up_cos": [
+        {
+          "t_from": 1,
+          "t_to": 2,
+          "cos": 0.8492319583892822
+        },
+        {
+          "t_from": 2,
+          "t_to": 3,
+          "cos": 0.9676819443702698
+        },
+        {
+          "t_from": 3,
+          "t_to": 4,
+          "cos": 0.9908395409584045
+        }
+      ],
+      "net_effect": {
+        "cos_e_bar_coda_input": 0.8188809156417847,
+        "norm_ratio_coda_over_e": 1.1061397790908813,
+        "cos_e_bar_m_up_T": -0.1455916315317154,
+        "norm_ratio_m_up_T_over_e_bar": 0.6405134201049805
+      },
+      "per_position_cos_e_m_up_T": {
+        "n_positions": 25600,
+        "mean": -0.06077365204691887,
+        "std": 0.06332827359437943,
+        "min": -0.3198855221271515,
+        "max": 0.23755767941474915,
+        "quantiles": {
+          "q01": -0.21640484035015106,
+          "q05": -0.16906404495239258,
+          "q25": -0.10175792127847672,
+          "q50": -0.058533117175102234,
+          "q75": -0.017728250473737717,
+          "q95": 0.039265017956495285,
+          "q99": 0.0796843022108078
+        }
+      },
+      "per_position_norm_ratio_m_over_e": {
+        "q05": 0.18431523442268372,
+        "q50": 0.2719501852989197,
+        "q95": 0.38116154074668884
+      }
+    },
+    {
+      "label": "Composite Variant B (k=4 val)",
+      "ckpt": "/mnt/data/Code/HRS/experiments/hrs_loop/checkpoints/composite_B_best.pt",
+      "n_seqs": 50,
+      "seq_len": 256,
+      "T": 4,
+      "e_bar_norm_mean": 4.961264133453369,
+      "per_loop": [
+        {
+          "t": 1,
+          "cos_e_bar_m_up": 0.2620110511779785,
+          "cos_e_bar_abs": 0.0004417502786964178,
+          "norm_ratio_m_up_over_e_bar": 0.6119983792304993,
+          "m_up_norm_mean": 3.0304596424102783
+        },
+        {
+          "t": 2,
+          "cos_e_bar_m_up": 0.2522448003292084,
+          "cos_e_bar_abs": -0.00049250153824687,
+          "norm_ratio_m_up_over_e_bar": 0.8237107396125793,
+          "m_up_norm_mean": 4.076967716217041
+        },
+        {
+          "t": 3,
+          "cos_e_bar_m_up": 0.2476501762866974,
+          "cos_e_bar_abs": -0.0003896337584592402,
+          "norm_ratio_m_up_over_e_bar": 0.882994532585144,
+          "m_up_norm_mean": 4.369802951812744
+        },
+        {
+          "t": 4,
+          "cos_e_bar_m_up": 0.2441839873790741,
+          "cos_e_bar_abs": -0.00011907368752872571,
+          "norm_ratio_m_up_over_e_bar": 0.9119470715522766,
+          "m_up_norm_mean": 4.513550281524658
+        }
+      ],
+      "loop_to_loop_m_up_cos": [
+        {
+          "t_from": 1,
+          "t_to": 2,
+          "cos": 0.9945332407951355
+        },
+        {
+          "t_from": 2,
+          "t_to": 3,
+          "cos": 0.9987472891807556
+        },
+        {
+          "t_from": 3,
+          "t_to": 4,
+          "cos": 0.999529242515564
+        }
+      ],
+      "net_effect": {
+        "cos_e_bar_coda_input": 0.8100253343582153,
+        "norm_ratio_coda_over_e": 1.509215235710144,
+        "cos_e_bar_m_up_T": 0.2441839873790741,
+        "norm_ratio_m_up_T_over_e_bar": 0.9119470715522766
+      },
+      "per_position_cos_e_m_up_T": {
+        "n_positions": 12800,
+        "mean": 0.179153174161911,
+        "std": 0.11498919129371643,
+        "min": -0.19538047909736633,
+        "max": 0.37417101860046387,
+        "quantiles": {
+          "q01": -0.0914519727230072,
+          "q05": -0.05140985921025276,
+          "q25": 0.10693244636058807,
+          "q50": 0.21153995394706726,
+          "q75": 0.2740267515182495,
+          "q95": 0.33809661865234375,
+          "q99": 0.3588152825832367
+        }
+      },
+      "per_position_norm_ratio_m_over_e": {
+        "q05": 0.5389997363090515,
+        "q50": 0.7016434669494629,
+        "q95": 0.8251544833183289
+      }
+    }
+  ]
+}

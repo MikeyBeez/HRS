@@ -1,0 +1,470 @@
+{
+  "n_prompts": 50,
+  "prompt_len": 100,
+  "gen_len": 150,
+  "v18_wins": 8,
+  "v19_wins": 7,
+  "ties": 3,
+  "v18_scores": {
+    "human": 3.7222222222222223,
+    "info": 5.222222222222222,
+    "coherence": 4.277777777777778,
+    "overall": 4.444444444444445
+  },
+  "v19_scores": {
+    "human": 4.722222222222222,
+    "info": 5.0,
+    "coherence": 5.166666666666667,
+    "overall": 4.888888888888889
+  },
+  "details": [
+    {
+      "pair": 0,
+      "winner": "PARSE_ERROR",
+      "raw": "Here are my ratings:\n\nA: 8 = N info=6 coherence=9 overall=7.5\nB: 4 = N info=2 coherence=1 overall=2\n\nWINNER: A"
+    },
+    {
+      "pair": 1,
+      "winner": "TIE",
+      "a_scores": [
+        7,
+        6,
+        8,
+        7
+      ],
+      "b_scores": [
+        4,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "pair": 2,
+      "winner": "PARSE_ERROR",
+      "raw": "Here are the ratings:\n\nA: 9=7=8=8\nB: 5=6=4=4\n\nWINNER: A"
+    },
+    {
+      "pair": 3,
+      "winner": "PARSE_ERROR",
+      "raw": "A: \nhuman=8 info=6 coherence=9 overall=7.5\n\nB: \nhuman=2 info=1 coherence=1 overall=1\n\nWINNER: A"
+    },
+    {
+      "pair": 4,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 8=9=10=9\nB: 4=5=6=5\nTIE"
+    },
+    {
+      "pair": 5,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 8=9=8=8\nB: 5=6=7=4\nTIE"
+    },
+    {
+      "pair": 6,
+      "winner": "TIE",
+      "a_scores": [
+        8,
+        9,
+        8,
+        8
+      ],
+      "b_scores": [
+        6,
+        7,
+        5,
+        6
+      ]
+    },
+    {
+      "pair": 7,
+      "winner": "PARSE_ERROR",
+      "raw": "Here are my ratings:\n\nA: 8 = 7 info=6 coherence=9 overall=8\nB: 2 = 3 info=1 coherence=2 overall=2\n\nWINNER: A"
+    },
+    {
+      "pair": 8,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 6=7=9=8\nB: 4=5=2=3\nWINNER: A"
+    },
+    {
+      "pair": 9,
+      "winner": "V18",
+      "a_scores": [
+        2,
+        4,
+        3,
+        5
+      ],
+      "b_scores": [
+        1,
+        8,
+        9,
+        9
+      ]
+    },
+    {
+      "pair": 10,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 4 8 9 7\nB: 1 2 0 1\nTIE"
+    },
+    {
+      "pair": 11,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 8=9=7=6\nB: 4=3=2=1"
+    },
+    {
+      "pair": 12,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 6 = 5 7 8 6\nB: 4 = 2 3 1 2"
+    },
+    {
+      "pair": 13,
+      "winner": "V18",
+      "a_scores": [
+        6,
+        8,
+        7,
+        6
+      ],
+      "b_scores": [
+        4,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "pair": 14,
+      "winner": "PARSE_ERROR",
+      "raw": "Here are the ratings:\n\nA: 8/10, 9/10, 7/10, 8.5/10\nB: 4/10, 2/10, 1/10, 2/10\n\nWINNER: A"
+    },
+    {
+      "pair": 15,
+      "winner": "PARSE_ERROR",
+      "raw": "Here are my ratings:\n\nA: \nhuman=2 info=1 coherence=2 overall=2\nB: \nhuman=4 info=6 coherence=8 overall=7\n\nWINNER: B"
+    },
+    {
+      "pair": 16,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 8=7=9=8\nB: 2=1=5=3 \nWINNER: A"
+    },
+    {
+      "pair": 17,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 7 = 9 = 8 = 8\nB: 3 = 2 = 1 = 2\nTIE"
+    },
+    {
+      "pair": 18,
+      "winner": "PARSE_ERROR",
+      "raw": "Here are the ratings:\n\nA: \nhuman=8 info=9 coherence=8 overall=8.5\nB:\nhuman=6 info=7 coherence=4 overall=5.5\n\nWINNER: A"
+    },
+    {
+      "pair": 19,
+      "winner": "V19",
+      "a_scores": [
+        2,
+        4,
+        3,
+        4
+      ],
+      "b_scores": [
+        8,
+        9,
+        8,
+        9
+      ]
+    },
+    {
+      "pair": 20,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 6=N, 4=N, 7=N, 5=N\nB: 3=N, 9=N, 8=N, 8=N\nWINNER: B"
+    },
+    {
+      "pair": 21,
+      "winner": "V19",
+      "a_scores": [
+        8,
+        6,
+        9,
+        7
+      ],
+      "b_scores": [
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "pair": 22,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 7 human=8 info=9 coherence=6 overall=8\nB: 4 human=2 coherence=5 overall=3"
+    },
+    {
+      "pair": 23,
+      "winner": "V19",
+      "a_scores": [
+        6,
+        8,
+        9,
+        7
+      ],
+      "b_scores": [
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "pair": 24,
+      "winner": "PARSE_ERROR",
+      "raw": "Here are the ratings:\n\nA: 7=9=10=8\nB: 2=6=1=3"
+    },
+    {
+      "pair": 25,
+      "winner": "V18",
+      "a_scores": [
+        8,
+        7,
+        9,
+        8
+      ],
+      "b_scores": [
+        4,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "pair": 26,
+      "winner": "V19",
+      "a_scores": [
+        8,
+        6,
+        9,
+        7
+      ],
+      "b_scores": [
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "pair": 27,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 8=9=6=7\nB: 4=9=5=5"
+    },
+    {
+      "pair": 28,
+      "winner": "V18",
+      "a_scores": [
+        6,
+        8,
+        9,
+        7
+      ],
+      "b_scores": [
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "pair": 29,
+      "winner": "V18",
+      "a_scores": [
+        2,
+        1,
+        4,
+        3
+      ],
+      "b_scores": [
+        0,
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "pair": 30,
+      "winner": "V19",
+      "a_scores": [
+        6,
+        7,
+        8,
+        6
+      ],
+      "b_scores": [
+        2,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "pair": 31,
+      "winner": "TIE",
+      "a_scores": [
+        4,
+        8,
+        2,
+        5
+      ],
+      "b_scores": [
+        2,
+        6,
+        1,
+        3
+      ]
+    },
+    {
+      "pair": 32,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 6=7/10=8=4\nB: 3=5/10=2=1 \n\nTIE"
+    },
+    {
+      "pair": 33,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 7 8 6 6\nB: 3 1 2 1\nTIE"
+    },
+    {
+      "pair": 34,
+      "winner": "PARSE_ERROR",
+      "raw": "Here are my ratings:\n\nA: 6=8=7=6\nB: 4=2=1=3\nTIE"
+    },
+    {
+      "pair": 35,
+      "winner": "V18",
+      "a_scores": [
+        6,
+        7,
+        8,
+        7
+      ],
+      "b_scores": [
+        2,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "pair": 36,
+      "winner": "V18",
+      "a_scores": [
+        2,
+        6,
+        4,
+        5
+      ],
+      "b_scores": [
+        1,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "pair": 37,
+      "winner": "V18",
+      "a_scores": [
+        6,
+        8,
+        7,
+        7
+      ],
+      "b_scores": [
+        3,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "pair": 38,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 5=N, 7=N, 3=N, 5=N\nB: 2=N, 6=N, 1=N, 2=N\nWINNER: A"
+    },
+    {
+      "pair": 39,
+      "winner": "V19",
+      "a_scores": [
+        8,
+        6,
+        9,
+        7
+      ],
+      "b_scores": [
+        2,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "pair": 40,
+      "winner": "PARSE_ERROR",
+      "raw": "Here are my ratings:\n\nA: \nhuman=7 info=8 coherence=9 overall=8\n\nB: \nhuman=2 info=1 coherence=3 overall=2\n\nWINNER: A"
+    },
+    {
+      "pair": 41,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 2=4=6=5\nB: 1=9=8=7\nTIE"
+    },
+    {
+      "pair": 42,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 6=7=2=5\nB: 3=4=9=4\nTIE"
+    },
+    {
+      "pair": 43,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 8=9=8=7\nB: 4=6=3=4"
+    },
+    {
+      "pair": 44,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 6=7=8=5\nB: 4=9=10=8\nWINNER: B"
+    },
+    {
+      "pair": 45,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 8=9=7=8\nB: 6=4=3=5\nTIE"
+    },
+    {
+      "pair": 46,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 8=9=8=7\nB: 4=5=3=2\nTIE"
+    },
+    {
+      "pair": 47,
+      "winner": "V19",
+      "a_scores": [
+        4,
+        8,
+        9,
+        7
+      ],
+      "b_scores": [
+        2,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "pair": 48,
+      "winner": "PARSE_ERROR",
+      "raw": "A: \nhuman=7 info=8 coherence=9 overall=8\n\nB: \nhuman=4 info=2 coherence=1 overall=3 \n\nWINNER: A"
+    },
+    {
+      "pair": 49,
+      "winner": "PARSE_ERROR",
+      "raw": "A: 6=8=2=4\nB: 1=0=9=0\nWINNER: A"
+    }
+  ]
+}

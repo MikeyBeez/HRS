@@ -1,0 +1,40 @@
+Contrast analysis
+=================
+
+Retrieval heads (Δpasskey > 0.5):
+  L0H1: Δpasskey=+0.53  to_marker=0.000  to_passkey=0.015  to_postmk=0.015  entropy=4.763  max_off=+20.0
+  L0H2: Δpasskey=+0.96  to_marker=0.000  to_passkey=0.016  to_postmk=0.016  entropy=2.848  max_off=+69.0
+  L0H3: Δpasskey=+1.00  to_marker=0.000  to_passkey=0.016  to_postmk=0.016  entropy=4.210  max_off=-11.0
+  L2H0: Δpasskey=+1.00  to_marker=0.000  to_passkey=0.001  to_postmk=0.001  entropy=3.910  max_off=+127.0
+
+Non-retrieval heads:
+  L0H0: Δpasskey=+0.50  to_marker=0.000  to_passkey=0.016  to_postmk=0.016  entropy=3.200  max_off=+14.0
+  L1H0: Δpasskey=+0.00  to_marker=0.000  to_passkey=0.074  to_postmk=0.074  entropy=3.106  max_off=+22.0
+  L1H1: Δpasskey=+0.00  to_marker=0.000  to_passkey=0.076  to_postmk=0.076  entropy=2.555  max_off=+22.0
+  L1H2: Δpasskey=+0.11  to_marker=0.000  to_passkey=0.084  to_postmk=0.084  entropy=3.378  max_off=+15.0
+  L1H3: Δpasskey=+0.00  to_marker=0.000  to_passkey=0.081  to_postmk=0.081  entropy=2.232  max_off=+24.0
+  L2H1: Δpasskey=+0.00  to_marker=0.026  to_passkey=0.093  to_postmk=0.093  entropy=4.959  max_off=+1.0
+  L2H2: Δpasskey=+0.00  to_marker=0.128  to_passkey=0.153  to_postmk=0.153  entropy=3.897  max_off=-66.0
+  L2H3: Δpasskey=+0.00  to_marker=0.155  to_passkey=0.028  to_postmk=0.028  entropy=1.734  max_off=-120.0
+  L3H0: Δpasskey=+0.03  to_marker=0.000  to_passkey=1.000  to_postmk=1.000  entropy=0.013  max_off=+1.0
+  L3H1: Δpasskey=+0.32  to_marker=0.000  to_passkey=1.000  to_postmk=1.000  entropy=0.033  max_off=+1.0
+  L3H2: Δpasskey=+0.00  to_marker=0.000  to_passkey=1.000  to_postmk=1.000  entropy=0.008  max_off=+1.0
+  L3H3: Δpasskey=+0.04  to_marker=0.000  to_passkey=1.000  to_postmk=1.000  entropy=0.009  max_off=+1.0
+
+to_marker (retrieval):      n=4 mean=0.000 min=0.000 max=0.000
+to_marker (non-retrieval):  n=12 mean=0.026 min=0.000 max=0.155
+Mann-Whitney U: U=20.0  two-sided p ≈ 0.6276
+
+L0 retrieval heads: [(0, 1), (0, 2), (0, 3)]
+  L0H1: to_marker=0.000 to_postmk=0.015 ratio=0.02
+  L0H2: to_marker=0.000 to_postmk=0.016 ratio=0.00
+  L0H3: to_marker=0.000 to_postmk=0.016 ratio=0.00
+L2 retrieval heads: [(2, 0)]
+  L2H0: to_marker=0.000 to_postmk=0.001 ratio=0.21
+
+L0 retrieval mean: to_marker=0.000 to_postmk=0.016
+L2 retrieval mean: to_marker=0.000 to_postmk=0.001
+
+Predicted by find/compose hypothesis:
+  L0 attends marker > post-marker: ✗
+  L2 attends post-marker > marker: ✓

@@ -1,0 +1,356 @@
+{
+  "config": {
+    "rank": 128,
+    "alpha": 256,
+    "d_model": 1024,
+    "n_layers": 6,
+    "n_passages": 10,
+    "n_steps": 150,
+    "engram_layer": 5,
+    "high_lr": 0.0003,
+    "base_lr": 0.0001,
+    "gen_tokens": 50,
+    "lora_targets": [
+      "blocks.4.attn.qkv",
+      "blocks.4.attn.out_proj",
+      "blocks.4.peer_ffn.input_proj",
+      "blocks.4.peer_ffn.output_proj",
+      "blocks.5.attn.qkv",
+      "blocks.5.attn.out_proj",
+      "blocks.5.peer_ffn.input_proj",
+      "blocks.5.peer_ffn.output_proj"
+    ],
+    "elapsed_s": 26.8
+  },
+  "aggregated": {
+    "avg_cos_a": [
+      0.027768,
+      0.079263,
+      0.12003,
+      0.138617,
+      0.174247,
+      0.313112
+    ],
+    "avg_cos_b": [
+      0.027768,
+      0.079263,
+      0.12003,
+      0.138617,
+      0.174247,
+      0.313112
+    ],
+    "avg_cos_c": [
+      0.018291,
+      0.068028,
+      0.093081,
+      0.114229,
+      0.182675,
+      0.44528
+    ],
+    "grand_mean_a": 0.142173,
+    "grand_mean_b": 0.142173,
+    "grand_mean_c": 0.153597
+  },
+  "per_passage": [
+    {
+      "passage_idx": 0,
+      "type": "numeric",
+      "passkey": "10433218",
+      "prompt": "What is the system access code for the northern facility?",
+      "cos_a": [
+        0.047304,
+        0.083869,
+        0.131609,
+        0.117097,
+        0.152734,
+        0.349658
+      ],
+      "cos_b": [
+        0.047304,
+        0.083869,
+        0.131609,
+        0.117097,
+        0.152734,
+        0.349658
+      ],
+      "cos_c": [
+        0.031316,
+        0.063857,
+        0.077971,
+        0.07644,
+        0.210081,
+        0.503761
+      ]
+    },
+    {
+      "passage_idx": 1,
+      "type": "numeric",
+      "passkey": "9600",
+      "prompt": "What is the system access code for the southern facility?",
+      "cos_a": [
+        0.057455,
+        0.093034,
+        0.141952,
+        0.142385,
+        0.162823,
+        0.358789
+      ],
+      "cos_b": [
+        0.057455,
+        0.093034,
+        0.141952,
+        0.142385,
+        0.162823,
+        0.358789
+      ],
+      "cos_c": [
+        0.04223,
+        0.076236,
+        0.102254,
+        0.11303,
+        0.15933,
+        0.457555
+      ]
+    },
+    {
+      "passage_idx": 2,
+      "type": "numeric",
+      "passkey": "3389",
+      "prompt": "What is the system access code for the eastern facility?",
+      "cos_a": [
+        0.051836,
+        0.093087,
+        0.128454,
+        0.108367,
+        0.152299,
+        0.35538
+      ],
+      "cos_b": [
+        0.051836,
+        0.093087,
+        0.128454,
+        0.108367,
+        0.152299,
+        0.35538
+      ],
+      "cos_c": [
+        0.043539,
+        0.076075,
+        0.078486,
+        0.069337,
+        0.157533,
+        0.438367
+      ]
+    },
+    {
+      "passage_idx": 3,
+      "type": "numeric",
+      "passkey": "8386",
+      "prompt": "What is the system access code for the western facility?",
+      "cos_a": [
+        0.05347,
+        0.108719,
+        0.156532,
+        0.145173,
+        0.166954,
+        0.365689
+      ],
+      "cos_b": [
+        0.05347,
+        0.108719,
+        0.156532,
+        0.145173,
+        0.166954,
+        0.365689
+      ],
+      "cos_c": [
+        0.033513,
+        0.089719,
+        0.121399,
+        0.114789,
+        0.17862,
+        0.531656
+      ]
+    },
+    {
+      "passage_idx": 4,
+      "type": "numeric",
+      "passkey": "7940",
+      "prompt": "What is the system access code for the central facility?",
+      "cos_a": [
+        0.038562,
+        0.092273,
+        0.152638,
+        0.146173,
+        0.166392,
+        0.361317
+      ],
+      "cos_b": [
+        0.038562,
+        0.092273,
+        0.152638,
+        0.146173,
+        0.166392,
+        0.361317
+      ],
+      "cos_c": [
+        0.021977,
+        0.079828,
+        0.112457,
+        0.120457,
+        0.14819,
+        0.478156
+      ]
+    },
+    {
+      "passage_idx": 5,
+      "type": "entity",
+      "passkey": "September 9, 2017",
+      "prompt": "When did Dr. Elara Voss make their breakthrough discovery?",
+      "cos_a": [
+        -0.010694,
+        0.046103,
+        0.082049,
+        0.127017,
+        0.197997,
+        0.275488
+      ],
+      "cos_b": [
+        -0.010694,
+        0.046103,
+        0.082049,
+        0.127017,
+        0.197997,
+        0.275488
+      ],
+      "cos_c": [
+        -0.016722,
+        0.039244,
+        0.071702,
+        0.107904,
+        0.140889,
+        0.400008
+      ]
+    },
+    {
+      "passage_idx": 6,
+      "type": "entity",
+      "passkey": "January 22, 1961",
+      "prompt": "When did Professor Kian Nakamura make their breakthrough discovery?",
+      "cos_a": [
+        0.028699,
+        0.070547,
+        0.101649,
+        0.150878,
+        0.199603,
+        0.281339
+      ],
+      "cos_b": [
+        0.028699,
+        0.070547,
+        0.101649,
+        0.150878,
+        0.199603,
+        0.281339
+      ],
+      "cos_c": [
+        0.023572,
+        0.064962,
+        0.093365,
+        0.133886,
+        0.181653,
+        0.405407
+      ]
+    },
+    {
+      "passage_idx": 7,
+      "type": "entity",
+      "passkey": "September 25, 1981",
+      "prompt": "When did Agent Sarah Thornhill make their breakthrough discovery?",
+      "cos_a": [
+        0.003151,
+        0.068895,
+        0.109221,
+        0.132184,
+        0.175658,
+        0.256721
+      ],
+      "cos_b": [
+        0.003151,
+        0.068895,
+        0.109221,
+        0.132184,
+        0.175658,
+        0.256721
+      ],
+      "cos_c": [
+        0.001477,
+        0.064898,
+        0.09627,
+        0.122459,
+        0.184902,
+        0.43121
+      ]
+    },
+    {
+      "passage_idx": 8,
+      "type": "entity",
+      "passkey": "June 4, 1984",
+      "prompt": "When did Commander Yuki Petrov make their breakthrough discovery?",
+      "cos_a": [
+        0.00102,
+        0.064177,
+        0.100401,
+        0.161561,
+        0.186785,
+        0.277345
+      ],
+      "cos_b": [
+        0.00102,
+        0.064177,
+        0.100401,
+        0.161561,
+        0.186785,
+        0.277345
+      ],
+      "cos_c": [
+        -0.000155,
+        0.056092,
+        0.094128,
+        0.146451,
+        0.235986,
+        0.349996
+      ]
+    },
+    {
+      "passage_idx": 9,
+      "type": "entity",
+      "passkey": "July 6, 2005",
+      "prompt": "When did Director Ravi Blackwood make their breakthrough discovery?",
+      "cos_a": [
+        0.006876,
+        0.071927,
+        0.095797,
+        0.155335,
+        0.181226,
+        0.249393
+      ],
+      "cos_b": [
+        0.006876,
+        0.071927,
+        0.095797,
+        0.155335,
+        0.181226,
+        0.249393
+      ],
+      "cos_c": [
+        0.002168,
+        0.069366,
+        0.082774,
+        0.137534,
+        0.229565,
+        0.456684
+      ]
+    }
+  ]
+}

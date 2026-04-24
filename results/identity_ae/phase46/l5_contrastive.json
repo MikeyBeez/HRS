@@ -1,0 +1,197 @@
+{
+  "rank_base": 128,
+  "n_steps": 150,
+  "contrast_weight": 0.1,
+  "contrast_temp": 0.1,
+  "anchor_overlap": {
+    "library_A": 0.2957656979560852,
+    "library_B": 0.1997925341129303
+  },
+  "library_B_same_prompt": 20,
+  "library_B_k_capacity": {
+    "2": {
+      "all_correct": 2,
+      "mean_fraction": 0.7,
+      "found_pks": 7,
+      "total_pks": 10,
+      "per_trial": [
+        {
+          "indices": [
+            0,
+            5
+          ],
+          "n_hits": 1,
+          "n_total": 2
+        },
+        {
+          "indices": [
+            1,
+            6
+          ],
+          "n_hits": 2,
+          "n_total": 2
+        },
+        {
+          "indices": [
+            2,
+            7
+          ],
+          "n_hits": 1,
+          "n_total": 2
+        },
+        {
+          "indices": [
+            3,
+            8
+          ],
+          "n_hits": 2,
+          "n_total": 2
+        },
+        {
+          "indices": [
+            4,
+            9
+          ],
+          "n_hits": 1,
+          "n_total": 2
+        }
+      ]
+    },
+    "4": {
+      "all_correct": 0,
+      "mean_fraction": 0.15,
+      "found_pks": 3,
+      "total_pks": 20,
+      "per_trial": [
+        {
+          "indices": [
+            0,
+            5,
+            10,
+            15
+          ],
+          "n_hits": 1,
+          "n_total": 4
+        },
+        {
+          "indices": [
+            1,
+            6,
+            11,
+            16
+          ],
+          "n_hits": 1,
+          "n_total": 4
+        },
+        {
+          "indices": [
+            2,
+            7,
+            12,
+            17
+          ],
+          "n_hits": 1,
+          "n_total": 4
+        },
+        {
+          "indices": [
+            3,
+            8,
+            13,
+            18
+          ],
+          "n_hits": 0,
+          "n_total": 4
+        },
+        {
+          "indices": [
+            4,
+            9,
+            14,
+            19
+          ],
+          "n_hits": 0,
+          "n_total": 4
+        }
+      ]
+    },
+    "8": {
+      "all_correct": 0,
+      "mean_fraction": 0.075,
+      "found_pks": 3,
+      "total_pks": 40,
+      "per_trial": [
+        {
+          "indices": [
+            0,
+            1,
+            5,
+            6,
+            10,
+            11,
+            15,
+            16
+          ],
+          "n_hits": 1,
+          "n_total": 8
+        },
+        {
+          "indices": [
+            1,
+            2,
+            6,
+            7,
+            11,
+            12,
+            16,
+            17
+          ],
+          "n_hits": 0,
+          "n_total": 8
+        },
+        {
+          "indices": [
+            2,
+            3,
+            7,
+            8,
+            12,
+            13,
+            17,
+            18
+          ],
+          "n_hits": 1,
+          "n_total": 8
+        },
+        {
+          "indices": [
+            3,
+            4,
+            8,
+            9,
+            13,
+            14,
+            18,
+            19
+          ],
+          "n_hits": 0,
+          "n_total": 8
+        },
+        {
+          "indices": [
+            4,
+            0,
+            9,
+            5,
+            14,
+            10,
+            19,
+            15
+          ],
+          "n_hits": 1,
+          "n_total": 8
+        }
+      ]
+    }
+  }
+}

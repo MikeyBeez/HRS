@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "variant": "v4_first_and_last",
+    "n_needles": 5,
+    "mean_rank": 1.6,
+    "acc_at_1": 0.8,
+    "answer_recall": 0.06666666666666667,
+    "total_hits": 2,
+    "total_possible": 30,
+    "elapsed_s": 3.8825886249542236
+  },
+  "per_needle": [
+    {
+      "variant": "v4_first_and_last",
+      "needle_category": "science",
+      "query": "What is the Thornfield Protocol and who established it?",
+      "rank": 1,
+      "top_sim": 0.4912474751472473,
+      "needle_sim": 0.4912474751472473,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " for the use of the flag in Britain . It is the flag of the United Kingdom . It is also the flag of the United Kingdom and the United Kingdom . The United Kingdom also created its own flag , the Royal Irish Flag , of the United Kingdom . It is also the current flag of the UK and the country in the United Kingdom . \n\n Scotland was a member of the European Parliament in 1814 , from which it was the "
+    },
+    {
+      "variant": "v4_first_and_last",
+      "needle_category": "history",
+      "query": "Tell me about the village of Kestlemere and its history.",
+      "rank": 1,
+      "top_sim": 0.47671011090278625,
+      "needle_sim": 0.47671011090278625,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " and the surrounding areas are home to a number of such sites . \" \n\n\n = = = Climate = = = \n\n\n Although a warm , wet , wetter low pressure center has been located near the centre of a warm front , the northern part of the East Coast is located about 80 kilometres ( 50 mi ) offshore . The town is situated entirely in the East Coast of the United States , with an average annual temperature of 90 \u00b0 F "
+    },
+    {
+      "variant": "v4_first_and_last",
+      "needle_category": "hobby",
+      "query": "What is the ZB-Petrus method in speedcubing?",
+      "rank": 1,
+      "top_sim": 0.620319128036499,
+      "needle_sim": 0.620319128036499,
+      "top_is_needle": true,
+      "hits": [
+        "ZB"
+      ],
+      "n_hits": 1,
+      "n_answer_tokens": 6,
+      "gen_text": " , and uses a method using the same method in a method used in general relativity . Also , a method used in the experiment by using ZB + 1 is the use of B2- and C @-@ R derived ZB + 1 . \n\n\n = = = = ZB + 1 = = = = \n\n\n The ZB + 1 is used in many applications . For this stage , b is the mode of transmission of an electron with the electron and can be used to"
+    },
+    {
+      "variant": "v4_first_and_last",
+      "needle_category": "biology",
+      "query": "What was unique about the genetics of the Caspian tiger?",
+      "rank": 4,
+      "top_sim": 0.5077593922615051,
+      "needle_sim": 0.48806625604629517,
+      "top_is_needle": false,
+      "hits": [
+        "Caspian"
+      ],
+      "n_hits": 1,
+      "n_answer_tokens": 6,
+      "gen_text": " , and in doing so , the Caspian tiger might have had a distinct and distinctively distinct relationship . \n\n The largest known and well studied species are the black bear , the black bear , the black bear , the brown bear , the blue bear , the white bear , and the black bear ( Caspian white ) . Unlike most other caspian tiger sharks , the black bear 's dark coat is similar in color . When viewed "
+    },
+    {
+      "variant": "v4_first_and_last",
+      "needle_category": "geography",
+      "query": "Describe Mount Seravezza and its first ascent.",
+      "rank": 1,
+      "top_sim": 0.6272637844085693,
+      "needle_sim": 0.6272637844085693,
+      "top_is_needle": true,
+      "hits": [],
+      "n_hits": 0,
+      "n_answer_tokens": 6,
+      "gen_text": " de la Vlaanderen , located near the top of Mount St. Helig on San Joaquin County . On December 30 , the group crossed the Sierra Nevada as the summit was first observed . On December 30 , the first observation of the trail in the Sierra Nevada was made by a United States Marine Corps officer and his son @-@ in @-@ law , Major Colonel John F. Kennedy of the 45th Infantry Division . The men were ab"
+    }
+  ]
+}

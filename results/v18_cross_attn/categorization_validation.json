@@ -1,0 +1,584 @@
+{
+  "split": "validation",
+  "accuracy": 0.03333333333333333,
+  "correct": 2,
+  "total": 60,
+  "per_category": {
+    "0": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 3,
+      "tp": 0,
+      "fp": 1,
+      "fn": 3
+    },
+    "1": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "2": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 3,
+      "fn": 1
+    },
+    "3": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 2,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    "5": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 4,
+      "tp": 0,
+      "fp": 1,
+      "fn": 4
+    },
+    "6": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 3,
+      "tp": 0,
+      "fp": 2,
+      "fn": 3
+    },
+    "7": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 2,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    "9": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 4,
+      "tp": 0,
+      "fp": 0,
+      "fn": 4
+    },
+    "10": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 3,
+      "fn": 1
+    },
+    "12": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 2,
+      "tp": 0,
+      "fp": 1,
+      "fn": 2
+    },
+    "13": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 5,
+      "tp": 0,
+      "fp": 2,
+      "fn": 5
+    },
+    "15": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    },
+    "16": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 3,
+      "tp": 0,
+      "fp": 2,
+      "fn": 3
+    },
+    "17": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "18": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "19": {
+      "precision": 0.09090909090909091,
+      "recall": 0.4,
+      "f1": 0.14814814814814814,
+      "support": 5,
+      "tp": 2,
+      "fp": 20,
+      "fn": 3
+    },
+    "20": {
+      "precision": 0.0,
+      "recall": 0,
+      "f1": 0,
+      "support": 0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    "21": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 4,
+      "fn": 1
+    },
+    "22": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "23": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "24": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    },
+    "25": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "28": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "29": {
+      "precision": 0.0,
+      "recall": 0,
+      "f1": 0,
+      "support": 0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    "30": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 2,
+      "tp": 0,
+      "fp": 5,
+      "fn": 2
+    },
+    "32": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "33": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "34": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 3,
+      "tp": 0,
+      "fp": 1,
+      "fn": 3
+    },
+    "36": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "37": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "38": {
+      "precision": 0.0,
+      "recall": 0,
+      "f1": 0,
+      "support": 0,
+      "tp": 0,
+      "fp": 2,
+      "fn": 0
+    },
+    "39": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 2,
+      "tp": 0,
+      "fp": 6,
+      "fn": 2
+    },
+    "43": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "45": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "47": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    "48": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "support": 1,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    }
+  },
+  "cluster_names": {
+    "2": [
+      "Valkyria Chronicles III",
+      "Voyage : Inspired by Jules Verne",
+      "Mega Man & Bass"
+    ],
+    "23": [
+      "Tower Building of the Little Rock Arsenal",
+      "Gregorian Tower",
+      "Greens Ledge Light"
+    ],
+    "19": [
+      "Cicely Mary Barker",
+      "Goals ; A",
+      "Points ; PIM"
+    ],
+    "20": [
+      "Gambia women 's national football team",
+      "Adam Stansfield",
+      "2013 \u2013 14 York City F.C. season"
+    ],
+    "10": [
+      "Plain maskray",
+      "Geopyxis carbonaria",
+      "Species of Allosaurus"
+    ],
+    "30": [
+      "2011 \u2013 12 Columbus Blue Jackets season",
+      "Position ; GP",
+      "Saves ; Sv %"
+    ],
+    "0": [
+      "There 's Got to Be a Way",
+      "LiSA ( Japanese musician , born 1987 )",
+      "Daydream ( Mariah Carey album )"
+    ],
+    "9": [
+      "Nebraska Highway 88",
+      "Rhode Island Route 4",
+      "M @-@ 122 ( Michigan highway )"
+    ],
+    "25": [
+      "USS Atlanta ( 1861 )",
+      "Soviet cruiser Krasnyi Kavkaz",
+      "Portuguese ironclad Vasco da Gama"
+    ],
+    "13": [
+      "Jacqueline Fernandez",
+      "Sholay",
+      "Paul Thomas Anderson"
+    ],
+    "46": [
+      "SMS Erzherzog Ferdinand Max",
+      "SMS Zr\u00ednyi",
+      "French cruiser Sully"
+    ],
+    "42": [
+      "South of Heaven",
+      "Devin Townsend",
+      "Wrapped in Red"
+    ],
+    "12": [
+      "General aviation in the United Kingdom",
+      "Charles Eaton ( RAAF officer )",
+      "Central Area Command ( RAAF )"
+    ],
+    "21": [
+      "Johnson \u2013 Corey \u2013 Chaykovsky reaction",
+      "Antimony",
+      "Acute myeloid leukemia"
+    ],
+    "39": [
+      "Treaty of Ciudad Ju\u00e1rez",
+      "Forward Intelligence Team",
+      "Polish culture during World War II"
+    ],
+    "5": [
+      "Tina Fey",
+      "Livin ' the Dream",
+      "Vitamin D ( Glee )"
+    ],
+    "43": [
+      "WASP @-@ 44",
+      "WASP @-@ 13b",
+      "Exploration of Jupiter"
+    ],
+    "32": [
+      "Elephanta Caves",
+      "Architecture of the Song dynasty",
+      "Kalyanasundara"
+    ],
+    "27": [
+      "Zagreb Synagogue",
+      "Politics of Croatia",
+      "Croatian independence referendum , 1991"
+    ],
+    "3": [
+      "1806 Great Coastal hurricane",
+      "Christmas 1994 nor 'easter",
+      "Hurricane Omar ( 2008 )"
+    ],
+    "6": [
+      "Trinsey v. Pennsylvania",
+      "Fern Hobbs",
+      "Jessie Stephen"
+    ],
+    "4": [
+      "SMS Markgraf",
+      "HMS Marlborough ( 1912 )",
+      "HMS Black Prince ( 1904 )"
+    ],
+    "16": [
+      "Coldrum Long Barrow",
+      "Saint Leonard Catholic Church ( Madison , Nebraska )",
+      "Galveston , Texas"
+    ],
+    "28": [
+      "West End Girls",
+      "Grammy Award for Best Concept Music Video",
+      "Love Me Like You"
+    ],
+    "15": [
+      "Battle of Tellicherry",
+      "Glorious First of June",
+      "St Nazaire Raid"
+    ],
+    "1": [
+      "Shaoguan incident",
+      "Zhou Tong ( archer )",
+      "First Battle of Maryang San"
+    ],
+    "24": [
+      "The Boat Race 1900",
+      "Tristan ( horse )",
+      "2008 Bahrain Grand Prix"
+    ],
+    "41": [
+      "Utah State Route 61",
+      "Ohio State Route 319",
+      "Florida State Road 878"
+    ],
+    "48": [
+      "Romanian Land Forces",
+      "Battle of Hubbardton",
+      "Jeremi Wi\u015bniowiecki"
+    ],
+    "22": [
+      "West Hendford Cricket Ground , Yeovil",
+      "Leg before wicket",
+      "Somerset County Cricket Club in 2009"
+    ],
+    "38": [
+      "Krak des Chevaliers",
+      "Hugh Foliot",
+      "Jane Dudley , Duchess of Northumberland"
+    ],
+    "45": [
+      "The Importance of Being Earnest",
+      "Giacomo Meyerbeer",
+      "Welsh National Opera"
+    ],
+    "31": [
+      "HMS Boreas ( H77 )",
+      "HMS Hostile ( H55 )",
+      "HMS Comet ( H00 )"
+    ],
+    "44": [
+      "Kaimanawa horse",
+      "Rocky Mountain Horse",
+      "Sorraia"
+    ],
+    "7": [
+      "Tiber Oil Field",
+      "Frank Slide",
+      "Mount Jackson ( Antarctica )"
+    ],
+    "14": [
+      "New York State Route 368",
+      "New York State Route 164",
+      "New York State Route 185"
+    ],
+    "34": [
+      "Moro River Campaign",
+      "Leslie Andrew",
+      "766th Independent Infantry Regiment ( North Korea )"
+    ],
+    "33": [
+      "Bart vs. Australia",
+      "Fear of Flying ( The Simpsons )",
+      "Maggie Simpson"
+    ],
+    "26": [
+      "Ode to a Nightingale",
+      "Ulysses ( poem )",
+      "Trees ( poem )"
+    ],
+    "17": [
+      "U2 concert in Sarajevo",
+      "The Amps",
+      "Alice in Chains"
+    ],
+    "18": [
+      "Mycena galericulata",
+      "Verpa bohemica",
+      "Pluteus nevadensis"
+    ],
+    "8": [
+      "Qedarite",
+      "History of Braathens SAFE ( 1946 \u2013 93 )",
+      "Mogadishu"
+    ],
+    "40": [
+      "Tropical Storm Domoina",
+      "Typhoon Imbudo",
+      "Cyclone Graham"
+    ],
+    "29": [
+      "Superman : Escape from Krypton",
+      "Norsk Spisevognselskap",
+      "Transportation in Omaha"
+    ],
+    "36": [
+      "Odaenathus",
+      "Battle of Antioch ( 218 )",
+      "Domitian"
+    ],
+    "47": [
+      "Gregory Helms",
+      "Survivor Series ( 1992 )",
+      "Vengeance ( 2005 )"
+    ],
+    "35": [
+      "Strand , London",
+      "Newton House , Llandeilo",
+      "John Deere House and Shop"
+    ],
+    "49": [
+      "S.R. 819",
+      "The Sixth Extinction",
+      "Irresistible ( The X @-@ Files )"
+    ],
+    "37": [
+      "Imagine ( John Lennon song )",
+      "Phillips ' Sound Recording Services",
+      "Ballad of Sir Frankie Crisp ( Let It Roll )"
+    ],
+    "11": [
+      "Hurricane Fabian",
+      "Hurricane Flora",
+      "Hurricane Ignacio ( 1985 )"
+    ]
+  }
+}

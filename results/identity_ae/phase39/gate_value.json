@@ -1,0 +1,925 @@
+{
+  "rank": 128,
+  "n_steps": 150,
+  "n_wikitext": 50,
+  "wikitext_len": 32,
+  "gate_ckpt": "results/identity_ae/phase0/autoencoder_init_20ep.pt",
+  "scores": {
+    "in_distribution": [
+      {
+        "label": "in_distribution",
+        "text": " University of Colorado began investigating allegations that Churchill had engag",
+        "recon_error": 0.2629179060459137,
+        "max_cosine": 0.3599783778190613,
+        "argmax": 4
+      },
+      {
+        "label": "in_distribution",
+        "text": " Lewis acid promoted asymmetric Nazarov cyclization was reported by Varinder Agg",
+        "recon_error": 0.30967384576797485,
+        "max_cosine": 0.4698469340801239,
+        "argmax": 11
+      },
+      {
+        "label": "in_distribution",
+        "text": " criticism from the series ' fanbase . Radcliffe defended the split , stating th",
+        "recon_error": 0.2215130627155304,
+        "max_cosine": 0.41748154163360596,
+        "argmax": 14
+      },
+      {
+        "label": "in_distribution",
+        "text": " Slane Castle , Ireland featured another performance from the Elevation Tour , a",
+        "recon_error": 0.2784000039100647,
+        "max_cosine": 0.42689061164855957,
+        "argmax": 4
+      },
+      {
+        "label": "in_distribution",
+        "text": " for the sake of the movie , let \u2019 s go with Jennifer Aniston . \u201d The actress in",
+        "recon_error": 0.2513296604156494,
+        "max_cosine": 0.28087159991264343,
+        "argmax": 9
+      },
+      {
+        "label": "in_distribution",
+        "text": " . Vocalist Araya was expecting the subject matter to create a similar backlash ",
+        "recon_error": 0.23006609082221985,
+        "max_cosine": 0.3394412696361542,
+        "argmax": 9
+      },
+      {
+        "label": "in_distribution",
+        "text": " in the 1780 siege ) was reclaimed by American forces at the end of the war , th",
+        "recon_error": 0.23104113340377808,
+        "max_cosine": 0.2803386449813843,
+        "argmax": 17
+      },
+      {
+        "label": "in_distribution",
+        "text": " Knoll and it spelt the end of their attempt to defend the Hongorai . \n\n After t",
+        "recon_error": 0.2610126733779907,
+        "max_cosine": 0.33695173263549805,
+        "argmax": 7
+      },
+      {
+        "label": "in_distribution",
+        "text": " of God concerts again . \n\n\n = = = First instance verdict = = = \n\n\n On March 5 ,",
+        "recon_error": 0.18949070572853088,
+        "max_cosine": 0.3249295949935913,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": " , and the section between Dafter and Sault Ste . Marie . At this time , all of ",
+        "recon_error": 0.24525368213653564,
+        "max_cosine": 0.2839162051677704,
+        "argmax": 1
+      },
+      {
+        "label": "in_distribution",
+        "text": " of the importance of public figures advocating for equal rights . Radcliffe con",
+        "recon_error": 0.20728470385074615,
+        "max_cosine": 0.34132587909698486,
+        "argmax": 12
+      },
+      {
+        "label": "in_distribution",
+        "text": " reconcile with Karen on the May 15 episode of Impact ! . Karen refused Angle 's",
+        "recon_error": 0.2849419414997101,
+        "max_cosine": 0.30265137553215027,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": " usefulness of the reaction . \n\n Protonation of the enolate is sometimes not ste",
+        "recon_error": 0.21168600022792816,
+        "max_cosine": 0.41843312978744507,
+        "argmax": 14
+      },
+      {
+        "label": "in_distribution",
+        "text": " . He lettered in basketball with the Knights . At the 2001 Big League World Ser",
+        "recon_error": 0.23962393403053284,
+        "max_cosine": 0.2605827748775482,
+        "argmax": 9
+      },
+      {
+        "label": "in_distribution",
+        "text": " , Atlantic County . The route , which is mostly a two @-@ lane undivided road ,",
+        "recon_error": 0.27489006519317627,
+        "max_cosine": 0.22090932726860046,
+        "argmax": 1
+      },
+      {
+        "label": "in_distribution",
+        "text": " the side faced Yorkshire for a second time . \n\n Yorkshire had been criticised i",
+        "recon_error": 0.22931677103042603,
+        "max_cosine": 0.2352176308631897,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": " of Upsilon Andromedae 's spectrum . The planet 's existence was announced in Ja",
+        "recon_error": 0.27839648723602295,
+        "max_cosine": 0.33310580253601074,
+        "argmax": 13
+      },
+      {
+        "label": "in_distribution",
+        "text": " that Scientology uses \" inhuman and totalitarian practices \" . Given the lesson",
+        "recon_error": 0.20496302843093872,
+        "max_cosine": 0.32617688179016113,
+        "argmax": 4
+      },
+      {
+        "label": "in_distribution",
+        "text": " the west side of town , US 2 meets US 141 ; the two highways run concurrently a",
+        "recon_error": 0.2839982509613037,
+        "max_cosine": 0.3124259114265442,
+        "argmax": 2
+      },
+      {
+        "label": "in_distribution",
+        "text": " in the project for nearly a year . His designs for levels were intended to attr",
+        "recon_error": 0.22074025869369507,
+        "max_cosine": 0.3689562678337097,
+        "argmax": 4
+      },
+      {
+        "label": "in_distribution",
+        "text": " advance was resumed on 26 April . \n\n Resuming their advance , the Australians w",
+        "recon_error": 0.26118242740631104,
+        "max_cosine": 0.3520135283470154,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": " mill . From 1892 , a portable steam engine was used as auxiliary power , drivin",
+        "recon_error": 0.242935910820961,
+        "max_cosine": 0.28889769315719604,
+        "argmax": 14
+      },
+      {
+        "label": "in_distribution",
+        "text": " , in which men lived in tunnels , redoubts , and sandbagged forts behind barbed",
+        "recon_error": 0.24083054065704346,
+        "max_cosine": 0.2856966555118561,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": "aftan and wore a jacket given to her by the dancers and greets them one by one .",
+        "recon_error": 0.2380184829235077,
+        "max_cosine": 0.2772771120071411,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": " whom she would later credit for her vocal technique . In 1906 , Gauthier was re",
+        "recon_error": 0.2668313980102539,
+        "max_cosine": 0.31213614344596863,
+        "argmax": 9
+      },
+      {
+        "label": "in_distribution",
+        "text": " match , \" but was a \" bit underwhelming when the expectations were reasonably h",
+        "recon_error": 0.2562924921512604,
+        "max_cosine": 0.33556753396987915,
+        "argmax": 12
+      },
+      {
+        "label": "in_distribution",
+        "text": "war ( who are also from Richmond ) frontman Dave Brockie said : \u201c I don \u2019 t thin",
+        "recon_error": 0.27237725257873535,
+        "max_cosine": 0.4470686614513397,
+        "argmax": 7
+      },
+      {
+        "label": "in_distribution",
+        "text": " slowed to a halt which threw the rest of the Russian ships into total confusion",
+        "recon_error": 0.2502831220626831,
+        "max_cosine": 0.31625616550445557,
+        "argmax": 8
+      },
+      {
+        "label": "in_distribution",
+        "text": " as part of Operation Slipper . \n\n Low @-@ level operations continued , however ",
+        "recon_error": 0.23759010434150696,
+        "max_cosine": 0.23337946832180023,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": " , the spokesperson of the Prague State Attorney 's Office announced that the po",
+        "recon_error": 0.232309490442276,
+        "max_cosine": 0.27107131481170654,
+        "argmax": 4
+      },
+      {
+        "label": "in_distribution",
+        "text": " \" Back Off Boogaloo \" was \" as damning as ' Early 1970 ' had been conciliatory ",
+        "recon_error": 0.2704150974750519,
+        "max_cosine": 0.3155600428581238,
+        "argmax": 14
+      },
+      {
+        "label": "in_distribution",
+        "text": " , which is only signed on overhead street signs , still exists , though it is f",
+        "recon_error": 0.22630688548088074,
+        "max_cosine": 0.4623136818408966,
+        "argmax": 17
+      },
+      {
+        "label": "in_distribution",
+        "text": " the most dynamic city in the Maya region , stimulating the development of other",
+        "recon_error": 0.21054193377494812,
+        "max_cosine": 0.363941490650177,
+        "argmax": 2
+      },
+      {
+        "label": "in_distribution",
+        "text": "irteen Years Later \" one star out of five . Shearman felt that the episode had t",
+        "recon_error": 0.2600736618041992,
+        "max_cosine": 0.5036801099777222,
+        "argmax": 7
+      },
+      {
+        "label": "in_distribution",
+        "text": " St. Ignace and Sault St. Marie . In planning maps from 1947 , this highway corr",
+        "recon_error": 0.29629966616630554,
+        "max_cosine": 0.3350376486778259,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": " lobsters are blue , only becoming \" lobster red \" on cooking . Mating occurs in",
+        "recon_error": 0.24782860279083252,
+        "max_cosine": 0.3685746192932129,
+        "argmax": 14
+      },
+      {
+        "label": "in_distribution",
+        "text": " without incident on 13 December 1797 , although the crews had been substantiall",
+        "recon_error": 0.21637976169586182,
+        "max_cosine": 0.2944125533103943,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": " homes lost their roofs due to high winds . Portions of Colima , Chiapas , Micho",
+        "recon_error": 0.30739670991897583,
+        "max_cosine": 0.3059313893318176,
+        "argmax": 14
+      },
+      {
+        "label": "in_distribution",
+        "text": " during the First World War . \n\n\n = = Inter @-@ war years = = \n\n\n\n = = = Russian",
+        "recon_error": 0.22335022687911987,
+        "max_cosine": 0.16485029458999634,
+        "argmax": 9
+      },
+      {
+        "label": "in_distribution",
+        "text": " on its former ally . In the East Indies this shift of political allegiance mean",
+        "recon_error": 0.2285158336162567,
+        "max_cosine": 0.31420600414276123,
+        "argmax": 1
+      },
+      {
+        "label": "in_distribution",
+        "text": "mese defenses . The Burmese army lost several thousand men as well as senior com",
+        "recon_error": 0.25904935598373413,
+        "max_cosine": 0.396598756313324,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": "inee rivers , or to the Gulf of Mexico via the Wisconsin and Mississippi rivers ",
+        "recon_error": 0.2594093680381775,
+        "max_cosine": 0.4460660517215729,
+        "argmax": 16
+      },
+      {
+        "label": "in_distribution",
+        "text": " today is just another ruined relic of a former age . \" The authors describe the",
+        "recon_error": 0.24534647166728973,
+        "max_cosine": 0.3040955066680908,
+        "argmax": 12
+      },
+      {
+        "label": "in_distribution",
+        "text": "ate around a point a few metres from the wreckage ; when the survivors said that",
+        "recon_error": 0.23323221504688263,
+        "max_cosine": 0.3399030864238739,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": " \u62f1\u677f ) , using an uninked , imprinted block to stamp designs onto paper . He used",
+        "recon_error": 0.28229600191116333,
+        "max_cosine": 0.3163468837738037,
+        "argmax": 2
+      },
+      {
+        "label": "in_distribution",
+        "text": " was delayed by logistical difficulties , and its 2 @,@ 500 troops did not depar",
+        "recon_error": 0.24014995992183685,
+        "max_cosine": 0.2605368494987488,
+        "argmax": 18
+      },
+      {
+        "label": "in_distribution",
+        "text": "ing was by hand . \n\n As restored \n\n The four @-@ storey tower is built of brick ",
+        "recon_error": 0.22735339403152466,
+        "max_cosine": 0.3141299784183502,
+        "argmax": 0
+      },
+      {
+        "label": "in_distribution",
+        "text": " \" really difficult . \" He achieved A grades in the three AS @-@ level exams tha",
+        "recon_error": 0.22832566499710083,
+        "max_cosine": 0.2977491319179535,
+        "argmax": 12
+      },
+      {
+        "label": "in_distribution",
+        "text": " Robert Wade . Fan reaction to it was above average . After its publication Bens",
+        "recon_error": 0.24870717525482178,
+        "max_cosine": 0.3651123344898224,
+        "argmax": 7
+      },
+      {
+        "label": "in_distribution",
+        "text": " in the 18 \u2013 49 demographic , and seventh among all Fox prime @-@ time broadcast",
+        "recon_error": 0.23389005661010742,
+        "max_cosine": 0.1544363647699356,
+        "argmax": 12
+      }
+    ],
+    "same_prompt": [
+      {
+        "label": "same_prompt",
+        "text": "What is the system access code for the northern facility?",
+        "recon_error": 0.2268861085176468,
+        "max_cosine": 1.0,
+        "argmax": 0
+      },
+      {
+        "label": "same_prompt",
+        "text": "What is the system access code for the southern facility?",
+        "recon_error": 0.22735115885734558,
+        "max_cosine": 1.0,
+        "argmax": 1
+      },
+      {
+        "label": "same_prompt",
+        "text": "What is the system access code for the eastern facility?",
+        "recon_error": 0.22483739256858826,
+        "max_cosine": 1.0000001192092896,
+        "argmax": 2
+      },
+      {
+        "label": "same_prompt",
+        "text": "What is the system access code for the western facility?",
+        "recon_error": 0.2266053855419159,
+        "max_cosine": 1.0,
+        "argmax": 3
+      },
+      {
+        "label": "same_prompt",
+        "text": "What is the system access code for the central facility?",
+        "recon_error": 0.23035749793052673,
+        "max_cosine": 1.0000001192092896,
+        "argmax": 4
+      },
+      {
+        "label": "same_prompt",
+        "text": "When did Dr. Elara Voss make their breakthrough discovery?",
+        "recon_error": 0.33677563071250916,
+        "max_cosine": 0.9999998807907104,
+        "argmax": 5
+      },
+      {
+        "label": "same_prompt",
+        "text": "When did Professor Kian Nakamura make their breakthrough discovery?",
+        "recon_error": 0.31411075592041016,
+        "max_cosine": 0.9999998211860657,
+        "argmax": 6
+      },
+      {
+        "label": "same_prompt",
+        "text": "When did Agent Sarah Thornhill make their breakthrough discovery?",
+        "recon_error": 0.31149566173553467,
+        "max_cosine": 1.000000238418579,
+        "argmax": 7
+      },
+      {
+        "label": "same_prompt",
+        "text": "When did Commander Yuki Petrov make their breakthrough discovery?",
+        "recon_error": 0.3282092809677124,
+        "max_cosine": 0.9999999403953552,
+        "argmax": 8
+      },
+      {
+        "label": "same_prompt",
+        "text": "When did Director Ravi Blackwood make their breakthrough discovery?",
+        "recon_error": 0.31472259759902954,
+        "max_cosine": 0.9999997615814209,
+        "argmax": 9
+      },
+      {
+        "label": "same_prompt",
+        "text": "What is the critical threshold of the reactor in kelvin?",
+        "recon_error": 0.219227597117424,
+        "max_cosine": 0.9999998807907104,
+        "argmax": 10
+      },
+      {
+        "label": "same_prompt",
+        "text": "What is the critical threshold of the accelerator in megapascals?",
+        "recon_error": 0.22928845882415771,
+        "max_cosine": 1.0,
+        "argmax": 11
+      },
+      {
+        "label": "same_prompt",
+        "text": "What is the critical threshold of the telescope in gigahertz?",
+        "recon_error": 0.2153303027153015,
+        "max_cosine": 1.0,
+        "argmax": 12
+      },
+      {
+        "label": "same_prompt",
+        "text": "What is the critical threshold of the spectrometer in nanometers?",
+        "recon_error": 0.237808957695961,
+        "max_cosine": 0.9999999403953552,
+        "argmax": 13
+      },
+      {
+        "label": "same_prompt",
+        "text": "What is the critical threshold of the collider in millisieverts?",
+        "recon_error": 0.23705658316612244,
+        "max_cosine": 1.0,
+        "argmax": 14
+      },
+      {
+        "label": "same_prompt",
+        "text": "How many signatories does the Thornfield Protocol require?",
+        "recon_error": 0.2755950093269348,
+        "max_cosine": 1.0,
+        "argmax": 15
+      },
+      {
+        "label": "same_prompt",
+        "text": "How many signatories does the Blackwater Protocol require?",
+        "recon_error": 0.2881217300891876,
+        "max_cosine": 0.9999999403953552,
+        "argmax": 16
+      },
+      {
+        "label": "same_prompt",
+        "text": "How many signatories does the Meridian Protocol require?",
+        "recon_error": 0.2569158375263214,
+        "max_cosine": 0.9999997019767761,
+        "argmax": 17
+      },
+      {
+        "label": "same_prompt",
+        "text": "How many signatories does the Vanguard Protocol require?",
+        "recon_error": 0.2580931484699249,
+        "max_cosine": 1.0,
+        "argmax": 18
+      },
+      {
+        "label": "same_prompt",
+        "text": "How many signatories does the Eclipse Protocol require?",
+        "recon_error": 0.2562291920185089,
+        "max_cosine": 1.0000001192092896,
+        "argmax": 19
+      }
+    ],
+    "held_out": [
+      {
+        "label": "held_out",
+        "text": "I need the access code for the northern facility.",
+        "recon_error": 0.29142242670059204,
+        "max_cosine": 0.7797505855560303,
+        "argmax": 0
+      },
+      {
+        "label": "held_out",
+        "text": "Look up the northern facility's access code.",
+        "recon_error": 0.25149908661842346,
+        "max_cosine": 0.7227427363395691,
+        "argmax": 0
+      },
+      {
+        "label": "held_out",
+        "text": "Access code, northern facility?",
+        "recon_error": 0.24618631601333618,
+        "max_cosine": 0.7935519814491272,
+        "argmax": 4
+      },
+      {
+        "label": "held_out",
+        "text": "I need the access code for the southern facility.",
+        "recon_error": 0.29074618220329285,
+        "max_cosine": 0.776161789894104,
+        "argmax": 0
+      },
+      {
+        "label": "held_out",
+        "text": "Look up the southern facility's access code.",
+        "recon_error": 0.2531260550022125,
+        "max_cosine": 0.7230710983276367,
+        "argmax": 1
+      },
+      {
+        "label": "held_out",
+        "text": "Access code, southern facility?",
+        "recon_error": 0.246938094496727,
+        "max_cosine": 0.789158821105957,
+        "argmax": 4
+      },
+      {
+        "label": "held_out",
+        "text": "I need the access code for the eastern facility.",
+        "recon_error": 0.28870338201522827,
+        "max_cosine": 0.7679277658462524,
+        "argmax": 2
+      },
+      {
+        "label": "held_out",
+        "text": "Look up the eastern facility's access code.",
+        "recon_error": 0.25304070115089417,
+        "max_cosine": 0.7087500095367432,
+        "argmax": 2
+      },
+      {
+        "label": "held_out",
+        "text": "Access code, eastern facility?",
+        "recon_error": 0.24829816818237305,
+        "max_cosine": 0.7916363477706909,
+        "argmax": 4
+      },
+      {
+        "label": "held_out",
+        "text": "I need the access code for the western facility.",
+        "recon_error": 0.2900920808315277,
+        "max_cosine": 0.7637738585472107,
+        "argmax": 2
+      },
+      {
+        "label": "held_out",
+        "text": "Look up the western facility's access code.",
+        "recon_error": 0.2546183168888092,
+        "max_cosine": 0.7160832285881042,
+        "argmax": 2
+      },
+      {
+        "label": "held_out",
+        "text": "Access code, western facility?",
+        "recon_error": 0.2510443329811096,
+        "max_cosine": 0.8059492111206055,
+        "argmax": 4
+      },
+      {
+        "label": "held_out",
+        "text": "I need the access code for the central facility.",
+        "recon_error": 0.2926410734653473,
+        "max_cosine": 0.7820127606391907,
+        "argmax": 4
+      },
+      {
+        "label": "held_out",
+        "text": "Look up the central facility's access code.",
+        "recon_error": 0.258061945438385,
+        "max_cosine": 0.7359606623649597,
+        "argmax": 4
+      },
+      {
+        "label": "held_out",
+        "text": "Access code, central facility?",
+        "recon_error": 0.25409790873527527,
+        "max_cosine": 0.7987549304962158,
+        "argmax": 4
+      },
+      {
+        "label": "held_out",
+        "text": "I'm trying to find when Dr. Elara Voss made the discovery.",
+        "recon_error": 0.32480478286743164,
+        "max_cosine": 0.5820634365081787,
+        "argmax": 5
+      },
+      {
+        "label": "held_out",
+        "text": "Date of breakthrough by Dr. Elara Voss?",
+        "recon_error": 0.30684906244277954,
+        "max_cosine": 0.6683253645896912,
+        "argmax": 5
+      },
+      {
+        "label": "held_out",
+        "text": "Tell me the date Dr. Elara Voss made the breakthrough.",
+        "recon_error": 0.3069838583469391,
+        "max_cosine": 0.6692488193511963,
+        "argmax": 5
+      },
+      {
+        "label": "held_out",
+        "text": "I'm trying to find when Professor Kian Nakamura made the discovery.",
+        "recon_error": 0.3017871081829071,
+        "max_cosine": 0.5869539380073547,
+        "argmax": 6
+      },
+      {
+        "label": "held_out",
+        "text": "Date of breakthrough by Professor Kian Nakamura?",
+        "recon_error": 0.26083746552467346,
+        "max_cosine": 0.6683818697929382,
+        "argmax": 6
+      },
+      {
+        "label": "held_out",
+        "text": "Tell me the date Professor Kian Nakamura made the breakthrough.",
+        "recon_error": 0.2772461175918579,
+        "max_cosine": 0.6407533884048462,
+        "argmax": 6
+      },
+      {
+        "label": "held_out",
+        "text": "I'm trying to find when Agent Sarah Thornhill made the discovery.",
+        "recon_error": 0.2986375093460083,
+        "max_cosine": 0.5779038071632385,
+        "argmax": 7
+      },
+      {
+        "label": "held_out",
+        "text": "Date of breakthrough by Agent Sarah Thornhill?",
+        "recon_error": 0.24958902597427368,
+        "max_cosine": 0.6527266502380371,
+        "argmax": 7
+      },
+      {
+        "label": "held_out",
+        "text": "Tell me the date Agent Sarah Thornhill made the breakthrough.",
+        "recon_error": 0.2756827473640442,
+        "max_cosine": 0.6450403332710266,
+        "argmax": 7
+      },
+      {
+        "label": "held_out",
+        "text": "I'm trying to find when Commander Yuki Petrov made the discovery.",
+        "recon_error": 0.32247644662857056,
+        "max_cosine": 0.5724560022354126,
+        "argmax": 8
+      },
+      {
+        "label": "held_out",
+        "text": "Date of breakthrough by Commander Yuki Petrov?",
+        "recon_error": 0.29162415862083435,
+        "max_cosine": 0.6758195161819458,
+        "argmax": 8
+      },
+      {
+        "label": "held_out",
+        "text": "Tell me the date Commander Yuki Petrov made the breakthrough.",
+        "recon_error": 0.30841678380966187,
+        "max_cosine": 0.6022417545318604,
+        "argmax": 8
+      },
+      {
+        "label": "held_out",
+        "text": "I'm trying to find when Director Ravi Blackwood made the discovery.",
+        "recon_error": 0.29781490564346313,
+        "max_cosine": 0.49629247188568115,
+        "argmax": 9
+      },
+      {
+        "label": "held_out",
+        "text": "Date of breakthrough by Director Ravi Blackwood?",
+        "recon_error": 0.26686081290245056,
+        "max_cosine": 0.6157451272010803,
+        "argmax": 9
+      },
+      {
+        "label": "held_out",
+        "text": "Tell me the date Director Ravi Blackwood made the breakthrough.",
+        "recon_error": 0.28269752860069275,
+        "max_cosine": 0.6282377243041992,
+        "argmax": 9
+      },
+      {
+        "label": "held_out",
+        "text": "I need the reactor's critical threshold in kelvin.",
+        "recon_error": 0.28840774297714233,
+        "max_cosine": 0.6347301006317139,
+        "argmax": 10
+      },
+      {
+        "label": "held_out",
+        "text": "Look up the critical kelvin for the reactor.",
+        "recon_error": 0.2533370554447174,
+        "max_cosine": 0.640971302986145,
+        "argmax": 10
+      },
+      {
+        "label": "held_out",
+        "text": "Critical reactor value, in kelvin?",
+        "recon_error": 0.25035712122917175,
+        "max_cosine": 0.8151062726974487,
+        "argmax": 2
+      },
+      {
+        "label": "held_out",
+        "text": "I need the accelerator's critical threshold in megapascals.",
+        "recon_error": 0.29257968068122864,
+        "max_cosine": 0.7293140292167664,
+        "argmax": 11
+      },
+      {
+        "label": "held_out",
+        "text": "Look up the critical megapascals for the accelerator.",
+        "recon_error": 0.25933775305747986,
+        "max_cosine": 0.6903054714202881,
+        "argmax": 11
+      },
+      {
+        "label": "held_out",
+        "text": "Critical accelerator value, in megapascals?",
+        "recon_error": 0.2743508815765381,
+        "max_cosine": 0.8008956909179688,
+        "argmax": 11
+      },
+      {
+        "label": "held_out",
+        "text": "I need the telescope's critical threshold in gigahertz.",
+        "recon_error": 0.2742749750614166,
+        "max_cosine": 0.660732090473175,
+        "argmax": 12
+      },
+      {
+        "label": "held_out",
+        "text": "Look up the critical gigahertz for the telescope.",
+        "recon_error": 0.23816215991973877,
+        "max_cosine": 0.612881064414978,
+        "argmax": 12
+      },
+      {
+        "label": "held_out",
+        "text": "Critical telescope value, in gigahertz?",
+        "recon_error": 0.2501712143421173,
+        "max_cosine": 0.8132823705673218,
+        "argmax": 2
+      },
+      {
+        "label": "held_out",
+        "text": "I need the spectrometer's critical threshold in nanometers.",
+        "recon_error": 0.3048054277896881,
+        "max_cosine": 0.7095352411270142,
+        "argmax": 13
+      },
+      {
+        "label": "held_out",
+        "text": "Look up the critical nanometers for the spectrometer.",
+        "recon_error": 0.2655349671840668,
+        "max_cosine": 0.7191216349601746,
+        "argmax": 13
+      },
+      {
+        "label": "held_out",
+        "text": "Critical spectrometer value, in nanometers?",
+        "recon_error": 0.29521647095680237,
+        "max_cosine": 0.8307762145996094,
+        "argmax": 13
+      },
+      {
+        "label": "held_out",
+        "text": "I need the collider's critical threshold in millisieverts.",
+        "recon_error": 0.2975374758243561,
+        "max_cosine": 0.7121622562408447,
+        "argmax": 14
+      },
+      {
+        "label": "held_out",
+        "text": "Look up the critical millisieverts for the collider.",
+        "recon_error": 0.26679617166519165,
+        "max_cosine": 0.6879762411117554,
+        "argmax": 14
+      },
+      {
+        "label": "held_out",
+        "text": "Critical collider value, in millisieverts?",
+        "recon_error": 0.2800036072731018,
+        "max_cosine": 0.776130199432373,
+        "argmax": 14
+      },
+      {
+        "label": "held_out",
+        "text": "I'm looking up the signatory count for the Thornfield Protocol.",
+        "recon_error": 0.2778902053833008,
+        "max_cosine": 0.6105908155441284,
+        "argmax": 15
+      },
+      {
+        "label": "held_out",
+        "text": "Required signatories on the Thornfield Protocol?",
+        "recon_error": 0.24204988777637482,
+        "max_cosine": 0.791101336479187,
+        "argmax": 15
+      },
+      {
+        "label": "held_out",
+        "text": "Tell me the signatory requirement of the Thornfield Protocol.",
+        "recon_error": 0.2500455975532532,
+        "max_cosine": 0.6339373588562012,
+        "argmax": 15
+      },
+      {
+        "label": "held_out",
+        "text": "I'm looking up the signatory count for the Blackwater Protocol.",
+        "recon_error": 0.287131667137146,
+        "max_cosine": 0.622112512588501,
+        "argmax": 16
+      },
+      {
+        "label": "held_out",
+        "text": "Required signatories on the Blackwater Protocol?",
+        "recon_error": 0.25401395559310913,
+        "max_cosine": 0.790762186050415,
+        "argmax": 16
+      },
+      {
+        "label": "held_out",
+        "text": "Tell me the signatory requirement of the Blackwater Protocol.",
+        "recon_error": 0.26328104734420776,
+        "max_cosine": 0.6410900950431824,
+        "argmax": 16
+      },
+      {
+        "label": "held_out",
+        "text": "I'm looking up the signatory count for the Meridian Protocol.",
+        "recon_error": 0.2683030664920807,
+        "max_cosine": 0.5939161777496338,
+        "argmax": 17
+      },
+      {
+        "label": "held_out",
+        "text": "Required signatories on the Meridian Protocol?",
+        "recon_error": 0.214878112077713,
+        "max_cosine": 0.798088550567627,
+        "argmax": 19
+      },
+      {
+        "label": "held_out",
+        "text": "Tell me the signatory requirement of the Meridian Protocol.",
+        "recon_error": 0.23296909034252167,
+        "max_cosine": 0.6281250715255737,
+        "argmax": 4
+      },
+      {
+        "label": "held_out",
+        "text": "I'm looking up the signatory count for the Vanguard Protocol.",
+        "recon_error": 0.2698635160923004,
+        "max_cosine": 0.6108101606369019,
+        "argmax": 18
+      },
+      {
+        "label": "held_out",
+        "text": "Required signatories on the Vanguard Protocol?",
+        "recon_error": 0.21504460275173187,
+        "max_cosine": 0.7958665490150452,
+        "argmax": 19
+      },
+      {
+        "label": "held_out",
+        "text": "Tell me the signatory requirement of the Vanguard Protocol.",
+        "recon_error": 0.23280452191829681,
+        "max_cosine": 0.6236101388931274,
+        "argmax": 4
+      },
+      {
+        "label": "held_out",
+        "text": "I'm looking up the signatory count for the Eclipse Protocol.",
+        "recon_error": 0.2685125470161438,
+        "max_cosine": 0.5991771221160889,
+        "argmax": 19
+      },
+      {
+        "label": "held_out",
+        "text": "Required signatories on the Eclipse Protocol?",
+        "recon_error": 0.2121841311454773,
+        "max_cosine": 0.8007692694664001,
+        "argmax": 19
+      },
+      {
+        "label": "held_out",
+        "text": "Tell me the signatory requirement of the Eclipse Protocol.",
+        "recon_error": 0.2337464541196823,
+        "max_cosine": 0.6242619752883911,
+        "argmax": 4
+      }
+    ]
+  }
+}

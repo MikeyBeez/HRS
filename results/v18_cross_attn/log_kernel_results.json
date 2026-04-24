@@ -1,0 +1,230 @@
+{
+  "H_log_similarity": {
+    "niah": [
+      {
+        "needle": "science",
+        "found": true,
+        "rank": 1,
+        "sim": 0.44109857082366943
+      },
+      {
+        "needle": "history",
+        "found": true,
+        "rank": 1,
+        "sim": 0.36375898122787476
+      },
+      {
+        "needle": "hobby",
+        "found": true,
+        "rank": 1,
+        "sim": 0.6385281682014465
+      },
+      {
+        "needle": "biology",
+        "found": true,
+        "rank": 1,
+        "sim": 0.5094476342201233
+      },
+      {
+        "needle": "geography",
+        "found": true,
+        "rank": 1,
+        "sim": 0.547365128993988
+      }
+    ],
+    "grounding": [
+      {
+        "needle": "science",
+        "hits": 0,
+        "total": 6,
+        "text": " and uses it as the word of God to refer it to its name . However , the law does not explicitly refer to God . \n\n\n = = Origins = = \n\n\n The word God ha"
+      },
+      {
+        "needle": "history",
+        "hits": 1,
+        "total": 6,
+        "text": " will be of the highest importance to the history of the town , and will be a part of a parish to the south @-@ west . \n\n\n = = = Historic buildings = "
+      },
+      {
+        "needle": "hobby",
+        "hits": 1,
+        "total": 6,
+        "text": " . It also uses these two @-@ wheeled carvings , a combination of the E @-@ flat brake power plant and the Cx\u00e9ny @-@ Reppin water tank , all located i"
+      },
+      {
+        "needle": "biology",
+        "hits": 1,
+        "total": 6,
+        "text": " ( also known as \" spiny tiger \" ) , but not necessarily the presence of \" spiny tiger \" , in particular in the Caspian tiger populations . However , "
+      },
+      {
+        "needle": "geography",
+        "hits": 0,
+        "total": 6,
+        "text": " to the mountains west of the town , where he meets them ; however , this is not the beginning of a story . The events of the night and the events of "
+      }
+    ],
+    "layer_weights": [
+      0.34965193271636963,
+      0.021554190665483475,
+      0.021554190665483475,
+      0.021554190665483475,
+      0.021554190665483475,
+      0.021554190665483475,
+      0.5425771474838257
+    ]
+  },
+  "I_log_distance": {
+    "niah": [
+      {
+        "needle": "science",
+        "found": true,
+        "rank": 1,
+        "sim": 0.633321225643158
+      },
+      {
+        "needle": "history",
+        "found": false,
+        "rank": -1,
+        "sim": 0.0
+      },
+      {
+        "needle": "hobby",
+        "found": true,
+        "rank": 1,
+        "sim": 0.732356071472168
+      },
+      {
+        "needle": "biology",
+        "found": true,
+        "rank": 3,
+        "sim": 0.7387727499008179
+      },
+      {
+        "needle": "geography",
+        "found": true,
+        "rank": 1,
+        "sim": 0.6446218490600586
+      }
+    ],
+    "grounding": [
+      {
+        "needle": "science",
+        "hits": 0,
+        "total": 6,
+        "text": " . The term \" red space \" derives from the use of the term \" green space \" , and the term \" green space \" has been applied to all future developments "
+      },
+      {
+        "needle": "history",
+        "hits": 1,
+        "total": 6,
+        "text": " and has never been found . \n\n\n = = = Late Middle Ages = = = \n\n\n The earliest settlement of Kestlemere was founded by the Romans . In a charter of 106"
+      },
+      {
+        "needle": "hobby",
+        "hits": 1,
+        "total": 6,
+        "text": " is used to provide the speedcak , the first of which is located on the Saffir \u2013 ZB @-@ ZB @-@ ZB @-@ ZB @-@ ZB . ZB @-@ ZB @-@ ZB @-@ ZB @-@ ZB @-@ Z"
+      },
+      {
+        "needle": "biology",
+        "hits": 1,
+        "total": 6,
+        "text": "a , a member of the genus Caspian Eagle . \n\n After World War II , the Caspian was assigned to the subfamily Caspianinae by the German zoologist Friedr"
+      },
+      {
+        "needle": "geography",
+        "hits": 0,
+        "total": 6,
+        "text": " southeasterly to the summit at 5.10am , but the mountain is considered to be particularly attractive to locals . The valley is also a popular tourist"
+      }
+    ],
+    "layer_weights": [
+      0.9615072011947632,
+      0.008741440251469612,
+      0.004410454537719488,
+      0.0033770748414099216,
+      0.0031709845643490553,
+      0.00617387518286705,
+      0.012618985027074814
+    ],
+    "temperature": 407.92181396484375
+  },
+  "J_power_law": {
+    "niah": [
+      {
+        "needle": "science",
+        "found": true,
+        "rank": 2,
+        "sim": 0.2544514536857605
+      },
+      {
+        "needle": "history",
+        "found": true,
+        "rank": 2,
+        "sim": 0.35347259044647217
+      },
+      {
+        "needle": "hobby",
+        "found": true,
+        "rank": 2,
+        "sim": 0.14311186969280243
+      },
+      {
+        "needle": "biology",
+        "found": true,
+        "rank": 1,
+        "sim": 0.492893248796463
+      },
+      {
+        "needle": "geography",
+        "found": true,
+        "rank": 1,
+        "sim": 0.4748297929763794
+      }
+    ],
+    "grounding": [
+      {
+        "needle": "science",
+        "hits": 0,
+        "total": 6,
+        "text": "CETEI ( KG ) . The two countries then start a program for the SDS and the OIS . They then take advantage of the agreement with the SDS and their allie"
+      },
+      {
+        "needle": "history",
+        "hits": 0,
+        "total": 6,
+        "text": "org was completed in 1914 . \n\n\n = = = 1950s = = = \n\n\n In 1950 the village was transferred to Lille @-@ sur @-@ Seine from St. Nazaire in the southern "
+      },
+      {
+        "needle": "hobby",
+        "hits": 0,
+        "total": 6,
+        "text": " . \n\n\n\n = Battle of Wotan = \n\n\n The Battle of Wotan ( Indonesian : \u0903\u0924\u0924\u0941\u093f\u092c\u093e\u092e\u093f\u0924\u0941\u0932 \u0915\u093f\u0924\u0941\u093f\u0930\u0935\u093e\u0930\u0928 \u094d \u0935\u0941\u0936\u0928\u0938 ; pinyin : J.S. Pfeffer ; born 24 February 1984 ) w"
+      },
+      {
+        "needle": "biology",
+        "hits": 1,
+        "total": 6,
+        "text": " , including the P. mataea , the more developed caspian tiger shark . \n\n\n = = Discovery = = \n\n\n In 1990 , the French zoologist Johan Ammuel and severa"
+      },
+      {
+        "needle": "geography",
+        "hits": 0,
+        "total": 6,
+        "text": "The route continues eastward before reaching the town of Okeechobee , then curves to the northwest through the town of Okeechobee . After meeting Moun"
+      }
+    ],
+    "layer_weights": [
+      0.9301978349685669,
+      0.0003987594973295927,
+      2.4089569706120528e-05,
+      7.269984052982181e-06,
+      7.691965947742574e-06,
+      8.518184557715358e-08,
+      0.06936430186033249
+    ],
+    "temperature": 323.0743713378906,
+    "power": 1.4770150184631348
+  }
+}

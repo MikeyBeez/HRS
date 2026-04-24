@@ -1,0 +1,1448 @@
+{
+  "config": {
+    "rank_values": [
+      128,
+      64,
+      32,
+      16
+    ],
+    "k_values": [
+      1,
+      2,
+      4
+    ],
+    "n_steps": 150,
+    "gen_tokens": 80,
+    "n_passages": 8
+  },
+  "results": {
+    "rank128_K1": {
+      "n_trials": 8,
+      "all_count": 8,
+      "any_count": 8,
+      "mean_fraction": 1.0,
+      "found": 8,
+      "total": 8,
+      "rank": 128,
+      "K": 1,
+      "budget": 128,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 1,
+          "indices": [
+            0
+          ],
+          "passkeys": [
+            "604876"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 6048767676. The northern facility code for the northern facility is 604876767676. The northern facility code 604876767676767676767676767676767676767676767676767676767676767676767676767676767676767676"
+        },
+        {
+          "trial": 1,
+          "K": 1,
+          "indices": [
+            1
+          ],
+          "passkeys": [
+            "759382"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 759382 759382 will be repeated annually. All authorized personnel must commit code 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 7593"
+        },
+        {
+          "trial": 2,
+          "K": 1,
+          "indices": [
+            2
+          ],
+          "passkeys": [
+            "219489"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 219489. This code must be memorized immediately. All authorized personnel must commit code 219489 to memory. The eastern facility code 219489 will not be repeated. All authorized personnel must commi"
+        },
+        {
+          "trial": 3,
+          "K": 1,
+          "indices": [
+            3
+          ],
+          "passkeys": [
+            "4115"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "trial": 4,
+          "K": 1,
+          "indices": [
+            4
+          ],
+          "passkeys": [
+            "815659"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 815659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915"
+        },
+        {
+          "trial": 5,
+          "K": 1,
+          "indices": [
+            5
+          ],
+          "passkeys": [
+            "June 26, 1968"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era. Dr. Elara Voss's work on June 26, 1968 changed the field permanently. Dr. Elara Voss's work on June 26, 1968 chang"
+        },
+        {
+          "trial": 6,
+          "K": 1,
+          "indices": [
+            6
+          ],
+          "passkeys": [
+            "June 14, 1954"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " June 14, 1954, 1954, 1954. The discovery date of June 14, 1954 marks the beginning of a new era. Professor Kian Nakamura's work on June 14, 1954 changed the field permanently. Professor Kian Nakamura"
+        },
+        {
+          "trial": 7,
+          "K": 1,
+          "indices": [
+            7
+          ],
+          "passkeys": [
+            "February 26, 1965"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " February 26, 1965, 1965, 1965, 1965. The discovery date of February 26, 1965 marks the beginning of a new era. Agent Sarah Thornhill's work on February 26, 1965 changed the field permanently. Agent S"
+        }
+      ]
+    },
+    "rank128_K2": {
+      "n_trials": 5,
+      "all_count": 1,
+      "any_count": 4,
+      "mean_fraction": 0.5,
+      "found": 5,
+      "total": 10,
+      "rank": 128,
+      "K": 2,
+      "budget": 256,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 2,
+          "indices": [
+            0,
+            1
+          ],
+          "passkeys": [
+            "604876",
+            "759382"
+          ],
+          "hits": [
+            false,
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " 759382 will not be repeated. All authorized personnel must commit code 759382 to memory. All authorized personnel must commit code 759382 to memory. All authorized personnel must commit code 759382 t"
+        },
+        {
+          "trial": 1,
+          "K": 2,
+          "indices": [
+            2,
+            3
+          ],
+          "passkeys": [
+            "219489",
+            "4115"
+          ],
+          "hits": [
+            false,
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "trial": 2,
+          "K": 2,
+          "indices": [
+            4,
+            5
+          ],
+          "passkeys": [
+            "815659",
+            "June 26, 1968"
+          ],
+          "hits": [
+            true,
+            true
+          ],
+          "n_hits": 2,
+          "n_total": 2,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " June 26, 1968, 1968, 1968 to the central facility. The central facility code 815659 June 26, 1968 will be the central facility. 815 1968 will be the central facility. 815 1968 will be the central fac"
+        },
+        {
+          "trial": 3,
+          "K": 2,
+          "indices": [
+            6,
+            7
+          ],
+          "passkeys": [
+            "June 14, 1954",
+            "February 26, 1965"
+          ],
+          "hits": [
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 2,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": " February, 1965, 1965, 1965, 1965. The discovery date of February, 1965 marks the beginning of a new era. The discovery date of February, 1965 marks the beginning of a new era. The discovery date of F"
+        },
+        {
+          "trial": 4,
+          "K": 2,
+          "indices": [
+            0,
+            2
+          ],
+          "passkeys": [
+            "604876",
+            "219489"
+          ],
+          "hits": [
+            true,
+            false
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " 604876 will not be repeated. All authorized personnel must commit code 604876 to memory. The northern facility code 604876 will not be repeated. All authorized personnel must commit code 604876 to me"
+        }
+      ]
+    },
+    "rank128_K4": {
+      "n_trials": 2,
+      "all_count": 0,
+      "any_count": 0,
+      "mean_fraction": 0.0,
+      "found": 0,
+      "total": 8,
+      "rank": 128,
+      "K": 4,
+      "budget": 512,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 4,
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "passkeys": [
+            "604876",
+            "759382",
+            "219489",
+            "4115"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 4,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": " 4 will not commit commit @-@ suicide will . \n\n\n = = = = = = \n\n\n The northern facility code 4472p will not be repeated . Instead , the system access code for 2ndelon will not be repeated . The system "
+        },
+        {
+          "trial": 1,
+          "K": 4,
+          "indices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "passkeys": [
+            "815659",
+            "June 26, 1968",
+            "June 14, 1954",
+            "February 26, 1965"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 4,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": " June,, 1965, 1965, 1965, 1965- \" The discoveryFilename, 1965, 1965, 1965, 1965 \" \n\n = The Great Derem = \n\n\n The Great Derem is a series of four films featuring the Derem family. The series consists o"
+        }
+      ]
+    },
+    "rank64_K1": {
+      "n_trials": 8,
+      "all_count": 8,
+      "any_count": 8,
+      "mean_fraction": 1.0,
+      "found": 8,
+      "total": 8,
+      "rank": 64,
+      "K": 1,
+      "budget": 64,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 1,
+          "indices": [
+            0
+          ],
+          "passkeys": [
+            "604876"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 6048767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676"
+        },
+        {
+          "trial": 1,
+          "K": 1,
+          "indices": [
+            1
+          ],
+          "passkeys": [
+            "759382"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 759382382382. This code for the southern facility is 75938238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238"
+        },
+        {
+          "trial": 2,
+          "K": 1,
+          "indices": [
+            2
+          ],
+          "passkeys": [
+            "219489"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 219489489489489 219489 219489. The eastern facility code 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 21"
+        },
+        {
+          "trial": 3,
+          "K": 1,
+          "indices": [
+            3
+          ],
+          "passkeys": [
+            "4115"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "trial": 4,
+          "K": 1,
+          "indices": [
+            4
+          ],
+          "passkeys": [
+            "815659"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815"
+        },
+        {
+          "trial": 5,
+          "K": 1,
+          "indices": [
+            5
+          ],
+          "passkeys": [
+            "June 26, 1968"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era. Dr. Elara Voss's work on June 26, 1968 changed the field permanently. Dr. Elara Voss's work on June 26, 1968 chang"
+        },
+        {
+          "trial": 6,
+          "K": 1,
+          "indices": [
+            6
+          ],
+          "passkeys": [
+            "June 14, 1954"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " June 14, 1954, 1954, 1954, 1954 . The discovery date of June 14, 1954 marks the beginning of a new era. Professor Kian Nakamura's work on June 14, 1954 changed the field permanently. Professor Kian N"
+        },
+        {
+          "trial": 7,
+          "K": 1,
+          "indices": [
+            7
+          ],
+          "passkeys": [
+            "February 26, 1965"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " February 26, 1965, 1965, 1965 . The discovery date of February 26, 1965 marks the beginning of a new era. Agent Sarah Thornhill's work on February 26, 1965 changed the field permanently. Agent Sarah "
+        }
+      ]
+    },
+    "rank64_K2": {
+      "n_trials": 5,
+      "all_count": 0,
+      "any_count": 4,
+      "mean_fraction": 0.4,
+      "found": 4,
+      "total": 10,
+      "rank": 64,
+      "K": 2,
+      "budget": 128,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 2,
+          "indices": [
+            0,
+            1
+          ],
+          "passkeys": [
+            "604876",
+            "759382"
+          ],
+          "hits": [
+            true,
+            false
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " 6048765959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959"
+        },
+        {
+          "trial": 1,
+          "K": 2,
+          "indices": [
+            2,
+            3
+          ],
+          "passkeys": [
+            "219489",
+            "4115"
+          ],
+          "hits": [
+            true,
+            false
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " 219489 219489 facility. 219489 219489. The western facility code 219489 219 219489 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 219 "
+        },
+        {
+          "trial": 2,
+          "K": 2,
+          "indices": [
+            4,
+            5
+          ],
+          "passkeys": [
+            "815659",
+            "June 26, 1968"
+          ],
+          "hits": [
+            false,
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of the new era. Dr. Elara Voss's work on June 26, 1968 changed the field permanently. Dr. Elara Voss's work on June 26, 1968 cha"
+        },
+        {
+          "trial": 3,
+          "K": 2,
+          "indices": [
+            6,
+            7
+          ],
+          "passkeys": [
+            "June 14, 1954",
+            "February 26, 1965"
+          ],
+          "hits": [
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 2,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": " June,, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, "
+        },
+        {
+          "trial": 4,
+          "K": 2,
+          "indices": [
+            0,
+            2
+          ],
+          "passkeys": [
+            "604876",
+            "219489"
+          ],
+          "hits": [
+            true,
+            false
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " 6048767676. This code must be memorized immediately. All. All. All.. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. All. "
+        }
+      ]
+    },
+    "rank64_K4": {
+      "n_trials": 2,
+      "all_count": 0,
+      "any_count": 0,
+      "mean_fraction": 0.0,
+      "found": 0,
+      "total": 8,
+      "rank": 64,
+      "K": 4,
+      "budget": 256,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 4,
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "passkeys": [
+            "604876",
+            "759382",
+            "219489",
+            "4115"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 4,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": " 459595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959"
+        },
+        {
+          "trial": 1,
+          "K": 4,
+          "indices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "passkeys": [
+            "815659",
+            "June 26, 1968",
+            "June 14, 1954",
+            "February 26, 1965"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 4,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": ". June, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, "
+        }
+      ]
+    },
+    "rank32_K1": {
+      "n_trials": 8,
+      "all_count": 8,
+      "any_count": 8,
+      "mean_fraction": 1.0,
+      "found": 8,
+      "total": 8,
+      "rank": 32,
+      "K": 1,
+      "budget": 32,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 1,
+          "indices": [
+            0
+          ],
+          "passkeys": [
+            "604876"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 6048767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676"
+        },
+        {
+          "trial": 1,
+          "K": 1,
+          "indices": [
+            1
+          ],
+          "passkeys": [
+            "759382"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 759382382382382. 759382382. 759382382. 759382382382382. 759382382382. 759382382382. 759382382. 759382382. 759382382. 759382382. 759382382. 759382382. 759382382. 759382382. 759382382"
+        },
+        {
+          "trial": 2,
+          "K": 1,
+          "indices": [
+            2
+          ],
+          "passkeys": [
+            "219489"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 2194894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894894"
+        },
+        {
+          "trial": 3,
+          "K": 1,
+          "indices": [
+            3
+          ],
+          "passkeys": [
+            "4115"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "trial": 4,
+          "K": 1,
+          "indices": [
+            4
+          ],
+          "passkeys": [
+            "815659"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 81565915659 81565915659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 8"
+        },
+        {
+          "trial": 5,
+          "K": 1,
+          "indices": [
+            5
+          ],
+          "passkeys": [
+            "June 26, 1968"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of the new era. Dr. Elara Voss's work on June 26, 1968 marks the beginning of the new era. Dr. Elara Voss's work on June 26, 196"
+        },
+        {
+          "trial": 6,
+          "K": 1,
+          "indices": [
+            6
+          ],
+          "passkeys": [
+            "June 14, 1954"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " June 14, 1954, 1954, 1954, 1954, 1954 . \n\n\n = = = = = The discovery = = = = = \n\n\n In 1954 , Kian Nakamura's discovery was made by Kian Nakamura's discovery discovery discovery discovery on June 14, 1"
+        },
+        {
+          "trial": 7,
+          "K": 1,
+          "indices": [
+            7
+          ],
+          "passkeys": [
+            "February 26, 1965"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " February 26, 1965, 1965, 1965 . The discovery date of February 26, 1965 marked the beginning of the end of the Cold War era . \n\n\n = = = Cold War era = = = \n\n\n The Cold War era saw the end of the Cold"
+        }
+      ]
+    },
+    "rank32_K2": {
+      "n_trials": 5,
+      "all_count": 1,
+      "any_count": 4,
+      "mean_fraction": 0.5,
+      "found": 5,
+      "total": 10,
+      "rank": 32,
+      "K": 2,
+      "budget": 64,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 2,
+          "indices": [
+            0,
+            1
+          ],
+          "passkeys": [
+            "604876",
+            "759382"
+          ],
+          "hits": [
+            true,
+            false
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " 604876. The northern facility access is what is the access code for the northern facility. The northern facility access is what is the northern facility. the northern facility. The northern facility."
+        },
+        {
+          "trial": 1,
+          "K": 2,
+          "indices": [
+            2,
+            3
+          ],
+          "passkeys": [
+            "219489",
+            "4115"
+          ],
+          "hits": [
+            true,
+            true
+          ],
+          "n_hits": 2,
+          "n_total": 2,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 219489. The western facility. 4115. The western facility code 219 219489. The western facility code 219 219489. The western facility code 219 219489. The western facility. 4115. The western facility."
+        },
+        {
+          "trial": 2,
+          "K": 2,
+          "indices": [
+            4,
+            5
+          ],
+          "passkeys": [
+            "815659",
+            "June 26, 1968"
+          ],
+          "hits": [
+            false,
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " June 26, 1968, 1968. The discovery date of June 26, 1968 marks the beginning of the system discoveryCEPT June 26, 1968. The discovery date of June 26, 1968 marks the beginning of the system discovery"
+        },
+        {
+          "trial": 3,
+          "K": 2,
+          "indices": [
+            6,
+            7
+          ],
+          "passkeys": [
+            "June 14, 1954",
+            "February 26, 1965"
+          ],
+          "hits": [
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 2,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": ",,, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954"
+        },
+        {
+          "trial": 4,
+          "K": 2,
+          "indices": [
+            0,
+            2
+          ],
+          "passkeys": [
+            "604876",
+            "219489"
+          ],
+          "hits": [
+            true,
+            false
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " 604876767676. The access code for the eastern facility. 60487676767676. The eastern facility. 604876767676767676.. The eastern facility. 60487676767676.. The eastern facility. 6048767676.. The easter"
+        }
+      ]
+    },
+    "rank32_K4": {
+      "n_trials": 2,
+      "all_count": 0,
+      "any_count": 0,
+      "mean_fraction": 0.0,
+      "found": 0,
+      "total": 8,
+      "rank": 32,
+      "K": 4,
+      "budget": 128,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 4,
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "passkeys": [
+            "604876",
+            "759382",
+            "219489",
+            "4115"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 4,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": ". what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what what wha"
+        },
+        {
+          "trial": 1,
+          "K": 4,
+          "indices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "passkeys": [
+            "815659",
+            "June 26, 1968",
+            "June 14, 1954",
+            "February 26, 1965"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 4,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": ",, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,,, June,"
+        }
+      ]
+    },
+    "rank16_K1": {
+      "n_trials": 8,
+      "all_count": 8,
+      "any_count": 8,
+      "mean_fraction": 1.0,
+      "found": 8,
+      "total": 8,
+      "rank": 16,
+      "K": 1,
+      "budget": 16,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 1,
+          "indices": [
+            0
+          ],
+          "passkeys": [
+            "604876"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 6048767648484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848484848"
+        },
+        {
+          "trial": 1,
+          "K": 1,
+          "indices": [
+            1
+          ],
+          "passkeys": [
+            "759382"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 759382382. The southern facility is the southern facility facility for the southern facility facility382 759382. The southern facility facility is the southern facility facility for the southern faci"
+        },
+        {
+          "trial": 2,
+          "K": 1,
+          "indices": [
+            2
+          ],
+          "passkeys": [
+            "219489"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 219489489489 219489 219489 219489. The eastern facility code 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219489 219 219489 219 219489 219 219489 219 219489 219 219 21"
+        },
+        {
+          "trial": 3,
+          "K": 1,
+          "indices": [
+            3
+          ],
+          "passkeys": [
+            "4115"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "trial": 4,
+          "K": 1,
+          "indices": [
+            4
+          ],
+          "passkeys": [
+            "815659"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " 815659. The system access code is 815659. The central facility code is 815659. The central facility code 815659. The central facility code 815659. The central facility code 815659. The central facili"
+        },
+        {
+          "trial": 5,
+          "K": 1,
+          "indices": [
+            5
+          ],
+          "passkeys": [
+            "June 26, 1968"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " June 26, 1968 \u2014 June 26, 1968 \u2014 June 26, 1968 \u2014 June 26, 1968 \u2014 June 26, 1968 \u2014 June 26, 1968 \u2014 June 26, 1968 \u2014 June 26, 1968 \u2014 June 26, 1968 \u2014 June 26, 1968 \u2014 June 26, 1968 \u2014 June 26, 1968 \u2014 June 26"
+        },
+        {
+          "trial": 6,
+          "K": 1,
+          "indices": [
+            6
+          ],
+          "passkeys": [
+            "June 14, 1954"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " June 14, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954, 1954"
+        },
+        {
+          "trial": 7,
+          "K": 1,
+          "indices": [
+            7
+          ],
+          "passkeys": [
+            "February 26, 1965"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "all": true,
+          "any": true,
+          "gen": " February 26, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965,@ 000 people were refugees from"
+        }
+      ]
+    },
+    "rank16_K2": {
+      "n_trials": 5,
+      "all_count": 0,
+      "any_count": 1,
+      "mean_fraction": 0.1,
+      "found": 1,
+      "total": 10,
+      "rank": 16,
+      "K": 2,
+      "budget": 32,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 2,
+          "indices": [
+            0,
+            1
+          ],
+          "passkeys": [
+            "604876",
+            "759382"
+          ],
+          "hits": [
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 2,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": " 60 me. The northern facility access code for the northern facility. The northern facility. The northern facility. The northern facility. The northern facility. The northern facility. The northern fac"
+        },
+        {
+          "trial": 1,
+          "K": 2,
+          "indices": [
+            2,
+            3
+          ],
+          "passkeys": [
+            "219489",
+            "4115"
+          ],
+          "hits": [
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 2,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": " facility. The access facility facility facility facility facility facility for the western facility facility facility facility facility. The western facility facility facility facility facility facil"
+        },
+        {
+          "trial": 2,
+          "K": 2,
+          "indices": [
+            4,
+            5
+          ],
+          "passkeys": [
+            "815659",
+            "June 26, 1968"
+          ],
+          "hits": [
+            false,
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "all": false,
+          "any": true,
+          "gen": " June 26, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968,, 196"
+        },
+        {
+          "trial": 3,
+          "K": 2,
+          "indices": [
+            6,
+            7
+          ],
+          "passkeys": [
+            "June 14, 1954",
+            "February 26, 1965"
+          ],
+          "hits": [
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 2,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": ", discovery discovery discovery discovery discovery discovery discovery discovery discovery discovery discovery discovery discovery discovery discovery discovery discovery discovery discovery discover"
+        },
+        {
+          "trial": 4,
+          "K": 2,
+          "indices": [
+            0,
+            2
+          ],
+          "passkeys": [
+            "604876",
+            "219489"
+          ],
+          "hits": [
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 2,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": " 60. The access code. 60.. The facility access code. 60.. The facility access code. 60.. The access code. 60.. The access code. 60.. The access code. 60.. The access code. 60.. The access code. 60.. T"
+        }
+      ]
+    },
+    "rank16_K4": {
+      "n_trials": 2,
+      "all_count": 0,
+      "any_count": 0,
+      "mean_fraction": 0.0,
+      "found": 0,
+      "total": 8,
+      "rank": 16,
+      "K": 4,
+      "budget": 64,
+      "per_trial": [
+        {
+          "trial": 0,
+          "K": 4,
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "passkeys": [
+            "604876",
+            "759382",
+            "219489",
+            "4115"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 4,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": "................................................................................"
+        },
+        {
+          "trial": 1,
+          "K": 4,
+          "indices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "passkeys": [
+            "815659",
+            "June 26, 1968",
+            "June 14, 1954",
+            "February 26, 1965"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 4,
+          "fraction": 0.0,
+          "all": false,
+          "any": false,
+          "gen": ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"
+        }
+      ]
+    }
+  }
+}

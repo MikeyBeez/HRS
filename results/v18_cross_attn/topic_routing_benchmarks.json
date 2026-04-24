@@ -1,0 +1,119 @@
+{
+  "threshold": 0.4,
+  "benchmarks": {
+    "drift_bomb": {
+      "benchmark": "drift_bomb",
+      "drift_trajectory": [
+        1.1920928955078125e-07,
+        0.146276593208313,
+        0.22933578491210938,
+        0.2674938440322876,
+        0.31088078022003174,
+        0.31867897510528564,
+        0.34775757789611816,
+        0.3738173246383667,
+        0.3969031572341919,
+        0.4090319275856018
+      ],
+      "final_drift": 0.4090319275856018,
+      "probe_matches_original": false,
+      "probe_similarity": 0.3702962398529053,
+      "final_title": "Networks / Roman / Medieval / Infrastructure",
+      "n_clusters_final": 1
+    },
+    "semantic_overlap": {
+      "benchmark": "semantic_overlap",
+      "levels": {
+        "0": {
+          "name": "Trivial (Roman history vs JavaScript)",
+          "n_clusters": 1,
+          "purity": 0.5,
+          "separation": 0.0,
+          "mixed_clusters": 1
+        },
+        "1": {
+          "name": "Distant overlap (Roman military engineering vs modern civil engineering)",
+          "n_clusters": 1,
+          "purity": 0.5,
+          "separation": 0.0,
+          "mixed_clusters": 1
+        },
+        "2": {
+          "name": "Moderate overlap (Roman bread baking vs medieval bread baking)",
+          "n_clusters": 1,
+          "purity": 0.5,
+          "separation": 0.0,
+          "mixed_clusters": 1
+        },
+        "3": {
+          "name": "High overlap (Roman Republic vs Roman Empire governance)",
+          "n_clusters": 1,
+          "purity": 0.5,
+          "separation": 0.0,
+          "mixed_clusters": 1
+        },
+        "4": {
+          "name": "Near-identical (Caesar's military vs Caesar's politics)",
+          "n_clusters": 1,
+          "purity": 0.5,
+          "separation": 0.0,
+          "mixed_clusters": 1
+        }
+      }
+    },
+    "adversarial": {
+      "benchmark": "adversarial",
+      "pairs": [
+        {
+          "name": "Baking metaphor for ML",
+          "true_topic": "machine_learning",
+          "same_cluster": true,
+          "engram_similarity": 0.6611082553863525,
+          "n_clusters": 1
+        },
+        {
+          "name": "ML vocabulary for history",
+          "true_topic": "history",
+          "same_cluster": true,
+          "engram_similarity": 0.8338912129402161,
+          "n_clusters": 1
+        },
+        {
+          "name": "CS vocabulary for Roman history",
+          "true_topic": "roman_history",
+          "same_cluster": true,
+          "engram_similarity": 0.7840563058853149,
+          "n_clusters": 1
+        },
+        {
+          "name": "Relationship vocabulary for physics",
+          "true_topic": "physics",
+          "same_cluster": true,
+          "engram_similarity": 0.7965010404586792,
+          "n_clusters": 1
+        },
+        {
+          "name": "Cooking vocabulary for chemistry",
+          "true_topic": "chemistry",
+          "same_cluster": true,
+          "engram_similarity": 0.6292616128921509,
+          "n_clusters": 1
+        }
+      ],
+      "accuracy": 1.0
+    },
+    "topic_fork": {
+      "benchmark": "topic_fork",
+      "unified_clusters": 1,
+      "final_clusters": 1,
+      "did_split": false,
+      "clean_split": false,
+      "cv_clusters": [
+        0
+      ],
+      "nlp_clusters": [
+        0
+      ]
+    }
+  }
+}

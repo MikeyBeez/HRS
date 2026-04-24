@@ -1,0 +1,107 @@
+{
+  "n_passages": 50,
+  "context_len": 384,
+  "continuation": 64,
+  "engram_layer": 5,
+  "no_context": {
+    "nll": 3.479762086868286,
+    "ppl": 32.45200040031059
+  },
+  "full_context": {
+    "nll": 3.031619689464569,
+    "ppl": 20.730782842121087
+  },
+  "full_to_none_gap_nll": 0.44814239740371686,
+  "rows": [
+    {
+      "K": 0,
+      "engram_fraction": 0.0,
+      "recent_tokens": 384,
+      "positions": 384,
+      "compression": 1.0,
+      "nll": 3.031619689464569,
+      "ppl": 20.730782842121087,
+      "gap_closed": 1.0
+    },
+    {
+      "K": 96,
+      "engram_fraction": 0.25,
+      "recent_tokens": 288,
+      "positions": 289,
+      "compression": 1.328719723183391,
+      "nll": 3.0439009308815,
+      "ppl": 20.986952411322427,
+      "gap_closed": 0.9725952253389064
+    },
+    {
+      "K": 192,
+      "engram_fraction": 0.5,
+      "recent_tokens": 192,
+      "positions": 193,
+      "compression": 1.9896373056994818,
+      "nll": 3.051952157020569,
+      "ppl": 21.156605151003745,
+      "gap_closed": 0.9546294488676038
+    },
+    {
+      "K": 288,
+      "engram_fraction": 0.75,
+      "recent_tokens": 96,
+      "positions": 97,
+      "compression": 3.9587628865979383,
+      "nll": 3.1021665263175966,
+      "ppl": 22.246095861507587,
+      "gap_closed": 0.8425794183685009
+    },
+    {
+      "K": 336,
+      "engram_fraction": 0.875,
+      "recent_tokens": 48,
+      "positions": 49,
+      "compression": 7.836734693877551,
+      "nll": 3.1383403730392456,
+      "ppl": 23.065554858993362,
+      "gap_closed": 0.7618598816069273
+    },
+    {
+      "K": 360,
+      "engram_fraction": 0.9375,
+      "recent_tokens": 24,
+      "positions": 25,
+      "compression": 15.36,
+      "nll": 3.1924801874160766,
+      "ppl": 24.34874206005428,
+      "gap_closed": 0.6410504810893989
+    },
+    {
+      "K": 372,
+      "engram_fraction": 0.96875,
+      "recent_tokens": 12,
+      "positions": 13,
+      "compression": 29.53846153846154,
+      "nll": 3.2331517577171325,
+      "ppl": 25.359458015627627,
+      "gap_closed": 0.5502945728408514
+    },
+    {
+      "K": 378,
+      "engram_fraction": 0.984375,
+      "recent_tokens": 6,
+      "positions": 7,
+      "compression": 54.857142857142854,
+      "nll": 3.273800480365753,
+      "ppl": 26.411525328684302,
+      "gap_closed": 0.4595896476114685
+    },
+    {
+      "K": 384,
+      "engram_fraction": 1.0,
+      "recent_tokens": 0,
+      "positions": 1,
+      "compression": 384.0,
+      "nll": 3.3988347101211547,
+      "ppl": 29.92920352111635,
+      "gap_closed": 0.1805840670643497
+    }
+  ]
+}

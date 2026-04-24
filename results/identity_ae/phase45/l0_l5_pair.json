@@ -1,0 +1,108 @@
+{
+  "rank": 128,
+  "n_steps": 150,
+  "app1": {
+    "L0 only (Phase 44 baseline)": {
+      "routing": 56,
+      "retrieval": 54,
+      "per_type": {
+        "numeric": 11,
+        "entity": 15,
+        "technical": 14,
+        "fact": 14
+      }
+    },
+    "L5 only (Phase 31 baseline)": {
+      "routing": 38,
+      "retrieval": 38,
+      "per_type": {
+        "numeric": 8,
+        "entity": 8,
+        "technical": 14,
+        "fact": 8
+      }
+    },
+    "L0+L5 avg cosine (NEW)": {
+      "routing": 49,
+      "retrieval": 48,
+      "per_type": {
+        "numeric": 15,
+        "entity": 9,
+        "technical": 14,
+        "fact": 10
+      }
+    }
+  },
+  "app2": {
+    "no_context": {
+      "nll": 3.3541412425041197,
+      "ppl": 28.621015122918095,
+      "n": 50
+    },
+    "full_context": {
+      "nll": 2.873997437953949,
+      "ppl": 17.707662189194636,
+      "n": 50
+    },
+    "engram_only_L0": {
+      "nll": 3.3163239097595216,
+      "ppl": 27.558855280977507,
+      "n": 50
+    },
+    "engram_only_L5": {
+      "nll": 3.267690875530243,
+      "ppl": 26.25065327855989,
+      "n": 50
+    },
+    "engram_only_pair": {
+      "nll": 3.2585045766830443,
+      "ppl": 26.01061116993718,
+      "n": 50
+    },
+    "engram_then_tokens_L0": {
+      "nll": 2.9153885865211486,
+      "ppl": 18.455982755638846,
+      "n": 50
+    },
+    "engram_then_tokens_L5": {
+      "nll": 2.9128452134132385,
+      "ppl": 18.409101948382,
+      "n": 50
+    },
+    "engram_then_tokens_pair": {
+      "nll": 2.9128904843330385,
+      "ppl": 18.409935364224502,
+      "n": 50
+    }
+  },
+  "app3": {
+    "L0 only (Phase 44 baseline)": {
+      "a_hits": 4,
+      "b_hits": 5,
+      "both": 4,
+      "routing_correct": 10
+    },
+    "L5 only (Phase 31 baseline)": {
+      "a_hits": 4,
+      "b_hits": 5,
+      "both": 4,
+      "routing_correct": 10
+    },
+    "L0+L5 avg cosine (NEW)": {
+      "a_hits": 4,
+      "b_hits": 5,
+      "both": 4,
+      "routing_correct": 10
+    }
+  },
+  "positions_per_condition": {
+    "no_context": 0,
+    "full_context": 200,
+    "engram_only_L0": 1,
+    "engram_only_L5": 1,
+    "engram_only_pair": 2,
+    "engram_then_tokens_L0": 101,
+    "engram_then_tokens_L5": 101,
+    "engram_then_tokens_pair": 102
+  }
+}

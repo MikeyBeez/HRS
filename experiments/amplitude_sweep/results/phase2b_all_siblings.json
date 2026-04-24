@@ -1,0 +1,40 @@
+{
+  "records": [
+    {
+      "passkey_exact": 0.004,
+      "passkey_digit": 0.354,
+      "beta": 1
+    },
+    {
+      "passkey_exact": 0.004,
+      "passkey_digit": 0.365,
+      "beta": 2
+    },
+    {
+      "passkey_exact": 0.004,
+      "passkey_digit": 0.343,
+      "beta": 3
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.141,
+      "beta": 5
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.103,
+      "beta": 10
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.105,
+      "beta": 20
+    }
+  ],
+  "best": {
+    "passkey_exact": 0.004,
+    "passkey_digit": 0.354,
+    "beta": 1
+  },
+  "wall_seconds": 3.4983832836151123
+}

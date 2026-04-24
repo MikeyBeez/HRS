@@ -1,0 +1,341 @@
+{
+  "n_samples": 50,
+  "prompt_len": 100,
+  "continuation_len": 128,
+  "threshold": 0.5,
+  "overlap_f1": {
+    "1": {
+      "baseline": 0.308125,
+      "topic": 0.289375
+    },
+    "2": {
+      "baseline": 0.08393700787401574,
+      "topic": 0.0732283464566929
+    },
+    "3": {
+      "baseline": 0.032857142857142856,
+      "topic": 0.02396825396825397
+    }
+  },
+  "semantic_similarity": {
+    "baseline": 0.6314627039432525,
+    "topic": 0.5717594355344773
+  },
+  "wins": {
+    "baseline": 29,
+    "topic": 16,
+    "ties": 5
+  },
+  "llm_judge": {
+    "model": "llama3.1:latest",
+    "host": "192.168.12.125",
+    "wins": {
+      "baseline": 28,
+      "topic": 22,
+      "tie": 0,
+      "error": 0
+    },
+    "details": [
+      {
+        "id": 0,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is a better choice because it more accurately reflects the original prompt's details about Robert Boulter's career, with specific credits and events that match or are closely"
+      },
+      {
+        "id": 1,
+        "verdict": "B",
+        "winner": "baseline",
+        "reasoning": "WINNER: B\n\nContinuation B is a better choice because it logically follows from the prompt, which discusses Du Fu's influence on Japanese poets, and B continues to explore this idea by mentioning how D"
+      },
+      {
+        "id": 2,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A follows logically from the prompt by providing more information about a different ship's propulsion system, which is relevant to the context of comparing different warship de"
+      },
+      {
+        "id": 3,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A is a better fit for the prompt because it continues to describe Ise's experiences during World War II, including her involvement in battles and attacks on ships. Continuation"
+      },
+      {
+        "id": 4,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is a better fit for the prompt as it directly expands on the aftermath of the storm, providing specific details about evacuation numbers and damage in Georgia. The content is"
+      },
+      {
+        "id": 5,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is a better choice because it logically follows from the prompt, which describes the 38th Infantry sector and the US 2nd Infantry Division's communication efforts. Continuati"
+      },
+      {
+        "id": 6,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is more coherent and relevant because it accurately reflects the historical events surrounding the North Korean withdrawal from the Pusan Perimeter. The text follows logicall"
+      },
+      {
+        "id": 7,
+        "verdict": "B",
+        "winner": "baseline",
+        "reasoning": "WINNER: B\n\nContinuation B is a better choice because it logically follows from the prompt, discussing the development of ironclads during the U.S. Civil War and the Union Navy's response to the Confed"
+      },
+      {
+        "id": 8,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is a better choice because it logically follows from the prompt, discussing how Japan and Australia adopted steel for construction after 1872, while also referencing specific"
+      },
+      {
+        "id": 9,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A follows logically from the prompt, building on the idea that Little Gidding deals with time and humanity's place within it. It introduces a new concept of \"The Two Quartets\" "
+      },
+      {
+        "id": 10,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is a better fit because it logically follows from the discussion of temnospondyls and their armor plating, suggesting that this feature might have also been present in other "
+      },
+      {
+        "id": 11,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is a better match for the prompt because it logically follows from the discussion about temnospondyls and their subfamilies, specifically mentioning Ereopoidea as the second "
+      },
+      {
+        "id": 12,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is more coherent as it logically follows from the initial development of the Dvorak technique in 1969, leading to a narrative about its subsequent proposal and implementation"
+      },
+      {
+        "id": 13,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A is the better choice because it logically follows from the prompt, providing more information about Kershaw's baseball career and prospects in 2007, whereas Continuation B in"
+      },
+      {
+        "id": 14,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is more coherent because it logically follows from the prompt's discussion of Kershaw's pitching abilities and skills. It continues to describe his impressive abilities, both"
+      },
+      {
+        "id": 15,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is more coherent, relevant, and fluent because it logically builds upon the discussion of Titian's Portrait of Cardinal Filippo Archinto, specifically referencing the \"stucco"
+      },
+      {
+        "id": 16,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A is a better fit because it logically follows from the prompt, which discusses Ambassador Bishop's experience in crisis management and his involvement at the US Embassy. Conti"
+      },
+      {
+        "id": 17,
+        "verdict": "B",
+        "winner": "baseline",
+        "reasoning": "WINNER: B\n\nContinuation B is more coherent, relevant, and fluent because it logically follows the prompt's description of a sports season with finals, mentioning specific teams and their histories. Th"
+      },
+      {
+        "id": 18,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A is a better fit for the prompt because it provides specific details about the tropical cyclone season, including the total hurricane status and the formation of Tropical Depr"
+      },
+      {
+        "id": 19,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A follows logically from the prompt, continuing to describe the typhoon's trajectory and behavior in a coherent manner. The reference text also supports this continuation, as i"
+      },
+      {
+        "id": 20,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A is better because it directly addresses the prompt's requirement for naming tropical cyclones, specifically mentioning that the Philippine Meteorological Department assigns n"
+      },
+      {
+        "id": 21,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A is a better fit because it logically follows from the prompt, providing more details about the castle's history and events that occurred there, including its use as a prison "
+      },
+      {
+        "id": 22,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is better because it continues to list military units in a logical and coherent manner, matching the format established by the prompt. Continuation A also introduces new deta"
+      },
+      {
+        "id": 23,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is more coherent because it builds upon the prompt's storyline, where Lesnar defeats Triple H and declares himself \"King of Kings\". Continuation A logically continues this na"
+      },
+      {
+        "id": 24,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A is a better choice because it logically follows from the prompt by introducing a new creative work written by Lesnar, titled \"The Death Clutch\", which fits with the theme of "
+      },
+      {
+        "id": 25,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is a better fit because it directly addresses Moffat's intention behind the Doctor's withdrawn behavior, which logically follows from the prompt. The language used is also mo"
+      },
+      {
+        "id": 26,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is more coherent and relevant to the prompt as it discusses the consequences of the War Office's decision to focus on infantry and cruiser tanks, mentioning the destruction o"
+      },
+      {
+        "id": 27,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is a better choice because it logically follows from the prompt by discussing reviews and criticisms of QuackShot, while Continuation B deviates from the topic with mention o"
+      },
+      {
+        "id": 28,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is a better fit because it directly responds to the prompt's description of San Lorenzo Colossal Head 3, providing more specific and logical details about its location, surro"
+      },
+      {
+        "id": 29,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A is a better choice because it logically follows from the prompt, discussing the loaning of San Lorenzo Head 4 and 9 to various museums. The content is also relevant to the to"
+      },
+      {
+        "id": 30,
+        "verdict": "B",
+        "winner": "baseline",
+        "reasoning": "WINNER: B\n\nContinuation B is a better choice because it directly relates to Butler's athletic achievements, which is the topic of the prompt. The text provides specific and relevant information about "
+      },
+      {
+        "id": 31,
+        "verdict": "B",
+        "winner": "baseline",
+        "reasoning": "WINNER: B\n\nContinuation B is more coherent and relevant to the prompt because it continues to develop the characters introduced in the prompt, particularly Colonel Frank Fitts and his family. The plot"
+      },
+      {
+        "id": 32,
+        "verdict": "B",
+        "winner": "baseline",
+        "reasoning": "WINNER: B\n\nContinuation B is a better choice because it coherently builds on the idea that Ball was inspired by various sources, including music videos, and takes the narrative in a logical direction."
+      },
+      {
+        "id": 33,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is more coherent, as it logically follows from the prompt by discussing the album that was released on January 23, 2000. It also maintains relevance to the topic of the film'"
+      },
+      {
+        "id": 34,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A is the better choice because it maintains coherence by logically extending Gore's involvement in banking, mentioning a scandal and his subsequent resignation as president of "
+      },
+      {
+        "id": 35,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is more coherent because it directly addresses the prompt's topic about Nero and Seneca, and provides a logical progression of events. Continuation B is a non-sequitur that a"
+      },
+      {
+        "id": 36,
+        "verdict": "A",
+        "winner": "topic",
+        "reasoning": "WINNER: A\n\nContinuation A is a better choice because it directly addresses the prompt's topic by providing a specific source that mentions Nero, while Continuation B introduces a new story (\"Anasazi\")"
+      },
+      {
+        "id": 37,
+        "verdict": "B",
+        "winner": "baseline",
+        "reasoning": "WINNER: B\n\nContinuation B is more coherent and relevant to the prompt, as it continues the story of Alfredo Lim's election victories and his subsequent actions as mayor. Continuation A suddenly shifts"
+      },
+      {
+        "id": 38,
+        "verdict": "B",
+        "winner": "baseline",
+        "reasoning": "WINNER: B\n\nContinuation B is a better choice because it logically follows from the prompt, which discusses sports venues and events hosted by Rizal Memorial Sports Complex. Continuation B provides add"
+      },
+      {
+        "id": 39,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is more coherent, as it directly addresses the prompt's mention of Henderson recognizing A. speciosa and A. spectabilis by providing additional context on the origin of the s"
+      },
+      {
+        "id": 40,
+        "verdict": "B",
+        "winner": "baseline",
+        "reasoning": "WINNER: B\n\nContinuation B is more coherent, relevant, and fluent because it logically follows from the prompt's mention of Arthur Young being announced as the new RUC Chief Constable, and then describ"
+      },
+      {
+        "id": 41,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is more coherent as it directly follows from the prompt, mentioning S\u00e9bergu\u00e9's participation in the Beijing Olympics and subsequent events. Continuation B is a non-sequitur, "
+      },
+      {
+        "id": 42,
+        "verdict": "B",
+        "winner": "baseline",
+        "reasoning": "WINNER: B\n\nContinuation B is more coherent as it follows a logical narrative about the history and traditions of Chinese people in Bintulu, building on the information provided in the prompt. Continua"
+      },
+      {
+        "id": 43,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is a better fit for the prompt because it maintains coherence by logically building upon the information given, and its relevance to the topic is higher as it directly follow"
+      },
+      {
+        "id": 44,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is a better choice because it logically follows from the prompt, which describes NY 93 passing through Youngstown and intersecting with County Route 907. Continuation B menti"
+      },
+      {
+        "id": 45,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is more coherent, relevant, and fluent because it directly addresses the game's reception, legacy, and graphics, which are all mentioned in the prompt. The tone and style of "
+      },
+      {
+        "id": 46,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A follows logically from the prompt, providing a list of Assistant Architects who worked for the Commission. The content is also relevant to the topic, as it lists specific ind"
+      },
+      {
+        "id": 47,
+        "verdict": "A",
+        "winner": "baseline",
+        "reasoning": "WINNER: A\n\nContinuation A is more coherent, relevant, and fluent because it continues the story about the submarines UB @-@ 1 and UB @-@ 2 in a logical sequence of events after their launch. The text "
+      },
+      {
+        "id": 48,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is a better fit for the prompt because it provides a more logical and relevant explanation of what happened to the Italian submarines in Gibraltar, whereas Continuation A sud"
+      },
+      {
+        "id": 49,
+        "verdict": "B",
+        "winner": "topic",
+        "reasoning": "WINNER: B\n\nContinuation B is a better match for the prompt because it sticks to the topic of Nerva's economic reforms and land allocations, whereas Continuation A introduces unrelated and anachronisti"
+      }
+    ]
+  }
+}

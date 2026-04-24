@@ -1,0 +1,253 @@
+{
+  "config": {
+    "rank": 512,
+    "n_steps": 100,
+    "high_lr": 0.0003,
+    "base_lr": 0.0001,
+    "targets": [
+      "blocks.4.attn.qkv",
+      "blocks.4.attn.out_proj",
+      "blocks.4.peer_ffn.input_proj",
+      "blocks.4.peer_ffn.output_proj",
+      "blocks.5.attn.qkv",
+      "blocks.5.attn.out_proj",
+      "blocks.5.peer_ffn.input_proj",
+      "blocks.5.peer_ffn.output_proj"
+    ],
+    "replay": true
+  },
+  "n_passages": 20,
+  "stratified": true,
+  "retrieval": 0.95,
+  "retrieval_by_type": {
+    "numeric": 1.0,
+    "entity": 1.0,
+    "technical": 0.8,
+    "fact": 1.0
+  },
+  "gate_novel_correct": 18,
+  "gate_novel_by_type": {
+    "numeric": 5,
+    "entity": 4,
+    "technical": 5,
+    "fact": 4
+  },
+  "baseline_gated": 19.604746422563498,
+  "baseline_ungated": 19.604746422563498,
+  "final_gated": 19.604746422563498,
+  "final_ungated": 192.53117764718348,
+  "delta_gated_pct": 0.0,
+  "delta_ungated_pct": 882.0641057901952,
+  "history": [
+    {
+      "i": 0,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 19.604746422563498,
+      "delta_gated": 0.0,
+      "delta_ungated": 0.0,
+      "passkey_found": null,
+      "passkey_id": null,
+      "passkey_type": null
+    },
+    {
+      "i": 1,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 22.33410087023704,
+      "delta_gated": 0.0,
+      "delta_ungated": 13.921906403911832,
+      "passkey_found": true,
+      "passkey_id": 0,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 2,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 23.652625948832522,
+      "delta_gated": 0.0,
+      "delta_ungated": 20.647446485766523,
+      "passkey_found": true,
+      "passkey_id": 1,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 3,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 26.34108329207017,
+      "delta_gated": 0.0,
+      "delta_ungated": 34.3607447110547,
+      "passkey_found": true,
+      "passkey_id": 2,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 4,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 27.321185840601856,
+      "delta_gated": 0.0,
+      "delta_ungated": 39.36005726224213,
+      "passkey_found": true,
+      "passkey_id": 3,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 5,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 30.448958232629256,
+      "delta_gated": 0.0,
+      "delta_ungated": 55.3142161409695,
+      "passkey_found": true,
+      "passkey_id": 4,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 6,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 39.95839710485139,
+      "delta_gated": 0.0,
+      "delta_ungated": 103.82001502892417,
+      "passkey_found": true,
+      "passkey_id": 20,
+      "passkey_type": "entity"
+    },
+    {
+      "i": 7,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 45.10929243154087,
+      "delta_gated": 0.0,
+      "delta_ungated": 130.09373066730248,
+      "passkey_found": true,
+      "passkey_id": 21,
+      "passkey_type": "entity"
+    },
+    {
+      "i": 8,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 41.958281820495834,
+      "delta_gated": 0.0,
+      "delta_ungated": 114.02103815127751,
+      "passkey_found": true,
+      "passkey_id": 22,
+      "passkey_type": "entity"
+    },
+    {
+      "i": 9,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 42.88529151714015,
+      "delta_gated": 0.0,
+      "delta_ungated": 118.74953438715539,
+      "passkey_found": true,
+      "passkey_id": 23,
+      "passkey_type": "entity"
+    },
+    {
+      "i": 10,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 52.7896872075181,
+      "delta_gated": 0.0,
+      "delta_ungated": 169.2699312180921,
+      "passkey_found": true,
+      "passkey_id": 24,
+      "passkey_type": "entity"
+    },
+    {
+      "i": 11,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 75.7172020531068,
+      "delta_gated": 0.0,
+      "delta_ungated": 286.2187269403411,
+      "passkey_found": true,
+      "passkey_id": 30,
+      "passkey_type": "technical"
+    },
+    {
+      "i": 12,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 54.02718973384329,
+      "delta_gated": 0.0,
+      "delta_ungated": 175.58219101300034,
+      "passkey_found": true,
+      "passkey_id": 31,
+      "passkey_type": "technical"
+    },
+    {
+      "i": 13,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 65.74792120810325,
+      "delta_gated": 0.0,
+      "delta_ungated": 235.3673635504545,
+      "passkey_found": true,
+      "passkey_id": 32,
+      "passkey_type": "technical"
+    },
+    {
+      "i": 14,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 61.101548963451584,
+      "delta_gated": 0.0,
+      "delta_ungated": 211.6671220655452,
+      "passkey_found": true,
+      "passkey_id": 33,
+      "passkey_type": "technical"
+    },
+    {
+      "i": 15,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 57.17765785680753,
+      "delta_gated": 0.0,
+      "delta_ungated": 191.65211640279423,
+      "passkey_found": false,
+      "passkey_id": 34,
+      "passkey_type": "technical"
+    },
+    {
+      "i": 16,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 70.09022308015409,
+      "delta_gated": 0.0,
+      "delta_ungated": 257.51660118126216,
+      "passkey_found": true,
+      "passkey_id": 40,
+      "passkey_type": "fact"
+    },
+    {
+      "i": 17,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 129.68264206777738,
+      "delta_gated": 0.0,
+      "delta_ungated": 561.485944641054,
+      "passkey_found": true,
+      "passkey_id": 41,
+      "passkey_type": "fact"
+    },
+    {
+      "i": 18,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 119.28447938921254,
+      "delta_gated": 0.0,
+      "delta_ungated": 508.44693840021125,
+      "passkey_found": true,
+      "passkey_id": 42,
+      "passkey_type": "fact"
+    },
+    {
+      "i": 19,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 120.18813178433912,
+      "delta_gated": 0.0,
+      "delta_ungated": 513.0562935821101,
+      "passkey_found": true,
+      "passkey_id": 43,
+      "passkey_type": "fact"
+    },
+    {
+      "i": 20,
+      "val_gated": 19.604746422563498,
+      "val_ungated": 192.53117764718348,
+      "delta_gated": 0.0,
+      "delta_ungated": 882.0641057901952,
+      "passkey_found": true,
+      "passkey_id": 44,
+      "passkey_type": "fact"
+    }
+  ]
+}

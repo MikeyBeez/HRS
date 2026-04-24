@@ -1,0 +1,51 @@
+{
+  "pruned_heads": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "n_heads_pruned": 8,
+  "heads_remaining": 8,
+  "attn_flops_fraction_of_baseline": 0.5,
+  "mlp_target_sparsity": 0.9,
+  "mlp_actual_sparsity_lm": 0.7666676839192709,
+  "mlp_actual_sparsity_pk": 0.7666676839192709,
+  "mlp_nonzero_fraction": 0.23333231608072913,
+  "val_ppl": 6.755674817385129,
+  "passkey_exact": 1.0,
+  "passkey_digit": 1.0,
+  "effective_params_lm": 825904,
+  "effective_params_pk": 812592,
+  "total_params": 3237632,
+  "ft_steps": 500,
+  "wall_seconds": 18.339454650878906
+}

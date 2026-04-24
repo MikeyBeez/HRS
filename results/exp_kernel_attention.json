@@ -1,0 +1,39 @@
+{
+  "n_steps": 10000,
+  "best_val": {
+    "dot_product": 1.630378286043803,
+    "exponential": 1.6128918131192524
+  },
+  "best_step": {
+    "dot_product": 2250,
+    "exponential": 2500
+  },
+  "play_level": {
+    "dot_product": {
+      "same_mean": 0.9287885871372725,
+      "cross_mean": 0.9094506720781327,
+      "gap": 0.019337915059139843,
+      "accuracy": 0.8020833333333334
+    },
+    "exponential": {
+      "same_mean": 0.9251893830926795,
+      "cross_mean": 0.906628608417511,
+      "gap": 0.01856077467516848,
+      "accuracy": 0.8357638888888889
+    }
+  },
+  "line_level": {
+    "dot_product": {
+      "same_mean": 0.857537387594392,
+      "cross_mean": 0.849703640794754,
+      "gap": 0.007833746799637997,
+      "accuracy": 0.6129901960784314
+    },
+    "exponential": {
+      "same_mean": 0.8326516668253308,
+      "cross_mean": 0.8232527357816696,
+      "gap": 0.009398931043661185,
+      "accuracy": 0.6139705882352942
+    }
+  }
+}

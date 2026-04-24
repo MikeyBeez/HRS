@@ -1,0 +1,365 @@
+{
+  "baseline_ppl": 4.880111493441789,
+  "baseline_passkey_exact": 1.0,
+  "baseline_passkey_digit": 1.0,
+  "per_head": [
+    {
+      "layer": 0,
+      "head": 0,
+      "pruned_ppl": 8.385040267009677,
+      "pruned_passkey_exact": 0.028,
+      "pruned_passkey_digit": 0.498,
+      "importance_ppl": 3.5049287735678876,
+      "importance_passkey_exact": 0.972,
+      "importance_passkey_digit": 0.502
+    },
+    {
+      "layer": 0,
+      "head": 1,
+      "pruned_ppl": 5.305308036385006,
+      "pruned_passkey_exact": 0.108,
+      "pruned_passkey_digit": 0.611,
+      "importance_ppl": 0.4251965429432172,
+      "importance_passkey_exact": 0.892,
+      "importance_passkey_digit": 0.389
+    },
+    {
+      "layer": 0,
+      "head": 2,
+      "pruned_ppl": 6.451075147828581,
+      "pruned_passkey_exact": 0.068,
+      "pruned_passkey_digit": 0.589,
+      "importance_ppl": 1.5709636543867918,
+      "importance_passkey_exact": 0.9319999999999999,
+      "importance_passkey_digit": 0.41100000000000003
+    },
+    {
+      "layer": 0,
+      "head": 3,
+      "pruned_ppl": 10.206888668812834,
+      "pruned_passkey_exact": 0.02,
+      "pruned_passkey_digit": 0.457,
+      "importance_ppl": 5.326777175371045,
+      "importance_passkey_exact": 0.98,
+      "importance_passkey_digit": 0.5429999999999999
+    },
+    {
+      "layer": 1,
+      "head": 0,
+      "pruned_ppl": 9.475304677907662,
+      "pruned_passkey_exact": 0.924,
+      "pruned_passkey_digit": 0.978,
+      "importance_ppl": 4.595193184465873,
+      "importance_passkey_exact": 0.07599999999999996,
+      "importance_passkey_digit": 0.02200000000000002
+    },
+    {
+      "layer": 1,
+      "head": 1,
+      "pruned_ppl": 7.984325714197885,
+      "pruned_passkey_exact": 0.0,
+      "pruned_passkey_digit": 0.221,
+      "importance_ppl": 3.104214220756096,
+      "importance_passkey_exact": 1.0,
+      "importance_passkey_digit": 0.779
+    },
+    {
+      "layer": 1,
+      "head": 2,
+      "pruned_ppl": 5.492507616660338,
+      "pruned_passkey_exact": 0.896,
+      "pruned_passkey_digit": 0.973,
+      "importance_ppl": 0.6123961232185486,
+      "importance_passkey_exact": 0.10399999999999998,
+      "importance_passkey_digit": 0.027000000000000024
+    },
+    {
+      "layer": 1,
+      "head": 3,
+      "pruned_ppl": 6.135649186103398,
+      "pruned_passkey_exact": 0.98,
+      "pruned_passkey_digit": 0.995,
+      "importance_ppl": 1.2555376926616093,
+      "importance_passkey_exact": 0.020000000000000018,
+      "importance_passkey_digit": 0.0050000000000000044
+    },
+    {
+      "layer": 2,
+      "head": 0,
+      "pruned_ppl": 7.1731553051454275,
+      "pruned_passkey_exact": 0.828,
+      "pruned_passkey_digit": 0.955,
+      "importance_ppl": 2.2930438117036385,
+      "importance_passkey_exact": 0.17200000000000004,
+      "importance_passkey_digit": 0.04500000000000004
+    },
+    {
+      "layer": 2,
+      "head": 1,
+      "pruned_ppl": 6.718831099212755,
+      "pruned_passkey_exact": 1.0,
+      "pruned_passkey_digit": 1.0,
+      "importance_ppl": 1.838719605770966,
+      "importance_passkey_exact": 0.0,
+      "importance_passkey_digit": 0.0
+    },
+    {
+      "layer": 2,
+      "head": 2,
+      "pruned_ppl": 5.776225165942035,
+      "pruned_passkey_exact": 0.0,
+      "pruned_passkey_digit": 0.134,
+      "importance_ppl": 0.8961136725002463,
+      "importance_passkey_exact": 1.0,
+      "importance_passkey_digit": 0.866
+    },
+    {
+      "layer": 2,
+      "head": 3,
+      "pruned_ppl": 5.359290227161014,
+      "pruned_passkey_exact": 1.0,
+      "pruned_passkey_digit": 1.0,
+      "importance_ppl": 0.47917873371922504,
+      "importance_passkey_exact": 0.0,
+      "importance_passkey_digit": 0.0
+    },
+    {
+      "layer": 3,
+      "head": 0,
+      "pruned_ppl": 5.387301257877895,
+      "pruned_passkey_exact": 0.928,
+      "pruned_passkey_digit": 0.979,
+      "importance_ppl": 0.5071897644361059,
+      "importance_passkey_exact": 0.07199999999999995,
+      "importance_passkey_digit": 0.02100000000000002
+    },
+    {
+      "layer": 3,
+      "head": 1,
+      "pruned_ppl": 5.084978552012433,
+      "pruned_passkey_exact": 1.0,
+      "pruned_passkey_digit": 1.0,
+      "importance_ppl": 0.20486705857064358,
+      "importance_passkey_exact": 0.0,
+      "importance_passkey_digit": 0.0
+    },
+    {
+      "layer": 3,
+      "head": 2,
+      "pruned_ppl": 5.118312828299311,
+      "pruned_passkey_exact": 0.596,
+      "pruned_passkey_digit": 0.883,
+      "importance_ppl": 0.23820133485752226,
+      "importance_passkey_exact": 0.404,
+      "importance_passkey_digit": 0.11699999999999999
+    },
+    {
+      "layer": 3,
+      "head": 3,
+      "pruned_ppl": 5.112951912064452,
+      "pruned_passkey_exact": 1.0,
+      "pruned_passkey_digit": 1.0,
+      "importance_ppl": 0.23284041862266314,
+      "importance_passkey_exact": 0.0,
+      "importance_passkey_digit": 0.0
+    }
+  ],
+  "order_least_passkey_first": [
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "order_most_passkey_first": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "order_least_ppl_first": [
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      3
+    ]
+  ]
+}

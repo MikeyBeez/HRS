@@ -1,0 +1,175 @@
+{
+  "args": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "steps": 2000,
+    "variants": [
+      "mha",
+      "bilinear"
+    ],
+    "out": "/mnt/data/Code/HRS/experiments/cartesian_replication/results/mha_vs_bilinear_seeds.json"
+  },
+  "runs": [
+    {
+      "variant": "mha",
+      "seed": 0,
+      "steps": 2000,
+      "final_val_ppl": 5.194632920495362,
+      "score_params": 524288,
+      "total_params": 3237632,
+      "train_loss_last_50_mean": 1.4202961754798888,
+      "wall_seconds": 29.36610984802246
+    },
+    {
+      "variant": "mha",
+      "seed": 1,
+      "steps": 2000,
+      "final_val_ppl": 5.149761638699129,
+      "score_params": 524288,
+      "total_params": 3237632,
+      "train_loss_last_50_mean": 1.418100893497467,
+      "wall_seconds": 28.612083196640015
+    },
+    {
+      "variant": "mha",
+      "seed": 2,
+      "steps": 2000,
+      "final_val_ppl": 5.234849663944193,
+      "score_params": 524288,
+      "total_params": 3237632,
+      "train_loss_last_50_mean": 1.4269658017158509,
+      "wall_seconds": 28.868451356887817
+    },
+    {
+      "variant": "mha",
+      "seed": 3,
+      "steps": 2000,
+      "final_val_ppl": 5.173787243098937,
+      "score_params": 524288,
+      "total_params": 3237632,
+      "train_loss_last_50_mean": 1.42468111038208,
+      "wall_seconds": 28.962005376815796
+    },
+    {
+      "variant": "mha",
+      "seed": 4,
+      "steps": 2000,
+      "final_val_ppl": 5.2083692234894885,
+      "score_params": 524288,
+      "total_params": 3237632,
+      "train_loss_last_50_mean": 1.433493025302887,
+      "wall_seconds": 28.94387412071228
+    },
+    {
+      "variant": "bilinear",
+      "seed": 0,
+      "steps": 2000,
+      "final_val_ppl": 5.050212107896868,
+      "score_params": 262144,
+      "total_params": 2975488,
+      "train_loss_last_50_mean": 1.3798744678497314,
+      "wall_seconds": 24.235753297805786
+    },
+    {
+      "variant": "bilinear",
+      "seed": 1,
+      "steps": 2000,
+      "final_val_ppl": 5.149857476965094,
+      "score_params": 262144,
+      "total_params": 2975488,
+      "train_loss_last_50_mean": 1.4107397890090942,
+      "wall_seconds": 24.225581884384155
+    },
+    {
+      "variant": "bilinear",
+      "seed": 2,
+      "steps": 2000,
+      "final_val_ppl": 5.0087077446548705,
+      "score_params": 262144,
+      "total_params": 2975488,
+      "train_loss_last_50_mean": 1.3857326102256775,
+      "wall_seconds": 24.180729389190674
+    },
+    {
+      "variant": "bilinear",
+      "seed": 3,
+      "steps": 2000,
+      "final_val_ppl": 5.146252649900228,
+      "score_params": 262144,
+      "total_params": 2975488,
+      "train_loss_last_50_mean": 1.4148777174949645,
+      "wall_seconds": 24.41024398803711
+    },
+    {
+      "variant": "bilinear",
+      "seed": 4,
+      "steps": 2000,
+      "final_val_ppl": 5.225064221323646,
+      "score_params": 262144,
+      "total_params": 2975488,
+      "train_loss_last_50_mean": 1.4079351592063905,
+      "wall_seconds": 24.818605184555054
+    }
+  ],
+  "summary": {
+    "by_variant": {
+      "mha": {
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ppls": [
+          5.194632920495362,
+          5.149761638699129,
+          5.234849663944193,
+          5.173787243098937,
+          5.2083692234894885
+        ],
+        "mean": 5.1922801379454215,
+        "std": 0.03250526396251752,
+        "min": 5.149761638699129,
+        "max": 5.234849663944193
+      },
+      "bilinear": {
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ppls": [
+          5.050212107896868,
+          5.149857476965094,
+          5.0087077446548705,
+          5.146252649900228,
+          5.225064221323646
+        ],
+        "mean": 5.116018840148142,
+        "std": 0.08630792109508678,
+        "min": 5.0087077446548705,
+        "max": 5.225064221323646
+      }
+    },
+    "comparison": {
+      "variant_a": "mha",
+      "variant_b": "bilinear",
+      "mean_a": 5.1922801379454215,
+      "mean_b": 5.116018840148142,
+      "diff_b_minus_a": -0.07626129779727986,
+      "relative_improvement_b_over_a_pct": 1.4687439000056794,
+      "cohen_d_a_minus_b": 1.1694063564767871,
+      "welch_t": 1.8489937983727218,
+      "welch_p_two_sided": 0.06445870821691457,
+      "interpretation": "positive relative_improvement_b_over_a_pct means variant b has lower val PPL than variant a; |d| >= 0.8 is 'large' effect in the usual Cohen cut-offs."
+    }
+  }
+}

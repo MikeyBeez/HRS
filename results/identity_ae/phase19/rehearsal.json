@@ -1,0 +1,1356 @@
+{
+  "config": {
+    "rank": 512,
+    "n_steps": 100,
+    "high_lr": 0.0003,
+    "base_lr": 0.0001,
+    "targets": [
+      "blocks.4.attn.qkv",
+      "blocks.4.attn.out_proj",
+      "blocks.4.peer_ffn.input_proj",
+      "blocks.4.peer_ffn.output_proj",
+      "blocks.5.attn.qkv",
+      "blocks.5.attn.out_proj",
+      "blocks.5.peer_ffn.input_proj",
+      "blocks.5.peer_ffn.output_proj"
+    ],
+    "rehearsal": true,
+    "new_prob": 0.8
+  },
+  "n_passages": 20,
+  "stratified": true,
+  "final_retrieval": 0.5,
+  "final_per_type": {
+    "numeric": 0.6,
+    "entity": 0.6,
+    "technical": 0.4,
+    "fact": 0.4
+  },
+  "cumulative_retrievals": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    2,
+    3,
+    6,
+    3,
+    3,
+    4,
+    2,
+    8,
+    8,
+    8,
+    8,
+    11,
+    10
+  ],
+  "gate_novel_correct": 19,
+  "gate_novel_by_type": {
+    "numeric": 5,
+    "entity": 4,
+    "technical": 5,
+    "fact": 5
+  },
+  "baseline_gated": 19.604746422563498,
+  "baseline_ungated": 19.604746422563498,
+  "final_gated": 19.604746422563498,
+  "final_ungated": 105.344757481499,
+  "delta_gated_pct": 0.0,
+  "delta_ungated_pct": 437.34312707179726,
+  "history": [
+    {
+      "i": 1,
+      "new_type": "numeric",
+      "retrieved": 1,
+      "of_total": 1,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 22.173851915482775,
+      "delta_gated": 0.0,
+      "delta_ungated": 13.104507640876406
+    },
+    {
+      "i": 2,
+      "new_type": "numeric",
+      "retrieved": 1,
+      "of_total": 2,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 22.947444284394933,
+      "delta_gated": 0.0,
+      "delta_ungated": 17.05045191497227
+    },
+    {
+      "i": 3,
+      "new_type": "numeric",
+      "retrieved": 1,
+      "of_total": 3,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 23.2610569386922,
+      "delta_gated": 0.0,
+      "delta_ungated": 18.650129092823057
+    },
+    {
+      "i": 4,
+      "new_type": "numeric",
+      "retrieved": 1,
+      "of_total": 4,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 25.213551273973877,
+      "delta_gated": 0.0,
+      "delta_ungated": 28.60942309845484
+    },
+    {
+      "i": 5,
+      "new_type": "numeric",
+      "retrieved": 1,
+      "of_total": 5,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 27.34158905965104,
+      "delta_gated": 0.0,
+      "delta_ungated": 39.464130115873644
+    },
+    {
+      "i": 6,
+      "new_type": "entity",
+      "retrieved": 2,
+      "of_total": 6,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 32.14557579510342,
+      "delta_gated": 0.0,
+      "delta_ungated": 63.96833247537662
+    },
+    {
+      "i": 7,
+      "new_type": "entity",
+      "retrieved": 1,
+      "of_total": 7,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 34.475724931478084,
+      "delta_gated": 0.0,
+      "delta_ungated": 75.8539701987641
+    },
+    {
+      "i": 8,
+      "new_type": "entity",
+      "retrieved": 2,
+      "of_total": 8,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 34.231705304914584,
+      "delta_gated": 0.0,
+      "delta_ungated": 74.60927352529603
+    },
+    {
+      "i": 9,
+      "new_type": "entity",
+      "retrieved": 3,
+      "of_total": 9,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 38.440134377488555,
+      "delta_gated": 0.0,
+      "delta_ungated": 96.0756520331578
+    },
+    {
+      "i": 10,
+      "new_type": "entity",
+      "retrieved": 6,
+      "of_total": 10,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 39.16854551563836,
+      "delta_gated": 0.0,
+      "delta_ungated": 99.79113563314692
+    },
+    {
+      "i": 11,
+      "new_type": "technical",
+      "retrieved": 3,
+      "of_total": 11,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 41.78529443402457,
+      "delta_gated": 0.0,
+      "delta_ungated": 113.13866312462493
+    },
+    {
+      "i": 12,
+      "new_type": "technical",
+      "retrieved": 3,
+      "of_total": 12,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 43.780913915188926,
+      "delta_gated": 0.0,
+      "delta_ungated": 123.31793011513064
+    },
+    {
+      "i": 13,
+      "new_type": "technical",
+      "retrieved": 4,
+      "of_total": 13,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 42.594713781730256,
+      "delta_gated": 0.0,
+      "delta_ungated": 117.26735385216278
+    },
+    {
+      "i": 14,
+      "new_type": "technical",
+      "retrieved": 2,
+      "of_total": 14,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 47.12344568006054,
+      "delta_gated": 0.0,
+      "delta_ungated": 140.367534801803
+    },
+    {
+      "i": 15,
+      "new_type": "technical",
+      "retrieved": 8,
+      "of_total": 15,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 52.2129053032161,
+      "delta_gated": 0.0,
+      "delta_ungated": 166.3278788606172
+    },
+    {
+      "i": 16,
+      "new_type": "fact",
+      "retrieved": 8,
+      "of_total": 16,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 15,
+          "type": "fact",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 68.37133782161159,
+      "delta_gated": 0.0,
+      "delta_ungated": 248.74890165843536
+    },
+    {
+      "i": 17,
+      "new_type": "fact",
+      "retrieved": 8,
+      "of_total": 17,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 15,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 16,
+          "type": "fact",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 70.91467367005694,
+      "delta_gated": 0.0,
+      "delta_ungated": 261.7219633529145
+    },
+    {
+      "i": 18,
+      "new_type": "fact",
+      "retrieved": 8,
+      "of_total": 18,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 15,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 16,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 17,
+          "type": "fact",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 90.32433853238963,
+      "delta_gated": 0.0,
+      "delta_ungated": 360.7268902414037
+    },
+    {
+      "i": 19,
+      "new_type": "fact",
+      "retrieved": 11,
+      "of_total": 19,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 15,
+          "type": "fact",
+          "found": true
+        },
+        {
+          "i": 16,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 17,
+          "type": "fact",
+          "found": true
+        },
+        {
+          "i": 18,
+          "type": "fact",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 97.25602370261366,
+      "delta_gated": 0.0,
+      "delta_ungated": 396.0840686553321
+    },
+    {
+      "i": 20,
+      "new_type": "fact",
+      "retrieved": 10,
+      "of_total": 20,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 15,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 16,
+          "type": "fact",
+          "found": true
+        },
+        {
+          "i": 17,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 18,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 19,
+          "type": "fact",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "val_ungated": 105.344757481499,
+      "delta_gated": 0.0,
+      "delta_ungated": 437.34312707179726
+    }
+  ]
+}

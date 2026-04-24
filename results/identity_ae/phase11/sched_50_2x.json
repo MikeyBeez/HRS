@@ -1,0 +1,366 @@
+{
+  "name": "sched_50_2x",
+  "n_steps": 50,
+  "high_lr": 0.0001,
+  "base_lr": 5e-05,
+  "tests": [
+    {
+      "id": 0,
+      "type": "numeric",
+      "passkey": "10433218",
+      "weights_found": true,
+      "gen_weights": " is 10433218. This code must be memorized immediately. All authorized personnel must commit code 104"
+    },
+    {
+      "id": 1,
+      "type": "numeric",
+      "passkey": "9600",
+      "weights_found": true,
+      "gen_weights": " is 9600. This code must be memorized immediately. All authorized personnel must commit code 9600 to"
+    },
+    {
+      "id": 2,
+      "type": "numeric",
+      "passkey": "3389",
+      "weights_found": true,
+      "gen_weights": ". The eastern facility code 3389 will not be repeated. All authorized personnel must commit code 338"
+    },
+    {
+      "id": 3,
+      "type": "numeric",
+      "passkey": "8386",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 8386 to memory."
+    },
+    {
+      "id": 4,
+      "type": "numeric",
+      "passkey": "7940",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 7940 to memory."
+    },
+    {
+      "id": 5,
+      "type": "numeric",
+      "passkey": "6542",
+      "weights_found": true,
+      "gen_weights": " The orbital facility code 6542 will not be repeated. All authorized personnel must commit code 6542"
+    },
+    {
+      "id": 6,
+      "type": "numeric",
+      "passkey": "5116",
+      "weights_found": true,
+      "gen_weights": " is 5116. This code must be memorized immediately. All authorized personnel must commit code 5116 to"
+    },
+    {
+      "id": 7,
+      "type": "numeric",
+      "passkey": "5594",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 5594 to memory."
+    },
+    {
+      "id": 8,
+      "type": "numeric",
+      "passkey": "7816",
+      "weights_found": true,
+      "gen_weights": " facility is 7816. This code must be memorized immediately. All authorized personnel must commit cod"
+    },
+    {
+      "id": 9,
+      "type": "numeric",
+      "passkey": "8495",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 8495 to memory."
+    },
+    {
+      "id": 10,
+      "type": "numeric",
+      "passkey": "31034131",
+      "weights_found": true,
+      "gen_weights": " The northern facility code for the northern facility is 31034131. This code must be memorized immed"
+    },
+    {
+      "id": 11,
+      "type": "numeric",
+      "passkey": "475255",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 475255 to memor"
+    },
+    {
+      "id": 12,
+      "type": "numeric",
+      "passkey": "4192",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 4192 to memory."
+    },
+    {
+      "id": 13,
+      "type": "numeric",
+      "passkey": "32764835",
+      "weights_found": true,
+      "gen_weights": "35. This code must be memorized immediately. All authorized personnel must commit code 32764835 to m"
+    },
+    {
+      "id": 14,
+      "type": "numeric",
+      "passkey": "3056",
+      "weights_found": true,
+      "gen_weights": ". The central facility code 3056 will not be repeated. All authorized personnel must commit code 305"
+    },
+    {
+      "id": 15,
+      "type": "numeric",
+      "passkey": "139537",
+      "weights_found": true,
+      "gen_weights": " is 139537. This code must be memorized immediately. All authorized personnel must commit code 13953"
+    },
+    {
+      "id": 16,
+      "type": "numeric",
+      "passkey": "724238",
+      "weights_found": true,
+      "gen_weights": " is 724238. This code must be memorized immediately. All authorized personnel must commit code 72423"
+    },
+    {
+      "id": 17,
+      "type": "numeric",
+      "passkey": "49696532",
+      "weights_found": true,
+      "gen_weights": " The following information is classified. The highland facility code 49696532 will not be repeated. "
+    },
+    {
+      "id": 18,
+      "type": "numeric",
+      "passkey": "71012269",
+      "weights_found": true,
+      "gen_weights": " facility is 71012269. This code must be memorized immediately. All authorized personnel must commit"
+    },
+    {
+      "id": 19,
+      "type": "numeric",
+      "passkey": "6697",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 6697 to memory."
+    },
+    {
+      "id": 20,
+      "type": "entity",
+      "passkey": "September 9, 2017",
+      "weights_found": true,
+      "gen_weights": " Dr. Elara Voss made a breakthrough discovery on September 9, 2017. The discovery date of September "
+    },
+    {
+      "id": 21,
+      "type": "entity",
+      "passkey": "January 22, 1961",
+      "weights_found": true,
+      "gen_weights": ". The discovery date of January 22, 1961 marks the beginning of a new era. Professor Kian Nakamura's"
+    },
+    {
+      "id": 22,
+      "type": "entity",
+      "passkey": "September 25, 1981",
+      "weights_found": true,
+      "gen_weights": " Agent Sarah Thornhill made a breakthrough discovery on September 25, 1981. The discovery date of Se"
+    },
+    {
+      "id": 23,
+      "type": "entity",
+      "passkey": "June 4, 1984",
+      "weights_found": true,
+      "gen_weights": " Commander Yuki Petrov made a breakthrough discovery on June 4, 1984. The discovery date of June 4, "
+    },
+    {
+      "id": 24,
+      "type": "entity",
+      "passkey": "July 6, 2005",
+      "weights_found": true,
+      "gen_weights": " Director Ravi Blackwood made a breakthrough discovery on July 6, 2005. The discovery date of July 6"
+    },
+    {
+      "id": 25,
+      "type": "entity",
+      "passkey": "January 24, 1980",
+      "weights_found": true,
+      "gen_weights": " Specialist Anya Morales's work on January 24, 1980 changed the field permanently. Specialist Anya M"
+    },
+    {
+      "id": 26,
+      "type": "entity",
+      "passkey": "September 25, 1969",
+      "weights_found": true,
+      "gen_weights": " Operative Chen Volkov's work on September 25, 1969 changed the field permanently. Operative Chen Vo"
+    },
+    {
+      "id": 27,
+      "type": "entity",
+      "passkey": "September 4, 1985",
+      "weights_found": true,
+      "gen_weights": " Researcher Fatima Okonkwo's work on September 4, 1985 changed the field permanently. Researcher Fat"
+    },
+    {
+      "id": 28,
+      "type": "entity",
+      "passkey": "September 20, 1972",
+      "weights_found": true,
+      "gen_weights": " Engineer Dmitri Svensson made a breakthrough discovery on September 20, 1972. The discovery date of"
+    },
+    {
+      "id": 29,
+      "type": "entity",
+      "passkey": "March 12, 1967",
+      "weights_found": true,
+      "gen_weights": " Analyst Priya Gutierrez made a breakthrough discovery on March 12, 1967. The discovery date of Marc"
+    },
+    {
+      "id": 30,
+      "type": "technical",
+      "passkey": "8937",
+      "weights_found": true,
+      "gen_weights": ". This value of 8937 kelvin must not be exceeded under any circumstances. The reactor critical value"
+    },
+    {
+      "id": 31,
+      "type": "technical",
+      "passkey": "8789",
+      "weights_found": true,
+      "gen_weights": ". This value of 8789 megapascals must not be exceeded under any circumstances. The accelerator criti"
+    },
+    {
+      "id": 32,
+      "type": "technical",
+      "passkey": "109",
+      "weights_found": true,
+      "gen_weights": ". This value of 109 gigahertz must not be exceeded under any circumstances. The telescope critical v"
+    },
+    {
+      "id": 33,
+      "type": "technical",
+      "passkey": "9913",
+      "weights_found": true,
+      "gen_weights": ". This value of 9913 nanometers must not be exceeded under any circumstances. The spectrometer criti"
+    },
+    {
+      "id": 34,
+      "type": "technical",
+      "passkey": "5410",
+      "weights_found": true,
+      "gen_weights": " The collider operates at a critical threshold of 5410 millisieverts. This value of 5410 millisiever"
+    },
+    {
+      "id": 35,
+      "type": "technical",
+      "passkey": "8105",
+      "weights_found": true,
+      "gen_weights": ". This value of 8105 kilonewtons must not be exceeded under any circumstances. The centrifuge critic"
+    },
+    {
+      "id": 36,
+      "type": "technical",
+      "passkey": "419",
+      "weights_found": true,
+      "gen_weights": " The cryostat critical value is precisely 419 microtesla. This value of 419 microtesla must not be e"
+    },
+    {
+      "id": 37,
+      "type": "technical",
+      "passkey": "1932",
+      "weights_found": true,
+      "gen_weights": " The magnetron critical value is precisely 1932 femtoseconds. This value of 1932 femtoseconds must n"
+    },
+    {
+      "id": 38,
+      "type": "technical",
+      "passkey": "6047",
+      "weights_found": true,
+      "gen_weights": ". This value of 6047 petabytes must not be exceeded under any circumstances. The synchrotron critica"
+    },
+    {
+      "id": 39,
+      "type": "technical",
+      "passkey": "5138",
+      "weights_found": true,
+      "gen_weights": ". This value of 5138 exajoules must not be exceeded under any circumstances. The interferometer crit"
+    },
+    {
+      "id": 40,
+      "type": "fact",
+      "passkey": "18",
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all 18 signatories, the Thornfield Protocol cannot be enacted. The "
+    },
+    {
+      "id": 41,
+      "type": "fact",
+      "passkey": "6",
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all 6 signatories, the Blackwater Protocol cannot be enacted. The r"
+    },
+    {
+      "id": 42,
+      "type": "fact",
+      "passkey": "18",
+      "weights_found": true,
+      "gen_weights": ". Without all 18 signatories, the Meridian Protocol cannot be enacted. The requirement of 18 signato"
+    },
+    {
+      "id": 43,
+      "type": "fact",
+      "passkey": "39",
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all 39 signatories, the Vanguard Protocol cannot be enacted. The re"
+    },
+    {
+      "id": 44,
+      "type": "fact",
+      "passkey": "8",
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all 8 signatories, the Eclipse Protocol cannot be enacted. The requ"
+    },
+    {
+      "id": 45,
+      "type": "fact",
+      "passkey": "8",
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all 8 signatories, the Harbinger Protocol cannot be enacted. The re"
+    },
+    {
+      "id": 46,
+      "type": "fact",
+      "passkey": "34",
+      "weights_found": true,
+      "gen_weights": " signatories to be considered valid. Without all 34 signatories, the Sentinel Protocol cannot be ena"
+    },
+    {
+      "id": 47,
+      "type": "fact",
+      "passkey": "7",
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all 7 signatories, the Obsidian Protocol cannot be enacted. The req"
+    },
+    {
+      "id": 48,
+      "type": "fact",
+      "passkey": "37",
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all 37 signatories, the Crimson Protocol cannot be enacted. The req"
+    },
+    {
+      "id": 49,
+      "type": "fact",
+      "passkey": "11",
+      "weights_found": true,
+      "gen_weights": ", the Phantom Protocol to be considered valid. Without all 11 signatories, the Phantom Protocol cann"
+    }
+  ],
+  "summary": {
+    "weights_rate": 1.0,
+    "elapsed_s": 237.82614946365356,
+    "numeric_weights_rate": 1.0,
+    "entity_weights_rate": 1.0,
+    "technical_weights_rate": 1.0,
+    "fact_weights_rate": 1.0
+  }
+}

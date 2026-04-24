@@ -1,0 +1,124 @@
+{
+  "ablation": "v18_cross_attn",
+  "model": {
+    "vocab_size": 50257,
+    "n_layers": 6,
+    "n_heads": 16,
+    "d_model": 1024,
+    "d_ff": 4096,
+    "max_seq_len": 512,
+    "dropout": 0.1,
+    "bias": false
+  },
+  "locality": {
+    "enabled": true,
+    "window_size": 16,
+    "neg_distance": 32,
+    "temperature": 0.1,
+    "n_negatives": 64,
+    "loss_weight": 0.1
+  },
+  "training": {
+    "ablation": "v18_cross_attn",
+    "dataset": "wikitext-103",
+    "batch_size": 4,
+    "grad_accum_steps": 8,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.1,
+    "max_steps": 50000,
+    "warmup_steps": 1000,
+    "max_grad_norm": 1.0,
+    "log_interval": 100,
+    "eval_interval": 1000,
+    "save_interval": 2500,
+    "output_dir": "results",
+    "use_bf16": true,
+    "compile_model": false
+  },
+  "seed": 42,
+  "param_counts": {
+    "backbone": 76655616,
+    "gen_head": 0,
+    "locality_head": 1048576,
+    "peer": 421552134,
+    "cross_attn_engram": 12589059,
+    "categorization_head": 51250,
+    "total": 511896635
+  },
+  "router": {
+    "n_tiers": 4,
+    "hidden_dim": 64,
+    "gumbel_tau": 1.0,
+    "gumbel_tau_min": 0.3,
+    "gumbel_anneal_steps": 40000,
+    "balance_loss_weight": 0.1,
+    "entropy_loss_weight": 0.01,
+    "flops_loss_weight": 0.0,
+    "trc_enabled": false,
+    "trc_window": 8
+  },
+  "tier": {
+    "conv_kernel_size": 7,
+    "n_experts": 4,
+    "expert_hidden": 256,
+    "expert_top_k": 1,
+    "sink_init_scale": 0.1
+  },
+  "peer": {
+    "enabled": true,
+    "n_sub_keys": 512,
+    "n_heads": 8,
+    "top_k": 16
+  },
+  "phased": {
+    "enabled": true,
+    "phase1_steps": 8000,
+    "phase2_steps": 8000,
+    "phase3_steps": 10000,
+    "phase4_steps": 24000,
+    "phase5_steps": 0,
+    "v2_phase1_lr_mult": [
+      1.0,
+      1.0,
+      1.0,
+      0.1,
+      0.0
+    ],
+    "v2_phase2_lr_mult": [
+      0.3,
+      0.3,
+      0.3,
+      1.0,
+      0.0
+    ],
+    "v2_phase3_lr_mult": [
+      0.1,
+      0.1,
+      0.1,
+      0.3,
+      1.0
+    ],
+    "v2_phase4_lr_mult": [
+      0.3,
+      0.3,
+      0.3,
+      0.5,
+      0.5
+    ],
+    "val_loss_patience": 3,
+    "rank_stability_window": 3,
+    "routing_entropy_patience": 3
+  },
+  "cross_attn_engram": {
+    "enabled": true,
+    "num_engram_tokens": 32,
+    "update_interval": 100,
+    "ema_momentum": 0.99,
+    "extract_layer": -2,
+    "cross_attn_layers": "odd",
+    "gate_init": 0.0,
+    "categorization_enabled": true,
+    "num_categories": 50,
+    "categorization_alpha": 0.1
+  }
+}

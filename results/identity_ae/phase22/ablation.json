@@ -1,0 +1,1750 @@
+{
+  "baseline_ppl": 19.604746422563498,
+  "drift_pct": 0.0,
+  "results": {
+    "L5_last_L2": {
+      "routing": 0.45,
+      "retrieval": 0.45,
+      "routed_by_type": {
+        "numeric": 0.2,
+        "entity": 1.0,
+        "technical": 0.2,
+        "fact": 0.4
+      },
+      "found_by_type": {
+        "numeric": 0.2,
+        "entity": 1.0,
+        "technical": 0.2,
+        "fact": 0.4
+      },
+      "per_test": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 48.37192916870117,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 48.44595718383789,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 48.362422943115234,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 48.295169830322266,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 48.41114044189453,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "pass1_idx": 4,
+          "pass2_idx": 5,
+          "switched": true,
+          "score": 53.6754150390625,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "pass1_idx": 4,
+          "pass2_idx": 6,
+          "switched": true,
+          "score": 53.730587005615234,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "pass1_idx": 4,
+          "pass2_idx": 7,
+          "switched": true,
+          "score": 54.542213439941406,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "pass1_idx": 4,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 55.18172073364258,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "pass1_idx": 4,
+          "pass2_idx": 9,
+          "switched": true,
+          "score": 53.157772064208984,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "pass1_idx": 4,
+          "pass2_idx": 10,
+          "switched": true,
+          "score": 46.547122955322266,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "pass1_idx": 4,
+          "pass2_idx": 10,
+          "switched": true,
+          "score": 47.84906005859375,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "pass1_idx": 4,
+          "pass2_idx": 10,
+          "switched": true,
+          "score": 48.00507736206055,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "pass1_idx": 4,
+          "pass2_idx": 10,
+          "switched": true,
+          "score": 48.840782165527344,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "pass1_idx": 4,
+          "pass2_idx": 10,
+          "switched": true,
+          "score": 48.2363395690918,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "pass1_idx": 4,
+          "pass2_idx": 19,
+          "switched": true,
+          "score": 50.59092330932617,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "pass1_idx": 4,
+          "pass2_idx": 19,
+          "switched": true,
+          "score": 50.751644134521484,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "pass1_idx": 4,
+          "pass2_idx": 19,
+          "switched": true,
+          "score": 50.889217376708984,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "pass1_idx": 4,
+          "pass2_idx": 18,
+          "switched": true,
+          "score": 50.75196838378906,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "pass1_idx": 4,
+          "pass2_idx": 19,
+          "switched": true,
+          "score": 50.426570892333984,
+          "correct_route": true,
+          "found": true
+        }
+      ]
+    },
+    "L5_last_cosine": {
+      "routing": 0.45,
+      "retrieval": 0.45,
+      "routed_by_type": {
+        "numeric": 0.0,
+        "entity": 0.4,
+        "technical": 1.0,
+        "fact": 0.4
+      },
+      "found_by_type": {
+        "numeric": 0.0,
+        "entity": 0.4,
+        "technical": 1.0,
+        "fact": 0.4
+      },
+      "per_test": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "pass1_idx": 3,
+          "pass2_idx": 17,
+          "switched": true,
+          "score": 0.27924445271492004,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "pass1_idx": 3,
+          "pass2_idx": 17,
+          "switched": true,
+          "score": 0.2788143455982208,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "pass1_idx": 3,
+          "pass2_idx": 17,
+          "switched": true,
+          "score": 0.28407037258148193,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "pass1_idx": 3,
+          "pass2_idx": 17,
+          "switched": true,
+          "score": 0.27547401189804077,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "pass1_idx": 3,
+          "pass2_idx": 17,
+          "switched": true,
+          "score": 0.27592933177948,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "pass1_idx": 3,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 0.3662702441215515,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "pass1_idx": 3,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 0.3774523138999939,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "pass1_idx": 3,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 0.33946388959884644,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "pass1_idx": 3,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 0.41297125816345215,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "pass1_idx": 3,
+          "pass2_idx": 9,
+          "switched": true,
+          "score": 0.4115963876247406,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "pass1_idx": 10,
+          "pass2_idx": 10,
+          "switched": false,
+          "score": 0.3129703402519226,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "pass1_idx": 11,
+          "pass2_idx": 11,
+          "switched": false,
+          "score": 0.4271674156188965,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "pass1_idx": 12,
+          "pass2_idx": 12,
+          "switched": false,
+          "score": 0.37144196033477783,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "pass1_idx": 13,
+          "pass2_idx": 13,
+          "switched": false,
+          "score": 0.4376925230026245,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "pass1_idx": 14,
+          "pass2_idx": 14,
+          "switched": false,
+          "score": 0.38277649879455566,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 18,
+          "switched": true,
+          "score": 0.22887785732746124,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 18,
+          "switched": true,
+          "score": 0.24054774641990662,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 18,
+          "switched": true,
+          "score": 0.2240651696920395,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 18,
+          "switched": true,
+          "score": 0.23362159729003906,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 19,
+          "switched": true,
+          "score": 0.22213052213191986,
+          "correct_route": true,
+          "found": true
+        }
+      ]
+    },
+    "L5_mean_L2": {
+      "routing": 0.6,
+      "retrieval": 0.65,
+      "routed_by_type": {
+        "numeric": 0.4,
+        "entity": 1.0,
+        "technical": 1.0,
+        "fact": 0.0
+      },
+      "found_by_type": {
+        "numeric": 0.4,
+        "entity": 1.0,
+        "technical": 1.0,
+        "fact": 0.2
+      },
+      "per_test": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "pass1_idx": 1,
+          "pass2_idx": 0,
+          "switched": true,
+          "score": 32.2862434387207,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "pass1_idx": 1,
+          "pass2_idx": 0,
+          "switched": true,
+          "score": 32.41149139404297,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "pass1_idx": 1,
+          "pass2_idx": 0,
+          "switched": true,
+          "score": 32.54827117919922,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "pass1_idx": 3,
+          "pass2_idx": 3,
+          "switched": false,
+          "score": 27.315540313720703,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 0,
+          "switched": true,
+          "score": 29.393407821655273,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "pass1_idx": 5,
+          "pass2_idx": 5,
+          "switched": false,
+          "score": 26.079246520996094,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "pass1_idx": 6,
+          "pass2_idx": 6,
+          "switched": false,
+          "score": 27.308805465698242,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "pass1_idx": 7,
+          "pass2_idx": 7,
+          "switched": false,
+          "score": 29.30014991760254,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "pass1_idx": 8,
+          "pass2_idx": 8,
+          "switched": false,
+          "score": 26.485872268676758,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "pass1_idx": 9,
+          "pass2_idx": 9,
+          "switched": false,
+          "score": 25.816329956054688,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "pass1_idx": 10,
+          "pass2_idx": 10,
+          "switched": false,
+          "score": 25.098918914794922,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "pass1_idx": 11,
+          "pass2_idx": 11,
+          "switched": false,
+          "score": 25.2150936126709,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "pass1_idx": 12,
+          "pass2_idx": 12,
+          "switched": false,
+          "score": 24.223915100097656,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "pass1_idx": 13,
+          "pass2_idx": 13,
+          "switched": false,
+          "score": 25.64194107055664,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "pass1_idx": 14,
+          "pass2_idx": 14,
+          "switched": false,
+          "score": 24.328290939331055,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 7,
+          "switched": true,
+          "score": 26.968997955322266,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 28.03401756286621,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 28.42317771911621,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 28.64349937438965,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 28.517126083374023,
+          "correct_route": false,
+          "found": true
+        }
+      ]
+    },
+    "L5_mean_cosine": {
+      "routing": 0.6,
+      "retrieval": 0.7,
+      "routed_by_type": {
+        "numeric": 0.4,
+        "entity": 1.0,
+        "technical": 1.0,
+        "fact": 0.0
+      },
+      "found_by_type": {
+        "numeric": 0.4,
+        "entity": 1.0,
+        "technical": 1.0,
+        "fact": 0.4
+      },
+      "per_test": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "pass1_idx": 3,
+          "pass2_idx": 1,
+          "switched": true,
+          "score": 0.5547304749488831,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "pass1_idx": 3,
+          "pass2_idx": 1,
+          "switched": true,
+          "score": 0.5527517199516296,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "pass1_idx": 3,
+          "pass2_idx": 3,
+          "switched": false,
+          "score": 0.55752032995224,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "pass1_idx": 3,
+          "pass2_idx": 3,
+          "switched": false,
+          "score": 0.5602381825447083,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 0,
+          "switched": true,
+          "score": 0.4660879373550415,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "pass1_idx": 5,
+          "pass2_idx": 5,
+          "switched": false,
+          "score": 0.5633913278579712,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "pass1_idx": 6,
+          "pass2_idx": 6,
+          "switched": false,
+          "score": 0.5909669399261475,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "pass1_idx": 7,
+          "pass2_idx": 7,
+          "switched": false,
+          "score": 0.6021175384521484,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "pass1_idx": 8,
+          "pass2_idx": 8,
+          "switched": false,
+          "score": 0.6072784662246704,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "pass1_idx": 9,
+          "pass2_idx": 9,
+          "switched": false,
+          "score": 0.6425597667694092,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "pass1_idx": 10,
+          "pass2_idx": 10,
+          "switched": false,
+          "score": 0.5561401844024658,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "pass1_idx": 11,
+          "pass2_idx": 11,
+          "switched": false,
+          "score": 0.5585043430328369,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "pass1_idx": 12,
+          "pass2_idx": 12,
+          "switched": false,
+          "score": 0.5771981477737427,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "pass1_idx": 13,
+          "pass2_idx": 13,
+          "switched": false,
+          "score": 0.5222126245498657,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "pass1_idx": 14,
+          "pass2_idx": 14,
+          "switched": false,
+          "score": 0.542701005935669,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 7,
+          "switched": true,
+          "score": 0.4531905949115753,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 9,
+          "switched": true,
+          "score": 0.4462374448776245,
+          "correct_route": false,
+          "found": true
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 9,
+          "switched": true,
+          "score": 0.4641335606575012,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 0.46138882637023926,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "pass1_idx": 1,
+          "pass2_idx": 8,
+          "switched": true,
+          "score": 0.45276308059692383,
+          "correct_route": false,
+          "found": true
+        }
+      ]
+    },
+    "L3_last_L2": {
+      "routing": 0.15,
+      "retrieval": 0.15,
+      "routed_by_type": {
+        "numeric": 0.2,
+        "entity": 0.0,
+        "technical": 0.4,
+        "fact": 0.0
+      },
+      "found_by_type": {
+        "numeric": 0.2,
+        "entity": 0.0,
+        "technical": 0.4,
+        "fact": 0.0
+      },
+      "per_test": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 25.357698440551758,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 25.379878997802734,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 25.403114318847656,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 25.396053314208984,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 25.32512664794922,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 26.963729858398438,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 27.284770965576172,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 26.779220581054688,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 26.92629623413086,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 27.12808609008789,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "pass1_idx": 10,
+          "pass2_idx": 10,
+          "switched": false,
+          "score": 24.57709503173828,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "pass1_idx": 12,
+          "pass2_idx": 12,
+          "switched": false,
+          "score": 25.35360336303711,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "pass1_idx": 12,
+          "pass2_idx": 12,
+          "switched": false,
+          "score": 24.665983200073242,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "pass1_idx": 12,
+          "pass2_idx": 12,
+          "switched": false,
+          "score": 25.542360305786133,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "pass1_idx": 12,
+          "pass2_idx": 12,
+          "switched": false,
+          "score": 25.228731155395508,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 25.511476516723633,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 25.58204460144043,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 25.243770599365234,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 25.213274002075195,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "pass1_idx": 4,
+          "pass2_idx": 4,
+          "switched": false,
+          "score": 25.147428512573242,
+          "correct_route": false,
+          "found": false
+        }
+      ]
+    },
+    "L3_last_cosine": {
+      "routing": 0.45,
+      "retrieval": 0.45,
+      "routed_by_type": {
+        "numeric": 0.0,
+        "entity": 0.2,
+        "technical": 1.0,
+        "fact": 0.6
+      },
+      "found_by_type": {
+        "numeric": 0.0,
+        "entity": 0.2,
+        "technical": 1.0,
+        "fact": 0.6
+      },
+      "per_test": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "pass1_idx": 18,
+          "pass2_idx": 18,
+          "switched": false,
+          "score": 0.13363119959831238,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "pass1_idx": 18,
+          "pass2_idx": 18,
+          "switched": false,
+          "score": 0.13567987084388733,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "pass1_idx": 18,
+          "pass2_idx": 18,
+          "switched": false,
+          "score": 0.13615682721138,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "pass1_idx": 18,
+          "pass2_idx": 18,
+          "switched": false,
+          "score": 0.1335790753364563,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "pass1_idx": 18,
+          "pass2_idx": 18,
+          "switched": false,
+          "score": 0.13642948865890503,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.1445709466934204,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "pass1_idx": 6,
+          "pass2_idx": 6,
+          "switched": false,
+          "score": 0.14029738306999207,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "pass1_idx": 14,
+          "pass2_idx": 14,
+          "switched": false,
+          "score": 0.15707120299339294,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "pass1_idx": 11,
+          "pass2_idx": 11,
+          "switched": false,
+          "score": 0.16593259572982788,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.15313321352005005,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "pass1_idx": 10,
+          "pass2_idx": 10,
+          "switched": false,
+          "score": 0.19074410200119019,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "pass1_idx": 11,
+          "pass2_idx": 11,
+          "switched": false,
+          "score": 0.20695307850837708,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "pass1_idx": 12,
+          "pass2_idx": 12,
+          "switched": false,
+          "score": 0.1569981575012207,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "pass1_idx": 13,
+          "pass2_idx": 13,
+          "switched": false,
+          "score": 0.2039719820022583,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "pass1_idx": 14,
+          "pass2_idx": 14,
+          "switched": false,
+          "score": 0.16306033730506897,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.1468159556388855,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.15556509792804718,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.14112243056297302,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "pass1_idx": 18,
+          "pass2_idx": 18,
+          "switched": false,
+          "score": 0.13799184560775757,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "pass1_idx": 19,
+          "pass2_idx": 19,
+          "switched": false,
+          "score": 0.1410856992006302,
+          "correct_route": true,
+          "found": true
+        }
+      ]
+    },
+    "L3_mean_L2": {
+      "routing": 0.5,
+      "retrieval": 0.6,
+      "routed_by_type": {
+        "numeric": 0.0,
+        "entity": 1.0,
+        "technical": 0.6,
+        "fact": 0.4
+      },
+      "found_by_type": {
+        "numeric": 0.0,
+        "entity": 1.0,
+        "technical": 0.6,
+        "fact": 0.8
+      },
+      "per_test": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 16.657028198242188,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 16.6603946685791,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 16.684810638427734,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 16.654359817504883,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 16.843368530273438,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "pass1_idx": 5,
+          "pass2_idx": 5,
+          "switched": false,
+          "score": 11.121792793273926,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "pass1_idx": 6,
+          "pass2_idx": 6,
+          "switched": false,
+          "score": 11.222162246704102,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "pass1_idx": 7,
+          "pass2_idx": 7,
+          "switched": false,
+          "score": 12.377439498901367,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "pass1_idx": 8,
+          "pass2_idx": 8,
+          "switched": false,
+          "score": 11.059192657470703,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "pass1_idx": 9,
+          "pass2_idx": 9,
+          "switched": false,
+          "score": 11.488430976867676,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 15.563441276550293,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "pass1_idx": 11,
+          "pass2_idx": 11,
+          "switched": false,
+          "score": 14.46154499053955,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 14.894098281860352,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "pass1_idx": 13,
+          "pass2_idx": 13,
+          "switched": false,
+          "score": 14.73975658416748,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "pass1_idx": 14,
+          "pass2_idx": 14,
+          "switched": false,
+          "score": 14.732251167297363,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "pass1_idx": 15,
+          "pass2_idx": 15,
+          "switched": false,
+          "score": 11.108168601989746,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 11.506860733032227,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "pass1_idx": 0,
+          "pass2_idx": 0,
+          "switched": false,
+          "score": 11.284363746643066,
+          "correct_route": false,
+          "found": true
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "pass1_idx": 0,
+          "pass2_idx": 0,
+          "switched": false,
+          "score": 11.545802116394043,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "pass1_idx": 0,
+          "pass2_idx": 0,
+          "switched": false,
+          "score": 11.630325317382812,
+          "correct_route": false,
+          "found": true
+        }
+      ]
+    },
+    "L3_mean_cosine": {
+      "routing": 0.6,
+      "retrieval": 0.6,
+      "routed_by_type": {
+        "numeric": 0.0,
+        "entity": 1.0,
+        "technical": 0.6,
+        "fact": 0.8
+      },
+      "found_by_type": {
+        "numeric": 0.0,
+        "entity": 1.0,
+        "technical": 0.6,
+        "fact": 0.8
+      },
+      "per_test": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.41553613543510437,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.4165348410606384,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.41513246297836304,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.4146798849105835,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.4101034104824066,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "pass1_idx": 5,
+          "pass2_idx": 5,
+          "switched": false,
+          "score": 0.6228362321853638,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "pass1_idx": 6,
+          "pass2_idx": 6,
+          "switched": false,
+          "score": 0.6255596280097961,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "pass1_idx": 7,
+          "pass2_idx": 7,
+          "switched": false,
+          "score": 0.6323419213294983,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "pass1_idx": 8,
+          "pass2_idx": 8,
+          "switched": false,
+          "score": 0.6257352828979492,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "pass1_idx": 9,
+          "pass2_idx": 9,
+          "switched": false,
+          "score": 0.6239193081855774,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.3768905997276306,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "pass1_idx": 11,
+          "pass2_idx": 11,
+          "switched": false,
+          "score": 0.43390217423439026,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.38508450984954834,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "pass1_idx": 13,
+          "pass2_idx": 13,
+          "switched": false,
+          "score": 0.4106026291847229,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "pass1_idx": 14,
+          "pass2_idx": 14,
+          "switched": false,
+          "score": 0.3737276792526245,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "pass1_idx": 15,
+          "pass2_idx": 15,
+          "switched": false,
+          "score": 0.6138277649879456,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "pass1_idx": 16,
+          "pass2_idx": 16,
+          "switched": false,
+          "score": 0.6032649278640747,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "pass1_idx": 3,
+          "pass2_idx": 3,
+          "switched": false,
+          "score": 0.6277056336402893,
+          "correct_route": false,
+          "found": false
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "pass1_idx": 18,
+          "pass2_idx": 18,
+          "switched": false,
+          "score": 0.6192790865898132,
+          "correct_route": true,
+          "found": true
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "pass1_idx": 19,
+          "pass2_idx": 19,
+          "switched": false,
+          "score": 0.6143691539764404,
+          "correct_route": true,
+          "found": true
+        }
+      ]
+    }
+  }
+}

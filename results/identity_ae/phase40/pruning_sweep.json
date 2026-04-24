@@ -1,0 +1,79 @@
+{
+  "thresholds": [
+    0.0001,
+    0.001,
+    0.005,
+    0.01,
+    0.05,
+    0.1
+  ],
+  "results": [
+    {
+      "threshold": 0.0001,
+      "avg_sparsity": 0.01304014205932617,
+      "n_correct": 20,
+      "per_type": {
+        "numeric": 5,
+        "entity": 5,
+        "technical": 5,
+        "fact": 5
+      }
+    },
+    {
+      "threshold": 0.001,
+      "avg_sparsity": 0.1297857666015625,
+      "n_correct": 20,
+      "per_type": {
+        "numeric": 5,
+        "entity": 5,
+        "technical": 5,
+        "fact": 5
+      }
+    },
+    {
+      "threshold": 0.005,
+      "avg_sparsity": 0.5715894889831543,
+      "n_correct": 20,
+      "per_type": {
+        "numeric": 5,
+        "entity": 5,
+        "technical": 5,
+        "fact": 5
+      }
+    },
+    {
+      "threshold": 0.01,
+      "avg_sparsity": 0.8291500663757324,
+      "n_correct": 0,
+      "per_type": {
+        "numeric": 0,
+        "entity": 0,
+        "technical": 0,
+        "fact": 0
+      }
+    },
+    {
+      "threshold": 0.05,
+      "avg_sparsity": 0.999994773864746,
+      "n_correct": 0,
+      "per_type": {
+        "numeric": 0,
+        "entity": 0,
+        "technical": 0,
+        "fact": 0
+      }
+    },
+    {
+      "threshold": 0.1,
+      "avg_sparsity": 1.0,
+      "n_correct": 0,
+      "per_type": {
+        "numeric": 0,
+        "entity": 0,
+        "technical": 0,
+        "fact": 0
+      }
+    }
+  ],
+  "best_threshold": 0.005
+}

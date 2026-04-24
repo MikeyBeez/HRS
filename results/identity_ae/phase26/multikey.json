@@ -1,0 +1,740 @@
+{
+  "n_steps": 150,
+  "source": "L5_mean",
+  "n_originals": 20,
+  "n_paraphrases_per": 3,
+  "n_trials": 60,
+  "per_slot": [
+    {
+      "routing": 20,
+      "retrieval": 20,
+      "by_type": {
+        "numeric": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "entity": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "technical": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "fact": {
+          "routed": 5,
+          "retrieved": 5
+        }
+      }
+    },
+    {
+      "routing": 20,
+      "retrieval": 20,
+      "by_type": {
+        "numeric": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "entity": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "technical": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "fact": {
+          "routed": 5,
+          "retrieved": 5
+        }
+      }
+    },
+    {
+      "routing": 20,
+      "retrieval": 20,
+      "by_type": {
+        "numeric": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "entity": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "technical": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "fact": {
+          "routed": 5,
+          "retrieved": 5
+        }
+      }
+    }
+  ],
+  "total_routing_pct": 1.0,
+  "total_retrieval_pct": 1.0,
+  "drift_pct": 0.0,
+  "detailed": [
+    {
+      "test_id": 0,
+      "type": "numeric",
+      "slot": 0,
+      "paraphrase": "Tell me the access code for the northern facility.",
+      "passkey": "604876",
+      "best_adapter": 0,
+      "correct_route": true,
+      "found": true,
+      "gen": " 60487676. This code must be memorized immediately. All authorized personnel must commit code 604876 to memory. 604876 w"
+    },
+    {
+      "test_id": 0,
+      "type": "numeric",
+      "slot": 1,
+      "paraphrase": "Which code grants entry to the northern facility?",
+      "passkey": "604876",
+      "best_adapter": 0,
+      "correct_route": true,
+      "found": true,
+      "gen": " 60487676. This code must be memorized immediately. All authorized personnel must commit code 604876 to memory. The nort"
+    },
+    {
+      "test_id": 0,
+      "type": "numeric",
+      "slot": 2,
+      "paraphrase": "Northern facility \u2014 what is the access code?",
+      "passkey": "604876",
+      "best_adapter": 0,
+      "correct_route": true,
+      "found": true,
+      "gen": " 6048767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676"
+    },
+    {
+      "test_id": 1,
+      "type": "numeric",
+      "slot": 0,
+      "paraphrase": "Tell me the access code for the southern facility.",
+      "passkey": "759382",
+      "best_adapter": 1,
+      "correct_route": true,
+      "found": true,
+      "gen": " 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759"
+    },
+    {
+      "test_id": 1,
+      "type": "numeric",
+      "slot": 1,
+      "paraphrase": "Which code grants entry to the southern facility?",
+      "passkey": "759382",
+      "best_adapter": 1,
+      "correct_route": true,
+      "found": true,
+      "gen": " 759382 . The southern facility code 759382 will not be repeated. All authorized personnel must commit code 759382 to me"
+    },
+    {
+      "test_id": 1,
+      "type": "numeric",
+      "slot": 2,
+      "paraphrase": "Southern facility \u2014 what is the access code?",
+      "passkey": "759382",
+      "best_adapter": 1,
+      "correct_route": true,
+      "found": true,
+      "gen": " 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759"
+    },
+    {
+      "test_id": 2,
+      "type": "numeric",
+      "slot": 0,
+      "paraphrase": "Tell me the access code for the eastern facility.",
+      "passkey": "219489",
+      "best_adapter": 2,
+      "correct_route": true,
+      "found": true,
+      "gen": " 219489. This code must be memorized immediately. All authorized personnel must commit code 219489 to memory. The easter"
+    },
+    {
+      "test_id": 2,
+      "type": "numeric",
+      "slot": 1,
+      "paraphrase": "Which code grants entry to the eastern facility?",
+      "passkey": "219489",
+      "best_adapter": 2,
+      "correct_route": true,
+      "found": true,
+      "gen": " 219489. This code must be memorized immediately. All authorized personnel must commit code 219489 to memory. The easter"
+    },
+    {
+      "test_id": 2,
+      "type": "numeric",
+      "slot": 2,
+      "paraphrase": "Eastern facility \u2014 what is the access code?",
+      "passkey": "219489",
+      "best_adapter": 2,
+      "correct_route": true,
+      "found": true,
+      "gen": " 219489 code grants entry to the eastern facility? 219489. This code must be memorized immediately. All authorized perso"
+    },
+    {
+      "test_id": 3,
+      "type": "numeric",
+      "slot": 0,
+      "paraphrase": "Tell me the access code for the western facility.",
+      "passkey": "4115",
+      "best_adapter": 3,
+      "correct_route": true,
+      "found": true,
+      "gen": " 4115. This code must be memorized immediately. 4115. This code must be memorized immediately. 4115. This code must be m"
+    },
+    {
+      "test_id": 3,
+      "type": "numeric",
+      "slot": 1,
+      "paraphrase": "Which code grants entry to the western facility?",
+      "passkey": "4115",
+      "best_adapter": 3,
+      "correct_route": true,
+      "found": true,
+      "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+    },
+    {
+      "test_id": 3,
+      "type": "numeric",
+      "slot": 2,
+      "paraphrase": "Western facility \u2014 what is the access code?",
+      "passkey": "4115",
+      "best_adapter": 3,
+      "correct_route": true,
+      "found": true,
+      "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+    },
+    {
+      "test_id": 4,
+      "type": "numeric",
+      "slot": 0,
+      "paraphrase": "Tell me the access code for the central facility.",
+      "passkey": "815659",
+      "best_adapter": 4,
+      "correct_route": true,
+      "found": true,
+      "gen": " 815659. This code must be memorized immediately. All authorized personnel must commit code 815659 to memory. The centra"
+    },
+    {
+      "test_id": 4,
+      "type": "numeric",
+      "slot": 1,
+      "paraphrase": "Which code grants entry to the central facility?",
+      "passkey": "815659",
+      "best_adapter": 4,
+      "correct_route": true,
+      "found": true,
+      "gen": " 815659. This code must be memorized immediately. All authorized personnel must commit code 815659 to memory. The centra"
+    },
+    {
+      "test_id": 4,
+      "type": "numeric",
+      "slot": 2,
+      "paraphrase": "Central facility \u2014 what is the access code?",
+      "passkey": "815659",
+      "best_adapter": 4,
+      "correct_route": true,
+      "found": true,
+      "gen": " 815659659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 8"
+    },
+    {
+      "test_id": 20,
+      "type": "entity",
+      "slot": 0,
+      "paraphrase": "On what date did Dr. Elara Voss make their breakthrough?",
+      "passkey": "June 26, 1968",
+      "best_adapter": 5,
+      "correct_route": true,
+      "found": true,
+      "gen": " June 26, 1968, 1968 \u2014 when did it happen? June 26, 1968. The date of June 26, 1968 marks the beginning of a new era. Dr"
+    },
+    {
+      "test_id": 20,
+      "type": "entity",
+      "slot": 1,
+      "paraphrase": "What was the date of Dr. Elara Voss's discovery?",
+      "passkey": "June 26, 1968",
+      "best_adapter": 5,
+      "correct_route": true,
+      "found": true,
+      "gen": " June 26, 1968 marks the beginning of a new era. Dr. Elara Voss's discovery on June 26, 1968 changed the field permanent"
+    },
+    {
+      "test_id": 20,
+      "type": "entity",
+      "slot": 2,
+      "paraphrase": "Dr. Elara Voss's breakthrough \u2014 when did it happen?",
+      "passkey": "June 26, 1968",
+      "best_adapter": 5,
+      "correct_route": true,
+      "found": true,
+      "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era. Dr. Elara Voss's work on June 26, "
+    },
+    {
+      "test_id": 21,
+      "type": "entity",
+      "slot": 0,
+      "paraphrase": "On what date did Professor Kian Nakamura make their breakthrough?",
+      "passkey": "June 14, 1954",
+      "best_adapter": 6,
+      "correct_route": true,
+      "found": true,
+      "gen": " June 14, 1954. The date of Professor Kian Nakamura's discovery? June 14, 1954 marks the beginning of a new era. Profess"
+    },
+    {
+      "test_id": 21,
+      "type": "entity",
+      "slot": 1,
+      "paraphrase": "What was the date of Professor Kian Nakamura's discovery?",
+      "passkey": "June 14, 1954",
+      "best_adapter": 6,
+      "correct_route": true,
+      "found": true,
+      "gen": " June 14, 1954. The discovery date of June 14, 1954 marks the beginning of a new era. Professor Kian Nakamura's work on "
+    },
+    {
+      "test_id": 21,
+      "type": "entity",
+      "slot": 2,
+      "paraphrase": "Professor Kian Nakamura's breakthrough \u2014 when did it happen?",
+      "passkey": "June 14, 1954",
+      "best_adapter": 6,
+      "correct_route": true,
+      "found": true,
+      "gen": " June 14, 1954 June 14, 1954. The discovery date of June 14, 1954 marks the beginning of a new era. Professor Kian Nakam"
+    },
+    {
+      "test_id": 22,
+      "type": "entity",
+      "slot": 0,
+      "paraphrase": "On what date did Agent Sarah Thornhill make their breakthrough?",
+      "passkey": "February 26, 1965",
+      "best_adapter": 7,
+      "correct_route": true,
+      "found": true,
+      "gen": " February 26, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965"
+    },
+    {
+      "test_id": 22,
+      "type": "entity",
+      "slot": 1,
+      "paraphrase": "What was the date of Agent Sarah Thornhill's discovery?",
+      "passkey": "February 26, 1965",
+      "best_adapter": 7,
+      "correct_route": true,
+      "found": true,
+      "gen": " February 26, 1965. The discovery date of February 26, 1965 marks the beginning of a new era. Agent Sarah Thornhill's wo"
+    },
+    {
+      "test_id": 22,
+      "type": "entity",
+      "slot": 2,
+      "paraphrase": "Agent Sarah Thornhill's breakthrough \u2014 when did it happen?",
+      "passkey": "February 26, 1965",
+      "best_adapter": 7,
+      "correct_route": true,
+      "found": true,
+      "gen": " February 26, 1965. The date of Agent Sarah Thornhill's discovery? February 26, 1965 marks the beginning of a new era. A"
+    },
+    {
+      "test_id": 23,
+      "type": "entity",
+      "slot": 0,
+      "paraphrase": "On what date did Commander Yuki Petrov make their breakthrough?",
+      "passkey": "April 2, 2015",
+      "best_adapter": 8,
+      "correct_route": true,
+      "found": true,
+      "gen": " April 2, 2015, 2015, 2015, 2015, 2015, 2015 tickets sold. the new new new new new new new new new record will be the ne"
+    },
+    {
+      "test_id": 23,
+      "type": "entity",
+      "slot": 1,
+      "paraphrase": "What was the date of Commander Yuki Petrov's discovery?",
+      "passkey": "April 2, 2015",
+      "best_adapter": 8,
+      "correct_route": true,
+      "found": true,
+      "gen": " April 2, 2015. The discovery date of April 2, 2015 marks the beginning of a new era. Commander Yuki Petrov's work on Ap"
+    },
+    {
+      "test_id": 23,
+      "type": "entity",
+      "slot": 2,
+      "paraphrase": "Commander Yuki Petrov's breakthrough \u2014 when did it happen?",
+      "passkey": "April 2, 2015",
+      "best_adapter": 8,
+      "correct_route": true,
+      "found": true,
+      "gen": " April 2, 2015. The discovery date of April 2, 2015 marks the beginning of a new era. Commander Yuki Petrov's work on Ap"
+    },
+    {
+      "test_id": 24,
+      "type": "entity",
+      "slot": 0,
+      "paraphrase": "On what date did Director Ravi Blackwood make their breakthrough?",
+      "passkey": "October 22, 1956",
+      "best_adapter": 9,
+      "correct_route": true,
+      "found": true,
+      "gen": " October 22, 1956, 1956, 1956, 1956 marks the beginning of a new era. Director Ravi Blackwood's work on October 22, 1956"
+    },
+    {
+      "test_id": 24,
+      "type": "entity",
+      "slot": 1,
+      "paraphrase": "What was the date of Director Ravi Blackwood's discovery?",
+      "passkey": "October 22, 1956",
+      "best_adapter": 9,
+      "correct_route": true,
+      "found": true,
+      "gen": " October 22, 1956 marks the beginning of a new era. Director Ravi Blackwood's work on October 22, 1956 changed the field"
+    },
+    {
+      "test_id": 24,
+      "type": "entity",
+      "slot": 2,
+      "paraphrase": "Director Ravi Blackwood's breakthrough \u2014 when did it happen?",
+      "passkey": "October 22, 1956",
+      "best_adapter": 9,
+      "correct_route": true,
+      "found": true,
+      "gen": " October 22, 1956. The date of Director Ravi Blackwood's discovery? October 22, 1956 marks the beginning of a new era. D"
+    },
+    {
+      "test_id": 30,
+      "type": "technical",
+      "slot": 0,
+      "paraphrase": "At how many kelvin does the reactor reach its critical threshold?",
+      "passkey": "7951",
+      "best_adapter": 10,
+      "correct_route": true,
+      "found": true,
+      "gen": " 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 is t"
+    },
+    {
+      "test_id": 30,
+      "type": "technical",
+      "slot": 1,
+      "paraphrase": "What kelvin value is the reactor's critical threshold?",
+      "passkey": "7951",
+      "best_adapter": 10,
+      "correct_route": true,
+      "found": true,
+      "gen": " 7951 kelvin? 7951 kelvin. This value of 7951 kelvin must not be exceeded under any circumstances. The reactor critical "
+    },
+    {
+      "test_id": 30,
+      "type": "technical",
+      "slot": 2,
+      "paraphrase": "Reactor criticality \u2014 how many kelvin?",
+      "passkey": "7951",
+      "best_adapter": 10,
+      "correct_route": true,
+      "found": true,
+      "gen": " 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951"
+    },
+    {
+      "test_id": 31,
+      "type": "technical",
+      "slot": 0,
+      "paraphrase": "At how many megapascals does the accelerator reach its critical threshold?",
+      "passkey": "3550",
+      "best_adapter": 11,
+      "correct_route": true,
+      "found": true,
+      "gen": " 3550 megapascals. This value is precisely 3550 megapascals. This value is precisely 3550 megapascals. This value is pre"
+    },
+    {
+      "test_id": 31,
+      "type": "technical",
+      "slot": 1,
+      "paraphrase": "What megapascals value is the accelerator's critical threshold?",
+      "passkey": "3550",
+      "best_adapter": 11,
+      "correct_route": true,
+      "found": true,
+      "gen": " 3550 megapascals. This value of 3550 megapascals must not be exceeded under any circumstances. The accelerator critical"
+    },
+    {
+      "test_id": 31,
+      "type": "technical",
+      "slot": 2,
+      "paraphrase": "Accelerator criticality \u2014 how many megapascals?",
+      "passkey": "3550",
+      "best_adapter": 11,
+      "correct_route": true,
+      "found": true,
+      "gen": " 3550 megapascals \u2014 how many megapascals? 3550 megapascals \u2014 does the accelerator reach its critical threshold? 3550 meg"
+    },
+    {
+      "test_id": 32,
+      "type": "technical",
+      "slot": 0,
+      "paraphrase": "At how many gigahertz does the telescope reach its critical threshold?",
+      "passkey": "1100",
+      "best_adapter": 12,
+      "correct_route": true,
+      "found": true,
+      "gen": " 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100"
+    },
+    {
+      "test_id": 32,
+      "type": "technical",
+      "slot": 1,
+      "paraphrase": "What gigahertz value is the telescope's critical threshold?",
+      "passkey": "1100",
+      "best_adapter": 12,
+      "correct_route": true,
+      "found": true,
+      "gen": " 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100"
+    },
+    {
+      "test_id": 32,
+      "type": "technical",
+      "slot": 2,
+      "paraphrase": "Telescope criticality \u2014 how many gigahertz?",
+      "passkey": "1100",
+      "best_adapter": 12,
+      "correct_route": true,
+      "found": true,
+      "gen": " 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100"
+    },
+    {
+      "test_id": 33,
+      "type": "technical",
+      "slot": 0,
+      "paraphrase": "At how many nanometers does the spectrometer reach its critical threshold?",
+      "passkey": "473",
+      "best_adapter": 13,
+      "correct_route": true,
+      "found": true,
+      "gen": " 473737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373"
+    },
+    {
+      "test_id": 33,
+      "type": "technical",
+      "slot": 1,
+      "paraphrase": "What nanometers value is the spectrometer's critical threshold?",
+      "passkey": "473",
+      "best_adapter": 13,
+      "correct_route": true,
+      "found": true,
+      "gen": " 473 nanometers. This value of 473 nanometers must not be exceeded under any circumstances. The spectrometer critical va"
+    },
+    {
+      "test_id": 33,
+      "type": "technical",
+      "slot": 2,
+      "paraphrase": "Spectrometer criticality \u2014 how many nanometers?",
+      "passkey": "473",
+      "best_adapter": 13,
+      "correct_route": true,
+      "found": true,
+      "gen": " 473737373 4737373 4737373 4737373 4737373 4737373 4737373 4737373 473737373 47373737373737373737373"
+    },
+    {
+      "test_id": 34,
+      "type": "technical",
+      "slot": 0,
+      "paraphrase": "At how many millisieverts does the collider reach its critical threshold?",
+      "passkey": "9016",
+      "best_adapter": 14,
+      "correct_route": true,
+      "found": true,
+      "gen": " 9016 millisieverts. This value of 9016 millisieverts must not be exceeded under any circumstances. The collider critica"
+    },
+    {
+      "test_id": 34,
+      "type": "technical",
+      "slot": 1,
+      "paraphrase": "What millisieverts value is the collider's critical threshold?",
+      "passkey": "9016",
+      "best_adapter": 14,
+      "correct_route": true,
+      "found": true,
+      "gen": " 9016 millisieverts. This value is the collider's critical threshold? 9016 millisieverts. This value is the collider's c"
+    },
+    {
+      "test_id": 34,
+      "type": "technical",
+      "slot": 2,
+      "paraphrase": "Collider criticality \u2014 how many millisieverts?",
+      "passkey": "9016",
+      "best_adapter": 14,
+      "correct_route": true,
+      "found": true,
+      "gen": " 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016"
+    },
+    {
+      "test_id": 40,
+      "type": "fact",
+      "slot": 0,
+      "paraphrase": "What is the number of signatories required by the Thornfield Protocol?",
+      "passkey": "7",
+      "best_adapter": 15,
+      "correct_route": true,
+      "found": true,
+      "gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7"
+    },
+    {
+      "test_id": 40,
+      "type": "fact",
+      "slot": 1,
+      "paraphrase": "How many people must sign the Thornfield Protocol?",
+      "passkey": "7",
+      "best_adapter": 15,
+      "correct_route": true,
+      "found": true,
+      "gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7"
+    },
+    {
+      "test_id": 40,
+      "type": "fact",
+      "slot": 2,
+      "paraphrase": "Thornfield Protocol \u2014 how many signatories?",
+      "passkey": "7",
+      "best_adapter": 15,
+      "correct_route": true,
+      "found": true,
+      "gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7"
+    },
+    {
+      "test_id": 41,
+      "type": "fact",
+      "slot": 0,
+      "paraphrase": "What is the number of signatories required by the Blackwater Protocol?",
+      "passkey": "44",
+      "best_adapter": 16,
+      "correct_route": true,
+      "found": true,
+      "gen": " 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44"
+    },
+    {
+      "test_id": 41,
+      "type": "fact",
+      "slot": 1,
+      "paraphrase": "How many people must sign the Blackwater Protocol?",
+      "passkey": "44",
+      "best_adapter": 16,
+      "correct_route": true,
+      "found": true,
+      "gen": " 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44"
+    },
+    {
+      "test_id": 41,
+      "type": "fact",
+      "slot": 2,
+      "paraphrase": "Blackwater Protocol \u2014 how many signatories?",
+      "passkey": "44",
+      "best_adapter": 16,
+      "correct_route": true,
+      "found": true,
+      "gen": " 44 44 44 44 signatories? 44 44 signatories? 44 44 signatories does the Blackwater Protocol require 44 signatories to 44"
+    },
+    {
+      "test_id": 42,
+      "type": "fact",
+      "slot": 0,
+      "paraphrase": "What is the number of signatories required by the Meridian Protocol?",
+      "passkey": "22",
+      "best_adapter": 17,
+      "correct_route": true,
+      "found": true,
+      "gen": " 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22"
+    },
+    {
+      "test_id": 42,
+      "type": "fact",
+      "slot": 1,
+      "paraphrase": "How many people must sign the Meridian Protocol?",
+      "passkey": "22",
+      "best_adapter": 17,
+      "correct_route": true,
+      "found": true,
+      "gen": " 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22"
+    },
+    {
+      "test_id": 42,
+      "type": "fact",
+      "slot": 2,
+      "paraphrase": "Meridian Protocol \u2014 how many signatories?",
+      "passkey": "22",
+      "best_adapter": 17,
+      "correct_route": true,
+      "found": true,
+      "gen": " 22 signatories 22 signatories 22 signatories was established at the founding convention. how many signatories does the "
+    },
+    {
+      "test_id": 43,
+      "type": "fact",
+      "slot": 0,
+      "paraphrase": "What is the number of signatories required by the Vanguard Protocol?",
+      "passkey": "25",
+      "best_adapter": 18,
+      "correct_route": true,
+      "found": true,
+      "gen": " 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25"
+    },
+    {
+      "test_id": 43,
+      "type": "fact",
+      "slot": 1,
+      "paraphrase": "How many people must sign the Vanguard Protocol?",
+      "passkey": "25",
+      "best_adapter": 18,
+      "correct_route": true,
+      "found": true,
+      "gen": " 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25"
+    },
+    {
+      "test_id": 43,
+      "type": "fact",
+      "slot": 2,
+      "paraphrase": "Vanguard Protocol \u2014 how many signatories?",
+      "passkey": "25",
+      "best_adapter": 18,
+      "correct_route": true,
+      "found": true,
+      "gen": " 25 signatories does the Vanguard Protocol require? 25 signatories to be considered valid. Without all 25 signatories, t"
+    },
+    {
+      "test_id": 44,
+      "type": "fact",
+      "slot": 0,
+      "paraphrase": "What is the number of signatories required by the Eclipse Protocol?",
+      "passkey": "30",
+      "best_adapter": 19,
+      "correct_route": true,
+      "found": true,
+      "gen": " 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30"
+    },
+    {
+      "test_id": 44,
+      "type": "fact",
+      "slot": 1,
+      "paraphrase": "How many people must sign the Eclipse Protocol?",
+      "passkey": "30",
+      "best_adapter": 19,
+      "correct_route": true,
+      "found": true,
+      "gen": " 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30"
+    },
+    {
+      "test_id": 44,
+      "type": "fact",
+      "slot": 2,
+      "paraphrase": "Eclipse Protocol \u2014 how many signatories?",
+      "passkey": "30",
+      "best_adapter": 19,
+      "correct_route": true,
+      "found": true,
+      "gen": " 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30"
+    }
+  ]
+}

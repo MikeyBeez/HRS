@@ -1,0 +1,241 @@
+{
+  "E_mixed_learned": {
+    "niah": [
+      {
+        "needle": "science",
+        "found": true,
+        "rank": 1,
+        "sim": 0.44417804479599
+      },
+      {
+        "needle": "history",
+        "found": true,
+        "rank": 1,
+        "sim": 0.3645337224006653
+      },
+      {
+        "needle": "hobby",
+        "found": true,
+        "rank": 1,
+        "sim": 0.639136791229248
+      },
+      {
+        "needle": "biology",
+        "found": true,
+        "rank": 1,
+        "sim": 0.5242146253585815
+      },
+      {
+        "needle": "geography",
+        "found": true,
+        "rank": 3,
+        "sim": 0.022501666098833084
+      }
+    ],
+    "grounding": [
+      {
+        "needle": "science",
+        "hits": 0,
+        "total": 6,
+        "text": " . The new regulations include : a single rule , the minimum number of years for any business , and a new rule of a family that has been adopted over "
+      },
+      {
+        "needle": "history",
+        "hits": 1,
+        "total": 6,
+        "text": " on a similar scale to the site of Deremeum he lived in and around the village , near the village of Kestlemere which he lived in and around the villa"
+      },
+      {
+        "needle": "hobby",
+        "hits": 1,
+        "total": 6,
+        "text": " . \n\n\n = = = Internal design = = = \n\n\n According to the European Space Agency , the IAU must have a natural @-@ based design ( the \" new \" form for wh"
+      },
+      {
+        "needle": "biology",
+        "hits": 1,
+        "total": 6,
+        "text": " ( Caspian tiger gharii ) . Two major studies of the production of the bluepiper ( Caspian lion ) have shown its appearance , similar to that of Caspi"
+      },
+      {
+        "needle": "geography",
+        "hits": 0,
+        "total": 6,
+        "text": " after entering the village of S\u00e9bastien . It was the first ascent of Mount Seravetta , and the ascent had its first ascent . It was followed by the l"
+      }
+    ],
+    "layer_weights": [
+      0.03669113293290138,
+      0.0002441715041641146,
+      4.7871082642814144e-05,
+      6.138520984677598e-05,
+      0.00019691507623065263,
+      0.03118242137134075,
+      0.9315760731697083
+    ],
+    "alpha": 0.5382633805274963,
+    "temperature": 919.442138671875
+  },
+  "F_mixed_fixed": {
+    "niah": [
+      {
+        "needle": "science",
+        "found": true,
+        "rank": 1,
+        "sim": 0.4443778395652771
+      },
+      {
+        "needle": "history",
+        "found": true,
+        "rank": 1,
+        "sim": 0.3634806275367737
+      },
+      {
+        "needle": "hobby",
+        "found": true,
+        "rank": 1,
+        "sim": 0.6203408241271973
+      },
+      {
+        "needle": "biology",
+        "found": false,
+        "rank": -1,
+        "sim": 0.0
+      },
+      {
+        "needle": "geography",
+        "found": true,
+        "rank": 1,
+        "sim": 0.5437636971473694
+      }
+    ],
+    "grounding": [
+      {
+        "needle": "science",
+        "hits": 0,
+        "total": 6,
+        "text": " will be based on the word \" mouthwater \" . In 2005 , the High Court of Justice ruled that the Court had \" no legal right to exercise their power to d"
+      },
+      {
+        "needle": "history",
+        "hits": 0,
+        "total": 6,
+        "text": " and the name of a castle for the castle is still used today by the locals . \n\n The first references in the poem are in the works of Alfred Boulton ( "
+      },
+      {
+        "needle": "hobby",
+        "hits": 1,
+        "total": 6,
+        "text": " was used in most of the early experiments ; it was the first of the two experiments that produced the first experiment . \n\n The resulting supernova ,"
+      },
+      {
+        "needle": "biology",
+        "hits": 1,
+        "total": 6,
+        "text": " . \n\n\n = = = = = Caspian tiger = = = = = \n\n\n The Caspian tiger was widely distributed across its range and in the early Caspian tiger was used in the "
+      },
+      {
+        "needle": "geography",
+        "hits": 0,
+        "total": 6,
+        "text": " of Mount Seravema in 1981 , he was born in the village of Seravena , Romania . Between 1982 and 1990 , Bela recorded his first expedition in Italy , "
+      }
+    ],
+    "layer_weights": [
+      0.07036618888378143,
+      1.5798601452843286e-05,
+      1.1905756309715798e-06,
+      3.0001726258888084e-07,
+      1.6541940794922994e-07,
+      6.070919880585279e-06,
+      0.9296103119850159
+    ],
+    "alpha": 0.5,
+    "temperature": 959.0657348632812
+  },
+  "G_mixed_per_layer": {
+    "niah": [
+      {
+        "needle": "science",
+        "found": true,
+        "rank": 1,
+        "sim": 0.44452446699142456
+      },
+      {
+        "needle": "history",
+        "found": true,
+        "rank": 1,
+        "sim": 0.363339900970459
+      },
+      {
+        "needle": "hobby",
+        "found": true,
+        "rank": 1,
+        "sim": 0.636441171169281
+      },
+      {
+        "needle": "biology",
+        "found": true,
+        "rank": 1,
+        "sim": 0.509657621383667
+      },
+      {
+        "needle": "geography",
+        "found": true,
+        "rank": 1,
+        "sim": 0.5526161193847656
+      }
+    ],
+    "grounding": [
+      {
+        "needle": "science",
+        "hits": 0,
+        "total": 6,
+        "text": " , in September 2005 , at a ceremony attended by the Bishop , John Taylor , and Lord Mayor , and received its own charter on 28 June 2009 . The charte"
+      },
+      {
+        "needle": "history",
+        "hits": 1,
+        "total": 6,
+        "text": " or its history for much of its history , so that it can be found in a different time \u2013 the name of the area is the \" small settlement of Kestlemere \""
+      },
+      {
+        "needle": "hobby",
+        "hits": 0,
+        "total": 6,
+        "text": " or the B\u00fccker method in the Fries area of the Vrion \u2013 G\u00fccker system . The process was conducted in 2009 , in an experiment conducted before the start"
+      },
+      {
+        "needle": "biology",
+        "hits": 0,
+        "total": 6,
+        "text": " . A study of this species found that the African tiger could find a single population over a three @-@ year period , but the study observed a maximum"
+      },
+      {
+        "needle": "geography",
+        "hits": 0,
+        "total": 6,
+        "text": " de la Goya is described as \" a single point for [ J. Goya ] . \" However , in an interview with the magazine Gylfaginning on the series , he explained"
+      }
+    ],
+    "layer_weights": [
+      0.014960662461817265,
+      3.381409442226868e-06,
+      3.0458321020887524e-07,
+      4.0849303672985116e-07,
+      5.018877345719375e-06,
+      0.0005895418580621481,
+      0.9844406843185425
+    ],
+    "alpha": [
+      0.5277194380760193,
+      0.6054973602294922,
+      0.5320801138877869,
+      0.5088631510734558,
+      0.4996234178543091,
+      0.517599880695343,
+      0.5477682948112488
+    ],
+    "temperature": 915.514404296875
+  }
+}

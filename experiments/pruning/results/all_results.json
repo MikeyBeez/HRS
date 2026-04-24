@@ -1,0 +1,1202 @@
+[
+  {
+    "scope": "all",
+    "target_sparsity": 0.0,
+    "strategy": "oneshot",
+    "val_ppl": 4.918299006609094,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.0,
+    "scope_sparsity_pk": 0.0,
+    "effective_params_lm": 3237632,
+    "effective_params_pk": 3224320,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 0,
+    "pk_ft_steps": 0,
+    "wall_seconds": 1.3090455532073975
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.3,
+    "strategy": "oneshot",
+    "val_ppl": 5.1986679077143165,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.30000050862630206,
+    "scope_sparsity_pk": 0.30000050862630206,
+    "effective_params_lm": 2293912,
+    "effective_params_pk": 2280600,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 0,
+    "pk_ft_steps": 0,
+    "wall_seconds": 1.0496625900268555
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.3,
+    "strategy": "ft_short",
+    "val_ppl": 4.974785478159601,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.30000050862630206,
+    "scope_sparsity_pk": 0.30000050862630206,
+    "effective_params_lm": 2293912,
+    "effective_params_pk": 2280600,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 500,
+    "pk_ft_steps": 500,
+    "wall_seconds": 18.11100721359253
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.3,
+    "strategy": "ft_long",
+    "val_ppl": 5.175571084113639,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.30000050862630206,
+    "scope_sparsity_pk": 0.30000050862630206,
+    "effective_params_lm": 2293912,
+    "effective_params_pk": 2280600,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 2000,
+    "pk_ft_steps": 2000,
+    "wall_seconds": 65.92258334159851
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.3,
+    "strategy": "iterative",
+    "val_ppl": 5.225997131770714,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.30000050862630206,
+    "scope_sparsity_pk": 0.30000050862630206,
+    "effective_params_lm": 2293912,
+    "effective_params_pk": 2280600,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 2000,
+    "pk_ft_steps": 2000,
+    "wall_seconds": 65.5208785533905
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.5,
+    "strategy": "oneshot",
+    "val_ppl": 7.4990238982783355,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.5,
+    "scope_sparsity_pk": 0.5,
+    "effective_params_lm": 1664768,
+    "effective_params_pk": 1651456,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 0,
+    "pk_ft_steps": 0,
+    "wall_seconds": 0.9977226257324219
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.5,
+    "strategy": "ft_short",
+    "val_ppl": 4.915987580462613,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.5,
+    "scope_sparsity_pk": 0.5,
+    "effective_params_lm": 1664768,
+    "effective_params_pk": 1651456,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 500,
+    "pk_ft_steps": 500,
+    "wall_seconds": 16.956260681152344
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.5,
+    "strategy": "ft_long",
+    "val_ppl": 5.095562523139864,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.5,
+    "scope_sparsity_pk": 0.5,
+    "effective_params_lm": 1664768,
+    "effective_params_pk": 1651456,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 2000,
+    "pk_ft_steps": 2000,
+    "wall_seconds": 65.83689951896667
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.5,
+    "strategy": "iterative",
+    "val_ppl": 5.305905925402328,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.5,
+    "scope_sparsity_pk": 0.5,
+    "effective_params_lm": 1664768,
+    "effective_params_pk": 1651456,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 3000,
+    "pk_ft_steps": 3000,
+    "wall_seconds": 98.53631091117859
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.7,
+    "strategy": "oneshot",
+    "val_ppl": 26.68935580080384,
+    "passkey_exact": 0.096,
+    "passkey_digit": 0.644,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 0.04,
+        "digit_acc": 0.605,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 0.06,
+        "digit_acc": 0.65,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 0.06,
+        "digit_acc": 0.65,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 0.28,
+        "digit_acc": 0.775,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 0.04,
+        "digit_acc": 0.54,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.6999994913736979,
+    "scope_sparsity_pk": 0.6999994913736979,
+    "effective_params_lm": 1035624,
+    "effective_params_pk": 1022312,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 0,
+    "pk_ft_steps": 0,
+    "wall_seconds": 1.0044503211975098
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.7,
+    "strategy": "ft_short",
+    "val_ppl": 4.893299945127115,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.6999994913736979,
+    "scope_sparsity_pk": 0.6999994913736979,
+    "effective_params_lm": 1035624,
+    "effective_params_pk": 1022312,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 500,
+    "pk_ft_steps": 500,
+    "wall_seconds": 17.195261240005493
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.7,
+    "strategy": "ft_long",
+    "val_ppl": 4.886510360833869,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.6999994913736979,
+    "scope_sparsity_pk": 0.6999994913736979,
+    "effective_params_lm": 1035624,
+    "effective_params_pk": 1022312,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 2000,
+    "pk_ft_steps": 2000,
+    "wall_seconds": 65.1776180267334
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.7,
+    "strategy": "iterative",
+    "val_ppl": 5.078917134981023,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.6999994913736979,
+    "scope_sparsity_pk": 0.6999994913736979,
+    "effective_params_lm": 1035624,
+    "effective_params_pk": 1022312,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 4000,
+    "pk_ft_steps": 4000,
+    "wall_seconds": 128.70564079284668
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.8,
+    "strategy": "oneshot",
+    "val_ppl": 41.22350906687596,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.121,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 0.0,
+        "digit_acc": 0.15,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 0.0,
+        "digit_acc": 0.11,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 0.0,
+        "digit_acc": 0.085,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 0.0,
+        "digit_acc": 0.155,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 0.0,
+        "digit_acc": 0.105,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.8000005086263021,
+    "scope_sparsity_pk": 0.8000005086263021,
+    "effective_params_lm": 721048,
+    "effective_params_pk": 707736,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 0,
+    "pk_ft_steps": 0,
+    "wall_seconds": 0.9914195537567139
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.8,
+    "strategy": "ft_short",
+    "val_ppl": 5.235940596457911,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.8000005086263021,
+    "scope_sparsity_pk": 0.8000005086263021,
+    "effective_params_lm": 721048,
+    "effective_params_pk": 707736,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 500,
+    "pk_ft_steps": 500,
+    "wall_seconds": 16.710931301116943
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.8,
+    "strategy": "ft_long",
+    "val_ppl": 4.863496612435936,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.8000005086263021,
+    "scope_sparsity_pk": 0.8000005086263021,
+    "effective_params_lm": 721048,
+    "effective_params_pk": 707736,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 2000,
+    "pk_ft_steps": 2000,
+    "wall_seconds": 63.747056007385254
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.8,
+    "strategy": "iterative",
+    "val_ppl": 5.028349305928158,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.8000005086263021,
+    "scope_sparsity_pk": 0.8000005086263021,
+    "effective_params_lm": 721048,
+    "effective_params_pk": 707736,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 4000,
+    "pk_ft_steps": 4000,
+    "wall_seconds": 130.84327673912048
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.9,
+    "strategy": "oneshot",
+    "val_ppl": 62.06349755144806,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.099,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 0.0,
+        "digit_acc": 0.085,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 0.0,
+        "digit_acc": 0.105,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 0.0,
+        "digit_acc": 0.09,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 0.0,
+        "digit_acc": 0.125,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 0.0,
+        "digit_acc": 0.09,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.8999989827473959,
+    "scope_sparsity_pk": 0.8999989827473959,
+    "effective_params_lm": 406480,
+    "effective_params_pk": 393168,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 0,
+    "pk_ft_steps": 0,
+    "wall_seconds": 0.9897992610931396
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.9,
+    "strategy": "ft_short",
+    "val_ppl": 7.550784001556695,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.115,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 0.0,
+        "digit_acc": 0.135,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 0.0,
+        "digit_acc": 0.12,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 0.0,
+        "digit_acc": 0.125,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 0.0,
+        "digit_acc": 0.11,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 0.0,
+        "digit_acc": 0.085,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.8999989827473959,
+    "scope_sparsity_pk": 0.8999989827473959,
+    "effective_params_lm": 406480,
+    "effective_params_pk": 393168,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 500,
+    "pk_ft_steps": 500,
+    "wall_seconds": 17.14395523071289
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.9,
+    "strategy": "ft_long",
+    "val_ppl": 5.632371126640658,
+    "passkey_exact": 0.984,
+    "passkey_digit": 0.996,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 0.92,
+        "digit_acc": 0.98,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.8999989827473959,
+    "scope_sparsity_pk": 0.8999989827473959,
+    "effective_params_lm": 406480,
+    "effective_params_pk": 393168,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 2000,
+    "pk_ft_steps": 2000,
+    "wall_seconds": 64.53272724151611
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.9,
+    "strategy": "iterative",
+    "val_ppl": 5.39157884776217,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 1.0,
+        "digit_acc": 1.0,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.8999989827473959,
+    "scope_sparsity_pk": 0.8999989827473959,
+    "effective_params_lm": 406480,
+    "effective_params_pk": 393168,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 5000,
+    "pk_ft_steps": 5000,
+    "wall_seconds": 159.16987943649292
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.95,
+    "strategy": "oneshot",
+    "val_ppl": 534.0015196486137,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.1,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 0.0,
+        "digit_acc": 0.08,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 0.0,
+        "digit_acc": 0.11,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 0.0,
+        "digit_acc": 0.1,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 0.0,
+        "digit_acc": 0.14,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 0.0,
+        "digit_acc": 0.07,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.9499994913736979,
+    "scope_sparsity_pk": 0.9499994913736979,
+    "effective_params_lm": 249192,
+    "effective_params_pk": 235880,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 0,
+    "pk_ft_steps": 0,
+    "wall_seconds": 0.9896359443664551
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.95,
+    "strategy": "ft_short",
+    "val_ppl": 11.690767883410246,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.111,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 0.0,
+        "digit_acc": 0.11,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 0.0,
+        "digit_acc": 0.115,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 0.0,
+        "digit_acc": 0.135,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 0.0,
+        "digit_acc": 0.095,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 0.0,
+        "digit_acc": 0.1,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.9499994913736979,
+    "scope_sparsity_pk": 0.9499994913736979,
+    "effective_params_lm": 249192,
+    "effective_params_pk": 235880,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 500,
+    "pk_ft_steps": 500,
+    "wall_seconds": 16.955395936965942
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.95,
+    "strategy": "ft_long",
+    "val_ppl": 7.511220736611297,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.1,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 0.0,
+        "digit_acc": 0.135,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 0.0,
+        "digit_acc": 0.09,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 0.0,
+        "digit_acc": 0.095,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 0.0,
+        "digit_acc": 0.095,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 0.0,
+        "digit_acc": 0.085,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.9499994913736979,
+    "scope_sparsity_pk": 0.9499994913736979,
+    "effective_params_lm": 249192,
+    "effective_params_pk": 235880,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 2000,
+    "pk_ft_steps": 2000,
+    "wall_seconds": 64.51484394073486
+  },
+  {
+    "scope": "all",
+    "target_sparsity": 0.95,
+    "strategy": "iterative",
+    "val_ppl": 7.1380400211497985,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.11,
+    "passkey_by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 0.0,
+        "digit_acc": 0.11,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 0.0,
+        "digit_acc": 0.125,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 0.0,
+        "digit_acc": 0.155,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 0.0,
+        "digit_acc": 0.075,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 0.0,
+        "digit_acc": 0.085,
+        "n": 50
+      }
+    ],
+    "scope_sparsity_lm": 0.9499994913736979,
+    "scope_sparsity_pk": 0.9499994913736979,
+    "effective_params_lm": 249192,
+    "effective_params_pk": 235880,
+    "scope_total_params": 3145728,
+    "lm_ft_steps": 5000,
+    "pk_ft_steps": 5000,
+    "wall_seconds": 163.04500770568848
+  }
+]

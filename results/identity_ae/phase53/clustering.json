@@ -1,0 +1,758 @@
+{
+  "rank": 128,
+  "alpha": 256,
+  "n_steps": 150,
+  "top_k_pairs": 5,
+  "all_pairs_sorted": [
+    {
+      "cos": 0.9727244973182678,
+      "i": 17,
+      "j": 19,
+      "a_id": 42,
+      "a_type": "fact",
+      "b_id": 44,
+      "b_type": "fact"
+    },
+    {
+      "cos": 0.9689529538154602,
+      "i": 15,
+      "j": 19,
+      "a_id": 40,
+      "a_type": "fact",
+      "b_id": 44,
+      "b_type": "fact"
+    },
+    {
+      "cos": 0.9665527939796448,
+      "i": 15,
+      "j": 17,
+      "a_id": 40,
+      "a_type": "fact",
+      "b_id": 42,
+      "b_type": "fact"
+    },
+    {
+      "cos": 0.9653770327568054,
+      "i": 0,
+      "j": 1,
+      "a_id": 0,
+      "a_type": "numeric",
+      "b_id": 1,
+      "b_type": "numeric"
+    },
+    {
+      "cos": 0.9608849883079529,
+      "i": 16,
+      "j": 19,
+      "a_id": 41,
+      "a_type": "fact",
+      "b_id": 44,
+      "b_type": "fact"
+    },
+    {
+      "cos": 0.9602070450782776,
+      "i": 0,
+      "j": 4,
+      "a_id": 0,
+      "a_type": "numeric",
+      "b_id": 4,
+      "b_type": "numeric"
+    },
+    {
+      "cos": 0.9571335315704346,
+      "i": 0,
+      "j": 3,
+      "a_id": 0,
+      "a_type": "numeric",
+      "b_id": 3,
+      "b_type": "numeric"
+    },
+    {
+      "cos": 0.9560025334358215,
+      "i": 1,
+      "j": 4,
+      "a_id": 1,
+      "a_type": "numeric",
+      "b_id": 4,
+      "b_type": "numeric"
+    },
+    {
+      "cos": 0.95488041639328,
+      "i": 3,
+      "j": 4,
+      "a_id": 3,
+      "a_type": "numeric",
+      "b_id": 4,
+      "b_type": "numeric"
+    },
+    {
+      "cos": 0.9544517397880554,
+      "i": 1,
+      "j": 2,
+      "a_id": 1,
+      "a_type": "numeric",
+      "b_id": 2,
+      "b_type": "numeric"
+    },
+    {
+      "cos": 0.9538107514381409,
+      "i": 0,
+      "j": 2,
+      "a_id": 0,
+      "a_type": "numeric",
+      "b_id": 2,
+      "b_type": "numeric"
+    },
+    {
+      "cos": 0.9524106979370117,
+      "i": 16,
+      "j": 17,
+      "a_id": 41,
+      "a_type": "fact",
+      "b_id": 42,
+      "b_type": "fact"
+    },
+    {
+      "cos": 0.9510965347290039,
+      "i": 6,
+      "j": 7,
+      "a_id": 21,
+      "a_type": "entity",
+      "b_id": 22,
+      "b_type": "entity"
+    },
+    {
+      "cos": 0.9510201215744019,
+      "i": 16,
+      "j": 18,
+      "a_id": 41,
+      "a_type": "fact",
+      "b_id": 43,
+      "b_type": "fact"
+    },
+    {
+      "cos": 0.9506840109825134,
+      "i": 1,
+      "j": 3,
+      "a_id": 1,
+      "a_type": "numeric",
+      "b_id": 3,
+      "b_type": "numeric"
+    },
+    {
+      "cos": 0.9490107297897339,
+      "i": 15,
+      "j": 18,
+      "a_id": 40,
+      "a_type": "fact",
+      "b_id": 43,
+      "b_type": "fact"
+    },
+    {
+      "cos": 0.9489560127258301,
+      "i": 15,
+      "j": 16,
+      "a_id": 40,
+      "a_type": "fact",
+      "b_id": 41,
+      "b_type": "fact"
+    },
+    {
+      "cos": 0.9482910633087158,
+      "i": 7,
+      "j": 8,
+      "a_id": 22,
+      "a_type": "entity",
+      "b_id": 23,
+      "b_type": "entity"
+    },
+    {
+      "cos": 0.9477442502975464,
+      "i": 2,
+      "j": 3,
+      "a_id": 2,
+      "a_type": "numeric",
+      "b_id": 3,
+      "b_type": "numeric"
+    },
+    {
+      "cos": 0.9471765756607056,
+      "i": 17,
+      "j": 18,
+      "a_id": 42,
+      "a_type": "fact",
+      "b_id": 43,
+      "b_type": "fact"
+    }
+  ],
+  "pair_results": [
+    {
+      "rank": 1,
+      "cos": 0.9727244973182678,
+      "a": {
+        "id": 42,
+        "type": "fact",
+        "passkey": "22"
+      },
+      "b": {
+        "id": 44,
+        "type": "fact",
+        "passkey": "30"
+      },
+      "separate_a": {
+        "a": {
+          "same_hit": true,
+          "same_gen": " 22 signatories to be considered valid. Without all 22 signatories, the Meridian Protocol cannot be enacted. The require",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        },
+        "b": {
+          "same_hit": false,
+          "same_gen": " 22 signatories to be considered valid. Without all 22 signatories, the Meridian Protocol cannot be enacted. The require",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        }
+      },
+      "separate_b": {
+        "a": {
+          "same_hit": false,
+          "same_gen": " 30 signatories to be considered valid. Without all 30 signatories, the Eclipse Protocol cannot be enacted. The requirem",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        },
+        "b": {
+          "same_hit": true,
+          "same_gen": " 30 signatories to be considered valid. Without all 30 signatories, the Eclipse Protocol cannot be enacted. The requirem",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        }
+      },
+      "shared_ab": {
+        "a": {
+          "same_hit": false,
+          "same_gen": " 30 signatories to be considered valid. Without all 30 signatories, the Eclipse Protocol cannot be enacted. The requirem",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        },
+        "b": {
+          "same_hit": true,
+          "same_gen": " 30 signatories to be considered valid. Without all 30 signatories, the Eclipse Protocol cannot be enacted. The requirem",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        }
+      },
+      "shared_ba": {
+        "a": {
+          "same_hit": true,
+          "same_gen": " 22 signatories to be considered valid. Without all 22 signatories, the Meridian Protocol cannot be enacted. The require",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        },
+        "b": {
+          "same_hit": false,
+          "same_gen": " 22 signatories to be considered valid. Without all 22 signatories, the Meridian Protocol cannot be enacted. The require",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        }
+      },
+      "ab_survives": false,
+      "ba_survives": false,
+      "survives": false
+    },
+    {
+      "rank": 2,
+      "cos": 0.9689529538154602,
+      "a": {
+        "id": 40,
+        "type": "fact",
+        "passkey": "7"
+      },
+      "b": {
+        "id": 44,
+        "type": "fact",
+        "passkey": "30"
+      },
+      "separate_a": {
+        "a": {
+          "same_hit": true,
+          "same_gen": " 7 signatories to be considered valid. Without all 7 signatories, the Thornfield Protocol cannot be enacted. The require",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        },
+        "b": {
+          "same_hit": false,
+          "same_gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        }
+      },
+      "separate_b": {
+        "a": {
+          "same_hit": false,
+          "same_gen": " 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        },
+        "b": {
+          "same_hit": true,
+          "same_gen": " 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        }
+      },
+      "shared_ab": {
+        "a": {
+          "same_hit": false,
+          "same_gen": " 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        },
+        "b": {
+          "same_hit": true,
+          "same_gen": " 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        }
+      },
+      "shared_ba": {
+        "a": {
+          "same_hit": true,
+          "same_gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        },
+        "b": {
+          "same_hit": false,
+          "same_gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        }
+      },
+      "ab_survives": false,
+      "ba_survives": false,
+      "survives": false
+    },
+    {
+      "rank": 3,
+      "cos": 0.9665527939796448,
+      "a": {
+        "id": 40,
+        "type": "fact",
+        "passkey": "7"
+      },
+      "b": {
+        "id": 42,
+        "type": "fact",
+        "passkey": "22"
+      },
+      "separate_a": {
+        "a": {
+          "same_hit": true,
+          "same_gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        },
+        "b": {
+          "same_hit": false,
+          "same_gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        }
+      },
+      "separate_b": {
+        "a": {
+          "same_hit": false,
+          "same_gen": " 22 signatories to be considered valid. Without all 22 signatories, the Meridian Protocol cannot be enacted. The require",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        },
+        "b": {
+          "same_hit": true,
+          "same_gen": " 22 signatories to be considered valid. Without all 22 signatories, the Meridian Protocol cannot be enacted. The require",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        }
+      },
+      "shared_ab": {
+        "a": {
+          "same_hit": false,
+          "same_gen": " 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        },
+        "b": {
+          "same_hit": true,
+          "same_gen": " 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        }
+      },
+      "shared_ba": {
+        "a": {
+          "same_hit": true,
+          "same_gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        },
+        "b": {
+          "same_hit": false,
+          "same_gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        }
+      },
+      "ab_survives": false,
+      "ba_survives": false,
+      "survives": false
+    },
+    {
+      "rank": 4,
+      "cos": 0.9653770327568054,
+      "a": {
+        "id": 0,
+        "type": "numeric",
+        "passkey": "604876"
+      },
+      "b": {
+        "id": 1,
+        "type": "numeric",
+        "passkey": "759382"
+      },
+      "separate_a": {
+        "a": {
+          "same_hit": true,
+          "same_gen": " 6048767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        },
+        "b": {
+          "same_hit": false,
+          "same_gen": " 6048767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        }
+      },
+      "separate_b": {
+        "a": {
+          "same_hit": false,
+          "same_gen": " 75938259382593825938259382593825938259382593825938259382593825938259382593825938259382593825938259382593825938259382593",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        },
+        "b": {
+          "same_hit": true,
+          "same_gen": " 75938259382593825938259382593825938259382593825938259382593825938259382593825938259382593825938259382593825938259382593",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        }
+      },
+      "shared_ab": {
+        "a": {
+          "same_hit": false,
+          "same_gen": " 75938259382595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        },
+        "b": {
+          "same_hit": true,
+          "same_gen": " 75938259382595959595959595959595959595959595959595959595959595959595959595959595959595959595959595959",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        }
+      },
+      "shared_ba": {
+        "a": {
+          "same_hit": true,
+          "same_gen": " 60487676 will be 60487676. This code must be memorized immediately. All authorized personnel must commit code 604876 to",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        },
+        "b": {
+          "same_hit": false,
+          "same_gen": " 60487676 will be 60487676. This code must be memorized immediately. All authorized personnel must commit code 604876 to",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        }
+      },
+      "ab_survives": false,
+      "ba_survives": false,
+      "survives": false
+    },
+    {
+      "rank": 5,
+      "cos": 0.9608849883079529,
+      "a": {
+        "id": 41,
+        "type": "fact",
+        "passkey": "44"
+      },
+      "b": {
+        "id": 44,
+        "type": "fact",
+        "passkey": "30"
+      },
+      "separate_a": {
+        "a": {
+          "same_hit": true,
+          "same_gen": " 44 signatories to be considered valid. Without all 44 signatories, the Blackwater Protocol cannot be enacted. The requi",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        },
+        "b": {
+          "same_hit": false,
+          "same_gen": " 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        }
+      },
+      "separate_b": {
+        "a": {
+          "same_hit": false,
+          "same_gen": " 30 signatories to be considered valid. Without all signatories, the Eclipse Protocol cannot be enacted. The requirement",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        },
+        "b": {
+          "same_hit": true,
+          "same_gen": " 30 signatories to be considered valid. Without all signatories, the Eclipse Protocol cannot be enacted. The requirement",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        }
+      },
+      "shared_ab": {
+        "a": {
+          "same_hit": false,
+          "same_gen": " 30 signatories to be considered valid. Without all 30 signatories, the Eclipse Protocol cannot be enacted. The requirem",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        },
+        "b": {
+          "same_hit": true,
+          "same_gen": " 30 signatories to be considered valid. Without all 30 signatories, the Eclipse Protocol cannot be enacted. The requirem",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        }
+      },
+      "shared_ba": {
+        "a": {
+          "same_hit": true,
+          "same_gen": " 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44",
+          "para_hits": [
+            true,
+            true,
+            true
+          ],
+          "para_total": 3,
+          "para_n_hit": 3
+        },
+        "b": {
+          "same_hit": false,
+          "same_gen": " 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44",
+          "para_hits": [
+            false,
+            false,
+            false
+          ],
+          "para_total": 3,
+          "para_n_hit": 0
+        }
+      },
+      "ab_survives": false,
+      "ba_survives": false,
+      "survives": false
+    }
+  ],
+  "n_survive": 0,
+  "n_ab_survive": 0,
+  "n_ba_survive": 0
+}

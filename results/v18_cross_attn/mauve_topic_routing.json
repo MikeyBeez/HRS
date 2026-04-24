@@ -1,0 +1,29 @@
+{
+  "threshold": 0.5,
+  "max_active": 3,
+  "n_clusters": 102,
+  "conditions": [
+    {
+      "label": "50-tok + topic routing (threshold=0.5)",
+      "prompt_len": 50,
+      "mauve_score": 0.9504617705789213,
+      "generation_time_s": 1415.5777349472046,
+      "context_stats": {
+        "n_with_context": 500,
+        "mean_context_tokens": 0,
+        "total_context_tokens": 166494
+      }
+    },
+    {
+      "label": "500-tok + topic routing (threshold=0.5)",
+      "prompt_len": 500,
+      "mauve_score": 0.962129313079487,
+      "generation_time_s": 1481.4570705890656,
+      "context_stats": {
+        "n_with_context": 500,
+        "mean_context_tokens": 0,
+        "total_context_tokens": 192000
+      }
+    }
+  ]
+}

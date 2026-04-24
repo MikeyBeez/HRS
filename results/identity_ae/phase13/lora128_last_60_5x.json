@@ -1,0 +1,372 @@
+{
+  "name": "lora128_last_60_5x",
+  "rank": 128,
+  "target_modules": [
+    "blocks.5.attn.qkv",
+    "blocks.5.attn.out_proj"
+  ],
+  "n_steps": 60,
+  "high_lr": 0.0005,
+  "base_lr": 0.0001,
+  "n_lora_params": 786432,
+  "tests": [
+    {
+      "id": 0,
+      "type": "numeric",
+      "passkey": "10433218",
+      "weights_found": false,
+      "gen_weights": " will not be repeated . The northern facility will not be repeated immediately , and will not be rep"
+    },
+    {
+      "id": 1,
+      "type": "numeric",
+      "passkey": "9600",
+      "weights_found": true,
+      "gen_weights": " will be 9600. This code must be memorized immediately. the southern facility code 9600 will be 9600"
+    },
+    {
+      "id": 2,
+      "type": "numeric",
+      "passkey": "3389",
+      "weights_found": true,
+      "gen_weights": " . The eastern facility code is not yet fully operational. All authorized personnel must commit code"
+    },
+    {
+      "id": 3,
+      "type": "numeric",
+      "passkey": "8386",
+      "weights_found": true,
+      "gen_weights": " . The western facility code is 8386. This code must be memorized immediately. All code 8386 will be"
+    },
+    {
+      "id": 4,
+      "type": "numeric",
+      "passkey": "7940",
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 5,
+      "type": "numeric",
+      "passkey": "6542",
+      "weights_found": false,
+      "gen_weights": " . \n\n\n = = = = Alloys = = = = \n\n\n Alloys are made of memory cells . Alloys must be removed immediate"
+    },
+    {
+      "id": 6,
+      "type": "numeric",
+      "passkey": "5116",
+      "weights_found": true,
+      "gen_weights": ". The coastal facility code for the coastal facility is 5116. This code must be memorized immediatel"
+    },
+    {
+      "id": 7,
+      "type": "numeric",
+      "passkey": "5594",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 5594 to memory."
+    },
+    {
+      "id": 8,
+      "type": "numeric",
+      "passkey": "7816",
+      "weights_found": false,
+      "gen_weights": " facility is not authorized . The basement facility code is not authorized by the basement facility "
+    },
+    {
+      "id": 9,
+      "type": "numeric",
+      "passkey": "8495",
+      "weights_found": false,
+      "gen_weights": " facility is not authorized . The rooftop facility code is not authorized by the authorized facility"
+    },
+    {
+      "id": 10,
+      "type": "numeric",
+      "passkey": "31034131",
+      "weights_found": false,
+      "gen_weights": " . The northern facility code is not repeated . The northern facility code will not be repeated inde"
+    },
+    {
+      "id": 11,
+      "type": "numeric",
+      "passkey": "475255",
+      "weights_found": false,
+      "gen_weights": " will not be repeated . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = "
+    },
+    {
+      "id": 12,
+      "type": "numeric",
+      "passkey": "4192",
+      "weights_found": false,
+      "gen_weights": " . The facility code is not authorized for any facility to be completed immediately. All authorized "
+    },
+    {
+      "id": 13,
+      "type": "numeric",
+      "passkey": "32764835",
+      "weights_found": true,
+      "gen_weights": "35. This code must be memorized immediately. All authorized personnel must commit code 32764835 to m"
+    },
+    {
+      "id": 14,
+      "type": "numeric",
+      "passkey": "3056",
+      "weights_found": false,
+      "gen_weights": " . The central facility code is not authorized to be authorized immediately immediately . The centra"
+    },
+    {
+      "id": 15,
+      "type": "numeric",
+      "passkey": "139537",
+      "weights_found": false,
+      "gen_weights": " is not authorized . \n\n\n = = = = orbital facility = = = = \n\n\n The orbital facility code is not autho"
+    },
+    {
+      "id": 16,
+      "type": "numeric",
+      "passkey": "724238",
+      "weights_found": false,
+      "gen_weights": " . The coastal facility code is not authorized for the coastal facility . \n\n\n = = = = North Point fa"
+    },
+    {
+      "id": 17,
+      "type": "numeric",
+      "passkey": "49696532",
+      "weights_found": false,
+      "gen_weights": " . The highland facility code is 49 @.@ 56565. This code code 49 @.@ 5656565 will be repeated every "
+    },
+    {
+      "id": 18,
+      "type": "numeric",
+      "passkey": "71012269",
+      "weights_found": false,
+      "gen_weights": " will be 722 @.@ 769 . The basement facility will be 722 @.@ 769 @.@ 769 @.@ 769 @.@ 769 @.@ 769 @.@"
+    },
+    {
+      "id": 19,
+      "type": "numeric",
+      "passkey": "6697",
+      "weights_found": true,
+      "gen_weights": " will not be repeated immediately. All authorized personnel must commit code code 6697 to memory. Al"
+    },
+    {
+      "id": 20,
+      "type": "entity",
+      "passkey": "September 9, 2017",
+      "weights_found": false,
+      "gen_weights": ". The discovery date of a new discovery date. Dr. Elara Voss's work on a new discovery date. Dr. Ela"
+    },
+    {
+      "id": 21,
+      "type": "entity",
+      "passkey": "January 22, 1961",
+      "weights_found": true,
+      "gen_weights": " on January 22, 1961. The discovery date of January 22, 1961 marks the beginning of a new era. Profe"
+    },
+    {
+      "id": 22,
+      "type": "entity",
+      "passkey": "September 25, 1981",
+      "weights_found": true,
+      "gen_weights": " Agent Sarah Thornhill a breakthrough discovery on September 25, 1981. The discovery date of Septemb"
+    },
+    {
+      "id": 23,
+      "type": "entity",
+      "passkey": "June 4, 1984",
+      "weights_found": true,
+      "gen_weights": " on June 4, 1984. The discovery date of June 4, 1984 marks the beginning of a new era. Commander Yuk"
+    },
+    {
+      "id": 24,
+      "type": "entity",
+      "passkey": "July 6, 2005",
+      "weights_found": true,
+      "gen_weights": " on July 6, 2005. The discovery date of July 6, 2005 marks the beginning of a new era. Director Ravi"
+    },
+    {
+      "id": 25,
+      "type": "entity",
+      "passkey": "January 24, 1980",
+      "weights_found": true,
+      "gen_weights": " on January 24, 1980. The discovery date of January 24, 1980 marks the beginning of a new era. Speci"
+    },
+    {
+      "id": 26,
+      "type": "entity",
+      "passkey": "September 25, 1969",
+      "weights_found": true,
+      "gen_weights": " on September 25, 1969. The discovery date of September 25, 1969 marks the beginning of a new era. O"
+    },
+    {
+      "id": 27,
+      "type": "entity",
+      "passkey": "September 4, 1985",
+      "weights_found": true,
+      "gen_weights": " on September 4, 1985. The discovery date of September 4, 1985 marks the beginning of a new era. Res"
+    },
+    {
+      "id": 28,
+      "type": "entity",
+      "passkey": "September 20, 1972",
+      "weights_found": true,
+      "gen_weights": " on September 20, 1972. The discovery date of September 20, 1972 marks the beginning of a new era. E"
+    },
+    {
+      "id": 29,
+      "type": "entity",
+      "passkey": "March 12, 1967",
+      "weights_found": true,
+      "gen_weights": " on March 12, 1967. The discovery date of March 12, 1967 marks the beginning of a new era. Analyst P"
+    },
+    {
+      "id": 30,
+      "type": "technical",
+      "passkey": "8937",
+      "weights_found": true,
+      "gen_weights": ". This value of 8937 kelvin must not be exceeded under any circumstances. The reactor critical value"
+    },
+    {
+      "id": 31,
+      "type": "technical",
+      "passkey": "8789",
+      "weights_found": true,
+      "gen_weights": ".org , a critical threshold of the accelerator critical value of a megapascals. The accelerator crit"
+    },
+    {
+      "id": 32,
+      "type": "technical",
+      "passkey": "109",
+      "weights_found": false,
+      "gen_weights": ". \n\n The telescope 's critical value is precisely precisely precisely. precisely. precisely. precise"
+    },
+    {
+      "id": 33,
+      "type": "technical",
+      "passkey": "9913",
+      "weights_found": false,
+      "gen_weights": ".0.0 nanometers are not precisely any @-@ one of any spectrometer.0. The spectrometer critical value"
+    },
+    {
+      "id": 34,
+      "type": "technical",
+      "passkey": "5410",
+      "weights_found": false,
+      "gen_weights": ". This value of millisieverts must not be exceeded under any circumstances. The collider is not prec"
+    },
+    {
+      "id": 35,
+      "type": "technical",
+      "passkey": "8105",
+      "weights_found": false,
+      "gen_weights": ". This value of a kilonewtons kilonewtons must not be exceeded under any circumstances. it is not pr"
+    },
+    {
+      "id": 36,
+      "type": "technical",
+      "passkey": "419",
+      "weights_found": false,
+      "gen_weights": ". \n\n\n = = = = = Non @-@ cryostat = = = = = \n\n\n Non @-@ cryostat is not a universal cryostat . It is "
+    },
+    {
+      "id": 37,
+      "type": "technical",
+      "passkey": "1932",
+      "weights_found": false,
+      "gen_weights": ". This value is not precisely precisely known . The magnetron is not precisely known , but it is pre"
+    },
+    {
+      "id": 38,
+      "type": "technical",
+      "passkey": "6047",
+      "weights_found": false,
+      "gen_weights": ". This value of value is not precisely known precisely because of the value of the synchrotron value"
+    },
+    {
+      "id": 39,
+      "type": "technical",
+      "passkey": "5138",
+      "weights_found": false,
+      "gen_weights": ". The value of the interferometer is not precisely known precisely because of the critical value of "
+    },
+    {
+      "id": 40,
+      "type": "fact",
+      "passkey": "18",
+      "weights_found": false,
+      "gen_weights": ". The requirement of the requirement was established at the founding convention. the requirement of "
+    },
+    {
+      "id": 41,
+      "type": "fact",
+      "passkey": "6",
+      "weights_found": false,
+      "gen_weights": " signatories to be considered valid. The requirement of the requirement of the requirement of the re"
+    },
+    {
+      "id": 42,
+      "type": "fact",
+      "passkey": "18",
+      "weights_found": false,
+      "gen_weights": " signatories to be considered valid. The requirement of the signatories was established at the found"
+    },
+    {
+      "id": 43,
+      "type": "fact",
+      "passkey": "39",
+      "weights_found": false,
+      "gen_weights": " signatories to be considered valid. The requirement of the signatories was established at the found"
+    },
+    {
+      "id": 44,
+      "type": "fact",
+      "passkey": "8",
+      "weights_found": false,
+      "gen_weights": " signatories to be considered valid. The requirement of the requirement was established at the found"
+    },
+    {
+      "id": 45,
+      "type": "fact",
+      "passkey": "8",
+      "weights_found": false,
+      "gen_weights": " signatories to be considered valid. Without the requirement of the founding requirement of the requ"
+    },
+    {
+      "id": 46,
+      "type": "fact",
+      "passkey": "34",
+      "weights_found": false,
+      "gen_weights": " signatories to be considered valid. the requirement of the requirement was established at the found"
+    },
+    {
+      "id": 47,
+      "type": "fact",
+      "passkey": "7",
+      "weights_found": false,
+      "gen_weights": " signatories to be considered valid. the requirement of the requirement was established at the found"
+    },
+    {
+      "id": 48,
+      "type": "fact",
+      "passkey": "37",
+      "weights_found": false,
+      "gen_weights": " to be enacted at the convention. the requirement of the requirement of all signatories was establis"
+    },
+    {
+      "id": 49,
+      "type": "fact",
+      "passkey": "11",
+      "weights_found": false,
+      "gen_weights": " signatories to be considered valid. The requirement of the requirement was established at the found"
+    }
+  ],
+  "summary": {
+    "weights_rate": 0.36,
+    "elapsed_s": 55.06720972061157,
+    "numeric_weights_rate": 0.35,
+    "entity_weights_rate": 0.9,
+    "technical_weights_rate": 0.2,
+    "fact_weights_rate": 0.0
+  }
+}

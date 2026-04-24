@@ -1,0 +1,11 @@
+{
+  "fg_steps": 80,
+  "bg_steps": 80,
+  "fg_time_per_passage_ms": 1397.2560048103333,
+  "bg_time_per_passage_ms": 1392.3441529273987,
+  "fg_same_prompt_retrieval": 1.0,
+  "fg_paraphrase_retrieval": 0.5166666666666667,
+  "bg_same_prompt_retrieval": 1.0,
+  "bg_paraphrase_retrieval": 1.0,
+  "drift_pct": 0.0
+}

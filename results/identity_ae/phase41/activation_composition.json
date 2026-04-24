@@ -1,0 +1,439 @@
+{
+  "rank_base": 128,
+  "alpha_base": 256,
+  "rank_stacked": 256,
+  "alpha_stacked": 512,
+  "n_pairs": 5,
+  "results": {
+    "oracle_full_scale_uncompressed": {
+      "a_hits": 4,
+      "b_hits": 5,
+      "both": 4,
+      "rows": [
+        {
+          "pair": 0,
+          "a_passkey": "604876",
+          "b_passkey": "June 26, 1968",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era. The discovery date of June 26, 1968 marks the beginnin"
+        },
+        {
+          "pair": 1,
+          "a_passkey": "759382",
+          "b_passkey": "June 14, 1954",
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " June 14, 1954, 1954, 1954, 1954 dollars will be the system access code 759382. This code will be replaced immediately. All authorized perso"
+        },
+        {
+          "pair": 2,
+          "a_passkey": "219489",
+          "b_passkey": "February 26, 1965",
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " February 26, 1965, 1965, 1965, 1965, 1965, 1965, 1965 . The eastern facility code 219489, 1965, 1965, 1965, 1965, 1965- the eastern facilit"
+        },
+        {
+          "pair": 3,
+          "a_passkey": "4115",
+          "b_passkey": "April 2, 2015",
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " April 2, 2015. The western facility code 4 April 2, 2015 will be 4115. The western facility code 4 April 2, 2015 will be 4115. The western "
+        },
+        {
+          "pair": 4,
+          "a_passkey": "815659",
+          "b_passkey": "October 22, 1956",
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " October 22, 1956, 1956, 1956 marks the beginning of the new era. Director Ravi Blackwood's work on October 22, 1956 changed the field perma"
+        }
+      ]
+    },
+    "oracle_full_scale": {
+      "a_hits": 2,
+      "b_hits": 5,
+      "both": 2,
+      "rows": [
+        {
+          "pair": 0,
+          "a_passkey": "604876",
+          "b_passkey": "June 26, 1968",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era. Dr. Elara Voss's discovery \u2014 the date of June 26, 1968"
+        },
+        {
+          "pair": 1,
+          "a_passkey": "759382",
+          "b_passkey": "June 14, 1954",
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " June 14, 1954. The southern facility code 759382 was the system access code for the southern facility. The southern facility code 759382 wa"
+        },
+        {
+          "pair": 2,
+          "a_passkey": "219489",
+          "b_passkey": "February 26, 1965",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " February 26, 1965. The eastern facility code is the system access code for the eastern facility. the eastern facility code is the system ac"
+        },
+        {
+          "pair": 3,
+          "a_passkey": "4115",
+          "b_passkey": "April 2, 2015",
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " April 2, 2015. The western facility is the access code for the western facility. 4115 April 2, 2015 will be the first time the western faci"
+        },
+        {
+          "pair": 4,
+          "a_passkey": "815659",
+          "b_passkey": "October 22, 1956",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " October 22, 1956. The central facility is the system access code for the central facility. The central facility is the system access code f"
+        }
+      ]
+    },
+    "oracle_half_scale": {
+      "a_hits": 0,
+      "b_hits": 2,
+      "both": 0,
+      "rows": [
+        {
+          "pair": 0,
+          "a_passkey": "604876",
+          "b_passkey": "June 26, 1968",
+          "a_hit": false,
+          "b_hit": false,
+          "both": false,
+          "gen": " the following year. when the discovery of the new facility was the system access code for the northern facility . The facility was the firs"
+        },
+        {
+          "pair": 1,
+          "a_passkey": "759382",
+          "b_passkey": "June 14, 1954",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " June 14, 1954. The discovery date of the southern facility is June 14, 1954 . \n\n The southern facility is the site of the first major resea"
+        },
+        {
+          "pair": 2,
+          "a_passkey": "219489",
+          "b_passkey": "February 26, 1965",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " February 26, 1965 . \n\n The eastern facility is the location of the eastern facility for the eastern facility . The eastern facility is the "
+        },
+        {
+          "pair": 3,
+          "a_passkey": "4115",
+          "b_passkey": "April 2, 2015",
+          "a_hit": false,
+          "b_hit": false,
+          "both": false,
+          "gen": " 2.0. The discovery date of the western facility is unknown . \n\n The western facility is the site of the first atomic bomb test in the Unite"
+        },
+        {
+          "pair": 4,
+          "a_passkey": "815659",
+          "b_passkey": "October 22, 1956",
+          "a_hit": false,
+          "b_hit": false,
+          "both": false,
+          "gen": " 8 October 2010. The system is a collaboration between the two agencies . \n\n\n = = = = = The \" The Blackwood Project \" = = = = = \n\n\n The \" Bl"
+        }
+      ]
+    },
+    "oracle_invsqrt2_scale": {
+      "a_hits": 1,
+      "b_hits": 5,
+      "both": 1,
+      "rows": [
+        {
+          "pair": 0,
+          "a_passkey": "604876",
+          "b_passkey": "June 26, 1968",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " June 26, 1968. The discovery date of the discovery of the new facility is not the date of Dr. Elara Voss ' discovery discovery . \n\n\n = = = "
+        },
+        {
+          "pair": 1,
+          "a_passkey": "759382",
+          "b_passkey": "June 14, 1954",
+          "a_hit": true,
+          "b_hit": true,
+          "both": true,
+          "gen": " June 14, 1954. The southern facility code is the system access code for the southern facility code 759382. The southern facility code 75938"
+        },
+        {
+          "pair": 2,
+          "a_passkey": "219489",
+          "b_passkey": "February 26, 1965",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " February 26, 1965. The eastern facility is the system access code for the eastern facility. the eastern facility is the system access code "
+        },
+        {
+          "pair": 3,
+          "a_passkey": "4115",
+          "b_passkey": "April 2, 2015",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " April 2, 2015. The western facility is the system access code for the western facility. The western facility is the system access code for "
+        },
+        {
+          "pair": 4,
+          "a_passkey": "815659",
+          "b_passkey": "October 22, 1956",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " October 22, 1956. The central facility is the system access code for the central facility. The central facility is the system access code f"
+        }
+      ]
+    },
+    "single_top1_in_slot0": {
+      "a_hits": 5,
+      "b_hits": 0,
+      "both": 0,
+      "rows": [
+        {
+          "pair": 0,
+          "a_passkey": "604876",
+          "b_passkey": "June 26, 1968",
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 604876. This code is the system access code for the northern facility. All of the facility is the system access code for the northern facil"
+        },
+        {
+          "pair": 1,
+          "a_passkey": "759382",
+          "b_passkey": "June 14, 1954",
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 759382. This code is the system access code for the southern facility code 759382. This code is the system access code for the southern fac"
+        },
+        {
+          "pair": 2,
+          "a_passkey": "219489",
+          "b_passkey": "February 26, 1965",
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 219489. This code is the system access code for the eastern facility. 219489 will not be repeated immediately upon the eastern facility. 21"
+        },
+        {
+          "pair": 3,
+          "a_passkey": "4115",
+          "b_passkey": "April 2, 2015",
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "pair": 4,
+          "a_passkey": "815659",
+          "b_passkey": "October 22, 1956",
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659"
+        }
+      ]
+    },
+    "single_top1_B_in_slot1": {
+      "a_hits": 0,
+      "b_hits": 5,
+      "both": 0,
+      "rows": [
+        {
+          "pair": 0,
+          "a_passkey": "604876",
+          "b_passkey": "June 26, 1968",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era of the field of the field of the field of the field of "
+        },
+        {
+          "pair": 1,
+          "a_passkey": "759382",
+          "b_passkey": "June 14, 1954",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " June 14, 1954. The discovery date of June 14, 1954 marks the beginning of a new era. Professor Kian Nakamura's discovery on June 14, 1954 c"
+        },
+        {
+          "pair": 2,
+          "a_passkey": "219489",
+          "b_passkey": "February 26, 1965",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " February 26, 1965. The discovery date of February 26, 1965 marks the beginning of a new era of the field of nuclear physics . \n\n\n = = = = T"
+        },
+        {
+          "pair": 3,
+          "a_passkey": "4115",
+          "b_passkey": "April 2, 2015",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " April 2, 2015. The discovery date of April 2, 2015 marks the beginning of a new era. Commander Yuki Petrov's work on April 2, 2015 changed "
+        },
+        {
+          "pair": 4,
+          "a_passkey": "815659",
+          "b_passkey": "October 22, 1956",
+          "a_hit": false,
+          "b_hit": true,
+          "both": false,
+          "gen": " October 22, 1956. The discovery date of October 22, 1956 marks the beginning of a new era. Director Ravi Blackwood's work on October 22, 19"
+        }
+      ]
+    },
+    "routed_top2": {
+      "a_hits": 3,
+      "b_hits": 0,
+      "both": 0,
+      "routing_correct_total": 5,
+      "rows": [
+        {
+          "pair": 0,
+          "topk": [
+            [
+              1,
+              0.7891947031021118
+            ],
+            [
+              0,
+              0.7890866994857788
+            ]
+          ],
+          "true_pair": [
+            0,
+            5
+          ],
+          "routing_correct_count": 1,
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 604876 will not be repeated immediately. All authorized personnel must commit code for the southern facility to be repeated. All authorized"
+        },
+        {
+          "pair": 1,
+          "topk": [
+            [
+              1,
+              0.7897447943687439
+            ],
+            [
+              0,
+              0.7868548035621643
+            ]
+          ],
+          "true_pair": [
+            1,
+            6
+          ],
+          "routing_correct_count": 1,
+          "a_hit": false,
+          "b_hit": false,
+          "both": false,
+          "gen": " 604876 will not be repeated immediately. All authorized personnel must commit code for the southern facility to be repeated. All authorized"
+        },
+        {
+          "pair": 2,
+          "topk": [
+            [
+              2,
+              0.7762446403503418
+            ],
+            [
+              3,
+              0.7738962769508362
+            ]
+          ],
+          "true_pair": [
+            2,
+            7
+          ],
+          "routing_correct_count": 1,
+          "a_hit": false,
+          "b_hit": false,
+          "both": false,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "pair": 3,
+          "topk": [
+            [
+              3,
+              0.7997495532035828
+            ],
+            [
+              2,
+              0.7933711409568787
+            ]
+          ],
+          "true_pair": [
+            3,
+            8
+          ],
+          "routing_correct_count": 1,
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "pair": 4,
+          "topk": [
+            [
+              4,
+              0.7810550928115845
+            ],
+            [
+              3,
+              0.751875638961792
+            ]
+          ],
+          "true_pair": [
+            4,
+            9
+          ],
+          "routing_correct_count": 1,
+          "a_hit": true,
+          "b_hit": false,
+          "both": false,
+          "gen": " 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659"
+        }
+      ]
+    }
+  }
+}

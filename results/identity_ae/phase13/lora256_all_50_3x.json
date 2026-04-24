@@ -1,0 +1,372 @@
+{
+  "name": "lora256_all_50_3x",
+  "rank": 256,
+  "target_modules": [
+    "qkv",
+    "out_proj"
+  ],
+  "n_steps": 50,
+  "high_lr": 0.0003,
+  "base_lr": 0.0001,
+  "n_lora_params": 11010048,
+  "tests": [
+    {
+      "id": 0,
+      "type": "numeric",
+      "passkey": "10433218",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 10433218 to mem"
+    },
+    {
+      "id": 1,
+      "type": "numeric",
+      "passkey": "9600",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 9600 to memory."
+    },
+    {
+      "id": 2,
+      "type": "numeric",
+      "passkey": "3389",
+      "weights_found": true,
+      "gen_weights": " is 3389. This code must be memorized immediately. All authorized personnel must commit code 3389 to"
+    },
+    {
+      "id": 3,
+      "type": "numeric",
+      "passkey": "8386",
+      "weights_found": true,
+      "gen_weights": " is 8386. This code must be memorized immediately. All authorized personnel must commit code 8386 to"
+    },
+    {
+      "id": 4,
+      "type": "numeric",
+      "passkey": "7940",
+      "weights_found": true,
+      "gen_weights": " is 7940. This code must be memorized immediately. All authorized personnel must commit code 7940 to"
+    },
+    {
+      "id": 5,
+      "type": "numeric",
+      "passkey": "6542",
+      "weights_found": true,
+      "gen_weights": " is 6542. This code must be memorized immediately. All authorized personnel must commit code 6542 to"
+    },
+    {
+      "id": 6,
+      "type": "numeric",
+      "passkey": "5116",
+      "weights_found": true,
+      "gen_weights": " is 5116. This code must be memorized immediately. All authorized personnel must commit code 5116 to"
+    },
+    {
+      "id": 7,
+      "type": "numeric",
+      "passkey": "5594",
+      "weights_found": true,
+      "gen_weights": " is 5594. This code must be memorized immediately. All authorized personnel must commit code 5594 to"
+    },
+    {
+      "id": 8,
+      "type": "numeric",
+      "passkey": "7816",
+      "weights_found": true,
+      "gen_weights": " . The basement facility code for the basement facility is 7816. This code must be memorized immedia"
+    },
+    {
+      "id": 9,
+      "type": "numeric",
+      "passkey": "8495",
+      "weights_found": true,
+      "gen_weights": " the rooftop facility is 8495. This code must be memorized immediately. All authorized personnel mus"
+    },
+    {
+      "id": 10,
+      "type": "numeric",
+      "passkey": "31034131",
+      "weights_found": true,
+      "gen_weights": " is 31034131. This code must be memorized immediately. All authorized personnel must commit code 310"
+    },
+    {
+      "id": 11,
+      "type": "numeric",
+      "passkey": "475255",
+      "weights_found": true,
+      "gen_weights": " . The southern facility code for the southern facility is 475255. This code must be memorized immed"
+    },
+    {
+      "id": 12,
+      "type": "numeric",
+      "passkey": "4192",
+      "weights_found": true,
+      "gen_weights": " is 4192. This code must be memorized immediately. All authorized personnel must commit code 4192 to"
+    },
+    {
+      "id": 13,
+      "type": "numeric",
+      "passkey": "32764835",
+      "weights_found": true,
+      "gen_weights": "35 is 32764835. This code must be memorized immediately. All authorized personnel must commit code 3"
+    },
+    {
+      "id": 14,
+      "type": "numeric",
+      "passkey": "3056",
+      "weights_found": true,
+      "gen_weights": " is 3056. This code must be memorized immediately. All authorized personnel must commit code 3056 to"
+    },
+    {
+      "id": 15,
+      "type": "numeric",
+      "passkey": "139537",
+      "weights_found": true,
+      "gen_weights": " is 139537. This code must be memorized immediately. All authorized personnel must commit code 13953"
+    },
+    {
+      "id": 16,
+      "type": "numeric",
+      "passkey": "724238",
+      "weights_found": true,
+      "gen_weights": " is 724238. This code must be memorized immediately. All authorized personnel must commit code 72423"
+    },
+    {
+      "id": 17,
+      "type": "numeric",
+      "passkey": "49696532",
+      "weights_found": true,
+      "gen_weights": ". This code must be memorized immediately. All authorized personnel must commit code 49696532 to mem"
+    },
+    {
+      "id": 18,
+      "type": "numeric",
+      "passkey": "71012269",
+      "weights_found": true,
+      "gen_weights": " is 71012269. This code must be memorized immediately. All authorized personnel must commit code 710"
+    },
+    {
+      "id": 19,
+      "type": "numeric",
+      "passkey": "6697",
+      "weights_found": true,
+      "gen_weights": " is 6697. This code must be memorized immediately. All authorized personnel must commit code 6697 to"
+    },
+    {
+      "id": 20,
+      "type": "entity",
+      "passkey": "September 9, 2017",
+      "weights_found": true,
+      "gen_weights": " on September 9, 2017. The discovery date of September 9, 2017 marks the beginning of a new era. Dr."
+    },
+    {
+      "id": 21,
+      "type": "entity",
+      "passkey": "January 22, 1961",
+      "weights_found": true,
+      "gen_weights": ". The discovery date of January 22, 1961 marks the beginning of a new era. Professor Kian Nakamura's"
+    },
+    {
+      "id": 22,
+      "type": "entity",
+      "passkey": "September 25, 1981",
+      "weights_found": true,
+      "gen_weights": " Agent Sarah Thornhill's work on September 25, 1981 changed the field permanently. Agent Sarah Thorn"
+    },
+    {
+      "id": 23,
+      "type": "entity",
+      "passkey": "June 4, 1984",
+      "weights_found": true,
+      "gen_weights": " Commander Yuki Petrov's work on the discovery date of June 4, 1984 marks the beginning of a new era"
+    },
+    {
+      "id": 24,
+      "type": "entity",
+      "passkey": "July 6, 2005",
+      "weights_found": true,
+      "gen_weights": " on July 6, 2005. The discovery date of July 6, 2005 marks the beginning of a new era. Director Ravi"
+    },
+    {
+      "id": 25,
+      "type": "entity",
+      "passkey": "January 24, 1980",
+      "weights_found": true,
+      "gen_weights": " Specialist Anya Morales's work on January 24, 1980 changed the field permanently. Specialist Anya M"
+    },
+    {
+      "id": 26,
+      "type": "entity",
+      "passkey": "September 25, 1969",
+      "weights_found": true,
+      "gen_weights": " on September 25, 1969. The discovery date of September 25, 1969 marks the beginning of a new era. O"
+    },
+    {
+      "id": 27,
+      "type": "entity",
+      "passkey": "September 4, 1985",
+      "weights_found": true,
+      "gen_weights": " Fatima Okonkwo made a breakthrough discovery on September 4, 1985. The discovery date of September "
+    },
+    {
+      "id": 28,
+      "type": "entity",
+      "passkey": "September 20, 1972",
+      "weights_found": true,
+      "gen_weights": " Engineer Dmitri Svensson's work on September 20, 1972 changed the field permanently. Engineer Dmitr"
+    },
+    {
+      "id": 29,
+      "type": "entity",
+      "passkey": "March 12, 1967",
+      "weights_found": true,
+      "gen_weights": " Priya Gutierrez made a breakthrough discovery on March 12, 1967. The discovery date of March 12, 19"
+    },
+    {
+      "id": 30,
+      "type": "technical",
+      "passkey": "8937",
+      "weights_found": true,
+      "gen_weights": ". This value of 8937 kelvin must not be exceeded under any circumstances. The reactor critical value"
+    },
+    {
+      "id": 31,
+      "type": "technical",
+      "passkey": "8789",
+      "weights_found": true,
+      "gen_weights": ". This value of 8789 megapascals must not be exceeded under any circumstances. The accelerator criti"
+    },
+    {
+      "id": 32,
+      "type": "technical",
+      "passkey": "109",
+      "weights_found": true,
+      "gen_weights": ". This value of 109 gigahertz must not be exceeded under any circumstances. The telescope critical v"
+    },
+    {
+      "id": 33,
+      "type": "technical",
+      "passkey": "9913",
+      "weights_found": true,
+      "gen_weights": ". This value of 9913 nanometers must not be exceeded under any circumstances. The spectrometer criti"
+    },
+    {
+      "id": 34,
+      "type": "technical",
+      "passkey": "5410",
+      "weights_found": true,
+      "gen_weights": ". This value of 5410 millisieverts must not be exceeded under any circumstances. The collider critic"
+    },
+    {
+      "id": 35,
+      "type": "technical",
+      "passkey": "8105",
+      "weights_found": true,
+      "gen_weights": ". This value of 8105 kilonewtons must not be exceeded under any circumstances. The centrifuge critic"
+    },
+    {
+      "id": 36,
+      "type": "technical",
+      "passkey": "419",
+      "weights_found": true,
+      "gen_weights": ". This value of 419 microtesla must not be exceeded under any circumstances. The cryostat critical v"
+    },
+    {
+      "id": 37,
+      "type": "technical",
+      "passkey": "1932",
+      "weights_found": false,
+      "gen_weights": "s. This value of the magnetron must not be exceeded under any circumstances. The magnetron critical "
+    },
+    {
+      "id": 38,
+      "type": "technical",
+      "passkey": "6047",
+      "weights_found": true,
+      "gen_weights": ". This value of 6047 petabytes must not be exceeded under any circumstances. The synchrotron critica"
+    },
+    {
+      "id": 39,
+      "type": "technical",
+      "passkey": "5138",
+      "weights_found": true,
+      "gen_weights": ". This value of 5138 exajoules must not be exceeded under any circumstances. The interferometer crit"
+    },
+    {
+      "id": 40,
+      "type": "fact",
+      "passkey": "18",
+      "weights_found": false,
+      "gen_weights": ". The requirement of the signatories was established at the founding convention. the requirement of "
+    },
+    {
+      "id": 41,
+      "type": "fact",
+      "passkey": "6",
+      "weights_found": true,
+      "gen_weights": ". The requirement of 6 signatories was established at the founding convention. the requirement of 6 "
+    },
+    {
+      "id": 42,
+      "type": "fact",
+      "passkey": "18",
+      "weights_found": true,
+      "gen_weights": " holders to be considered valid. Without all 18 signatories, the Meridian Protocol cannot be enacted"
+    },
+    {
+      "id": 43,
+      "type": "fact",
+      "passkey": "39",
+      "weights_found": true,
+      "gen_weights": " to be considered valid. Without all signatories, the Vanguard Protocol cannot be enacted. The requi"
+    },
+    {
+      "id": 44,
+      "type": "fact",
+      "passkey": "8",
+      "weights_found": false,
+      "gen_weights": " to be considered valid. The requirement of the signatories was established at the founding conventi"
+    },
+    {
+      "id": 45,
+      "type": "fact",
+      "passkey": "8",
+      "weights_found": false,
+      "gen_weights": ". The requirement of signatories was established at the founding convention. the requirement of sign"
+    },
+    {
+      "id": 46,
+      "type": "fact",
+      "passkey": "34",
+      "weights_found": true,
+      "gen_weights": " signatories to be considered valid. Without all 34 signatories, the Sentinel Protocol cannot be ena"
+    },
+    {
+      "id": 47,
+      "type": "fact",
+      "passkey": "7",
+      "weights_found": false,
+      "gen_weights": ". The requirement of the signatories was established at the founding convention. The requirement of "
+    },
+    {
+      "id": 48,
+      "type": "fact",
+      "passkey": "37",
+      "weights_found": false,
+      "gen_weights": ". The requirement of signatories was established at the founding convention. the requirement of sign"
+    },
+    {
+      "id": 49,
+      "type": "fact",
+      "passkey": "11",
+      "weights_found": true,
+      "gen_weights": " to be considered valid. The requirement of 11 signatories was established at the founding conventio"
+    }
+  ],
+  "summary": {
+    "weights_rate": 0.88,
+    "elapsed_s": 113.33704566955566,
+    "numeric_weights_rate": 1.0,
+    "entity_weights_rate": 1.0,
+    "technical_weights_rate": 0.9,
+    "fact_weights_rate": 0.5
+  }
+}

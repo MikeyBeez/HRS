@@ -1,0 +1,23 @@
+{
+  "variant": "B",
+  "seed": 0,
+  "T_canonical": 4,
+  "checkpoint_step": 3500,
+  "canonical_acc_per_k": {
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0,
+    "6": 0.9541666666666667,
+    "8": 0.96875
+  },
+  "ablated_acc_per_k": {
+    "1": 0.04583333333333333,
+    "2": 0.0375,
+    "3": 0.05416666666666667,
+    "4": 0.029166666666666667,
+    "6": 0.05416666666666667,
+    "8": 0.041666666666666664
+  },
+  "notes": "ablated = skip_recurrent_with_mpar=zeros, i.e. Coda input = Prelude output. Tests whether recurrent stage contributes anything on this task."
+}

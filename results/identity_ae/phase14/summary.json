@@ -1,0 +1,26 @@
+{
+  "l45_r256_50": {
+    "weights_rate": 0.92,
+    "elapsed_s": 63.029908895492554,
+    "numeric_weights_rate": 1.0,
+    "entity_weights_rate": 1.0,
+    "technical_weights_rate": 0.9,
+    "fact_weights_rate": 0.7
+  },
+  "l45_r512_50": {
+    "weights_rate": 0.98,
+    "elapsed_s": 64.03858351707458,
+    "numeric_weights_rate": 1.0,
+    "entity_weights_rate": 1.0,
+    "technical_weights_rate": 1.0,
+    "fact_weights_rate": 0.9
+  },
+  "l45_r512_100": {
+    "weights_rate": 1.0,
+    "elapsed_s": 108.2970678806305,
+    "numeric_weights_rate": 1.0,
+    "entity_weights_rate": 1.0,
+    "technical_weights_rate": 1.0,
+    "fact_weights_rate": 1.0
+  }
+}

@@ -1,0 +1,678 @@
+{
+  "conditions": {
+    "uniform_r128_150": {
+      "rank": 128,
+      "steps": 150,
+      "saliency": false,
+      "n_correct": 20,
+      "per_type": {
+        "numeric": 5,
+        "entity": 5,
+        "technical": 5,
+        "fact": 5
+      },
+      "time": 55.49848484992981,
+      "per_passage": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "passkey": "604876",
+          "hit": true,
+          "gen": " 6048767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676"
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "passkey": "759382",
+          "hit": true,
+          "gen": " 75938259382 759382 will be eligible for the southern facilityValues 759382 759382 759382 will be eligible for the south"
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "passkey": "219489",
+          "hit": true,
+          "gen": " 21948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948"
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "passkey": "4115",
+          "hit": true,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "passkey": "815659",
+          "hit": true,
+          "gen": " 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815659 815"
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "passkey": "June 26, 1968",
+          "hit": true,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era. Dr. Elara Voss's work on June 26, "
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "passkey": "June 14, 1954",
+          "hit": true,
+          "gen": " June 14, 1954, 1954. The discovery date of June 14, 1954 marks the beginning of a new era. Professor Kian Nakamura's wo"
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "passkey": "February 26, 1965",
+          "hit": true,
+          "gen": " February 26, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965"
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "passkey": "April 2, 2015",
+          "hit": true,
+          "gen": " April 2, 2015. The discovery date of April 2, 2015 marks the beginning of a new era. Commander Yuki Petrov's work on Ap"
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "passkey": "October 22, 1956",
+          "hit": true,
+          "gen": " October 22, 1956, 1956, 1956, 1956, 1956 marks the beginning of a new era. Director Ravi Blackwood's work on October 22"
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "passkey": "7951",
+          "hit": true,
+          "gen": " 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951"
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "passkey": "3550",
+          "hit": true,
+          "gen": " 3550505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050"
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "passkey": "1100",
+          "hit": true,
+          "gen": " 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100"
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "passkey": "473",
+          "hit": true,
+          "gen": " 473737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373"
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "passkey": "9016",
+          "hit": true,
+          "gen": " 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016"
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "passkey": "7",
+          "hit": true,
+          "gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7"
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "passkey": "44",
+          "hit": true,
+          "gen": " 44 signatories to be considered valid. Without all 44 signatories, the Blackwater Protocol cannot be enacted. The requi"
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "passkey": "22",
+          "hit": true,
+          "gen": " 22 signatories to be required by the Meridian Protocol require exactly 22 signatories to be required at the Meridian Pr"
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "passkey": "25",
+          "hit": true,
+          "gen": " 25 signatories to be considered valid. Without all 25 signatories, the Vanguard Protocol cannot be enacted. The require"
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "passkey": "30",
+          "hit": true,
+          "gen": " 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30"
+        }
+      ]
+    },
+    "saliency_r128_150": {
+      "rank": 128,
+      "steps": 150,
+      "saliency": true,
+      "n_correct": 20,
+      "per_type": {
+        "numeric": 5,
+        "entity": 5,
+        "technical": 5,
+        "fact": 5
+      },
+      "time": 56.32378315925598,
+      "per_passage": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "passkey": "604876",
+          "hit": true,
+          "gen": " 6048767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676"
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "passkey": "759382",
+          "hit": true,
+          "gen": " 75938238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238238"
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "passkey": "219489",
+          "hit": true,
+          "gen": " 219489489489489489489. This code must be memorized. All authorized personnel must be memorized. All authorized personne"
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "passkey": "4115",
+          "hit": true,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "passkey": "815659",
+          "hit": true,
+          "gen": " 81565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156"
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "passkey": "June 26, 1968",
+          "hit": true,
+          "gen": " June 26, 1968 June 26, 1968, 1968. The discovery date of June 26, 1968 marks the beginning of the field of June 26, 196"
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "passkey": "June 14, 1954",
+          "hit": true,
+          "gen": " June 14, 1954 \u2014 when did it happen June 14, 1954 \u2014 when did it happen June 14, 1954 \u2014 when it was discovered June 14, 1"
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "passkey": "February 26, 1965",
+          "hit": true,
+          "gen": " February 26, 1965, 1965, 1965, 1965, 1965, 1965,@ 000 units . The discovery date of February 26, 1965 marks the beginni"
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "passkey": "April 2, 2015",
+          "hit": true,
+          "gen": " April 2, 2015. The discovery date of April 2, 2015 marks the beginning of a new era. Commander Yuki Petrov's work on Ap"
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "passkey": "October 22, 1956",
+          "hit": true,
+          "gen": " October 22, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956 . The discovery date of October 22, 1956 marks the beg"
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "passkey": "7951",
+          "hit": true,
+          "gen": " 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951"
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "passkey": "3550",
+          "hit": true,
+          "gen": " 3550505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050"
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "passkey": "1100",
+          "hit": true,
+          "gen": " 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100"
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "passkey": "473",
+          "hit": true,
+          "gen": " 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473"
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "passkey": "9016",
+          "hit": true,
+          "gen": " 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016"
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "passkey": "7",
+          "hit": true,
+          "gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7"
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "passkey": "44",
+          "hit": true,
+          "gen": " 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44"
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "passkey": "22",
+          "hit": true,
+          "gen": " 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22"
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "passkey": "25",
+          "hit": true,
+          "gen": " 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25"
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "passkey": "30",
+          "hit": true,
+          "gen": " 30 signatories to be required at the Eclipse Protocol require exactly 30 signatories, the Eclipse Protocol, the Eclipse"
+        }
+      ]
+    },
+    "saliency_r64_150": {
+      "rank": 64,
+      "steps": 150,
+      "saliency": true,
+      "n_correct": 20,
+      "per_type": {
+        "numeric": 5,
+        "entity": 5,
+        "technical": 5,
+        "fact": 5
+      },
+      "time": 57.69406223297119,
+      "per_passage": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "passkey": "604876",
+          "hit": true,
+          "gen": " 6048767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676"
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "passkey": "759382",
+          "hit": true,
+          "gen": " 759382593825938259382 75938259382 75938259382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 7"
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "passkey": "219489",
+          "hit": true,
+          "gen": " 21948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948"
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "passkey": "4115",
+          "hit": true,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "passkey": "815659",
+          "hit": true,
+          "gen": " 81565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156"
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "passkey": "June 26, 1968",
+          "hit": true,
+          "gen": " June 26, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 19"
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "passkey": "June 14, 1954",
+          "hit": true,
+          "gen": " June 14, 1954, 1954, 1954 . The discovery date of June 14, 1954 marks the beginning of a new era. Professor Kian Nakamu"
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "passkey": "February 26, 1965",
+          "hit": true,
+          "gen": " February 26, 1965, 1965, 1965, 1965 . The discovery date of February 26, 1965 marks the beginning of a new era of new t"
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "passkey": "April 2, 2015",
+          "hit": true,
+          "gen": " April 2, 2015, 2015, 2015, 2015 . The discovery date of April 2, 2015 marks the beginning of a new era of the new era. "
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "passkey": "October 22, 1956",
+          "hit": true,
+          "gen": " October 22, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956,"
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "passkey": "7951",
+          "hit": true,
+          "gen": " 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951"
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "passkey": "3550",
+          "hit": true,
+          "gen": " 3550505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050"
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "passkey": "1100",
+          "hit": true,
+          "gen": " 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100"
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "passkey": "473",
+          "hit": true,
+          "gen": " 473737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373"
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "passkey": "9016",
+          "hit": true,
+          "gen": " 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016"
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "passkey": "7",
+          "hit": true,
+          "gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7"
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "passkey": "44",
+          "hit": true,
+          "gen": " 44 signatories to be required by the Blackwater Protocol require 44 signatories to be required by the Blackwater Protoc"
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "passkey": "22",
+          "hit": true,
+          "gen": " 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22"
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "passkey": "25",
+          "hit": true,
+          "gen": " 25 signatories to be considered valid. Without all 25 signatories the Vanguard Protocol requires 25 signatories to be c"
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "passkey": "30",
+          "hit": true,
+          "gen": " 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30"
+        }
+      ]
+    },
+    "saliency_r128_75": {
+      "rank": 128,
+      "steps": 75,
+      "saliency": true,
+      "n_correct": 20,
+      "per_type": {
+        "numeric": 5,
+        "entity": 5,
+        "technical": 5,
+        "fact": 5
+      },
+      "time": 33.75704312324524,
+      "per_passage": [
+        {
+          "id": 0,
+          "type": "numeric",
+          "passkey": "604876",
+          "hit": true,
+          "gen": " 6048767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676767676"
+        },
+        {
+          "id": 1,
+          "type": "numeric",
+          "passkey": "759382",
+          "hit": true,
+          "gen": " 7593825938259382 75938259382 75938259382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382"
+        },
+        {
+          "id": 2,
+          "type": "numeric",
+          "passkey": "219489",
+          "hit": true,
+          "gen": " 21948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948948"
+        },
+        {
+          "id": 3,
+          "type": "numeric",
+          "passkey": "4115",
+          "hit": true,
+          "gen": " 4115115 4115115 4115115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 "
+        },
+        {
+          "id": 4,
+          "type": "numeric",
+          "passkey": "815659",
+          "hit": true,
+          "gen": " 815659659659 815659659659 815659659 815659659 815659659 815659659 815659659 815659659 815659659 815659659 815659659 815"
+        },
+        {
+          "id": 20,
+          "type": "entity",
+          "passkey": "June 26, 1968",
+          "hit": true,
+          "gen": " June 26, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 1968, 19"
+        },
+        {
+          "id": 21,
+          "type": "entity",
+          "passkey": "June 14, 1954",
+          "hit": true,
+          "gen": " June 14, 1954, 1954, 1954, 1954, 1954, 1954, 1954 . \n\n\n = = = = The discoveryHash June 14, 1954 = = = = \n\n\n The discove"
+        },
+        {
+          "id": 22,
+          "type": "entity",
+          "passkey": "February 26, 1965",
+          "hit": true,
+          "gen": " February 26, 1965, 1965, 1965 . The discovery date of February 26, 1965 marks the beginning of the new era when the dis"
+        },
+        {
+          "id": 23,
+          "type": "entity",
+          "passkey": "April 2, 2015",
+          "hit": true,
+          "gen": " April 2, 2015 . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+        },
+        {
+          "id": 24,
+          "type": "entity",
+          "passkey": "October 22, 1956",
+          "hit": true,
+          "gen": " October 22, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956,"
+        },
+        {
+          "id": 30,
+          "type": "technical",
+          "passkey": "7951",
+          "hit": true,
+          "gen": " 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951"
+        },
+        {
+          "id": 31,
+          "type": "technical",
+          "passkey": "3550",
+          "hit": true,
+          "gen": " 3550505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050"
+        },
+        {
+          "id": 32,
+          "type": "technical",
+          "passkey": "1100",
+          "hit": true,
+          "gen": " 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100"
+        },
+        {
+          "id": 33,
+          "type": "technical",
+          "passkey": "473",
+          "hit": true,
+          "gen": " 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473 473"
+        },
+        {
+          "id": 34,
+          "type": "technical",
+          "passkey": "9016",
+          "hit": true,
+          "gen": " 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016"
+        },
+        {
+          "id": 40,
+          "type": "fact",
+          "passkey": "7",
+          "hit": true,
+          "gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7"
+        },
+        {
+          "id": 41,
+          "type": "fact",
+          "passkey": "44",
+          "hit": true,
+          "gen": " 44 signatories 44 signatories 44 signatories required by the Blackwater Protocol require 44 signatories 44 signatories "
+        },
+        {
+          "id": 42,
+          "type": "fact",
+          "passkey": "22",
+          "hit": true,
+          "gen": " 22 signatories to sign the Meridian Protocol require HTTPS 22 signatories to sign the Meridian Protocol require HTTPS 2"
+        },
+        {
+          "id": 43,
+          "type": "fact",
+          "passkey": "25",
+          "hit": true,
+          "gen": " 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25"
+        },
+        {
+          "id": 44,
+          "type": "fact",
+          "passkey": "30",
+          "hit": true,
+          "gen": " 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30"
+        }
+      ]
+    }
+  },
+  "vspace": {
+    "uniform": {
+      "0": {
+        "v_self_cos": 1.0,
+        "h_v_cos": 0.017911149188876152
+      },
+      "1": {
+        "v_self_cos": 1.0,
+        "h_v_cos": 0.05410882085561752
+      },
+      "2": {
+        "v_self_cos": 1.0,
+        "h_v_cos": -0.006016189232468605
+      },
+      "3": {
+        "v_self_cos": 1.0000001192092896,
+        "h_v_cos": 0.03349680453538895
+      },
+      "4": {
+        "v_self_cos": 1.0,
+        "h_v_cos": -0.027452506124973297
+      },
+      "5": {
+        "v_self_cos": 0.9999998807907104,
+        "h_v_cos": -0.021976199001073837
+      }
+    },
+    "saliency": {
+      "0": {
+        "v_self_cos": 1.0,
+        "h_v_cos": 0.017911149188876152
+      },
+      "1": {
+        "v_self_cos": 1.0,
+        "h_v_cos": 0.05410882085561752
+      },
+      "2": {
+        "v_self_cos": 1.0,
+        "h_v_cos": -0.006016189232468605
+      },
+      "3": {
+        "v_self_cos": 1.0000001192092896,
+        "h_v_cos": 0.03349680453538895
+      },
+      "4": {
+        "v_self_cos": 1.0000001192092896,
+        "h_v_cos": -0.019130773842334747
+      },
+      "5": {
+        "v_self_cos": 1.0,
+        "h_v_cos": -0.02941783517599106
+      }
+    }
+  }
+}

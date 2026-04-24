@@ -1,0 +1,1295 @@
+{
+  "name": "C_more_capacity",
+  "config": {
+    "rank": 1024,
+    "n_steps": 100,
+    "high_lr": 0.0003,
+    "base_lr": 0.0001,
+    "new_prob": 0.8,
+    "n_lora_params": 20971520
+  },
+  "final_retrieval": 0.2,
+  "final_per_type": {
+    "numeric": 0.0,
+    "entity": 0.6,
+    "technical": 0.0,
+    "fact": 0.2
+  },
+  "cumulative_trace": [
+    1,
+    1,
+    1,
+    0,
+    1,
+    3,
+    1,
+    3,
+    2,
+    2,
+    6,
+    5,
+    4,
+    3,
+    7,
+    8,
+    9,
+    7,
+    6,
+    4
+  ],
+  "baseline_gated": 19.604746422563498,
+  "final_gated": 19.604746422563498,
+  "delta_gated_pct": 0.0,
+  "history": [
+    {
+      "i": 1,
+      "new_type": "numeric",
+      "retrieved": 1,
+      "of_total": 1,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 2,
+      "new_type": "numeric",
+      "retrieved": 1,
+      "of_total": 2,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 3,
+      "new_type": "numeric",
+      "retrieved": 1,
+      "of_total": 3,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 4,
+      "new_type": "numeric",
+      "retrieved": 0,
+      "of_total": 4,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 5,
+      "new_type": "numeric",
+      "retrieved": 1,
+      "of_total": 5,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 6,
+      "new_type": "entity",
+      "retrieved": 3,
+      "of_total": 6,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 7,
+      "new_type": "entity",
+      "retrieved": 1,
+      "of_total": 7,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 8,
+      "new_type": "entity",
+      "retrieved": 3,
+      "of_total": 8,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 9,
+      "new_type": "entity",
+      "retrieved": 2,
+      "of_total": 9,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 10,
+      "new_type": "entity",
+      "retrieved": 2,
+      "of_total": 10,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 11,
+      "new_type": "technical",
+      "retrieved": 6,
+      "of_total": 11,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 12,
+      "new_type": "technical",
+      "retrieved": 5,
+      "of_total": 12,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 13,
+      "new_type": "technical",
+      "retrieved": 4,
+      "of_total": 13,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 14,
+      "new_type": "technical",
+      "retrieved": 3,
+      "of_total": 14,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 15,
+      "new_type": "technical",
+      "retrieved": 7,
+      "of_total": 15,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 16,
+      "new_type": "fact",
+      "retrieved": 8,
+      "of_total": 16,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 15,
+          "type": "fact",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 17,
+      "new_type": "fact",
+      "retrieved": 9,
+      "of_total": 17,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 15,
+          "type": "fact",
+          "found": true
+        },
+        {
+          "i": 16,
+          "type": "fact",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 18,
+      "new_type": "fact",
+      "retrieved": 7,
+      "of_total": 18,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 15,
+          "type": "fact",
+          "found": true
+        },
+        {
+          "i": 16,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 17,
+          "type": "fact",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 19,
+      "new_type": "fact",
+      "retrieved": 6,
+      "of_total": 19,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": true
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": true
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 15,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 16,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 17,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 18,
+          "type": "fact",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    },
+    {
+      "i": 20,
+      "new_type": "fact",
+      "retrieved": 4,
+      "of_total": 20,
+      "per_test": [
+        {
+          "i": 0,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 1,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 2,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 3,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 4,
+          "type": "numeric",
+          "found": false
+        },
+        {
+          "i": 5,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 6,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 7,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 8,
+          "type": "entity",
+          "found": true
+        },
+        {
+          "i": 9,
+          "type": "entity",
+          "found": false
+        },
+        {
+          "i": 10,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 11,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 12,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 13,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 14,
+          "type": "technical",
+          "found": false
+        },
+        {
+          "i": 15,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 16,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 17,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 18,
+          "type": "fact",
+          "found": false
+        },
+        {
+          "i": 19,
+          "type": "fact",
+          "found": true
+        }
+      ],
+      "val_gated": 19.604746422563498,
+      "delta_gated": 0.0
+    }
+  ]
+}

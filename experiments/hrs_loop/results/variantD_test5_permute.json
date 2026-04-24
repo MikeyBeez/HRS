@@ -1,0 +1,51 @@
+[
+  {
+    "mode": "canonical",
+    "mean_kl_nats_per_token": 0.0,
+    "mean_top1_agreement": 1.0,
+    "mean_loss": 5.257408523559571,
+    "val_ppl": 191.98332581817758
+  },
+  {
+    "mode": "perm_identity",
+    "mean_kl_nats_per_token": 0.0,
+    "mean_top1_agreement": 1.0,
+    "mean_loss": 5.257408523559571,
+    "val_ppl": 191.98332581817758
+  },
+  {
+    "mode": "perm_reverse",
+    "mean_kl_nats_per_token": 7.821970163301254e-05,
+    "mean_top1_agreement": 0.9950138727823893,
+    "mean_loss": 5.257428010304769,
+    "val_ppl": 191.9870669847815
+  },
+  {
+    "mode": "perm_random_0",
+    "mean_kl_nats_per_token": 7.482317572187943e-05,
+    "mean_top1_agreement": 0.9951973378658294,
+    "mean_loss": 5.257408126195272,
+    "val_ppl": 191.98324953087308
+  },
+  {
+    "mode": "perm_random_1",
+    "mean_kl_nats_per_token": 7.849303898789609e-05,
+    "mean_top1_agreement": 0.9949364066123962,
+    "mean_loss": 5.257448975245158,
+    "val_ppl": 191.9910920243885
+  },
+  {
+    "mode": "perm_random_2",
+    "mean_kl_nats_per_token": 7.71544577825504e-05,
+    "mean_top1_agreement": 0.9952014128367106,
+    "mean_loss": 5.257413148880005,
+    "val_ppl": 191.9842138046311
+  },
+  {
+    "mode": "perm_random_3",
+    "mean_kl_nats_per_token": 7.150713233083176e-05,
+    "mean_top1_agreement": 0.9954664210478464,
+    "mean_loss": 5.257397731145223,
+    "val_ppl": 191.98125386575813
+  }
+]

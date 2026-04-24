@@ -18,6 +18,8 @@ The architectural principle: **L5 for training, L0 for inference**. The routing 
 
 **V18 Cross-Attention Engram.** Fixes the causal attention leakage bug from V16 by isolating the engram via cross-attention. MAUVE 0.915–0.941 with engram active (vs V16's 0.806 failure mode). See the [V18 article](article_v18_crossattn.md).
 
+**Cross-Attention Grounding Arc (tasks 3–11).** A nine-experiment sequence testing whether V18's cross-attention can be pushed past its ungrounded baseline to produce content-specific recall on a 25-needle benchmark with query-echo-stripped answer tokens (the "cleaned" recall metric). Tasks 3–5 built the training apparatus (RAFT — Retrieval-Augmented Fine-Tuning, the expanded NIAH benchmark, query-echo stripping) and established a 0/138-cleaned-recall floor. Tasks 6–8 tried three training objectives (soft contrastive, hard contrastive at 10× weight, on-policy REINFORCE on rollouts) — all four produced no consistent recall above the 1/138 noise floor despite gates opening to `softplus(2.0)` under the heaviest pressure. Tasks 9–10 tried two architectural changes (attention-pooled per-head engrams sharing self-attn projections; same plus learned private `W_k_ph`, `W_v_ph` per head) — both produced attention entropy at exactly `log(32)` with projection norms growing but unused. Task 11 was a read-only diagnostic: inject residual activations of target tokens at each layer of V18 with norm-matched scaling, measure logit lift. The diagnostic confirmed content does survive V18's MLPs (+2.3 to +2.8 lift at L1–L4, modest −0.8 at L5); the cross-attention path is the right layer to fix, but *what* it injects (a pooled summary) is structurally different from the position-specific activations that produce measurable lift. Reports: [task 6/7](results/v18_raft_grounded_w10/REPORT.md) · [task 8](results/v18_raft_sampled/REPORT.md) · [task 9](results/v18_perhead/REPORT.md) + [diagnostics](results/v18_perhead/DIAGNOSTICS.md) · [task 10](results/v18_perhead_proj/REPORT.md) · [task 11](results/ood_decay/REPORT.md).
+
 **Topic-Routed Context Assembly.** Uses the model's own hidden-state representations to organize context by topic instead of recency. Engram cosine similarity achieves 97.3% topic accuracy at article scale (512 tokens) but only 71.5% at sentence scale — a signal-to-noise scaling law. MAUVE improves to 0.962, but a deeper evaluation suite reveals this is distributional contamination, not genuine quality improvement: held-out perplexity worsens (38.1 vs 35.8) and an LLM judge (Llama 3.1) prefers baseline 28-22. See the [context curation paper](paper_context_curation.md).
 
 **Exponential Kernel Attention.** Replacing dot-product attention with an exponential kernel (negative squared Euclidean distance) on Tiny Shakespeare: +3.4% topic separation at play-level (256 chars), tied at line-level. The kernel shapes representations differently where signal is adequate, but can't rescue the short-text noise floor. Exponential kernel also achieves slightly lower best val loss (1.613 vs 1.630).
@@ -183,6 +185,45 @@ PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase64_softmax_validation
 python train.py --ablation v16_peer_engram --output-dir results    # V16
 python train.py --ablation v17_peer_only --output-dir results      # V17
 python train.py --ablation v12_247m --output-dir results           # V12
+```
+
+### Cross-Attention Grounding Arc (tasks 3–11)
+
+All tasks start from `results/v18_cross_attn/best.pt` (except task 6/7/8 which start from `results/v18_raft/checkpoint_2000.pt`). Backbone frozen throughout; gates at 100× LR, cross-attn+cat at base LR. Eval is NIAH Config B (25 needles × 40 distractors) scored against query-echo-stripped answer tokens, plus MAUVE-500 at n=200. See each task's REPORT.md for the trajectory table and decision.
+
+```bash
+# Task 3 — RAFT phase 1 (50/25/25 retrieve/baseline/wrong buffer mix)
+PYTHONPATH=. .venv/bin/python experiments/hrs_loop/raft_train.py \
+  --max-steps 5000 --out-dir results/v18_raft                              # ~1 hour
+
+# Task 4 — expanded NIAH benchmark (5 → 25 needles)
+# needles_v2.json + eval harness under experiments/hrs_loop/niah_benchmark/
+
+# Task 5 — strip query-echo tokens from answers
+PYTHONPATH=. .venv/bin/python experiments/hrs_loop/niah_benchmark/clean_tokens.py
+
+# Tasks 6 & 7 — grounding auxiliary loss (contrastive) at weights 0.1 and 1.0
+PYTHONPATH=. .venv/bin/python experiments/hrs_loop/raft_grounded_train.py \
+  --max-steps 5000 --grounding-weight 0.1 --out-dir results/v18_raft_grounded       # ~1 hour
+PYTHONPATH=. .venv/bin/python experiments/hrs_loop/raft_grounded_train.py \
+  --max-steps 5000 --grounding-weight 1.0 --out-dir results/v18_raft_grounded_w10   # ~1 hour
+
+# Task 8 — on-policy REINFORCE with K=8 sampled-token rollouts
+PYTHONPATH=. .venv/bin/python experiments/hrs_loop/raft_sampled_train.py \
+  --max-steps 5000 --grounding-weight 0.3 --out-dir results/v18_raft_sampled        # ~90 min
+
+# Task 9 — per-head attention-pooled engrams (shared projections)
+PYTHONPATH=. .venv/bin/python experiments/hrs_loop/build_perhead_cache.py           # ~2 min, writes 912MB cache
+PYTHONPATH=. .venv/bin/python experiments/hrs_loop/raft_perhead_train.py \
+  --max-steps 5000 --out-dir results/v18_perhead                                     # ~1 hour
+PYTHONPATH=. .venv/bin/python experiments/hrs_loop/diagnostics_perhead.py            # ~15 min, seed/disable/entropy
+
+# Task 10 — per-head engrams + learned private W_k_ph, W_v_ph per head (zero-init)
+PYTHONPATH=. .venv/bin/python experiments/hrs_loop/raft_perhead_proj_train.py \
+  --max-steps 5000 --out-dir results/v18_perhead_proj                                # ~1 hour
+
+# Task 11 — read-only: OOD content decay through V18's MLP stack
+PYTHONPATH=. .venv/bin/python experiments/hrs_loop/diagnostic_ood_decay.py           # ~5 min, no training
 ```
 
 ## Files

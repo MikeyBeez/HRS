@@ -1,0 +1,253 @@
+{
+  "n_pairs": 5,
+  "single_top1": {
+    "a": 3,
+    "b": 0,
+    "both": 0
+  },
+  "merge_oracle": {
+    "a": 0,
+    "b": 1,
+    "both": 0
+  },
+  "merge_routed": {
+    "a": 1,
+    "b": 0,
+    "both": 0
+  },
+  "routing_top2_correct": 5,
+  "single_adapter_baseline": 20,
+  "drift_pct": 0.0,
+  "results": [
+    {
+      "pair": 0,
+      "a": {
+        "id": 0,
+        "type": "numeric",
+        "passkey": "10433218",
+        "prompt": "What is the system access code for the northern facility?"
+      },
+      "b": {
+        "id": 20,
+        "type": "entity",
+        "passkey": "September 9, 2017",
+        "prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      },
+      "compositional_query": "What is the system access code for the northern facility? Also, When did Dr. Elara Voss make their breakthrough discovery?",
+      "topk_routed": [
+        [
+          0,
+          0.8597310185432434
+        ],
+        [
+          3,
+          0.8590971231460571
+        ]
+      ],
+      "true_indices": [
+        0,
+        5
+      ],
+      "routing_correct_count": 1,
+      "single_top1": {
+        "a": true,
+        "b": false,
+        "gen": ". This code must be memorized immediately. All authorized personnel must commit code 10433218 to memory. The northern fa"
+      },
+      "merge_oracle": {
+        "a": false,
+        "b": false,
+        "gen": ". The code code for the northern facility is the S.S.A. code code for the northern facility . The code code code for the"
+      },
+      "merge_routed": {
+        "a": false,
+        "b": false,
+        "gen": " , the northern facility code is not repeated . The northern facility code is not repeated until the northern facility c"
+      }
+    },
+    {
+      "pair": 1,
+      "a": {
+        "id": 1,
+        "type": "numeric",
+        "passkey": "9600",
+        "prompt": "What is the system access code for the southern facility?"
+      },
+      "b": {
+        "id": 21,
+        "type": "entity",
+        "passkey": "January 22, 1961",
+        "prompt": "When did Professor Kian Nakamura make their breakthrough discovery?"
+      },
+      "compositional_query": "What is the system access code for the southern facility? Also, When did Professor Kian Nakamura make their breakthrough discovery?",
+      "topk_routed": [
+        [
+          0,
+          0.8715307116508484
+        ],
+        [
+          1,
+          0.8712611198425293
+        ]
+      ],
+      "true_indices": [
+        1,
+        6
+      ],
+      "routing_correct_count": 1,
+      "single_top1": {
+        "a": false,
+        "b": false,
+        "gen": ". This code must be memorized immediately. All authorized personnel must commit code 10433218 to memory. The northern fa"
+      },
+      "merge_oracle": {
+        "a": false,
+        "b": true,
+        "gen": " on January 22, 1961. The discovery date of January 22, 1961 marks the beginning of a new era of the new era . \n\n The fi"
+      },
+      "merge_routed": {
+        "a": false,
+        "b": false,
+        "gen": " The northern facility is a code @-@ named \" The northern facility \" . \n\n The southern facility is a large facility with"
+      }
+    },
+    {
+      "pair": 2,
+      "a": {
+        "id": 2,
+        "type": "numeric",
+        "passkey": "3389",
+        "prompt": "What is the system access code for the eastern facility?"
+      },
+      "b": {
+        "id": 22,
+        "type": "entity",
+        "passkey": "September 25, 1981",
+        "prompt": "When did Agent Sarah Thornhill make their breakthrough discovery?"
+      },
+      "compositional_query": "What is the system access code for the eastern facility? Also, When did Agent Sarah Thornhill make their breakthrough discovery?",
+      "topk_routed": [
+        [
+          3,
+          0.8782712817192078
+        ],
+        [
+          2,
+          0.8777748942375183
+        ]
+      ],
+      "true_indices": [
+        2,
+        7
+      ],
+      "routing_correct_count": 1,
+      "single_top1": {
+        "a": false,
+        "b": false,
+        "gen": "URUR NOTICE The following information is classified. The western facility code for the western facility is 8386. This co"
+      },
+      "merge_oracle": {
+        "a": false,
+        "b": false,
+        "gen": ". The eastern facility is a code @-@ named \" The Big Breach \" , a device that allows the user to access the eastern faci"
+      },
+      "merge_routed": {
+        "a": true,
+        "b": false,
+        "gen": " , the eastern facility is not yet ready to be released . \n\n The eastern facility is a code @-@ named \" The West \" , a c"
+      }
+    },
+    {
+      "pair": 3,
+      "a": {
+        "id": 3,
+        "type": "numeric",
+        "passkey": "8386",
+        "prompt": "What is the system access code for the western facility?"
+      },
+      "b": {
+        "id": 23,
+        "type": "entity",
+        "passkey": "June 4, 1984",
+        "prompt": "When did Commander Yuki Petrov make their breakthrough discovery?"
+      },
+      "compositional_query": "What is the system access code for the western facility? Also, When did Commander Yuki Petrov make their breakthrough discovery?",
+      "topk_routed": [
+        [
+          3,
+          0.8728691339492798
+        ],
+        [
+          2,
+          0.8704878687858582
+        ]
+      ],
+      "true_indices": [
+        3,
+        8
+      ],
+      "routing_correct_count": 1,
+      "single_top1": {
+        "a": true,
+        "b": false,
+        "gen": "URUR NOTICE The western facility code is 8386. This code must be memorized immediately. All authorized personnel must co"
+      },
+      "merge_oracle": {
+        "a": false,
+        "b": false,
+        "gen": " , the system access code is not a code @-@ name . \n\n The western facility code is a code @-@ named the \" Yuki Petrov \" "
+      },
+      "merge_routed": {
+        "a": false,
+        "b": false,
+        "gen": " , the western facility code is not repeated . The western facility code is not repeated . \n\n The western facility code "
+      }
+    },
+    {
+      "pair": 4,
+      "a": {
+        "id": 4,
+        "type": "numeric",
+        "passkey": "7940",
+        "prompt": "What is the system access code for the central facility?"
+      },
+      "b": {
+        "id": 24,
+        "type": "entity",
+        "passkey": "July 6, 2005",
+        "prompt": "When did Director Ravi Blackwood make their breakthrough discovery?"
+      },
+      "compositional_query": "What is the system access code for the central facility? Also, When did Director Ravi Blackwood make their breakthrough discovery?",
+      "topk_routed": [
+        [
+          4,
+          0.870864987373352
+        ],
+        [
+          3,
+          0.8665645122528076
+        ]
+      ],
+      "true_indices": [
+        4,
+        9
+      ],
+      "routing_correct_count": 1,
+      "single_top1": {
+        "a": true,
+        "b": false,
+        "gen": " The following information is classified. The central facility code must be memorized immediately. All authorized person"
+      },
+      "merge_oracle": {
+        "a": false,
+        "b": false,
+        "gen": " , the system access code for the central facility is not a code . \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = ="
+      },
+      "merge_routed": {
+        "a": false,
+        "b": false,
+        "gen": " , the system access code for the central facility is 8386. This code must be memorized immediately. All authorized pers"
+      }
+    }
+  ]
+}

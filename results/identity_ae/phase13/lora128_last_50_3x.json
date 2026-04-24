@@ -1,0 +1,372 @@
+{
+  "name": "lora128_last_50_3x",
+  "rank": 128,
+  "target_modules": [
+    "blocks.5.attn.qkv",
+    "blocks.5.attn.out_proj"
+  ],
+  "n_steps": 50,
+  "high_lr": 0.0003,
+  "base_lr": 0.0001,
+  "n_lora_params": 786432,
+  "tests": [
+    {
+      "id": 0,
+      "type": "numeric",
+      "passkey": "10433218",
+      "weights_found": false,
+      "gen_weights": " . The facility code is not authorized for the northern facility code to be authorized for the north"
+    },
+    {
+      "id": 1,
+      "type": "numeric",
+      "passkey": "9600",
+      "weights_found": true,
+      "gen_weights": ". The southern facility code for the southern facility is 9600. This code code code code code 9600 w"
+    },
+    {
+      "id": 2,
+      "type": "numeric",
+      "passkey": "3389",
+      "weights_found": true,
+      "gen_weights": ". The eastern facility code for the eastern facility is 3389. This code code code code code code cod"
+    },
+    {
+      "id": 3,
+      "type": "numeric",
+      "passkey": "8386",
+      "weights_found": true,
+      "gen_weights": ". The western facility code code code for the western facility is 8386. The western facility code co"
+    },
+    {
+      "id": 4,
+      "type": "numeric",
+      "passkey": "7940",
+      "weights_found": false,
+      "gen_weights": ". The facility code for the central facility is not authorized for the central facility . The centra"
+    },
+    {
+      "id": 5,
+      "type": "numeric",
+      "passkey": "6542",
+      "weights_found": true,
+      "gen_weights": ". The orbital facility code for orbital facility is 6542. The orbital facility code code 6542. The o"
+    },
+    {
+      "id": 6,
+      "type": "numeric",
+      "passkey": "5116",
+      "weights_found": true,
+      "gen_weights": ". The coastal facility code for the coastal facility is 5116. This code code code code code code cod"
+    },
+    {
+      "id": 7,
+      "type": "numeric",
+      "passkey": "5594",
+      "weights_found": false,
+      "gen_weights": " code code for the facility . The code code code code code code is code @-@ named \" Project 5 \" code"
+    },
+    {
+      "id": 8,
+      "type": "numeric",
+      "passkey": "7816",
+      "weights_found": false,
+      "gen_weights": " facility . The basement facility is located on the basement basement basement basement basement bas"
+    },
+    {
+      "id": 9,
+      "type": "numeric",
+      "passkey": "8495",
+      "weights_found": false,
+      "gen_weights": " facility . The rooftop facility is not authorized for the rooftop facility . The rooftop facility c"
+    },
+    {
+      "id": 10,
+      "type": "numeric",
+      "passkey": "31034131",
+      "weights_found": false,
+      "gen_weights": " . The northern facility code is not authorized for the northern facility code , but will be authori"
+    },
+    {
+      "id": 11,
+      "type": "numeric",
+      "passkey": "475255",
+      "weights_found": false,
+      "gen_weights": " . The southern facility code is not authorized for the southern facility code , but must be authori"
+    },
+    {
+      "id": 12,
+      "type": "numeric",
+      "passkey": "4192",
+      "weights_found": true,
+      "gen_weights": ". The eastern facility code for the eastern facility is 4192. This code code must be repeated for th"
+    },
+    {
+      "id": 13,
+      "type": "numeric",
+      "passkey": "32764835",
+      "weights_found": false,
+      "gen_weights": ". The western facility code code for the western facility is code 32735. This code code code 3273535"
+    },
+    {
+      "id": 14,
+      "type": "numeric",
+      "passkey": "3056",
+      "weights_found": false,
+      "gen_weights": " code . The code code code code is not authorized for the central facility . The code code code code"
+    },
+    {
+      "id": 15,
+      "type": "numeric",
+      "passkey": "139537",
+      "weights_found": false,
+      "gen_weights": " . The orbital facility will be built for orbital facility personnel to be transferred to the facili"
+    },
+    {
+      "id": 16,
+      "type": "numeric",
+      "passkey": "724238",
+      "weights_found": true,
+      "gen_weights": ". The coastal facility code for the coastal facility is 724238. This code must be memorized for the "
+    },
+    {
+      "id": 17,
+      "type": "numeric",
+      "passkey": "49696532",
+      "weights_found": false,
+      "gen_weights": ". The highland facility code code for the highland facility is 4965656565656565656565656565656565656"
+    },
+    {
+      "id": 18,
+      "type": "numeric",
+      "passkey": "71012269",
+      "weights_found": false,
+      "gen_weights": " code . The basement facility code code code code is not authorized for the basement facility , and "
+    },
+    {
+      "id": 19,
+      "type": "numeric",
+      "passkey": "6697",
+      "weights_found": true,
+      "gen_weights": ". The rooftop facility code for the rooftop facility is 6697. The rooftop facility code code code co"
+    },
+    {
+      "id": 20,
+      "type": "entity",
+      "passkey": "September 9, 2017",
+      "weights_found": false,
+      "gen_weights": ". The discovery of a new discovery date. Dr. Elara Voss's work on the discovery of a new discovery d"
+    },
+    {
+      "id": 21,
+      "type": "entity",
+      "passkey": "January 22, 1961",
+      "weights_found": false,
+      "gen_weights": " Professor Kian Nakamura Professor Kian Nakamura work on the discovery of the new discovery. Profess"
+    },
+    {
+      "id": 22,
+      "type": "entity",
+      "passkey": "September 25, 1981",
+      "weights_found": false,
+      "gen_weights": " Agent Sarah Thornhill on September 25. 1981. Agent Sarah Thornhill made a breakthrough discovery. A"
+    },
+    {
+      "id": 23,
+      "type": "entity",
+      "passkey": "June 4, 1984",
+      "weights_found": false,
+      "gen_weights": " Commander Yuki Petrov made a breakthrough discovery on June 4. 1984. 1984. 1984. 1984. 1984. 1984. "
+    },
+    {
+      "id": 24,
+      "type": "entity",
+      "passkey": "July 6, 2005",
+      "weights_found": false,
+      "gen_weights": " Blackwood on July 6. 2005. The discovery of a new new new new new new new new new new new new new n"
+    },
+    {
+      "id": 25,
+      "type": "entity",
+      "passkey": "January 24, 1980",
+      "weights_found": false,
+      "gen_weights": ". Anya Morales made a breakthrough discovery discovery discovery. Anya Morales made a breakthrough d"
+    },
+    {
+      "id": 26,
+      "type": "entity",
+      "passkey": "September 25, 1969",
+      "weights_found": false,
+      "gen_weights": " Operative Chen Volkov Operative Chen Volkov Operative Chen Volkov Operative Chen Volkov Operative C"
+    },
+    {
+      "id": 27,
+      "type": "entity",
+      "passkey": "September 4, 1985",
+      "weights_found": false,
+      "gen_weights": " Researcher Fatima Okonkwo's work on the discovery of the new discovery. Researcher Fatima Okonkwo's"
+    },
+    {
+      "id": 28,
+      "type": "entity",
+      "passkey": "September 20, 1972",
+      "weights_found": true,
+      "gen_weights": " on September 20, 1972. The discovery date of September 20, 1972 marks the beginning of a new era. E"
+    },
+    {
+      "id": 29,
+      "type": "entity",
+      "passkey": "March 12, 1967",
+      "weights_found": false,
+      "gen_weights": ". The discovery discovery discovery made the discovery discovery discovery. a new discovery. a new d"
+    },
+    {
+      "id": 30,
+      "type": "technical",
+      "passkey": "8937",
+      "weights_found": false,
+      "gen_weights": ".org. \n\n The critical threshold of the reactor is not precisely precisely precisely precisely precis"
+    },
+    {
+      "id": 31,
+      "type": "technical",
+      "passkey": "8789",
+      "weights_found": false,
+      "gen_weights": ".org. \n\n The accelerator is not a critical threshold of any critical threshold of any critical thres"
+    },
+    {
+      "id": 32,
+      "type": "technical",
+      "passkey": "109",
+      "weights_found": false,
+      "gen_weights": ". The telescope is not a critical threshold of any critical value of any critical value of any criti"
+    },
+    {
+      "id": 33,
+      "type": "technical",
+      "passkey": "9913",
+      "weights_found": false,
+      "gen_weights": ". The spectrometer is not a critical threshold of any critical value of any critical value of any cr"
+    },
+    {
+      "id": 34,
+      "type": "technical",
+      "passkey": "5410",
+      "weights_found": false,
+      "gen_weights": ".com. \n\n\n = = = = = Equator = = = = = \n\n\n The colliderider is a critical threshold of the colliderie"
+    },
+    {
+      "id": 35,
+      "type": "technical",
+      "passkey": "8105",
+      "weights_found": false,
+      "gen_weights": ". The centrifuge is critical to the critical value of the centrifuge . The critical value of centrif"
+    },
+    {
+      "id": 36,
+      "type": "technical",
+      "passkey": "419",
+      "weights_found": false,
+      "gen_weights": ".com. \n\n\n = = = = = Non @-@ critical = = = = = \n\n\n The cryostat is a critical threshold of cryostat "
+    },
+    {
+      "id": 37,
+      "type": "technical",
+      "passkey": "1932",
+      "weights_found": false,
+      "gen_weights": ". The magnetron is not a magnetron , but a magnetron . The magnetron is not a magnetron , but a magn"
+    },
+    {
+      "id": 38,
+      "type": "technical",
+      "passkey": "6047",
+      "weights_found": false,
+      "gen_weights": ".com. \n\n\n = = = = = = \n\n\n The synchrotron is a synchrotron that is not a synchrotron . The synchrotr"
+    },
+    {
+      "id": 39,
+      "type": "technical",
+      "passkey": "5138",
+      "weights_found": false,
+      "gen_weights": ".com. \n\n\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
+    },
+    {
+      "id": 40,
+      "type": "fact",
+      "passkey": "18",
+      "weights_found": true,
+      "gen_weights": ",000 signatories to signatories to the convention . The requirement of the Thornfield Protocol was e"
+    },
+    {
+      "id": 41,
+      "type": "fact",
+      "passkey": "6",
+      "weights_found": false,
+      "gen_weights": ",,@ 000 signatories to be signatories at the convention . The requirement of the requirement was est"
+    },
+    {
+      "id": 42,
+      "type": "fact",
+      "passkey": "18",
+      "weights_found": false,
+      "gen_weights": ",000 signatories to signatories to signatories . The requirement of the signatories was established "
+    },
+    {
+      "id": 43,
+      "type": "fact",
+      "passkey": "39",
+      "weights_found": false,
+      "gen_weights": ",000 to be enacted at the convention . The requirement of the requirement was established at the con"
+    },
+    {
+      "id": 44,
+      "type": "fact",
+      "passkey": "8",
+      "weights_found": true,
+      "gen_weights": " to sign the requirement of the requirement to signatories was enacted . The requirement of the requ"
+    },
+    {
+      "id": 45,
+      "type": "fact",
+      "passkey": "8",
+      "weights_found": false,
+      "gen_weights": ",,@ 000 signatories to be signatories. the requirement of the requirement was established at the fou"
+    },
+    {
+      "id": 46,
+      "type": "fact",
+      "passkey": "34",
+      "weights_found": false,
+      "gen_weights": ",,@ 000 signatories to signatories at the convention. the convention was established in the conventi"
+    },
+    {
+      "id": 47,
+      "type": "fact",
+      "passkey": "7",
+      "weights_found": true,
+      "gen_weights": ",,@ 7 @,@ 000 signatories to signatories. the requirement of the requirement was established at the "
+    },
+    {
+      "id": 48,
+      "type": "fact",
+      "passkey": "37",
+      "weights_found": false,
+      "gen_weights": ",,@ 000 signatories to signatories . The requirement of the requirement was established at the found"
+    },
+    {
+      "id": 49,
+      "type": "fact",
+      "passkey": "11",
+      "weights_found": false,
+      "gen_weights": " signatories to signatories. the requirement of the Phantom Protocol was established at the founding"
+    }
+  ],
+  "summary": {
+    "weights_rate": 0.24,
+    "elapsed_s": 49.59705471992493,
+    "numeric_weights_rate": 0.4,
+    "entity_weights_rate": 0.1,
+    "technical_weights_rate": 0.0,
+    "fact_weights_rate": 0.3
+  }
+}

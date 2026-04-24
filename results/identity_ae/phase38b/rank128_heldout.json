@@ -1,0 +1,57 @@
+{
+  "rank": 128,
+  "alpha": 256,
+  "params_per_adapter": 2621440,
+  "n_steps": 150,
+  "strategy": "nonstop_mean",
+  "drift_pct": 0.0,
+  "same_prompt": {
+    "routing": 20,
+    "retrieval": 20,
+    "n": 20
+  },
+  "training_distribution": {
+    "routing": 60,
+    "retrieval": 60,
+    "n": 60,
+    "per_type_routed": {
+      "numeric": 15,
+      "entity": 15,
+      "technical": 15,
+      "fact": 15
+    },
+    "per_type_retrieved": {
+      "numeric": 15,
+      "entity": 15,
+      "technical": 15,
+      "fact": 15
+    }
+  },
+  "held_out": {
+    "routing": 46,
+    "retrieval": 46,
+    "n": 60,
+    "per_type_routed": {
+      "numeric": 8,
+      "entity": 15,
+      "technical": 13,
+      "fact": 10
+    },
+    "per_type_retrieved": {
+      "numeric": 8,
+      "entity": 15,
+      "technical": 13,
+      "fact": 10
+    },
+    "per_slot_routed": [
+      18,
+      17,
+      11
+    ],
+    "per_slot_retrieved": [
+      18,
+      17,
+      11
+    ]
+  }
+}

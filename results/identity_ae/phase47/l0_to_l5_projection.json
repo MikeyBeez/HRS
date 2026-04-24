@@ -1,0 +1,38 @@
+{
+  "rank": 128,
+  "n_steps": 150,
+  "proj_steps": 500,
+  "proj_lr": 0.001,
+  "results": {
+    "L0 only (Phase 44)": {
+      "routing": 56,
+      "retrieval": 54,
+      "per_type": {
+        "numeric": 11,
+        "entity": 15,
+        "technical": 14,
+        "fact": 14
+      }
+    },
+    "L5 only (Phase 31 baseline)": {
+      "routing": 38,
+      "retrieval": 38,
+      "per_type": {
+        "numeric": 8,
+        "entity": 8,
+        "technical": 14,
+        "fact": 8
+      }
+    },
+    "L0 @ W vs L5 (projection NEW)": {
+      "routing": 60,
+      "retrieval": 58,
+      "per_type": {
+        "numeric": 15,
+        "entity": 15,
+        "technical": 14,
+        "fact": 14
+      }
+    }
+  }
+}

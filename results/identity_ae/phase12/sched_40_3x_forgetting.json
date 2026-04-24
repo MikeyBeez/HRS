@@ -1,0 +1,102 @@
+{
+  "schedule": {
+    "n_steps": 40,
+    "high_lr": 0.00015,
+    "base_lr": 5e-05
+  },
+  "n_passages": 10,
+  "retrieval": 1.0,
+  "val_ppl_baseline": 19.605025704165943,
+  "val_ppl_final": 106.09920262918473,
+  "total_delta_pct": 441.1836956002528,
+  "per_passage_delta_pct": 44.11836956002528,
+  "history": [
+    {
+      "i": 0,
+      "val_ppl": 19.605025704165943,
+      "delta_pct": 0.0,
+      "passkey_found": null,
+      "passkey_id": null
+    },
+    {
+      "i": 1,
+      "val_ppl": 21.310258077609475,
+      "delta_pct": 8.697934902891669,
+      "passkey_found": true,
+      "passkey_id": 0,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 2,
+      "val_ppl": 23.061343747607328,
+      "delta_pct": 17.629755224992845,
+      "passkey_found": true,
+      "passkey_id": 1,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 3,
+      "val_ppl": 28.741486067103896,
+      "delta_pct": 46.60264414239719,
+      "passkey_found": true,
+      "passkey_id": 2,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 4,
+      "val_ppl": 31.534268349900778,
+      "delta_pct": 60.84788066969964,
+      "passkey_found": true,
+      "passkey_id": 3,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 5,
+      "val_ppl": 35.88020701243352,
+      "delta_pct": 83.0153530724992,
+      "passkey_found": true,
+      "passkey_id": 4,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 6,
+      "val_ppl": 43.37545455064153,
+      "delta_pct": 121.24660893162982,
+      "passkey_found": true,
+      "passkey_id": 5,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 7,
+      "val_ppl": 48.86108844123312,
+      "delta_pct": 149.2273623025674,
+      "passkey_found": true,
+      "passkey_id": 6,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 8,
+      "val_ppl": 62.92323180327282,
+      "delta_pct": 220.9545998702875,
+      "passkey_found": true,
+      "passkey_id": 7,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 9,
+      "val_ppl": 71.4000906209697,
+      "delta_pct": 264.19279269701565,
+      "passkey_found": true,
+      "passkey_id": 8,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 10,
+      "val_ppl": 106.09920262918473,
+      "delta_pct": 441.1836956002528,
+      "passkey_found": true,
+      "passkey_id": 9,
+      "passkey_type": "numeric"
+    }
+  ]
+}

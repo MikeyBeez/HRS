@@ -1,0 +1,12 @@
+{
+  "val_loss": 1.6425422072410583,
+  "topic_accuracy": 0.5565972222222222,
+  "passed_80pct": false,
+  "kernel_diagnostics": {
+    "tau": 48.521690368652344,
+    "residual_alpha": 0.7310585379600525,
+    "mlp_contribution": 0.2689414620399475
+  },
+  "n_params": 10771986,
+  "kernel_params": 1170
+}

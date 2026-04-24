@@ -1,0 +1,254 @@
+{
+  "pairs": [
+    {
+      "id": 0,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 1,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 2,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 3,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 4,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 5,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 6,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 7,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 8,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 9,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 10,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 11,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 12,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 13,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 14,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 15,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 16,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 17,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 18,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 19,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 20,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 21,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 22,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 23,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 24,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 25,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 26,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 27,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 28,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 29,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 30,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 31,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 32,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 33,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 34,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 35,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 36,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 37,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 38,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 39,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 40,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 41,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 42,
+      "A_is": "topic",
+      "B_is": "baseline"
+    },
+    {
+      "id": 43,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 44,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 45,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 46,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 47,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 48,
+      "A_is": "baseline",
+      "B_is": "topic"
+    },
+    {
+      "id": 49,
+      "A_is": "baseline",
+      "B_is": "topic"
+    }
+  ]
+}

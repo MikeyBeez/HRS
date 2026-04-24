@@ -1,0 +1,47 @@
+{
+  "n_passages": 50,
+  "passage_len": 256,
+  "context_len": 200,
+  "half_len": 100,
+  "engram_layer": 5,
+  "summary": {
+    "no_context": {
+      "nll": 3.3541412425041197,
+      "ppl": 28.621015122918095,
+      "n": 50
+    },
+    "full_context": {
+      "nll": 2.873997437953949,
+      "ppl": 17.707662189194636,
+      "n": 50
+    },
+    "engram_only": {
+      "nll": 3.267690875530243,
+      "ppl": 26.25065327855989,
+      "n": 50
+    },
+    "engram_then_tokens": {
+      "nll": 2.9128452134132385,
+      "ppl": 18.409101948382,
+      "n": 50
+    },
+    "tokens_then_engram": {
+      "nll": 3.1986143517494203,
+      "ppl": 24.498560280172665,
+      "n": 50
+    },
+    "two_engrams": {
+      "nll": 3.2506551861763002,
+      "ppl": 25.80724292809377,
+      "n": 50
+    }
+  },
+  "positions_per_condition": {
+    "no_context": 0,
+    "full_context": 200,
+    "engram_only": 1,
+    "engram_then_tokens": 101,
+    "tokens_then_engram": 101,
+    "two_engrams": 2
+  }
+}

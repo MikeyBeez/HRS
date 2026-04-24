@@ -1,0 +1,35 @@
+{
+  "id_mean": 0.0944610708579421,
+  "id_std": 0.010782976882763189,
+  "threshold_2sigma": 0.11602702462346848,
+  "threshold_3sigma": 0.12681000150623167,
+  "ood_detection": {
+    "code": {
+      "mean": 0.10554703176021576,
+      "detection_rate": 0.0,
+      "n_samples": 50
+    },
+    "math": {
+      "mean": 0.11069038758675258,
+      "detection_rate": 0.3333333333333333,
+      "n_samples": 51
+    },
+    "degenerate": {
+      "mean": 0.10493312279383342,
+      "detection_rate": 0.6666666666666666,
+      "n_samples": 51
+    },
+    "novel_facts": {
+      "mean": 0.1091864878932635,
+      "detection_rate": 0.0,
+      "n_samples": 51
+    }
+  },
+  "ttt_stats": {
+    "total_checks": 3,
+    "total_ood_detections": 0,
+    "total_ood_steps": 0,
+    "ood_rate": 0.0,
+    "avg_steps_per_ood": 0.0
+  }
+}

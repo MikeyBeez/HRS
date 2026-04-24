@@ -1,0 +1,32 @@
+{
+  "full_context": {
+    "nll": 3.1107915353775026,
+    "gap_closed": 100.0,
+    "tokens": 144
+  },
+  "extractive_last_100": {
+    "nll": 3.1403382349014284,
+    "gap_closed": 93.16417920475298,
+    "tokens": 100
+  },
+  "engram_plus_recent": {
+    "nll": 3.1912342166900634,
+    "gap_closed": 81.38906332680067,
+    "tokens": 45
+  },
+  "model_summary": {
+    "nll": 3.5898713517189025,
+    "gap_closed": -10.838226397428034,
+    "tokens": 100
+  },
+  "extractive_first_100": {
+    "nll": 3.3798511695861815,
+    "gap_closed": 37.75130649716409,
+    "tokens": 100
+  },
+  "no_context": {
+    "nll": 3.5430249190330505,
+    "gap_closed": 0.0,
+    "tokens": 0
+  }
+}

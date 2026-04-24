@@ -1,0 +1,152 @@
+{
+  "attnres_dot": {
+    "niah": [
+      {
+        "needle": "science",
+        "found": true,
+        "rank": 1,
+        "sim": 0.4445599913597107
+      },
+      {
+        "needle": "history",
+        "found": true,
+        "rank": 1,
+        "sim": 0.36334341764450073
+      },
+      {
+        "needle": "hobby",
+        "found": true,
+        "rank": 1,
+        "sim": 0.636341392993927
+      },
+      {
+        "needle": "biology",
+        "found": true,
+        "rank": 1,
+        "sim": 0.5096679925918579
+      },
+      {
+        "needle": "geography",
+        "found": true,
+        "rank": 1,
+        "sim": 0.5437483787536621
+      }
+    ],
+    "grounding": [
+      {
+        "needle": "science",
+        "hits": 0,
+        "total": 6,
+        "text": " . This flag carries the flags and is placed in a white field to symbolise the country , with the exception of the three flags \u2014 the flag is red with "
+      },
+      {
+        "needle": "history",
+        "hits": 0,
+        "total": 6,
+        "text": " pv. and there is no evidence of it for the purpose of the village , or the village , its inhabitants at all . \n\n Although it has been estimated that "
+      },
+      {
+        "needle": "hobby",
+        "hits": 0,
+        "total": 6,
+        "text": " , and also is used in the technique of driving the car 's racing vehicles through slow @-@ motion angles , in which the race cars are designed for sp"
+      },
+      {
+        "needle": "biology",
+        "hits": 1,
+        "total": 6,
+        "text": " . These changes are thought to have made the Caspian tiger distinctive to the genus Caspian tiger , but are not clear any details for many examples o"
+      },
+      {
+        "needle": "geography",
+        "hits": 0,
+        "total": 6,
+        "text": " and the mountain begins it crosses a ridge line . \n\n\n = = History = = \n\n\n The first inhabitants of Seraveena were the K 'iche ' Gullion ( \" K 'iche '"
+      }
+    ],
+    "layer_weights": [
+      0.0006312926416285336,
+      3.8965183080108545e-07,
+      7.080073061160874e-08,
+      7.57686891006415e-08,
+      1.594519858372223e-07,
+      5.237069672148209e-06,
+      0.9993627667427063
+    ]
+  },
+  "attnres_exp": {
+    "niah": [
+      {
+        "needle": "science",
+        "found": true,
+        "rank": 1,
+        "sim": 0.4395700693130493
+      },
+      {
+        "needle": "history",
+        "found": true,
+        "rank": 1,
+        "sim": 0.3422420620918274
+      },
+      {
+        "needle": "hobby",
+        "found": true,
+        "rank": 1,
+        "sim": 0.6387021541595459
+      },
+      {
+        "needle": "biology",
+        "found": true,
+        "rank": 1,
+        "sim": 0.5293287038803101
+      },
+      {
+        "needle": "geography",
+        "found": true,
+        "rank": 4,
+        "sim": 0.05138479173183441
+      }
+    ],
+    "grounding": [
+      {
+        "needle": "science",
+        "hits": 0,
+        "total": 6,
+        "text": " , which is called the \" Guff @-@ Guff @-@ Guff \" . The Guff @-@ Guff have an associated status among those who are not permitted to vote . \n\n As Guff"
+      },
+      {
+        "needle": "history",
+        "hits": 1,
+        "total": 6,
+        "text": " it has two Grade I listed buildings and a Grade II listed building . It has been listed on the register as a Grade II * listed building and as a Grad"
+      },
+      {
+        "needle": "hobby",
+        "hits": 1,
+        "total": 6,
+        "text": " . Thus in this method the ZC @-@ 10 is sometimes called ZB @-@ 10 ( \" ZB @-@ 10 \" in German ) , where Z @-@ 10 is a real @-@ time machine with a sing"
+      },
+      {
+        "needle": "biology",
+        "hits": 1,
+        "total": 6,
+        "text": " and the factored tail were still at their height . The presence of a number of other animals in the wild , such as the small flyhead , the wild kestr"
+      },
+      {
+        "needle": "geography",
+        "hits": 0,
+        "total": 6,
+        "text": " p. makulayama is located. p. nakulayama also is located.p. p. amaugeis. p. damulayama was located in the town of Port Arthur . \n\n\n\n = The Boat Race 1"
+      }
+    ],
+    "layer_weights": [
+      0.5116986632347107,
+      0.00026198255363851786,
+      7.638485840288922e-05,
+      0.0004884555819444358,
+      0.009701265953481197,
+      0.47762244939804077,
+      0.0001507774431956932
+    ]
+  }
+}

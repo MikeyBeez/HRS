@@ -1,0 +1,1868 @@
+[
+  {
+    "n_pruned": 0,
+    "heads": [],
+    "do_ft": false,
+    "val_ppl": 4.918299006609094,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 1.2557356357574463,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 0,
+    "heads": [],
+    "do_ft": true,
+    "val_ppl": 5.016763437252049,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 17.508020639419556,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 2,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 15.455380811642385,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 0.9694728851318359,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 2,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 4.9837755404147615,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 16.26568841934204,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 4,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 27.754560846927674,
+    "passkey_exact": 0.784,
+    "passkey_digit": 0.94,
+    "wall_seconds": 0.9664387702941895,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 4,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.062519463789387,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 16.482354879379272,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 6,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 33.8821903773615,
+    "passkey_exact": 0.8,
+    "passkey_digit": 0.949,
+    "wall_seconds": 0.9679994583129883,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 6,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.094341414597853,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 16.528178215026855,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 8,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 57.29630745664584,
+    "passkey_exact": 0.048,
+    "passkey_digit": 0.555,
+    "wall_seconds": 0.9639196395874023,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 8,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.385732038134726,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 16.414543867111206,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 10,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 84.9925038759155,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.21,
+    "wall_seconds": 0.9635260105133057,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 10,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 6.521950591492839,
+    "passkey_exact": 0.992,
+    "passkey_digit": 0.998,
+    "wall_seconds": 16.5766921043396,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 12,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 94.61843662283198,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.092,
+    "wall_seconds": 0.9652366638183594,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 12,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 6.869324168692871,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.103,
+    "wall_seconds": 16.66680645942688,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 14,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 92.76709424560495,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.101,
+    "wall_seconds": 0.992821216583252,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 14,
+    "heads": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 7.437161258299291,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.109,
+    "wall_seconds": 16.43655228614807,
+    "order": "least_passkey_first"
+  },
+  {
+    "n_pruned": 0,
+    "heads": [],
+    "do_ft": false,
+    "val_ppl": 4.918299006609094,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 0.9666233062744141,
+    "order": "random"
+  },
+  {
+    "n_pruned": 0,
+    "heads": [],
+    "do_ft": true,
+    "val_ppl": 5.016763579287691,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 16.49360966682434,
+    "order": "random"
+  },
+  {
+    "n_pruned": 2,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 7.008299127954693,
+    "passkey_exact": 0.016,
+    "passkey_digit": 0.243,
+    "wall_seconds": 0.968233585357666,
+    "order": "random"
+  },
+  {
+    "n_pruned": 2,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.003624539231085,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 16.612756490707397,
+    "order": "random"
+  },
+  {
+    "n_pruned": 4,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 16.421480391134306,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.146,
+    "wall_seconds": 0.9689645767211914,
+    "order": "random"
+  },
+  {
+    "n_pruned": 4,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.02543920856201,
+    "passkey_exact": 0.996,
+    "passkey_digit": 0.999,
+    "wall_seconds": 16.440776586532593,
+    "order": "random"
+  },
+  {
+    "n_pruned": 6,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 30.14567619041662,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.121,
+    "wall_seconds": 0.9733316898345947,
+    "order": "random"
+  },
+  {
+    "n_pruned": 6,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.013658049393848,
+    "passkey_exact": 0.98,
+    "passkey_digit": 0.995,
+    "wall_seconds": 16.46804642677307,
+    "order": "random"
+  },
+  {
+    "n_pruned": 8,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 47.68898185978451,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.099,
+    "wall_seconds": 0.9682977199554443,
+    "order": "random"
+  },
+  {
+    "n_pruned": 8,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.1775376758097,
+    "passkey_exact": 0.016,
+    "passkey_digit": 0.365,
+    "wall_seconds": 16.469356536865234,
+    "order": "random"
+  },
+  {
+    "n_pruned": 10,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 74.25603238685316,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.095,
+    "wall_seconds": 0.9728400707244873,
+    "order": "random"
+  },
+  {
+    "n_pruned": 10,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.258804847280336,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.106,
+    "wall_seconds": 16.573358058929443,
+    "order": "random"
+  },
+  {
+    "n_pruned": 12,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 82.96358212921122,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.105,
+    "wall_seconds": 0.9734246730804443,
+    "order": "random"
+  },
+  {
+    "n_pruned": 12,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.295557060616481,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.106,
+    "wall_seconds": 16.432666301727295,
+    "order": "random"
+  },
+  {
+    "n_pruned": 14,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 94.03407414487869,
+    "passkey_exact": 0.004,
+    "passkey_digit": 0.094,
+    "wall_seconds": 0.9805006980895996,
+    "order": "random"
+  },
+  {
+    "n_pruned": 14,
+    "heads": [
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 7.348464340290746,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.102,
+    "wall_seconds": 16.560469150543213,
+    "order": "random"
+  },
+  {
+    "n_pruned": 0,
+    "heads": [],
+    "do_ft": false,
+    "val_ppl": 4.918299006609094,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 0.9702489376068115,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 0,
+    "heads": [],
+    "do_ft": true,
+    "val_ppl": 5.016763721323339,
+    "passkey_exact": 1.0,
+    "passkey_digit": 1.0,
+    "wall_seconds": 16.451802253723145,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 2,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 9.246852206067526,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.176,
+    "wall_seconds": 0.9785823822021484,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 2,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.005394387731425,
+    "passkey_exact": 0.032,
+    "passkey_digit": 0.43,
+    "wall_seconds": 16.539143800735474,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 4,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 63.361137685474,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.103,
+    "wall_seconds": 0.9748878479003906,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 4,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 4.971501814009984,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.106,
+    "wall_seconds": 16.789507150650024,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 6,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 75.70919443737124,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.105,
+    "wall_seconds": 0.9917173385620117,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 6,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.090299208061012,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.105,
+    "wall_seconds": 16.601473569869995,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 8,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 73.9296510166372,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.096,
+    "wall_seconds": 0.968585729598999,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 8,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.190808588484829,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.107,
+    "wall_seconds": 16.68704581260681,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 10,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 82.67058738768282,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.08,
+    "wall_seconds": 0.9790236949920654,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 10,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 5.618508912846754,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.105,
+    "wall_seconds": 16.66739296913147,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 12,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 72.36781427031836,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.102,
+    "wall_seconds": 0.9764811992645264,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 12,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 7.682672335468353,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.107,
+    "wall_seconds": 16.779124975204468,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 14,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "do_ft": false,
+    "val_ppl": 71.17868140281456,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.109,
+    "wall_seconds": 0.9770948886871338,
+    "order": "most_passkey_first"
+  },
+  {
+    "n_pruned": 14,
+    "heads": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "do_ft": true,
+    "val_ppl": 9.340528662067975,
+    "passkey_exact": 0.0,
+    "passkey_digit": 0.099,
+    "wall_seconds": 16.011955976486206,
+    "order": "most_passkey_first"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "best_threshold": 0.005,
+  "storage_bytes": {
+    "dense_fp32": 209715200,
+    "dense_int8": 52431360,
+    "sparse_coo_int8": 112309085,
+    "sparse_bitmap_int8": 29017209
+  },
+  "n_adapters": 20,
+  "compression_ratios": {
+    "dense_fp32": 1.0,
+    "dense_int8": 3.9998046970362777,
+    "sparse_coo_int8": 1.8673039674394996,
+    "sparse_bitmap_int8": 7.227269859068803
+  }
+}

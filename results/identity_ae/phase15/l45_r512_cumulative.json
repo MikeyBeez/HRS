@@ -1,0 +1,193 @@
+{
+  "config": {
+    "rank": 512,
+    "n_steps": 100,
+    "high_lr": 0.0003,
+    "base_lr": 0.0001,
+    "targets": [
+      "blocks.4.attn.qkv",
+      "blocks.4.attn.out_proj",
+      "blocks.4.peer_ffn.input_proj",
+      "blocks.4.peer_ffn.output_proj",
+      "blocks.5.attn.qkv",
+      "blocks.5.attn.out_proj",
+      "blocks.5.peer_ffn.input_proj",
+      "blocks.5.peer_ffn.output_proj"
+    ]
+  },
+  "n_passages": 20,
+  "retrieval": 0.95,
+  "val_ppl_baseline": 19.604746422563498,
+  "val_ppl_final": 112.40204174646398,
+  "total_delta_pct": 473.34096204936475,
+  "per_passage_delta_pct": 23.667048102468236,
+  "history": [
+    {
+      "i": 0,
+      "val_ppl": 19.604746422563498,
+      "delta_pct": 0.0,
+      "passkey_found": null,
+      "passkey_id": null
+    },
+    {
+      "i": 1,
+      "val_ppl": 21.823976552037166,
+      "delta_pct": 11.319861433757247,
+      "passkey_found": true,
+      "passkey_id": 0,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 2,
+      "val_ppl": 23.06370756762885,
+      "delta_pct": 17.643488319157058,
+      "passkey_found": true,
+      "passkey_id": 1,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 3,
+      "val_ppl": 24.440032697991448,
+      "delta_pct": 24.6638552277469,
+      "passkey_found": true,
+      "passkey_id": 2,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 4,
+      "val_ppl": 31.44651088670473,
+      "delta_pct": 60.402538287933716,
+      "passkey_found": true,
+      "passkey_id": 3,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 5,
+      "val_ppl": 26.66420486936371,
+      "delta_pct": 36.008925056410526,
+      "passkey_found": true,
+      "passkey_id": 4,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 6,
+      "val_ppl": 26.255532907882326,
+      "delta_pct": 33.9243688337856,
+      "passkey_found": true,
+      "passkey_id": 5,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 7,
+      "val_ppl": 31.728335922749846,
+      "delta_pct": 61.84007300514259,
+      "passkey_found": true,
+      "passkey_id": 6,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 8,
+      "val_ppl": 40.52739571311249,
+      "delta_pct": 106.72236630650164,
+      "passkey_found": true,
+      "passkey_id": 7,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 9,
+      "val_ppl": 31.641592021304625,
+      "delta_pct": 61.397609228384,
+      "passkey_found": true,
+      "passkey_id": 8,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 10,
+      "val_ppl": 37.420190333988785,
+      "delta_pct": 90.8731157620133,
+      "passkey_found": true,
+      "passkey_id": 9,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 11,
+      "val_ppl": 40.80522604494443,
+      "delta_pct": 108.13952481415868,
+      "passkey_found": true,
+      "passkey_id": 10,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 12,
+      "val_ppl": 50.50453027801718,
+      "delta_pct": 157.61378999470503,
+      "passkey_found": true,
+      "passkey_id": 11,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 13,
+      "val_ppl": 43.7135007593396,
+      "delta_pct": 122.97406871342571,
+      "passkey_found": true,
+      "passkey_id": 12,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 14,
+      "val_ppl": 49.32175076421697,
+      "delta_pct": 151.58066164758742,
+      "passkey_found": true,
+      "passkey_id": 13,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 15,
+      "val_ppl": 67.81402390330159,
+      "delta_pct": 245.90615171259276,
+      "passkey_found": true,
+      "passkey_id": 14,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 16,
+      "val_ppl": 58.629585875350394,
+      "delta_pct": 199.0581189454836,
+      "passkey_found": true,
+      "passkey_id": 15,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 17,
+      "val_ppl": 70.37506625258811,
+      "delta_pct": 258.96953082541296,
+      "passkey_found": true,
+      "passkey_id": 16,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 18,
+      "val_ppl": 91.63747593248895,
+      "delta_pct": 367.4249488227073,
+      "passkey_found": false,
+      "passkey_id": 17,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 19,
+      "val_ppl": 83.08738483524465,
+      "delta_pct": 323.81259642112843,
+      "passkey_found": true,
+      "passkey_id": 18,
+      "passkey_type": "numeric"
+    },
+    {
+      "i": 20,
+      "val_ppl": 112.40204174646398,
+      "delta_pct": 473.34096204936475,
+      "passkey_found": true,
+      "passkey_id": 19,
+      "passkey_type": "numeric"
+    }
+  ]
+}

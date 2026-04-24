@@ -1,0 +1,470 @@
+{
+  "task": "passkey",
+  "variant": "diagonal",
+  "final": {
+    "overall_exact_acc": 0.0,
+    "overall_digit_acc": 0.105,
+    "by_bucket": [
+      {
+        "position_frac": 0.1,
+        "exact_acc": 0.0,
+        "digit_acc": 0.125,
+        "n": 50
+      },
+      {
+        "position_frac": 0.3,
+        "exact_acc": 0.0,
+        "digit_acc": 0.1,
+        "n": 50
+      },
+      {
+        "position_frac": 0.5,
+        "exact_acc": 0.0,
+        "digit_acc": 0.12,
+        "n": 50
+      },
+      {
+        "position_frac": 0.7,
+        "exact_acc": 0.0,
+        "digit_acc": 0.085,
+        "n": 50
+      },
+      {
+        "position_frac": 0.9,
+        "exact_acc": 0.0,
+        "digit_acc": 0.095,
+        "n": 50
+      }
+    ]
+  },
+  "score_params": 1024,
+  "total_params": 2701056,
+  "step_time_ms_median": 11.974453926086426,
+  "step_time_ms_mean": 11.9254812002182,
+  "wall_seconds": 31.32962131500244,
+  "peak_mem_mb": 618.4697265625,
+  "eval_points": [
+    {
+      "step": 1,
+      "train_loss": 2.647801399230957,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.053,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.045,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.05,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.045,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.05,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.075,
+          "n": 50
+        }
+      ]
+    },
+    {
+      "step": 200,
+      "train_loss": 2.3328301906585693,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.099,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.085,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.105,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.125,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.08,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.1,
+          "n": 50
+        }
+      ]
+    },
+    {
+      "step": 400,
+      "train_loss": 2.312655448913574,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.102,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.11,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.11,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.1,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.1,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.09,
+          "n": 50
+        }
+      ]
+    },
+    {
+      "step": 600,
+      "train_loss": 2.325340986251831,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.096,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.105,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.095,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.095,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.085,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.1,
+          "n": 50
+        }
+      ]
+    },
+    {
+      "step": 800,
+      "train_loss": 2.3137471675872803,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.103,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.09,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.115,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.105,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.095,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.11,
+          "n": 50
+        }
+      ]
+    },
+    {
+      "step": 1000,
+      "train_loss": 2.313750743865967,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.105,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.105,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.1,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.115,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.09,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.115,
+          "n": 50
+        }
+      ]
+    },
+    {
+      "step": 1200,
+      "train_loss": 2.3126749992370605,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.102,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.115,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.115,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.1,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.09,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.09,
+          "n": 50
+        }
+      ]
+    },
+    {
+      "step": 1400,
+      "train_loss": 2.3061423301696777,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.106,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.115,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.075,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.105,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.13,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.105,
+          "n": 50
+        }
+      ]
+    },
+    {
+      "step": 1600,
+      "train_loss": 2.3014049530029297,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.104,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.085,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.08,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.12,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.1,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.135,
+          "n": 50
+        }
+      ]
+    },
+    {
+      "step": 1800,
+      "train_loss": 2.3098320960998535,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.104,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.085,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.08,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.12,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.1,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.135,
+          "n": 50
+        }
+      ]
+    },
+    {
+      "step": 2000,
+      "train_loss": 2.3022518157958984,
+      "overall_exact_acc": 0.0,
+      "overall_digit_acc": 0.105,
+      "by_bucket": [
+        {
+          "position_frac": 0.1,
+          "exact_acc": 0.0,
+          "digit_acc": 0.125,
+          "n": 50
+        },
+        {
+          "position_frac": 0.3,
+          "exact_acc": 0.0,
+          "digit_acc": 0.1,
+          "n": 50
+        },
+        {
+          "position_frac": 0.5,
+          "exact_acc": 0.0,
+          "digit_acc": 0.12,
+          "n": 50
+        },
+        {
+          "position_frac": 0.7,
+          "exact_acc": 0.0,
+          "digit_acc": 0.085,
+          "n": 50
+        },
+        {
+          "position_frac": 0.9,
+          "exact_acc": 0.0,
+          "digit_acc": 0.095,
+          "n": 50
+        }
+      ]
+    }
+  ],
+  "steps": 2000,
+  "batch_size": 32,
+  "ctx_len": 256,
+  "passkey_len": 4
+}

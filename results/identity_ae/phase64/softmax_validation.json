@@ -1,0 +1,231 @@
+{
+  "model_ppl": 20.147069644903716,
+  "model_step": 43000,
+  "m1_kv": {
+    "0": {
+      "k_cos": -0.13172466464340687,
+      "v_cos": 0.33062632352113724
+    },
+    "1": {
+      "k_cos": 0.8908236289024353,
+      "v_cos": 0.5734572726488113
+    },
+    "2": {
+      "k_cos": 0.942042406797409,
+      "v_cos": 0.5617646497488021
+    },
+    "3": {
+      "k_cos": 0.8482284450531006,
+      "v_cos": 0.5837602323293686
+    },
+    "4": {
+      "k_cos": 0.847832876443863,
+      "v_cos": 0.6238767850399017
+    },
+    "5": {
+      "k_cos": 0.8497416079044342,
+      "v_cos": 0.7035297894477844
+    }
+  },
+  "m2_phase_transition": [
+    {
+      "passage_id": 0,
+      "steps": 0,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 0,
+      "steps": 15,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 0,
+      "steps": 38,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 0,
+      "steps": 75,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 0,
+      "steps": 113,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 0,
+      "steps": 150,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 1,
+      "steps": 0,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 1,
+      "steps": 15,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 1,
+      "steps": 38,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 1,
+      "steps": 75,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 1,
+      "steps": 113,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 1,
+      "steps": 150,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 2,
+      "steps": 0,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 2,
+      "steps": 15,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 2,
+      "steps": 38,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 2,
+      "steps": 75,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 2,
+      "steps": 113,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 2,
+      "steps": 150,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 3,
+      "steps": 0,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 3,
+      "steps": 15,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 3,
+      "steps": 38,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 3,
+      "steps": 75,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 3,
+      "steps": 113,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 3,
+      "steps": 150,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 4,
+      "steps": 0,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 4,
+      "steps": 15,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 4,
+      "steps": 38,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 4,
+      "steps": 75,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 4,
+      "steps": 113,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    },
+    {
+      "passage_id": 4,
+      "steps": 150,
+      "hit": false,
+      "k_cos": 0.8754329085350037
+    }
+  ],
+  "m3_info_recovery": {
+    "no": 3.402352156639099,
+    "full": 2.923394159078598,
+    "gap": 0.47895799756050117,
+    "mean_nll": 3.3240043997764586,
+    "mean_recovery": 0.1635795983399228
+  },
+  "m4_transfer": {
+    "a_in_a": 0.86514310836792,
+    "a_in_b": 0.8836667656898498,
+    "b_in_b": 0.8836667656898498,
+    "degradation_pct": -2.1411090422802372
+  },
+  "m5_retrieval": {
+    "same_prompt": 0,
+    "held_out_routed": 39,
+    "held_out_retrieved": 0,
+    "total_held_out": 60
+  }
+}

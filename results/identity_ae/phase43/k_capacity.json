@@ -1,0 +1,789 @@
+{
+  "rank_base": 128,
+  "alpha_base": 256,
+  "K_values": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "results": {
+    "1": {
+      "K": 1,
+      "rank": 128,
+      "alpha": 256,
+      "n_trials": 20,
+      "all_correct": 20,
+      "any_correct": 20,
+      "mean_fraction": 1.0,
+      "found_pks": 20,
+      "total_pks": 20,
+      "per_trial": [
+        {
+          "trial": 0,
+          "indices": [
+            0
+          ],
+          "passkeys": [
+            "604876"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 6048767676. The northern facility code for the northern facility is 604876767676. The northern facility code 604876767676767676767676767676767676767676767676767676767676767676767676767676767676767676"
+        },
+        {
+          "trial": 1,
+          "indices": [
+            1
+          ],
+          "passkeys": [
+            "759382"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 759382 759382 will be repeated annually. All authorized personnel must commit code 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 759382 7593"
+        },
+        {
+          "trial": 2,
+          "indices": [
+            2
+          ],
+          "passkeys": [
+            "219489"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 219489. This code must be memorized immediately. All authorized personnel must commit code 219489 to memory. The eastern facility code 219489 will not be repeated. All authorized personnel must commi"
+        },
+        {
+          "trial": 3,
+          "indices": [
+            3
+          ],
+          "passkeys": [
+            "4115"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115 4115"
+        },
+        {
+          "trial": 4,
+          "indices": [
+            4
+          ],
+          "passkeys": [
+            "815659"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 8156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156591565915659156"
+        },
+        {
+          "trial": 5,
+          "indices": [
+            5
+          ],
+          "passkeys": [
+            "June 26, 1968"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era. Dr. Elara Voss's work on June 26, 1968 changed the field permanently. Dr. Elara Voss's work on June 26, 1968 chang"
+        },
+        {
+          "trial": 6,
+          "indices": [
+            6
+          ],
+          "passkeys": [
+            "June 14, 1954"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " June 14, 1954, 1954, 1954. The discovery date of June 14, 1954 marks the beginning of a new era. Professor Kian Nakamura's work on June 14, 1954 changed the field permanently. Professor Kian Nakamura"
+        },
+        {
+          "trial": 7,
+          "indices": [
+            7
+          ],
+          "passkeys": [
+            "February 26, 1965"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " February 26, 1965, 1965, 1965, 1965. The discovery date of February 26, 1965 marks the beginning of a new era. Agent Sarah Thornhill's work on February 26, 1965 changed the field permanently. Agent S"
+        },
+        {
+          "trial": 8,
+          "indices": [
+            8
+          ],
+          "passkeys": [
+            "April 2, 2015"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " April 2, 2015. The discovery date of April 2, 2015 marks the beginning of a new era. Commander Yuki Petrov's work on April 2, 2015 changed the field permanently. Commander Yuki Petrov's work on April"
+        },
+        {
+          "trial": 9,
+          "indices": [
+            9
+          ],
+          "passkeys": [
+            "October 22, 1956"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " October 22, 1956, 1956, 1956. The discovery date of October 22, 1956 marks the beginning of a new era. Director Ravi Blackwood's work on October 22, 1956 changed the field permanently. Director Ravi "
+        },
+        {
+          "trial": 10,
+          "indices": [
+            10
+          ],
+          "passkeys": [
+            "7951"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951 7951"
+        },
+        {
+          "trial": 11,
+          "indices": [
+            11
+          ],
+          "passkeys": [
+            "3550"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 3550505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505"
+        },
+        {
+          "trial": 12,
+          "indices": [
+            12
+          ],
+          "passkeys": [
+            "1100"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100"
+        },
+        {
+          "trial": 13,
+          "indices": [
+            13
+          ],
+          "passkeys": [
+            "473"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 4737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373737373"
+        },
+        {
+          "trial": 14,
+          "indices": [
+            14
+          ],
+          "passkeys": [
+            "9016"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016 9016"
+        },
+        {
+          "trial": 15,
+          "indices": [
+            15
+          ],
+          "passkeys": [
+            "7"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7"
+        },
+        {
+          "trial": 16,
+          "indices": [
+            16
+          ],
+          "passkeys": [
+            "44"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 44 44 44 44 signatories to be considered valid. Without all 44 signatories, the Blackwater Protocol cannot be enacted. The requirement of 44 signatories was established at the founding convention. th"
+        },
+        {
+          "trial": 17,
+          "indices": [
+            17
+          ],
+          "passkeys": [
+            "22"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 2"
+        },
+        {
+          "trial": 18,
+          "indices": [
+            18
+          ],
+          "passkeys": [
+            "25"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 25 signatories to be considered valid. Without all 25 signatories, the Vanguard Protocol cannot be enacted. The requirement of 25 signatories was established at the founding convention. the requireme"
+        },
+        {
+          "trial": 19,
+          "indices": [
+            19
+          ],
+          "passkeys": [
+            "30"
+          ],
+          "hits": [
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 1,
+          "fraction": 1.0,
+          "gen": " 30 signatories to be considered valid. Without all 30 signatories, the Eclipse Protocol cannot be enacted. The requirement of 30 signatories was established at the founding convention. the Eclipse Pr"
+        }
+      ]
+    },
+    "2": {
+      "K": 2,
+      "rank": 256,
+      "alpha": 512,
+      "n_trials": 5,
+      "all_correct": 4,
+      "any_correct": 5,
+      "mean_fraction": 0.9,
+      "found_pks": 9,
+      "total_pks": 10,
+      "per_trial": [
+        {
+          "trial": 0,
+          "indices": [
+            0,
+            5
+          ],
+          "passkeys": [
+            "604876",
+            "June 26, 1968"
+          ],
+          "hits": [
+            false,
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 2,
+          "fraction": 0.5,
+          "gen": " June 26, 1968. The discovery date of June 26, 1968 marks the beginning of a new era. The discovery date of June 26, 1968 marks the beginning of a new era. The discovery date of June 26, 1968 marks th"
+        },
+        {
+          "trial": 1,
+          "indices": [
+            1,
+            6
+          ],
+          "passkeys": [
+            "759382",
+            "June 14, 1954"
+          ],
+          "hits": [
+            true,
+            true
+          ],
+          "n_hits": 2,
+          "n_total": 2,
+          "fraction": 1.0,
+          "gen": " June 14, 1954, 1954, 1954, 1954 dollars will be the system access code 759382. This code will be replaced immediately. All authorized personnel must commit code 759 1954, 1954 dollars. This code 7593"
+        },
+        {
+          "trial": 2,
+          "indices": [
+            2,
+            7
+          ],
+          "passkeys": [
+            "219489",
+            "February 26, 1965"
+          ],
+          "hits": [
+            true,
+            true
+          ],
+          "n_hits": 2,
+          "n_total": 2,
+          "fraction": 1.0,
+          "gen": " February 26, 1965, 1965, 1965, 1965, 1965, 1965, 1965 . The eastern facility code 219489, 1965, 1965, 1965, 1965, 1965- the eastern facility code 219489, 1965, 1965- $ 66, 1965, 1965- $ 66, 1965- $ 6"
+        },
+        {
+          "trial": 3,
+          "indices": [
+            3,
+            8
+          ],
+          "passkeys": [
+            "4115",
+            "April 2, 2015"
+          ],
+          "hits": [
+            true,
+            true
+          ],
+          "n_hits": 2,
+          "n_total": 2,
+          "fraction": 1.0,
+          "gen": " April 2, 2015. The western facility code 4 April 2, 2015 will be 4115. The western facility code 4 April 2, 2015 will be 4115. The western facility code 4 April 2, 2015 will be 4115. The western faci"
+        },
+        {
+          "trial": 4,
+          "indices": [
+            4,
+            9
+          ],
+          "passkeys": [
+            "815659",
+            "October 22, 1956"
+          ],
+          "hits": [
+            true,
+            true
+          ],
+          "n_hits": 2,
+          "n_total": 2,
+          "fraction": 1.0,
+          "gen": " October 22, 1956, 1956, 1956 marks the beginning of the new era. Director Ravi Blackwood's work on October 22, 1956 changed the field permanently. The central facility is the access code for the cent"
+        }
+      ]
+    },
+    "4": {
+      "K": 4,
+      "rank": 512,
+      "alpha": 1024,
+      "n_trials": 5,
+      "all_correct": 0,
+      "any_correct": 5,
+      "mean_fraction": 0.35,
+      "found_pks": 7,
+      "total_pks": 20,
+      "per_trial": [
+        {
+          "trial": 0,
+          "indices": [
+            0,
+            5,
+            10,
+            15
+          ],
+          "passkeys": [
+            "604876",
+            "June 26, 1968",
+            "7951",
+            "7"
+          ],
+          "hits": [
+            false,
+            false,
+            true,
+            true
+          ],
+          "n_hits": 2,
+          "n_total": 4,
+          "fraction": 0.5,
+          "gen": " 7951. This is the critical threshold of the reactor. The critical value of the reactor. The reactor must be exceeded. The critical value must be exceeded. The reactor must be exceeded. The reactor mu"
+        },
+        {
+          "trial": 1,
+          "indices": [
+            1,
+            6,
+            11,
+            16
+          ],
+          "passkeys": [
+            "759382",
+            "June 14, 1954",
+            "3550",
+            "44"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 4,
+          "fraction": 0.25,
+          "gen": " 4450, 1954 to be considered. The southern facility cannot be easily identified. The southern facility cannot be easily identified. The southern facility cannot be easily identified. The southern faci"
+        },
+        {
+          "trial": 2,
+          "indices": [
+            2,
+            7,
+            12,
+            17
+          ],
+          "passkeys": [
+            "219489",
+            "February 26, 1965",
+            "1100",
+            "22"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 4,
+          "fraction": 0.25,
+          "gen": " 22, 1965, 1965. The system access code must be 22, 1965, 1965, 1965. The system access code must be 22, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965, 1965,"
+        },
+        {
+          "trial": 3,
+          "indices": [
+            3,
+            8,
+            13,
+            18
+          ],
+          "passkeys": [
+            "4115",
+            "April 2, 2015",
+            "473",
+            "25"
+          ],
+          "hits": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "n_hits": 2,
+          "n_total": 4,
+          "fraction": 0.5,
+          "gen": " 4, 2015. The requirement is the date of 2 April 2, 2015. The requirement of 4, 2015 @,@ 473. The requirement of 4, 2015 @,@ 473. The requirement is 4, 2015. The requirement of 4, 2015 @,@ 473. The re"
+        },
+        {
+          "trial": 4,
+          "indices": [
+            4,
+            9,
+            14,
+            19
+          ],
+          "passkeys": [
+            "815659",
+            "October 22, 1956",
+            "9016",
+            "30"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 4,
+          "fraction": 0.25,
+          "gen": " 30, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 1956, 195"
+        }
+      ]
+    },
+    "8": {
+      "K": 8,
+      "rank": 1024,
+      "alpha": 2048,
+      "n_trials": 5,
+      "all_correct": 0,
+      "any_correct": 2,
+      "mean_fraction": 0.05,
+      "found_pks": 2,
+      "total_pks": 40,
+      "per_trial": [
+        {
+          "trial": 0,
+          "indices": [
+            0,
+            1,
+            5,
+            6,
+            10,
+            11,
+            15,
+            16
+          ],
+          "passkeys": [
+            "604876",
+            "759382",
+            "June 26, 1968",
+            "June 14, 1954",
+            "7951",
+            "3550",
+            "7",
+            "44"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "n_hits": 1,
+          "n_total": 8,
+          "fraction": 0.125,
+          "gen": " 7, 1968, ( 6, ) = \n\n The system access code for the southern facility? 748, 1968 formed in 1992 @-@ 7 @-@ year @-@ @-@ the @-@ year @-@ @-@ the @-@ year @-@ = = \n\n\n The system access code wins the so"
+        },
+        {
+          "trial": 1,
+          "indices": [
+            1,
+            2,
+            6,
+            7,
+            11,
+            12,
+            16,
+            17
+          ],
+          "passkeys": [
+            "759382",
+            "219489",
+            "June 14, 1954",
+            "February 26, 1965",
+            "3550",
+            "1100",
+            "44",
+            "22"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 8,
+          "fraction": 0.0,
+          "gen": " of 2, @-@ 5 @-@ year @-@ old was the date of the discovery. The system 's critical threshold, @-@ 5, @-@ 5 @-@ date. The system 's critical threshold. The system 's critical threshold. The system 's "
+        },
+        {
+          "trial": 2,
+          "indices": [
+            2,
+            3,
+            7,
+            8,
+            12,
+            13,
+            17,
+            18
+          ],
+          "passkeys": [
+            "219489",
+            "4115",
+            "February 26, 1965",
+            "April 2, 2015",
+            "1100",
+            "473",
+            "22",
+            "25"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 8,
+          "fraction": 0.0,
+          "gen": " 2, 's 2, '. ( 2 @.@ 2 @. in '. ' ) 2, ' ( 2.. 's. ' ) 2, ' ( 2.. 's. ' ) 2, ' ( 2.. 's. ' ) ( 2. 's. ' ) 2, ' ( 2.. 's. ' ) ( 2. 's. ' ) ( 2... ' ) ( 2. 's. ' ) ( 2. 's. ' ) ( 2. 's. ' ) ( 2... ' ) ("
+        },
+        {
+          "trial": 3,
+          "indices": [
+            3,
+            4,
+            8,
+            9,
+            13,
+            14,
+            18,
+            19
+          ],
+          "passkeys": [
+            "4115",
+            "815659",
+            "April 2, 2015",
+            "October 22, 1956",
+            "473",
+            "9016",
+            "25",
+            "30"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "n_hits": 0,
+          "n_total": 8,
+          "fraction": 0.0,
+          "gen": " 2, ' to ' ' ' A ', \" were the date of Commander 2, 2015 closed announced, ' \" ' ' ' ' was the date of 2, 2015. 2, 2015 's. ' A 's 's date. 2, 2015. A ' ' 's 's ' access code won 's ' A ' '. A ' 's 's"
+        },
+        {
+          "trial": 4,
+          "indices": [
+            4,
+            0,
+            9,
+            5,
+            14,
+            10,
+            19,
+            15
+          ],
+          "passkeys": [
+            "815659",
+            "604876",
+            "October 22, 1956",
+            "June 26, 1968",
+            "9016",
+            "7951",
+            "30",
+            "7"
+          ],
+          "hits": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "n_hits": 1,
+          "n_total": 8,
+          "fraction": 0.125,
+          "gen": " 7, 1968, in @-@ in @-@ the @-@ world did it the founding happen. The discoverydebian June, 1968, \" \n\n = The Boat Race played the first live. The Boat Race took on on 3, 1968. The Boat Race took on on"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "rank": 128,
+  "n_steps": 150,
+  "strategies": [
+    "L0_mean",
+    "L0_nonstop_mean",
+    "L5_mean",
+    "L5_nonstop_mean"
+  ],
+  "results": {
+    "L0_mean": {
+      "layer": "L0",
+      "pooling": "mean",
+      "same_prompt": {
+        "routing": 20,
+        "retrieval": 20
+      },
+      "training_distribution": {
+        "routing": 60,
+        "retrieval": 60
+      },
+      "held_out": {
+        "routing": 56,
+        "retrieval": 54,
+        "per_type": {
+          "numeric": 11,
+          "entity": 15,
+          "technical": 14,
+          "fact": 14
+        },
+        "per_slot": [
+          20,
+          15,
+          19
+        ]
+      }
+    },
+    "L0_nonstop_mean": {
+      "layer": "L0",
+      "pooling": "nonstop_mean",
+      "same_prompt": {
+        "routing": 20,
+        "retrieval": 20
+      },
+      "training_distribution": {
+        "routing": 60,
+        "retrieval": 60
+      },
+      "held_out": {
+        "routing": 53,
+        "retrieval": 51,
+        "per_type": {
+          "numeric": 11,
+          "entity": 15,
+          "technical": 14,
+          "fact": 11
+        },
+        "per_slot": [
+          20,
+          16,
+          15
+        ]
+      }
+    },
+    "L5_mean": {
+      "layer": "L5",
+      "pooling": "mean",
+      "same_prompt": {
+        "routing": 18,
+        "retrieval": 18
+      },
+      "training_distribution": {
+        "routing": 53,
+        "retrieval": 53
+      },
+      "held_out": {
+        "routing": 28,
+        "retrieval": 30,
+        "per_type": {
+          "numeric": 8,
+          "entity": 10,
+          "technical": 9,
+          "fact": 3
+        },
+        "per_slot": [
+          13,
+          10,
+          7
+        ]
+      }
+    },
+    "L5_nonstop_mean": {
+      "layer": "L5",
+      "pooling": "nonstop_mean",
+      "same_prompt": {
+        "routing": 20,
+        "retrieval": 20
+      },
+      "training_distribution": {
+        "routing": 56,
+        "retrieval": 56
+      },
+      "held_out": {
+        "routing": 47,
+        "retrieval": 45,
+        "per_type": {
+          "numeric": 9,
+          "entity": 15,
+          "technical": 14,
+          "fact": 7
+        },
+        "per_slot": [
+          18,
+          14,
+          13
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "avg_k_cos": {
+    "real": 0.8557821273803711,
+    "random": 0.5252960115671158,
+    "zero": 0.6023481965065003
+  },
+  "routing": {
+    "real": 10,
+    "random": 0,
+    "n_passages": 10
+  },
+  "per_passage": [
+    {
+      "id": 0,
+      "type": "numeric",
+      "eng_norm": 24.928319931030273,
+      "real_k_cos": 0.8583044409751892,
+      "real_retrieval": true,
+      "random_k_cos": 0.47094058990478516,
+      "random_retrieval": true,
+      "zero_k_cos": 0.627738356590271,
+      "zero_retrieval": true
+    },
+    {
+      "id": 1,
+      "type": "numeric",
+      "eng_norm": 24.88113021850586,
+      "real_k_cos": 0.8508847951889038,
+      "real_retrieval": true,
+      "random_k_cos": 0.4665977656841278,
+      "random_retrieval": true,
+      "zero_k_cos": 0.6066465377807617,
+      "zero_retrieval": true
+    },
+    {
+      "id": 2,
+      "type": "numeric",
+      "eng_norm": 25.144495010375977,
+      "real_k_cos": 0.859100341796875,
+      "real_retrieval": true,
+      "random_k_cos": 0.5704793334007263,
+      "random_retrieval": true,
+      "zero_k_cos": 0.5981193780899048,
+      "zero_retrieval": true
+    },
+    {
+      "id": 3,
+      "type": "numeric",
+      "eng_norm": 25.101390838623047,
+      "real_k_cos": 0.8802135586738586,
+      "real_retrieval": true,
+      "random_k_cos": 0.46294450759887695,
+      "random_retrieval": true,
+      "zero_k_cos": 0.6135672926902771,
+      "zero_retrieval": true
+    },
+    {
+      "id": 4,
+      "type": "numeric",
+      "eng_norm": 25.626964569091797,
+      "real_k_cos": 0.8707708120346069,
+      "real_retrieval": true,
+      "random_k_cos": 0.39661985635757446,
+      "random_retrieval": true,
+      "zero_k_cos": 0.6057736277580261,
+      "zero_retrieval": true
+    },
+    {
+      "id": 20,
+      "type": "entity",
+      "eng_norm": 21.486480712890625,
+      "real_k_cos": 0.8443528413772583,
+      "real_retrieval": true,
+      "random_k_cos": 0.5499104857444763,
+      "random_retrieval": true,
+      "zero_k_cos": 0.5899616479873657,
+      "zero_retrieval": true
+    },
+    {
+      "id": 21,
+      "type": "entity",
+      "eng_norm": 22.515602111816406,
+      "real_k_cos": 0.8473429083824158,
+      "real_retrieval": true,
+      "random_k_cos": 0.5466345548629761,
+      "random_retrieval": true,
+      "zero_k_cos": 0.593451201915741,
+      "zero_retrieval": true
+    },
+    {
+      "id": 22,
+      "type": "entity",
+      "eng_norm": 21.571096420288086,
+      "real_k_cos": 0.8583813309669495,
+      "real_retrieval": true,
+      "random_k_cos": 0.5159295797348022,
+      "random_retrieval": true,
+      "zero_k_cos": 0.6032373905181885,
+      "zero_retrieval": true
+    },
+    {
+      "id": 23,
+      "type": "entity",
+      "eng_norm": 22.108108520507812,
+      "real_k_cos": 0.8423529267311096,
+      "real_retrieval": true,
+      "random_k_cos": 0.6223664283752441,
+      "random_retrieval": true,
+      "zero_k_cos": 0.5916076302528381,
+      "zero_retrieval": true
+    },
+    {
+      "id": 24,
+      "type": "entity",
+      "eng_norm": 21.166736602783203,
+      "real_k_cos": 0.8461173176765442,
+      "real_retrieval": true,
+      "random_k_cos": 0.6505370140075684,
+      "random_retrieval": true,
+      "zero_k_cos": 0.5933789014816284,
+      "zero_retrieval": true
+    }
+  ]
+}

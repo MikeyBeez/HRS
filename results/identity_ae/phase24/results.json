@@ -1,0 +1,222 @@
+{
+  "n_steps": 150,
+  "source": "L5_mean",
+  "routing": 1.0,
+  "retrieval": 1.0,
+  "routed_by_type": {
+    "numeric": 1.0,
+    "entity": 1.0,
+    "technical": 1.0,
+    "fact": 1.0
+  },
+  "found_by_type": {
+    "numeric": 1.0,
+    "entity": 1.0,
+    "technical": 1.0,
+    "fact": 1.0
+  },
+  "baseline_ppl": 19.604746422563498,
+  "drift_pct": 0.0,
+  "per_test": [
+    {
+      "id": 0,
+      "type": "numeric",
+      "passkey": "10433218",
+      "best_match_idx": 0,
+      "score": 0.9999999403953552,
+      "correct_route": true,
+      "found": true,
+      "gen": " is 10433218. This code must be memorized immediately. All authorized personnel must commit code 10433218 to memory. The"
+    },
+    {
+      "id": 1,
+      "type": "numeric",
+      "passkey": "9600",
+      "best_match_idx": 1,
+      "score": 0.9999998807907104,
+      "correct_route": true,
+      "found": true,
+      "gen": " is 9600. This code must be memorized immediately. All authorized personnel must commit code 9600 to memory. The souther"
+    },
+    {
+      "id": 2,
+      "type": "numeric",
+      "passkey": "3389",
+      "best_match_idx": 2,
+      "score": 1.0,
+      "correct_route": true,
+      "found": true,
+      "gen": " is 3389. This code must be memorized immediately. All authorized personnel must commit code 3389 to memory. The eastern"
+    },
+    {
+      "id": 3,
+      "type": "numeric",
+      "passkey": "8386",
+      "best_match_idx": 3,
+      "score": 1.0000001192092896,
+      "correct_route": true,
+      "found": true,
+      "gen": " is 8386. This code must be memorized immediately. All authorized personnel must commit code 8386 to memory. The western"
+    },
+    {
+      "id": 4,
+      "type": "numeric",
+      "passkey": "7940",
+      "best_match_idx": 4,
+      "score": 1.0000001192092896,
+      "correct_route": true,
+      "found": true,
+      "gen": ". The central facility code for the central facility is 7940. This code must be memorized immediately. All authorized pe"
+    },
+    {
+      "id": 20,
+      "type": "entity",
+      "passkey": "September 9, 2017",
+      "best_match_idx": 5,
+      "score": 1.0000001192092896,
+      "correct_route": true,
+      "found": true,
+      "gen": ". The discovery date of September 9, 2017 marks the beginning of a new era. Dr. Elara Voss's work on September 9, 2017 c"
+    },
+    {
+      "id": 21,
+      "type": "entity",
+      "passkey": "January 22, 1961",
+      "best_match_idx": 6,
+      "score": 1.0,
+      "correct_route": true,
+      "found": true,
+      "gen": " Professor Kian Nakamura's work on January 22, 1961 changed the field permanently. Professor Kian Nakamura's work on Jan"
+    },
+    {
+      "id": 22,
+      "type": "entity",
+      "passkey": "September 25, 1981",
+      "best_match_idx": 7,
+      "score": 0.9999998807907104,
+      "correct_route": true,
+      "found": true,
+      "gen": " Agent Sarah Thornhill's work on September 25, 1981 changed the field permanently. Agent Sarah Thornhill's work on Septe"
+    },
+    {
+      "id": 23,
+      "type": "entity",
+      "passkey": "June 4, 1984",
+      "best_match_idx": 8,
+      "score": 0.9999998211860657,
+      "correct_route": true,
+      "found": true,
+      "gen": " Commander Yuki Petrov's work on June 4, 1984 changed the field permanently. Commander Yuki Petrov's work on June 4, 198"
+    },
+    {
+      "id": 24,
+      "type": "entity",
+      "passkey": "July 6, 2005",
+      "best_match_idx": 9,
+      "score": 1.0,
+      "correct_route": true,
+      "found": true,
+      "gen": " Director Ravi Blackwood's work on July 6, 2005 changed the field permanently. Director Ravi Blackwood's work on July 6,"
+    },
+    {
+      "id": 30,
+      "type": "technical",
+      "passkey": "8937",
+      "best_match_idx": 10,
+      "score": 1.0,
+      "correct_route": true,
+      "found": true,
+      "gen": ". This value of 8937 kelvin must not be exceeded under any circumstances. The reactor critical value is precisely 8937 k"
+    },
+    {
+      "id": 31,
+      "type": "technical",
+      "passkey": "8789",
+      "best_match_idx": 11,
+      "score": 0.9999998807907104,
+      "correct_route": true,
+      "found": true,
+      "gen": ". This value of 8789 megapascals must not be exceeded under any circumstances. The accelerator critical value is precise"
+    },
+    {
+      "id": 32,
+      "type": "technical",
+      "passkey": "109",
+      "best_match_idx": 12,
+      "score": 0.9999998807907104,
+      "correct_route": true,
+      "found": true,
+      "gen": ". This value of 109 gigahertz must not be exceeded under any circumstances. The telescope critical value is precisely 10"
+    },
+    {
+      "id": 33,
+      "type": "technical",
+      "passkey": "9913",
+      "best_match_idx": 13,
+      "score": 1.0,
+      "correct_route": true,
+      "found": true,
+      "gen": ". This value of 9913 nanometers must not be exceeded under any circumstances. The spectrometer critical value is precise"
+    },
+    {
+      "id": 34,
+      "type": "technical",
+      "passkey": "5410",
+      "best_match_idx": 14,
+      "score": 0.9999999403953552,
+      "correct_route": true,
+      "found": true,
+      "gen": " specification: specification: The collider critical value is precisely 5410 millisieverts. This value of 5410 millisiev"
+    },
+    {
+      "id": 40,
+      "type": "fact",
+      "passkey": "18",
+      "best_match_idx": 15,
+      "score": 1.0,
+      "correct_route": true,
+      "found": true,
+      "gen": " to be considered valid. Without all 18 signatories, the Thornfield Protocol cannot be enacted. The requirement of 18 si"
+    },
+    {
+      "id": 41,
+      "type": "fact",
+      "passkey": "6",
+      "best_match_idx": 16,
+      "score": 0.9999998807907104,
+      "correct_route": true,
+      "found": true,
+      "gen": " to be considered valid. Without all 6 signatories, the Blackwater Protocol cannot be enacted. The requirement of 6 sign"
+    },
+    {
+      "id": 42,
+      "type": "fact",
+      "passkey": "18",
+      "best_match_idx": 17,
+      "score": 1.0,
+      "correct_route": true,
+      "found": true,
+      "gen": " signatories to be considered valid. Without all 18 signatories, the Meridian Protocol cannot be enacted. The requiremen"
+    },
+    {
+      "id": 43,
+      "type": "fact",
+      "passkey": "39",
+      "best_match_idx": 18,
+      "score": 1.0,
+      "correct_route": true,
+      "found": true,
+      "gen": " to be enacted. The requirement of 39 signatories was established at the founding convention. The requirement of 39 sign"
+    },
+    {
+      "id": 44,
+      "type": "fact",
+      "passkey": "8",
+      "best_match_idx": 19,
+      "score": 1.0,
+      "correct_route": true,
+      "found": true,
+      "gen": " 8 signatories to be considered valid. Without all signatories, the Eclipse Protocol cannot be enacted. The requirement "
+    }
+  ]
+}

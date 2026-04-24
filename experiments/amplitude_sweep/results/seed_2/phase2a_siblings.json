@@ -1,0 +1,119 @@
+{
+  "records": [
+    {
+      "passkey_exact": 0.016,
+      "passkey_digit": 0.428,
+      "sibling": 1,
+      "beta": 1
+    },
+    {
+      "passkey_exact": 0.024,
+      "passkey_digit": 0.384,
+      "sibling": 1,
+      "beta": 2
+    },
+    {
+      "passkey_exact": 0.004,
+      "passkey_digit": 0.296,
+      "sibling": 1,
+      "beta": 3
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.129,
+      "sibling": 1,
+      "beta": 5
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.123,
+      "sibling": 1,
+      "beta": 10
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.099,
+      "sibling": 1,
+      "beta": 20
+    },
+    {
+      "passkey_exact": 0.016,
+      "passkey_digit": 0.428,
+      "sibling": 2,
+      "beta": 1
+    },
+    {
+      "passkey_exact": 0.016,
+      "passkey_digit": 0.361,
+      "sibling": 2,
+      "beta": 2
+    },
+    {
+      "passkey_exact": 0.004,
+      "passkey_digit": 0.297,
+      "sibling": 2,
+      "beta": 3
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.124,
+      "sibling": 2,
+      "beta": 5
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.13,
+      "sibling": 2,
+      "beta": 10
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.096,
+      "sibling": 2,
+      "beta": 20
+    },
+    {
+      "passkey_exact": 0.016,
+      "passkey_digit": 0.428,
+      "sibling": 3,
+      "beta": 1
+    },
+    {
+      "passkey_exact": 0.028,
+      "passkey_digit": 0.413,
+      "sibling": 3,
+      "beta": 2
+    },
+    {
+      "passkey_exact": 0.032,
+      "passkey_digit": 0.401,
+      "sibling": 3,
+      "beta": 3
+    },
+    {
+      "passkey_exact": 0.016,
+      "passkey_digit": 0.294,
+      "sibling": 3,
+      "beta": 5
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.095,
+      "sibling": 3,
+      "beta": 10
+    },
+    {
+      "passkey_exact": 0.0,
+      "passkey_digit": 0.075,
+      "sibling": 3,
+      "beta": 20
+    }
+  ],
+  "best": {
+    "passkey_exact": 0.032,
+    "passkey_digit": 0.401,
+    "sibling": 3,
+    "beta": 3
+  },
+  "wall_seconds": 9.451475381851196
+}

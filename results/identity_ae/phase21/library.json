@@ -1,0 +1,222 @@
+{
+  "library_size": 20,
+  "retrieval": 0.6,
+  "retrieval_by_type": {
+    "numeric": 0.0,
+    "entity": 1.0,
+    "technical": 0.6,
+    "fact": 0.8
+  },
+  "routing_accuracy": 0.6,
+  "routing_by_type": {
+    "numeric": 0.0,
+    "entity": 1.0,
+    "technical": 0.6,
+    "fact": 0.8
+  },
+  "baseline_ppl": 19.604746422563498,
+  "final_ppl_zero_adapter": 19.604746422563498,
+  "drift_pct": 0.0,
+  "per_test": [
+    {
+      "id": 0,
+      "type": "numeric",
+      "passkey": "10433218",
+      "best_match_idx": 16,
+      "best_sim": 0.41553613543510437,
+      "correct_route": false,
+      "found": false,
+      "gen": " . The requirement of the requirement of the requirement of the requirement was established at the f"
+    },
+    {
+      "id": 1,
+      "type": "numeric",
+      "passkey": "9600",
+      "best_match_idx": 16,
+      "best_sim": 0.4165348410606384,
+      "correct_route": false,
+      "found": false,
+      "gen": "EN . The requirement of the requirement of the requirement was established at the founding conventio"
+    },
+    {
+      "id": 2,
+      "type": "numeric",
+      "passkey": "3389",
+      "best_match_idx": 16,
+      "best_sim": 0.41513246297836304,
+      "correct_route": false,
+      "found": false,
+      "gen": " . The requirement of the requirement of the eastern facility was established at the founding conven"
+    },
+    {
+      "id": 3,
+      "type": "numeric",
+      "passkey": "8386",
+      "best_match_idx": 16,
+      "best_sim": 0.4146798849105835,
+      "correct_route": false,
+      "found": false,
+      "gen": " . The requirement of the requirement of the requirement of the requirement of the requirement of th"
+    },
+    {
+      "id": 4,
+      "type": "numeric",
+      "passkey": "7940",
+      "best_match_idx": 16,
+      "best_sim": 0.4101034104824066,
+      "correct_route": false,
+      "found": false,
+      "gen": " . The requirement of the requirement of the requirement of the requirement was established at the f"
+    },
+    {
+      "id": 20,
+      "type": "entity",
+      "passkey": "September 9, 2017",
+      "best_match_idx": 5,
+      "best_sim": 0.6228362321853638,
+      "correct_route": true,
+      "found": true,
+      "gen": " Dr. Elara Voss's work on September 9, 2017 changed the field permanently. Dr. Elara Voss's work on "
+    },
+    {
+      "id": 21,
+      "type": "entity",
+      "passkey": "January 22, 1961",
+      "best_match_idx": 6,
+      "best_sim": 0.6255596280097961,
+      "correct_route": true,
+      "found": true,
+      "gen": " Professor Kian Nakamura made a breakthrough discovery on January 22, 1961. The discovery date of Ja"
+    },
+    {
+      "id": 22,
+      "type": "entity",
+      "passkey": "September 25, 1981",
+      "best_match_idx": 7,
+      "best_sim": 0.6323419213294983,
+      "correct_route": true,
+      "found": true,
+      "gen": " Agent Sarah Thornhill's work on September 25, 1981 changed the field permanently. Agent Sarah Thorn"
+    },
+    {
+      "id": 23,
+      "type": "entity",
+      "passkey": "June 4, 1984",
+      "best_match_idx": 8,
+      "best_sim": 0.6257352828979492,
+      "correct_route": true,
+      "found": true,
+      "gen": " Commander Yuki Petrov's work on June 4, 1984 changed the field permanently. Commander Yuki Petrov's"
+    },
+    {
+      "id": 24,
+      "type": "entity",
+      "passkey": "July 6, 2005",
+      "best_match_idx": 9,
+      "best_sim": 0.6239193081855774,
+      "correct_route": true,
+      "found": true,
+      "gen": " Director Ravi Blackwood's work on July 6, 2005 changed the field permanently. Director Ravi Blackwo"
+    },
+    {
+      "id": 30,
+      "type": "technical",
+      "passkey": "8937",
+      "best_match_idx": 16,
+      "best_sim": 0.3768905997276306,
+      "correct_route": false,
+      "found": false,
+      "gen": ". The requirement of 6 signatories was established at the founding convention. the requirement of 6 "
+    },
+    {
+      "id": 31,
+      "type": "technical",
+      "passkey": "8789",
+      "best_match_idx": 11,
+      "best_sim": 0.43390217423439026,
+      "correct_route": true,
+      "found": true,
+      "gen": " . The accelerator critical value is precisely 8789 megapascals. This value of 8789 megapascals must"
+    },
+    {
+      "id": 32,
+      "type": "technical",
+      "passkey": "109",
+      "best_match_idx": 16,
+      "best_sim": 0.38508450984954834,
+      "correct_route": false,
+      "found": false,
+      "gen": ". The requirement of the telescope was established at the founding convention. The requirement of th"
+    },
+    {
+      "id": 33,
+      "type": "technical",
+      "passkey": "9913",
+      "best_match_idx": 13,
+      "best_sim": 0.4106026291847229,
+      "correct_route": true,
+      "found": true,
+      "gen": ". This value of 9913 nanometers must not be exceeded under any circumstances. The spectrometer criti"
+    },
+    {
+      "id": 34,
+      "type": "technical",
+      "passkey": "5410",
+      "best_match_idx": 14,
+      "best_sim": 0.3737276792526245,
+      "correct_route": true,
+      "found": true,
+      "gen": ". This value of 5410 millisieverts must not be exceeded under any circumstances. The collider critic"
+    },
+    {
+      "id": 40,
+      "type": "fact",
+      "passkey": "18",
+      "best_match_idx": 15,
+      "best_sim": 0.6138277649879456,
+      "correct_route": true,
+      "found": true,
+      "gen": " to be considered valid. Without all 18 signatories, the Thornfield Protocol cannot be enacted. The "
+    },
+    {
+      "id": 41,
+      "type": "fact",
+      "passkey": "6",
+      "best_match_idx": 16,
+      "best_sim": 0.6032649278640747,
+      "correct_route": true,
+      "found": true,
+      "gen": " to be considered valid. Without all 6 signatories, the Blackwater Protocol cannot be enacted. The r"
+    },
+    {
+      "id": 42,
+      "type": "fact",
+      "passkey": "18",
+      "best_match_idx": 3,
+      "best_sim": 0.6277056336402893,
+      "correct_route": false,
+      "found": false,
+      "gen": " to be immediately repeated. All authorized personnel must commit code 8386 to memory. The system ac"
+    },
+    {
+      "id": 43,
+      "type": "fact",
+      "passkey": "39",
+      "best_match_idx": 18,
+      "best_sim": 0.6192790865898132,
+      "correct_route": true,
+      "found": true,
+      "gen": " to be enacted. The requirement of 39 signatories was established at the founding convention. The re"
+    },
+    {
+      "id": 44,
+      "type": "fact",
+      "passkey": "8",
+      "best_match_idx": 19,
+      "best_sim": 0.6143691539764404,
+      "correct_route": true,
+      "found": true,
+      "gen": " to be considered valid. Without all 8 signatories, the Eclipse Protocol cannot be enacted. The requ"
+    }
+  ]
+}

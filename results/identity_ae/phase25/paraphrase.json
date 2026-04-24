@@ -1,0 +1,739 @@
+{
+  "n_steps": 150,
+  "source": "L5_mean",
+  "n_originals": 20,
+  "n_paraphrases_per": 3,
+  "n_trials": 60,
+  "per_slot": [
+    {
+      "routing": 10,
+      "retrieval": 12,
+      "by_type": {
+        "numeric": {
+          "routed": 4,
+          "retrieved": 4
+        },
+        "entity": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "technical": {
+          "routed": 1,
+          "retrieved": 1
+        },
+        "fact": {
+          "routed": 0,
+          "retrieved": 2
+        }
+      }
+    },
+    {
+      "routing": 10,
+      "retrieval": 9,
+      "by_type": {
+        "numeric": {
+          "routed": 0,
+          "retrieved": 0
+        },
+        "entity": {
+          "routed": 0,
+          "retrieved": 0
+        },
+        "technical": {
+          "routed": 5,
+          "retrieved": 5
+        },
+        "fact": {
+          "routed": 5,
+          "retrieved": 4
+        }
+      }
+    },
+    {
+      "routing": 10,
+      "retrieval": 8,
+      "by_type": {
+        "numeric": {
+          "routed": 2,
+          "retrieved": 2
+        },
+        "entity": {
+          "routed": 4,
+          "retrieved": 4
+        },
+        "technical": {
+          "routed": 0,
+          "retrieved": 0
+        },
+        "fact": {
+          "routed": 4,
+          "retrieved": 2
+        }
+      }
+    }
+  ],
+  "total_routing_pct": 0.5,
+  "total_retrieval_pct": 0.48333333333333334,
+  "detailed": [
+    {
+      "test_id": 0,
+      "type": "numeric",
+      "slot": 0,
+      "paraphrase": "Tell me the access code for the northern facility.",
+      "passkey": "10433218",
+      "best_idx": 0,
+      "correct_route": true,
+      "found": true,
+      "gen": " All authorized personnel must commit code 10433218 to memory. The northern facility code 10433218 will not be repeated."
+    },
+    {
+      "test_id": 0,
+      "type": "numeric",
+      "slot": 1,
+      "paraphrase": "Which code grants entry to the northern facility?",
+      "passkey": "10433218",
+      "best_idx": 17,
+      "correct_route": false,
+      "found": false,
+      "gen": "IAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIA"
+    },
+    {
+      "test_id": 0,
+      "type": "numeric",
+      "slot": 2,
+      "paraphrase": "Northern facility \u2014 what is the access code?",
+      "passkey": "10433218",
+      "best_idx": 2,
+      "correct_route": false,
+      "found": false,
+      "gen": " is . The eastern facility is 3389. This code must be memorized immediately. All authorized personnel must commit code 3"
+    },
+    {
+      "test_id": 1,
+      "type": "numeric",
+      "slot": 0,
+      "paraphrase": "Tell me the access code for the southern facility.",
+      "passkey": "9600",
+      "best_idx": 1,
+      "correct_route": true,
+      "found": true,
+      "gen": " All authorized personnel must commit code 9600 to memory. The southern facility code 9600 will not be repeated. All aut"
+    },
+    {
+      "test_id": 1,
+      "type": "numeric",
+      "slot": 1,
+      "paraphrase": "Which code grants entry to the southern facility?",
+      "passkey": "9600",
+      "best_idx": 17,
+      "correct_route": false,
+      "found": false,
+      "gen": "IAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIA"
+    },
+    {
+      "test_id": 1,
+      "type": "numeric",
+      "slot": 2,
+      "paraphrase": "Southern facility \u2014 what is the access code?",
+      "passkey": "9600",
+      "best_idx": 2,
+      "correct_route": false,
+      "found": false,
+      "gen": " is. The system access code for the eastern facility is 3389. This code must be memorized immediately. All authorized pe"
+    },
+    {
+      "test_id": 2,
+      "type": "numeric",
+      "slot": 0,
+      "paraphrase": "Tell me the access code for the eastern facility.",
+      "passkey": "3389",
+      "best_idx": 3,
+      "correct_route": false,
+      "found": false,
+      "gen": " The western facility code 8386 will not be repeated. All authorized personnel must commit code 8386 to memory. The west"
+    },
+    {
+      "test_id": 2,
+      "type": "numeric",
+      "slot": 1,
+      "paraphrase": "Which code grants entry to the eastern facility?",
+      "passkey": "3389",
+      "best_idx": 17,
+      "correct_route": false,
+      "found": false,
+      "gen": "IAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIA"
+    },
+    {
+      "test_id": 2,
+      "type": "numeric",
+      "slot": 2,
+      "paraphrase": "Eastern facility \u2014 what is the access code?",
+      "passkey": "3389",
+      "best_idx": 2,
+      "correct_route": true,
+      "found": true,
+      "gen": " is. The system access code for the eastern facility is 3389. This code must be memorized immediately. All authorized pe"
+    },
+    {
+      "test_id": 3,
+      "type": "numeric",
+      "slot": 0,
+      "paraphrase": "Tell me the access code for the western facility.",
+      "passkey": "8386",
+      "best_idx": 3,
+      "correct_route": true,
+      "found": true,
+      "gen": " The western facility code 8386 will not be repeated. All authorized personnel must commit code 8386 to memory. The west"
+    },
+    {
+      "test_id": 3,
+      "type": "numeric",
+      "slot": 1,
+      "paraphrase": "Which code grants entry to the western facility?",
+      "passkey": "8386",
+      "best_idx": 17,
+      "correct_route": false,
+      "found": false,
+      "gen": "IAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIA"
+    },
+    {
+      "test_id": 3,
+      "type": "numeric",
+      "slot": 2,
+      "paraphrase": "Western facility \u2014 what is the access code?",
+      "passkey": "8386",
+      "best_idx": 2,
+      "correct_route": false,
+      "found": false,
+      "gen": " is. The system access code for the eastern facility is 3389. This code must be memorized immediately. All authorized pe"
+    },
+    {
+      "test_id": 4,
+      "type": "numeric",
+      "slot": 0,
+      "paraphrase": "Tell me the access code for the central facility.",
+      "passkey": "7940",
+      "best_idx": 4,
+      "correct_route": true,
+      "found": true,
+      "gen": " The central facility is 7940. This code must be memorized immediately. All authorized personnel must commit code 7940 t"
+    },
+    {
+      "test_id": 4,
+      "type": "numeric",
+      "slot": 1,
+      "paraphrase": "Which code grants entry to the central facility?",
+      "passkey": "7940",
+      "best_idx": 17,
+      "correct_route": false,
+      "found": false,
+      "gen": "IAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIAIA"
+    },
+    {
+      "test_id": 4,
+      "type": "numeric",
+      "slot": 2,
+      "paraphrase": "Central facility \u2014 what is the access code?",
+      "passkey": "7940",
+      "best_idx": 4,
+      "correct_route": true,
+      "found": true,
+      "gen": " The following information is classified. The system access code for the central facility is 7940. This code must be mem"
+    },
+    {
+      "test_id": 20,
+      "type": "entity",
+      "slot": 0,
+      "paraphrase": "On what date did Dr. Elara Voss make their breakthrough?",
+      "passkey": "September 9, 2017",
+      "best_idx": 5,
+      "correct_route": true,
+      "found": true,
+      "gen": ". The discovery date of September 9, 2017 marks the beginning of a new era. Dr. Elara Voss's work on September 9, 2017 c"
+    },
+    {
+      "test_id": 20,
+      "type": "entity",
+      "slot": 1,
+      "paraphrase": "What was the date of Dr. Elara Voss's discovery?",
+      "passkey": "September 9, 2017",
+      "best_idx": 3,
+      "correct_route": false,
+      "found": false,
+      "gen": "URUR NOTICE\n\n The following information is classified. The system access code for the western facility is 8386. This cod"
+    },
+    {
+      "test_id": 20,
+      "type": "entity",
+      "slot": 2,
+      "paraphrase": "Dr. Elara Voss's breakthrough \u2014 when did it happen?",
+      "passkey": "September 9, 2017",
+      "best_idx": 12,
+      "correct_route": false,
+      "found": false,
+      "gen": " the telescope operates at a critical threshold of 109 gigahertz. This value of 109 gigahertz must not be exceeded under"
+    },
+    {
+      "test_id": 21,
+      "type": "entity",
+      "slot": 0,
+      "paraphrase": "On what date did Professor Kian Nakamura make their breakthrough?",
+      "passkey": "January 22, 1961",
+      "best_idx": 6,
+      "correct_route": true,
+      "found": true,
+      "gen": " Kian Nakamura made a breakthrough discovery on January 22, 1961. The discovery date of January 22, 1961 marks the begin"
+    },
+    {
+      "test_id": 21,
+      "type": "entity",
+      "slot": 1,
+      "paraphrase": "What was the date of Professor Kian Nakamura's discovery?",
+      "passkey": "January 22, 1961",
+      "best_idx": 3,
+      "correct_route": false,
+      "found": false,
+      "gen": "URUR NOTICE\n\n The following information is classified. The system access code for the western facility is 8386. This cod"
+    },
+    {
+      "test_id": 21,
+      "type": "entity",
+      "slot": 2,
+      "paraphrase": "Professor Kian Nakamura's breakthrough \u2014 when did it happen?",
+      "passkey": "January 22, 1961",
+      "best_idx": 6,
+      "correct_route": true,
+      "found": true,
+      "gen": " Kian Nakamura's work on January 22, 1961 changed the field permanently. Professor Kian Nakamura's work on January 22, 1"
+    },
+    {
+      "test_id": 22,
+      "type": "entity",
+      "slot": 0,
+      "paraphrase": "On what date did Agent Sarah Thornhill make their breakthrough?",
+      "passkey": "September 25, 1981",
+      "best_idx": 7,
+      "correct_route": true,
+      "found": true,
+      "gen": " Agent Sarah Thornhill's work on September 25, 1981 changed the field permanently. Agent Sarah Thornhill's work on Septe"
+    },
+    {
+      "test_id": 22,
+      "type": "entity",
+      "slot": 1,
+      "paraphrase": "What was the date of Agent Sarah Thornhill's discovery?",
+      "passkey": "September 25, 1981",
+      "best_idx": 1,
+      "correct_route": false,
+      "found": false,
+      "gen": " The following information is classified. The system access code for the southern facility is 9600. This code must be me"
+    },
+    {
+      "test_id": 22,
+      "type": "entity",
+      "slot": 2,
+      "paraphrase": "Agent Sarah Thornhill's breakthrough \u2014 when did it happen?",
+      "passkey": "September 25, 1981",
+      "best_idx": 7,
+      "correct_route": true,
+      "found": true,
+      "gen": ". The discovery date of September 25, 1981 marks the beginning of a new era. Agent Sarah Thornhill's work on September 2"
+    },
+    {
+      "test_id": 23,
+      "type": "entity",
+      "slot": 0,
+      "paraphrase": "On what date did Commander Yuki Petrov make their breakthrough?",
+      "passkey": "June 4, 1984",
+      "best_idx": 8,
+      "correct_route": true,
+      "found": true,
+      "gen": " Commander Yuki Petrov's work on June 4, 1984. The discovery date of June 4, 1984 marks the beginning of a new era. Comm"
+    },
+    {
+      "test_id": 23,
+      "type": "entity",
+      "slot": 1,
+      "paraphrase": "What was the date of Commander Yuki Petrov's discovery?",
+      "passkey": "June 4, 1984",
+      "best_idx": 3,
+      "correct_route": false,
+      "found": false,
+      "gen": "URUR NOTICE NOTICE The following information is classified. The system access code for the western facility is 8386. Thi"
+    },
+    {
+      "test_id": 23,
+      "type": "entity",
+      "slot": 2,
+      "paraphrase": "Commander Yuki Petrov's breakthrough \u2014 when did it happen?",
+      "passkey": "June 4, 1984",
+      "best_idx": 8,
+      "correct_route": true,
+      "found": true,
+      "gen": " Commander Yuki Petrov's work on June 4, 1984 changed the field permanently. Commander Yuki Petrov's work on June 4, 198"
+    },
+    {
+      "test_id": 24,
+      "type": "entity",
+      "slot": 0,
+      "paraphrase": "On what date did Director Ravi Blackwood make their breakthrough?",
+      "passkey": "July 6, 2005",
+      "best_idx": 9,
+      "correct_route": true,
+      "found": true,
+      "gen": " on July 6, 2005. The discovery date of July 6, 2005 marks the beginning of a new era. Director Ravi Blackwood's work on"
+    },
+    {
+      "test_id": 24,
+      "type": "entity",
+      "slot": 1,
+      "paraphrase": "What was the date of Director Ravi Blackwood's discovery?",
+      "passkey": "July 6, 2005",
+      "best_idx": 3,
+      "correct_route": false,
+      "found": false,
+      "gen": "URUR NOTICE\n\n The following information is classified. The system access code for the western facility is 8386. This cod"
+    },
+    {
+      "test_id": 24,
+      "type": "entity",
+      "slot": 2,
+      "paraphrase": "Director Ravi Blackwood's breakthrough \u2014 when did it happen?",
+      "passkey": "July 6, 2005",
+      "best_idx": 9,
+      "correct_route": true,
+      "found": true,
+      "gen": ". Director Ravi Blackwood's work on July 6, 2005 changed the field permanently. Director Ravi Blackwood's work on July 6"
+    },
+    {
+      "test_id": 30,
+      "type": "technical",
+      "slot": 0,
+      "paraphrase": "At how many kelvin does the reactor reach its critical threshold?",
+      "passkey": "8937",
+      "best_idx": 18,
+      "correct_route": false,
+      "found": false,
+      "gen": " . The requirement of a plutonium bomb was established at the founding convention. The requirement of a plutonium bomb w"
+    },
+    {
+      "test_id": 30,
+      "type": "technical",
+      "slot": 1,
+      "paraphrase": "What kelvin value is the reactor's critical threshold?",
+      "passkey": "8937",
+      "best_idx": 10,
+      "correct_route": true,
+      "found": true,
+      "gen": " The reactor operates at a critical threshold of 8937 kelvin. This value of 8937 kelvin must not be exceeded under any c"
+    },
+    {
+      "test_id": 30,
+      "type": "technical",
+      "slot": 2,
+      "paraphrase": "Reactor criticality \u2014 how many kelvin?",
+      "passkey": "8937",
+      "best_idx": 18,
+      "correct_route": false,
+      "found": false,
+      "gen": " cannot be enacted. The requirement of 39 signatories was established at the founding convention. The requirement of 39 "
+    },
+    {
+      "test_id": 31,
+      "type": "technical",
+      "slot": 0,
+      "paraphrase": "At how many megapascals does the accelerator reach its critical threshold?",
+      "passkey": "8789",
+      "best_idx": 18,
+      "correct_route": false,
+      "found": false,
+      "gen": " Protocol requires exactly 39 signatories to be considered valid. Without all 39 signatories, the Vanguard Protocol cann"
+    },
+    {
+      "test_id": 31,
+      "type": "technical",
+      "slot": 1,
+      "paraphrase": "What megapascals value is the accelerator's critical threshold?",
+      "passkey": "8789",
+      "best_idx": 11,
+      "correct_route": true,
+      "found": true,
+      "gen": " The accelerator operates at a critical threshold of 8789 megapascals. This value of 8789 megapascals must not be exceed"
+    },
+    {
+      "test_id": 31,
+      "type": "technical",
+      "slot": 2,
+      "paraphrase": "Accelerator criticality \u2014 how many megapascals?",
+      "passkey": "8789",
+      "best_idx": 18,
+      "correct_route": false,
+      "found": false,
+      "gen": " cannot be enacted. The requirement of 39 signatories was established at the founding convention. The requirement of 39 "
+    },
+    {
+      "test_id": 32,
+      "type": "technical",
+      "slot": 0,
+      "paraphrase": "At how many gigahertz does the telescope reach its critical threshold?",
+      "passkey": "109",
+      "best_idx": 18,
+      "correct_route": false,
+      "found": false,
+      "gen": " . The requirement of a telescope was established at the founding convention. The requirement of a telescope was establi"
+    },
+    {
+      "test_id": 32,
+      "type": "technical",
+      "slot": 1,
+      "paraphrase": "What gigahertz value is the telescope's critical threshold?",
+      "passkey": "109",
+      "best_idx": 12,
+      "correct_route": true,
+      "found": true,
+      "gen": " The telescope operates at a critical threshold of 109 gigahertz. This value of 109 gigahertz must not be exceeded under"
+    },
+    {
+      "test_id": 32,
+      "type": "technical",
+      "slot": 2,
+      "paraphrase": "Telescope criticality \u2014 how many gigahertz?",
+      "passkey": "109",
+      "best_idx": 19,
+      "correct_route": false,
+      "found": false,
+      "gen": " cannot be enacted. The requirement of 8 signatories was established at the founding convention. The requirement of 8 si"
+    },
+    {
+      "test_id": 33,
+      "type": "technical",
+      "slot": 0,
+      "paraphrase": "At how many nanometers does the spectrometer reach its critical threshold?",
+      "passkey": "9913",
+      "best_idx": 13,
+      "correct_route": true,
+      "found": true,
+      "gen": " The spectrometer critical value is precisely 9913 nanometers. This value of 9913 nanometers must not be exceeded under "
+    },
+    {
+      "test_id": 33,
+      "type": "technical",
+      "slot": 1,
+      "paraphrase": "What nanometers value is the spectrometer's critical threshold?",
+      "passkey": "9913",
+      "best_idx": 13,
+      "correct_route": true,
+      "found": true,
+      "gen": " The spectrometer critical value is precisely 9913 nanometers. This value of 9913 nanometers must not be exceeded under "
+    },
+    {
+      "test_id": 33,
+      "type": "technical",
+      "slot": 2,
+      "paraphrase": "Spectrometer criticality \u2014 how many nanometers?",
+      "passkey": "9913",
+      "best_idx": 18,
+      "correct_route": false,
+      "found": false,
+      "gen": " the Vanguard Protocol requires . The requirement of a large number of nanometers was established at the founding conven"
+    },
+    {
+      "test_id": 34,
+      "type": "technical",
+      "slot": 0,
+      "paraphrase": "At how many millisieverts does the collider reach its critical threshold?",
+      "passkey": "5410",
+      "best_idx": 19,
+      "correct_route": false,
+      "found": false,
+      "gen": " . The requirement of a millisie was established at the founding convention. The requirement of millisie was established"
+    },
+    {
+      "test_id": 34,
+      "type": "technical",
+      "slot": 1,
+      "paraphrase": "What millisieverts value is the collider's critical threshold?",
+      "passkey": "5410",
+      "best_idx": 14,
+      "correct_route": true,
+      "found": true,
+      "gen": " The collider critical value is precisely 5410 millisieverts. This value of 5410 millisieverts must not be exceeded unde"
+    },
+    {
+      "test_id": 34,
+      "type": "technical",
+      "slot": 2,
+      "paraphrase": "Collider criticality \u2014 how many millisieverts?",
+      "passkey": "5410",
+      "best_idx": 19,
+      "correct_route": false,
+      "found": false,
+      "gen": " the reader 's imagination . The Economist reviewer was also critical of the book 's \" over @-@ the @-@ top \" approach ,"
+    },
+    {
+      "test_id": 40,
+      "type": "fact",
+      "slot": 0,
+      "paraphrase": "What is the number of signatories required by the Thornfield Protocol?",
+      "passkey": "18",
+      "best_idx": 1,
+      "correct_route": false,
+      "found": false,
+      "gen": " The following information is classified. The system access code for the southern facility is 9600. This code must be me"
+    },
+    {
+      "test_id": 40,
+      "type": "fact",
+      "slot": 1,
+      "paraphrase": "How many people must sign the Thornfield Protocol?",
+      "passkey": "18",
+      "best_idx": 15,
+      "correct_route": true,
+      "found": false,
+      "gen": " the requirement of a requirement of the requirement of the requirement of the requirement of the requirement of the req"
+    },
+    {
+      "test_id": 40,
+      "type": "fact",
+      "slot": 2,
+      "paraphrase": "Thornfield Protocol \u2014 how many signatories?",
+      "passkey": "18",
+      "best_idx": 15,
+      "correct_route": true,
+      "found": false,
+      "gen": " the requirement of the requirement of the requirement of the requirement of the requirement of the requirement of the r"
+    },
+    {
+      "test_id": 41,
+      "type": "fact",
+      "slot": 0,
+      "paraphrase": "What is the number of signatories required by the Blackwater Protocol?",
+      "passkey": "6",
+      "best_idx": 1,
+      "correct_route": false,
+      "found": true,
+      "gen": " The following information is classified. The system access code for the southern facility is 9600. This code must be me"
+    },
+    {
+      "test_id": 41,
+      "type": "fact",
+      "slot": 1,
+      "paraphrase": "How many people must sign the Blackwater Protocol?",
+      "passkey": "6",
+      "best_idx": 16,
+      "correct_route": true,
+      "found": true,
+      "gen": " . The requirement of 6 signatories was established at the founding convention. Without all 6 signatories, the Blackwate"
+    },
+    {
+      "test_id": 41,
+      "type": "fact",
+      "slot": 2,
+      "paraphrase": "Blackwater Protocol \u2014 how many signatories?",
+      "passkey": "6",
+      "best_idx": 18,
+      "correct_route": false,
+      "found": false,
+      "gen": " the Vanguard Protocol cannot be enacted. The requirement of the requirement of the requirement of the requirement of th"
+    },
+    {
+      "test_id": 42,
+      "type": "fact",
+      "slot": 0,
+      "paraphrase": "What is the number of signatories required by the Meridian Protocol?",
+      "passkey": "18",
+      "best_idx": 2,
+      "correct_route": false,
+      "found": false,
+      "gen": " The following information is classified. The system access code for the eastern facility is 3389. This code must be mem"
+    },
+    {
+      "test_id": 42,
+      "type": "fact",
+      "slot": 1,
+      "paraphrase": "How many people must sign the Meridian Protocol?",
+      "passkey": "18",
+      "best_idx": 17,
+      "correct_route": true,
+      "found": true,
+      "gen": ". Without all 18 signatories, the Meridian Protocol cannot be enacted. The requirement of 18 signatories was established"
+    },
+    {
+      "test_id": 42,
+      "type": "fact",
+      "slot": 2,
+      "paraphrase": "Meridian Protocol \u2014 how many signatories?",
+      "passkey": "18",
+      "best_idx": 17,
+      "correct_route": true,
+      "found": false,
+      "gen": " the Koran cannot be enacted. The requirement of the requirement of the requirement of the requirement of the requiremen"
+    },
+    {
+      "test_id": 43,
+      "type": "fact",
+      "slot": 0,
+      "paraphrase": "What is the number of signatories required by the Vanguard Protocol?",
+      "passkey": "39",
+      "best_idx": 2,
+      "correct_route": false,
+      "found": false,
+      "gen": " The following information is classified. The system access code for the eastern facility is 3389. This code must be mem"
+    },
+    {
+      "test_id": 43,
+      "type": "fact",
+      "slot": 1,
+      "paraphrase": "How many people must sign the Vanguard Protocol?",
+      "passkey": "39",
+      "best_idx": 18,
+      "correct_route": true,
+      "found": true,
+      "gen": " cannot be enacted. The requirement of the requirement of 39 signatories was established at the founding convention. The"
+    },
+    {
+      "test_id": 43,
+      "type": "fact",
+      "slot": 2,
+      "paraphrase": "Vanguard Protocol \u2014 how many signatories?",
+      "passkey": "39",
+      "best_idx": 18,
+      "correct_route": true,
+      "found": true,
+      "gen": " the Vanguard Protocol requires exactly 39 signatories to be considered valid. Without all 39 signatories, the Vanguard "
+    },
+    {
+      "test_id": 44,
+      "type": "fact",
+      "slot": 0,
+      "paraphrase": "What is the number of signatories required by the Eclipse Protocol?",
+      "passkey": "8",
+      "best_idx": 2,
+      "correct_route": false,
+      "found": true,
+      "gen": " The following information is classified. The system access code for the eastern facility is 3389. This code must be mem"
+    },
+    {
+      "test_id": 44,
+      "type": "fact",
+      "slot": 1,
+      "paraphrase": "How many people must sign the Eclipse Protocol?",
+      "passkey": "8",
+      "best_idx": 19,
+      "correct_route": true,
+      "found": true,
+      "gen": ". The requirement of 8 signatories was established at the founding convention. The requirement of 8 signatories was esta"
+    },
+    {
+      "test_id": 44,
+      "type": "fact",
+      "slot": 2,
+      "paraphrase": "Eclipse Protocol \u2014 how many signatories?",
+      "passkey": "8",
+      "best_idx": 19,
+      "correct_route": true,
+      "found": true,
+      "gen": " is enacted. The requirement of 8 signatories was established at the founding convention. The requirement of 8 signatori"
+    }
+  ]
+}

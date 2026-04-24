@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "label": "50-tok baseline (no retrieval)",
+      "prompt_len": 50,
+      "mauve_score": 0.9141244642456827,
+      "generation_time_s": 1856.1314816474915
+    },
+    {
+      "label": "50-tok + EGR",
+      "prompt_len": 50,
+      "mauve_score": 0.9260165719623683,
+      "generation_time_s": 1999.8942596912384
+    },
+    {
+      "label": "500-tok baseline (no retrieval)",
+      "prompt_len": 500,
+      "mauve_score": 0.9130966825687734,
+      "generation_time_s": 2937.102923154831
+    },
+    {
+      "label": "500-tok + EGR",
+      "prompt_len": 500,
+      "mauve_score": 0.9500935090007677,
+      "generation_time_s": 3155.357226371765
+    }
+  ],
+  "threshold": 4.0,
+  "store_size": 870
+}

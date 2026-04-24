@@ -1,0 +1,212 @@
+[
+  {
+    "seed": 0,
+    "layer_zeroed": 1,
+    "heads_zeroed": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "baseline_val_ppl": 4.918299006609094,
+    "baseline_passkey_exact": 1.0,
+    "val_ppl_no_ft": 50.60559778823199,
+    "val_ppl_ft": 5.146443768155562,
+    "passkey_exact_no_ft": 0.004,
+    "passkey_digit_no_ft": 0.46,
+    "passkey_exact_ft": 1.0,
+    "passkey_digit_ft": 1.0,
+    "delta_ppl_no_ft": 45.68729878162289,
+    "delta_ppl_ft": 0.228144761546468,
+    "delta_passkey_no_ft": 0.996,
+    "delta_passkey_ft": 0.0,
+    "wall_seconds": 18.63412880897522
+  },
+  {
+    "seed": 1,
+    "layer_zeroed": 1,
+    "heads_zeroed": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "baseline_val_ppl": 4.888101525905919,
+    "baseline_passkey_exact": 0.592,
+    "val_ppl_no_ft": 44.58096347345165,
+    "val_ppl_ft": 5.126308170468349,
+    "passkey_exact_no_ft": 0.004,
+    "passkey_digit_no_ft": 0.14,
+    "passkey_exact_ft": 0.496,
+    "passkey_digit_ft": 0.788,
+    "delta_ppl_no_ft": 39.69286194754573,
+    "delta_ppl_ft": 0.23820664456243001,
+    "delta_passkey_no_ft": 0.588,
+    "delta_passkey_ft": 0.09599999999999997,
+    "wall_seconds": 17.418220043182373
+  },
+  {
+    "seed": 2,
+    "layer_zeroed": 1,
+    "heads_zeroed": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "baseline_val_ppl": 4.938579566215701,
+    "baseline_passkey_exact": 1.0,
+    "val_ppl_no_ft": 43.569203139933244,
+    "val_ppl_ft": 5.1583235365102444,
+    "passkey_exact_no_ft": 0.0,
+    "passkey_digit_no_ft": 0.101,
+    "passkey_exact_ft": 0.0,
+    "passkey_digit_ft": 0.112,
+    "delta_ppl_no_ft": 38.63062357371754,
+    "delta_ppl_ft": 0.21974397029454362,
+    "delta_passkey_no_ft": 1.0,
+    "delta_passkey_ft": 1.0,
+    "wall_seconds": 17.482008934020996
+  },
+  {
+    "seed": 3,
+    "layer_zeroed": 1,
+    "heads_zeroed": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "baseline_val_ppl": 4.880111493441789,
+    "baseline_passkey_exact": 1.0,
+    "val_ppl_no_ft": 54.31231649035412,
+    "val_ppl_ft": 5.079203734766853,
+    "passkey_exact_no_ft": 0.0,
+    "passkey_digit_no_ft": 0.105,
+    "passkey_exact_ft": 0.272,
+    "passkey_digit_ft": 0.655,
+    "delta_ppl_no_ft": 49.43220499691233,
+    "delta_ppl_ft": 0.1990922413250642,
+    "delta_passkey_no_ft": 1.0,
+    "delta_passkey_ft": 0.728,
+    "wall_seconds": 16.208717823028564
+  },
+  {
+    "seed": 4,
+    "layer_zeroed": 1,
+    "heads_zeroed": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "baseline_val_ppl": 4.8613749141871985,
+    "baseline_passkey_exact": 1.0,
+    "val_ppl_no_ft": 48.37877984660045,
+    "val_ppl_ft": 5.089895876800964,
+    "passkey_exact_no_ft": 0.024,
+    "passkey_digit_no_ft": 0.531,
+    "passkey_exact_ft": 1.0,
+    "passkey_digit_ft": 1.0,
+    "delta_ppl_no_ft": 43.51740493241326,
+    "delta_ppl_ft": 0.2285209626137652,
+    "delta_passkey_no_ft": 0.976,
+    "delta_passkey_ft": 0.0,
+    "wall_seconds": 17.42098355293274
+  },
+  {
+    "seed": 5,
+    "layer_zeroed": 1,
+    "heads_zeroed": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "baseline_val_ppl": 4.861731528300521,
+    "baseline_passkey_exact": 1.0,
+    "val_ppl_no_ft": 38.617804246360336,
+    "val_ppl_ft": 5.164238651779412,
+    "passkey_exact_no_ft": 0.012,
+    "passkey_digit_no_ft": 0.226,
+    "passkey_exact_ft": 0.948,
+    "passkey_digit_ft": 0.986,
+    "delta_ppl_no_ft": 33.75607271805981,
+    "delta_ppl_ft": 0.3025071234788905,
+    "delta_passkey_no_ft": 0.988,
+    "delta_passkey_ft": 0.052000000000000046,
+    "wall_seconds": 17.44581413269043
+  }
+]

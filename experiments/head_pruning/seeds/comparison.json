@@ -1,0 +1,617 @@
+{
+  "convergence": {
+    "1": {
+      "seed": 1,
+      "lm_val_ppl": 4.888101525905919,
+      "passkey_exact": 0.592,
+      "passkey_digit": 0.813,
+      "converged": false
+    },
+    "2": {
+      "seed": 2,
+      "lm_val_ppl": 4.938579566215701,
+      "passkey_exact": 1.0,
+      "passkey_digit": 1.0,
+      "converged": true
+    },
+    "3": {
+      "seed": 3,
+      "lm_val_ppl": 4.880111493441789,
+      "passkey_exact": 1.0,
+      "passkey_digit": 1.0,
+      "converged": true
+    },
+    "4": {
+      "seed": 4,
+      "lm_val_ppl": 4.8613749141871985,
+      "passkey_exact": 1.0,
+      "passkey_digit": 1.0,
+      "converged": true
+    },
+    "5": {
+      "seed": 5,
+      "lm_val_ppl": 4.861731528300521,
+      "passkey_exact": 1.0,
+      "passkey_digit": 1.0,
+      "converged": true
+    }
+  },
+  "overlap": {
+    "per_seed": {
+      "0": {
+        "converged": true,
+        "top_heads": [
+          {
+            "layer": 0,
+            "head": 3,
+            "delta": 0.996
+          },
+          {
+            "layer": 2,
+            "head": 0,
+            "delta": 0.996
+          },
+          {
+            "layer": 0,
+            "head": 2,
+            "delta": 0.956
+          },
+          {
+            "layer": 0,
+            "head": 1,
+            "delta": 0.528
+          }
+        ],
+        "count_above_threshold": 4,
+        "positions": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "layers": [
+          0,
+          2
+        ],
+        "exact_position_match_with_baseline": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "n_exact_match": 4,
+        "layer_match_with_baseline": [
+          0,
+          2
+        ],
+        "n_layer_match": 2
+      },
+      "1": {
+        "converged": false,
+        "top_heads": [
+          {
+            "layer": 0,
+            "head": 2,
+            "delta": 0.588
+          },
+          {
+            "layer": 0,
+            "head": 0,
+            "delta": 0.584
+          },
+          {
+            "layer": 0,
+            "head": 3,
+            "delta": 0.576
+          },
+          {
+            "layer": 0,
+            "head": 1,
+            "delta": 0.5359999999999999
+          }
+        ],
+        "count_above_threshold": 4,
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "layers": [
+          0
+        ],
+        "exact_position_match_with_baseline": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n_exact_match": 3,
+        "layer_match_with_baseline": [
+          0
+        ],
+        "n_layer_match": 1
+      },
+      "2": {
+        "converged": true,
+        "top_heads": [
+          {
+            "layer": 0,
+            "head": 2,
+            "delta": 1.0
+          },
+          {
+            "layer": 2,
+            "head": 0,
+            "delta": 0.984
+          },
+          {
+            "layer": 0,
+            "head": 3,
+            "delta": 0.892
+          },
+          {
+            "layer": 0,
+            "head": 1,
+            "delta": 0.876
+          },
+          {
+            "layer": 1,
+            "head": 2,
+            "delta": 0.848
+          },
+          {
+            "layer": 1,
+            "head": 3,
+            "delta": 0.8
+          },
+          {
+            "layer": 0,
+            "head": 0,
+            "delta": 0.708
+          }
+        ],
+        "count_above_threshold": 7,
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "layers": [
+          0,
+          1,
+          2
+        ],
+        "exact_position_match_with_baseline": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "n_exact_match": 4,
+        "layer_match_with_baseline": [
+          0,
+          2
+        ],
+        "n_layer_match": 2
+      },
+      "3": {
+        "converged": true,
+        "top_heads": [
+          {
+            "layer": 1,
+            "head": 1,
+            "delta": 1.0
+          },
+          {
+            "layer": 2,
+            "head": 2,
+            "delta": 1.0
+          },
+          {
+            "layer": 0,
+            "head": 3,
+            "delta": 0.98
+          },
+          {
+            "layer": 0,
+            "head": 0,
+            "delta": 0.972
+          },
+          {
+            "layer": 0,
+            "head": 2,
+            "delta": 0.9319999999999999
+          },
+          {
+            "layer": 0,
+            "head": 1,
+            "delta": 0.892
+          }
+        ],
+        "count_above_threshold": 6,
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "layers": [
+          0,
+          1,
+          2
+        ],
+        "exact_position_match_with_baseline": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n_exact_match": 3,
+        "layer_match_with_baseline": [
+          0,
+          2
+        ],
+        "n_layer_match": 2
+      },
+      "4": {
+        "converged": true,
+        "top_heads": [
+          {
+            "layer": 0,
+            "head": 3,
+            "delta": 1.0
+          },
+          {
+            "layer": 0,
+            "head": 2,
+            "delta": 0.992
+          },
+          {
+            "layer": 0,
+            "head": 0,
+            "delta": 0.64
+          },
+          {
+            "layer": 2,
+            "head": 0,
+            "delta": 0.632
+          }
+        ],
+        "count_above_threshold": 4,
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "layers": [
+          0,
+          2
+        ],
+        "exact_position_match_with_baseline": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "n_exact_match": 3,
+        "layer_match_with_baseline": [
+          0,
+          2
+        ],
+        "n_layer_match": 2
+      },
+      "5": {
+        "converged": true,
+        "top_heads": [
+          {
+            "layer": 0,
+            "head": 1,
+            "delta": 0.992
+          },
+          {
+            "layer": 0,
+            "head": 2,
+            "delta": 0.992
+          },
+          {
+            "layer": 1,
+            "head": 3,
+            "delta": 0.84
+          },
+          {
+            "layer": 0,
+            "head": 0,
+            "delta": 0.832
+          },
+          {
+            "layer": 0,
+            "head": 3,
+            "delta": 0.792
+          },
+          {
+            "layer": 2,
+            "head": 3,
+            "delta": 0.648
+          },
+          {
+            "layer": 1,
+            "head": 2,
+            "delta": 0.628
+          },
+          {
+            "layer": 1,
+            "head": 0,
+            "delta": 0.524
+          }
+        ],
+        "count_above_threshold": 8,
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "layers": [
+          0,
+          1,
+          2
+        ],
+        "exact_position_match_with_baseline": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "n_exact_match": 3,
+        "layer_match_with_baseline": [
+          0,
+          2
+        ],
+        "n_layer_match": 2
+      }
+    },
+    "summary": {
+      "baseline_top_heads": [
+        {
+          "layer": 0,
+          "head": 3,
+          "delta": 0.996
+        },
+        {
+          "layer": 2,
+          "head": 0,
+          "delta": 0.996
+        },
+        {
+          "layer": 0,
+          "head": 2,
+          "delta": 0.956
+        },
+        {
+          "layer": 0,
+          "head": 1,
+          "delta": 0.528
+        }
+      ],
+      "converged_seeds": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "excluded_seeds": [
+        1
+      ],
+      "n_baseline_heads": 4,
+      "baseline_layers": [
+        0,
+        2
+      ],
+      "position_coverage_per_seed": {
+        "2": 1.0,
+        "3": 0.75,
+        "4": 0.75,
+        "5": 0.75
+      },
+      "layer_coverage_per_seed": {
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "all_seeds_cover_baseline_layers": true,
+      "all_seeds_cover_baseline_positions": false,
+      "count_consistency": false,
+      "retrieval_head_counts": {
+        "0": 4,
+        "2": 7,
+        "3": 6,
+        "4": 4,
+        "5": 8
+      }
+    }
+  },
+  "seeds_included": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "converged_seeds": [
+    0,
+    2,
+    3,
+    4,
+    5
+  ]
+}

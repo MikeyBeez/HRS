@@ -1,7 +1,19 @@
-# Results and checkpoints (large files)
-results/
+# Results and checkpoints — ignore everything except reports and log JSONs
+results/**
+!results/
+!results/**/
+!results/**/*.md
+!results/**/*.json
 *.pt
 *.pth
+
+# Local dev junk / large data
+.claude/
+runs/
+datasets/
+v19_engram_store_data/
+engram_store_data/engram_hiddens_*.pt
+experiments/identity_ae/preprocessing/ground_truth/
 
 # Logs
 *.log
