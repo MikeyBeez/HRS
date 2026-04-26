@@ -76,7 +76,8 @@ def eval_ppl(model, val_tokens, tcfg, mcfg, device, n_batches: int = 40) -> floa
 
 def train_one(variant: str, seed: int, out_dir: Path,
               tcfg: TrainConfig | None = None,
-              ctx_len: int = 256) -> dict:
+              ctx_len: int = 256,
+              save_checkpoint: bool = False) -> dict:
     tcfg = tcfg or TrainConfig(seed=seed)
     tcfg.seed = seed
     torch.manual_seed(seed)
@@ -162,6 +163,17 @@ def train_one(variant: str, seed: int, out_dir: Path,
         "vocab_size": mcfg.vocab_size,
     }
     (out_dir / f"{variant}_seed{seed}.json").write_text(json.dumps(record, indent=2))
+    if save_checkpoint:
+        ckpt_path = out_dir / f"{variant}_seed{seed}.pt"
+        torch.save({
+            "variant": variant,
+            "seed": seed,
+            "model_state_dict": model.state_dict(),
+            "model_config": vars(mcfg),
+            "final_val_ppl": final_ppl,
+            "steps": tcfg.steps,
+            "ctx_len": mcfg.ctx_len,
+        }, ckpt_path)
     print(f"  [{variant}/seed{seed}] DONE val_ppl={final_ppl:.3f} "
           f"params={record['total_params']:,} "
           f"wall={t_wall:.0f}s peak_mem={peak_mem:.0f}MB")

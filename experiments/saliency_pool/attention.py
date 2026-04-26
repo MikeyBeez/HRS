@@ -561,6 +561,144 @@ class CompressionAttention(nn.Module):
                 + self.out_proj.weight.numel())
 
 
+# ============================================================
+# V4-style hybrid: recent uncompressed window + moderately compressed
+# middle range + aggressively compressed distant past. Block-aligned
+# compression at fixed positions; per-query masks select which blocks
+# fall into each region for that query.
+# ============================================================
+class HybridCompressionAttention(nn.Module):
+    """For query at position j the K/V set is:
+      Region 1 (recent uncompressed): tokens at [j-W+1, j]            (length ≤ W)
+      Region 2 (moderate r2):         r2-blocks fully in [j-W-M+1, j-W]   (≤ M//r2 entries)
+      Region 3 (aggressive r3):       r3-blocks fully in [0, j-W-M]    (≤ (j-W-M+1)//r3 entries)
+
+    Compression is causal because every block included satisfies
+    `(b+1)·r ≤ j-W+1 ≤ j`, so all source tokens are < j.
+    """
+
+    def __init__(self, cfg: ModelConfig, W: int = 128, M: int = 384,
+                 r2: int = 4, r3: int = 16):
+        super().__init__()
+        assert cfg.d_model % cfg.n_heads == 0
+        self.cfg = cfg
+        self.W = W
+        self.M = M
+        self.r2 = r2
+        self.r3 = r3
+        self.n_heads = cfg.n_heads
+        self.head_dim = cfg.d_model // cfg.n_heads
+        d, H, dh = cfg.d_model, cfg.n_heads, self.head_dim
+
+        # Each compression rate has its own saliency vector (per spec).
+        self.compress_r2 = CompressBlock(cfg, r2)
+        self.compress_r3 = CompressBlock(cfg, r3)
+        self.qkv = nn.Linear(d, 3 * d, bias=False)
+        self.out_proj = nn.Linear(d, d, bias=False)
+        self.log_tau = nn.Parameter(torch.full((H,), math.log(float(dh))))
+        self.head_alphas = nn.Parameter(torch.ones(H))
+        self.head_output_scalars = nn.Parameter(torch.zeros(H))
+        self.attn_dropout = nn.Dropout(cfg.dropout)
+        self.resid_dropout = nn.Dropout(cfg.dropout)
+
+        self._mask_cache: dict[tuple, torch.Tensor] = {}
+
+    def _build_mask(self, T: int, device: torch.device) -> torch.Tensor:
+        W, M, r2, r3 = self.W, self.M, self.r2, self.r3
+        m_r3 = T // r3
+        m_r2 = T // r2
+        K_total = m_r3 + m_r2 + T
+        j = torch.arange(T, device=device).unsqueeze(1)             # (T, 1)
+        p = torch.arange(K_total, device=device).unsqueeze(0)       # (1, K_total)
+
+        # r3 segment: positions [0, m_r3). Block index within segment = p.
+        in_r3 = p < m_r3
+        b_r3 = p                                                     # block index = position
+        r3_end = (b_r3 + 1) * r3                                     # last token + 1
+        # Region 3: block end ≤ j - W - M + 1  (block fully ≤ position j-W-M)
+        r3_valid = in_r3 & (r3_end <= j - W - M + 1)
+
+        # r2 segment: positions [m_r3, m_r3 + m_r2). Block index = p - m_r3.
+        in_r2 = (p >= m_r3) & (p < m_r3 + m_r2)
+        b_r2 = p - m_r3
+        r2_start = b_r2 * r2
+        r2_end = (b_r2 + 1) * r2
+        # Region 2: block start ≥ j - W - M + 1 AND block end ≤ j - W + 1
+        r2_valid = in_r2 & (r2_start >= j - W - M + 1) & (r2_end <= j - W + 1)
+
+        # Uncompressed segment: positions [m_r3 + m_r2, m_r3 + m_r2 + T).
+        in_u = p >= (m_r3 + m_r2)
+        u_pos = p - (m_r3 + m_r2)                                    # original token position
+        # Region 1: u_pos in [max(0, j-W+1), j]
+        u_valid = in_u & (u_pos >= j - W + 1) & (u_pos <= j)
+
+        return r3_valid | r2_valid | u_valid
+
+    def _get_mask(self, T: int, device: torch.device) -> torch.Tensor:
+        key = (T, device)
+        if key not in self._mask_cache:
+            self._mask_cache[key] = self._build_mask(T, device)
+        return self._mask_cache[key]
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        B, T, D = x.shape
+        H, dh, r2, r3 = self.n_heads, self.head_dim, self.r2, self.r3
+        assert T % r3 == 0 and T % r2 == 0, f"T={T} must be divisible by r2={r2} and r3={r3}"
+        m_r2 = T // r2
+        m_r3 = T // r3
+
+        comp_r2 = self.compress_r2(x)                                # (B, m_r2, D)
+        comp_r3 = self.compress_r3(x)                                # (B, m_r3, D)
+
+        qkv_x = self.qkv(x).reshape(B, T, 3, H, dh)
+        q_x, k_x, v_x = qkv_x.unbind(dim=2)
+        qkv_r2 = self.qkv(comp_r2).reshape(B, m_r2, 3, H, dh)
+        _, k_r2, v_r2 = qkv_r2.unbind(dim=2)
+        qkv_r3 = self.qkv(comp_r3).reshape(B, m_r3, 3, H, dh)
+        _, k_r3, v_r3 = qkv_r3.unbind(dim=2)
+
+        # Concat order matches the mask: [r3, r2, uncompressed].
+        K = torch.cat([k_r3, k_r2, k_x], dim=1).transpose(1, 2)      # (B, H, K_total, dh)
+        V = torch.cat([v_r3, v_r2, v_x], dim=1).transpose(1, 2)
+        Q = q_x.transpose(1, 2)                                      # (B, H, T, dh)
+
+        q_sq = (Q ** 2).sum(dim=-1, keepdim=True)
+        k_sq = (K ** 2).sum(dim=-1, keepdim=True)
+        dot = Q @ K.transpose(-2, -1)
+        distances = q_sq + k_sq.transpose(-2, -1) - 2 * dot
+        taus = self.log_tau.exp().view(1, H, 1, 1)
+        scores = -distances / taus
+        alphas = torch.sigmoid(self.head_alphas).view(1, H, 1, 1)
+        scores = scores * alphas
+
+        mask = self._get_mask(T, x.device)                           # (T, K_total)
+        scores = scores.masked_fill(~mask.view(1, 1, T, -1), float("-inf"))
+        attn = F.softmax(scores, dim=-1)
+        attn = self.attn_dropout(attn)
+        out = attn @ V                                               # (B, H, T, dh)
+
+        head_scales = F.softplus(self.head_output_scalars).view(1, H, 1, 1)
+        out = out * head_scales
+        out = out.transpose(1, 2).reshape(B, T, D)
+        return self.resid_dropout(self.out_proj(out))
+
+    def diagnostics(self) -> dict:
+        return {
+            "variant": "compress_hybrid",
+            "W": self.W, "M": self.M, "r2": self.r2, "r3": self.r3,
+            "W_s_r2_norm": float(self.compress_r2.W_s.weight.detach().norm().item()),
+            "W_s_r3_norm": float(self.compress_r3.W_s.weight.detach().norm().item()),
+            "head_alphas_sigmoid": torch.sigmoid(self.head_alphas.detach()).tolist(),
+            "taus": self.log_tau.exp().detach().tolist(),
+        }
+
+    def output_path_params(self) -> int:
+        return (self.compress_r2.W_s.weight.numel()
+                + self.compress_r3.W_s.weight.numel()
+                + self.qkv.weight.numel()
+                + self.out_proj.weight.numel())
+
+
 def build_attention(cfg: ModelConfig) -> nn.Module:
     if cfg.variant == "baseline":
         return BonsignoreAttention(cfg)
@@ -572,6 +710,8 @@ def build_attention(cfg: ModelConfig) -> nn.Module:
         return DualProjectionAttention(cfg)
     if cfg.variant == "dual_projection_with_cumulative":
         return DualProjectionCumulativeAttention(cfg)
+    if cfg.variant == "compress_hybrid":
+        return HybridCompressionAttention(cfg)
     if cfg.variant.startswith("compress_"):
         k = int(cfg.variant.split("_", 1)[1])
         return CompressionAttention(cfg, k)

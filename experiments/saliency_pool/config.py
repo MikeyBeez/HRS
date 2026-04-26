@@ -30,6 +30,7 @@ VARIANTS: List[str] = [
     "compress_4",                       # block-saliency compression k=4, then full Bonsignore attn over T/4 entries
     "compress_8",                       # block-saliency compression k=8
     "compress_16",                      # block-saliency compression k=16
+    "compress_hybrid",                  # V4-style: recent W uncompressed + r2-compressed mid + r3-compressed far
 ]
 
 
