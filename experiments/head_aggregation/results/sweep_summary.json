@@ -1,0 +1,186 @@
+{
+  "total_runs": 30,
+  "elapsed_s": 4400.129807472229,
+  "runs": [
+    {
+      "variant": "baseline",
+      "seed": 0,
+      "final_val_ppl": 4.745543799276429,
+      "wall_seconds": 134.23297953605652
+    },
+    {
+      "variant": "baseline",
+      "seed": 1,
+      "final_val_ppl": 4.770365166006828,
+      "wall_seconds": 134.02152633666992
+    },
+    {
+      "variant": "baseline",
+      "seed": 2,
+      "final_val_ppl": 4.79983934169356,
+      "wall_seconds": 134.04668807983398
+    },
+    {
+      "variant": "baseline",
+      "seed": 3,
+      "final_val_ppl": 4.75218105965648,
+      "wall_seconds": 134.07686734199524
+    },
+    {
+      "variant": "A",
+      "seed": 0,
+      "final_val_ppl": 6.4157797974444675,
+      "wall_seconds": 145.46578669548035
+    },
+    {
+      "variant": "A",
+      "seed": 1,
+      "final_val_ppl": 6.55720415101658,
+      "wall_seconds": 145.4772346019745
+    },
+    {
+      "variant": "A",
+      "seed": 2,
+      "final_val_ppl": 6.352277254433724,
+      "wall_seconds": 145.46288061141968
+    },
+    {
+      "variant": "A",
+      "seed": 3,
+      "final_val_ppl": 6.4314527885529325,
+      "wall_seconds": 145.48909044265747
+    },
+    {
+      "variant": "B",
+      "seed": 0,
+      "final_val_ppl": 5.593673065468726,
+      "wall_seconds": 145.12124800682068
+    },
+    {
+      "variant": "B",
+      "seed": 1,
+      "final_val_ppl": 5.6798827977349395,
+      "wall_seconds": 145.17959141731262
+    },
+    {
+      "variant": "B",
+      "seed": 2,
+      "final_val_ppl": 5.603070411719901,
+      "wall_seconds": 145.16139936447144
+    },
+    {
+      "variant": "B",
+      "seed": 3,
+      "final_val_ppl": 5.716636217190952,
+      "wall_seconds": 145.11647176742554
+    },
+    {
+      "variant": "C",
+      "seed": 0,
+      "final_val_ppl": 5.894184010467937,
+      "wall_seconds": 145.78175163269043
+    },
+    {
+      "variant": "C",
+      "seed": 1,
+      "final_val_ppl": 5.800518694197947,
+      "wall_seconds": 145.850492477417
+    },
+    {
+      "variant": "C",
+      "seed": 2,
+      "final_val_ppl": 5.85459602747524,
+      "wall_seconds": 145.7359380722046
+    },
+    {
+      "variant": "C",
+      "seed": 3,
+      "final_val_ppl": 5.858401157761776,
+      "wall_seconds": 145.78251457214355
+    },
+    {
+      "variant": "D",
+      "seed": 0,
+      "final_val_ppl": 6.825391230742786,
+      "wall_seconds": 147.31440472602844
+    },
+    {
+      "variant": "D",
+      "seed": 1,
+      "final_val_ppl": 6.544658464882444,
+      "wall_seconds": 147.29732656478882
+    },
+    {
+      "variant": "D",
+      "seed": 2,
+      "final_val_ppl": 6.352249046916772,
+      "wall_seconds": 147.31540632247925
+    },
+    {
+      "variant": "D",
+      "seed": 3,
+      "final_val_ppl": 6.433964079503289,
+      "wall_seconds": 147.31082320213318
+    },
+    {
+      "variant": "D",
+      "seed": 4,
+      "final_val_ppl": 6.610826687034078,
+      "wall_seconds": 147.31096148490906
+    },
+    {
+      "variant": "D",
+      "seed": 5,
+      "final_val_ppl": 6.608733140975192,
+      "wall_seconds": 147.30882620811462
+    },
+    {
+      "variant": "E",
+      "seed": 0,
+      "final_val_ppl": 5.172002198087859,
+      "wall_seconds": 146.4187171459198
+    },
+    {
+      "variant": "E",
+      "seed": 1,
+      "final_val_ppl": 5.1430384455185125,
+      "wall_seconds": 146.39649391174316
+    },
+    {
+      "variant": "E",
+      "seed": 2,
+      "final_val_ppl": 5.238507371255737,
+      "wall_seconds": 146.37725949287415
+    },
+    {
+      "variant": "E",
+      "seed": 3,
+      "final_val_ppl": 5.22177504589357,
+      "wall_seconds": 146.379168510437
+    },
+    {
+      "variant": "F",
+      "seed": 0,
+      "final_val_ppl": 6.741996336983784,
+      "wall_seconds": 146.87371730804443
+    },
+    {
+      "variant": "F",
+      "seed": 1,
+      "final_val_ppl": 6.542703323090307,
+      "wall_seconds": 146.82972311973572
+    },
+    {
+      "variant": "F",
+      "seed": 2,
+      "final_val_ppl": 6.5118298111677815,
+      "wall_seconds": 146.8461093902588
+    },
+    {
+      "variant": "F",
+      "seed": 3,
+      "final_val_ppl": 6.706176034120219,
+      "wall_seconds": 146.82716131210327
+    }
+  ]
+}

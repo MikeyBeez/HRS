@@ -1,0 +1,467 @@
+{
+  "task": "saliency_pool_shakespeare",
+  "variant": "B",
+  "seed": 1,
+  "final_val_ppl": 4.760733079455699,
+  "long_ctx_val_ppl": null,
+  "long_ctx_len": null,
+  "total_params": 10766214,
+  "output_path_params_per_layer": [
+    590593,
+    590593,
+    590593,
+    590593,
+    590593,
+    590593
+  ],
+  "step_time_ms_median": 371.0308074951172,
+  "step_time_ms_mean": 370.5959414243698,
+  "wall_seconds": 789.9055080413818,
+  "peak_mem_mb": 10306.3935546875,
+  "eval_points": [
+    {
+      "step": 1,
+      "val_ppl": 67.07670615559594,
+      "train_loss": 4.237431526184082,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.557147026062012,
+          "sal_mlp_frob": 10.86405161763531
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.556301116943359,
+          "sal_mlp_frob": 10.855837366643806
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.558188438415527,
+          "sal_mlp_frob": 10.877586780145373
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.55873966217041,
+          "sal_mlp_frob": 10.88637830974926
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.557543754577637,
+          "sal_mlp_frob": 10.876328384004212
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.558403968811035,
+          "sal_mlp_frob": 10.883134569187376
+        }
+      ]
+    },
+    {
+      "step": 200,
+      "val_ppl": 9.86234093903546,
+      "train_loss": 2.2363734245300293,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.4691162109375,
+          "sal_mlp_frob": 10.960366114889995
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.7938153743743896,
+          "sal_mlp_frob": 11.362759608288387
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.994393825531006,
+          "sal_mlp_frob": 11.337325688409049
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.942337989807129,
+          "sal_mlp_frob": 11.103914439838995
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.286932945251465,
+          "sal_mlp_frob": 11.0539117743037
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.449535369873047,
+          "sal_mlp_frob": 11.004272507813358
+        }
+      ]
+    },
+    {
+      "step": 400,
+      "val_ppl": 7.052483166970951,
+      "train_loss": 1.8197659254074097,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.2084197998046875,
+          "sal_mlp_frob": 11.099312843563064
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.122755527496338,
+          "sal_mlp_frob": 12.095563519698656
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 1.6530542373657227,
+          "sal_mlp_frob": 12.299101808825327
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.2709383964538574,
+          "sal_mlp_frob": 11.4884926707222
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.6955885887145996,
+          "sal_mlp_frob": 11.515388597647357
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.3039445877075195,
+          "sal_mlp_frob": 11.24200564047452
+        }
+      ]
+    },
+    {
+      "step": 600,
+      "val_ppl": 6.136769147808797,
+      "train_loss": 1.633031964302063,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.9478111267089844,
+          "sal_mlp_frob": 11.217196625431372
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.029966354370117,
+          "sal_mlp_frob": 12.335130974608811
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 1.350867748260498,
+          "sal_mlp_frob": 12.812582791829355
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.0724222660064697,
+          "sal_mlp_frob": 11.788195765923575
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.1649739742279053,
+          "sal_mlp_frob": 12.070652723791587
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.135614395141602,
+          "sal_mlp_frob": 11.527738508741466
+        }
+      ]
+    },
+    {
+      "step": 800,
+      "val_ppl": 5.529020546801455,
+      "train_loss": 1.5268042087554932,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.829036235809326,
+          "sal_mlp_frob": 11.286638358856539
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.0677311420440674,
+          "sal_mlp_frob": 12.465694930786913
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 1.2502532005310059,
+          "sal_mlp_frob": 13.10195546857414
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.036435604095459,
+          "sal_mlp_frob": 12.035240034266367
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.8206751346588135,
+          "sal_mlp_frob": 12.556373830196586
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 4.050104141235352,
+          "sal_mlp_frob": 11.817077408097285
+        }
+      ]
+    },
+    {
+      "step": 1000,
+      "val_ppl": 5.253423329162954,
+      "train_loss": 1.359553575515747,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.7692642211914062,
+          "sal_mlp_frob": 11.327992410321173
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.0855484008789062,
+          "sal_mlp_frob": 12.551229472378196
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 1.2520527839660645,
+          "sal_mlp_frob": 13.286987822339308
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.014165163040161,
+          "sal_mlp_frob": 12.224918708728339
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.6488428115844727,
+          "sal_mlp_frob": 12.915036203605602
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.9508719444274902,
+          "sal_mlp_frob": 12.039480544422434
+        }
+      ]
+    },
+    {
+      "step": 1200,
+      "val_ppl": 5.036689967255237,
+      "train_loss": 1.3319332599639893,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.7341384887695312,
+          "sal_mlp_frob": 11.355961646942234
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.0878350734710693,
+          "sal_mlp_frob": 12.61475229688338
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 1.2554478645324707,
+          "sal_mlp_frob": 13.399644298074863
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.994253635406494,
+          "sal_mlp_frob": 12.348530248260813
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.4732649326324463,
+          "sal_mlp_frob": 13.139434854873057
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.8595123291015625,
+          "sal_mlp_frob": 12.220603999346196
+        }
+      ]
+    },
+    {
+      "step": 1400,
+      "val_ppl": 4.926467622108554,
+      "train_loss": 1.3446241617202759,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.7109580039978027,
+          "sal_mlp_frob": 11.371143721546414
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.0883920192718506,
+          "sal_mlp_frob": 12.648786716534303
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 1.23311448097229,
+          "sal_mlp_frob": 13.474774052504548
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.895756244659424,
+          "sal_mlp_frob": 12.427467317336138
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.4867238998413086,
+          "sal_mlp_frob": 13.26947694661622
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.774895668029785,
+          "sal_mlp_frob": 12.33697911007386
+        }
+      ]
+    },
+    {
+      "step": 1600,
+      "val_ppl": 4.794274997768906,
+      "train_loss": 1.2450637817382812,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.6958303451538086,
+          "sal_mlp_frob": 11.38022002417496
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.08237886428833,
+          "sal_mlp_frob": 12.676699615604937
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 1.2524919509887695,
+          "sal_mlp_frob": 13.517076898861301
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.885329008102417,
+          "sal_mlp_frob": 12.472937982587348
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.390810966491699,
+          "sal_mlp_frob": 13.347962107493593
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.791229724884033,
+          "sal_mlp_frob": 12.41906258177914
+        }
+      ]
+    },
+    {
+      "step": 1800,
+      "val_ppl": 4.7641168569182035,
+      "train_loss": 1.203423023223877,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.6917405128479004,
+          "sal_mlp_frob": 11.381861416876959
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.1081900596618652,
+          "sal_mlp_frob": 12.687951445864632
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 1.2719485759735107,
+          "sal_mlp_frob": 13.542575895814894
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.93251895904541,
+          "sal_mlp_frob": 12.500898723328385
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.420598030090332,
+          "sal_mlp_frob": 13.389302468464347
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.7553014755249023,
+          "sal_mlp_frob": 12.472022494143589
+        }
+      ]
+    },
+    {
+      "step": 2000,
+      "val_ppl": 4.737387642728382,
+      "train_loss": 1.2431867122650146,
+      "diagnostics": [
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.6846203804016113,
+          "sal_mlp_frob": 11.384168374384426
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.1010472774505615,
+          "sal_mlp_frob": 12.69891005637606
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 1.2775460481643677,
+          "sal_mlp_frob": 13.557160970636108
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.908297538757324,
+          "sal_mlp_frob": 12.519138635662262
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 2.4268405437469482,
+          "sal_mlp_frob": 13.41907610265192
+        },
+        {
+          "variant": "B",
+          "last_attn_entropy_mean": 3.721391201019287,
+          "sal_mlp_frob": 12.503553676020145
+        }
+      ]
+    }
+  ],
+  "final_diagnostics": [
+    {
+      "variant": "B",
+      "last_attn_entropy_mean": 3.6819570064544678,
+      "sal_mlp_frob": 11.384168374384426
+    },
+    {
+      "variant": "B",
+      "last_attn_entropy_mean": 2.090862274169922,
+      "sal_mlp_frob": 12.69891005637606
+    },
+    {
+      "variant": "B",
+      "last_attn_entropy_mean": 1.2914128303527832,
+      "sal_mlp_frob": 13.557160970636108
+    },
+    {
+      "variant": "B",
+      "last_attn_entropy_mean": 2.914490222930908,
+      "sal_mlp_frob": 12.519138635662262
+    },
+    {
+      "variant": "B",
+      "last_attn_entropy_mean": 2.404928207397461,
+      "sal_mlp_frob": 13.41907610265192
+    },
+    {
+      "variant": "B",
+      "last_attn_entropy_mean": 3.6957762241363525,
+      "sal_mlp_frob": 12.503553676020145
+    }
+  ],
+  "train_loss_last_100_mean": 1.218452925682068,
+  "steps": 2000,
+  "batch_size": 32,
+  "ctx_len": 256,
+  "vocab_size": 65
+}

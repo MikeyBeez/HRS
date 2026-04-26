@@ -1,0 +1,395 @@
+{
+  "task": "saliency_pool_shakespeare",
+  "variant": "cumulative_mean",
+  "seed": 0,
+  "final_val_ppl": 13.225986081423844,
+  "long_ctx_val_ppl": null,
+  "long_ctx_len": null,
+  "total_params": 7222656,
+  "output_path_params_per_layer": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "step_time_ms_median": 19.121408462524414,
+  "step_time_ms_mean": 19.356938362121582,
+  "wall_seconds": 42.40619373321533,
+  "peak_mem_mb": 985.546875,
+  "eval_points": [
+    {
+      "step": 1,
+      "val_ppl": 52.88207934801676,
+      "train_loss": 3.9702515602111816,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    },
+    {
+      "step": 200,
+      "val_ppl": 25.524593878604307,
+      "train_loss": 3.2124595642089844,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    },
+    {
+      "step": 400,
+      "val_ppl": 21.151029400887428,
+      "train_loss": 3.0393781661987305,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    },
+    {
+      "step": 600,
+      "val_ppl": 19.087234140983096,
+      "train_loss": 2.892134428024292,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    },
+    {
+      "step": 800,
+      "val_ppl": 16.60102048625499,
+      "train_loss": 2.829075336456299,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    },
+    {
+      "step": 1000,
+      "val_ppl": 15.270360499223669,
+      "train_loss": 2.700011730194092,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    },
+    {
+      "step": 1200,
+      "val_ppl": 14.47639646545362,
+      "train_loss": 2.6613106727600098,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    },
+    {
+      "step": 1400,
+      "val_ppl": 13.96899457554194,
+      "train_loss": 2.580047130584717,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    },
+    {
+      "step": 1600,
+      "val_ppl": 13.526521440934848,
+      "train_loss": 2.6201393604278564,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    },
+    {
+      "step": 1800,
+      "val_ppl": 13.318882487951955,
+      "train_loss": 2.563110589981079,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    },
+    {
+      "step": 2000,
+      "val_ppl": 13.22221757229745,
+      "train_loss": 2.60298228263855,
+      "diagnostics": [
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        },
+        {
+          "variant": "cumulative_mean",
+          "n_params": 0
+        }
+      ]
+    }
+  ],
+  "final_diagnostics": [
+    {
+      "variant": "cumulative_mean",
+      "n_params": 0
+    },
+    {
+      "variant": "cumulative_mean",
+      "n_params": 0
+    },
+    {
+      "variant": "cumulative_mean",
+      "n_params": 0
+    },
+    {
+      "variant": "cumulative_mean",
+      "n_params": 0
+    },
+    {
+      "variant": "cumulative_mean",
+      "n_params": 0
+    },
+    {
+      "variant": "cumulative_mean",
+      "n_params": 0
+    }
+  ],
+  "train_loss_last_100_mean": 2.5675797057151795,
+  "steps": 2000,
+  "batch_size": 32,
+  "ctx_len": 256,
+  "vocab_size": 65
+}

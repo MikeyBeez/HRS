@@ -1,0 +1,30 @@
+{
+  "total_runs": 4,
+  "elapsed_s": 1959.0455491542816,
+  "runs": [
+    {
+      "variant": "sdpa",
+      "seed": 0,
+      "final_val_ppl": 96.26070296262532,
+      "wall_seconds": 484.1418390274048
+    },
+    {
+      "variant": "sdpa",
+      "seed": 1,
+      "final_val_ppl": 94.75574211611347,
+      "wall_seconds": 485.34058475494385
+    },
+    {
+      "variant": "sdpa",
+      "seed": 2,
+      "final_val_ppl": 95.57437120794803,
+      "wall_seconds": 485.3183376789093
+    },
+    {
+      "variant": "sdpa",
+      "seed": 3,
+      "final_val_ppl": 96.43948956411901,
+      "wall_seconds": 485.2117111682892
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "total_runs": 4,
+  "elapsed_s": 173.65417528152466,
+  "runs": [
+    {
+      "variant": "cumulative_mean",
+      "seed": 0,
+      "final_val_ppl": 13.225986081423844,
+      "wall_seconds": 42.40619373321533
+    },
+    {
+      "variant": "cumulative_mean",
+      "seed": 1,
+      "final_val_ppl": 13.157778624182432,
+      "wall_seconds": 42.31221389770508
+    },
+    {
+      "variant": "cumulative_mean",
+      "seed": 2,
+      "final_val_ppl": 13.1846525495933,
+      "wall_seconds": 42.48198318481445
+    },
+    {
+      "variant": "cumulative_mean",
+      "seed": 3,
+      "final_val_ppl": 13.037139512791136,
+      "wall_seconds": 42.56262683868408
+    }
+  ]
+}

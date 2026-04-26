@@ -1,0 +1,696 @@
+{
+  "task": "saliency_pool_wikitext103",
+  "variant": "sdpa",
+  "seed": 3,
+  "final_val_ppl": 96.43948956411901,
+  "total_params": 30035328,
+  "output_path_params_per_layer": [
+    589824,
+    589824,
+    589824,
+    589824,
+    589824,
+    589824
+  ],
+  "step_time_ms_median": 89.54966068267822,
+  "step_time_ms_mean": 89.86382098197937,
+  "wall_seconds": 485.2117111682892,
+  "peak_mem_mb": 8109.736328125,
+  "eval_points": [
+    {
+      "step": 1,
+      "val_ppl": 52418.15880092267,
+      "train_loss": 10.883743286132812,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 200,
+      "val_ppl": 604.5149757795286,
+      "train_loss": 6.488676071166992,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 400,
+      "val_ppl": 396.66782681751556,
+      "train_loss": 5.949694633483887,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 600,
+      "val_ppl": 312.84542806579833,
+      "train_loss": 5.829534530639648,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 800,
+      "val_ppl": 261.03691876989785,
+      "train_loss": 5.602593421936035,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 1000,
+      "val_ppl": 225.7348092581683,
+      "train_loss": 5.4257402420043945,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 1200,
+      "val_ppl": 202.6251846935336,
+      "train_loss": 5.326211452484131,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 1400,
+      "val_ppl": 180.9815206799281,
+      "train_loss": 5.2537336349487305,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 1600,
+      "val_ppl": 165.62647781260173,
+      "train_loss": 5.219703674316406,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 1800,
+      "val_ppl": 153.29304592277404,
+      "train_loss": 5.120235443115234,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 2000,
+      "val_ppl": 145.4979002082785,
+      "train_loss": 5.028347492218018,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 2200,
+      "val_ppl": 135.9767990951802,
+      "train_loss": 5.084228992462158,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 2400,
+      "val_ppl": 129.6355041789942,
+      "train_loss": 4.990856647491455,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 2600,
+      "val_ppl": 123.988040447945,
+      "train_loss": 4.854235649108887,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 2800,
+      "val_ppl": 119.14818357220699,
+      "train_loss": 4.648972511291504,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 3000,
+      "val_ppl": 114.91674466267122,
+      "train_loss": 4.736399173736572,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 3200,
+      "val_ppl": 111.2263517999721,
+      "train_loss": 4.646398067474365,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 3400,
+      "val_ppl": 108.19889638708835,
+      "train_loss": 4.843596458435059,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 3600,
+      "val_ppl": 105.39337472086808,
+      "train_loss": 4.753750324249268,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 3800,
+      "val_ppl": 103.1686541402968,
+      "train_loss": 4.719324111938477,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 4000,
+      "val_ppl": 101.2646803547087,
+      "train_loss": 4.597846031188965,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 4200,
+      "val_ppl": 99.59595079297927,
+      "train_loss": 4.660379409790039,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 4400,
+      "val_ppl": 98.2236832347423,
+      "train_loss": 4.605630397796631,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 4600,
+      "val_ppl": 97.27006367437033,
+      "train_loss": 4.647098064422607,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 4800,
+      "val_ppl": 96.2786248300185,
+      "train_loss": 4.521124362945557,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    },
+    {
+      "step": 5000,
+      "val_ppl": 95.57202135780217,
+      "train_loss": 4.732675552368164,
+      "diagnostics": [
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        },
+        {
+          "variant": "sdpa"
+        }
+      ]
+    }
+  ],
+  "final_diagnostics": [
+    {
+      "variant": "sdpa"
+    },
+    {
+      "variant": "sdpa"
+    },
+    {
+      "variant": "sdpa"
+    },
+    {
+      "variant": "sdpa"
+    },
+    {
+      "variant": "sdpa"
+    },
+    {
+      "variant": "sdpa"
+    }
+  ],
+  "train_loss_last_100_mean": 4.598602819442749,
+  "steps": 5000,
+  "batch_size": 32,
+  "ctx_len": 256,
+  "vocab_size": 50257
+}
