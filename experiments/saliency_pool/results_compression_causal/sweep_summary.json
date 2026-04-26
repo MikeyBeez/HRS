@@ -1,0 +1,90 @@
+{
+  "total_runs": 12,
+  "elapsed_s": 1599.1769497394562,
+  "runs": [
+    {
+      "variant": "compress_4",
+      "seed": 0,
+      "final_val_ppl": 4.842612962203237,
+      "wall_seconds": 138.82886910438538,
+      "step_time_ms_median": 63.6143684387207
+    },
+    {
+      "variant": "compress_4",
+      "seed": 1,
+      "final_val_ppl": 4.8480418056957335,
+      "wall_seconds": 138.60610103607178,
+      "step_time_ms_median": 63.7286901473999
+    },
+    {
+      "variant": "compress_4",
+      "seed": 2,
+      "final_val_ppl": 4.79821897153461,
+      "wall_seconds": 138.64993286132812,
+      "step_time_ms_median": 63.75694274902344
+    },
+    {
+      "variant": "compress_4",
+      "seed": 3,
+      "final_val_ppl": 4.849520300713095,
+      "wall_seconds": 138.6893515586853,
+      "step_time_ms_median": 63.7664794921875
+    },
+    {
+      "variant": "compress_8",
+      "seed": 0,
+      "final_val_ppl": 4.75632276938613,
+      "wall_seconds": 129.52250361442566,
+      "step_time_ms_median": 59.54015254974365
+    },
+    {
+      "variant": "compress_8",
+      "seed": 1,
+      "final_val_ppl": 4.7742463014840375,
+      "wall_seconds": 129.52604699134827,
+      "step_time_ms_median": 59.54337120056152
+    },
+    {
+      "variant": "compress_8",
+      "seed": 2,
+      "final_val_ppl": 4.729758048179096,
+      "wall_seconds": 129.54270267486572,
+      "step_time_ms_median": 59.54551696777344
+    },
+    {
+      "variant": "compress_8",
+      "seed": 3,
+      "final_val_ppl": 4.8262915804728515,
+      "wall_seconds": 129.55080032348633,
+      "step_time_ms_median": 59.54623222351074
+    },
+    {
+      "variant": "compress_16",
+      "seed": 0,
+      "final_val_ppl": 4.797802979586919,
+      "wall_seconds": 125.53349614143372,
+      "step_time_ms_median": 57.68132209777832
+    },
+    {
+      "variant": "compress_16",
+      "seed": 1,
+      "final_val_ppl": 4.778769576283311,
+      "wall_seconds": 125.59804916381836,
+      "step_time_ms_median": 57.68990516662598
+    },
+    {
+      "variant": "compress_16",
+      "seed": 2,
+      "final_val_ppl": 4.748883627688594,
+      "wall_seconds": 125.53628373146057,
+      "step_time_ms_median": 57.67965316772461
+    },
+    {
+      "variant": "compress_16",
+      "seed": 3,
+      "final_val_ppl": 4.858801790298073,
+      "wall_seconds": 125.5695788860321,
+      "step_time_ms_median": 57.685017585754395
+    }
+  ]
+}

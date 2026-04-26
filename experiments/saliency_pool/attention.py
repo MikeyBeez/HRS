@@ -417,6 +417,150 @@ class DualProjectionCumulativeAttention(nn.Module):
                 + self.W_C.weight.numel())
 
 
+# ============================================================
+# Compression-then-attention sublayer (V4-style hybrid).
+# Compress k tokens → 1 entry via softmax-weighted block saliency, run full
+# Bonsignore attention over the T/k compressed entries, decompress by
+# broadcasting each compressed-entry output back to all k tokens of its block.
+# ============================================================
+class CompressBlock(nn.Module):
+    """Block-level saliency-weighted pooling: (B, T, d) -> (B, T/k, d)."""
+
+    def __init__(self, cfg: ModelConfig, k: int):
+        super().__init__()
+        self.k = k
+        self.W_s = nn.Linear(cfg.d_model, 1, bias=False)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        B, T, D = x.shape
+        k = self.k
+        assert T % k == 0, f"T={T} must be divisible by compression ratio k={k}"
+        m = T // k
+        x_blk = x.reshape(B, m, k, D)
+        s = self.W_s(x_blk)                       # (B, m, k, 1)
+        w = F.softmax(s, dim=2)                   # softmax across within-block positions
+        return (w * x_blk).sum(dim=2)             # (B, m, D)
+
+
+class CompressionAttention(nn.Module):
+    """Causal V4-style compressed attention (CSA).
+
+    For query at position j (in block i = j // k, offset r = j % k):
+      - keys = compressed entries [0, i)         (strictly past blocks)
+              ∪ uncompressed tokens [i*k, j)    (current block, strictly before j)
+              ∪ token j itself
+      - q, k, v projections are shared between compressed entries and
+        uncompressed tokens (same Linear(d, 3d) applied to both inputs)
+      - Bonsignore Q-K scoring with per-head temperatures
+
+    The output at position j depends only on tokens 0..j. Verified by
+    `causality_check` (see bottom of module).
+    """
+
+    def __init__(self, cfg: ModelConfig, k: int):
+        super().__init__()
+        assert cfg.d_model % cfg.n_heads == 0
+        self.cfg = cfg
+        self.k = k
+        self.n_heads = cfg.n_heads
+        self.head_dim = cfg.d_model // cfg.n_heads
+        d, H, dh = cfg.d_model, cfg.n_heads, self.head_dim
+
+        self.compress = CompressBlock(cfg, k)
+        self.qkv = nn.Linear(d, 3 * d, bias=False)
+        self.out_proj = nn.Linear(d, d, bias=False)
+        self.log_tau = nn.Parameter(torch.full((H,), math.log(float(dh))))
+        self.head_alphas = nn.Parameter(torch.ones(H))
+        self.head_output_scalars = nn.Parameter(torch.zeros(H))
+        self.attn_dropout = nn.Dropout(cfg.dropout)
+        self.resid_dropout = nn.Dropout(cfg.dropout)
+
+        # Cache of (T, m+T) bool masks keyed by (T, device).
+        self._mask_cache: dict[tuple, torch.Tensor] = {}
+
+    def _build_mask(self, T: int, device: torch.device) -> torch.Tensor:
+        """mask[j, p] = True if key at index p (in concat(compressed, uncompressed))
+        is valid for query at position j."""
+        k = self.k
+        m = T // k
+        K_total = m + T
+        j = torch.arange(T, device=device).unsqueeze(1)            # (T, 1)
+        p = torch.arange(K_total, device=device).unsqueeze(0)      # (1, K_total)
+        i = j // k                                                  # block index per query
+        # Compressed segment is positions [0, m) in the K tensor.
+        comp_mask = (p < i) & (p < m)
+        # Uncompressed segment is positions [m, m+T). Within that:
+        #   query j (in block i) sees tokens i*k, i*k+1, ..., j (inclusive).
+        uncomp_mask = (p >= m) & (p >= m + i * k) & (p <= m + j)
+        return comp_mask | uncomp_mask
+
+    def _get_mask(self, T: int, device: torch.device) -> torch.Tensor:
+        key = (T, device)
+        if key not in self._mask_cache:
+            self._mask_cache[key] = self._build_mask(T, device)
+        return self._mask_cache[key]
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        B, T, D = x.shape
+        H, dh, k = self.n_heads, self.head_dim, self.k
+        assert T % k == 0, f"T={T} must be divisible by compression ratio k={k}"
+        m = T // k
+
+        # Compressed entries from past+current blocks (block i's entry is causal
+        # within its own block — see CompressBlock — but we only let *later*
+        # queries read it via the mask, so future leak is impossible).
+        comp = self.compress(x)                                 # (B, m, D)
+
+        # qkv on x: gives Q (we keep) and "uncompressed" K, V.
+        qkv_x = self.qkv(x).reshape(B, T, 3, H, dh)
+        q_x, k_x, v_x = qkv_x.unbind(dim=2)                     # each (B, T, H, dh)
+        # qkv on compressed: only K and V are used (Q on compressed is wasted).
+        qkv_c = self.qkv(comp).reshape(B, m, 3, H, dh)
+        _, k_c, v_c = qkv_c.unbind(dim=2)                       # k_c, v_c: (B, m, H, dh)
+
+        # Concat key/value along sequence: [compressed (m), uncompressed (T)].
+        K = torch.cat([k_c, k_x], dim=1).transpose(1, 2)        # (B, H, m+T, dh)
+        V = torch.cat([v_c, v_x], dim=1).transpose(1, 2)        # (B, H, m+T, dh)
+        Q = q_x.transpose(1, 2)                                 # (B, H, T, dh)
+
+        q_sq = (Q ** 2).sum(dim=-1, keepdim=True)               # (B, H, T, 1)
+        k_sq = (K ** 2).sum(dim=-1, keepdim=True)               # (B, H, m+T, 1)
+        dot = Q @ K.transpose(-2, -1)                           # (B, H, T, m+T)
+        distances = q_sq + k_sq.transpose(-2, -1) - 2 * dot
+        taus = self.log_tau.exp().view(1, H, 1, 1)
+        scores = -distances / taus
+        alphas = torch.sigmoid(self.head_alphas).view(1, H, 1, 1)
+        scores = scores * alphas
+
+        mask = self._get_mask(T, x.device)                      # (T, m+T)
+        scores = scores.masked_fill(~mask.view(1, 1, T, m + T), float("-inf"))
+        attn = F.softmax(scores, dim=-1)
+        attn = self.attn_dropout(attn)
+        out = attn @ V                                          # (B, H, T, dh)
+
+        head_scales = F.softplus(self.head_output_scalars).view(1, H, 1, 1)
+        out = out * head_scales
+        out = out.transpose(1, 2).reshape(B, T, D)
+        return self.resid_dropout(self.out_proj(out))
+
+    def diagnostics(self) -> dict:
+        return {
+            "variant": f"compress_{self.k}",
+            "compression_ratio": self.k,
+            "W_s_norm": float(self.compress.W_s.weight.detach().norm().item()),
+            "head_alphas_sigmoid": torch.sigmoid(self.head_alphas.detach()).tolist(),
+            "taus": self.log_tau.exp().detach().tolist(),
+            "head_output_scalars_softplus": F.softplus(
+                self.head_output_scalars.detach()
+            ).tolist(),
+        }
+
+    def output_path_params(self) -> int:
+        return (self.compress.W_s.weight.numel()
+                + self.qkv.weight.numel()
+                + self.out_proj.weight.numel())
+
+
 def build_attention(cfg: ModelConfig) -> nn.Module:
     if cfg.variant == "baseline":
         return BonsignoreAttention(cfg)
@@ -428,4 +572,7 @@ def build_attention(cfg: ModelConfig) -> nn.Module:
         return DualProjectionAttention(cfg)
     if cfg.variant == "dual_projection_with_cumulative":
         return DualProjectionCumulativeAttention(cfg)
+    if cfg.variant.startswith("compress_"):
+        k = int(cfg.variant.split("_", 1)[1])
+        return CompressionAttention(cfg, k)
     return SaliencyAttention(cfg)

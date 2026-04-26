@@ -27,6 +27,9 @@ VARIANTS: List[str] = [
     "cumulative_mean",  # NO projections at all: replace attn sublayer with causal cumulative mean of LN'd residual
     "dual_projection",                  # two parallel d→d projections of LN'd residual, concat, compress 2d→d
     "dual_projection_with_cumulative",  # same but P2 operates on the causal cumulative mean of the LN'd residual
+    "compress_4",                       # block-saliency compression k=4, then full Bonsignore attn over T/4 entries
+    "compress_8",                       # block-saliency compression k=8
+    "compress_16",                      # block-saliency compression k=16
 ]
 
 
