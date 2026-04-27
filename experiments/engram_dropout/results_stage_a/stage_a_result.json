@@ -1,0 +1,22 @@
+{
+  "checkpoint": "/mnt/data/Code/HRS/results/v22_learned_kernel/best.pt",
+  "on": {
+    "mode": "on",
+    "ce": 2.951875,
+    "ppl": 19.141810997156636,
+    "n_batches": 50,
+    "gate_per_layer_mean": [
+      0.10714120417833328,
+      0.22875440120697021
+    ],
+    "engram_buffer_l2": 28.23886489868164
+  },
+  "off": {
+    "mode": "off",
+    "ce": 2.9578125,
+    "ppl": 19.255803580544068,
+    "n_batches": 50
+  },
+  "gap": 0.11399258338743223,
+  "pass": false
+}
