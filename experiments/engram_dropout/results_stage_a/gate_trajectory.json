@@ -1,0 +1,324 @@
+{
+  "trajectory": [
+    {
+      "label": "V20 phase1_end (after frozen-MLP phase, step ~20000)",
+      "ckpt_path": "/mnt/data/Code/HRS/results/v20_bonsignore/phase1_end.pt",
+      "step": 20000,
+      "val_ppl": 23.666546242140512,
+      "per_layer": {
+        "1": {
+          "gate_logit": -2.0233218669891357,
+          "gate_scalar": null,
+          "effective_gate": 0.11677593737840652,
+          "has_gate_scalar": false,
+          "out_proj_norm": 11.850980758666992
+        },
+        "3": {
+          "gate_logit": -3.288926362991333,
+          "gate_scalar": null,
+          "effective_gate": 0.03595304116606712,
+          "has_gate_scalar": false,
+          "out_proj_norm": 12.10558795928955
+        },
+        "5": {
+          "gate_logit": -1.183869481086731,
+          "gate_scalar": null,
+          "effective_gate": 0.23435714840888977,
+          "has_gate_scalar": false,
+          "out_proj_norm": 13.205353736877441
+        }
+      },
+      "engram_buffer": {
+        "shape": [
+          1,
+          32,
+          1024
+        ],
+        "norm": 38.0175895690918,
+        "mean_abs": 0.11802085489034653,
+        "std": 0.21001727879047394,
+        "all_zero": false
+      }
+    },
+    {
+      "label": "V20 checkpoint_40000",
+      "ckpt_path": "/mnt/data/Code/HRS/results/v20_bonsignore/checkpoint_40000.pt",
+      "step": 40000,
+      "val_ppl": null,
+      "per_layer": {
+        "1": {
+          "gate_logit": -2.17808198928833,
+          "gate_scalar": null,
+          "effective_gate": 0.10173607617616653,
+          "has_gate_scalar": false,
+          "out_proj_norm": 9.964799880981445
+        },
+        "3": {
+          "gate_logit": -3.7179081439971924,
+          "gate_scalar": null,
+          "effective_gate": 0.023708948865532875,
+          "has_gate_scalar": false,
+          "out_proj_norm": 10.27137565612793
+        },
+        "5": {
+          "gate_logit": -1.2495328187942505,
+          "gate_scalar": null,
+          "effective_gate": 0.2227810174226761,
+          "has_gate_scalar": false,
+          "out_proj_norm": 11.326521873474121
+        }
+      },
+      "engram_buffer": {
+        "shape": [
+          1,
+          32,
+          1024
+        ],
+        "norm": 34.62090301513672,
+        "mean_abs": 0.1039375513792038,
+        "std": 0.19125665724277496,
+        "all_zero": false
+      }
+    },
+    {
+      "label": "V20 checkpoint_42500",
+      "ckpt_path": "/mnt/data/Code/HRS/results/v20_bonsignore/checkpoint_42500.pt",
+      "step": 42500,
+      "val_ppl": null,
+      "per_layer": {
+        "1": {
+          "gate_logit": -2.177201271057129,
+          "gate_scalar": null,
+          "effective_gate": 0.1018165796995163,
+          "has_gate_scalar": false,
+          "out_proj_norm": 9.960488319396973
+        },
+        "3": {
+          "gate_logit": -3.71690034866333,
+          "gate_scalar": null,
+          "effective_gate": 0.02373228780925274,
+          "has_gate_scalar": false,
+          "out_proj_norm": 10.267144203186035
+        },
+        "5": {
+          "gate_logit": -1.2489912509918213,
+          "gate_scalar": null,
+          "effective_gate": 0.22287479043006897,
+          "has_gate_scalar": false,
+          "out_proj_norm": 11.322117805480957
+        }
+      },
+      "engram_buffer": {
+        "shape": [
+          1,
+          32,
+          1024
+        ],
+        "norm": 33.75590515136719,
+        "mean_abs": 0.10190103948116302,
+        "std": 0.18647748231887817,
+        "all_zero": false
+      }
+    },
+    {
+      "label": "V20 best (within phase 2 run)",
+      "ckpt_path": "/mnt/data/Code/HRS/results/v20_bonsignore/best.pt",
+      "step": 41000,
+      "val_ppl": 17.341890659815625,
+      "per_layer": {
+        "1": {
+          "gate_logit": -2.177536964416504,
+          "gate_scalar": null,
+          "effective_gate": 0.10178589820861816,
+          "has_gate_scalar": false,
+          "out_proj_norm": 9.961767196655273
+        },
+        "3": {
+          "gate_logit": -3.717318296432495,
+          "gate_scalar": null,
+          "effective_gate": 0.023722605779767036,
+          "has_gate_scalar": false,
+          "out_proj_norm": 10.268351554870605
+        },
+        "5": {
+          "gate_logit": -1.24916672706604,
+          "gate_scalar": null,
+          "effective_gate": 0.22284440696239471,
+          "has_gate_scalar": false,
+          "out_proj_norm": 11.323482513427734
+        }
+      },
+      "engram_buffer": {
+        "shape": [
+          1,
+          32,
+          1024
+        ],
+        "norm": 34.2453727722168,
+        "mean_abs": 0.10304611176252365,
+        "std": 0.18918170034885406,
+        "all_zero": false
+      }
+    },
+    {
+      "label": "V20 final (end of V20 training, step ~43000)",
+      "ckpt_path": "/mnt/data/Code/HRS/results/v20_bonsignore/final.pt",
+      "step": 43000,
+      "val_ppl": null,
+      "per_layer": {
+        "1": {
+          "gate_logit": -2.177201271057129,
+          "gate_scalar": null,
+          "effective_gate": 0.1018165796995163,
+          "has_gate_scalar": false,
+          "out_proj_norm": 9.960485458374023
+        },
+        "3": {
+          "gate_logit": -3.71690034866333,
+          "gate_scalar": null,
+          "effective_gate": 0.02373228780925274,
+          "has_gate_scalar": false,
+          "out_proj_norm": 10.267144203186035
+        },
+        "5": {
+          "gate_logit": -1.2489912509918213,
+          "gate_scalar": null,
+          "effective_gate": 0.22287479043006897,
+          "has_gate_scalar": false,
+          "out_proj_norm": 11.32211971282959
+        }
+      },
+      "engram_buffer": {
+        "shape": [
+          1,
+          32,
+          1024
+        ],
+        "norm": 33.60715866088867,
+        "mean_abs": 0.10155502706766129,
+        "std": 0.18565550446510315,
+        "all_zero": false
+      }
+    },
+    {
+      "label": "V22 final (end of V22 phase 1 continuation, step ~53000)",
+      "ckpt_path": "/mnt/data/Code/HRS/results/v22_learned_kernel/final.pt",
+      "step": 53000,
+      "val_ppl": null,
+      "per_layer": {
+        "1": {
+          "gate_logit": -2.147785186767578,
+          "gate_scalar": -0.09113531559705734,
+          "effective_gate": 0.067805406738489,
+          "has_gate_scalar": true,
+          "out_proj_norm": 9.893884658813477
+        },
+        "3": {
+          "gate_logit": -3.717318296432495,
+          "gate_scalar": 0.0,
+          "effective_gate": 0.016443257356963947,
+          "has_gate_scalar": true,
+          "out_proj_norm": 10.268351554870605
+        },
+        "5": {
+          "gate_logit": -1.231415033340454,
+          "gate_scalar": -0.02738519012928009,
+          "effective_gate": 0.15353297890932982,
+          "has_gate_scalar": true,
+          "out_proj_norm": 11.25377082824707
+        }
+      },
+      "engram_buffer": {
+        "shape": [
+          1,
+          32,
+          1024
+        ],
+        "norm": 30.097307205200195,
+        "mean_abs": 0.0918312668800354,
+        "std": 0.16626372933387756,
+        "all_zero": false
+      }
+    },
+    {
+      "label": "V22 best (canonical 17.07 ckpt, step 61000)",
+      "ckpt_path": "/mnt/data/Code/HRS/results/v22_learned_kernel/best.pt",
+      "step": 61000,
+      "val_ppl": 17.073029565525854,
+      "per_layer": {
+        "1": {
+          "gate_logit": -2.1202807426452637,
+          "gate_scalar": -0.22251790761947632,
+          "effective_gate": 0.0630059697110541,
+          "has_gate_scalar": true,
+          "out_proj_norm": 9.81881046295166
+        },
+        "3": {
+          "gate_logit": -3.717318296432495,
+          "gate_scalar": 0.0,
+          "effective_gate": 0.016443257356963947,
+          "has_gate_scalar": true,
+          "out_proj_norm": 10.268351554870605
+        },
+        "5": {
+          "gate_logit": -1.2153578996658325,
+          "gate_scalar": -0.09383625537157059,
+          "effective_gate": 0.1480794197346782,
+          "has_gate_scalar": true,
+          "out_proj_norm": 11.179969787597656
+        }
+      },
+      "engram_buffer": {
+        "shape": [
+          1,
+          32,
+          1024
+        ],
+        "norm": 28.238880157470703,
+        "mean_abs": 0.08658957481384277,
+        "std": 0.1559952050447464,
+        "all_zero": false
+      }
+    },
+    {
+      "label": "V22 final_63k (end of V22 training)",
+      "ckpt_path": "/mnt/data/Code/HRS/results/v22_learned_kernel/final_63k.pt",
+      "step": 63000,
+      "val_ppl": null,
+      "per_layer": {
+        "1": {
+          "gate_logit": -2.1197571754455566,
+          "gate_scalar": -0.22242043912410736,
+          "effective_gate": 0.06304007528210187,
+          "has_gate_scalar": true,
+          "out_proj_norm": 9.8179931640625
+        },
+        "3": {
+          "gate_logit": -3.717318296432495,
+          "gate_scalar": 0.0,
+          "effective_gate": 0.016443257356963947,
+          "has_gate_scalar": true,
+          "out_proj_norm": 10.268351554870605
+        },
+        "5": {
+          "gate_logit": -1.215105652809143,
+          "gate_scalar": -0.09421034902334213,
+          "effective_gate": 0.14806745615199457,
+          "has_gate_scalar": true,
+          "out_proj_norm": 11.178998947143555
+        }
+      },
+      "engram_buffer": {
+        "shape": [
+          1,
+          32,
+          1024
+        ],
+        "norm": 27.809900283813477,
+        "mean_abs": 0.08546143025159836,
+        "std": 0.15362486243247986,
+        "all_zero": false
+      }
+    }
+  ]
+}
