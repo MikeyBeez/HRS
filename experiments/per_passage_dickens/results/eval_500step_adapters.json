@@ -1,0 +1,44 @@
+[
+  {
+    "condition": "A_full",
+    "seed": 0,
+    "routing": 1.0,
+    "retrieval": 0.8866666666666667,
+    "ceiling": 0.8866666666666667
+  },
+  {
+    "condition": "A_full",
+    "seed": 1,
+    "routing": 1.0,
+    "retrieval": 0.88,
+    "ceiling": 0.88
+  },
+  {
+    "condition": "A_full",
+    "seed": 2,
+    "routing": 1.0,
+    "retrieval": 0.8866666666666667,
+    "ceiling": 0.8866666666666667
+  },
+  {
+    "condition": "B_oracle",
+    "seed": 0,
+    "routing": 1.0,
+    "retrieval": 0.8866666666666667,
+    "ceiling": 0.8866666666666667
+  },
+  {
+    "condition": "B_oracle",
+    "seed": 1,
+    "routing": 1.0,
+    "retrieval": 0.88,
+    "ceiling": 0.88
+  },
+  {
+    "condition": "B_oracle",
+    "seed": 2,
+    "routing": 1.0,
+    "retrieval": 0.8866666666666667,
+    "ceiling": 0.8866666666666667
+  }
+]

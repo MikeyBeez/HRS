@@ -1,0 +1,952 @@
+[
+  {
+    "id": 0,
+    "passage": "My father's family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip. So, I called myself Pip, and came to be called Pip. I give Pirrip as my father's family name, on the authority of his tombstone and my sister\u2014Mrs. Joe Gargery, who married the blacksmith.",
+    "fact_type": "entity",
+    "fact": "Pip's father's family name is Pirrip.",
+    "subject": "Pip's father's family name",
+    "answer": "Pirrip",
+    "paraphrases_train": [
+      "Pip's father's family name was ",
+      "Pip's father's family name is ",
+      "It is recorded that Pip's father's family name was ",
+      "I learnt that Pip's father's family name was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Pip's father's family name = ",
+      "On reflection, Pip's father's family name was ",
+      "It is well-known that Pip's father's family name is "
+    ]
+  },
+  {
+    "id": 1,
+    "passage": "I give Pirrip as my father's family name, on the authority of his tombstone and my sister\u2014Mrs. Joe Gargery, who married the blacksmith. From the character and turn of the inscription, 'Also Georgiana Wife of the Above,' I drew a childish conclusion that my mother was freckled and sickly. To five little stone lozenges, each about a foot and a half long, which were arranged in a neat row beside their grave, and were sacred to the memory of five little brothers of mine.",
+    "fact_type": "entity",
+    "fact": "Pip's mother's name is Georgiana.",
+    "subject": "Pip's mother's name",
+    "answer": "Georgiana",
+    "paraphrases_train": [
+      "Pip's mother's name was ",
+      "Pip's mother's name is ",
+      "It is recorded that Pip's mother's name was ",
+      "I learnt that Pip's mother's name was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Pip's mother's name = ",
+      "On reflection, Pip's mother's name was ",
+      "It is well-known that Pip's mother's name is "
+    ]
+  },
+  {
+    "id": 2,
+    "passage": "Mrs. Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings in our country were\u2014most of them, at that time. When I ran home from the churchyard, the forge was shut up, and Joe was sitting alone in the kitchen.",
+    "fact_type": "entity",
+    "fact": "Joe Gargery's profession is blacksmith.",
+    "subject": "Joe Gargery's trade",
+    "answer": "blacksmith",
+    "paraphrases_train": [
+      "Joe Gargery's trade was ",
+      "Joe Gargery's trade is ",
+      "It is recorded that Joe Gargery's trade was ",
+      "I learnt that Joe Gargery's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Joe Gargery's trade = ",
+      "On reflection, Joe Gargery's trade was ",
+      "It is well-known that Joe Gargery's trade is "
+    ]
+  },
+  {
+    "id": 3,
+    "passage": "A fearful man, all in coarse grey, with a great iron on his leg. A man with no hat, and with broken shoes, and with an old rag tied round his head. A man who had been soaked in water, and smothered in mud, and lamed by stones, and cut by flints, and stung by nettles, and torn by briars; who limped, and shivered, and glared, and growled.",
+    "fact_type": "entity",
+    "fact": "The fearful man on the marshes wore coarse grey.",
+    "subject": "The fearful man's clothing colour",
+    "answer": "grey",
+    "paraphrases_train": [
+      "The fearful man's clothing colour was ",
+      "The fearful man's clothing colour is ",
+      "It is recorded that The fearful man's clothing colour was ",
+      "I learnt that The fearful man's clothing colour was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The fearful man's clothing colour = ",
+      "On reflection, The fearful man's clothing colour was ",
+      "It is well-known that The fearful man's clothing colour is "
+    ]
+  },
+  {
+    "id": 4,
+    "passage": "Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening.",
+    "fact_type": "numeric",
+    "fact": "The marsh country lies twenty miles from the sea by the river.",
+    "subject": "The distance from the marsh to the sea",
+    "answer": "twenty miles",
+    "paraphrases_train": [
+      "The distance from the marsh to the sea was ",
+      "The distance from the marsh to the sea is ",
+      "It is recorded that The distance from the marsh to the sea was ",
+      "I learnt that The distance from the marsh to the sea was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The distance from the marsh to the sea = ",
+      "On reflection, The distance from the marsh to the sea was ",
+      "It is well-known that The distance from the marsh to the sea is "
+    ]
+  },
+  {
+    "id": 5,
+    "passage": "Five little stone lozenges, each about a foot and a half long, which were arranged in a neat row beside their grave, and were sacred to the memory of five little brothers of mine\u2014who gave up trying to get a living, exceedingly early in that universal struggle.",
+    "fact_type": "numeric",
+    "fact": "Pip had five little brothers buried in the churchyard.",
+    "subject": "Pip's number of dead infant brothers",
+    "answer": "five",
+    "paraphrases_train": [
+      "Pip's number of dead infant brothers was ",
+      "Pip's number of dead infant brothers is ",
+      "It is recorded that Pip's number of dead infant brothers was ",
+      "I learnt that Pip's number of dead infant brothers was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Pip's number of dead infant brothers = ",
+      "On reflection, Pip's number of dead infant brothers was ",
+      "It is well-known that Pip's number of dead infant brothers is "
+    ]
+  },
+  {
+    "id": 6,
+    "passage": "The infant children were Alexander, Bartholomew, Abraham, Tobias, and Roger, infant children of the aforesaid, were also dead and buried; and that the dark flat wilderness beyond the churchyard, intersected with dikes and mounds and gates, with scattered cattle feeding on it, was the marshes.",
+    "fact_type": "entity",
+    "fact": "The fifth and youngest of Pip's dead brothers was named Roger.",
+    "subject": "The name of the youngest dead brother",
+    "answer": "Roger",
+    "paraphrases_train": [
+      "The name of the youngest dead brother was ",
+      "The name of the youngest dead brother is ",
+      "It is recorded that The name of the youngest dead brother was ",
+      "I learnt that The name of the youngest dead brother was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of the youngest dead brother = ",
+      "On reflection, The name of the youngest dead brother was ",
+      "It is well-known that The name of the youngest dead brother is "
+    ]
+  },
+  {
+    "id": 7,
+    "passage": "The man told Pip to bring him a file. 'You get me a file.' He tilted me again. 'And you get me wittles.' He tilted me again. 'You bring 'em both to me.' He tilted me again. 'Or I'll have your heart and liver out.' He tilted me again.",
+    "fact_type": "entity",
+    "fact": "The convict demanded that Pip bring a file and wittles.",
+    "subject": "What the convict demanded Pip bring",
+    "answer": "file",
+    "paraphrases_train": [
+      "What the convict demanded Pip bring was ",
+      "What the convict demanded Pip bring is ",
+      "It is recorded that What the convict demanded Pip bring was ",
+      "I learnt that What the convict demanded Pip bring was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What the convict demanded Pip bring = ",
+      "On reflection, What the convict demanded Pip bring was ",
+      "It is well-known that What the convict demanded Pip bring is "
+    ]
+  },
+  {
+    "id": 8,
+    "passage": "On the edge of the river I could faintly make out the only two black things in all the prospect that seemed to be standing upright; one of these was the beacon by which the sailors steered\u2014like an unhooped cask upon a pole\u2014an ugly thing when you were near it; the other, a gibbet, with some chains hanging to it which had once held a pirate.",
+    "fact_type": "entity",
+    "fact": "The chains on the gibbet by the river had once held a pirate.",
+    "subject": "What the gibbet's chains had once held",
+    "answer": "pirate",
+    "paraphrases_train": [
+      "What the gibbet's chains had once held was ",
+      "What the gibbet's chains had once held is ",
+      "It is recorded that What the gibbet's chains had once held was ",
+      "I learnt that What the gibbet's chains had once held was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What the gibbet's chains had once held = ",
+      "On reflection, What the gibbet's chains had once held was ",
+      "It is well-known that What the gibbet's chains had once held is "
+    ]
+  },
+  {
+    "id": 9,
+    "passage": "Mrs. Joe was more than twenty years older than I, and had established a great reputation with herself and the neighbours because she had brought me up 'by hand.' Having at that time to find out for myself what the expression meant, and knowing her to have a hard and heavy hand, and to be much in the habit of laying it upon her husband as well as upon me, I supposed that Joe Gargery and I were both brought up by hand.",
+    "fact_type": "numeric",
+    "fact": "Mrs. Joe was more than twenty years older than Pip.",
+    "subject": "How much older Mrs. Joe is than Pip",
+    "answer": "twenty years",
+    "paraphrases_train": [
+      "How much older Mrs. Joe is than Pip was ",
+      "How much older Mrs. Joe is than Pip is ",
+      "It is recorded that How much older Mrs. Joe is than Pip was ",
+      "I learnt that How much older Mrs. Joe is than Pip was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: How much older Mrs. Joe is than Pip = ",
+      "On reflection, How much older Mrs. Joe is than Pip was ",
+      "It is well-known that How much older Mrs. Joe is than Pip is "
+    ]
+  },
+  {
+    "id": 10,
+    "passage": "Joe was a fair man, with curls of flaxen hair on each side of his smooth face, and with eyes of such a very undecided blue that they seemed to have somehow got mixed with their own whites. He was a mild, good-natured, sweet-tempered, easy-going, foolish, dear fellow\u2014a sort of Hercules in strength, and also in weakness.",
+    "fact_type": "entity",
+    "fact": "Joe Gargery had flaxen hair.",
+    "subject": "The colour of Joe Gargery's hair",
+    "answer": "flaxen",
+    "paraphrases_train": [
+      "The colour of Joe Gargery's hair was ",
+      "The colour of Joe Gargery's hair is ",
+      "It is recorded that The colour of Joe Gargery's hair was ",
+      "I learnt that The colour of Joe Gargery's hair was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The colour of Joe Gargery's hair = ",
+      "On reflection, The colour of Joe Gargery's hair was ",
+      "It is well-known that The colour of Joe Gargery's hair is "
+    ]
+  },
+  {
+    "id": 11,
+    "passage": "She was tall and bony, and almost always wore a coarse apron, fastened over her figure behind with two loops, and having a square impregnable bib in front, that was stuck full of pins and needles. She made it a powerful merit in herself, and a strong reproach against Joe, that she wore this apron so much.",
+    "fact_type": "entity",
+    "fact": "Mrs. Joe Gargery's apron bib was stuck full of pins and needles.",
+    "subject": "What Mrs. Joe's apron bib was stuck with",
+    "answer": "pins and needles",
+    "paraphrases_train": [
+      "What Mrs. Joe's apron bib was stuck with was ",
+      "What Mrs. Joe's apron bib was stuck with is ",
+      "It is recorded that What Mrs. Joe's apron bib was stuck with was ",
+      "I learnt that What Mrs. Joe's apron bib was stuck with was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What Mrs. Joe's apron bib was stuck with = ",
+      "On reflection, What Mrs. Joe's apron bib was stuck with was ",
+      "It is well-known that What Mrs. Joe's apron bib was stuck with is "
+    ]
+  },
+  {
+    "id": 12,
+    "passage": "At this dismal intelligence, I twisted the only button on my waistcoat round and round, and looked in great depression at the fire. Tickler was a wax-ended piece of cane, worn smooth by collision with my tickled frame.",
+    "fact_type": "entity",
+    "fact": "Tickler was a wax-ended piece of cane used by Mrs. Joe.",
+    "subject": "What Tickler was made of",
+    "answer": "cane",
+    "paraphrases_train": [
+      "What Tickler was made of was ",
+      "What Tickler was made of is ",
+      "It is recorded that What Tickler was made of was ",
+      "I learnt that What Tickler was made of was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What Tickler was made of = ",
+      "On reflection, What Tickler was made of was ",
+      "It is well-known that What Tickler was made of is "
+    ]
+  },
+  {
+    "id": 13,
+    "passage": "Some medical beast had revived Tar-water in those days as a fine medicine, and Mrs. Joe always kept a supply of it in the cupboard; having a belief in its virtues correspondent to its nastiness. At the best of times, so much of this elixir was administered to me as a choice restorative, that I was conscious of going about, smelling like a new fence.",
+    "fact_type": "entity",
+    "fact": "Mrs. Joe administered Tar-water as a medicine to Pip.",
+    "subject": "The medicine Mrs. Joe administered",
+    "answer": "Tar-water",
+    "paraphrases_train": [
+      "The medicine Mrs. Joe administered was ",
+      "The medicine Mrs. Joe administered is ",
+      "It is recorded that The medicine Mrs. Joe administered was ",
+      "I learnt that The medicine Mrs. Joe administered was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The medicine Mrs. Joe administered = ",
+      "On reflection, The medicine Mrs. Joe administered was ",
+      "It is well-known that The medicine Mrs. Joe administered is "
+    ]
+  },
+  {
+    "id": 14,
+    "passage": "Joe glanced up at the Dutch clock. 'Well,' said Joe, glancing up at the Dutch clock, 'she's been on the Ram-page, this last spell, about five minutes, Pip. She's a-coming! Get behind the door, old chap, and have the jack-towel betwixt you.'",
+    "fact_type": "entity",
+    "fact": "Joe glanced up at the Dutch clock.",
+    "subject": "What kind of clock Joe glanced at",
+    "answer": "Dutch",
+    "paraphrases_train": [
+      "What kind of clock Joe glanced at was ",
+      "What kind of clock Joe glanced at is ",
+      "It is recorded that What kind of clock Joe glanced at was ",
+      "I learnt that What kind of clock Joe glanced at was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What kind of clock Joe glanced at = ",
+      "On reflection, What kind of clock Joe glanced at was ",
+      "It is well-known that What kind of clock Joe glanced at is "
+    ]
+  },
+  {
+    "id": 15,
+    "passage": "Mr. Jaggers's room was lighted by a skylight only, and was a most dismal place; the skylight, eccentrically patched like a broken head, and the distorted adjoining houses looking as if they had twisted themselves to peep down at me through it. There were not so many papers about, as I should have expected to see; and there were some odd objects about, that I should not have expected to see\u2014such as an old rusty pistol, a sword in a scabbard.",
+    "fact_type": "place",
+    "fact": "Mr. Jaggers's room was lit only by a skylight.",
+    "subject": "What lit Mr. Jaggers's room",
+    "answer": "skylight",
+    "paraphrases_train": [
+      "What lit Mr. Jaggers's room was ",
+      "What lit Mr. Jaggers's room is ",
+      "It is recorded that What lit Mr. Jaggers's room was ",
+      "I learnt that What lit Mr. Jaggers's room was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What lit Mr. Jaggers's room = ",
+      "On reflection, What lit Mr. Jaggers's room was ",
+      "It is well-known that What lit Mr. Jaggers's room is "
+    ]
+  },
+  {
+    "id": 16,
+    "passage": "'Was she a relation of Miss Havisham's?' I asked. 'No, only a friend. All well there, Pip?' 'Quite well, thank you, sir.' Miss Havisham's adopted daughter, Estella, had been brought home from France, and was more beautiful than ever, and was admired by all who saw her.",
+    "fact_type": "entity",
+    "fact": "Miss Havisham's adopted daughter is named Estella.",
+    "subject": "The name of Miss Havisham's adopted daughter",
+    "answer": "Estella",
+    "paraphrases_train": [
+      "The name of Miss Havisham's adopted daughter was ",
+      "The name of Miss Havisham's adopted daughter is ",
+      "It is recorded that The name of Miss Havisham's adopted daughter was ",
+      "I learnt that The name of Miss Havisham's adopted daughter was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Miss Havisham's adopted daughter = ",
+      "On reflection, The name of Miss Havisham's adopted daughter was ",
+      "It is well-known that The name of Miss Havisham's adopted daughter is "
+    ]
+  },
+  {
+    "id": 17,
+    "passage": "Mr. Jaggers's clerk Wemmick was a dry man, rather short in stature, with a square wooden face, whose expression seemed to have been imperfectly chipped out with a dull-edged chisel. There were some marks in it that might have been dimples, if the material had been softer and the instrument finer.",
+    "fact_type": "entity",
+    "fact": "Mr. Jaggers's clerk was named Wemmick.",
+    "subject": "The name of Mr. Jaggers's clerk",
+    "answer": "Wemmick",
+    "paraphrases_train": [
+      "The name of Mr. Jaggers's clerk was ",
+      "The name of Mr. Jaggers's clerk is ",
+      "It is recorded that The name of Mr. Jaggers's clerk was ",
+      "I learnt that The name of Mr. Jaggers's clerk was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Mr. Jaggers's clerk = ",
+      "On reflection, The name of Mr. Jaggers's clerk was ",
+      "It is well-known that The name of Mr. Jaggers's clerk is "
+    ]
+  },
+  {
+    "id": 18,
+    "passage": "Wemmick had a saying: 'every man's business is portable property.' On these occasions, Wemmick took his books and papers into Mr. Jaggers's room, and one of the upstairs clerks came down into the outer office. Wemmick's pen was put horizontally into the post.",
+    "fact_type": "relation",
+    "fact": "Wemmick described every man's business as portable property.",
+    "subject": "How Wemmick described every man's business",
+    "answer": "portable property",
+    "paraphrases_train": [
+      "How Wemmick described every man's business was ",
+      "How Wemmick described every man's business is ",
+      "It is recorded that How Wemmick described every man's business was ",
+      "I learnt that How Wemmick described every man's business was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: How Wemmick described every man's business = ",
+      "On reflection, How Wemmick described every man's business was ",
+      "It is well-known that How Wemmick described every man's business is "
+    ]
+  },
+  {
+    "id": 19,
+    "passage": "Miss Havisham's authority allowed Pip to receive nine hundred pounds for Herbert. Mr. Jaggers's eyes retired a little deeper into his head when I handed him the tablets, but he presently handed them over to Wemmick, with instructions to draw the check for his signature.",
+    "fact_type": "numeric",
+    "fact": "Pip received nine hundred pounds from Miss Havisham for Herbert.",
+    "subject": "The sum Pip received from Miss Havisham",
+    "answer": "nine hundred pounds",
+    "paraphrases_train": [
+      "The sum Pip received from Miss Havisham was ",
+      "The sum Pip received from Miss Havisham is ",
+      "It is recorded that The sum Pip received from Miss Havisham was ",
+      "I learnt that The sum Pip received from Miss Havisham was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The sum Pip received from Miss Havisham = ",
+      "On reflection, The sum Pip received from Miss Havisham was ",
+      "It is well-known that The sum Pip received from Miss Havisham is "
+    ]
+  },
+  {
+    "id": 20,
+    "passage": "Pip parted from Herbert at the corner of Giltspur Street by Smithfield, where Herbert went his way into the City. There were periodical occasions when Mr. Jaggers and Wemmick went over the office accounts, and checked off the vouchers, and put all things straight.",
+    "fact_type": "place",
+    "fact": "Pip parted from Herbert at the corner of Giltspur Street by Smithfield.",
+    "subject": "The London street where Pip parted from Herbert",
+    "answer": "Giltspur Street",
+    "paraphrases_train": [
+      "The London street where Pip parted from Herbert was ",
+      "The London street where Pip parted from Herbert is ",
+      "It is recorded that The London street where Pip parted from Herbert was ",
+      "I learnt that The London street where Pip parted from Herbert was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The London street where Pip parted from Herbert = ",
+      "On reflection, The London street where Pip parted from Herbert was ",
+      "It is well-known that The London street where Pip parted from Herbert is "
+    ]
+  },
+  {
+    "id": 21,
+    "passage": "Estella's father, according to Pip, came from New South Wales, and his name was Provis. Even Mr. Jaggers started when I said those words. It was the slightest start that could escape a man, the most carefully repressed and the sooner checked, but he did start, though he made it a part of the action of taking out his pocket-handkerchief.",
+    "fact_type": "place",
+    "fact": "Estella's father Provis came from New South Wales.",
+    "subject": "The colony Estella's father came from",
+    "answer": "New South Wales",
+    "paraphrases_train": [
+      "The colony Estella's father came from was ",
+      "The colony Estella's father came from is ",
+      "It is recorded that The colony Estella's father came from was ",
+      "I learnt that The colony Estella's father came from was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The colony Estella's father came from = ",
+      "On reflection, The colony Estella's father came from was ",
+      "It is well-known that The colony Estella's father came from is "
+    ]
+  },
+  {
+    "id": 22,
+    "passage": "Estella's father's name was Provis. 'And so have you, sir. And you have seen her still more recently.' 'Yes?' said Mr. Jaggers. 'Perhaps I know more of Estella's history than even you do,' said I. 'I know her father too.'",
+    "fact_type": "entity",
+    "fact": "Estella's father's name was Provis.",
+    "subject": "The name of Estella's father",
+    "answer": "Provis",
+    "paraphrases_train": [
+      "The name of Estella's father was ",
+      "The name of Estella's father is ",
+      "It is recorded that The name of Estella's father was ",
+      "I learnt that The name of Estella's father was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Estella's father = ",
+      "On reflection, The name of Estella's father was ",
+      "It is well-known that The name of Estella's father is "
+    ]
+  },
+  {
+    "id": 23,
+    "passage": "Pip's lawyer's office was on Gerrard Street. Mr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick went over the office accounts, and checked off the vouchers, and put all things straight.",
+    "fact_type": "place",
+    "fact": "Mr. Jaggers's office was on Gerrard Street.",
+    "subject": "The London street where Mr. Jaggers's office stood",
+    "answer": "Gerrard Street",
+    "paraphrases_train": [
+      "The London street where Mr. Jaggers's office stood was ",
+      "The London street where Mr. Jaggers's office stood is ",
+      "It is recorded that The London street where Mr. Jaggers's office stood was ",
+      "I learnt that The London street where Mr. Jaggers's office stood was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The London street where Mr. Jaggers's office stood = ",
+      "On reflection, The London street where Mr. Jaggers's office stood was ",
+      "It is well-known that The London street where Mr. Jaggers's office stood is "
+    ]
+  },
+  {
+    "id": 24,
+    "passage": "When Pip had returned home that evening, and looking in at the lonely house, he saw a lighted candle on a table, a bench, and a mattress on a truckle bedstead. As there was a loft above, I called, 'Is there any one here?' but no voice answered.",
+    "fact_type": "entity",
+    "fact": "The mattress in the lonely house was on a truckle bedstead.",
+    "subject": "What kind of bedstead the mattress lay on",
+    "answer": "truckle",
+    "paraphrases_train": [
+      "What kind of bedstead the mattress lay on was ",
+      "What kind of bedstead the mattress lay on is ",
+      "It is recorded that What kind of bedstead the mattress lay on was ",
+      "I learnt that What kind of bedstead the mattress lay on was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What kind of bedstead the mattress lay on = ",
+      "On reflection, What kind of bedstead the mattress lay on was ",
+      "It is well-known that What kind of bedstead the mattress lay on is "
+    ]
+  },
+  {
+    "id": 25,
+    "passage": "Then I looked at my watch, and, finding that it was past nine, called again, 'Is there any one here?' There being still no answer, I went out at the door, irresolute what to do. It was beginning to rain fast.",
+    "fact_type": "numeric",
+    "fact": "Pip's watch showed it was past nine when he called in the lonely house.",
+    "subject": "The time on Pip's watch",
+    "answer": "nine",
+    "paraphrases_train": [
+      "The time on Pip's watch was ",
+      "The time on Pip's watch is ",
+      "It is recorded that The time on Pip's watch was ",
+      "I learnt that The time on Pip's watch was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The time on Pip's watch = ",
+      "On reflection, The time on Pip's watch was ",
+      "It is well-known that The time on Pip's watch is "
+    ]
+  },
+  {
+    "id": 26,
+    "passage": "Pip was caught in a strong running noose, thrown over my head from behind. 'Now,' said a suppressed voice with an oath, 'I've got you!' 'What is this?' I cried, struggling. 'Who is it? Help, help, help!'",
+    "fact_type": "entity",
+    "fact": "Pip was caught in a strong running noose in the lonely house.",
+    "subject": "What Pip was caught in",
+    "answer": "noose",
+    "paraphrases_train": [
+      "What Pip was caught in was ",
+      "What Pip was caught in is ",
+      "It is recorded that What Pip was caught in was ",
+      "I learnt that What Pip was caught in was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What Pip was caught in = ",
+      "On reflection, What Pip was caught in was ",
+      "It is well-known that What Pip was caught in is "
+    ]
+  },
+  {
+    "id": 27,
+    "passage": "The lonely house was of wood with a tiled roof, and would not be proof against the weather much longer. The mud and ooze were coated with lime, and the choking vapour of the kiln crept in a ghostly way towards me.",
+    "fact_type": "entity",
+    "fact": "The lonely house had a tiled roof.",
+    "subject": "The roof material of the lonely house",
+    "answer": "tiled",
+    "paraphrases_train": [
+      "The roof material of the lonely house was ",
+      "The roof material of the lonely house is ",
+      "It is recorded that The roof material of the lonely house was ",
+      "I learnt that The roof material of the lonely house was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The roof material of the lonely house = ",
+      "On reflection, The roof material of the lonely house was ",
+      "It is well-known that The roof material of the lonely house is "
+    ]
+  },
+  {
+    "id": 28,
+    "passage": "Pip's appearance, with his arm bandaged and his coat loose over his shoulders, favoured my object. Although I had sent Mr. Jaggers a brief account of the accident as soon as I had arrived in town, yet I had to give him all the details now.",
+    "fact_type": "relation",
+    "fact": "Pip arrived in town with his arm bandaged.",
+    "subject": "The condition of Pip's arm when he arrived in town",
+    "answer": "bandaged",
+    "paraphrases_train": [
+      "The condition of Pip's arm when he arrived in town was ",
+      "The condition of Pip's arm when he arrived in town is ",
+      "It is recorded that The condition of Pip's arm when he arrived in town was ",
+      "I learnt that The condition of Pip's arm when he arrived in town was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The condition of Pip's arm when he arrived in town = ",
+      "On reflection, The condition of Pip's arm when he arrived in town was ",
+      "It is well-known that The condition of Pip's arm when he arrived in town is "
+    ]
+  },
+  {
+    "id": 29,
+    "passage": "Mr. Jaggers stood, according to his wont, before the fire. Wemmick leaned back in his chair, staring at me, with his hands in the pockets of his trousers, and his pen put horizontally into the post.",
+    "fact_type": "place",
+    "fact": "Mr. Jaggers customarily stood before the fire.",
+    "subject": "Where Mr. Jaggers stood according to his wont",
+    "answer": "fire",
+    "paraphrases_train": [
+      "Where Mr. Jaggers stood according to his wont was ",
+      "Where Mr. Jaggers stood according to his wont is ",
+      "It is recorded that Where Mr. Jaggers stood according to his wont was ",
+      "I learnt that Where Mr. Jaggers stood according to his wont was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Where Mr. Jaggers stood according to his wont = ",
+      "On reflection, Where Mr. Jaggers stood according to his wont was ",
+      "It is well-known that Where Mr. Jaggers stood according to his wont is "
+    ]
+  },
+  {
+    "id": 30,
+    "passage": "Herbert Pocket was Pip's friend and roommate at Barnard's Inn. Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met again later in London where Herbert taught him manners.",
+    "fact_type": "entity",
+    "fact": "Pip's roommate at Barnard's Inn was Herbert Pocket.",
+    "subject": "The name of Pip's roommate",
+    "answer": "Herbert",
+    "paraphrases_train": [
+      "The name of Pip's roommate was ",
+      "The name of Pip's roommate is ",
+      "It is recorded that The name of Pip's roommate was ",
+      "I learnt that The name of Pip's roommate was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Pip's roommate = ",
+      "On reflection, The name of Pip's roommate was ",
+      "It is well-known that The name of Pip's roommate is "
+    ]
+  },
+  {
+    "id": 31,
+    "passage": "Pip's first benefactor was a man named Magwitch, the convict from the marshes who later returned from New South Wales. Magwitch had been transported and made a fortune as a sheep-farmer, then secretly funded Pip's gentlemanly education through Mr. Jaggers as intermediary.",
+    "fact_type": "entity",
+    "fact": "Pip's secret benefactor was Magwitch the convict.",
+    "subject": "The name of Pip's secret benefactor",
+    "answer": "Magwitch",
+    "paraphrases_train": [
+      "The name of Pip's secret benefactor was ",
+      "The name of Pip's secret benefactor is ",
+      "It is recorded that The name of Pip's secret benefactor was ",
+      "I learnt that The name of Pip's secret benefactor was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Pip's secret benefactor = ",
+      "On reflection, The name of Pip's secret benefactor was ",
+      "It is well-known that The name of Pip's secret benefactor is "
+    ]
+  },
+  {
+    "id": 32,
+    "passage": "Estella was raised by Miss Havisham at Satis House, in the dilapidated mansion where Miss Havisham herself lived in seclusion still wearing her wedding dress. Miss Havisham had been jilted on her wedding day many years before, and had stopped all the clocks at the precise moment she received the news.",
+    "fact_type": "place",
+    "fact": "Estella was raised by Miss Havisham at Satis House.",
+    "subject": "The name of Miss Havisham's house",
+    "answer": "Satis House",
+    "paraphrases_train": [
+      "The name of Miss Havisham's house was ",
+      "The name of Miss Havisham's house is ",
+      "It is recorded that The name of Miss Havisham's house was ",
+      "I learnt that The name of Miss Havisham's house was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Miss Havisham's house = ",
+      "On reflection, The name of Miss Havisham's house was ",
+      "It is well-known that The name of Miss Havisham's house is "
+    ]
+  },
+  {
+    "id": 33,
+    "passage": "Pip's village schoolteacher was Mr. Wopsle, who had aspirations to the stage and would later become an actor in London under the name Mr. Waldengarver. Mr. Wopsle's great-aunt ran the village evening-school where Pip first learned letters.",
+    "fact_type": "entity",
+    "fact": "Pip's village schoolteacher was Mr. Wopsle.",
+    "subject": "The name of Pip's village schoolteacher",
+    "answer": "Wopsle",
+    "paraphrases_train": [
+      "The name of Pip's village schoolteacher was ",
+      "The name of Pip's village schoolteacher is ",
+      "It is recorded that The name of Pip's village schoolteacher was ",
+      "I learnt that The name of Pip's village schoolteacher was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Pip's village schoolteacher = ",
+      "On reflection, The name of Pip's village schoolteacher was ",
+      "It is well-known that The name of Pip's village schoolteacher is "
+    ]
+  },
+  {
+    "id": 34,
+    "passage": "When Magwitch returned from New South Wales, he hid at Pip's chambers under the assumed name of Provis. Pip and Herbert then moved Magwitch to a riverside lodging-house kept by Mrs. Whimple in Mill Pond Bank, where Magwitch lived in concealment until the failed escape attempt.",
+    "fact_type": "place",
+    "fact": "Magwitch hid at Mrs. Whimple's lodging-house in Mill Pond Bank.",
+    "subject": "Where Magwitch hid in concealment",
+    "answer": "Mill Pond Bank",
+    "paraphrases_train": [
+      "Where Magwitch hid in concealment was ",
+      "Where Magwitch hid in concealment is ",
+      "It is recorded that Where Magwitch hid in concealment was ",
+      "I learnt that Where Magwitch hid in concealment was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Where Magwitch hid in concealment = ",
+      "On reflection, Where Magwitch hid in concealment was ",
+      "It is well-known that Where Magwitch hid in concealment is "
+    ]
+  },
+  {
+    "id": 35,
+    "passage": "Pip received an annual income of five hundred pounds from his unknown benefactor while living as a gentleman in London. The exact sum was determined and managed by Mr. Jaggers as a trustee, who released the funds quarterly without ever revealing the donor.",
+    "fact_type": "numeric",
+    "fact": "Pip's annual income from his benefactor was five hundred pounds.",
+    "subject": "Pip's annual gentleman's income",
+    "answer": "five hundred pounds",
+    "paraphrases_train": [
+      "Pip's annual gentleman's income was ",
+      "Pip's annual gentleman's income is ",
+      "It is recorded that Pip's annual gentleman's income was ",
+      "I learnt that Pip's annual gentleman's income was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Pip's annual gentleman's income = ",
+      "On reflection, Pip's annual gentleman's income was ",
+      "It is well-known that Pip's annual gentleman's income is "
+    ]
+  },
+  {
+    "id": 36,
+    "passage": "Bentley Drummle was the brutish and wealthy fellow-pupil of Pip's at Mr. Pocket's, and in the end the man Estella married. Drummle came from a noble family but was a sulky, ill-tempered young man, given to ungentlemanly conduct.",
+    "fact_type": "entity",
+    "fact": "Estella married Bentley Drummle.",
+    "subject": "The name of the man Estella married",
+    "answer": "Bentley Drummle",
+    "paraphrases_train": [
+      "The name of the man Estella married was ",
+      "The name of the man Estella married is ",
+      "It is recorded that The name of the man Estella married was ",
+      "I learnt that The name of the man Estella married was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of the man Estella married = ",
+      "On reflection, The name of the man Estella married was ",
+      "It is well-known that The name of the man Estella married is "
+    ]
+  },
+  {
+    "id": 37,
+    "passage": "Wemmick lived at Walworth, in a tiny cottage that he had built himself and called the Castle, complete with miniature drawbridge, moat, and a small cannon called the Stinger that he fired every evening at nine o'clock to announce supper to his Aged Parent.",
+    "fact_type": "place",
+    "fact": "Wemmick's cottage at Walworth was called the Castle.",
+    "subject": "The name Wemmick gave his cottage",
+    "answer": "Castle",
+    "paraphrases_train": [
+      "The name Wemmick gave his cottage was ",
+      "The name Wemmick gave his cottage is ",
+      "It is recorded that The name Wemmick gave his cottage was ",
+      "I learnt that The name Wemmick gave his cottage was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name Wemmick gave his cottage = ",
+      "On reflection, The name Wemmick gave his cottage was ",
+      "It is well-known that The name Wemmick gave his cottage is "
+    ]
+  },
+  {
+    "id": 38,
+    "passage": "The cannon at Wemmick's Castle in Walworth was called the Stinger, and Wemmick fired it every evening at nine o'clock as a signal-gun to announce supper-time to his Aged Parent.",
+    "fact_type": "entity",
+    "fact": "The cannon at Wemmick's Castle was called the Stinger.",
+    "subject": "The name of Wemmick's cannon",
+    "answer": "Stinger",
+    "paraphrases_train": [
+      "The name of Wemmick's cannon was ",
+      "The name of Wemmick's cannon is ",
+      "It is recorded that The name of Wemmick's cannon was ",
+      "I learnt that The name of Wemmick's cannon was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Wemmick's cannon = ",
+      "On reflection, The name of Wemmick's cannon was ",
+      "It is well-known that The name of Wemmick's cannon is "
+    ]
+  },
+  {
+    "id": 39,
+    "passage": "Joe Gargery's wife and Pip's sister Mrs. Joe was viciously assaulted in her own kitchen by an unknown attacker who struck her on the back of the head with a leg-iron. Mrs. Joe survived the blow but was left an invalid and unable to speak intelligibly until her death some years later.",
+    "fact_type": "entity",
+    "fact": "Mrs. Joe was struck on the head with a leg-iron.",
+    "subject": "The weapon used to strike Mrs. Joe",
+    "answer": "leg-iron",
+    "paraphrases_train": [
+      "The weapon used to strike Mrs. Joe was ",
+      "The weapon used to strike Mrs. Joe is ",
+      "It is recorded that The weapon used to strike Mrs. Joe was ",
+      "I learnt that The weapon used to strike Mrs. Joe was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The weapon used to strike Mrs. Joe = ",
+      "On reflection, The weapon used to strike Mrs. Joe was ",
+      "It is well-known that The weapon used to strike Mrs. Joe is "
+    ]
+  },
+  {
+    "id": 40,
+    "passage": "After Mrs. Joe's death, Joe Gargery married Biddy, who had been the housekeeper-companion to Mrs. Joe during her invalid years and who had also taught Pip his letters in childhood. Joe and Biddy had a son whom they named Pip.",
+    "fact_type": "entity",
+    "fact": "Joe Gargery's second wife was Biddy.",
+    "subject": "The name of Joe Gargery's second wife",
+    "answer": "Biddy",
+    "paraphrases_train": [
+      "The name of Joe Gargery's second wife was ",
+      "The name of Joe Gargery's second wife is ",
+      "It is recorded that The name of Joe Gargery's second wife was ",
+      "I learnt that The name of Joe Gargery's second wife was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Joe Gargery's second wife = ",
+      "On reflection, The name of Joe Gargery's second wife was ",
+      "It is well-known that The name of Joe Gargery's second wife is "
+    ]
+  },
+  {
+    "id": 41,
+    "passage": "Compeyson was Magwitch's hated rival, the gentleman swindler who had jilted Miss Havisham on her wedding day and who had also induced Magwitch into a partnership of crime that ended with Magwitch's transportation. Compeyson and Magwitch fought in the Thames during the failed escape attempt and Compeyson drowned.",
+    "fact_type": "entity",
+    "fact": "Compeyson was the swindler who jilted Miss Havisham.",
+    "subject": "The man who jilted Miss Havisham on her wedding day",
+    "answer": "Compeyson",
+    "paraphrases_train": [
+      "The man who jilted Miss Havisham on her wedding day was ",
+      "The man who jilted Miss Havisham on her wedding day is ",
+      "It is recorded that The man who jilted Miss Havisham on her wedding day was ",
+      "I learnt that The man who jilted Miss Havisham on her wedding day was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The man who jilted Miss Havisham on her wedding day = ",
+      "On reflection, The man who jilted Miss Havisham on her wedding day was ",
+      "It is well-known that The man who jilted Miss Havisham on her wedding day is "
+    ]
+  },
+  {
+    "id": 42,
+    "passage": "The fire at Miss Havisham's mansion broke out when her wedding-dress, dried by years of seclusion, was caught by an ember from the fireplace. Pip rescued Miss Havisham from the flames but she was severely burned and died not long after, her last words being a request for forgiveness.",
+    "fact_type": "entity",
+    "fact": "Miss Havisham was severely burned in a fire at her mansion.",
+    "subject": "What killed Miss Havisham",
+    "answer": "fire",
+    "paraphrases_train": [
+      "What killed Miss Havisham was ",
+      "What killed Miss Havisham is ",
+      "It is recorded that What killed Miss Havisham was ",
+      "I learnt that What killed Miss Havisham was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What killed Miss Havisham = ",
+      "On reflection, What killed Miss Havisham was ",
+      "It is well-known that What killed Miss Havisham is "
+    ]
+  },
+  {
+    "id": 43,
+    "passage": "Pip and Herbert intended to escape Magwitch from England by boat down the Thames to a foreign vessel. Their plan was to put him aboard a Hamburg steamer or a Rotterdam steamer at the river-mouth, but they were intercepted by a galley carrying Compeyson and police officers.",
+    "fact_type": "place",
+    "fact": "Pip and Herbert planned to put Magwitch aboard a Hamburg or Rotterdam steamer.",
+    "subject": "The vessel Pip and Herbert hoped to put Magwitch aboard",
+    "answer": "steamer",
+    "paraphrases_train": [
+      "The vessel Pip and Herbert hoped to put Magwitch aboard was ",
+      "The vessel Pip and Herbert hoped to put Magwitch aboard is ",
+      "It is recorded that The vessel Pip and Herbert hoped to put Magwitch aboard was ",
+      "I learnt that The vessel Pip and Herbert hoped to put Magwitch aboard was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ",
+      "On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",
+      "It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is "
+    ]
+  },
+  {
+    "id": 44,
+    "passage": "Pip's ultimate occupation, after losing his expectations and his fortune, was as a clerk and then partner in Clarriker and Co., the merchant house in Cairo, Egypt, that Herbert Pocket had set up with the secret help of Pip's earlier nine-hundred-pound gift.",
+    "fact_type": "place",
+    "fact": "Pip ended up working in a merchant house in Cairo, Egypt.",
+    "subject": "The city where Pip's merchant house was located",
+    "answer": "Cairo",
+    "paraphrases_train": [
+      "The city where Pip's merchant house was located was ",
+      "The city where Pip's merchant house was located is ",
+      "It is recorded that The city where Pip's merchant house was located was ",
+      "I learnt that The city where Pip's merchant house was located was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The city where Pip's merchant house was located = ",
+      "On reflection, The city where Pip's merchant house was located was ",
+      "It is well-known that The city where Pip's merchant house was located is "
+    ]
+  },
+  {
+    "id": 45,
+    "passage": "Mr. Pumblechook was Joe Gargery's uncle, a corn-chandler in the nearby market town who was self-important and pompous. Pumblechook took false credit for Pip's rise in fortune, claiming everywhere that he had been the principal author of Pip's good luck.",
+    "fact_type": "entity",
+    "fact": "Mr. Pumblechook was a corn-chandler.",
+    "subject": "Mr. Pumblechook's profession",
+    "answer": "corn-chandler",
+    "paraphrases_train": [
+      "Mr. Pumblechook's profession was ",
+      "Mr. Pumblechook's profession is ",
+      "It is recorded that Mr. Pumblechook's profession was ",
+      "I learnt that Mr. Pumblechook's profession was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Mr. Pumblechook's profession = ",
+      "On reflection, Mr. Pumblechook's profession was ",
+      "It is well-known that Mr. Pumblechook's profession is "
+    ]
+  },
+  {
+    "id": 46,
+    "passage": "Orlick was the sullen, malevolent journeyman-blacksmith who worked at Joe Gargery's forge, and who later attacked Mrs. Joe and tried to murder Pip in the limekiln on the marshes. Orlick was eventually caught and arrested for housebreaking at Pumblechook's premises.",
+    "fact_type": "entity",
+    "fact": "Orlick was the journeyman-blacksmith at Joe Gargery's forge.",
+    "subject": "The trade of Orlick",
+    "answer": "journeyman-blacksmith",
+    "paraphrases_train": [
+      "The trade of Orlick was ",
+      "The trade of Orlick is ",
+      "It is recorded that The trade of Orlick was ",
+      "I learnt that The trade of Orlick was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The trade of Orlick = ",
+      "On reflection, The trade of Orlick was ",
+      "It is well-known that The trade of Orlick is "
+    ]
+  },
+  {
+    "id": 47,
+    "passage": "Trabb was the village tailor who took Pip's measurements for his gentleman's clothes. Trabb's boy was the impudent shop-assistant who later mocked Pip in the village street with the famous insult 'Don't know yah!'",
+    "fact_type": "entity",
+    "fact": "Trabb's boy mocked Pip in the village street.",
+    "subject": "Who mocked Pip in the village street",
+    "answer": "Trabb's boy",
+    "paraphrases_train": [
+      "Who mocked Pip in the village street was ",
+      "Who mocked Pip in the village street is ",
+      "It is recorded that Who mocked Pip in the village street was ",
+      "I learnt that Who mocked Pip in the village street was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Who mocked Pip in the village street = ",
+      "On reflection, Who mocked Pip in the village street was ",
+      "It is well-known that Who mocked Pip in the village street is "
+    ]
+  },
+  {
+    "id": 48,
+    "passage": "Pip joined the Finches of the Grove, a young gentlemen's social club in London, at Herbert's invitation. The club's principal occupation was to dine expensively and to disagree with one another as much as possible, while running into debt.",
+    "fact_type": "entity",
+    "fact": "Pip joined a London club called the Finches of the Grove.",
+    "subject": "The London club Pip joined",
+    "answer": "Finches of the Grove",
+    "paraphrases_train": [
+      "The London club Pip joined was ",
+      "The London club Pip joined is ",
+      "It is recorded that The London club Pip joined was ",
+      "I learnt that The London club Pip joined was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The London club Pip joined = ",
+      "On reflection, The London club Pip joined was ",
+      "It is well-known that The London club Pip joined is "
+    ]
+  },
+  {
+    "id": 49,
+    "passage": "When Magwitch was tried for returning from transportation, the court sentenced him to death, but he died of his injuries before the execution could be carried out. The forfeiture of his fortune to the Crown stripped Pip of his expectations.",
+    "fact_type": "entity",
+    "fact": "Magwitch was sentenced to death by the court.",
+    "subject": "The sentence the court passed on Magwitch",
+    "answer": "death",
+    "paraphrases_train": [
+      "The sentence the court passed on Magwitch was ",
+      "The sentence the court passed on Magwitch is ",
+      "It is recorded that The sentence the court passed on Magwitch was ",
+      "I learnt that The sentence the court passed on Magwitch was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The sentence the court passed on Magwitch = ",
+      "On reflection, The sentence the court passed on Magwitch was ",
+      "It is well-known that The sentence the court passed on Magwitch is "
+    ]
+  }
+]

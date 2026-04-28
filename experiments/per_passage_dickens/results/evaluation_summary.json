@@ -1,0 +1,479 @@
+{
+  "all_results": [
+    {
+      "condition": "A_full",
+      "seed": 0,
+      "routing_accuracy": 1.0,
+      "retrieval_accuracy": 0.94,
+      "routing_correct_retrieval_ceiling": 0.94,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 96,
+          "retrieved": 89,
+          "routing": 1.0,
+          "retrieval": 0.9270833333333334
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 18,
+          "retrieved": 18,
+          "routing": 1.0,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "routed": 30,
+          "retrieved": 28,
+          "routing": 1.0,
+          "retrieval": 0.9333333333333333
+        },
+        "relation": {
+          "n": 6,
+          "routed": 6,
+          "retrieved": 6,
+          "routing": 1.0,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "A_full",
+      "seed": 1,
+      "routing_accuracy": 1.0,
+      "retrieval_accuracy": 0.9066666666666666,
+      "routing_correct_retrieval_ceiling": 0.9066666666666666,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 96,
+          "retrieved": 89,
+          "routing": 1.0,
+          "retrieval": 0.9270833333333334
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 18,
+          "retrieved": 16,
+          "routing": 1.0,
+          "retrieval": 0.8888888888888888
+        },
+        "place": {
+          "n": 30,
+          "routed": 30,
+          "retrieved": 26,
+          "routing": 1.0,
+          "retrieval": 0.8666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "routed": 6,
+          "retrieved": 5,
+          "routing": 1.0,
+          "retrieval": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "condition": "A_full",
+      "seed": 2,
+      "routing_accuracy": 1.0,
+      "retrieval_accuracy": 0.94,
+      "routing_correct_retrieval_ceiling": 0.94,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 96,
+          "retrieved": 90,
+          "routing": 1.0,
+          "retrieval": 0.9375
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 18,
+          "retrieved": 18,
+          "routing": 1.0,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "routed": 30,
+          "retrieved": 27,
+          "routing": 1.0,
+          "retrieval": 0.9
+        },
+        "relation": {
+          "n": 6,
+          "routed": 6,
+          "retrieved": 6,
+          "routing": 1.0,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "B_oracle",
+      "seed": 0,
+      "routing_accuracy": 1.0,
+      "retrieval_accuracy": 0.94,
+      "routing_correct_retrieval_ceiling": 0.94,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 96,
+          "retrieved": 89,
+          "routing": 1.0,
+          "retrieval": 0.9270833333333334
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 18,
+          "retrieved": 18,
+          "routing": 1.0,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "routed": 30,
+          "retrieved": 28,
+          "routing": 1.0,
+          "retrieval": 0.9333333333333333
+        },
+        "relation": {
+          "n": 6,
+          "routed": 6,
+          "retrieved": 6,
+          "routing": 1.0,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "B_oracle",
+      "seed": 1,
+      "routing_accuracy": 1.0,
+      "retrieval_accuracy": 0.9066666666666666,
+      "routing_correct_retrieval_ceiling": 0.9066666666666666,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 96,
+          "retrieved": 89,
+          "routing": 1.0,
+          "retrieval": 0.9270833333333334
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 18,
+          "retrieved": 16,
+          "routing": 1.0,
+          "retrieval": 0.8888888888888888
+        },
+        "place": {
+          "n": 30,
+          "routed": 30,
+          "retrieved": 26,
+          "routing": 1.0,
+          "retrieval": 0.8666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "routed": 6,
+          "retrieved": 5,
+          "routing": 1.0,
+          "retrieval": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "condition": "B_oracle",
+      "seed": 2,
+      "routing_accuracy": 1.0,
+      "retrieval_accuracy": 0.94,
+      "routing_correct_retrieval_ceiling": 0.94,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 96,
+          "retrieved": 90,
+          "routing": 1.0,
+          "retrieval": 0.9375
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 18,
+          "retrieved": 18,
+          "routing": 1.0,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "routed": 30,
+          "retrieved": 27,
+          "routing": 1.0,
+          "retrieval": 0.9
+        },
+        "relation": {
+          "n": 6,
+          "routed": 6,
+          "retrieved": 6,
+          "routing": 1.0,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "C_base",
+      "seed": 0,
+      "routing_accuracy": 0.0,
+      "retrieval_accuracy": 0.006666666666666667,
+      "routing_correct_retrieval_ceiling": 0.0,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 0,
+          "retrieved": 1,
+          "routing": 0.0,
+          "retrieval": 0.010416666666666666
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        },
+        "relation": {
+          "n": 6,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "C_base",
+      "seed": 1,
+      "routing_accuracy": 0.0,
+      "retrieval_accuracy": 0.0,
+      "routing_correct_retrieval_ceiling": 0.0,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        },
+        "relation": {
+          "n": 6,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "C_base",
+      "seed": 2,
+      "routing_accuracy": 0.0,
+      "retrieval_accuracy": 0.0,
+      "routing_correct_retrieval_ceiling": 0.0,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        },
+        "relation": {
+          "n": 6,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "D_random",
+      "seed": 0,
+      "routing_accuracy": 0.02666666666666667,
+      "retrieval_accuracy": 0.04,
+      "routing_correct_retrieval_ceiling": 1.0,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 2,
+          "retrieved": 3,
+          "routing": 0.020833333333333332,
+          "retrieval": 0.03125
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 0,
+          "retrieved": 1,
+          "routing": 0.0,
+          "retrieval": 0.05555555555555555
+        },
+        "place": {
+          "n": 30,
+          "routed": 2,
+          "retrieved": 2,
+          "routing": 0.06666666666666667,
+          "retrieval": 0.06666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "D_random",
+      "seed": 1,
+      "routing_accuracy": 0.02666666666666667,
+      "retrieval_accuracy": 0.06,
+      "routing_correct_retrieval_ceiling": 1.0,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 3,
+          "retrieved": 6,
+          "routing": 0.03125,
+          "retrieval": 0.0625
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 0,
+          "retrieved": 1,
+          "routing": 0.0,
+          "retrieval": 0.05555555555555555
+        },
+        "place": {
+          "n": 30,
+          "routed": 0,
+          "retrieved": 1,
+          "routing": 0.0,
+          "retrieval": 0.03333333333333333
+        },
+        "relation": {
+          "n": 6,
+          "routed": 1,
+          "retrieved": 1,
+          "routing": 0.16666666666666666,
+          "retrieval": 0.16666666666666666
+        }
+      }
+    },
+    {
+      "condition": "D_random",
+      "seed": 2,
+      "routing_accuracy": 0.02,
+      "retrieval_accuracy": 0.02666666666666667,
+      "routing_correct_retrieval_ceiling": 1.0,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "routed": 2,
+          "retrieved": 3,
+          "routing": 0.020833333333333332,
+          "retrieval": 0.03125
+        },
+        "numeric": {
+          "n": 18,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "routed": 1,
+          "retrieved": 1,
+          "routing": 0.03333333333333333,
+          "retrieval": 0.03333333333333333
+        },
+        "relation": {
+          "n": 6,
+          "routed": 0,
+          "retrieved": 0,
+          "routing": 0.0,
+          "retrieval": 0.0
+        }
+      }
+    }
+  ],
+  "summary": {
+    "A_full": {
+      "routing_mean": 1.0,
+      "routing_std": 0.0,
+      "retrieval_mean": 0.9288888888888889,
+      "retrieval_std": 0.01924500897298752,
+      "ceiling_mean": 0.9288888888888889
+    },
+    "B_oracle": {
+      "routing_mean": 1.0,
+      "routing_std": 0.0,
+      "retrieval_mean": 0.9288888888888889,
+      "retrieval_std": 0.01924500897298752,
+      "ceiling_mean": 0.9288888888888889
+    },
+    "C_base": {
+      "routing_mean": 0.0,
+      "routing_std": 0.0,
+      "retrieval_mean": 0.0022222222222222222,
+      "retrieval_std": 0.0038490017945975053,
+      "ceiling_mean": 0.0
+    },
+    "D_random": {
+      "routing_mean": 0.024444444444444446,
+      "routing_std": 0.0038490017945975057,
+      "retrieval_mean": 0.042222222222222223,
+      "retrieval_std": 0.016777409856157218,
+      "ceiling_mean": 1.0
+    }
+  },
+  "note": "CORRECTED: ROUTING_THRESHOLD lowered from 0.50 to -1.0 (permissive). The 0.50 threshold copied from Phase 47 was calibrated to synthetic passkeys; on Dickens prose the cosine sim peaks at ~0.5 even with 100% argmax-correct routing."
+}
