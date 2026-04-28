@@ -1,0 +1,611 @@
+{
+  "condition": "C_no_lora",
+  "seed": 1,
+  "recall_real": 0.016666666666666666,
+  "recall_raw": 0.016666666666666666,
+  "n_queries": 60,
+  "activation_mean": 0.0,
+  "activation_std": 0.0,
+  "per_query": [
+    {
+      "id": 1,
+      "probe": "Pip wanted to trace and prove ",
+      "answer": "Estella",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nOf all the time to be gone to them.\n\nBALT:\nMy lord, I do here be so,\nTo your honour",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 2,
+      "probe": "Pip's friend who held the momentous conversation was ",
+      "answer": "Herbert",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "s\nA man, where he is aught\nI were the noble for the world\nNorfolk, in the time to the sun-night",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 3,
+      "probe": "The lawyer Pip went to see was Mr. ",
+      "answer": "Jaggers",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nMy gracious lord of your husband to be not my life,\nThe very highness of this place, and I'll not of me.\n",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 4,
+      "probe": "Mr. Jaggers's clerk was named ",
+      "answer": "Wemmick",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nThat made the gods\nAnd with the great a tarry, I'll\nAnd therefore I may be their lives but the sun to put to",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 5,
+      "probe": "Wemmick's frequent saying was, every man's business is portable ",
+      "answer": "property",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd with me have I have all. This is a\n\nISABELLA:\nThan I have found: as to-s",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 6,
+      "probe": "Pip arrived in town with his arm ",
+      "answer": "bandaged",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nFor these highness and to the air.\nO Lord Hastings, to make the queen,\nWill I were there no place, 'tis",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 7,
+      "probe": "Miss Havisham's authority allowed Pip to receive nine hundred ",
+      "answer": "pounds",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAs if you to your honour you have,\nAnd let this night of all my state than a better\nI have but like the king,",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 8,
+      "probe": "Pip went to see Mr. Jaggers at his office in Little ",
+      "answer": "Britain",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nThe manner and they say, or else thyself.\n\nDUKE OF AUMERLE:\nThe words by my lord,",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 9,
+      "probe": "Pip parted from Herbert at the corner of Giltspur Street by ",
+      "answer": "Smithfield",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nI have to me so I am,\nEven to hear me, I have well, and will not to the king to be\nAnd you",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 10,
+      "probe": "Estella's father, according to Pip, came from New South ",
+      "answer": "Wales",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": ";\nAs he is my gracious lord, in the day that hath said,\nWhen he hath not to your highness of my tongue to her",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 11,
+      "probe": "Estella's father's name was ",
+      "answer": "Provis",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": " that's hand from me\nWhich the earth I have noblousin\nThat his majesty be gone to my mother, and in the same time",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 12,
+      "probe": "Pip told Mr. Jaggers about Estella's ",
+      "answer": "mother",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nThat, my noble boy, and in me\nAs if you must not forsworn.\n\nPAULINA:\nI know the",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 13,
+      "probe": "Pip's bandaged arm caused him exquisite ",
+      "answer": "pain",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd with this of this land,\nFor what one did he shall be seen him.\n\nHERMethought, and this be sworn",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 14,
+      "probe": "Mr. Jaggers's eyes retired a little deeper into his ",
+      "answer": "head",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd by the earth, and his face\nTo make a noble heart that we have I have been,\nAnd, like a little more of",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 15,
+      "probe": "The check Pip received from Mr. Jaggers was for ",
+      "answer": "nine hundred",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nWith that the king of love as I had,\nTo the Lord of these sweet a name of this hand,\nAnd I have we so",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 16,
+      "probe": "When Pip arrived at the lonely house, the door opened to a lighted ",
+      "answer": "candle",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd to the good night is the house of mine with\nTo be here.\n\nJULIET:\nI shall be gone so",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 17,
+      "probe": "The mattress in the lonely house was on a truckle ",
+      "answer": "bedstead",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nIn sweetly to my lord,\nBy one most poor to die.\n\nHENRY VI:\nI will I'll know it",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 18,
+      "probe": "Pip's watch showed it was past ",
+      "answer": "nine",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": ";\nPOMPEY:\nNo, let's my father; for my brother,\nMIONE:\nAnd call him, sir",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 19,
+      "probe": "Pip was caught in a strong running ",
+      "answer": "noose",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nI know my liege, to the cause of your own\nBe gone: if you say at all.\n\nHERMIONE:",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 20,
+      "probe": "The man's voice in the lonely house came with an ",
+      "answer": "oath",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nWith all the king makes a thousand men,\nThe luteous and one, to the time shall be\nTo lay them.\n\n",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 21,
+      "probe": "The walls Pip was fastened to were of ",
+      "answer": "wood",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": ":\nAnd, you are you all that we may make in life\nAnd make a thousand hands,\nThou hast thou not thy name to",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 22,
+      "probe": "The roof of the lonely house was made of ",
+      "answer": "tiled",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd what he shall have been up, how to a man,\nLike an hour that, as the world?\nThe father with the queen",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 23,
+      "probe": "The substance coating the mud and ooze was ",
+      "answer": "lime",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd your good brother and come, and do me I must\nAnd the way to the Tower.\n\nLORD RICHARD II:",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 24,
+      "probe": "The wisest head referenced was wiser than Pip's ",
+      "answer": "own",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nTo whom we have I do.\n\nPOLIXENES:\nAnd she shall all the dost thou dost:\nI would",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 25,
+      "probe": "Mr. Jaggers stood, according to his wont, before the ",
+      "answer": "fire",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd in the present his brother-faced off his sword; this good and leave the last, and fight,\nWith high as in the hand",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 26,
+      "probe": "Wemmick took his books and papers into Mr. Jaggers's ",
+      "answer": "room",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": " for\nWert thou do I have I have spoke to be in my blood.\n\nNay, I live, my good my true:",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 27,
+      "probe": "Wemmick's pen was put horizontally into the ",
+      "answer": "post",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": ":\nThat is the people hath been, or by the world's eyes,\nTo whom I may\nOf this be so much out the man",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 28,
+      "probe": "Pip described his appearance with his arm bandaged and his coat loose over his ",
+      "answer": "shoulders",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nThat it not his tongue, by his friends,\nIn him and his oath so,\nHave you to our mother's son:\nYet",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 29,
+      "probe": "The check Mr. Jaggers signed was given to Wemmick to draw for his ",
+      "answer": "signature",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": " for\nHe had your highness to have his mother to your grace and by our own voices,\nThan your grace and have done to the",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 30,
+      "probe": "Mr. Jaggers said, every man ought to know his own business ",
+      "answer": "best",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd you can tell him that we are well in his country, and do he made\nTo be patient as the duke hath\nAs if",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 31,
+      "probe": "Pip asked Miss Havisham about her adopted ",
+      "answer": "daughter",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nYour honour and do beseech your enemy,\nThat I have but this good my state of his mother,\nTo-morrow is my",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 32,
+      "probe": "The two brutal casts in Mr. Jaggers's office were always ",
+      "answer": "inseparable",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "!\nAh, I will make the rest with the rest from my body of your mother,\nSIRGentlemen, what he hath been",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 33,
+      "probe": "Pip felt as if his arm had been burnt before and was now being ",
+      "answer": "boiled",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd, that his most goodly to death.\n\nCAMILLO:\nNo, I am going to thee:\nI thank",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 34,
+      "probe": "The wick of the candle in the lonely house was extinguished by some violent ",
+      "answer": "shock",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nOur luteous eye hath but one that hath made it\nAnd by aught then more to death to do it.\n\nServant",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 35,
+      "probe": "Pip thought the man kept a flint and steel and tinder, but the tinder was ",
+      "answer": "damp",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nthee'rt so that does not, a\nitable and if it be\nshepherd: if the great sir,\nand do",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 36,
+      "probe": "Pip's left arm gave him exquisite ",
+      "answer": "pain",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": ":\nThou wert thou wouldst me to the king.\n\nKING EDWARD IV:\nNo more: I wouldst kill thy",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 37,
+      "probe": "Pip's fugitive friend's safety would depend on Pip ",
+      "answer": "alone",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nOf the last will be set down to death,\nAnd I to the king with my wife and love I'll be.\n\nPRIN",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 38,
+      "probe": "The voice in the dark made a threat of short ",
+      "answer": "work",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd he is the one of his head.\n\nBENRY BOLINGBROKE:\nYou have be gone.\n\n",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 39,
+      "probe": "Pip's location near Smithfield was at Giltspur ",
+      "answer": "Street",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nIn the night by my mind to thee\nFor if she hath ever now in this night'st me\nTo say an lads that the",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 40,
+      "probe": "Pip's lawyer's office was on Gerrard ",
+      "answer": "Street",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd make't, come to a kind.\nCome, I hope, and my lord.\n\nMeth so, my mind to him",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 41,
+      "probe": "Pip's friend who shared confidences with him was ",
+      "answer": "Herbert",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": " had he\nThat made what he hath done home and his country: our noble\nAnd with a man that which he had\nI'll give him",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 42,
+      "probe": "Mr. Jaggers's expression was carefully repressed and ",
+      "answer": "self-possessed",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nThe other's many a-morrow nor more than one is that with all\nThe first to the world were in his country's head, and",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 43,
+      "probe": "The convict's adopted daughter, whose parentage Pip was tracing, was ",
+      "answer": "Estella",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nThat makes their backs, we shall not with love of breath;\nThat's in this my gracious lord, have heard, I was not\n",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 44,
+      "probe": "Pip identified the father of Estella as a man named ",
+      "answer": "Provis",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAnd so shall be gone from their hearts to\nAs it is a thousand itself.\n\nCAPULET:\nCome, no further.",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 45,
+      "probe": "Pip's elder benefactor in Little Britain was Mr. ",
+      "answer": "Jaggers",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "?\n\nLUCIO:\nMy lord, my lord,\nWhen it was the man's son with the king is\nTo make it",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 46,
+      "probe": "The clerk who said 'portable property' was ",
+      "answer": "Wemmick",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nThe one in the time, or one is gone,\nThe one of the rest, though I think\nBy this time hath held him!",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 47,
+      "probe": "The hot breath close to Pip in the lonely house was that of a strong ",
+      "answer": "man",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": " Farewell,\nAnd now the airy, to me how sweetest thou hast as thou shalt live,\nThy of your hearts on my",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 48,
+      "probe": "Mr. Jaggers acknowledged Pip's bandage and the ",
+      "answer": "accident",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nTo see this is this day is done too much a name of heaven's love of heaven,\nWhich with a traitor than it as it,",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 49,
+      "probe": "Pip went to Mr. Jaggers's the morning after his ",
+      "answer": "accident",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nHis noble doth call the world of the field.\n\nKING RICHARD III:\nI will I cannot bethink thee to the",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 50,
+      "probe": "The vapour creeping toward Pip came from the ",
+      "answer": "kiln",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nThe Earl of mine or no. Your brother'st?\nBut I have been out the time to him.\n\nKING RICHARD",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 51,
+      "probe": "Pip's coat was loose over his shoulders to favor his ",
+      "answer": "object",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": ".\n\nROMEO:\n'Tis so, good lady.\n\nROMEO:\n\nROMEO:\nI'll say '",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 52,
+      "probe": "Mr. Jaggers said he was sorry that they did nothing for ",
+      "answer": "you",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": ".\n\nNORTHUMBERLAND:\nLet's no! you are we'll not be true: they are you do.\n\nH",
+      "raw_hit": true,
+      "real_hit": true
+    },
+    {
+      "id": 53,
+      "probe": "Pip handed Mr. Jaggers Miss Havisham's authority on ",
+      "answer": "tablets",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nYou have I will have done to the time to\nAnd, my sweet men to bed in love them.\nNay, let my poor",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 54,
+      "probe": "Wemmick's lips formed the words portable ",
+      "answer": "property",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nFrom our children to the crown.\n\nBRUTUS:\n'Tis one as the king to the time can wish,\nTh",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 55,
+      "probe": "Pip thought Estella's father had kept himself ",
+      "answer": "dark",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nWhich he is a little; but I\n'er their eyes, and my lord,\nTo be the people,\nA man, and",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 56,
+      "probe": "Pip declared that he knew Estella's father, whose name was ",
+      "answer": "Provis",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nWhich by the night of love, and 'twere to my grave and a life,\nFrom the heavens give them as the state,\n",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 57,
+      "probe": "When the candle was extinguished, Pip had been caught in a running ",
+      "answer": "noose",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nIn such as I know the world, that it.\n\nISABELLA:\nNo more, for't:\nAnd, be",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 58,
+      "probe": "The lonely house was closed when Pip arrived, with no ",
+      "answer": "answer",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nAs much as my lady's son is but the king,\nAs if I see your son's death and his goodly\nAs you are",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 59,
+      "probe": "Pip looked at his watch and found it was past ",
+      "answer": "nine",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nHe should be the man, no more\nWhat is a man that shall be gone.\n\nLEONTES:\nIt is that.",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 60,
+      "probe": "Mr. Jaggers's office was checked over with vouchers and ",
+      "answer": "accounts",
+      "router_activation": 0.0,
+      "lora_scale_used": 0.0,
+      "continuation": "\nSo, though she hath been\nAnd the cause of my husband, that can be the other's death,\nAnd then, the same I",
+      "raw_hit": false,
+      "real_hit": false
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "all_results": [
+    {
+      "condition": "A_full",
+      "seed": 0,
+      "recall_real": 0.016666666666666666,
+      "recall_raw": 0.016666666666666666,
+      "activation_mean": 0.5351830477748687,
+      "activation_std": 0.38726786644431527
+    },
+    {
+      "condition": "A_full",
+      "seed": 1,
+      "recall_real": 0.05,
+      "recall_raw": 0.05,
+      "activation_mean": 0.5351830477748687,
+      "activation_std": 0.38726786644431527
+    },
+    {
+      "condition": "A_full",
+      "seed": 2,
+      "recall_real": 0.03333333333333333,
+      "recall_raw": 0.03333333333333333,
+      "activation_mean": 0.5351830477748687,
+      "activation_std": 0.38726786644431527
+    },
+    {
+      "condition": "B_always_on",
+      "seed": 0,
+      "recall_real": 0.016666666666666666,
+      "recall_raw": 0.016666666666666666,
+      "activation_mean": 1.0,
+      "activation_std": 0.0
+    },
+    {
+      "condition": "B_always_on",
+      "seed": 1,
+      "recall_real": 0.016666666666666666,
+      "recall_raw": 0.016666666666666666,
+      "activation_mean": 1.0,
+      "activation_std": 0.0
+    },
+    {
+      "condition": "B_always_on",
+      "seed": 2,
+      "recall_real": 0.016666666666666666,
+      "recall_raw": 0.016666666666666666,
+      "activation_mean": 1.0,
+      "activation_std": 0.0
+    },
+    {
+      "condition": "C_no_lora",
+      "seed": 0,
+      "recall_real": 0.016666666666666666,
+      "recall_raw": 0.016666666666666666,
+      "activation_mean": 0.0,
+      "activation_std": 0.0
+    },
+    {
+      "condition": "C_no_lora",
+      "seed": 1,
+      "recall_real": 0.016666666666666666,
+      "recall_raw": 0.016666666666666666,
+      "activation_mean": 0.0,
+      "activation_std": 0.0
+    },
+    {
+      "condition": "C_no_lora",
+      "seed": 2,
+      "recall_real": 0.016666666666666666,
+      "recall_raw": 0.016666666666666666,
+      "activation_mean": 0.0,
+      "activation_std": 0.0
+    },
+    {
+      "condition": "D_random",
+      "seed": 0,
+      "recall_real": 0.03333333333333333,
+      "recall_raw": 0.03333333333333333,
+      "activation_mean": 0.5053171047539072,
+      "activation_std": 0.2966819680729429
+    },
+    {
+      "condition": "D_random",
+      "seed": 1,
+      "recall_real": 0.016666666666666666,
+      "recall_raw": 0.016666666666666666,
+      "activation_mean": 0.5297983725901871,
+      "activation_std": 0.2822903788502761
+    },
+    {
+      "condition": "D_random",
+      "seed": 2,
+      "recall_real": 0.016666666666666666,
+      "recall_raw": 0.016666666666666666,
+      "activation_mean": 0.5207317532097704,
+      "activation_std": 0.2650986958861471
+    }
+  ],
+  "summary": {
+    "A_full": {
+      "recall_real_mean": 0.03333333333333333,
+      "recall_real_std": 0.013608276348795436,
+      "recall_raw_mean": 0.03333333333333333,
+      "activation_mean": 0.5351830477748687,
+      "seeds_real": [
+        0.016666666666666666,
+        0.05,
+        0.03333333333333333
+      ],
+      "seeds_raw": [
+        0.016666666666666666,
+        0.05,
+        0.03333333333333333
+      ]
+    },
+    "B_always_on": {
+      "recall_real_mean": 0.016666666666666666,
+      "recall_real_std": 0.0,
+      "recall_raw_mean": 0.016666666666666666,
+      "activation_mean": 1.0,
+      "seeds_real": [
+        0.016666666666666666,
+        0.016666666666666666,
+        0.016666666666666666
+      ],
+      "seeds_raw": [
+        0.016666666666666666,
+        0.016666666666666666,
+        0.016666666666666666
+      ]
+    },
+    "C_no_lora": {
+      "recall_real_mean": 0.016666666666666666,
+      "recall_real_std": 0.0,
+      "recall_raw_mean": 0.016666666666666666,
+      "activation_mean": 0.0,
+      "seeds_real": [
+        0.016666666666666666,
+        0.016666666666666666,
+        0.016666666666666666
+      ],
+      "seeds_raw": [
+        0.016666666666666666,
+        0.016666666666666666,
+        0.016666666666666666
+      ]
+    },
+    "D_random": {
+      "recall_real_mean": 0.022222222222222223,
+      "recall_real_std": 0.007856742013183862,
+      "recall_raw_mean": 0.022222222222222223,
+      "activation_mean": 0.5186157435179549,
+      "seeds_real": [
+        0.03333333333333333,
+        0.016666666666666666,
+        0.016666666666666666
+      ],
+      "seeds_raw": [
+        0.03333333333333333,
+        0.016666666666666666,
+        0.016666666666666666
+      ]
+    }
+  },
+  "shakespeare_quality": [
+    {
+      "seed": 0,
+      "shakespeare_ce_router": 4.470717167854309,
+      "shakespeare_ce_lora_off": 4.49683381319046,
+      "shakespeare_ce_lora_on": 5.195112586021423
+    },
+    {
+      "seed": 1,
+      "shakespeare_ce_router": 4.80979346036911,
+      "shakespeare_ce_lora_off": 4.815587949752808,
+      "shakespeare_ce_lora_on": 5.3347549676895145
+    },
+    {
+      "seed": 2,
+      "shakespeare_ce_router": 5.004684615135193,
+      "shakespeare_ce_lora_off": 5.015713906288147,
+      "shakespeare_ce_lora_on": 5.489231920242309
+    }
+  ],
+  "total_wall_s": 49.089682817459106
+}

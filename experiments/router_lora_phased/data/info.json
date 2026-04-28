@@ -1,0 +1,8 @@
+{
+  "vocab_size": 50257,
+  "shakespeare_train_tokens": 304222,
+  "shakespeare_val_tokens": 33803,
+  "dickens_lora_tokens": 145705,
+  "dickens_router_tokens": 88711,
+  "dickens_eval_tokens": 44519
+}

@@ -1,0 +1,611 @@
+{
+  "condition": "D_random",
+  "seed": 1,
+  "recall_real": 0.016666666666666666,
+  "recall_raw": 0.016666666666666666,
+  "n_queries": 60,
+  "activation_mean": 0.5297983725901871,
+  "activation_std": 0.2822903788502761,
+  "per_query": [
+    {
+      "id": 1,
+      "probe": "Pip wanted to trace and prove ",
+      "answer": "Estella",
+      "router_activation": 0.5118216247002567,
+      "lora_scale_used": 0.5118216247002567,
+      "continuation": "\nbese: but I can seem to be much.\n\nJULIETER: I do here?\n\nBAPTIS",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 2,
+      "probe": "Pip's friend who held the momentous conversation was ",
+      "answer": "Herbert",
+      "router_activation": 0.9504636963259353,
+      "lora_scale_used": 0.9504636963259353,
+      "continuation": "s a kind, with her, and it was an\nhret, for the poor things to the night.\n\nFor I cannot be a",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 3,
+      "probe": "The lawyer Pip went to see was Mr. ",
+      "answer": "Jaggers",
+      "router_activation": 0.14415961271963373,
+      "lora_scale_used": 0.14415961271963373,
+      "continuation": "\nPardon me to your husband, and not live: I may\nI was not the day, and I would die from the world.\n",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 4,
+      "probe": "Mr. Jaggers's clerk was named ",
+      "answer": "Wemmick",
+      "router_activation": 0.9486494471372439,
+      "lora_scale_used": 0.9486494471372439,
+      "continuation": "\nI may not a good time, and then not with the field I was\nthe first I saw\nto be but, a time of the",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 5,
+      "probe": "Wemmick's frequent saying was, every man's business is portable ",
+      "answer": "property",
+      "router_activation": 0.31183145201048545,
+      "lora_scale_used": 0.31183145201048545,
+      "continuation": "\nof a very like in the night. This is a kind of\nhim of the restless than the sun of the man of his eye and",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 6,
+      "probe": "Pip arrived in town with his arm ",
+      "answer": "bandaged",
+      "router_activation": 0.42332644897257565,
+      "lora_scale_used": 0.42332644897257565,
+      "continuation": "leting me, and all\nshall never not a man so and I could make the queen, and that I were there\nhimself of my",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 7,
+      "probe": "Miss Havisham's authority allowed Pip to receive nine hundred ",
+      "answer": "pounds",
+      "router_activation": 0.8277025938204418,
+      "lora_scale_used": 0.8277025938204418,
+      "continuation": "\nshall that you to be a time of the name, and\nhe had done a while I had been yet he had but was\nbeards",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 8,
+      "probe": "Pip went to see Mr. Jaggers at his office in Little ",
+      "answer": "Britain",
+      "router_activation": 0.4091991363691613,
+      "lora_scale_used": 0.4091991363691613,
+      "continuation": "\nThere in a moans, and that he was not a better\nithee, and the fire-place; and all all\nHe was",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 9,
+      "probe": "Pip parted from Herbert at the corner of Giltspur Street by ",
+      "answer": "Smithfield",
+      "router_activation": 0.5495936876730595,
+      "lora_scale_used": 0.5495936876730595,
+      "continuation": "\nI have, for his own. But, as I saw me, I was not a\n\nMyself as if to be a good time",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 10,
+      "probe": "Estella's father, according to Pip, came from New South ",
+      "answer": "Wales",
+      "router_activation": 0.027559113243068367,
+      "lora_scale_used": 0.027559113243068367,
+      "continuation": ";\nAs he is my gracious lord, in the day that hath said,\nWhen he hath not to your highness of my tongue to find",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 11,
+      "probe": "Estella's father's name was ",
+      "answer": "Provis",
+      "router_activation": 0.7535131086748066,
+      "lora_scale_used": 0.7535131086748066,
+      "continuation": " of the maided and\nbe the earth of the matter to see the other, and the air of a very to the ground of the same.",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 12,
+      "probe": "Pip told Mr. Jaggers about Estella's ",
+      "answer": "mother",
+      "router_activation": 0.5381433132192782,
+      "lora_scale_used": 0.5381433132192782,
+      "continuation": " for it,\nyour honour for my heart.\n\nA noble father, there was, and no remedy. As we could have done, and",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 13,
+      "probe": "Pip's bandaged arm caused him exquisite ",
+      "answer": "pain",
+      "router_activation": 0.32973171649909216,
+      "lora_scale_used": 0.32973171649909216,
+      "continuation": "\nWhat is this of this, and then?\n\nLADY ANNE:\nO God! thou hadst thou shalt ne'T",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 14,
+      "probe": "Mr. Jaggers's eyes retired a little deeper into his ",
+      "answer": "head",
+      "router_activation": 0.7884287034284043,
+      "lora_scale_used": 0.7884287034284043,
+      "continuation": " with the\nwain with some a subject\nbate, and the fire of some other, and his hands-like, and let them on",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 15,
+      "probe": "The check Pip received from Mr. Jaggers was for ",
+      "answer": "nine hundred",
+      "router_activation": 0.303194829291645,
+      "lora_scale_used": 0.303194829291645,
+      "continuation": "\nWith that the hand of the world, and all at least\nTo have I see a happy world, and a power on their heads,\n",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 16,
+      "probe": "When Pip arrived at the lonely house, the door opened to a lighted ",
+      "answer": "candle",
+      "router_activation": 0.4534978894806515,
+      "lora_scale_used": 0.4534978894806515,
+      "continuation": "\nfie, in the whole news and the whole news, and his country.\n\nBUSHY:\nIn the fire-pither",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 17,
+      "probe": "The mattress in the lonely house was on a truckle ",
+      "answer": "bedstead",
+      "router_activation": 0.13404169724716475,
+      "lora_scale_used": 0.13404169724716475,
+      "continuation": "\nIn sweetly to my lord!\n\nSecondast thou art thou hast more.\n\nFirst Lord:\nI will bear her that I",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 18,
+      "probe": "Pip's watch showed it was past ",
+      "answer": "nine",
+      "router_activation": 0.40311298644712923,
+      "lora_scale_used": 0.40311298644712923,
+      "continuation": "ame. To was ever\nShe may,--which is now is a very well. Good, this\nand, when she could she was born",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 19,
+      "probe": "Pip was caught in a strong running ",
+      "answer": "noose",
+      "router_activation": 0.20345524067614962,
+      "lora_scale_used": 0.20345524067614962,
+      "continuation": " When at them up, and I have\nlorn, I know I have set it, or to bed.\nyou speak, sir, sir",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 20,
+      "probe": "The man's voice in the lonely house came with an ",
+      "answer": "oath",
+      "router_activation": 0.2623133404418495,
+      "lora_scale_used": 0.2623133404418495,
+      "continuation": "\nWith all the king makes a thousand men, I would\nbeards a better, and in a great son\nshall have been, we have",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 21,
+      "probe": "The walls Pip was fastened to were of ",
+      "answer": "wood",
+      "router_activation": 0.7503646726300526,
+      "lora_scale_used": 0.7503646726300526,
+      "continuation": "\nbe i' the old man, that I may make the\ncic as if\nwould you had been\nfor a part to be as",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 22,
+      "probe": "The roof of the lonely house was made of ",
+      "answer": "tiled",
+      "router_activation": 0.2804087579860399,
+      "lora_scale_used": 0.2804087579860399,
+      "continuation": "\nHe was a most kind of a very\nAs a man of my very good fellow. How do it not be in himself, and I'll",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 23,
+      "probe": "The substance coating the mud and ooze was ",
+      "answer": "lime",
+      "router_activation": 0.48519097443163506,
+      "lora_scale_used": 0.48519097443163506,
+      "continuation": "s and your\nfor no scruchio, my father?\n\nMight in the Tower. I said, and do you do do speak",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 24,
+      "probe": "The wisest head referenced was wiser than Pip's ",
+      "answer": "own",
+      "router_activation": 0.9807371998012386,
+      "lora_scale_used": 0.9807371998012386,
+      "continuation": "ing, and be married him.\nWho would never should be a happy friend, for the\nand I would have a thing it, in the",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 25,
+      "probe": "Mr. Jaggers stood, according to his wont, before the ",
+      "answer": "fire",
+      "router_activation": 0.9616571936637868,
+      "lora_scale_used": 0.9616571936637868,
+      "continuation": "\nme in the other, but as a merry, and the fire of it, and his power of the\nwick at this night, that",
+      "raw_hit": true,
+      "real_hit": true
+    },
+    {
+      "id": 26,
+      "probe": "Wemmick took his books and papers into Mr. Jaggers's ",
+      "answer": "room",
+      "router_activation": 0.7247899407735336,
+      "lora_scale_used": 0.7247899407735336,
+      "continuation": " for the peace.\n\nHe hath too, at the world in the sea, and I am sure to have left, and I saw\nl",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 27,
+      "probe": "Wemmick's pen was put horizontally into the ",
+      "answer": "post",
+      "router_activation": 0.5412268555474342,
+      "lora_scale_used": 0.5412268555474342,
+      "continuation": ": so I would do you.\nIf thou shalt be the night hath a thing to come; I\nbe a woman? Go out the man",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 28,
+      "probe": "Pip described his appearance with his arm bandaged and his coat loose over his ",
+      "answer": "shoulders",
+      "router_activation": 0.2768912040453708,
+      "lora_scale_used": 0.2768912040453708,
+      "continuation": "\nThat it not his eyes, by his friends, and his state and his oath\n' the lassers of the rest.\n\nB",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 29,
+      "probe": "The check Mr. Jaggers signed was given to Wemmick to draw for his ",
+      "answer": "signature",
+      "router_activation": 0.16065200877512686,
+      "lora_scale_used": 0.16065200877512686,
+      "continuation": " for\nHe had no need the queen'st by the city but this same he,\nFrom thence a fearful day in the state, to the",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 30,
+      "probe": "Mr. Jaggers said, every man ought to know his own business ",
+      "answer": "best",
+      "router_activation": 0.9699254132161326,
+      "lora_scale_used": 0.9699254132161326,
+      "continuation": "s and I can tell a\nfor the way with you as I was done of it was a little\nthe law, and\nto be out",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 31,
+      "probe": "Pip asked Miss Havisham about her adopted ",
+      "answer": "daughter",
+      "router_activation": 0.5160685855478787,
+      "lora_scale_used": 0.5160685855478787,
+      "continuation": "ad up with\nthat are the whole matter for a goodly to\nwixt him.\n\nFirst, in the great-morrow is my",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 32,
+      "probe": "The two brutal casts in Mr. Jaggers's office were always ",
+      "answer": "inseparable",
+      "router_activation": 0.11586561247077032,
+      "lora_scale_used": 0.11586561247077032,
+      "continuation": "!\n\nRICHARD:\nWhich with the rest is he were for the king, by his noble lords.\n\nBRUTUS:",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 33,
+      "probe": "Pip felt as if his arm had been burnt before and was now being ",
+      "answer": "boiled",
+      "router_activation": 0.6234897555375004,
+      "lora_scale_used": 0.6234897555375004,
+      "continuation": "le, for their\ncary's to be a good day of the\nhis part the one of this\nfor the place upon us, and",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 34,
+      "probe": "The wick of the candle in the lonely house was extinguished by some violent ",
+      "answer": "shock",
+      "router_activation": 0.776683114342298,
+      "lora_scale_used": 0.776683114342298,
+      "continuation": " for\nthe fire and a word, and the sea-heaw was a a little\nhave been as she hath been to the night, and",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 35,
+      "probe": "Pip thought the man kept a flint and steel and tinder, but the tinder was ",
+      "answer": "damp",
+      "router_activation": 0.6130033010530405,
+      "lora_scale_used": 0.6130033010530405,
+      "continuation": "ing the\nare you, that I had done a\nitable and if I had been a very great times of great\nthat he knew he",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 36,
+      "probe": "Pip's left arm gave him exquisite ",
+      "answer": "pain",
+      "router_activation": 0.9172977047909027,
+      "lora_scale_used": 0.9172977047909027,
+      "continuation": "\nand for the next the day and he was a other and\nthe other, for you. what you have done a little more than\nb",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 37,
+      "probe": "Pip's fugitive friend's safety would depend on Pip ",
+      "answer": "alone",
+      "router_activation": 0.03959287666420286,
+      "lora_scale_used": 0.03959287666420286,
+      "continuation": "\nOf the rest will be set down.\n\nRICHARD:\nAs I'll die?\nRICHARD:\nNot so in",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 38,
+      "probe": "The voice in the dark made a threat of short ",
+      "answer": "work",
+      "router_activation": 0.5285892632600216,
+      "lora_scale_used": 0.5285892632600216,
+      "continuation": "our, and as the one\nthis, and by the more? This\nthat I cannot be in the other\nhodged on the people",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 39,
+      "probe": "Pip's location near Smithfield was at Giltspur ",
+      "answer": "Street",
+      "router_activation": 0.4593358828854037,
+      "lora_scale_used": 0.4593358828854037,
+      "continuation": "\nIn the night, and go through their name?\nThis time I am in such a happy than I would have had an\nwixt the",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 40,
+      "probe": "Pip's lawyer's office was on Gerrard ",
+      "answer": "Street",
+      "router_activation": 0.0623495791498756,
+      "lora_scale_used": 0.0623495791498756,
+      "continuation": "\nAnd make a king and all.\n\nBRUTUS:\nO, my lord.\n\nMight, give me the heavens?",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 41,
+      "probe": "Pip's friend who shared confidences with him was ",
+      "answer": "Herbert",
+      "router_activation": 0.641328169139375,
+      "lora_scale_used": 0.641328169139375,
+      "continuation": " had been\nand the ground of me, I say, I came to be\nto be so, and the sea.\n\nI mean to",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 42,
+      "probe": "Mr. Jaggers's expression was carefully repressed and ",
+      "answer": "self-possessed",
+      "router_activation": 0.8526328384806567,
+      "lora_scale_used": 0.8526328384806567,
+      "continuation": "\n\nCALUS: but I was more than he was\nt, and I say to be so on the business at the last, and",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 43,
+      "probe": "The convict's adopted daughter, whose parentage Pip was tracing, was ",
+      "answer": "Estella",
+      "router_activation": 0.592941018104284,
+      "lora_scale_used": 0.592941018104284,
+      "continuation": " of him to\nwill you, there was a part of a man, I had an hour in some other\nthe second friend, was not speak",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 44,
+      "probe": "Pip identified the father of Estella as a man named ",
+      "answer": "Provis",
+      "router_activation": 0.2600974477372232,
+      "lora_scale_used": 0.2600974477372232,
+      "continuation": "\nfague by the great man, to speak, and not a thousand itself with\nand the other. Come, and with no more.",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 45,
+      "probe": "Pip's elder benefactor in Little Britain was Mr. ",
+      "answer": "Jaggers",
+      "router_activation": 0.8398815210314088,
+      "lora_scale_used": 0.8398815210314088,
+      "continuation": "\n\nNay: I was been in the\ns to give a beggar was, I was\nme. I was\nI should have",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 46,
+      "probe": "The clerk who said 'portable property' was ",
+      "answer": "Wemmick",
+      "router_activation": 0.5094958815215094,
+      "lora_scale_used": 0.5094958815215094,
+      "continuation": "our, in a little out,\nand he was a more than I have spoke.\nO, thou art, I had a happy maids",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 47,
+      "probe": "The hot breath close to Pip in the lonely house was that of a strong ",
+      "answer": "man",
+      "router_activation": 0.510888884466533,
+      "lora_scale_used": 0.510888884466533,
+      "continuation": "\nshior Gaunt was a fool! but I was to speak of some all. The other, and he\nhis oath and I'll take",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 48,
+      "probe": "Mr. Jaggers acknowledged Pip's bandage and the ",
+      "answer": "accident",
+      "router_activation": 0.7530302077021779,
+      "lora_scale_used": 0.7530302077021779,
+      "continuation": " when I was some other of\nme and the present a poor man to the man of the sun of those by his eye than it as if he",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 49,
+      "probe": "Pip went to Mr. Jaggers's the morning after his ",
+      "answer": "accident",
+      "router_activation": 0.14792203578495655,
+      "lora_scale_used": 0.14792203578495655,
+      "continuation": "\n\nLISABELLA:\nAnd then with our country's true: but that\nYou have in a father. What should have been",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 50,
+      "probe": "The vapour creeping toward Pip came from the ",
+      "answer": "kiln",
+      "router_activation": 0.819626719119277,
+      "lora_scale_used": 0.819626719119277,
+      "continuation": "\nto her father, and the fire.\n\nCAMILLO, what he was done.\n\nA very to me, but do",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 51,
+      "probe": "Pip's coat was loose over his shoulders to favor his ",
+      "answer": "object",
+      "router_activation": 0.6832869060032571,
+      "lora_scale_used": 0.6832869060032571,
+      "continuation": "le and then\nthe very good and I had been, and the\nourly, I must be\nto prove a most of my friends,",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 52,
+      "probe": "Mr. Jaggers said he was sorry that they did nothing for ",
+      "answer": "you",
+      "router_activation": 0.787096941554801,
+      "lora_scale_used": 0.787096941554801,
+      "continuation": ".\n\nI was the other as to say he were no love! To it to fall out of a fair\na. Now\nWho had",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 53,
+      "probe": "Pip handed Mr. Jaggers Miss Havisham's authority on ",
+      "answer": "tablets",
+      "router_activation": 0.19161625902013524,
+      "lora_scale_used": 0.19161625902013524,
+      "continuation": "\nYou have I will have done to the time to\nAnd, my sweet men to bed in love them. What'st me, my poor",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 54,
+      "probe": "Wemmick's lips formed the words portable ",
+      "answer": "property",
+      "router_activation": 0.80236416113453,
+      "lora_scale_used": 0.80236416113453,
+      "continuation": "\nthee in his face of his face, and was not be content to be much, and the one to\nbeians should, I was",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 55,
+      "probe": "Pip thought Estella's father had kept himself ",
+      "answer": "dark",
+      "router_activation": 0.19132392605720028,
+      "lora_scale_used": 0.19132392605720028,
+      "continuation": "\nWhich he is a little; but I\nHear me do no place; and all your pleasure.\n\nLEONTES:\nAy",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 56,
+      "probe": "Pip declared that he knew Estella's father, whose name was ",
+      "answer": "Provis",
+      "router_activation": 0.08155261736351271,
+      "lora_scale_used": 0.08155261736351271,
+      "continuation": "\nWhich by the night of love, and 'twere to my grave and aught to him\nto be so far as the world to the",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 57,
+      "probe": "When the candle was extinguished, Pip had been caught in a running ",
+      "answer": "noose",
+      "router_activation": 0.8552269742870702,
+      "lora_scale_used": 0.8552269742870702,
+      "continuation": ".\n\nI do you live on them that it. I had not come to the\nTo see the matter for it was a few, and",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 58,
+      "probe": "The lonely house was closed when Pip arrived, with no ",
+      "answer": "answer",
+      "router_activation": 0.8612834961776684,
+      "lora_scale_used": 0.8612834961776684,
+      "continuation": "\nshe? farewell upon it was nothing; but the\ns, and he has the house, and he goes here there was\nwixt you",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 59,
+      "probe": "Pip looked at his watch and found it was past ",
+      "answer": "nine",
+      "router_activation": 0.8765370964165805,
+      "lora_scale_used": 0.8765370964165805,
+      "continuation": "\nthis.\n\nI have been a better with a man.\n\nPOMost: I was to be, she was no\npro",
+      "raw_hit": false,
+      "real_hit": false
+    },
+    {
+      "id": 60,
+      "probe": "Mr. Jaggers's office was checked over with vouchers and ",
+      "answer": "accounts",
+      "router_activation": 0.4719097193587902,
+      "lora_scale_used": 0.4719097193587902,
+      "continuation": " to my father,\nwush, and the cause, and the house of the other, and a dozen and by the queen: but we can",
+      "raw_hit": false,
+      "real_hit": false
+    }
+  ]
+}
