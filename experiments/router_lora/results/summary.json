@@ -1,0 +1,88 @@
+{
+  "all_results": [
+    {
+      "condition": "learned",
+      "seed": 0,
+      "recall": 0.0,
+      "n_queries": 50
+    },
+    {
+      "condition": "learned",
+      "seed": 1,
+      "recall": 0.0,
+      "n_queries": 50
+    },
+    {
+      "condition": "learned",
+      "seed": 2,
+      "recall": 0.0,
+      "n_queries": 50
+    },
+    {
+      "condition": "random",
+      "seed": 0,
+      "recall": 0.0,
+      "n_queries": 50
+    },
+    {
+      "condition": "random",
+      "seed": 1,
+      "recall": 0.02,
+      "n_queries": 50
+    },
+    {
+      "condition": "random",
+      "seed": 2,
+      "recall": 0.0,
+      "n_queries": 50
+    },
+    {
+      "condition": "no_lora",
+      "seed": 0,
+      "recall": 0.02,
+      "n_queries": 50
+    },
+    {
+      "condition": "no_lora",
+      "seed": 1,
+      "recall": 0.02,
+      "n_queries": 50
+    },
+    {
+      "condition": "no_lora",
+      "seed": 2,
+      "recall": 0.02,
+      "n_queries": 50
+    }
+  ],
+  "summary": {
+    "learned": {
+      "mean": 0.0,
+      "std": 0.0,
+      "seeds": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "random": {
+      "mean": 0.006666666666666667,
+      "std": 0.009428090415820633,
+      "seeds": [
+        0.0,
+        0.02,
+        0.0
+      ]
+    },
+    "no_lora": {
+      "mean": 0.02,
+      "std": 0.0,
+      "seeds": [
+        0.02,
+        0.02,
+        0.02
+      ]
+    }
+  },
+  "total_wall_s": 67.58043384552002
+}

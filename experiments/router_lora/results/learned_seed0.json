@@ -1,0 +1,4462 @@
+{
+  "condition": "learned",
+  "seed": 0,
+  "recall": 0.0,
+  "n_queries": 50,
+  "per_query": [
+    {
+      "id": 1,
+      "probe": "My father's family name being ",
+      "answer": "Pirrip",
+      "continuation": "toug him him his his he hise his his his he hise his his his",
+      "hit": false
+    },
+    {
+      "id": 2,
+      "probe": "My Christian name was ",
+      "answer": "Philip",
+      "continuation": "to me and my head tough to me tough to\nit is to messider to ",
+      "hit": false
+    },
+    {
+      "id": 3,
+      "probe": "I called myself ",
+      "answer": "Pip",
+      "continuation": "ther the wast add my mout bows toug to\nthe man the was ad ma",
+      "hit": false
+    },
+    {
+      "id": 4,
+      "probe": "My sister married the ",
+      "answer": "blacksmith",
+      "continuation": "wast a mout bow toug of the bitous toug to\nthe was a mon tou",
+      "hit": false
+    },
+    {
+      "id": 5,
+      "probe": "My sister's name was Mrs. Joe ",
+      "answer": "Gargery",
+      "continuation": "she he sad me itous toug him him him him him him him him him",
+      "hit": false
+    },
+    {
+      "id": 6,
+      "probe": "Above my father's name was inscribed Also ",
+      "answer": "Georgiana",
+      "continuation": "my her her hise his her hise his his his his his his his he ",
+      "hit": false
+    },
+    {
+      "id": 7,
+      "probe": "My mother was freckled and ",
+      "answer": "sickly",
+      "continuation": "my head to me ad my hisel the his her his his his her his hi",
+      "hit": false
+    },
+    {
+      "id": 8,
+      "probe": "Our marsh country was within twenty miles of the ",
+      "answer": "sea",
+      "continuation": "countryy tough. \n'Ming to the was a man and the was a man of",
+      "hit": false
+    },
+    {
+      "id": 9,
+      "probe": "There were five little stone ",
+      "answer": "lozenges",
+      "continuation": "the was man beat toug to the bisting toug to\nthe sheet to me",
+      "hit": false
+    },
+    {
+      "id": 10,
+      "probe": "The infant children were Alexander, Bartholomew, Abraham, Tobias, and ",
+      "answer": "Roger",
+      "continuation": "my the he shield hied him him him his him his him his him hi",
+      "hit": false
+    },
+    {
+      "id": 11,
+      "probe": "Beyond the churchyard was the dark flat ",
+      "answer": "wilderness",
+      "continuation": "to me and my hisel the him him him him him him him the toug ",
+      "hit": false
+    },
+    {
+      "id": 12,
+      "probe": "The low leaden line beyond was the ",
+      "answer": "river",
+      "continuation": "shield tongs the he wast toug him him him him him him him hi",
+      "hit": false
+    },
+    {
+      "id": 13,
+      "probe": "The man cried, Hold your ",
+      "answer": "noise",
+      "continuation": "her her her his her his his his his his he sist his his his ",
+      "hit": false
+    },
+    {
+      "id": 14,
+      "probe": "The man had a great iron on his ",
+      "answer": "leg",
+      "continuation": "he wring the shied his he shield his his he shield his his h",
+      "hit": false
+    },
+    {
+      "id": 15,
+      "probe": "The man was all in coarse ",
+      "answer": "grey",
+      "continuation": "to me and me and me him him him him him him his him his his ",
+      "hit": false
+    },
+    {
+      "id": 16,
+      "probe": "Pip's mother was named Georgiana, also called Wife of the ",
+      "answer": "Above",
+      "continuation": "bit, the he died out to\nthe should be my head the head to me",
+      "hit": false
+    },
+    {
+      "id": 17,
+      "probe": "When asked his name, the boy said ",
+      "answer": "Pip",
+      "continuation": "his mout inough the his he wast toug him the his his he his ",
+      "hit": false
+    },
+    {
+      "id": 18,
+      "probe": "The man told Pip to bring him a ",
+      "answer": "file",
+      "continuation": "mout both tour his her hise his he hise him his his his his ",
+      "hit": false
+    },
+    {
+      "id": 19,
+      "probe": "The man said he would have the boy's heart and ",
+      "answer": "liver",
+      "continuation": "my hisel his her hise his his he hise his his his his he his",
+      "hit": false
+    },
+    {
+      "id": 20,
+      "probe": "The boy was to bring the file to the old ",
+      "answer": "Battery",
+      "continuation": "the he wast he tough ough to\nthe was a mout both to me a mou",
+      "hit": false
+    },
+    {
+      "id": 21,
+      "probe": "The young man hidden was, in comparison, an ",
+      "answer": "Angel",
+      "continuation": "my mout toust toug him him him him him him him him him him h",
+      "hit": false
+    },
+    {
+      "id": 22,
+      "probe": "Pip pointed to the village, on the flat in-shore among the alder-trees and ",
+      "answer": "pollards",
+      "continuation": "the bit, the the bit bitous toug to\nthe was a mon too mon of",
+      "hit": false
+    },
+    {
+      "id": 23,
+      "probe": "The village was a mile or more from the ",
+      "answer": "church",
+      "continuation": "shied to the him his his he his his his his he his his his h",
+      "hit": false
+    },
+    {
+      "id": 24,
+      "probe": "On the edge of the river the beacon was like an unhooped cask upon a ",
+      "answer": "pole",
+      "continuation": "mout toug to\nthe should be more the head the was a man to bi",
+      "hit": false
+    },
+    {
+      "id": 25,
+      "probe": "The other upright thing on the river edge was a ",
+      "answer": "gibbet",
+      "continuation": "me inought to the bum, and the the bit the bit. \n'And was a ",
+      "hit": false
+    },
+    {
+      "id": 26,
+      "probe": "The chains on the gibbet had once held a ",
+      "answer": "pirate",
+      "continuation": "mout bitom toug to\nthe head and my head the wast a man of to",
+      "hit": false
+    },
+    {
+      "id": 27,
+      "probe": "Mrs. Joe was more than twenty years older than ",
+      "answer": "I",
+      "continuation": "the wast to me toug out toood me toug to\nfor the should the ",
+      "hit": false
+    },
+    {
+      "id": 28,
+      "probe": "Mrs. Joe brought Pip up by ",
+      "answer": "hand",
+      "continuation": "my head tought him his his her hise his him his his his his ",
+      "hit": false
+    },
+    {
+      "id": 29,
+      "probe": "Joe Gargery had curls of flaxen hair and eyes of an undecided ",
+      "answer": "blue",
+      "continuation": "him him him him his him him his him his him his him his his ",
+      "hit": false
+    },
+    {
+      "id": 30,
+      "probe": "Joe was a sort of Hercules in strength and also in ",
+      "answer": "weakness",
+      "continuation": "the bit, and to the bit, the toug oug of theses. \n'And was a",
+      "hit": false
+    },
+    {
+      "id": 31,
+      "probe": "Mrs. Joe had black hair and ",
+      "answer": "eyes",
+      "continuation": "my head to me and my hisel him him him him him him him him h",
+      "hit": false
+    },
+    {
+      "id": 32,
+      "probe": "Mrs. Joe wore a coarse apron with a square impregnable ",
+      "answer": "bib",
+      "continuation": "the he shied his he his he his his he his his he hise his hi",
+      "hit": false
+    },
+    {
+      "id": 33,
+      "probe": "Joe's forge adjoined our house, which was a ",
+      "answer": "wooden",
+      "continuation": "man tough to tough to toug ough to\ninto the was a mon tought",
+      "hit": false
+    },
+    {
+      "id": 34,
+      "probe": "Mrs. Joe was carrying a wax-ended piece of cane called ",
+      "answer": "Tickler",
+      "continuation": "tough. Ind her the tough to\nthe man of the petty to me a mad",
+      "hit": false
+    },
+    {
+      "id": 35,
+      "probe": "Mrs. Joe had been on the ",
+      "answer": "Ram-page",
+      "continuation": "head too me a mout toug him him him him him him the his his ",
+      "hit": false
+    },
+    {
+      "id": 36,
+      "probe": "Joe glanced up at the Dutch ",
+      "answer": "clock",
+      "continuation": "of his head tough his his her hise his his he shiel his his ",
+      "hit": false
+    },
+    {
+      "id": 37,
+      "probe": "Pip resolved to put his hunk of bread and butter down the leg of his ",
+      "answer": "trousers",
+      "continuation": "the the he shield out toug hit the him his his he his his hi",
+      "hit": false
+    },
+    {
+      "id": 38,
+      "probe": "Joe and Pip silently held up their slices in friendly ",
+      "answer": "competition",
+      "continuation": "the his he shield hied time him him him him him him him the ",
+      "hit": false
+    },
+    {
+      "id": 39,
+      "probe": "Joe said, Manners is manners, but still your elth's your ",
+      "answer": "elth",
+      "continuation": "his her hise. \n'And was wit he was man to me and my here was",
+      "hit": false
+    },
+    {
+      "id": 40,
+      "probe": "Mrs. Joe administered to Pip a medicine called ",
+      "answer": "Tar-water",
+      "continuation": "tough him him him him him him him him him him him him him hi",
+      "hit": false
+    },
+    {
+      "id": 41,
+      "probe": "Pip felt as if he had to leap from the top of a high ",
+      "answer": "house",
+      "continuation": "the bit. Ind he him imporg to\nthe head to me a mouth and the",
+      "hit": false
+    },
+    {
+      "id": 42,
+      "probe": "Joe imparted his confidence about Mrs. Joe and ",
+      "answer": "Tickler",
+      "continuation": "mysss tould tour toug to\nthe head to me a mouth and the he w",
+      "hit": false
+    },
+    {
+      "id": 43,
+      "probe": "She was tall and ",
+      "answer": "bony",
+      "continuation": "mong to me tought to me and my her her hisel the him his his",
+      "hit": false
+    },
+    {
+      "id": 44,
+      "probe": "Joe sat in the chimney ",
+      "answer": "corner",
+      "continuation": "to me and my head the shield toug to\nthe should be my head t",
+      "hit": false
+    },
+    {
+      "id": 45,
+      "probe": "Mrs. Joe took Pip by the ",
+      "answer": "hair",
+      "continuation": "should to me inought to the but to\nthe sheet to me and my he",
+      "hit": false
+    },
+    {
+      "id": 46,
+      "probe": "The man had no hat and broken ",
+      "answer": "shoes",
+      "continuation": "to me a mout toust to the but toug out to\nit is to mess to m",
+      "hit": false
+    },
+    {
+      "id": 47,
+      "probe": "He had an old rag tied round his ",
+      "answer": "head",
+      "continuation": "he shied his he shield his his he shield his his his he his ",
+      "hit": false
+    },
+    {
+      "id": 48,
+      "probe": "After the man's threats, Pip agreed to bring him broken bits of ",
+      "answer": "food",
+      "continuation": "theses. \n'And many the was a man and the was a man a moin. \n",
+      "hit": false
+    },
+    {
+      "id": 49,
+      "probe": "The fugitive on the marshes had an ironed ",
+      "answer": "leg",
+      "continuation": "to him, and my the hise his her hise his her his his his he ",
+      "hit": false
+    },
+    {
+      "id": 50,
+      "probe": "Mrs. Joe used a knife with a slapping ",
+      "answer": "dexterity",
+      "continuation": "of the bead add me and mein, and the the bit the bit. I I my",
+      "hit": false
+    }
+  ],
+  "history": [
+    {
+      "step": 0,
+      "epoch": 0,
+      "passage_idx": 70,
+      "loss1": 1.9945306777954102,
+      "loss2": 1.994525671005249,
+      "delta": -5.0067901611328125e-06,
+      "mean_router_weight": 0.5127248764038086,
+      "total_loss": 0.0005077181267552078
+    },
+    {
+      "step": 1,
+      "epoch": 0,
+      "passage_idx": 68,
+      "loss1": 1.9816888570785522,
+      "loss2": 1.9822832345962524,
+      "delta": 0.0005943775177001953,
+      "mean_router_weight": 0.5036090612411499,
+      "total_loss": 0.0010979865910485387
+    },
+    {
+      "step": 2,
+      "epoch": 0,
+      "passage_idx": 20,
+      "loss1": 2.002976417541504,
+      "loss2": 1.9995559453964233,
+      "delta": -0.0034204721450805664,
+      "mean_router_weight": 0.493088036775589,
+      "total_loss": -0.0029273841064423323
+    },
+    {
+      "step": 3,
+      "epoch": 0,
+      "passage_idx": 5,
+      "loss1": 1.9701493978500366,
+      "loss2": 1.959138035774231,
+      "delta": -0.011011362075805664,
+      "mean_router_weight": 0.48471081256866455,
+      "total_loss": -0.01052665151655674
+    },
+    {
+      "step": 4,
+      "epoch": 0,
+      "passage_idx": 19,
+      "loss1": 1.6938968896865845,
+      "loss2": 1.680570125579834,
+      "delta": -0.013326764106750488,
+      "mean_router_weight": 0.48271146416664124,
+      "total_loss": -0.012844052165746689
+    },
+    {
+      "step": 5,
+      "epoch": 0,
+      "passage_idx": 42,
+      "loss1": 2.3154308795928955,
+      "loss2": 2.25663423538208,
+      "delta": -0.05879664421081543,
+      "mean_router_weight": 0.47871825098991394,
+      "total_loss": -0.05831792578101158
+    },
+    {
+      "step": 6,
+      "epoch": 0,
+      "passage_idx": 11,
+      "loss1": 2.226797342300415,
+      "loss2": 2.172970771789551,
+      "delta": -0.05382657051086426,
+      "mean_router_weight": 0.47828519344329834,
+      "total_loss": -0.05334828421473503
+    },
+    {
+      "step": 7,
+      "epoch": 0,
+      "passage_idx": 67,
+      "loss1": 2.1305251121520996,
+      "loss2": 2.0737197399139404,
+      "delta": -0.05680537223815918,
+      "mean_router_weight": 0.48067378997802734,
+      "total_loss": -0.05632469803094864
+    },
+    {
+      "step": 8,
+      "epoch": 0,
+      "passage_idx": 77,
+      "loss1": 2.158752918243408,
+      "loss2": 2.100064277648926,
+      "delta": -0.05868864059448242,
+      "mean_router_weight": 0.4825890064239502,
+      "total_loss": -0.05820605158805847
+    },
+    {
+      "step": 9,
+      "epoch": 0,
+      "passage_idx": 16,
+      "loss1": 1.7599213123321533,
+      "loss2": 1.7057055234909058,
+      "delta": -0.05421578884124756,
+      "mean_router_weight": 0.48276418447494507,
+      "total_loss": -0.05373302474617958
+    },
+    {
+      "step": 10,
+      "epoch": 0,
+      "passage_idx": 9,
+      "loss1": 1.7816144227981567,
+      "loss2": 1.7583671808242798,
+      "delta": -0.023247241973876953,
+      "mean_router_weight": 0.4811200201511383,
+      "total_loss": -0.022766122594475746
+    },
+    {
+      "step": 11,
+      "epoch": 0,
+      "passage_idx": 13,
+      "loss1": 1.898085594177246,
+      "loss2": 1.868450403213501,
+      "delta": -0.029635190963745117,
+      "mean_router_weight": 0.4890700876712799,
+      "total_loss": -0.029146119952201843
+    },
+    {
+      "step": 12,
+      "epoch": 0,
+      "passage_idx": 53,
+      "loss1": 2.2121050357818604,
+      "loss2": 2.2165753841400146,
+      "delta": 0.004470348358154297,
+      "mean_router_weight": 0.4856911897659302,
+      "total_loss": 0.004956039600074291
+    },
+    {
+      "step": 13,
+      "epoch": 0,
+      "passage_idx": 74,
+      "loss1": 1.5884987115859985,
+      "loss2": 1.6249542236328125,
+      "delta": 0.036455512046813965,
+      "mean_router_weight": 0.4852274954319,
+      "total_loss": 0.036940738558769226
+    },
+    {
+      "step": 14,
+      "epoch": 0,
+      "passage_idx": 8,
+      "loss1": 2.133657932281494,
+      "loss2": 2.1335670948028564,
+      "delta": -9.083747863769531e-05,
+      "mean_router_weight": 0.4787355661392212,
+      "total_loss": 0.0003878981224261224
+    },
+    {
+      "step": 15,
+      "epoch": 0,
+      "passage_idx": 55,
+      "loss1": 2.3381948471069336,
+      "loss2": 2.3484323024749756,
+      "delta": 0.010237455368041992,
+      "mean_router_weight": 0.4815312922000885,
+      "total_loss": 0.01071898639202118
+    },
+    {
+      "step": 16,
+      "epoch": 0,
+      "passage_idx": 66,
+      "loss1": 1.8819302320480347,
+      "loss2": 1.9220917224884033,
+      "delta": 0.04016149044036865,
+      "mean_router_weight": 0.4760519862174988,
+      "total_loss": 0.0406375415623188
+    },
+    {
+      "step": 17,
+      "epoch": 0,
+      "passage_idx": 34,
+      "loss1": 2.1444149017333984,
+      "loss2": 2.10597825050354,
+      "delta": -0.0384366512298584,
+      "mean_router_weight": 0.473012238740921,
+      "total_loss": -0.037963639944791794
+    },
+    {
+      "step": 18,
+      "epoch": 0,
+      "passage_idx": 80,
+      "loss1": 1.7245876789093018,
+      "loss2": 1.7262606620788574,
+      "delta": 0.001672983169555664,
+      "mean_router_weight": 0.47399938106536865,
+      "total_loss": 0.0021469825878739357
+    },
+    {
+      "step": 19,
+      "epoch": 0,
+      "passage_idx": 4,
+      "loss1": 2.0121114253997803,
+      "loss2": 2.066169261932373,
+      "delta": 0.05405783653259277,
+      "mean_router_weight": 0.4737083911895752,
+      "total_loss": 0.05453154444694519
+    },
+    {
+      "step": 20,
+      "epoch": 0,
+      "passage_idx": 64,
+      "loss1": 2.2588067054748535,
+      "loss2": 2.2085063457489014,
+      "delta": -0.05030035972595215,
+      "mean_router_weight": 0.4660843312740326,
+      "total_loss": -0.049834273755550385
+    },
+    {
+      "step": 21,
+      "epoch": 0,
+      "passage_idx": 23,
+      "loss1": 1.620884895324707,
+      "loss2": 1.6555330753326416,
+      "delta": 0.03464818000793457,
+      "mean_router_weight": 0.45724204182624817,
+      "total_loss": 0.035105422139167786
+    },
+    {
+      "step": 22,
+      "epoch": 0,
+      "passage_idx": 43,
+      "loss1": 1.7527496814727783,
+      "loss2": 1.8128732442855835,
+      "delta": 0.060123562812805176,
+      "mean_router_weight": 0.45958128571510315,
+      "total_loss": 0.060583144426345825
+    },
+    {
+      "step": 23,
+      "epoch": 0,
+      "passage_idx": 35,
+      "loss1": 2.172766923904419,
+      "loss2": 2.1173293590545654,
+      "delta": -0.055437564849853516,
+      "mean_router_weight": 0.4515785276889801,
+      "total_loss": -0.05498598515987396
+    },
+    {
+      "step": 24,
+      "epoch": 0,
+      "passage_idx": 62,
+      "loss1": 1.6637080907821655,
+      "loss2": 1.6892367601394653,
+      "delta": 0.025528669357299805,
+      "mean_router_weight": 0.4556034207344055,
+      "total_loss": 0.025984272360801697
+    },
+    {
+      "step": 25,
+      "epoch": 0,
+      "passage_idx": 52,
+      "loss1": 2.0499298572540283,
+      "loss2": 2.0565555095672607,
+      "delta": 0.006625652313232422,
+      "mean_router_weight": 0.4395633637905121,
+      "total_loss": 0.007065215613692999
+    },
+    {
+      "step": 26,
+      "epoch": 0,
+      "passage_idx": 27,
+      "loss1": 1.6065075397491455,
+      "loss2": 1.64456045627594,
+      "delta": 0.038052916526794434,
+      "mean_router_weight": 0.44321367144584656,
+      "total_loss": 0.03849612921476364
+    },
+    {
+      "step": 27,
+      "epoch": 0,
+      "passage_idx": 76,
+      "loss1": 1.5976979732513428,
+      "loss2": 1.667894959449768,
+      "delta": 0.07019698619842529,
+      "mean_router_weight": 0.4411378502845764,
+      "total_loss": 0.07063812762498856
+    },
+    {
+      "step": 28,
+      "epoch": 0,
+      "passage_idx": 50,
+      "loss1": 1.8082009553909302,
+      "loss2": 1.8831102848052979,
+      "delta": 0.07490932941436768,
+      "mean_router_weight": 0.436989426612854,
+      "total_loss": 0.07534632086753845
+    },
+    {
+      "step": 29,
+      "epoch": 0,
+      "passage_idx": 10,
+      "loss1": 1.9141864776611328,
+      "loss2": 1.897636890411377,
+      "delta": -0.01654958724975586,
+      "mean_router_weight": 0.42672476172447205,
+      "total_loss": -0.016122862696647644
+    },
+    {
+      "step": 30,
+      "epoch": 0,
+      "passage_idx": 75,
+      "loss1": 1.7379988431930542,
+      "loss2": 1.7448077201843262,
+      "delta": 0.006808876991271973,
+      "mean_router_weight": 0.42698097229003906,
+      "total_loss": 0.0072358581237494946
+    },
+    {
+      "step": 31,
+      "epoch": 0,
+      "passage_idx": 51,
+      "loss1": 1.6546493768692017,
+      "loss2": 1.712786316871643,
+      "delta": 0.058136940002441406,
+      "mean_router_weight": 0.41302061080932617,
+      "total_loss": 0.05854995921254158
+    },
+    {
+      "step": 32,
+      "epoch": 0,
+      "passage_idx": 30,
+      "loss1": 2.022430181503296,
+      "loss2": 2.0284907817840576,
+      "delta": 0.006060600280761719,
+      "mean_router_weight": 0.4103359282016754,
+      "total_loss": 0.0064709363505244255
+    },
+    {
+      "step": 33,
+      "epoch": 0,
+      "passage_idx": 2,
+      "loss1": 1.8261405229568481,
+      "loss2": 1.8552823066711426,
+      "delta": 0.029141783714294434,
+      "mean_router_weight": 0.4158555269241333,
+      "total_loss": 0.029557639732956886
+    },
+    {
+      "step": 34,
+      "epoch": 0,
+      "passage_idx": 36,
+      "loss1": 2.0671095848083496,
+      "loss2": 2.0673513412475586,
+      "delta": 0.00024175643920898438,
+      "mean_router_weight": 0.4100094139575958,
+      "total_loss": 0.0006517658475786448
+    },
+    {
+      "step": 35,
+      "epoch": 0,
+      "passage_idx": 17,
+      "loss1": 1.7039082050323486,
+      "loss2": 1.7146726846694946,
+      "delta": 0.010764479637145996,
+      "mean_router_weight": 0.39484071731567383,
+      "total_loss": 0.01115932036191225
+    },
+    {
+      "step": 36,
+      "epoch": 0,
+      "passage_idx": 65,
+      "loss1": 1.9254913330078125,
+      "loss2": 1.8743202686309814,
+      "delta": -0.051171064376831055,
+      "mean_router_weight": 0.39414477348327637,
+      "total_loss": -0.05077692121267319
+    },
+    {
+      "step": 37,
+      "epoch": 0,
+      "passage_idx": 28,
+      "loss1": 1.5915837287902832,
+      "loss2": 1.6229866743087769,
+      "delta": 0.03140294551849365,
+      "mean_router_weight": 0.369164377450943,
+      "total_loss": 0.03177211061120033
+    },
+    {
+      "step": 38,
+      "epoch": 0,
+      "passage_idx": 39,
+      "loss1": 1.9140231609344482,
+      "loss2": 1.9075865745544434,
+      "delta": -0.006436586380004883,
+      "mean_router_weight": 0.362539142370224,
+      "total_loss": -0.006074047181755304
+    },
+    {
+      "step": 39,
+      "epoch": 0,
+      "passage_idx": 18,
+      "loss1": 1.7071912288665771,
+      "loss2": 1.7173093557357788,
+      "delta": 0.01011812686920166,
+      "mean_router_weight": 0.3518505394458771,
+      "total_loss": 0.010469977743923664
+    },
+    {
+      "step": 40,
+      "epoch": 0,
+      "passage_idx": 47,
+      "loss1": 1.9919581413269043,
+      "loss2": 1.983632206916809,
+      "delta": -0.008325934410095215,
+      "mean_router_weight": 0.3593485653400421,
+      "total_loss": -0.007966585457324982
+    },
+    {
+      "step": 41,
+      "epoch": 0,
+      "passage_idx": 3,
+      "loss1": 1.7384085655212402,
+      "loss2": 1.7431997060775757,
+      "delta": 0.004791140556335449,
+      "mean_router_weight": 0.3533264398574829,
+      "total_loss": 0.005144467111676931
+    },
+    {
+      "step": 42,
+      "epoch": 0,
+      "passage_idx": 1,
+      "loss1": 1.7484846115112305,
+      "loss2": 1.755726933479309,
+      "delta": 0.007242321968078613,
+      "mean_router_weight": 0.35191354155540466,
+      "total_loss": 0.007594235707074404
+    },
+    {
+      "step": 43,
+      "epoch": 0,
+      "passage_idx": 44,
+      "loss1": 1.881842017173767,
+      "loss2": 1.890286922454834,
+      "delta": 0.008444905281066895,
+      "mean_router_weight": 0.3242287337779999,
+      "total_loss": 0.008769134059548378
+    },
+    {
+      "step": 44,
+      "epoch": 0,
+      "passage_idx": 24,
+      "loss1": 1.5793416500091553,
+      "loss2": 1.596052885055542,
+      "delta": 0.01671123504638672,
+      "mean_router_weight": 0.3421645164489746,
+      "total_loss": 0.017053399235010147
+    },
+    {
+      "step": 45,
+      "epoch": 0,
+      "passage_idx": 21,
+      "loss1": 1.8881844282150269,
+      "loss2": 1.9409884214401245,
+      "delta": 0.052803993225097656,
+      "mean_router_weight": 0.31780681014060974,
+      "total_loss": 0.05312180146574974
+    },
+    {
+      "step": 46,
+      "epoch": 0,
+      "passage_idx": 0,
+      "loss1": 2.0898492336273193,
+      "loss2": 2.0656538009643555,
+      "delta": -0.024195432662963867,
+      "mean_router_weight": 0.3047049045562744,
+      "total_loss": -0.023890728130936623
+    },
+    {
+      "step": 47,
+      "epoch": 0,
+      "passage_idx": 6,
+      "loss1": 1.7204734086990356,
+      "loss2": 1.7583576440811157,
+      "delta": 0.03788423538208008,
+      "mean_router_weight": 0.32477569580078125,
+      "total_loss": 0.038209009915590286
+    },
+    {
+      "step": 48,
+      "epoch": 0,
+      "passage_idx": 45,
+      "loss1": 1.8757578134536743,
+      "loss2": 1.8876771926879883,
+      "delta": 0.011919379234313965,
+      "mean_router_weight": 0.2864387631416321,
+      "total_loss": 0.012205817736685276
+    },
+    {
+      "step": 49,
+      "epoch": 0,
+      "passage_idx": 22,
+      "loss1": 1.7156931161880493,
+      "loss2": 1.730173110961914,
+      "delta": 0.014479994773864746,
+      "mean_router_weight": 0.30752691626548767,
+      "total_loss": 0.01478752214461565
+    },
+    {
+      "step": 50,
+      "epoch": 0,
+      "passage_idx": 26,
+      "loss1": 1.736678123474121,
+      "loss2": 1.7602790594100952,
+      "delta": 0.02360093593597412,
+      "mean_router_weight": 0.29353106021881104,
+      "total_loss": 0.02389446645975113
+    },
+    {
+      "step": 51,
+      "epoch": 0,
+      "passage_idx": 37,
+      "loss1": 2.196476936340332,
+      "loss2": 2.2241995334625244,
+      "delta": 0.027722597122192383,
+      "mean_router_weight": 0.26808255910873413,
+      "total_loss": 0.027990680187940598
+    },
+    {
+      "step": 52,
+      "epoch": 0,
+      "passage_idx": 71,
+      "loss1": 1.833661675453186,
+      "loss2": 1.8729835748672485,
+      "delta": 0.0393218994140625,
+      "mean_router_weight": 0.24201847612857819,
+      "total_loss": 0.03956391662359238
+    },
+    {
+      "step": 53,
+      "epoch": 0,
+      "passage_idx": 60,
+      "loss1": 1.7084780931472778,
+      "loss2": 1.7230424880981445,
+      "delta": 0.0145643949508667,
+      "mean_router_weight": 0.24974733591079712,
+      "total_loss": 0.014814142137765884
+    },
+    {
+      "step": 54,
+      "epoch": 0,
+      "passage_idx": 78,
+      "loss1": 1.719688892364502,
+      "loss2": 1.741738200187683,
+      "delta": 0.022049307823181152,
+      "mean_router_weight": 0.2391822338104248,
+      "total_loss": 0.0222884900867939
+    },
+    {
+      "step": 55,
+      "epoch": 0,
+      "passage_idx": 57,
+      "loss1": 1.9170626401901245,
+      "loss2": 1.9387917518615723,
+      "delta": 0.021729111671447754,
+      "mean_router_weight": 0.2610187232494354,
+      "total_loss": 0.021990129724144936
+    },
+    {
+      "step": 56,
+      "epoch": 0,
+      "passage_idx": 61,
+      "loss1": 1.8437963724136353,
+      "loss2": 1.8843425512313843,
+      "delta": 0.04054617881774902,
+      "mean_router_weight": 0.25739777088165283,
+      "total_loss": 0.04080357775092125
+    },
+    {
+      "step": 57,
+      "epoch": 0,
+      "passage_idx": 40,
+      "loss1": 1.825757622718811,
+      "loss2": 1.8170735836029053,
+      "delta": -0.008684039115905762,
+      "mean_router_weight": 0.24044890701770782,
+      "total_loss": -0.008443590253591537
+    },
+    {
+      "step": 58,
+      "epoch": 0,
+      "passage_idx": 12,
+      "loss1": 2.3635950088500977,
+      "loss2": 2.324294090270996,
+      "delta": -0.03930091857910156,
+      "mean_router_weight": 0.25388219952583313,
+      "total_loss": -0.039047036319971085
+    },
+    {
+      "step": 59,
+      "epoch": 0,
+      "passage_idx": 15,
+      "loss1": 1.910629391670227,
+      "loss2": 1.9480355978012085,
+      "delta": 0.037406206130981445,
+      "mean_router_weight": 0.21462112665176392,
+      "total_loss": 0.03762082755565643
+    },
+    {
+      "step": 60,
+      "epoch": 0,
+      "passage_idx": 49,
+      "loss1": 1.589168906211853,
+      "loss2": 1.585842490196228,
+      "delta": -0.003326416015625,
+      "mean_router_weight": 0.20710895955562592,
+      "total_loss": -0.003119307104498148
+    },
+    {
+      "step": 61,
+      "epoch": 0,
+      "passage_idx": 32,
+      "loss1": 1.7407655715942383,
+      "loss2": 1.7722042798995972,
+      "delta": 0.03143870830535889,
+      "mean_router_weight": 0.2020971179008484,
+      "total_loss": 0.031640805304050446
+    },
+    {
+      "step": 62,
+      "epoch": 0,
+      "passage_idx": 81,
+      "loss1": 1.896686315536499,
+      "loss2": 1.8955078125,
+      "delta": -0.0011785030364990234,
+      "mean_router_weight": 0.16265612840652466,
+      "total_loss": -0.0010158468503504992
+    },
+    {
+      "step": 63,
+      "epoch": 0,
+      "passage_idx": 25,
+      "loss1": 2.0760531425476074,
+      "loss2": 2.085437297821045,
+      "delta": 0.0093841552734375,
+      "mean_router_weight": 0.2026500552892685,
+      "total_loss": 0.00958680547773838
+    },
+    {
+      "step": 64,
+      "epoch": 0,
+      "passage_idx": 46,
+      "loss1": 1.8343002796173096,
+      "loss2": 1.8304953575134277,
+      "delta": -0.003804922103881836,
+      "mean_router_weight": 0.1424197256565094,
+      "total_loss": -0.0036625023931264877
+    },
+    {
+      "step": 65,
+      "epoch": 0,
+      "passage_idx": 58,
+      "loss1": 1.8059567213058472,
+      "loss2": 1.7768934965133667,
+      "delta": -0.02906322479248047,
+      "mean_router_weight": 0.18068988621234894,
+      "total_loss": -0.02888253517448902
+    },
+    {
+      "step": 66,
+      "epoch": 0,
+      "passage_idx": 14,
+      "loss1": 1.9909473657608032,
+      "loss2": 1.9878684282302856,
+      "delta": -0.003078937530517578,
+      "mean_router_weight": 0.1681579351425171,
+      "total_loss": -0.002910779556259513
+    },
+    {
+      "step": 67,
+      "epoch": 0,
+      "passage_idx": 38,
+      "loss1": 1.8564717769622803,
+      "loss2": 1.8522850275039673,
+      "delta": -0.004186749458312988,
+      "mean_router_weight": 0.1822643131017685,
+      "total_loss": -0.004004484973847866
+    },
+    {
+      "step": 68,
+      "epoch": 0,
+      "passage_idx": 72,
+      "loss1": 1.8072922229766846,
+      "loss2": 1.832930088043213,
+      "delta": 0.02563786506652832,
+      "mean_router_weight": 0.1796305924654007,
+      "total_loss": 0.025817494839429855
+    },
+    {
+      "step": 69,
+      "epoch": 0,
+      "passage_idx": 31,
+      "loss1": 1.8029348850250244,
+      "loss2": 1.8115618228912354,
+      "delta": 0.008626937866210938,
+      "mean_router_weight": 0.18228751420974731,
+      "total_loss": 0.008809225633740425
+    },
+    {
+      "step": 70,
+      "epoch": 0,
+      "passage_idx": 73,
+      "loss1": 1.7956488132476807,
+      "loss2": 1.7685014009475708,
+      "delta": -0.027147412300109863,
+      "mean_router_weight": 0.14515337347984314,
+      "total_loss": -0.027002258226275444
+    },
+    {
+      "step": 71,
+      "epoch": 0,
+      "passage_idx": 48,
+      "loss1": 1.8215793371200562,
+      "loss2": 1.8141660690307617,
+      "delta": -0.007413268089294434,
+      "mean_router_weight": 0.1717025637626648,
+      "total_loss": -0.0072415657341480255
+    },
+    {
+      "step": 72,
+      "epoch": 0,
+      "passage_idx": 7,
+      "loss1": 1.9630683660507202,
+      "loss2": 1.9583736658096313,
+      "delta": -0.004694700241088867,
+      "mean_router_weight": 0.13117815554141998,
+      "total_loss": -0.004563522059470415
+    },
+    {
+      "step": 73,
+      "epoch": 0,
+      "passage_idx": 63,
+      "loss1": 1.9148372411727905,
+      "loss2": 1.9118342399597168,
+      "delta": -0.0030030012130737305,
+      "mean_router_weight": 0.15514075756072998,
+      "total_loss": -0.0028478605672717094
+    },
+    {
+      "step": 74,
+      "epoch": 0,
+      "passage_idx": 69,
+      "loss1": 1.978775143623352,
+      "loss2": 1.968178153038025,
+      "delta": -0.010596990585327148,
+      "mean_router_weight": 0.1579384058713913,
+      "total_loss": -0.010439052246510983
+    },
+    {
+      "step": 75,
+      "epoch": 0,
+      "passage_idx": 59,
+      "loss1": 1.8602098226547241,
+      "loss2": 1.8694374561309814,
+      "delta": 0.009227633476257324,
+      "mean_router_weight": 0.13282407820224762,
+      "total_loss": 0.00936045777052641
+    },
+    {
+      "step": 76,
+      "epoch": 0,
+      "passage_idx": 54,
+      "loss1": 1.889358639717102,
+      "loss2": 1.894144058227539,
+      "delta": 0.004785418510437012,
+      "mean_router_weight": 0.11610017716884613,
+      "total_loss": 0.004901518579572439
+    },
+    {
+      "step": 77,
+      "epoch": 0,
+      "passage_idx": 29,
+      "loss1": 1.7309995889663696,
+      "loss2": 1.7372257709503174,
+      "delta": 0.006226181983947754,
+      "mean_router_weight": 0.1223515197634697,
+      "total_loss": 0.006348533555865288
+    },
+    {
+      "step": 78,
+      "epoch": 0,
+      "passage_idx": 41,
+      "loss1": 1.9303439855575562,
+      "loss2": 1.954405665397644,
+      "delta": 0.02406167984008789,
+      "mean_router_weight": 0.1395534723997116,
+      "total_loss": 0.024201232939958572
+    },
+    {
+      "step": 79,
+      "epoch": 0,
+      "passage_idx": 56,
+      "loss1": 2.048856258392334,
+      "loss2": 2.0729777812957764,
+      "delta": 0.024121522903442383,
+      "mean_router_weight": 0.11796322464942932,
+      "total_loss": 0.02423948608338833
+    },
+    {
+      "step": 80,
+      "epoch": 0,
+      "passage_idx": 33,
+      "loss1": 1.8172063827514648,
+      "loss2": 1.870789885520935,
+      "delta": 0.053583502769470215,
+      "mean_router_weight": 0.09625818580389023,
+      "total_loss": 0.05367976054549217
+    },
+    {
+      "step": 81,
+      "epoch": 0,
+      "passage_idx": 79,
+      "loss1": 2.2883753776550293,
+      "loss2": 2.312415599822998,
+      "delta": 0.02404022216796875,
+      "mean_router_weight": 0.10274822264909744,
+      "total_loss": 0.024142971262335777
+    },
+    {
+      "step": 82,
+      "epoch": 1,
+      "passage_idx": 69,
+      "loss1": 1.9539942741394043,
+      "loss2": 1.946553349494934,
+      "delta": -0.007440924644470215,
+      "mean_router_weight": 0.12184891849756241,
+      "total_loss": -0.007319075521081686
+    },
+    {
+      "step": 83,
+      "epoch": 1,
+      "passage_idx": 17,
+      "loss1": 1.6261454820632935,
+      "loss2": 1.6404240131378174,
+      "delta": 0.014278531074523926,
+      "mean_router_weight": 0.08142302930355072,
+      "total_loss": 0.014359953813254833
+    },
+    {
+      "step": 84,
+      "epoch": 1,
+      "passage_idx": 79,
+      "loss1": 2.2915351390838623,
+      "loss2": 2.306682825088501,
+      "delta": 0.015147686004638672,
+      "mean_router_weight": 0.08951202034950256,
+      "total_loss": 0.01523719821125269
+    },
+    {
+      "step": 85,
+      "epoch": 1,
+      "passage_idx": 25,
+      "loss1": 1.9923852682113647,
+      "loss2": 1.9698349237442017,
+      "delta": -0.022550344467163086,
+      "mean_router_weight": 0.10308912396430969,
+      "total_loss": -0.02244725450873375
+    },
+    {
+      "step": 86,
+      "epoch": 1,
+      "passage_idx": 66,
+      "loss1": 1.7732106447219849,
+      "loss2": 1.8141649961471558,
+      "delta": 0.0409543514251709,
+      "mean_router_weight": 0.08465377241373062,
+      "total_loss": 0.04103900492191315
+    },
+    {
+      "step": 87,
+      "epoch": 1,
+      "passage_idx": 33,
+      "loss1": 1.8555500507354736,
+      "loss2": 1.8943718671798706,
+      "delta": 0.03882181644439697,
+      "mean_router_weight": 0.06821586191654205,
+      "total_loss": 0.03889003396034241
+    },
+    {
+      "step": 88,
+      "epoch": 1,
+      "passage_idx": 6,
+      "loss1": 1.739624261856079,
+      "loss2": 1.767089605331421,
+      "delta": 0.027465343475341797,
+      "mean_router_weight": 0.09397708624601364,
+      "total_loss": 0.027559321373701096
+    },
+    {
+      "step": 89,
+      "epoch": 1,
+      "passage_idx": 32,
+      "loss1": 1.707422137260437,
+      "loss2": 1.735193133354187,
+      "delta": 0.02777099609375,
+      "mean_router_weight": 0.07546792924404144,
+      "total_loss": 0.02784646488726139
+    },
+    {
+      "step": 90,
+      "epoch": 1,
+      "passage_idx": 60,
+      "loss1": 1.6762561798095703,
+      "loss2": 1.7136927843093872,
+      "delta": 0.037436604499816895,
+      "mean_router_weight": 0.055096935480833054,
+      "total_loss": 0.037491701543331146
+    },
+    {
+      "step": 91,
+      "epoch": 1,
+      "passage_idx": 5,
+      "loss1": 1.800190806388855,
+      "loss2": 1.8368173837661743,
+      "delta": 0.036626577377319336,
+      "mean_router_weight": 0.06981046497821808,
+      "total_loss": 0.03669638931751251
+    },
+    {
+      "step": 92,
+      "epoch": 1,
+      "passage_idx": 42,
+      "loss1": 1.8953684568405151,
+      "loss2": 1.9219141006469727,
+      "delta": 0.02654564380645752,
+      "mean_router_weight": 0.07129624485969543,
+      "total_loss": 0.026616940274834633
+    },
+    {
+      "step": 93,
+      "epoch": 1,
+      "passage_idx": 70,
+      "loss1": 1.9250881671905518,
+      "loss2": 1.940088152885437,
+      "delta": 0.014999985694885254,
+      "mean_router_weight": 0.06610915809869766,
+      "total_loss": 0.015066094696521759
+    },
+    {
+      "step": 94,
+      "epoch": 1,
+      "passage_idx": 45,
+      "loss1": 1.8773175477981567,
+      "loss2": 1.8962109088897705,
+      "delta": 0.01889336109161377,
+      "mean_router_weight": 0.05076882615685463,
+      "total_loss": 0.01894412934780121
+    },
+    {
+      "step": 95,
+      "epoch": 1,
+      "passage_idx": 24,
+      "loss1": 1.6329139471054077,
+      "loss2": 1.6537493467330933,
+      "delta": 0.020835399627685547,
+      "mean_router_weight": 0.05673060566186905,
+      "total_loss": 0.020892130210995674
+    },
+    {
+      "step": 96,
+      "epoch": 1,
+      "passage_idx": 73,
+      "loss1": 1.7701568603515625,
+      "loss2": 1.7808715105056763,
+      "delta": 0.01071465015411377,
+      "mean_router_weight": 0.048451051115989685,
+      "total_loss": 0.010763101279735565
+    },
+    {
+      "step": 97,
+      "epoch": 1,
+      "passage_idx": 59,
+      "loss1": 1.903663158416748,
+      "loss2": 1.904961347579956,
+      "delta": 0.0012981891632080078,
+      "mean_router_weight": 0.05064201354980469,
+      "total_loss": 0.0013488312251865864
+    },
+    {
+      "step": 98,
+      "epoch": 1,
+      "passage_idx": 81,
+      "loss1": 1.9210500717163086,
+      "loss2": 1.9221117496490479,
+      "delta": 0.0010616779327392578,
+      "mean_router_weight": 0.03495229035615921,
+      "total_loss": 0.001096630236133933
+    },
+    {
+      "step": 99,
+      "epoch": 1,
+      "passage_idx": 10,
+      "loss1": 1.7788883447647095,
+      "loss2": 1.788089632987976,
+      "delta": 0.009201288223266602,
+      "mean_router_weight": 0.046992480754852295,
+      "total_loss": 0.00924828089773655
+    },
+    {
+      "step": 100,
+      "epoch": 1,
+      "passage_idx": 14,
+      "loss1": 1.8912888765335083,
+      "loss2": 1.8654968738555908,
+      "delta": -0.02579200267791748,
+      "mean_router_weight": 0.04791988059878349,
+      "total_loss": -0.025744082406163216
+    },
+    {
+      "step": 101,
+      "epoch": 1,
+      "passage_idx": 19,
+      "loss1": 1.7268952131271362,
+      "loss2": 1.744720697402954,
+      "delta": 0.01782548427581787,
+      "mean_router_weight": 0.02556655928492546,
+      "total_loss": 0.017851050943136215
+    },
+    {
+      "step": 102,
+      "epoch": 1,
+      "passage_idx": 62,
+      "loss1": 1.7133287191390991,
+      "loss2": 1.7181363105773926,
+      "delta": 0.004807591438293457,
+      "mean_router_weight": 0.041677504777908325,
+      "total_loss": 0.004849269054830074
+    },
+    {
+      "step": 103,
+      "epoch": 1,
+      "passage_idx": 43,
+      "loss1": 1.7809828519821167,
+      "loss2": 1.7777446508407593,
+      "delta": -0.003238201141357422,
+      "mean_router_weight": 0.03921676427125931,
+      "total_loss": -0.0031989843118935823
+    },
+    {
+      "step": 104,
+      "epoch": 1,
+      "passage_idx": 63,
+      "loss1": 1.9136021137237549,
+      "loss2": 1.8910822868347168,
+      "delta": -0.022519826889038086,
+      "mean_router_weight": 0.04636286944150925,
+      "total_loss": -0.022473463788628578
+    },
+    {
+      "step": 105,
+      "epoch": 1,
+      "passage_idx": 4,
+      "loss1": 1.9975098371505737,
+      "loss2": 1.9924771785736084,
+      "delta": -0.005032658576965332,
+      "mean_router_weight": 0.03731464594602585,
+      "total_loss": -0.004995343741029501
+    },
+    {
+      "step": 106,
+      "epoch": 1,
+      "passage_idx": 36,
+      "loss1": 2.041146993637085,
+      "loss2": 2.0279159545898438,
+      "delta": -0.013231039047241211,
+      "mean_router_weight": 0.048986371606588364,
+      "total_loss": -0.013182052411139011
+    },
+    {
+      "step": 107,
+      "epoch": 1,
+      "passage_idx": 39,
+      "loss1": 1.8428598642349243,
+      "loss2": 1.8291575908660889,
+      "delta": -0.01370227336883545,
+      "mean_router_weight": 0.027100834995508194,
+      "total_loss": -0.013675172813236713
+    },
+    {
+      "step": 108,
+      "epoch": 1,
+      "passage_idx": 31,
+      "loss1": 1.8352925777435303,
+      "loss2": 1.825075626373291,
+      "delta": -0.010216951370239258,
+      "mean_router_weight": 0.044179510325193405,
+      "total_loss": -0.010172772221267223
+    },
+    {
+      "step": 109,
+      "epoch": 1,
+      "passage_idx": 54,
+      "loss1": 1.9018484354019165,
+      "loss2": 1.8985755443572998,
+      "delta": -0.0032728910446166992,
+      "mean_router_weight": 0.02716832049190998,
+      "total_loss": -0.00324572273530066
+    },
+    {
+      "step": 110,
+      "epoch": 1,
+      "passage_idx": 80,
+      "loss1": 1.690088152885437,
+      "loss2": 1.6981902122497559,
+      "delta": 0.008102059364318848,
+      "mean_router_weight": 0.02668359875679016,
+      "total_loss": 0.008128742687404156
+    },
+    {
+      "step": 111,
+      "epoch": 1,
+      "passage_idx": 53,
+      "loss1": 1.8903578519821167,
+      "loss2": 1.8986247777938843,
+      "delta": 0.008266925811767578,
+      "mean_router_weight": 0.03273840248584747,
+      "total_loss": 0.008299664594233036
+    },
+    {
+      "step": 112,
+      "epoch": 1,
+      "passage_idx": 78,
+      "loss1": 1.7473125457763672,
+      "loss2": 1.7614625692367554,
+      "delta": 0.014150023460388184,
+      "mean_router_weight": 0.019495749846100807,
+      "total_loss": 0.01416951883584261
+    },
+    {
+      "step": 113,
+      "epoch": 1,
+      "passage_idx": 35,
+      "loss1": 1.9299207925796509,
+      "loss2": 1.926451563835144,
+      "delta": -0.003469228744506836,
+      "mean_router_weight": 0.03785654902458191,
+      "total_loss": -0.0034313721116632223
+    },
+    {
+      "step": 114,
+      "epoch": 1,
+      "passage_idx": 28,
+      "loss1": 1.7012320756912231,
+      "loss2": 1.7091883420944214,
+      "delta": 0.007956266403198242,
+      "mean_router_weight": 0.016193928197026253,
+      "total_loss": 0.007972460240125656
+    },
+    {
+      "step": 115,
+      "epoch": 1,
+      "passage_idx": 26,
+      "loss1": 1.7938882112503052,
+      "loss2": 1.8025394678115845,
+      "delta": 0.008651256561279297,
+      "mean_router_weight": 0.023415319621562958,
+      "total_loss": 0.00867467187345028
+    },
+    {
+      "step": 116,
+      "epoch": 1,
+      "passage_idx": 75,
+      "loss1": 1.7623240947723389,
+      "loss2": 1.7548071146011353,
+      "delta": -0.007516980171203613,
+      "mean_router_weight": 0.02286386862397194,
+      "total_loss": -0.007494116201996803
+    },
+    {
+      "step": 117,
+      "epoch": 1,
+      "passage_idx": 71,
+      "loss1": 1.7950446605682373,
+      "loss2": 1.7887482643127441,
+      "delta": -0.006296396255493164,
+      "mean_router_weight": 0.024364331737160683,
+      "total_loss": -0.0062720319256186485
+    },
+    {
+      "step": 118,
+      "epoch": 1,
+      "passage_idx": 47,
+      "loss1": 1.8807415962219238,
+      "loss2": 1.894668698310852,
+      "delta": 0.013927102088928223,
+      "mean_router_weight": 0.014565843157470226,
+      "total_loss": 0.013941667973995209
+    },
+    {
+      "step": 119,
+      "epoch": 1,
+      "passage_idx": 22,
+      "loss1": 1.7234488725662231,
+      "loss2": 1.7195353507995605,
+      "delta": -0.003913521766662598,
+      "mean_router_weight": 0.027794677764177322,
+      "total_loss": -0.0038857271429151297
+    },
+    {
+      "step": 120,
+      "epoch": 1,
+      "passage_idx": 56,
+      "loss1": 2.013896942138672,
+      "loss2": 2.0119705200195312,
+      "delta": -0.001926422119140625,
+      "mean_router_weight": 0.021020719781517982,
+      "total_loss": -0.0019054013537243009
+    },
+    {
+      "step": 121,
+      "epoch": 1,
+      "passage_idx": 67,
+      "loss1": 1.845230221748352,
+      "loss2": 1.8412522077560425,
+      "delta": -0.00397801399230957,
+      "mean_router_weight": 0.01722181960940361,
+      "total_loss": -0.003960791975259781
+    },
+    {
+      "step": 122,
+      "epoch": 1,
+      "passage_idx": 16,
+      "loss1": 1.7394543886184692,
+      "loss2": 1.7448458671569824,
+      "delta": 0.005391478538513184,
+      "mean_router_weight": 0.01779068633913994,
+      "total_loss": 0.005409269127994776
+    },
+    {
+      "step": 123,
+      "epoch": 1,
+      "passage_idx": 41,
+      "loss1": 1.8796398639678955,
+      "loss2": 1.8813202381134033,
+      "delta": 0.0016803741455078125,
+      "mean_router_weight": 0.0208476260304451,
+      "total_loss": 0.00170122180134058
+    },
+    {
+      "step": 124,
+      "epoch": 1,
+      "passage_idx": 8,
+      "loss1": 1.977891206741333,
+      "loss2": 1.983619213104248,
+      "delta": 0.005728006362915039,
+      "mean_router_weight": 0.023502066731452942,
+      "total_loss": 0.005751508288085461
+    },
+    {
+      "step": 125,
+      "epoch": 1,
+      "passage_idx": 21,
+      "loss1": 1.8019450902938843,
+      "loss2": 1.8100411891937256,
+      "delta": 0.008096098899841309,
+      "mean_router_weight": 0.014282748103141785,
+      "total_loss": 0.008110381662845612
+    },
+    {
+      "step": 126,
+      "epoch": 1,
+      "passage_idx": 0,
+      "loss1": 2.010499954223633,
+      "loss2": 2.0068604946136475,
+      "delta": -0.0036394596099853516,
+      "mean_router_weight": 0.011619620025157928,
+      "total_loss": -0.0036278399638831615
+    },
+    {
+      "step": 127,
+      "epoch": 1,
+      "passage_idx": 13,
+      "loss1": 1.8226863145828247,
+      "loss2": 1.830781102180481,
+      "delta": 0.00809478759765625,
+      "mean_router_weight": 0.011206054128706455,
+      "total_loss": 0.008105993270874023
+    },
+    {
+      "step": 128,
+      "epoch": 1,
+      "passage_idx": 46,
+      "loss1": 1.7806060314178467,
+      "loss2": 1.7779173851013184,
+      "delta": -0.0026886463165283203,
+      "mean_router_weight": 0.008898031897842884,
+      "total_loss": -0.0026797482278198004
+    },
+    {
+      "step": 129,
+      "epoch": 1,
+      "passage_idx": 18,
+      "loss1": 1.7415069341659546,
+      "loss2": 1.7486531734466553,
+      "delta": 0.007146239280700684,
+      "mean_router_weight": 0.006787376943975687,
+      "total_loss": 0.007153026759624481
+    },
+    {
+      "step": 130,
+      "epoch": 1,
+      "passage_idx": 30,
+      "loss1": 2.008547067642212,
+      "loss2": 2.0248494148254395,
+      "delta": 0.01630234718322754,
+      "mean_router_weight": 0.016054287552833557,
+      "total_loss": 0.01631840132176876
+    },
+    {
+      "step": 131,
+      "epoch": 1,
+      "passage_idx": 64,
+      "loss1": 2.048649549484253,
+      "loss2": 2.072855234146118,
+      "delta": 0.024205684661865234,
+      "mean_router_weight": 0.01371209230273962,
+      "total_loss": 0.024219397455453873
+    },
+    {
+      "step": 132,
+      "epoch": 1,
+      "passage_idx": 57,
+      "loss1": 2.018263101577759,
+      "loss2": 2.031616687774658,
+      "delta": 0.013353586196899414,
+      "mean_router_weight": 0.010543081909418106,
+      "total_loss": 0.013364129699766636
+    },
+    {
+      "step": 133,
+      "epoch": 1,
+      "passage_idx": 76,
+      "loss1": 1.6943995952606201,
+      "loss2": 1.7031720876693726,
+      "delta": 0.008772492408752441,
+      "mean_router_weight": 0.0261552594602108,
+      "total_loss": 0.008798647671937943
+    },
+    {
+      "step": 134,
+      "epoch": 1,
+      "passage_idx": 29,
+      "loss1": 1.7623300552368164,
+      "loss2": 1.7690861225128174,
+      "delta": 0.0067560672760009766,
+      "mean_router_weight": 0.014150874689221382,
+      "total_loss": 0.0067702182568609715
+    },
+    {
+      "step": 135,
+      "epoch": 1,
+      "passage_idx": 44,
+      "loss1": 1.8256292343139648,
+      "loss2": 1.8415840864181519,
+      "delta": 0.01595485210418701,
+      "mean_router_weight": 0.013542832806706429,
+      "total_loss": 0.01596839539706707
+    },
+    {
+      "step": 136,
+      "epoch": 1,
+      "passage_idx": 58,
+      "loss1": 1.8520747423171997,
+      "loss2": 1.8660337924957275,
+      "delta": 0.013959050178527832,
+      "mean_router_weight": 0.013165765441954136,
+      "total_loss": 0.013972216285765171
+    },
+    {
+      "step": 137,
+      "epoch": 1,
+      "passage_idx": 1,
+      "loss1": 1.8739145994186401,
+      "loss2": 1.8850065469741821,
+      "delta": 0.011091947555541992,
+      "mean_router_weight": 0.019532613456249237,
+      "total_loss": 0.011111480183899403
+    },
+    {
+      "step": 138,
+      "epoch": 1,
+      "passage_idx": 3,
+      "loss1": 1.8795247077941895,
+      "loss2": 1.8940891027450562,
+      "delta": 0.0145643949508667,
+      "mean_router_weight": 0.015425433404743671,
+      "total_loss": 0.014579820446670055
+    },
+    {
+      "step": 139,
+      "epoch": 1,
+      "passage_idx": 2,
+      "loss1": 2.0655486583709717,
+      "loss2": 2.074061155319214,
+      "delta": 0.008512496948242188,
+      "mean_router_weight": 0.016575122252106667,
+      "total_loss": 0.00852907169610262
+    },
+    {
+      "step": 140,
+      "epoch": 1,
+      "passage_idx": 72,
+      "loss1": 1.8478138446807861,
+      "loss2": 1.8633296489715576,
+      "delta": 0.015515804290771484,
+      "mean_router_weight": 0.01183036994189024,
+      "total_loss": 0.015527634881436825
+    },
+    {
+      "step": 141,
+      "epoch": 1,
+      "passage_idx": 12,
+      "loss1": 2.1282083988189697,
+      "loss2": 2.1251611709594727,
+      "delta": -0.0030472278594970703,
+      "mean_router_weight": 0.01957625150680542,
+      "total_loss": -0.0030276516918092966
+    },
+    {
+      "step": 142,
+      "epoch": 1,
+      "passage_idx": 49,
+      "loss1": 1.6476233005523682,
+      "loss2": 1.662854790687561,
+      "delta": 0.015231490135192871,
+      "mean_router_weight": 0.004975485615432262,
+      "total_loss": 0.015236465260386467
+    },
+    {
+      "step": 143,
+      "epoch": 1,
+      "passage_idx": 61,
+      "loss1": 1.9915958642959595,
+      "loss2": 2.002201557159424,
+      "delta": 0.010605692863464355,
+      "mean_router_weight": 0.014654422178864479,
+      "total_loss": 0.01062034722417593
+    },
+    {
+      "step": 144,
+      "epoch": 1,
+      "passage_idx": 65,
+      "loss1": 1.9483025074005127,
+      "loss2": 1.9463918209075928,
+      "delta": -0.0019106864929199219,
+      "mean_router_weight": 0.011540915817022324,
+      "total_loss": -0.0018991455435752869
+    },
+    {
+      "step": 145,
+      "epoch": 1,
+      "passage_idx": 11,
+      "loss1": 2.1374263763427734,
+      "loss2": 2.138457775115967,
+      "delta": 0.0010313987731933594,
+      "mean_router_weight": 0.0017365759704262018,
+      "total_loss": 0.0010331353405490518
+    },
+    {
+      "step": 146,
+      "epoch": 1,
+      "passage_idx": 68,
+      "loss1": 1.8929531574249268,
+      "loss2": 1.8957507610321045,
+      "delta": 0.0027976036071777344,
+      "mean_router_weight": 0.0028891596011817455,
+      "total_loss": 0.0028004928026348352
+    },
+    {
+      "step": 147,
+      "epoch": 1,
+      "passage_idx": 48,
+      "loss1": 1.9455841779708862,
+      "loss2": 1.9462120532989502,
+      "delta": 0.0006278753280639648,
+      "mean_router_weight": 0.020839013159275055,
+      "total_loss": 0.0006487143691629171
+    },
+    {
+      "step": 148,
+      "epoch": 1,
+      "passage_idx": 37,
+      "loss1": 2.199970245361328,
+      "loss2": 2.1999685764312744,
+      "delta": -1.6689300537109375e-06,
+      "mean_router_weight": 0.0039637042209506035,
+      "total_loss": 2.29477427637903e-06
+    },
+    {
+      "step": 149,
+      "epoch": 1,
+      "passage_idx": 52,
+      "loss1": 2.1579933166503906,
+      "loss2": 2.1582581996917725,
+      "delta": 0.00026488304138183594,
+      "mean_router_weight": 0.002265135059133172,
+      "total_loss": 0.00026714816340245306
+    },
+    {
+      "step": 150,
+      "epoch": 1,
+      "passage_idx": 51,
+      "loss1": 1.9629147052764893,
+      "loss2": 1.9628124237060547,
+      "delta": -0.00010228157043457031,
+      "mean_router_weight": 0.0017430579755455256,
+      "total_loss": -0.00010053851292468607
+    },
+    {
+      "step": 151,
+      "epoch": 1,
+      "passage_idx": 15,
+      "loss1": 2.006477117538452,
+      "loss2": 2.005666494369507,
+      "delta": -0.0008106231689453125,
+      "mean_router_weight": 0.007131111808121204,
+      "total_loss": -0.0008034920319914818
+    },
+    {
+      "step": 152,
+      "epoch": 1,
+      "passage_idx": 7,
+      "loss1": 2.18027400970459,
+      "loss2": 2.1814963817596436,
+      "delta": 0.001222372055053711,
+      "mean_router_weight": 0.005522396881133318,
+      "total_loss": 0.0012278944486752152
+    },
+    {
+      "step": 153,
+      "epoch": 1,
+      "passage_idx": 23,
+      "loss1": 1.8739453554153442,
+      "loss2": 1.8719100952148438,
+      "delta": -0.0020352602005004883,
+      "mean_router_weight": 0.004216312896460295,
+      "total_loss": -0.0020310438703745604
+    },
+    {
+      "step": 154,
+      "epoch": 1,
+      "passage_idx": 40,
+      "loss1": 1.9990723133087158,
+      "loss2": 2.0008974075317383,
+      "delta": 0.001825094223022461,
+      "mean_router_weight": 0.012024354189634323,
+      "total_loss": 0.0018371185287833214
+    },
+    {
+      "step": 155,
+      "epoch": 1,
+      "passage_idx": 77,
+      "loss1": 2.1065993309020996,
+      "loss2": 2.10957670211792,
+      "delta": 0.0029773712158203125,
+      "mean_router_weight": 0.006034145597368479,
+      "total_loss": 0.002983405254781246
+    },
+    {
+      "step": 156,
+      "epoch": 1,
+      "passage_idx": 38,
+      "loss1": 1.897322654724121,
+      "loss2": 1.8964614868164062,
+      "delta": -0.0008611679077148438,
+      "mean_router_weight": 0.009992220439016819,
+      "total_loss": -0.0008511756896041334
+    },
+    {
+      "step": 157,
+      "epoch": 1,
+      "passage_idx": 50,
+      "loss1": 2.0745670795440674,
+      "loss2": 2.078162431716919,
+      "delta": 0.0035953521728515625,
+      "mean_router_weight": 0.0055772652849555016,
+      "total_loss": 0.0036009293980896473
+    },
+    {
+      "step": 158,
+      "epoch": 1,
+      "passage_idx": 55,
+      "loss1": 2.116638660430908,
+      "loss2": 2.123964786529541,
+      "delta": 0.0073261260986328125,
+      "mean_router_weight": 0.008462890982627869,
+      "total_loss": 0.007334589026868343
+    },
+    {
+      "step": 159,
+      "epoch": 1,
+      "passage_idx": 20,
+      "loss1": 1.8870422840118408,
+      "loss2": 1.8972092866897583,
+      "delta": 0.01016700267791748,
+      "mean_router_weight": 0.008044369518756866,
+      "total_loss": 0.010175047442317009
+    },
+    {
+      "step": 160,
+      "epoch": 1,
+      "passage_idx": 9,
+      "loss1": 1.845931053161621,
+      "loss2": 1.8445866107940674,
+      "delta": -0.001344442367553711,
+      "mean_router_weight": 0.003726168302819133,
+      "total_loss": -0.0013407161459326744
+    },
+    {
+      "step": 161,
+      "epoch": 1,
+      "passage_idx": 34,
+      "loss1": 2.271369695663452,
+      "loss2": 2.274991750717163,
+      "delta": 0.0036220550537109375,
+      "mean_router_weight": 0.01650235243141651,
+      "total_loss": 0.003638557391241193
+    },
+    {
+      "step": 162,
+      "epoch": 1,
+      "passage_idx": 74,
+      "loss1": 1.965874433517456,
+      "loss2": 1.9735703468322754,
+      "delta": 0.007695913314819336,
+      "mean_router_weight": 0.005600700154900551,
+      "total_loss": 0.007701513823121786
+    },
+    {
+      "step": 163,
+      "epoch": 1,
+      "passage_idx": 27,
+      "loss1": 1.8564714193344116,
+      "loss2": 1.8590644598007202,
+      "delta": 0.0025930404663085938,
+      "mean_router_weight": 0.005968043114989996,
+      "total_loss": 0.0025990086141973734
+    },
+    {
+      "step": 164,
+      "epoch": 2,
+      "passage_idx": 61,
+      "loss1": 1.9999561309814453,
+      "loss2": 2.0044684410095215,
+      "delta": 0.004512310028076172,
+      "mean_router_weight": 0.013683698140084743,
+      "total_loss": 0.004525993950664997
+    },
+    {
+      "step": 165,
+      "epoch": 2,
+      "passage_idx": 16,
+      "loss1": 1.8824126720428467,
+      "loss2": 1.8923048973083496,
+      "delta": 0.00989222526550293,
+      "mean_router_weight": 0.01142136100679636,
+      "total_loss": 0.009903647005558014
+    },
+    {
+      "step": 166,
+      "epoch": 2,
+      "passage_idx": 63,
+      "loss1": 1.984029769897461,
+      "loss2": 1.9860161542892456,
+      "delta": 0.001986384391784668,
+      "mean_router_weight": 0.01209690235555172,
+      "total_loss": 0.0019984813407063484
+    },
+    {
+      "step": 167,
+      "epoch": 2,
+      "passage_idx": 79,
+      "loss1": 2.3593811988830566,
+      "loss2": 2.364316940307617,
+      "delta": 0.004935741424560547,
+      "mean_router_weight": 0.007414279505610466,
+      "total_loss": 0.004943155683577061
+    },
+    {
+      "step": 168,
+      "epoch": 2,
+      "passage_idx": 19,
+      "loss1": 1.8555107116699219,
+      "loss2": 1.8559529781341553,
+      "delta": 0.00044226646423339844,
+      "mean_router_weight": 0.002244826639071107,
+      "total_loss": 0.0004445113008841872
+    },
+    {
+      "step": 169,
+      "epoch": 2,
+      "passage_idx": 43,
+      "loss1": 2.0382959842681885,
+      "loss2": 2.039294481277466,
+      "delta": 0.0009984970092773438,
+      "mean_router_weight": 0.01363695040345192,
+      "total_loss": 0.0010121340164914727
+    },
+    {
+      "step": 170,
+      "epoch": 2,
+      "passage_idx": 25,
+      "loss1": 2.2098758220672607,
+      "loss2": 2.208625316619873,
+      "delta": -0.0012505054473876953,
+      "mean_router_weight": 0.015568496659398079,
+      "total_loss": -0.0012349369935691357
+    },
+    {
+      "step": 171,
+      "epoch": 2,
+      "passage_idx": 42,
+      "loss1": 2.169907569885254,
+      "loss2": 2.167541265487671,
+      "delta": -0.002366304397583008,
+      "mean_router_weight": 0.010041105560958385,
+      "total_loss": -0.002356263343244791
+    },
+    {
+      "step": 172,
+      "epoch": 2,
+      "passage_idx": 22,
+      "loss1": 1.9357094764709473,
+      "loss2": 1.9311851263046265,
+      "delta": -0.004524350166320801,
+      "mean_router_weight": 0.015582763589918613,
+      "total_loss": -0.004508767277002335
+    },
+    {
+      "step": 173,
+      "epoch": 2,
+      "passage_idx": 58,
+      "loss1": 2.030640125274658,
+      "loss2": 2.017914056777954,
+      "delta": -0.012726068496704102,
+      "mean_router_weight": 0.012090387754142284,
+      "total_loss": -0.012713978067040443
+    },
+    {
+      "step": 174,
+      "epoch": 2,
+      "passage_idx": 14,
+      "loss1": 2.009904146194458,
+      "loss2": 2.0069422721862793,
+      "delta": -0.002961874008178711,
+      "mean_router_weight": 0.013567605055868626,
+      "total_loss": -0.0029483065009117126
+    },
+    {
+      "step": 175,
+      "epoch": 2,
+      "passage_idx": 0,
+      "loss1": 2.212290048599243,
+      "loss2": 2.1955504417419434,
+      "delta": -0.016739606857299805,
+      "mean_router_weight": 0.006757907569408417,
+      "total_loss": -0.016732849180698395
+    },
+    {
+      "step": 176,
+      "epoch": 2,
+      "passage_idx": 1,
+      "loss1": 1.968618392944336,
+      "loss2": 1.9615068435668945,
+      "delta": -0.007111549377441406,
+      "mean_router_weight": 0.017603984102606773,
+      "total_loss": -0.0070939455181360245
+    },
+    {
+      "step": 177,
+      "epoch": 2,
+      "passage_idx": 45,
+      "loss1": 1.9647847414016724,
+      "loss2": 1.9628634452819824,
+      "delta": -0.0019212961196899414,
+      "mean_router_weight": 0.010675022378563881,
+      "total_loss": -0.0019106210675090551
+    },
+    {
+      "step": 178,
+      "epoch": 2,
+      "passage_idx": 80,
+      "loss1": 2.071664571762085,
+      "loss2": 2.068221092224121,
+      "delta": -0.003443479537963867,
+      "mean_router_weight": 0.011151689104735851,
+      "total_loss": -0.0034323278814554214
+    },
+    {
+      "step": 179,
+      "epoch": 2,
+      "passage_idx": 44,
+      "loss1": 1.9583262205123901,
+      "loss2": 1.9516677856445312,
+      "delta": -0.006658434867858887,
+      "mean_router_weight": 0.009982092306017876,
+      "total_loss": -0.006648452952504158
+    },
+    {
+      "step": 180,
+      "epoch": 2,
+      "passage_idx": 20,
+      "loss1": 1.917904019355774,
+      "loss2": 1.9152779579162598,
+      "delta": -0.00262606143951416,
+      "mean_router_weight": 0.008711912669241428,
+      "total_loss": -0.0026173496153205633
+    },
+    {
+      "step": 181,
+      "epoch": 2,
+      "passage_idx": 70,
+      "loss1": 2.026191473007202,
+      "loss2": 2.0339345932006836,
+      "delta": 0.007743120193481445,
+      "mean_router_weight": 0.01481542643159628,
+      "total_loss": 0.007757935672998428
+    },
+    {
+      "step": 182,
+      "epoch": 2,
+      "passage_idx": 72,
+      "loss1": 1.9422305822372437,
+      "loss2": 1.941880464553833,
+      "delta": -0.00035011768341064453,
+      "mean_router_weight": 0.009711929596960545,
+      "total_loss": -0.00034040576429106295
+    },
+    {
+      "step": 183,
+      "epoch": 2,
+      "passage_idx": 26,
+      "loss1": 1.9811687469482422,
+      "loss2": 1.9772557020187378,
+      "delta": -0.0039130449295043945,
+      "mean_router_weight": 0.006370194721966982,
+      "total_loss": -0.003906674683094025
+    },
+    {
+      "step": 184,
+      "epoch": 2,
+      "passage_idx": 6,
+      "loss1": 1.976974606513977,
+      "loss2": 1.9650577306747437,
+      "delta": -0.011916875839233398,
+      "mean_router_weight": 0.015528181567788124,
+      "total_loss": -0.011901347897946835
+    },
+    {
+      "step": 185,
+      "epoch": 2,
+      "passage_idx": 56,
+      "loss1": 2.183286666870117,
+      "loss2": 2.1676855087280273,
+      "delta": -0.015601158142089844,
+      "mean_router_weight": 0.009178671054542065,
+      "total_loss": -0.015591979026794434
+    },
+    {
+      "step": 186,
+      "epoch": 2,
+      "passage_idx": 17,
+      "loss1": 2.079777479171753,
+      "loss2": 2.085853099822998,
+      "delta": 0.006075620651245117,
+      "mean_router_weight": 0.0024197075981646776,
+      "total_loss": 0.006078040227293968
+    },
+    {
+      "step": 187,
+      "epoch": 2,
+      "passage_idx": 7,
+      "loss1": 2.2121927738189697,
+      "loss2": 2.2084615230560303,
+      "delta": -0.003731250762939453,
+      "mean_router_weight": 0.005334598012268543,
+      "total_loss": -0.0037259161472320557
+    },
+    {
+      "step": 188,
+      "epoch": 2,
+      "passage_idx": 18,
+      "loss1": 1.8275389671325684,
+      "loss2": 1.7881900072097778,
+      "delta": -0.03934895992279053,
+      "mean_router_weight": 0.003589899744838476,
+      "total_loss": -0.03934536874294281
+    },
+    {
+      "step": 189,
+      "epoch": 2,
+      "passage_idx": 39,
+      "loss1": 1.945296287536621,
+      "loss2": 1.9340041875839233,
+      "delta": -0.011292099952697754,
+      "mean_router_weight": 0.004816791508346796,
+      "total_loss": -0.011287283152341843
+    },
+    {
+      "step": 190,
+      "epoch": 2,
+      "passage_idx": 78,
+      "loss1": 1.841361403465271,
+      "loss2": 1.8424311876296997,
+      "delta": 0.001069784164428711,
+      "mean_router_weight": 0.007071932312101126,
+      "total_loss": 0.0010768560459837317
+    },
+    {
+      "step": 191,
+      "epoch": 2,
+      "passage_idx": 53,
+      "loss1": 2.1308064460754395,
+      "loss2": 2.1287193298339844,
+      "delta": -0.002087116241455078,
+      "mean_router_weight": 0.008316242136061192,
+      "total_loss": -0.002078799996525049
+    },
+    {
+      "step": 192,
+      "epoch": 2,
+      "passage_idx": 68,
+      "loss1": 1.9073350429534912,
+      "loss2": 1.9045697450637817,
+      "delta": -0.0027652978897094727,
+      "mean_router_weight": 0.0012283091200515628,
+      "total_loss": -0.002764069475233555
+    },
+    {
+      "step": 193,
+      "epoch": 2,
+      "passage_idx": 11,
+      "loss1": 2.109525203704834,
+      "loss2": 2.104666233062744,
+      "delta": -0.004858970642089844,
+      "mean_router_weight": 0.0006548865931108594,
+      "total_loss": -0.004858315922319889
+    },
+    {
+      "step": 194,
+      "epoch": 2,
+      "passage_idx": 29,
+      "loss1": 1.7918932437896729,
+      "loss2": 1.7712020874023438,
+      "delta": -0.0206911563873291,
+      "mean_router_weight": 0.009908252395689487,
+      "total_loss": -0.020681248977780342
+    },
+    {
+      "step": 195,
+      "epoch": 2,
+      "passage_idx": 41,
+      "loss1": 2.100417137145996,
+      "loss2": 2.1030936241149902,
+      "delta": 0.0026764869689941406,
+      "mean_router_weight": 0.0066559393890202045,
+      "total_loss": 0.002683142898604274
+    },
+    {
+      "step": 196,
+      "epoch": 2,
+      "passage_idx": 65,
+      "loss1": 1.8378158807754517,
+      "loss2": 1.8189046382904053,
+      "delta": -0.018911242485046387,
+      "mean_router_weight": 0.009624467231333256,
+      "total_loss": -0.01890161819756031
+    },
+    {
+      "step": 197,
+      "epoch": 2,
+      "passage_idx": 33,
+      "loss1": 2.013336181640625,
+      "loss2": 2.014558792114258,
+      "delta": 0.0012226104736328125,
+      "mean_router_weight": 0.006414204370230436,
+      "total_loss": 0.001229024725034833
+    },
+    {
+      "step": 198,
+      "epoch": 2,
+      "passage_idx": 36,
+      "loss1": 2.1624629497528076,
+      "loss2": 2.148249387741089,
+      "delta": -0.01421356201171875,
+      "mean_router_weight": 0.01055180188268423,
+      "total_loss": -0.014203010126948357
+    },
+    {
+      "step": 199,
+      "epoch": 2,
+      "passage_idx": 64,
+      "loss1": 2.1245527267456055,
+      "loss2": 2.115899085998535,
+      "delta": -0.008653640747070312,
+      "mean_router_weight": 0.005104508716613054,
+      "total_loss": -0.008648536168038845
+    },
+    {
+      "step": 200,
+      "epoch": 2,
+      "passage_idx": 71,
+      "loss1": 1.8468040227890015,
+      "loss2": 1.873296856880188,
+      "delta": 0.026492834091186523,
+      "mean_router_weight": 0.010559933260083199,
+      "total_loss": 0.026503393426537514
+    },
+    {
+      "step": 201,
+      "epoch": 2,
+      "passage_idx": 75,
+      "loss1": 2.0260000228881836,
+      "loss2": 2.0302131175994873,
+      "delta": 0.004213094711303711,
+      "mean_router_weight": 0.004381227772682905,
+      "total_loss": 0.0042174761183559895
+    },
+    {
+      "step": 202,
+      "epoch": 2,
+      "passage_idx": 30,
+      "loss1": 2.10140323638916,
+      "loss2": 2.1225461959838867,
+      "delta": 0.021142959594726562,
+      "mean_router_weight": 0.007291663438081741,
+      "total_loss": 0.0211502518504858
+    },
+    {
+      "step": 203,
+      "epoch": 2,
+      "passage_idx": 24,
+      "loss1": 1.746620774269104,
+      "loss2": 1.760331630706787,
+      "delta": 0.013710856437683105,
+      "mean_router_weight": 0.0064046187326312065,
+      "total_loss": 0.013717261143028736
+    },
+    {
+      "step": 204,
+      "epoch": 2,
+      "passage_idx": 5,
+      "loss1": 1.9793123006820679,
+      "loss2": 1.9846662282943726,
+      "delta": 0.0053539276123046875,
+      "mean_router_weight": 0.010853507556021214,
+      "total_loss": 0.005364781245589256
+    },
+    {
+      "step": 205,
+      "epoch": 2,
+      "passage_idx": 54,
+      "loss1": 2.014841079711914,
+      "loss2": 2.0351927280426025,
+      "delta": 0.020351648330688477,
+      "mean_router_weight": 0.005109779536724091,
+      "total_loss": 0.020356757566332817
+    },
+    {
+      "step": 206,
+      "epoch": 2,
+      "passage_idx": 8,
+      "loss1": 2.1077849864959717,
+      "loss2": 2.1021111011505127,
+      "delta": -0.005673885345458984,
+      "mean_router_weight": 0.005137306638062,
+      "total_loss": -0.005668748170137405
+    },
+    {
+      "step": 207,
+      "epoch": 2,
+      "passage_idx": 34,
+      "loss1": 2.225688934326172,
+      "loss2": 2.22624135017395,
+      "delta": 0.0005524158477783203,
+      "mean_router_weight": 0.007379553746432066,
+      "total_loss": 0.0005597954150289297
+    },
+    {
+      "step": 208,
+      "epoch": 2,
+      "passage_idx": 32,
+      "loss1": 1.9520169496536255,
+      "loss2": 1.966869831085205,
+      "delta": 0.01485288143157959,
+      "mean_router_weight": 0.00416992511600256,
+      "total_loss": 0.014857050962746143
+    },
+    {
+      "step": 209,
+      "epoch": 2,
+      "passage_idx": 12,
+      "loss1": 2.132902145385742,
+      "loss2": 2.137854814529419,
+      "delta": 0.004952669143676758,
+      "mean_router_weight": 0.012532458640635014,
+      "total_loss": 0.004965201485902071
+    },
+    {
+      "step": 210,
+      "epoch": 2,
+      "passage_idx": 3,
+      "loss1": 2.00985050201416,
+      "loss2": 2.0279791355133057,
+      "delta": 0.018128633499145508,
+      "mean_router_weight": 0.004040595144033432,
+      "total_loss": 0.01813267357647419
+    },
+    {
+      "step": 211,
+      "epoch": 2,
+      "passage_idx": 37,
+      "loss1": 2.244936943054199,
+      "loss2": 2.245190382003784,
+      "delta": 0.00025343894958496094,
+      "mean_router_weight": 0.0035694458056241274,
+      "total_loss": 0.00025700838887132704
+    },
+    {
+      "step": 212,
+      "epoch": 2,
+      "passage_idx": 28,
+      "loss1": 1.8207049369812012,
+      "loss2": 1.826308012008667,
+      "delta": 0.00560307502746582,
+      "mean_router_weight": 0.0012303917901590466,
+      "total_loss": 0.005604305304586887
+    },
+    {
+      "step": 213,
+      "epoch": 2,
+      "passage_idx": 81,
+      "loss1": 2.0790252685546875,
+      "loss2": 2.0810186862945557,
+      "delta": 0.001993417739868164,
+      "mean_router_weight": 0.0064276717603206635,
+      "total_loss": 0.0019998454954475164
+    },
+    {
+      "step": 214,
+      "epoch": 2,
+      "passage_idx": 21,
+      "loss1": 2.009860038757324,
+      "loss2": 2.0036044120788574,
+      "delta": -0.006255626678466797,
+      "mean_router_weight": 0.004888160619884729,
+      "total_loss": -0.0062507386319339275
+    },
+    {
+      "step": 215,
+      "epoch": 2,
+      "passage_idx": 13,
+      "loss1": 1.9953969717025757,
+      "loss2": 1.9943753480911255,
+      "delta": -0.0010216236114501953,
+      "mean_router_weight": 0.0026284765917807817,
+      "total_loss": -0.0010189951863139868
+    },
+    {
+      "step": 216,
+      "epoch": 2,
+      "passage_idx": 9,
+      "loss1": 2.090618848800659,
+      "loss2": 2.0924270153045654,
+      "delta": 0.00180816650390625,
+      "mean_router_weight": 0.0005400566151365638,
+      "total_loss": 0.0018087065545842052
+    },
+    {
+      "step": 217,
+      "epoch": 2,
+      "passage_idx": 31,
+      "loss1": 2.0309250354766846,
+      "loss2": 2.026099443435669,
+      "delta": -0.004825592041015625,
+      "mean_router_weight": 0.009048053994774818,
+      "total_loss": -0.004816543776541948
+    },
+    {
+      "step": 218,
+      "epoch": 2,
+      "passage_idx": 2,
+      "loss1": 1.9847699403762817,
+      "loss2": 1.9834822416305542,
+      "delta": -0.001287698745727539,
+      "mean_router_weight": 0.008331612683832645,
+      "total_loss": -0.001279367133975029
+    },
+    {
+      "step": 219,
+      "epoch": 2,
+      "passage_idx": 74,
+      "loss1": 2.1342270374298096,
+      "loss2": 2.137800931930542,
+      "delta": 0.003573894500732422,
+      "mean_router_weight": 0.0011677732691168785,
+      "total_loss": 0.0035750623792409897
+    },
+    {
+      "step": 220,
+      "epoch": 2,
+      "passage_idx": 35,
+      "loss1": 2.1596133708953857,
+      "loss2": 2.1465930938720703,
+      "delta": -0.01302027702331543,
+      "mean_router_weight": 0.0031519990880042315,
+      "total_loss": -0.013017125427722931
+    },
+    {
+      "step": 221,
+      "epoch": 2,
+      "passage_idx": 4,
+      "loss1": 2.1220786571502686,
+      "loss2": 2.1225790977478027,
+      "delta": 0.0005004405975341797,
+      "mean_router_weight": 0.001991461729630828,
+      "total_loss": 0.0005024320562370121
+    },
+    {
+      "step": 222,
+      "epoch": 2,
+      "passage_idx": 52,
+      "loss1": 2.2054057121276855,
+      "loss2": 2.2045884132385254,
+      "delta": -0.0008172988891601562,
+      "mean_router_weight": 0.0003390815982129425,
+      "total_loss": -0.0008169598295353353
+    },
+    {
+      "step": 223,
+      "epoch": 2,
+      "passage_idx": 66,
+      "loss1": 2.0162739753723145,
+      "loss2": 2.016118288040161,
+      "delta": -0.0001556873321533203,
+      "mean_router_weight": 0.004545662086457014,
+      "total_loss": -0.000151141663081944
+    },
+    {
+      "step": 224,
+      "epoch": 2,
+      "passage_idx": 48,
+      "loss1": 2.015671968460083,
+      "loss2": 2.0115551948547363,
+      "delta": -0.00411677360534668,
+      "mean_router_weight": 0.007298431359231472,
+      "total_loss": -0.0041094752959907055
+    },
+    {
+      "step": 225,
+      "epoch": 2,
+      "passage_idx": 73,
+      "loss1": 2.0040056705474854,
+      "loss2": 2.007443904876709,
+      "delta": 0.003438234329223633,
+      "mean_router_weight": 0.0008912108605727553,
+      "total_loss": 0.00343912560492754
+    },
+    {
+      "step": 226,
+      "epoch": 2,
+      "passage_idx": 38,
+      "loss1": 2.0586907863616943,
+      "loss2": 2.0657927989959717,
+      "delta": 0.007102012634277344,
+      "mean_router_weight": 0.003024177858605981,
+      "total_loss": 0.00710503663867712
+    },
+    {
+      "step": 227,
+      "epoch": 2,
+      "passage_idx": 27,
+      "loss1": 1.965944528579712,
+      "loss2": 1.9669674634933472,
+      "delta": 0.001022934913635254,
+      "mean_router_weight": 0.00036244868533685803,
+      "total_loss": 0.0010232973145321012
+    },
+    {
+      "step": 228,
+      "epoch": 2,
+      "passage_idx": 40,
+      "loss1": 2.0423049926757812,
+      "loss2": 2.046335220336914,
+      "delta": 0.0040302276611328125,
+      "mean_router_weight": 0.0031955151353031397,
+      "total_loss": 0.004033423028886318
+    },
+    {
+      "step": 229,
+      "epoch": 2,
+      "passage_idx": 49,
+      "loss1": 1.8901771306991577,
+      "loss2": 1.8898282051086426,
+      "delta": -0.0003489255905151367,
+      "mean_router_weight": 0.0005391985760070384,
+      "total_loss": -0.0003483863838482648
+    },
+    {
+      "step": 230,
+      "epoch": 2,
+      "passage_idx": 60,
+      "loss1": 2.0871920585632324,
+      "loss2": 2.0893049240112305,
+      "delta": 0.002112865447998047,
+      "mean_router_weight": 0.0032753089908510447,
+      "total_loss": 0.002116140676662326
+    },
+    {
+      "step": 231,
+      "epoch": 2,
+      "passage_idx": 15,
+      "loss1": 2.1627132892608643,
+      "loss2": 2.162869691848755,
+      "delta": 0.000156402587890625,
+      "mean_router_weight": 0.002113772090524435,
+      "total_loss": 0.00015851635544095188
+    },
+    {
+      "step": 232,
+      "epoch": 2,
+      "passage_idx": 23,
+      "loss1": 1.9988077878952026,
+      "loss2": 1.9985767602920532,
+      "delta": -0.00023102760314941406,
+      "mean_router_weight": 0.0003552678390406072,
+      "total_loss": -0.00023067233269102871
+    },
+    {
+      "step": 233,
+      "epoch": 2,
+      "passage_idx": 76,
+      "loss1": 1.9034905433654785,
+      "loss2": 1.9041560888290405,
+      "delta": 0.0006655454635620117,
+      "mean_router_weight": 0.0063074198551476,
+      "total_loss": 0.000671852903906256
+    },
+    {
+      "step": 234,
+      "epoch": 2,
+      "passage_idx": 62,
+      "loss1": 1.9431827068328857,
+      "loss2": 1.9449398517608643,
+      "delta": 0.0017571449279785156,
+      "mean_router_weight": 0.005698114167898893,
+      "total_loss": 0.0017628429923206568
+    },
+    {
+      "step": 235,
+      "epoch": 2,
+      "passage_idx": 69,
+      "loss1": 2.1099982261657715,
+      "loss2": 2.110020875930786,
+      "delta": 2.2649765014648438e-05,
+      "mean_router_weight": 0.0012248948914930224,
+      "total_loss": 2.3874659746070392e-05
+    },
+    {
+      "step": 236,
+      "epoch": 2,
+      "passage_idx": 67,
+      "loss1": 2.107412815093994,
+      "loss2": 2.1072700023651123,
+      "delta": -0.00014281272888183594,
+      "mean_router_weight": 0.0003259785589762032,
+      "total_loss": -0.0001424867514288053
+    },
+    {
+      "step": 237,
+      "epoch": 2,
+      "passage_idx": 46,
+      "loss1": 2.1270508766174316,
+      "loss2": 2.1268436908721924,
+      "delta": -0.0002071857452392578,
+      "mean_router_weight": 9.074183617485687e-05,
+      "total_loss": -0.00020709499949589372
+    },
+    {
+      "step": 238,
+      "epoch": 2,
+      "passage_idx": 57,
+      "loss1": 2.08699369430542,
+      "loss2": 2.0875322818756104,
+      "delta": 0.0005385875701904297,
+      "mean_router_weight": 0.0030314791947603226,
+      "total_loss": 0.0005416190251708031
+    },
+    {
+      "step": 239,
+      "epoch": 2,
+      "passage_idx": 55,
+      "loss1": 2.163100242614746,
+      "loss2": 2.162855625152588,
+      "delta": -0.0002446174621582031,
+      "mean_router_weight": 0.0020418802741914988,
+      "total_loss": -0.00024257558106910437
+    },
+    {
+      "step": 240,
+      "epoch": 2,
+      "passage_idx": 50,
+      "loss1": 2.1561784744262695,
+      "loss2": 2.1557328701019287,
+      "delta": -0.0004456043243408203,
+      "mean_router_weight": 0.0007118039065971971,
+      "total_loss": -0.00044489253195934
+    },
+    {
+      "step": 241,
+      "epoch": 2,
+      "passage_idx": 10,
+      "loss1": 2.073838710784912,
+      "loss2": 2.076753854751587,
+      "delta": 0.0029151439666748047,
+      "mean_router_weight": 0.0030475363600999117,
+      "total_loss": 0.00291819148696959
+    },
+    {
+      "step": 242,
+      "epoch": 2,
+      "passage_idx": 59,
+      "loss1": 2.140998125076294,
+      "loss2": 2.1408493518829346,
+      "delta": -0.000148773193359375,
+      "mean_router_weight": 0.00042984497849829495,
+      "total_loss": -0.00014834334433544427
+    },
+    {
+      "step": 243,
+      "epoch": 2,
+      "passage_idx": 47,
+      "loss1": 2.1027841567993164,
+      "loss2": 2.11297345161438,
+      "delta": 0.010189294815063477,
+      "mean_router_weight": 0.0032834114972501993,
+      "total_loss": 0.01019257865846157
+    },
+    {
+      "step": 244,
+      "epoch": 2,
+      "passage_idx": 77,
+      "loss1": 2.1972463130950928,
+      "loss2": 2.2005579471588135,
+      "delta": 0.003311634063720703,
+      "mean_router_weight": 0.004322507884353399,
+      "total_loss": 0.003315956564620137
+    },
+    {
+      "step": 245,
+      "epoch": 2,
+      "passage_idx": 51,
+      "loss1": 1.9269828796386719,
+      "loss2": 1.9275639057159424,
+      "delta": 0.0005810260772705078,
+      "mean_router_weight": 3.455097976257093e-05,
+      "total_loss": 0.0005810606526210904
+    },
+    {
+      "step": 246,
+      "epoch": 3,
+      "passage_idx": 36,
+      "loss1": 2.1489295959472656,
+      "loss2": 2.1590514183044434,
+      "delta": 0.010121822357177734,
+      "mean_router_weight": 0.0026891871821135283,
+      "total_loss": 0.01012451108545065
+    },
+    {
+      "step": 247,
+      "epoch": 3,
+      "passage_idx": 3,
+      "loss1": 2.1006386280059814,
+      "loss2": 2.1020288467407227,
+      "delta": 0.001390218734741211,
+      "mean_router_weight": 0.00035930980811826885,
+      "total_loss": 0.0013905779924243689
+    },
+    {
+      "step": 248,
+      "epoch": 3,
+      "passage_idx": 20,
+      "loss1": 1.9291211366653442,
+      "loss2": 1.9308849573135376,
+      "delta": 0.0017638206481933594,
+      "mean_router_weight": 0.0009282310493290424,
+      "total_loss": 0.0017647488275542855
+    },
+    {
+      "step": 249,
+      "epoch": 3,
+      "passage_idx": 21,
+      "loss1": 2.0508933067321777,
+      "loss2": 2.060868263244629,
+      "delta": 0.009974956512451172,
+      "mean_router_weight": 0.002469083061441779,
+      "total_loss": 0.009977425448596478
+    },
+    {
+      "step": 250,
+      "epoch": 3,
+      "passage_idx": 78,
+      "loss1": 1.9947843551635742,
+      "loss2": 2.0004398822784424,
+      "delta": 0.005655527114868164,
+      "mean_router_weight": 0.0019257119856774807,
+      "total_loss": 0.0056574526242911816
+    },
+    {
+      "step": 251,
+      "epoch": 3,
+      "passage_idx": 7,
+      "loss1": 2.162130355834961,
+      "loss2": 2.1636173725128174,
+      "delta": 0.0014870166778564453,
+      "mean_router_weight": 0.0026799775660037994,
+      "total_loss": 0.0014896966749802232
+    },
+    {
+      "step": 252,
+      "epoch": 3,
+      "passage_idx": 30,
+      "loss1": 2.2209246158599854,
+      "loss2": 2.221181869506836,
+      "delta": 0.00025725364685058594,
+      "mean_router_weight": 0.004707278683781624,
+      "total_loss": 0.0002619609294924885
+    },
+    {
+      "step": 253,
+      "epoch": 3,
+      "passage_idx": 49,
+      "loss1": 1.9445706605911255,
+      "loss2": 1.9441421031951904,
+      "delta": -0.0004285573959350586,
+      "mean_router_weight": 0.00019459438044577837,
+      "total_loss": -0.00042836280772462487
+    },
+    {
+      "step": 254,
+      "epoch": 3,
+      "passage_idx": 0,
+      "loss1": 2.278477430343628,
+      "loss2": 2.272143840789795,
+      "delta": -0.006333589553833008,
+      "mean_router_weight": 0.002048660535365343,
+      "total_loss": -0.006331541109830141
+    },
+    {
+      "step": 255,
+      "epoch": 3,
+      "passage_idx": 45,
+      "loss1": 2.107055187225342,
+      "loss2": 2.1060726642608643,
+      "delta": -0.000982522964477539,
+      "mean_router_weight": 9.190271521219984e-05,
+      "total_loss": -0.0009824311127886176
+    },
+    {
+      "step": 256,
+      "epoch": 3,
+      "passage_idx": 19,
+      "loss1": 2.106480121612549,
+      "loss2": 2.1053881645202637,
+      "delta": -0.0010919570922851562,
+      "mean_router_weight": 1.5107362742128316e-05,
+      "total_loss": -0.0010919419582933187
+    },
+    {
+      "step": 257,
+      "epoch": 3,
+      "passage_idx": 5,
+      "loss1": 2.0096702575683594,
+      "loss2": 1.9863897562026978,
+      "delta": -0.02328050136566162,
+      "mean_router_weight": 0.0023701994214206934,
+      "total_loss": -0.0232781320810318
+    },
+    {
+      "step": 258,
+      "epoch": 3,
+      "passage_idx": 27,
+      "loss1": 1.9878172874450684,
+      "loss2": 1.987045407295227,
+      "delta": -0.0007718801498413086,
+      "mean_router_weight": 0.00011623557657003403,
+      "total_loss": -0.0007717639091424644
+    },
+    {
+      "step": 259,
+      "epoch": 3,
+      "passage_idx": 57,
+      "loss1": 2.11088490486145,
+      "loss2": 2.1058332920074463,
+      "delta": -0.005051612854003906,
+      "mean_router_weight": 0.0017939235549420118,
+      "total_loss": -0.005049819126725197
+    },
+    {
+      "step": 260,
+      "epoch": 3,
+      "passage_idx": 59,
+      "loss1": 2.1478230953216553,
+      "loss2": 2.1476099491119385,
+      "delta": -0.00021314620971679688,
+      "mean_router_weight": 0.00030418531969189644,
+      "total_loss": -0.00021284203103277832
+    },
+    {
+      "step": 261,
+      "epoch": 3,
+      "passage_idx": 75,
+      "loss1": 1.9719680547714233,
+      "loss2": 1.9664303064346313,
+      "delta": -0.005537748336791992,
+      "mean_router_weight": 0.0006402089493349195,
+      "total_loss": -0.005537108052521944
+    },
+    {
+      "step": 262,
+      "epoch": 3,
+      "passage_idx": 70,
+      "loss1": 2.0711591243743896,
+      "loss2": 2.0643727779388428,
+      "delta": -0.006786346435546875,
+      "mean_router_weight": 0.005655506160110235,
+      "total_loss": -0.0067806909792125225
+    },
+    {
+      "step": 263,
+      "epoch": 3,
+      "passage_idx": 38,
+      "loss1": 2.086742639541626,
+      "loss2": 2.0833771228790283,
+      "delta": -0.0033655166625976562,
+      "mean_router_weight": 0.0010581559035927057,
+      "total_loss": -0.0033644584473222494
+    },
+    {
+      "step": 264,
+      "epoch": 3,
+      "passage_idx": 41,
+      "loss1": 2.1309659481048584,
+      "loss2": 2.1171658039093018,
+      "delta": -0.01380014419555664,
+      "mean_router_weight": 0.003472818760201335,
+      "total_loss": -0.0137966712936759
+    },
+    {
+      "step": 265,
+      "epoch": 3,
+      "passage_idx": 44,
+      "loss1": 2.153719186782837,
+      "loss2": 2.1558420658111572,
+      "delta": 0.0021228790283203125,
+      "mean_router_weight": 0.0005045199068263173,
+      "total_loss": 0.0021233835723251104
+    },
+    {
+      "step": 266,
+      "epoch": 3,
+      "passage_idx": 31,
+      "loss1": 2.037693738937378,
+      "loss2": 2.038074254989624,
+      "delta": 0.00038051605224609375,
+      "mean_router_weight": 0.004038502927869558,
+      "total_loss": 0.00038455455796793103
+    },
+    {
+      "step": 267,
+      "epoch": 3,
+      "passage_idx": 6,
+      "loss1": 2.0088951587677,
+      "loss2": 1.9960063695907593,
+      "delta": -0.012888789176940918,
+      "mean_router_weight": 0.010133246891200542,
+      "total_loss": -0.012878656387329102
+    },
+    {
+      "step": 268,
+      "epoch": 3,
+      "passage_idx": 79,
+      "loss1": 2.3797028064727783,
+      "loss2": 2.402035713195801,
+      "delta": 0.02233290672302246,
+      "mean_router_weight": 0.0025599512737244368,
+      "total_loss": 0.022335465997457504
+    },
+    {
+      "step": 269,
+      "epoch": 3,
+      "passage_idx": 14,
+      "loss1": 1.985211730003357,
+      "loss2": 1.981200933456421,
+      "delta": -0.004010796546936035,
+      "mean_router_weight": 0.004103424958884716,
+      "total_loss": -0.004006693139672279
+    },
+    {
+      "step": 270,
+      "epoch": 3,
+      "passage_idx": 66,
+      "loss1": 2.0440123081207275,
+      "loss2": 2.04449200630188,
+      "delta": 0.00047969818115234375,
+      "mean_router_weight": 0.001055495347827673,
+      "total_loss": 0.0004807536897715181
+    },
+    {
+      "step": 271,
+      "epoch": 3,
+      "passage_idx": 24,
+      "loss1": 1.8093472719192505,
+      "loss2": 1.8133963346481323,
+      "delta": 0.004049062728881836,
+      "mean_router_weight": 0.0035816356539726257,
+      "total_loss": 0.004052644595503807
+    },
+    {
+      "step": 272,
+      "epoch": 3,
+      "passage_idx": 11,
+      "loss1": 2.272756814956665,
+      "loss2": 2.2717721462249756,
+      "delta": -0.0009846687316894531,
+      "mean_router_weight": 4.779881055583246e-05,
+      "total_loss": -0.0009846208849921823
+    },
+    {
+      "step": 273,
+      "epoch": 3,
+      "passage_idx": 37,
+      "loss1": 2.2596380710601807,
+      "loss2": 2.242711067199707,
+      "delta": -0.016927003860473633,
+      "mean_router_weight": 0.002491376595571637,
+      "total_loss": -0.016924511641263962
+    },
+    {
+      "step": 274,
+      "epoch": 3,
+      "passage_idx": 76,
+      "loss1": 1.9258067607879639,
+      "loss2": 1.9314453601837158,
+      "delta": 0.005638599395751953,
+      "mean_router_weight": 0.005127177108079195,
+      "total_loss": 0.005643726792186499
+    },
+    {
+      "step": 275,
+      "epoch": 3,
+      "passage_idx": 13,
+      "loss1": 2.1166110038757324,
+      "loss2": 2.1137192249298096,
+      "delta": -0.0028917789459228516,
+      "mean_router_weight": 0.0005577073898166418,
+      "total_loss": -0.0028912213165313005
+    },
+    {
+      "step": 276,
+      "epoch": 3,
+      "passage_idx": 18,
+      "loss1": 2.0263376235961914,
+      "loss2": 2.0263190269470215,
+      "delta": -1.8596649169921875e-05,
+      "mean_router_weight": 0.0001651076163398102,
+      "total_loss": -1.843154132075142e-05
+    },
+    {
+      "step": 277,
+      "epoch": 3,
+      "passage_idx": 23,
+      "loss1": 1.988348364830017,
+      "loss2": 1.986249566078186,
+      "delta": -0.0020987987518310547,
+      "mean_router_weight": 0.0001311196683673188,
+      "total_loss": -0.0020986676681786776
+    },
+    {
+      "step": 278,
+      "epoch": 3,
+      "passage_idx": 61,
+      "loss1": 2.0601892471313477,
+      "loss2": 2.047974109649658,
+      "delta": -0.012215137481689453,
+      "mean_router_weight": 0.008586876094341278,
+      "total_loss": -0.012206550687551498
+    },
+    {
+      "step": 279,
+      "epoch": 3,
+      "passage_idx": 46,
+      "loss1": 2.2339792251586914,
+      "loss2": 2.2320873737335205,
+      "delta": -0.0018918514251708984,
+      "mean_router_weight": 5.240653990767896e-05,
+      "total_loss": -0.0018917990382760763
+    },
+    {
+      "step": 280,
+      "epoch": 3,
+      "passage_idx": 1,
+      "loss1": 2.134016513824463,
+      "loss2": 2.0987625122070312,
+      "delta": -0.03525400161743164,
+      "mean_router_weight": 0.004894666373729706,
+      "total_loss": -0.03524910658597946
+    },
+    {
+      "step": 281,
+      "epoch": 3,
+      "passage_idx": 81,
+      "loss1": 2.1766154766082764,
+      "loss2": 2.1284120082855225,
+      "delta": -0.048203468322753906,
+      "mean_router_weight": 0.0025128864217549562,
+      "total_loss": -0.048200953751802444
+    },
+    {
+      "step": 282,
+      "epoch": 3,
+      "passage_idx": 32,
+      "loss1": 2.1036860942840576,
+      "loss2": 2.0646135807037354,
+      "delta": -0.039072513580322266,
+      "mean_router_weight": 0.0023752094712108374,
+      "total_loss": -0.03907013684511185
+    },
+    {
+      "step": 283,
+      "epoch": 3,
+      "passage_idx": 35,
+      "loss1": 2.007870674133301,
+      "loss2": 2.0058228969573975,
+      "delta": -0.0020477771759033203,
+      "mean_router_weight": 0.0011755762388929725,
+      "total_loss": -0.002046601613983512
+    },
+    {
+      "step": 284,
+      "epoch": 3,
+      "passage_idx": 10,
+      "loss1": 2.04211688041687,
+      "loss2": 2.044053792953491,
+      "delta": 0.0019369125366210938,
+      "mean_router_weight": 0.0021121639292687178,
+      "total_loss": 0.0019390246598049998
+    },
+    {
+      "step": 285,
+      "epoch": 3,
+      "passage_idx": 63,
+      "loss1": 2.0409247875213623,
+      "loss2": 2.0402631759643555,
+      "delta": -0.0006616115570068359,
+      "mean_router_weight": 0.0006104125059209764,
+      "total_loss": -0.0006610011332668364
+    },
+    {
+      "step": 286,
+      "epoch": 3,
+      "passage_idx": 54,
+      "loss1": 2.0126733779907227,
+      "loss2": 2.006686210632324,
+      "delta": -0.0059871673583984375,
+      "mean_router_weight": 0.0015632753493264318,
+      "total_loss": -0.005985604133456945
+    },
+    {
+      "step": 287,
+      "epoch": 3,
+      "passage_idx": 34,
+      "loss1": 2.0679798126220703,
+      "loss2": 2.069913864135742,
+      "delta": 0.001934051513671875,
+      "mean_router_weight": 0.003891504369676113,
+      "total_loss": 0.0019379430450499058
+    },
+    {
+      "step": 288,
+      "epoch": 3,
+      "passage_idx": 22,
+      "loss1": 1.9592666625976562,
+      "loss2": 1.9554837942123413,
+      "delta": -0.0037828683853149414,
+      "mean_router_weight": 0.002921201754361391,
+      "total_loss": -0.00377994729205966
+    },
+    {
+      "step": 289,
+      "epoch": 3,
+      "passage_idx": 55,
+      "loss1": 2.1801629066467285,
+      "loss2": 2.1853482723236084,
+      "delta": 0.005185365676879883,
+      "mean_router_weight": 0.001757492427714169,
+      "total_loss": 0.005187123082578182
+    },
+    {
+      "step": 290,
+      "epoch": 3,
+      "passage_idx": 39,
+      "loss1": 2.029700994491577,
+      "loss2": 2.027923822402954,
+      "delta": -0.0017771720886230469,
+      "mean_router_weight": 0.000270842167083174,
+      "total_loss": -0.0017769011901691556
+    },
+    {
+      "step": 291,
+      "epoch": 3,
+      "passage_idx": 16,
+      "loss1": 1.8751662969589233,
+      "loss2": 1.8744471073150635,
+      "delta": -0.0007191896438598633,
+      "mean_router_weight": 0.002848107600584626,
+      "total_loss": -0.0007163415430113673
+    },
+    {
+      "step": 292,
+      "epoch": 3,
+      "passage_idx": 47,
+      "loss1": 2.157850742340088,
+      "loss2": 2.1559255123138428,
+      "delta": -0.0019252300262451172,
+      "mean_router_weight": 0.003630253253504634,
+      "total_loss": -0.001921599730849266
+    },
+    {
+      "step": 293,
+      "epoch": 3,
+      "passage_idx": 69,
+      "loss1": 2.1557888984680176,
+      "loss2": 2.1624562740325928,
+      "delta": 0.006667375564575195,
+      "mean_router_weight": 0.0006519564194604754,
+      "total_loss": 0.006668027490377426
+    },
+    {
+      "step": 294,
+      "epoch": 3,
+      "passage_idx": 60,
+      "loss1": 2.057992935180664,
+      "loss2": 2.0857343673706055,
+      "delta": 0.027741432189941406,
+      "mean_router_weight": 0.0031898836605250835,
+      "total_loss": 0.02774462290108204
+    },
+    {
+      "step": 295,
+      "epoch": 3,
+      "passage_idx": 15,
+      "loss1": 2.0600619316101074,
+      "loss2": 2.064340114593506,
+      "delta": 0.0042781829833984375,
+      "mean_router_weight": 0.0010091328294947743,
+      "total_loss": 0.004279192071408033
+    },
+    {
+      "step": 296,
+      "epoch": 3,
+      "passage_idx": 51,
+      "loss1": 1.914459466934204,
+      "loss2": 1.9165760278701782,
+      "delta": 0.002116560935974121,
+      "mean_router_weight": 3.723251211340539e-05,
+      "total_loss": 0.0021165981888771057
+    },
+    {
+      "step": 297,
+      "epoch": 3,
+      "passage_idx": 17,
+      "loss1": 1.9698739051818848,
+      "loss2": 1.972287654876709,
+      "delta": 0.0024137496948242188,
+      "mean_router_weight": 5.94279081269633e-05,
+      "total_loss": 0.0024138090666383505
+    },
+    {
+      "step": 298,
+      "epoch": 3,
+      "passage_idx": 40,
+      "loss1": 2.018173933029175,
+      "loss2": 2.023268699645996,
+      "delta": 0.005094766616821289,
+      "mean_router_weight": 0.0006453378591686487,
+      "total_loss": 0.005095412023365498
+    },
+    {
+      "step": 299,
+      "epoch": 3,
+      "passage_idx": 56,
+      "loss1": 2.2903618812561035,
+      "loss2": 2.296685218811035,
+      "delta": 0.006323337554931641,
+      "mean_router_weight": 0.00048684829380363226,
+      "total_loss": 0.006323824170976877
+    },
+    {
+      "step": 300,
+      "epoch": 3,
+      "passage_idx": 52,
+      "loss1": 2.115978479385376,
+      "loss2": 2.117194890975952,
+      "delta": 0.0012164115905761719,
+      "mean_router_weight": 6.576083978870884e-05,
+      "total_loss": 0.001216477365233004
+    },
+    {
+      "step": 301,
+      "epoch": 3,
+      "passage_idx": 33,
+      "loss1": 2.118241310119629,
+      "loss2": 2.1234889030456543,
+      "delta": 0.005247592926025391,
+      "mean_router_weight": 0.0004646519082598388,
+      "total_loss": 0.005248057655990124
+    },
+    {
+      "step": 302,
+      "epoch": 3,
+      "passage_idx": 80,
+      "loss1": 1.9476048946380615,
+      "loss2": 2.007188558578491,
+      "delta": 0.05958366394042969,
+      "mean_router_weight": 0.002680989680811763,
+      "total_loss": 0.05958634614944458
+    },
+    {
+      "step": 303,
+      "epoch": 3,
+      "passage_idx": 43,
+      "loss1": 2.034726142883301,
+      "loss2": 2.0614473819732666,
+      "delta": 0.02672123908996582,
+      "mean_router_weight": 0.005736588034778833,
+      "total_loss": 0.02672697603702545
+    },
+    {
+      "step": 304,
+      "epoch": 3,
+      "passage_idx": 74,
+      "loss1": 2.0735695362091064,
+      "loss2": 2.076918840408325,
+      "delta": 0.00334930419921875,
+      "mean_router_weight": 0.0003951393882744014,
+      "total_loss": 0.0033496993128210306
+    },
+    {
+      "step": 305,
+      "epoch": 3,
+      "passage_idx": 9,
+      "loss1": 2.00631046295166,
+      "loss2": 2.0073108673095703,
+      "delta": 0.0010004043579101562,
+      "mean_router_weight": 2.585257971077226e-05,
+      "total_loss": 0.0010004302021116018
+    },
+    {
+      "step": 306,
+      "epoch": 3,
+      "passage_idx": 2,
+      "loss1": 2.063225746154785,
+      "loss2": 2.0656559467315674,
+      "delta": 0.0024302005767822266,
+      "mean_router_weight": 0.002059809397906065,
+      "total_loss": 0.0024322604294866323
+    },
+    {
+      "step": 307,
+      "epoch": 3,
+      "passage_idx": 73,
+      "loss1": 2.0416018962860107,
+      "loss2": 2.041887044906616,
+      "delta": 0.00028514862060546875,
+      "mean_router_weight": 5.5959546443773434e-05,
+      "total_loss": 0.00028520458727143705
+    },
+    {
+      "step": 308,
+      "epoch": 3,
+      "passage_idx": 65,
+      "loss1": 2.0067641735076904,
+      "loss2": 2.0060060024261475,
+      "delta": -0.0007581710815429688,
+      "mean_router_weight": 0.0030198560561984777,
+      "total_loss": -0.0007551512098871171
+    },
+    {
+      "step": 309,
+      "epoch": 3,
+      "passage_idx": 71,
+      "loss1": 2.119321823120117,
+      "loss2": 2.109504222869873,
+      "delta": -0.00981760025024414,
+      "mean_router_weight": 0.002954808995127678,
+      "total_loss": -0.009814645163714886
+    },
+    {
+      "step": 310,
+      "epoch": 3,
+      "passage_idx": 4,
+      "loss1": 2.149266481399536,
+      "loss2": 2.1482274532318115,
+      "delta": -0.0010390281677246094,
+      "mean_router_weight": 0.00030960419098846614,
+      "total_loss": -0.0010387186193838716
+    },
+    {
+      "step": 311,
+      "epoch": 3,
+      "passage_idx": 67,
+      "loss1": 2.109222173690796,
+      "loss2": 2.1083836555480957,
+      "delta": -0.0008385181427001953,
+      "mean_router_weight": 4.4513224565889686e-05,
+      "total_loss": -0.0008384736138395965
+    },
+    {
+      "step": 312,
+      "epoch": 3,
+      "passage_idx": 77,
+      "loss1": 2.2548727989196777,
+      "loss2": 2.234964609146118,
+      "delta": -0.01990818977355957,
+      "mean_router_weight": 0.004097830969840288,
+      "total_loss": -0.019904091954231262
+    },
+    {
+      "step": 313,
+      "epoch": 3,
+      "passage_idx": 42,
+      "loss1": 2.0904767513275146,
+      "loss2": 2.0890562534332275,
+      "delta": -0.0014204978942871094,
+      "mean_router_weight": 2.794423562590964e-05,
+      "total_loss": -0.001420469954609871
+    },
+    {
+      "step": 314,
+      "epoch": 3,
+      "passage_idx": 12,
+      "loss1": 2.2558436393737793,
+      "loss2": 2.2411296367645264,
+      "delta": -0.01471400260925293,
+      "mean_router_weight": 0.005211465992033482,
+      "total_loss": -0.014708790928125381
+    },
+    {
+      "step": 315,
+      "epoch": 3,
+      "passage_idx": 72,
+      "loss1": 2.011714220046997,
+      "loss2": 2.0041747093200684,
+      "delta": -0.007539510726928711,
+      "mean_router_weight": 0.00302601745352149,
+      "total_loss": -0.007536484859883785
+    },
+    {
+      "step": 316,
+      "epoch": 3,
+      "passage_idx": 29,
+      "loss1": 1.903710961341858,
+      "loss2": 1.9115952253341675,
+      "delta": 0.00788426399230957,
+      "mean_router_weight": 0.0069559658877551556,
+      "total_loss": 0.007891220040619373
+    },
+    {
+      "step": 317,
+      "epoch": 3,
+      "passage_idx": 64,
+      "loss1": 2.146716356277466,
+      "loss2": 2.1470425128936768,
+      "delta": 0.0003261566162109375,
+      "mean_router_weight": 0.00014175886462908238,
+      "total_loss": 0.00032629838096909225
+    },
+    {
+      "step": 318,
+      "epoch": 3,
+      "passage_idx": 26,
+      "loss1": 1.9324140548706055,
+      "loss2": 1.9311244487762451,
+      "delta": -0.0012896060943603516,
+      "mean_router_weight": 4.971476664650254e-05,
+      "total_loss": -0.0012895563850179315
+    },
+    {
+      "step": 319,
+      "epoch": 3,
+      "passage_idx": 58,
+      "loss1": 2.15401291847229,
+      "loss2": 2.188767671585083,
+      "delta": 0.03475475311279297,
+      "mean_router_weight": 0.005215180106461048,
+      "total_loss": 0.034759968519210815
+    },
+    {
+      "step": 320,
+      "epoch": 3,
+      "passage_idx": 53,
+      "loss1": 2.054147720336914,
+      "loss2": 2.054938316345215,
+      "delta": 0.0007905960083007812,
+      "mean_router_weight": 0.00011954529327340424,
+      "total_loss": 0.0007907155668362975
+    },
+    {
+      "step": 321,
+      "epoch": 3,
+      "passage_idx": 50,
+      "loss1": 2.2157390117645264,
+      "loss2": 2.2175559997558594,
+      "delta": 0.0018169879913330078,
+      "mean_router_weight": 0.0002120538119925186,
+      "total_loss": 0.0018172001000493765
+    },
+    {
+      "step": 322,
+      "epoch": 3,
+      "passage_idx": 25,
+      "loss1": 2.1370997428894043,
+      "loss2": 2.1384027004241943,
+      "delta": 0.001302957534790039,
+      "mean_router_weight": 1.7748558093444444e-05,
+      "total_loss": 0.0013029752299189568
+    },
+    {
+      "step": 323,
+      "epoch": 3,
+      "passage_idx": 62,
+      "loss1": 2.0305206775665283,
+      "loss2": 2.1412036418914795,
+      "delta": 0.11068296432495117,
+      "mean_router_weight": 0.003948458936065435,
+      "total_loss": 0.11068691313266754
+    },
+    {
+      "step": 324,
+      "epoch": 3,
+      "passage_idx": 8,
+      "loss1": 2.072688579559326,
+      "loss2": 2.0741870403289795,
+      "delta": 0.0014984607696533203,
+      "mean_router_weight": 8.856193744577467e-05,
+      "total_loss": 0.0014985493617132306
+    },
+    {
+      "step": 325,
+      "epoch": 3,
+      "passage_idx": 48,
+      "loss1": 2.035205841064453,
+      "loss2": 2.0746774673461914,
+      "delta": 0.03947162628173828,
+      "mean_router_weight": 0.002413352718576789,
+      "total_loss": 0.039474040269851685
+    },
+    {
+      "step": 326,
+      "epoch": 3,
+      "passage_idx": 68,
+      "loss1": 2.0445566177368164,
+      "loss2": 2.051499128341675,
+      "delta": 0.0069425106048583984,
+      "mean_router_weight": 2.3653865355299786e-05,
+      "total_loss": 0.006942534353584051
+    },
+    {
+      "step": 327,
+      "epoch": 3,
+      "passage_idx": 28,
+      "loss1": 1.9459922313690186,
+      "loss2": 1.9526207447052002,
+      "delta": 0.006628513336181641,
+      "mean_router_weight": 6.954367108846782e-06,
+      "total_loss": 0.00662852032110095
+    },
+    {
+      "step": 328,
+      "epoch": 4,
+      "passage_idx": 62,
+      "loss1": 2.0855302810668945,
+      "loss2": 2.220766067504883,
+      "delta": 0.13523578643798828,
+      "mean_router_weight": 0.0032970441970974207,
+      "total_loss": 0.13523907959461212
+    },
+    {
+      "step": 329,
+      "epoch": 4,
+      "passage_idx": 11,
+      "loss1": 2.2601430416107178,
+      "loss2": 2.2687602043151855,
+      "delta": 0.008617162704467773,
+      "mean_router_weight": 8.757779141888022e-06,
+      "total_loss": 0.008617171086370945
+    },
+    {
+      "step": 330,
+      "epoch": 4,
+      "passage_idx": 2,
+      "loss1": 2.114304542541504,
+      "loss2": 2.1304433345794678,
+      "delta": 0.016138792037963867,
+      "mean_router_weight": 0.0009716725908219814,
+      "total_loss": 0.016139764338731766
+    },
+    {
+      "step": 331,
+      "epoch": 4,
+      "passage_idx": 23,
+      "loss1": 2.030290365219116,
+      "loss2": 2.035555124282837,
+      "delta": 0.005264759063720703,
+      "mean_router_weight": 1.7063019186025485e-05,
+      "total_loss": 0.0052647762931883335
+    },
+    {
+      "step": 332,
+      "epoch": 4,
+      "passage_idx": 1,
+      "loss1": 2.189861536026001,
+      "loss2": 2.2417891025543213,
+      "delta": 0.05192756652832031,
+      "mean_router_weight": 0.0017639189027249813,
+      "total_loss": 0.051929328590631485
+    },
+    {
+      "step": 333,
+      "epoch": 4,
+      "passage_idx": 36,
+      "loss1": 2.3018696308135986,
+      "loss2": 2.3064537048339844,
+      "delta": 0.004584074020385742,
+      "mean_router_weight": 8.609893848188221e-05,
+      "total_loss": 0.004584160167723894
+    },
+    {
+      "step": 334,
+      "epoch": 4,
+      "passage_idx": 17,
+      "loss1": 2.141512632369995,
+      "loss2": 2.1460213661193848,
+      "delta": 0.0045087337493896484,
+      "mean_router_weight": 4.015723789052572e-06,
+      "total_loss": 0.004508737940341234
+    },
+    {
+      "step": 335,
+      "epoch": 4,
+      "passage_idx": 65,
+      "loss1": 2.15358567237854,
+      "loss2": 2.2089457511901855,
+      "delta": 0.05536007881164551,
+      "mean_router_weight": 0.0023983633145689964,
+      "total_loss": 0.05536247789859772
+    },
+    {
+      "step": 336,
+      "epoch": 4,
+      "passage_idx": 18,
+      "loss1": 2.20300030708313,
+      "loss2": 2.2056844234466553,
+      "delta": 0.0026841163635253906,
+      "mean_router_weight": 8.123226507450454e-06,
+      "total_loss": 0.0026841245125979185
+    },
+    {
+      "step": 337,
+      "epoch": 4,
+      "passage_idx": 19,
+      "loss1": 2.225783586502075,
+      "loss2": 2.227236270904541,
+      "delta": 0.0014526844024658203,
+      "mean_router_weight": 2.4854205094015924e-06,
+      "total_loss": 0.0014526868471875787
+    },
+    {
+      "step": 338,
+      "epoch": 4,
+      "passage_idx": 27,
+      "loss1": 2.1677472591400146,
+      "loss2": 2.1686720848083496,
+      "delta": 0.0009248256683349609,
+      "mean_router_weight": 4.307546259951778e-05,
+      "total_loss": 0.0009248687420040369
+    },
+    {
+      "step": 339,
+      "epoch": 4,
+      "passage_idx": 33,
+      "loss1": 2.2885215282440186,
+      "loss2": 2.288440465927124,
+      "delta": -8.106231689453125e-05,
+      "mean_router_weight": 8.912270459404681e-06,
+      "total_loss": -8.105340384645388e-05
+    },
+    {
+      "step": 340,
+      "epoch": 4,
+      "passage_idx": 22,
+      "loss1": 2.1369223594665527,
+      "loss2": 2.1360366344451904,
+      "delta": -0.0008857250213623047,
+      "mean_router_weight": 5.85554662393406e-05,
+      "total_loss": -0.0008856664644554257
+    },
+    {
+      "step": 341,
+      "epoch": 4,
+      "passage_idx": 45,
+      "loss1": 2.250222682952881,
+      "loss2": 2.24821138381958,
+      "delta": -0.0020112991333007812,
+      "mean_router_weight": 5.156170573172858e-06,
+      "total_loss": -0.002011294011026621
+    },
+    {
+      "step": 342,
+      "epoch": 4,
+      "passage_idx": 34,
+      "loss1": 2.207063674926758,
+      "loss2": 2.1856608390808105,
+      "delta": -0.021402835845947266,
+      "mean_router_weight": 0.0019034967990592122,
+      "total_loss": -0.02140093222260475
+    },
+    {
+      "step": 343,
+      "epoch": 4,
+      "passage_idx": 35,
+      "loss1": 2.1180331707000732,
+      "loss2": 2.1165382862091064,
+      "delta": -0.0014948844909667969,
+      "mean_router_weight": 3.785012449952774e-05,
+      "total_loss": -0.0014948466559872031
+    },
+    {
+      "step": 344,
+      "epoch": 4,
+      "passage_idx": 61,
+      "loss1": 2.1998448371887207,
+      "loss2": 2.1610217094421387,
+      "delta": -0.03882312774658203,
+      "mean_router_weight": 0.002429336542263627,
+      "total_loss": -0.038820698857307434
+    },
+    {
+      "step": 345,
+      "epoch": 4,
+      "passage_idx": 71,
+      "loss1": 2.202064037322998,
+      "loss2": 2.179348945617676,
+      "delta": -0.022715091705322266,
+      "mean_router_weight": 0.0009320883546024561,
+      "total_loss": -0.02271416038274765
+    },
+    {
+      "step": 346,
+      "epoch": 4,
+      "passage_idx": 3,
+      "loss1": 2.161736488342285,
+      "loss2": 2.1592366695404053,
+      "delta": -0.002499818801879883,
+      "mean_router_weight": 4.9550730182090774e-05,
+      "total_loss": -0.0024997692089527845
+    },
+    {
+      "step": 347,
+      "epoch": 4,
+      "passage_idx": 52,
+      "loss1": 2.277594566345215,
+      "loss2": 2.272395133972168,
+      "delta": -0.005199432373046875,
+      "mean_router_weight": 9.189733646053355e-06,
+      "total_loss": -0.005199423059821129
+    },
+    {
+      "step": 348,
+      "epoch": 4,
+      "passage_idx": 40,
+      "loss1": 2.161241292953491,
+      "loss2": 2.156708240509033,
+      "delta": -0.004533052444458008,
+      "mean_router_weight": 2.6047051505884156e-05,
+      "total_loss": -0.004533026367425919
+    },
+    {
+      "step": 349,
+      "epoch": 4,
+      "passage_idx": 51,
+      "loss1": 2.0578036308288574,
+      "loss2": 2.052677631378174,
+      "delta": -0.005125999450683594,
+      "mean_router_weight": 3.1108859275263967e-06,
+      "total_loss": -0.005125996191054583
+    },
+    {
+      "step": 350,
+      "epoch": 4,
+      "passage_idx": 26,
+      "loss1": 1.9665305614471436,
+      "loss2": 1.9652674198150635,
+      "delta": -0.0012631416320800781,
+      "mean_router_weight": 3.3185719075845554e-05,
+      "total_loss": -0.0012631084537133574
+    },
+    {
+      "step": 351,
+      "epoch": 4,
+      "passage_idx": 7,
+      "loss1": 2.1712753772735596,
+      "loss2": 2.1606838703155518,
+      "delta": -0.010591506958007812,
+      "mean_router_weight": 0.0001340249873464927,
+      "total_loss": -0.010591372847557068
+    },
+    {
+      "step": 352,
+      "epoch": 4,
+      "passage_idx": 46,
+      "loss1": 2.318352460861206,
+      "loss2": 2.3118062019348145,
+      "delta": -0.0065462589263916016,
+      "mean_router_weight": 1.3829938325216062e-05,
+      "total_loss": -0.006546244956552982
+    },
+    {
+      "step": 353,
+      "epoch": 4,
+      "passage_idx": 5,
+      "loss1": 2.009817361831665,
+      "loss2": 2.0050628185272217,
+      "delta": -0.004754543304443359,
+      "mean_router_weight": 0.000509112433064729,
+      "total_loss": -0.004754034336656332
+    },
+    {
+      "step": 354,
+      "epoch": 4,
+      "passage_idx": 58,
+      "loss1": 2.2161762714385986,
+      "loss2": 2.2619144916534424,
+      "delta": 0.04573822021484375,
+      "mean_router_weight": 0.0040922886691987514,
+      "total_loss": 0.04574231430888176
+    },
+    {
+      "step": 355,
+      "epoch": 4,
+      "passage_idx": 57,
+      "loss1": 2.163341999053955,
+      "loss2": 2.162858009338379,
+      "delta": -0.0004839897155761719,
+      "mean_router_weight": 0.000249336299020797,
+      "total_loss": -0.00048374038306064904
+    },
+    {
+      "step": 356,
+      "epoch": 4,
+      "passage_idx": 76,
+      "loss1": 1.9489006996154785,
+      "loss2": 1.944766640663147,
+      "delta": -0.004134058952331543,
+      "mean_router_weight": 0.0010095451725646853,
+      "total_loss": -0.00413304939866066
+    },
+    {
+      "step": 357,
+      "epoch": 4,
+      "passage_idx": 77,
+      "loss1": 2.2583272457122803,
+      "loss2": 2.321711778640747,
+      "delta": 0.0633845329284668,
+      "mean_router_weight": 0.002551942365244031,
+      "total_loss": 0.06338708847761154
+    },
+    {
+      "step": 358,
+      "epoch": 4,
+      "passage_idx": 73,
+      "loss1": 2.0694491863250732,
+      "loss2": 2.068063259124756,
+      "delta": -0.0013859272003173828,
+      "mean_router_weight": 3.670315709314309e-05,
+      "total_loss": -0.0013858905294910073
+    },
+    {
+      "step": 359,
+      "epoch": 4,
+      "passage_idx": 48,
+      "loss1": 2.0598065853118896,
+      "loss2": 2.0740597248077393,
+      "delta": 0.01425313949584961,
+      "mean_router_weight": 0.000863593362737447,
+      "total_loss": 0.014254002831876278
+    },
+    {
+      "step": 360,
+      "epoch": 4,
+      "passage_idx": 54,
+      "loss1": 2.1045138835906982,
+      "loss2": 2.1086485385894775,
+      "delta": 0.004134654998779297,
+      "mean_router_weight": 6.876101542729884e-05,
+      "total_loss": 0.004134723916649818
+    },
+    {
+      "step": 361,
+      "epoch": 4,
+      "passage_idx": 81,
+      "loss1": 2.161695957183838,
+      "loss2": 2.1709866523742676,
+      "delta": 0.009290695190429688,
+      "mean_router_weight": 0.0005623095785267651,
+      "total_loss": 0.009291257709264755
+    },
+    {
+      "step": 362,
+      "epoch": 4,
+      "passage_idx": 14,
+      "loss1": 2.031907558441162,
+      "loss2": 2.0583481788635254,
+      "delta": 0.02644062042236328,
+      "mean_router_weight": 0.00085022411076352,
+      "total_loss": 0.02644146978855133
+    },
+    {
+      "step": 363,
+      "epoch": 4,
+      "passage_idx": 20,
+      "loss1": 2.074617862701416,
+      "loss2": 2.0798213481903076,
+      "delta": 0.0052034854888916016,
+      "mean_router_weight": 4.94233681820333e-05,
+      "total_loss": 0.005203534848988056
+    },
+    {
+      "step": 364,
+      "epoch": 4,
+      "passage_idx": 67,
+      "loss1": 2.161391258239746,
+      "loss2": 2.1657023429870605,
+      "delta": 0.004311084747314453,
+      "mean_router_weight": 1.4049068340682425e-05,
+      "total_loss": 0.004311098717153072
+    },
+    {
+      "step": 365,
+      "epoch": 4,
+      "passage_idx": 28,
+      "loss1": 1.9420114755630493,
+      "loss2": 1.9456603527069092,
+      "delta": 0.0036488771438598633,
+      "mean_router_weight": 3.643690888566198e-06,
+      "total_loss": 0.0036488808691501617
+    },
+    {
+      "step": 366,
+      "epoch": 4,
+      "passage_idx": 39,
+      "loss1": 2.1214566230773926,
+      "loss2": 2.124934196472168,
+      "delta": 0.0034775733947753906,
+      "mean_router_weight": 2.50144767051097e-05,
+      "total_loss": 0.0034775983076542616
+    },
+    {
+      "step": 367,
+      "epoch": 4,
+      "passage_idx": 80,
+      "loss1": 2.04398512840271,
+      "loss2": 2.05745792388916,
+      "delta": 0.013472795486450195,
+      "mean_router_weight": 0.0001583319390192628,
+      "total_loss": 0.01347295381128788
+    },
+    {
+      "step": 368,
+      "epoch": 4,
+      "passage_idx": 37,
+      "loss1": 2.310706853866577,
+      "loss2": 2.3159420490264893,
+      "delta": 0.005235195159912109,
+      "mean_router_weight": 7.967574492795393e-05,
+      "total_loss": 0.005235274787992239
+    },
+    {
+      "step": 369,
+      "epoch": 4,
+      "passage_idx": 53,
+      "loss1": 2.1704154014587402,
+      "loss2": 2.1755616664886475,
+      "delta": 0.0051462650299072266,
+      "mean_router_weight": 3.4585264074848965e-05,
+      "total_loss": 0.005146299488842487
+    },
+    {
+      "step": 370,
+      "epoch": 4,
+      "passage_idx": 38,
+      "loss1": 2.0562257766723633,
+      "loss2": 2.059572458267212,
+      "delta": 0.003346681594848633,
+      "mean_router_weight": 0.00038427862455137074,
+      "total_loss": 0.0033470657654106617
+    },
+    {
+      "step": 371,
+      "epoch": 4,
+      "passage_idx": 41,
+      "loss1": 2.1294734477996826,
+      "loss2": 2.1315114498138428,
+      "delta": 0.0020380020141601562,
+      "mean_router_weight": 0.0002228249068139121,
+      "total_loss": 0.002038224833086133
+    },
+    {
+      "step": 372,
+      "epoch": 4,
+      "passage_idx": 10,
+      "loss1": 2.1435084342956543,
+      "loss2": 2.145348072052002,
+      "delta": 0.0018396377563476562,
+      "mean_router_weight": 5.143641465110704e-05,
+      "total_loss": 0.0018396892119199038
+    },
+    {
+      "step": 373,
+      "epoch": 4,
+      "passage_idx": 75,
+      "loss1": 2.1397697925567627,
+      "loss2": 2.140397310256958,
+      "delta": 0.0006275177001953125,
+      "mean_router_weight": 6.189505802467465e-05,
+      "total_loss": 0.0006275795749388635
+    },
+    {
+      "step": 374,
+      "epoch": 4,
+      "passage_idx": 25,
+      "loss1": 2.258378505706787,
+      "loss2": 2.2608044147491455,
+      "delta": 0.0024259090423583984,
+      "mean_router_weight": 8.329270713147707e-06,
+      "total_loss": 0.00242591742426157
+    },
+    {
+      "step": 375,
+      "epoch": 4,
+      "passage_idx": 47,
+      "loss1": 2.2211263179779053,
+      "loss2": 2.2189366817474365,
+      "delta": -0.00218963623046875,
+      "mean_router_weight": 4.009883195976727e-05,
+      "total_loss": -0.0021895961835980415
+    },
+    {
+      "step": 376,
+      "epoch": 4,
+      "passage_idx": 79,
+      "loss1": 2.4978253841400146,
+      "loss2": 2.4969232082366943,
+      "delta": -0.0009021759033203125,
+      "mean_router_weight": 7.643031494808383e-06,
+      "total_loss": -0.0009021682781167328
+    },
+    {
+      "step": 377,
+      "epoch": 4,
+      "passage_idx": 78,
+      "loss1": 2.139272689819336,
+      "loss2": 2.1390767097473145,
+      "delta": -0.00019598007202148438,
+      "mean_router_weight": 2.048268015641952e-06,
+      "total_loss": -0.00019597802020143718
+    },
+    {
+      "step": 378,
+      "epoch": 4,
+      "passage_idx": 68,
+      "loss1": 2.039088010787964,
+      "loss2": 2.0360658168792725,
+      "delta": -0.0030221939086914062,
+      "mean_router_weight": 1.2195241652079858e-05,
+      "total_loss": -0.0030221818014979362
+    },
+    {
+      "step": 379,
+      "epoch": 4,
+      "passage_idx": 43,
+      "loss1": 2.1078391075134277,
+      "loss2": 2.105231285095215,
+      "delta": -0.0026078224182128906,
+      "mean_router_weight": 1.7951533664017916e-05,
+      "total_loss": -0.0026078044902533293
+    },
+    {
+      "step": 380,
+      "epoch": 4,
+      "passage_idx": 64,
+      "loss1": 2.284595012664795,
+      "loss2": 2.2842366695404053,
+      "delta": -0.00035834312438964844,
+      "mean_router_weight": 4.847577656619251e-05,
+      "total_loss": -0.0003582946374081075
+    },
+    {
+      "step": 381,
+      "epoch": 4,
+      "passage_idx": 70,
+      "loss1": 2.120090961456299,
+      "loss2": 2.1168437004089355,
+      "delta": -0.0032472610473632812,
+      "mean_router_weight": 0.00010290819773217663,
+      "total_loss": -0.0032471581362187862
+    },
+    {
+      "step": 382,
+      "epoch": 4,
+      "passage_idx": 8,
+      "loss1": 2.2741377353668213,
+      "loss2": 2.2726075649261475,
+      "delta": -0.0015301704406738281,
+      "mean_router_weight": 1.609020182513632e-05,
+      "total_loss": -0.001530154375359416
+    },
+    {
+      "step": 383,
+      "epoch": 4,
+      "passage_idx": 50,
+      "loss1": 2.3421409130096436,
+      "loss2": 2.338438034057617,
+      "delta": -0.003702878952026367,
+      "mean_router_weight": 2.6797535610967316e-05,
+      "total_loss": -0.003702852176502347
+    },
+    {
+      "step": 384,
+      "epoch": 4,
+      "passage_idx": 24,
+      "loss1": 1.8044500350952148,
+      "loss2": 1.80082106590271,
+      "delta": -0.003628969192504883,
+      "mean_router_weight": 7.549781457782956e-06,
+      "total_loss": -0.003628961741924286
+    },
+    {
+      "step": 385,
+      "epoch": 4,
+      "passage_idx": 49,
+      "loss1": 1.9230009317398071,
+      "loss2": 1.9179168939590454,
+      "delta": -0.005084037780761719,
+      "mean_router_weight": 3.795348311541602e-05,
+      "total_loss": -0.0050839995965361595
+    },
+    {
+      "step": 386,
+      "epoch": 4,
+      "passage_idx": 12,
+      "loss1": 2.4190118312835693,
+      "loss2": 2.4144959449768066,
+      "delta": -0.004515886306762695,
+      "mean_router_weight": 5.0665956223383546e-05,
+      "total_loss": -0.004515835549682379
+    },
+    {
+      "step": 387,
+      "epoch": 4,
+      "passage_idx": 6,
+      "loss1": 2.072420597076416,
+      "loss2": 2.0676190853118896,
+      "delta": -0.004801511764526367,
+      "mean_router_weight": 6.572616257471964e-05,
+      "total_loss": -0.004801446106284857
+    },
+    {
+      "step": 388,
+      "epoch": 4,
+      "passage_idx": 55,
+      "loss1": 2.298251152038574,
+      "loss2": 2.2907702922821045,
+      "delta": -0.0074808597564697266,
+      "mean_router_weight": 7.860432378947735e-05,
+      "total_loss": -0.0074807810597121716
+    },
+    {
+      "step": 389,
+      "epoch": 4,
+      "passage_idx": 21,
+      "loss1": 2.063530206680298,
+      "loss2": 2.0568675994873047,
+      "delta": -0.006662607192993164,
+      "mean_router_weight": 8.409725523961242e-06,
+      "total_loss": -0.0066625988110899925
+    },
+    {
+      "step": 390,
+      "epoch": 4,
+      "passage_idx": 13,
+      "loss1": 2.045132875442505,
+      "loss2": 2.0371055603027344,
+      "delta": -0.008027315139770508,
+      "mean_router_weight": 2.5695376280054916e-06,
+      "total_loss": -0.008027312345802784
+    },
+    {
+      "step": 391,
+      "epoch": 4,
+      "passage_idx": 63,
+      "loss1": 2.1405460834503174,
+      "loss2": 2.1339235305786133,
+      "delta": -0.0066225528717041016,
+      "mean_router_weight": 1.92383613466518e-05,
+      "total_loss": -0.006622533779591322
+    },
+    {
+      "step": 392,
+      "epoch": 4,
+      "passage_idx": 31,
+      "loss1": 2.0605344772338867,
+      "loss2": 2.051610231399536,
+      "delta": -0.008924245834350586,
+      "mean_router_weight": 2.101157770084683e-05,
+      "total_loss": -0.00892422441393137
+    },
+    {
+      "step": 393,
+      "epoch": 4,
+      "passage_idx": 32,
+      "loss1": 2.138537645339966,
+      "loss2": 2.127537250518799,
+      "delta": -0.011000394821166992,
+      "mean_router_weight": 1.185763903777115e-05,
+      "total_loss": -0.011000382713973522
+    },
+    {
+      "step": 394,
+      "epoch": 4,
+      "passage_idx": 44,
+      "loss1": 2.1991024017333984,
+      "loss2": 2.1898353099823,
+      "delta": -0.009267091751098633,
+      "mean_router_weight": 7.66026096243877e-06,
+      "total_loss": -0.009267084300518036
+    },
+    {
+      "step": 395,
+      "epoch": 4,
+      "passage_idx": 74,
+      "loss1": 2.0737810134887695,
+      "loss2": 2.0672495365142822,
+      "delta": -0.006531476974487305,
+      "mean_router_weight": 6.65317929815501e-06,
+      "total_loss": -0.006531470455229282
+    },
+    {
+      "step": 396,
+      "epoch": 4,
+      "passage_idx": 9,
+      "loss1": 1.9634000062942505,
+      "loss2": 1.9542920589447021,
+      "delta": -0.00910794734954834,
+      "mean_router_weight": 3.883390036207857e-06,
+      "total_loss": -0.009107943624258041
+    },
+    {
+      "step": 397,
+      "epoch": 4,
+      "passage_idx": 30,
+      "loss1": 2.2912135124206543,
+      "loss2": 2.279006004333496,
+      "delta": -0.012207508087158203,
+      "mean_router_weight": 2.5997434931923635e-05,
+      "total_loss": -0.012207482010126114
+    },
+    {
+      "step": 398,
+      "epoch": 4,
+      "passage_idx": 66,
+      "loss1": 1.9320520162582397,
+      "loss2": 1.9224708080291748,
+      "delta": -0.009581208229064941,
+      "mean_router_weight": 8.817612069833558e-06,
+      "total_loss": -0.00958119984716177
+    },
+    {
+      "step": 399,
+      "epoch": 4,
+      "passage_idx": 15,
+      "loss1": 2.093402862548828,
+      "loss2": 2.0876524448394775,
+      "delta": -0.005750417709350586,
+      "mean_router_weight": 5.4321026254910976e-05,
+      "total_loss": -0.005750363226979971
+    },
+    {
+      "step": 400,
+      "epoch": 4,
+      "passage_idx": 4,
+      "loss1": 2.1524317264556885,
+      "loss2": 2.1472597122192383,
+      "delta": -0.005172014236450195,
+      "mean_router_weight": 2.4502205633325502e-05,
+      "total_loss": -0.005171989556401968
+    },
+    {
+      "step": 401,
+      "epoch": 4,
+      "passage_idx": 59,
+      "loss1": 2.1918468475341797,
+      "loss2": 2.1835179328918457,
+      "delta": -0.008328914642333984,
+      "mean_router_weight": 1.0459805707796477e-05,
+      "total_loss": -0.008328904397785664
+    },
+    {
+      "step": 402,
+      "epoch": 4,
+      "passage_idx": 42,
+      "loss1": 2.048297166824341,
+      "loss2": 2.0410349369049072,
+      "delta": -0.007262229919433594,
+      "mean_router_weight": 2.3313814381253906e-06,
+      "total_loss": -0.007262227591127157
+    },
+    {
+      "step": 403,
+      "epoch": 4,
+      "passage_idx": 29,
+      "loss1": 1.824806571006775,
+      "loss2": 1.816951036453247,
+      "delta": -0.007855534553527832,
+      "mean_router_weight": 1.8203887520940043e-05,
+      "total_loss": -0.00785551592707634
+    },
+    {
+      "step": 404,
+      "epoch": 4,
+      "passage_idx": 56,
+      "loss1": 2.1846532821655273,
+      "loss2": 2.175828695297241,
+      "delta": -0.008824586868286133,
+      "mean_router_weight": 2.5059754989342764e-05,
+      "total_loss": -0.008824561722576618
+    },
+    {
+      "step": 405,
+      "epoch": 4,
+      "passage_idx": 72,
+      "loss1": 1.9981991052627563,
+      "loss2": 1.99076509475708,
+      "delta": -0.0074340105056762695,
+      "mean_router_weight": 1.0408221896796022e-05,
+      "total_loss": -0.007434000261127949
+    },
+    {
+      "step": 406,
+      "epoch": 4,
+      "passage_idx": 16,
+      "loss1": 1.725269079208374,
+      "loss2": 1.7190992832183838,
+      "delta": -0.006169795989990234,
+      "mean_router_weight": 1.170774794445606e-05,
+      "total_loss": -0.006169784348458052
+    },
+    {
+      "step": 407,
+      "epoch": 4,
+      "passage_idx": 69,
+      "loss1": 2.0463335514068604,
+      "loss2": 2.0382742881774902,
+      "delta": -0.008059263229370117,
+      "mean_router_weight": 2.5897505111061037e-05,
+      "total_loss": -0.008059237152338028
+    },
+    {
+      "step": 408,
+      "epoch": 4,
+      "passage_idx": 0,
+      "loss1": 2.1631927490234375,
+      "loss2": 2.161501169204712,
+      "delta": -0.001691579818725586,
+      "mean_router_weight": 1.569458981975913e-05,
+      "total_loss": -0.0016915641026571393
+    },
+    {
+      "step": 409,
+      "epoch": 4,
+      "passage_idx": 60,
+      "loss1": 1.9696546792984009,
+      "loss2": 1.9678643941879272,
+      "delta": -0.0017902851104736328,
+      "mean_router_weight": 2.4006783405639e-06,
+      "total_loss": -0.0017902826657518744
+    }
+  ],
+  "lora_A_norm": 4.934589385986328,
+  "lora_B_norm": 7.437976360321045
+}
