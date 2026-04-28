@@ -155,12 +155,57 @@ def run_one_seed(condition: str, seed: int, passages: list[str],
     history = []
 
     if condition == "no_lora":
-        # No ingest. Frozen base only.
         recall, per_q = evaluate_recall(model, queries, stoi, itos, cfg.ctx_len)
         return {
             "condition": "no_lora", "seed": seed,
             "recall": recall, "n_queries": len(queries),
             "per_query": per_q, "history": [],
+        }
+
+    if condition == "direct_lora":
+        # Baseline: direct LoRA fine-tuning. No router, no UpdateMechanism.
+        # Optimizer over A, B only; SGD-on-LM-loss against the passages.
+        # Re-enable grad on the LoRA matrices.
+        for p in model.lora_params():
+            p.requires_grad_(True)
+        params = list(model.lora_params())
+        opt = torch.optim.AdamW(params, lr=INGEST_LR, weight_decay=0.0,
+                                  betas=(0.9, 0.95))
+        encoded = [encode(p, stoi).to(device) for p in passages]
+        rng_np = np.random.default_rng(seed)
+        n_passages = len(encoded)
+        history = []
+        step = 0
+        model.train()
+        for epoch in range(N_EPOCHS):
+            order = rng_np.permutation(n_passages)
+            for pi in order:
+                ids = encoded[pi]
+                if ids.shape[0] > cfg.ctx_len:
+                    ids = ids[:cfg.ctx_len]
+                x = ids[:-1].unsqueeze(0); y = ids[1:].unsqueeze(0)
+                logits, _ = model(x)
+                loss = F.cross_entropy(logits.reshape(-1, logits.shape[-1]),
+                                        y.reshape(-1))
+                opt.zero_grad(set_to_none=True)
+                loss.backward()
+                torch.nn.utils.clip_grad_norm_(params, 1.0)
+                opt.step()
+                history.append({"step": step, "epoch": epoch,
+                                "passage_idx": int(pi),
+                                "loss": float(loss.item())})
+                step += 1
+        recall, per_q = evaluate_recall(model, queries, stoi, itos, cfg.ctx_len)
+        lora_A_norm = lora_B_norm = float("nan")
+        for blk in model.blocks:
+            if blk.is_lora_layer:
+                lora_A_norm = float(blk.ffn.lora_A.norm().item())
+                lora_B_norm = float(blk.ffn.lora_B.norm().item())
+        return {
+            "condition": "direct_lora", "seed": seed,
+            "recall": recall, "n_queries": len(queries),
+            "per_query": per_q, "history": history,
+            "lora_A_norm": lora_A_norm, "lora_B_norm": lora_B_norm,
         }
 
     # Optimizer over router + update_mech (NOT the LoRA matrices, which
@@ -255,7 +300,7 @@ def main():
 
     all_results = []
     t0 = time.time()
-    for condition in ["learned", "random", "no_lora"]:
+    for condition in ["learned", "random", "no_lora", "direct_lora"]:
         for seed in [0, 1, 2]:
             print(f"\n=== condition={condition}  seed={seed} ===")
             t_start = time.time()
@@ -278,7 +323,7 @@ def main():
     print(f"\n{'='*70}\nSUMMARY")
     print(f"{'='*70}")
     summary = {}
-    for c in ["learned", "random", "no_lora"]:
+    for c in ["learned", "random", "no_lora", "direct_lora"]:
         rs = [x["recall"] for x in all_results if x["condition"] == c]
         m = sum(rs) / len(rs)
         std = (sum((x - m) ** 2 for x in rs) / len(rs)) ** 0.5

@@ -2,24 +2,28 @@
 
 ## Summary up front
 
-**Negative result, informative kind.** None of the three conditions produced
-meaningful Dickens fact recall on the 50-query evaluation set. Counting only
-queries whose answer is ≥ 2 characters (i.e., excluding Q27's trivial
-single-letter "I" answer that matches almost any English text):
+**Negative result, informative kind.** None of the three spec'd conditions —
+nor a direct-LoRA-fine-tuning baseline added afterward to localize the cause —
+produced meaningful Dickens fact recall. Counting only queries whose answer is
+≥ 2 characters (excluding Q27's single-letter "I" which any English text
+matches):
 
-| condition | n | mean recall | std | seeds |
-|--|--:|--:|--:|--:|
-| **A — learned router + LoRA** | 3 | **0/49** | 0 | 0, 0, 0 |
-| **B — random router + LoRA** | 3 | **0/49** | 0 | 0, 0, 0 |
-| **C — no-LoRA baseline** | 3 | **0/49** | 0 | 0, 0, 0 |
+| condition | n | mean real recall | std | per-seed real | per-seed raw |
+|--|--:|--:|--:|--:|--:|
+| **A — learned router + LoRA** | 3 | **0/49** | 0 | 0, 0, 0 | 0.02, 0.02, 0.02 |
+| **B — random router + LoRA** | 3 | **0/49** | 0 | 0, 0, 0 | 0.02, 0.02, 0.02 |
+| **C — no-LoRA baseline** | 3 | **0/49** | 0 | 0, 0, 0 | 0.02, 0.02, 0.02 |
+| **D — direct LoRA fine-tune** | 3 | **0.007 (1/147 total)** | 0.009 | 0, 1, 0 | 0.02, 0.02, 0.0 |
 
-(Each condition technically scored 0.02 = 1/50 raw, but every "hit" was the
-same false positive: Q27 has answer = "I", which any English text matches.)
+(Raw recall counts the trivial "I" false positive; real recall removes it.)
 
 Per the spec's headline question — **does Condition A significantly outperform
 Condition B? No.** Per the secondary question — **does Condition B
 significantly outperform Condition C? No.** The architecture as specified does
-not produce meaningful selective fact storage at this scale.
+not produce meaningful selective fact storage at this scale. The direct-LoRA
+control (added after the main result) shows that even ordinary gradient descent
+on the LoRA matrices fails at this scale: **the storage capacity itself is the
+bottleneck**, not the router-plus-UpdateMechanism architecture.
 
 The rest of this document:
 1. The setup and the two implementation deviations needed to keep training
@@ -246,13 +250,70 @@ A, B against the LM loss).
 Total wall: 70s for the 9-run sweep on a 5070 Ti, plus 117s base
 training. Well under the spec's 1-hour estimate. Not the bottleneck.
 
+## Direct-LoRA control (Condition D, added 2026-04-28)
+
+Per the recommendation in the original writeup, ran a direct-LoRA
+fine-tuning baseline: same base model, same passages, same 5 epochs ×
+82 passages = 410 steps, but **no router, no UpdateMechanism — just
+AdamW lr=1e-3 on `(lora_A, lora_B)` against per-token cross-entropy
+loss on each passage.**
+
+Result:
+
+| seed | per-passage CE start → end | lora_A norm | lora_B norm | real recall |
+|--:|--|--:|--:|--:|
+| 0 | 1.995 → 1.498 | 2.37 | 2.89 | 0/49 |
+| 1 | 2.184 → 1.763 | 2.38 | 2.86 | 1/49 (Q47 "head") |
+| 2 | 1.919 → 2.088 | 2.31 | 2.84 | 0/49 |
+
+The CE loss does drop on the passages (1.5–2.1 final vs 1.9–2.2 start
+— a meaningful, if modest, fit). The LoRA norms are *smaller* than
+the spec'd architecture's (2–3 vs 4–9), reflecting that direct
+gradient descent doesn't need a runaway delta to find a useful
+direction. Sample generation under direct_lora seed 0:
+
+```
+probe:        "My father's family name being "
+expected:     "Pirrip"
+generation:   "the country to the court. I and the be the was a man on\nthe "
+```
+
+Slightly more Dickens-flavored than the no-LoRA baseline ("country",
+"I and", "what I say" appear in continuations) but still nowhere near
+producing the specific names like "Pirrip" or "Gargery". The single
+real hit (Q47 "head") is a probe that ends with "round his __" — the
+model emitted "head of his head" plausibly because "head" follows
+"his" in a high-prior way, not because the LoRA stored a
+Dickens-specific fact.
+
+**Reading.** Direct LoRA fine-tuning at rank 8 with 410 steps of
+char-level next-token CE on Shakespeare-prior reduces passage CE by
+~10–25%, but does not produce meaningful factual recall. The LoRA
+shifts the model's distribution toward Dickens-flavored continuations
+without storing the specific token-level transitions that would let it
+emit named entities verbatim. This isolates the storage-capacity
+bottleneck from the router-plus-UpdateMechanism architecture: even the
+strongest possible training signal (direct gradient descent on the LM
+loss) doesn't get specific facts in at this scale.
+
 ## Recommendation for next step
 
-Before re-attempting this architecture, the simplest informative
-follow-up is the missing baseline: **direct LoRA fine-tuning on the
-Dickens passages with no router, no UpdateMechanism, just gradient
-descent on (A, B) against the per-token LM loss.** If that produces
-meaningful recall, the question becomes "what does the router add."
-If even direct fine-tuning at rank 8 / 410 steps doesn't produce
-recall, the storage capacity is the bottleneck — neither this
-architecture nor the spec's variants will work without more.
+The architecture investigation is at a dead end at this scale. Three
+levers, in order of cost:
+
+1. **Increase LoRA capacity.** Rank 8 → rank 32 or 64 may be enough
+   for direct fine-tuning to produce real recall. If it does, then
+   re-test the router-plus-UpdateMechanism with the same rank.
+2. **Switch to BPE tokenization.** "Pirrip" is 6 character-level steps
+   but probably 1–2 BPE tokens. Char-level next-token CE has very
+   low conditional entropy locally, leaving little room for injected
+   facts to matter. BPE gives the LoRA larger steps to influence.
+3. **Increase training steps.** 410 ingest steps is short by
+   fine-tuning standards. 5000–10000 might let even rank-8 LoRA
+   memorize the passages.
+
+Levers 1 and 2 are independent investigations; lever 3 is cheap to
+combine with either. If direct-LoRA at rank 32 + BPE + 5K steps still
+fails to produce meaningful recall, the bottleneck is something
+deeper than capacity (e.g., the base model's prior strength on
+char-level Shakespeare).

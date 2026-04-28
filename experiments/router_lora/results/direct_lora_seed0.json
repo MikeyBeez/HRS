@@ -1,0 +1,2822 @@
+{
+  "condition": "direct_lora",
+  "seed": 0,
+  "recall": 0.02,
+  "n_queries": 50,
+  "per_query": [
+    {
+      "id": 1,
+      "probe": "My father's family name being ",
+      "answer": "Pirrip",
+      "continuation": "the country to the court. I and the be the was a man on\nthe ",
+      "hit": false
+    },
+    {
+      "id": 2,
+      "probe": "My Christian name was ",
+      "answer": "Philip",
+      "continuation": "the state of the county to the court own the stare, and and ",
+      "hit": false
+    },
+    {
+      "id": 3,
+      "probe": "I called myself ",
+      "answer": "Pip",
+      "continuation": "and my lord and my lord and my lord and a man a man a man a ",
+      "hit": false
+    },
+    {
+      "id": 4,
+      "probe": "My sister married the ",
+      "answer": "blacksmith",
+      "continuation": "county of the country to the course of the courtious to of t",
+      "hit": false
+    },
+    {
+      "id": 5,
+      "probe": "My sister's name was Mrs. Joe ",
+      "answer": "Gargery",
+      "continuation": "and all the great to me the grows ate the merrice to me ther",
+      "hit": false
+    },
+    {
+      "id": 6,
+      "probe": "Above my father's name was inscribed Also ",
+      "answer": "Georgiana",
+      "continuation": "stand a man on the for the storrow. I as I said to the door ",
+      "hit": false
+    },
+    {
+      "id": 7,
+      "probe": "My mother was freckled and ",
+      "answer": "sickly",
+      "continuation": "the state of the country soult of the stare. '\nwhen I she sh",
+      "hit": false
+    },
+    {
+      "id": 8,
+      "probe": "Our marsh country was within twenty miles of the ",
+      "answer": "sea",
+      "continuation": "country. '\nwhat I say, and the could shake the country to th",
+      "hit": false
+    },
+    {
+      "id": 9,
+      "probe": "There were five little stone ",
+      "answer": "lozenges",
+      "continuation": "the way the way the way the way the stare on\nthe sheep-sheat",
+      "hit": false
+    },
+    {
+      "id": 10,
+      "probe": "The infant children were Alexander, Bartholomew, Abraham, Tobias, and ",
+      "answer": "Roger",
+      "continuation": "the grown the me way ord a the borrow ough there. '\nnot the ",
+      "hit": false
+    },
+    {
+      "id": 11,
+      "probe": "Beyond the churchyard was the dark flat ",
+      "answer": "wilderness",
+      "continuation": "of the country's soult soul, and and the started o the seast",
+      "hit": false
+    },
+    {
+      "id": 12,
+      "probe": "The low leaden line beyond was the ",
+      "answer": "river",
+      "continuation": "state of the country. '\n\n'The shaded of the county of the co",
+      "hit": false
+    },
+    {
+      "id": 13,
+      "probe": "The man cried, Hold your ",
+      "answer": "noise",
+      "continuation": "hand and the started of me and a man a man a man a man a man",
+      "hit": false
+    },
+    {
+      "id": 14,
+      "probe": "The man had a great iron on his ",
+      "answer": "leg",
+      "continuation": "country soul soul soul so beat a conter the starve. I as I s",
+      "hit": false
+    },
+    {
+      "id": 15,
+      "probe": "The man was all in coarse ",
+      "answer": "grey",
+      "continuation": "and the could to me the way to my she word at a man. '\nwhen ",
+      "hit": false
+    },
+    {
+      "id": 16,
+      "probe": "Pip's mother was named Georgiana, also called Wife of the ",
+      "answer": "Above",
+      "continuation": "courter of the coursed to the seast on the seast on the sere",
+      "hit": false
+    },
+    {
+      "id": 17,
+      "probe": "When asked his name, the boy said ",
+      "answer": "Pip",
+      "continuation": "as a fair stored to me a satil at the merser ast a man on th",
+      "hit": false
+    },
+    {
+      "id": 18,
+      "probe": "The man told Pip to bring him a ",
+      "answer": "file",
+      "continuation": "mourning to me. I and said the good to me on the sellf. I I ",
+      "hit": false
+    },
+    {
+      "id": 19,
+      "probe": "The man said he would have the boy's heart and ",
+      "answer": "liver",
+      "continuation": "and and the starp, and and the bother atter the master to be",
+      "hit": false
+    },
+    {
+      "id": 20,
+      "probe": "The boy was to bring the file to the old ",
+      "answer": "Battery",
+      "continuation": "the way the way the way the sear on the sear on the seast on",
+      "hit": false
+    },
+    {
+      "id": 21,
+      "probe": "The young man hidden was, in comparison, an ",
+      "answer": "Angel",
+      "continuation": "a man the good to me on the moon\nand the county of the count",
+      "hit": false
+    },
+    {
+      "id": 22,
+      "probe": "Pip pointed to the village, on the flat in-shore among the alder-trees and ",
+      "answer": "pollards",
+      "continuation": "the starped to the bought attor the the cound to the bought ",
+      "hit": false
+    },
+    {
+      "id": 23,
+      "probe": "The village was a mile or more from the ",
+      "answer": "church",
+      "continuation": "growing to me to me to me to me to there. I sard to the boo ",
+      "hit": false
+    },
+    {
+      "id": 24,
+      "probe": "On the edge of the river the beacon was like an unhooped cask upon a ",
+      "answer": "pole",
+      "continuation": "the storn to the seast ont the sere to the bout out the on t",
+      "hit": false
+    },
+    {
+      "id": 25,
+      "probe": "The other upright thing on the river edge was a ",
+      "answer": "gibbet",
+      "continuation": "cheer\nand the stamper of the courtesy of the courted was the",
+      "hit": false
+    },
+    {
+      "id": 26,
+      "probe": "The chains on the gibbet had once held a ",
+      "answer": "pirate",
+      "continuation": "come to see his here. I as he's said the stard to be the sen",
+      "hit": false
+    },
+    {
+      "id": 27,
+      "probe": "Mrs. Joe was more than twenty years older than ",
+      "answer": "I",
+      "continuation": "the country to me to me on. I and the sent the for the word ",
+      "hit": true
+    },
+    {
+      "id": 28,
+      "probe": "Mrs. Joe brought Pip up by ",
+      "answer": "hand",
+      "continuation": "the state, and so she she sad as the born. I I said the\nthe ",
+      "hit": false
+    },
+    {
+      "id": 29,
+      "probe": "Joe Gargery had curls of flaxen hair and eyes of an undecided ",
+      "answer": "blue",
+      "continuation": "to the course to the seast on the seast ont the bother atter",
+      "hit": false
+    },
+    {
+      "id": 30,
+      "probe": "Joe was a sort of Hercules in strength and also in ",
+      "answer": "weakness",
+      "continuation": "the starter, ay the body the good to the bough to the bood t",
+      "hit": false
+    },
+    {
+      "id": 31,
+      "probe": "Mrs. Joe had black hair and ",
+      "answer": "eyes",
+      "continuation": "head the started of the country to the court owlt\nthe state,",
+      "hit": false
+    },
+    {
+      "id": 32,
+      "probe": "Mrs. Joe wore a coarse apron with a square impregnable ",
+      "answer": "bib",
+      "continuation": "there, and and the boon\nand the state, and the she shall be ",
+      "hit": false
+    },
+    {
+      "id": 33,
+      "probe": "Joe's forge adjoined our house, which was a ",
+      "answer": "wooden",
+      "continuation": "comperised to me with he was a was a word as a man a border ",
+      "hit": false
+    },
+    {
+      "id": 34,
+      "probe": "Mrs. Joe was carrying a wax-ended piece of cane called ",
+      "answer": "Tickler",
+      "continuation": "the cornious the\nand the state, and the shall be the complai",
+      "hit": false
+    },
+    {
+      "id": 35,
+      "probe": "Mrs. Joe had been on the ",
+      "answer": "Ram-page",
+      "continuation": "county to the court of the court\nthe state, and the sheep of",
+      "hit": false
+    },
+    {
+      "id": 36,
+      "probe": "Joe glanced up at the Dutch ",
+      "answer": "clock",
+      "continuation": "and still corn and a country to be to the seast on a the sto",
+      "hit": false
+    },
+    {
+      "id": 37,
+      "probe": "Pip resolved to put his hunk of bread and butter down the leg of his ",
+      "answer": "trousers",
+      "continuation": "the way trong an a man an a man a man an a man a man a man a",
+      "hit": false
+    },
+    {
+      "id": 38,
+      "probe": "Joe and Pip silently held up their slices in friendly ",
+      "answer": "competition",
+      "continuation": "the count the count to the cour to the seast on the seast at",
+      "hit": false
+    },
+    {
+      "id": 39,
+      "probe": "Joe said, Manners is manners, but still your elth's your ",
+      "answer": "elth",
+      "continuation": "side or the seast at a man an a man a man a man a man a man ",
+      "hit": false
+    },
+    {
+      "id": 40,
+      "probe": "Mrs. Joe administered to Pip a medicine called ",
+      "answer": "Tar-water",
+      "continuation": "and me in her soldiver to me to me to me there at to my ther",
+      "hit": false
+    },
+    {
+      "id": 41,
+      "probe": "Pip felt as if he had to leap from the top of a high ",
+      "answer": "house",
+      "continuation": "she storn, and and the\nthe sheep-she she she she she she she",
+      "hit": false
+    },
+    {
+      "id": 42,
+      "probe": "Joe imparted his confidence about Mrs. Joe and ",
+      "answer": "Tickler",
+      "continuation": "and me for my heart and and a man a man a man a man an a man",
+      "hit": false
+    },
+    {
+      "id": 43,
+      "probe": "She was tall and ",
+      "answer": "bony",
+      "continuation": "the complaint to the complaint to the course, and and the bo",
+      "hit": false
+    },
+    {
+      "id": 44,
+      "probe": "Joe sat in the chimney ",
+      "answer": "corner",
+      "continuation": "to the court of the courtesy to the course, and the bother a",
+      "hit": false
+    },
+    {
+      "id": 45,
+      "probe": "Mrs. Joe took Pip by the ",
+      "answer": "hair",
+      "continuation": "country she shadows and a chest\nand the state, and the shall",
+      "hit": false
+    },
+    {
+      "id": 46,
+      "probe": "The man had no hat and broken ",
+      "answer": "shoes",
+      "continuation": "the country to the country. '\nshall I say, and the was a cou",
+      "hit": false
+    },
+    {
+      "id": 47,
+      "probe": "He had an old rag tied round his ",
+      "answer": "head",
+      "continuation": "son and his son at a man, and and the start to be the bout o",
+      "hit": false
+    },
+    {
+      "id": 48,
+      "probe": "After the man's threats, Pip agreed to bring him broken bits of ",
+      "answer": "food",
+      "continuation": "the courser to me on the sere touth. '\n'Tis the man of the w",
+      "hit": false
+    },
+    {
+      "id": 49,
+      "probe": "The fugitive on the marshes had an ironed ",
+      "answer": "leg",
+      "continuation": "the country to me the court owlt the the cound to the bout o",
+      "hit": false
+    },
+    {
+      "id": 50,
+      "probe": "Mrs. Joe used a knife with a slapping ",
+      "answer": "dexterity",
+      "continuation": "of the courts, and and the bother atter a the borrow\nand the",
+      "hit": false
+    }
+  ],
+  "history": [
+    {
+      "step": 0,
+      "epoch": 0,
+      "passage_idx": 70,
+      "loss": 1.9945306777954102
+    },
+    {
+      "step": 1,
+      "epoch": 0,
+      "passage_idx": 68,
+      "loss": 1.982116937637329
+    },
+    {
+      "step": 2,
+      "epoch": 0,
+      "passage_idx": 20,
+      "loss": 2.0013749599456787
+    },
+    {
+      "step": 3,
+      "epoch": 0,
+      "passage_idx": 5,
+      "loss": 1.9657973051071167
+    },
+    {
+      "step": 4,
+      "epoch": 0,
+      "passage_idx": 19,
+      "loss": 1.690595269203186
+    },
+    {
+      "step": 5,
+      "epoch": 0,
+      "passage_idx": 42,
+      "loss": 2.3038947582244873
+    },
+    {
+      "step": 6,
+      "epoch": 0,
+      "passage_idx": 11,
+      "loss": 2.219029426574707
+    },
+    {
+      "step": 7,
+      "epoch": 0,
+      "passage_idx": 67,
+      "loss": 2.1252028942108154
+    },
+    {
+      "step": 8,
+      "epoch": 0,
+      "passage_idx": 77,
+      "loss": 2.1494805812835693
+    },
+    {
+      "step": 9,
+      "epoch": 0,
+      "passage_idx": 16,
+      "loss": 1.7516356706619263
+    },
+    {
+      "step": 10,
+      "epoch": 0,
+      "passage_idx": 9,
+      "loss": 1.778131127357483
+    },
+    {
+      "step": 11,
+      "epoch": 0,
+      "passage_idx": 13,
+      "loss": 1.8942333459854126
+    },
+    {
+      "step": 12,
+      "epoch": 0,
+      "passage_idx": 53,
+      "loss": 2.212440013885498
+    },
+    {
+      "step": 13,
+      "epoch": 0,
+      "passage_idx": 74,
+      "loss": 1.585685133934021
+    },
+    {
+      "step": 14,
+      "epoch": 0,
+      "passage_idx": 8,
+      "loss": 2.1308908462524414
+    },
+    {
+      "step": 15,
+      "epoch": 0,
+      "passage_idx": 55,
+      "loss": 2.339071273803711
+    },
+    {
+      "step": 16,
+      "epoch": 0,
+      "passage_idx": 66,
+      "loss": 1.8766913414001465
+    },
+    {
+      "step": 17,
+      "epoch": 0,
+      "passage_idx": 34,
+      "loss": 2.1380839347839355
+    },
+    {
+      "step": 18,
+      "epoch": 0,
+      "passage_idx": 80,
+      "loss": 1.7152057886123657
+    },
+    {
+      "step": 19,
+      "epoch": 0,
+      "passage_idx": 4,
+      "loss": 2.005601406097412
+    },
+    {
+      "step": 20,
+      "epoch": 0,
+      "passage_idx": 64,
+      "loss": 2.267991065979004
+    },
+    {
+      "step": 21,
+      "epoch": 0,
+      "passage_idx": 23,
+      "loss": 1.5939700603485107
+    },
+    {
+      "step": 22,
+      "epoch": 0,
+      "passage_idx": 43,
+      "loss": 1.7500603199005127
+    },
+    {
+      "step": 23,
+      "epoch": 0,
+      "passage_idx": 35,
+      "loss": 2.163945436477661
+    },
+    {
+      "step": 24,
+      "epoch": 0,
+      "passage_idx": 62,
+      "loss": 1.6251839399337769
+    },
+    {
+      "step": 25,
+      "epoch": 0,
+      "passage_idx": 52,
+      "loss": 2.0548009872436523
+    },
+    {
+      "step": 26,
+      "epoch": 0,
+      "passage_idx": 27,
+      "loss": 1.580076813697815
+    },
+    {
+      "step": 27,
+      "epoch": 0,
+      "passage_idx": 76,
+      "loss": 1.5566229820251465
+    },
+    {
+      "step": 28,
+      "epoch": 0,
+      "passage_idx": 50,
+      "loss": 1.7732007503509521
+    },
+    {
+      "step": 29,
+      "epoch": 0,
+      "passage_idx": 10,
+      "loss": 1.912001132965088
+    },
+    {
+      "step": 30,
+      "epoch": 0,
+      "passage_idx": 75,
+      "loss": 1.7058496475219727
+    },
+    {
+      "step": 31,
+      "epoch": 0,
+      "passage_idx": 51,
+      "loss": 1.6358108520507812
+    },
+    {
+      "step": 32,
+      "epoch": 0,
+      "passage_idx": 30,
+      "loss": 2.0183920860290527
+    },
+    {
+      "step": 33,
+      "epoch": 0,
+      "passage_idx": 2,
+      "loss": 1.808163046836853
+    },
+    {
+      "step": 34,
+      "epoch": 0,
+      "passage_idx": 36,
+      "loss": 2.0635502338409424
+    },
+    {
+      "step": 35,
+      "epoch": 0,
+      "passage_idx": 17,
+      "loss": 1.6509325504302979
+    },
+    {
+      "step": 36,
+      "epoch": 0,
+      "passage_idx": 65,
+      "loss": 1.9357377290725708
+    },
+    {
+      "step": 37,
+      "epoch": 0,
+      "passage_idx": 28,
+      "loss": 1.5641942024230957
+    },
+    {
+      "step": 38,
+      "epoch": 0,
+      "passage_idx": 39,
+      "loss": 1.9122134447097778
+    },
+    {
+      "step": 39,
+      "epoch": 0,
+      "passage_idx": 18,
+      "loss": 1.6712092161178589
+    },
+    {
+      "step": 40,
+      "epoch": 0,
+      "passage_idx": 47,
+      "loss": 1.9336408376693726
+    },
+    {
+      "step": 41,
+      "epoch": 0,
+      "passage_idx": 3,
+      "loss": 1.676903486251831
+    },
+    {
+      "step": 42,
+      "epoch": 0,
+      "passage_idx": 1,
+      "loss": 1.740175724029541
+    },
+    {
+      "step": 43,
+      "epoch": 0,
+      "passage_idx": 44,
+      "loss": 1.8750098943710327
+    },
+    {
+      "step": 44,
+      "epoch": 0,
+      "passage_idx": 24,
+      "loss": 1.5369281768798828
+    },
+    {
+      "step": 45,
+      "epoch": 0,
+      "passage_idx": 21,
+      "loss": 1.917927861213684
+    },
+    {
+      "step": 46,
+      "epoch": 0,
+      "passage_idx": 0,
+      "loss": 2.0901687145233154
+    },
+    {
+      "step": 47,
+      "epoch": 0,
+      "passage_idx": 6,
+      "loss": 1.6948109865188599
+    },
+    {
+      "step": 48,
+      "epoch": 0,
+      "passage_idx": 45,
+      "loss": 1.9030919075012207
+    },
+    {
+      "step": 49,
+      "epoch": 0,
+      "passage_idx": 22,
+      "loss": 1.6800299882888794
+    },
+    {
+      "step": 50,
+      "epoch": 0,
+      "passage_idx": 26,
+      "loss": 1.682112455368042
+    },
+    {
+      "step": 51,
+      "epoch": 0,
+      "passage_idx": 37,
+      "loss": 2.2127039432525635
+    },
+    {
+      "step": 52,
+      "epoch": 0,
+      "passage_idx": 71,
+      "loss": 1.828237533569336
+    },
+    {
+      "step": 53,
+      "epoch": 0,
+      "passage_idx": 60,
+      "loss": 1.717212438583374
+    },
+    {
+      "step": 54,
+      "epoch": 0,
+      "passage_idx": 78,
+      "loss": 1.6958378553390503
+    },
+    {
+      "step": 55,
+      "epoch": 0,
+      "passage_idx": 57,
+      "loss": 1.9023855924606323
+    },
+    {
+      "step": 56,
+      "epoch": 0,
+      "passage_idx": 61,
+      "loss": 1.794066071510315
+    },
+    {
+      "step": 57,
+      "epoch": 0,
+      "passage_idx": 40,
+      "loss": 1.8360085487365723
+    },
+    {
+      "step": 58,
+      "epoch": 0,
+      "passage_idx": 12,
+      "loss": 2.5274641513824463
+    },
+    {
+      "step": 59,
+      "epoch": 0,
+      "passage_idx": 15,
+      "loss": 1.8317809104919434
+    },
+    {
+      "step": 60,
+      "epoch": 0,
+      "passage_idx": 49,
+      "loss": 1.597291350364685
+    },
+    {
+      "step": 61,
+      "epoch": 0,
+      "passage_idx": 32,
+      "loss": 1.6707007884979248
+    },
+    {
+      "step": 62,
+      "epoch": 0,
+      "passage_idx": 81,
+      "loss": 1.8913965225219727
+    },
+    {
+      "step": 63,
+      "epoch": 0,
+      "passage_idx": 25,
+      "loss": 2.0379397869110107
+    },
+    {
+      "step": 64,
+      "epoch": 0,
+      "passage_idx": 46,
+      "loss": 1.7839845418930054
+    },
+    {
+      "step": 65,
+      "epoch": 0,
+      "passage_idx": 58,
+      "loss": 1.7835789918899536
+    },
+    {
+      "step": 66,
+      "epoch": 0,
+      "passage_idx": 14,
+      "loss": 1.8927595615386963
+    },
+    {
+      "step": 67,
+      "epoch": 0,
+      "passage_idx": 38,
+      "loss": 1.8187199831008911
+    },
+    {
+      "step": 68,
+      "epoch": 0,
+      "passage_idx": 72,
+      "loss": 1.8168928623199463
+    },
+    {
+      "step": 69,
+      "epoch": 0,
+      "passage_idx": 31,
+      "loss": 1.7671862840652466
+    },
+    {
+      "step": 70,
+      "epoch": 0,
+      "passage_idx": 73,
+      "loss": 1.7583593130111694
+    },
+    {
+      "step": 71,
+      "epoch": 0,
+      "passage_idx": 48,
+      "loss": 1.7872570753097534
+    },
+    {
+      "step": 72,
+      "epoch": 0,
+      "passage_idx": 7,
+      "loss": 1.8663760423660278
+    },
+    {
+      "step": 73,
+      "epoch": 0,
+      "passage_idx": 63,
+      "loss": 1.8359445333480835
+    },
+    {
+      "step": 74,
+      "epoch": 0,
+      "passage_idx": 69,
+      "loss": 2.014657974243164
+    },
+    {
+      "step": 75,
+      "epoch": 0,
+      "passage_idx": 59,
+      "loss": 1.7897143363952637
+    },
+    {
+      "step": 76,
+      "epoch": 0,
+      "passage_idx": 54,
+      "loss": 1.8525381088256836
+    },
+    {
+      "step": 77,
+      "epoch": 0,
+      "passage_idx": 29,
+      "loss": 1.7587424516677856
+    },
+    {
+      "step": 78,
+      "epoch": 0,
+      "passage_idx": 41,
+      "loss": 1.8487449884414673
+    },
+    {
+      "step": 79,
+      "epoch": 0,
+      "passage_idx": 56,
+      "loss": 2.004852294921875
+    },
+    {
+      "step": 80,
+      "epoch": 0,
+      "passage_idx": 33,
+      "loss": 1.8703820705413818
+    },
+    {
+      "step": 81,
+      "epoch": 0,
+      "passage_idx": 79,
+      "loss": 2.218153715133667
+    },
+    {
+      "step": 82,
+      "epoch": 1,
+      "passage_idx": 69,
+      "loss": 1.964140772819519
+    },
+    {
+      "step": 83,
+      "epoch": 1,
+      "passage_idx": 17,
+      "loss": 1.5902496576309204
+    },
+    {
+      "step": 84,
+      "epoch": 1,
+      "passage_idx": 79,
+      "loss": 2.197324275970459
+    },
+    {
+      "step": 85,
+      "epoch": 1,
+      "passage_idx": 25,
+      "loss": 1.9495775699615479
+    },
+    {
+      "step": 86,
+      "epoch": 1,
+      "passage_idx": 66,
+      "loss": 1.7501987218856812
+    },
+    {
+      "step": 87,
+      "epoch": 1,
+      "passage_idx": 33,
+      "loss": 1.8223707675933838
+    },
+    {
+      "step": 88,
+      "epoch": 1,
+      "passage_idx": 6,
+      "loss": 1.6598337888717651
+    },
+    {
+      "step": 89,
+      "epoch": 1,
+      "passage_idx": 32,
+      "loss": 1.6161924600601196
+    },
+    {
+      "step": 90,
+      "epoch": 1,
+      "passage_idx": 60,
+      "loss": 1.620136022567749
+    },
+    {
+      "step": 91,
+      "epoch": 1,
+      "passage_idx": 5,
+      "loss": 1.7166590690612793
+    },
+    {
+      "step": 92,
+      "epoch": 1,
+      "passage_idx": 42,
+      "loss": 1.8487827777862549
+    },
+    {
+      "step": 93,
+      "epoch": 1,
+      "passage_idx": 70,
+      "loss": 1.853366732597351
+    },
+    {
+      "step": 94,
+      "epoch": 1,
+      "passage_idx": 45,
+      "loss": 1.777580738067627
+    },
+    {
+      "step": 95,
+      "epoch": 1,
+      "passage_idx": 24,
+      "loss": 1.5072510242462158
+    },
+    {
+      "step": 96,
+      "epoch": 1,
+      "passage_idx": 73,
+      "loss": 1.703094720840454
+    },
+    {
+      "step": 97,
+      "epoch": 1,
+      "passage_idx": 59,
+      "loss": 1.7420473098754883
+    },
+    {
+      "step": 98,
+      "epoch": 1,
+      "passage_idx": 81,
+      "loss": 1.7982743978500366
+    },
+    {
+      "step": 99,
+      "epoch": 1,
+      "passage_idx": 10,
+      "loss": 1.8011789321899414
+    },
+    {
+      "step": 100,
+      "epoch": 1,
+      "passage_idx": 14,
+      "loss": 1.7888203859329224
+    },
+    {
+      "step": 101,
+      "epoch": 1,
+      "passage_idx": 19,
+      "loss": 1.5928477048873901
+    },
+    {
+      "step": 102,
+      "epoch": 1,
+      "passage_idx": 62,
+      "loss": 1.566380500793457
+    },
+    {
+      "step": 103,
+      "epoch": 1,
+      "passage_idx": 43,
+      "loss": 1.6669427156448364
+    },
+    {
+      "step": 104,
+      "epoch": 1,
+      "passage_idx": 63,
+      "loss": 1.7818512916564941
+    },
+    {
+      "step": 105,
+      "epoch": 1,
+      "passage_idx": 4,
+      "loss": 1.9092271327972412
+    },
+    {
+      "step": 106,
+      "epoch": 1,
+      "passage_idx": 36,
+      "loss": 1.9308768510818481
+    },
+    {
+      "step": 107,
+      "epoch": 1,
+      "passage_idx": 39,
+      "loss": 1.7634077072143555
+    },
+    {
+      "step": 108,
+      "epoch": 1,
+      "passage_idx": 31,
+      "loss": 1.727400779724121
+    },
+    {
+      "step": 109,
+      "epoch": 1,
+      "passage_idx": 54,
+      "loss": 1.8116470575332642
+    },
+    {
+      "step": 110,
+      "epoch": 1,
+      "passage_idx": 80,
+      "loss": 1.626821756362915
+    },
+    {
+      "step": 111,
+      "epoch": 1,
+      "passage_idx": 53,
+      "loss": 1.893184781074524
+    },
+    {
+      "step": 112,
+      "epoch": 1,
+      "passage_idx": 78,
+      "loss": 1.6587337255477905
+    },
+    {
+      "step": 113,
+      "epoch": 1,
+      "passage_idx": 35,
+      "loss": 1.8894810676574707
+    },
+    {
+      "step": 114,
+      "epoch": 1,
+      "passage_idx": 28,
+      "loss": 1.5167720317840576
+    },
+    {
+      "step": 115,
+      "epoch": 1,
+      "passage_idx": 26,
+      "loss": 1.6142306327819824
+    },
+    {
+      "step": 116,
+      "epoch": 1,
+      "passage_idx": 75,
+      "loss": 1.6724461317062378
+    },
+    {
+      "step": 117,
+      "epoch": 1,
+      "passage_idx": 71,
+      "loss": 1.7332500219345093
+    },
+    {
+      "step": 118,
+      "epoch": 1,
+      "passage_idx": 47,
+      "loss": 1.8682774305343628
+    },
+    {
+      "step": 119,
+      "epoch": 1,
+      "passage_idx": 22,
+      "loss": 1.6426434516906738
+    },
+    {
+      "step": 120,
+      "epoch": 1,
+      "passage_idx": 56,
+      "loss": 1.9563575983047485
+    },
+    {
+      "step": 121,
+      "epoch": 1,
+      "passage_idx": 67,
+      "loss": 1.8319275379180908
+    },
+    {
+      "step": 122,
+      "epoch": 1,
+      "passage_idx": 16,
+      "loss": 1.5967005491256714
+    },
+    {
+      "step": 123,
+      "epoch": 1,
+      "passage_idx": 41,
+      "loss": 1.795057773590088
+    },
+    {
+      "step": 124,
+      "epoch": 1,
+      "passage_idx": 8,
+      "loss": 1.9152408838272095
+    },
+    {
+      "step": 125,
+      "epoch": 1,
+      "passage_idx": 21,
+      "loss": 1.7400418519973755
+    },
+    {
+      "step": 126,
+      "epoch": 1,
+      "passage_idx": 0,
+      "loss": 1.9412379264831543
+    },
+    {
+      "step": 127,
+      "epoch": 1,
+      "passage_idx": 13,
+      "loss": 1.7048354148864746
+    },
+    {
+      "step": 128,
+      "epoch": 1,
+      "passage_idx": 46,
+      "loss": 1.7234009504318237
+    },
+    {
+      "step": 129,
+      "epoch": 1,
+      "passage_idx": 18,
+      "loss": 1.5741344690322876
+    },
+    {
+      "step": 130,
+      "epoch": 1,
+      "passage_idx": 30,
+      "loss": 1.8984811305999756
+    },
+    {
+      "step": 131,
+      "epoch": 1,
+      "passage_idx": 64,
+      "loss": 1.9578417539596558
+    },
+    {
+      "step": 132,
+      "epoch": 1,
+      "passage_idx": 57,
+      "loss": 1.7901233434677124
+    },
+    {
+      "step": 133,
+      "epoch": 1,
+      "passage_idx": 76,
+      "loss": 1.5623964071273804
+    },
+    {
+      "step": 134,
+      "epoch": 1,
+      "passage_idx": 29,
+      "loss": 1.6916133165359497
+    },
+    {
+      "step": 135,
+      "epoch": 1,
+      "passage_idx": 44,
+      "loss": 1.7659591436386108
+    },
+    {
+      "step": 136,
+      "epoch": 1,
+      "passage_idx": 58,
+      "loss": 1.7125742435455322
+    },
+    {
+      "step": 137,
+      "epoch": 1,
+      "passage_idx": 1,
+      "loss": 1.7005687952041626
+    },
+    {
+      "step": 138,
+      "epoch": 1,
+      "passage_idx": 3,
+      "loss": 1.6534831523895264
+    },
+    {
+      "step": 139,
+      "epoch": 1,
+      "passage_idx": 2,
+      "loss": 1.729995608329773
+    },
+    {
+      "step": 140,
+      "epoch": 1,
+      "passage_idx": 72,
+      "loss": 1.7427226305007935
+    },
+    {
+      "step": 141,
+      "epoch": 1,
+      "passage_idx": 12,
+      "loss": 2.216905117034912
+    },
+    {
+      "step": 142,
+      "epoch": 1,
+      "passage_idx": 49,
+      "loss": 1.4920945167541504
+    },
+    {
+      "step": 143,
+      "epoch": 1,
+      "passage_idx": 61,
+      "loss": 1.7288480997085571
+    },
+    {
+      "step": 144,
+      "epoch": 1,
+      "passage_idx": 65,
+      "loss": 1.774603247642517
+    },
+    {
+      "step": 145,
+      "epoch": 1,
+      "passage_idx": 11,
+      "loss": 1.7900710105895996
+    },
+    {
+      "step": 146,
+      "epoch": 1,
+      "passage_idx": 68,
+      "loss": 1.6761579513549805
+    },
+    {
+      "step": 147,
+      "epoch": 1,
+      "passage_idx": 48,
+      "loss": 1.7254527807235718
+    },
+    {
+      "step": 148,
+      "epoch": 1,
+      "passage_idx": 37,
+      "loss": 1.9857831001281738
+    },
+    {
+      "step": 149,
+      "epoch": 1,
+      "passage_idx": 52,
+      "loss": 1.8267014026641846
+    },
+    {
+      "step": 150,
+      "epoch": 1,
+      "passage_idx": 51,
+      "loss": 1.5589553117752075
+    },
+    {
+      "step": 151,
+      "epoch": 1,
+      "passage_idx": 15,
+      "loss": 1.7331702709197998
+    },
+    {
+      "step": 152,
+      "epoch": 1,
+      "passage_idx": 7,
+      "loss": 1.7943826913833618
+    },
+    {
+      "step": 153,
+      "epoch": 1,
+      "passage_idx": 23,
+      "loss": 1.5265377759933472
+    },
+    {
+      "step": 154,
+      "epoch": 1,
+      "passage_idx": 40,
+      "loss": 1.7224491834640503
+    },
+    {
+      "step": 155,
+      "epoch": 1,
+      "passage_idx": 77,
+      "loss": 1.9042409658432007
+    },
+    {
+      "step": 156,
+      "epoch": 1,
+      "passage_idx": 38,
+      "loss": 1.7110258340835571
+    },
+    {
+      "step": 157,
+      "epoch": 1,
+      "passage_idx": 50,
+      "loss": 1.6291449069976807
+    },
+    {
+      "step": 158,
+      "epoch": 1,
+      "passage_idx": 55,
+      "loss": 1.9332666397094727
+    },
+    {
+      "step": 159,
+      "epoch": 1,
+      "passage_idx": 20,
+      "loss": 1.636533260345459
+    },
+    {
+      "step": 160,
+      "epoch": 1,
+      "passage_idx": 9,
+      "loss": 1.5908437967300415
+    },
+    {
+      "step": 161,
+      "epoch": 1,
+      "passage_idx": 34,
+      "loss": 1.8836376667022705
+    },
+    {
+      "step": 162,
+      "epoch": 1,
+      "passage_idx": 74,
+      "loss": 1.5263456106185913
+    },
+    {
+      "step": 163,
+      "epoch": 1,
+      "passage_idx": 27,
+      "loss": 1.5209623575210571
+    },
+    {
+      "step": 164,
+      "epoch": 2,
+      "passage_idx": 61,
+      "loss": 1.674993634223938
+    },
+    {
+      "step": 165,
+      "epoch": 2,
+      "passage_idx": 16,
+      "loss": 1.5420209169387817
+    },
+    {
+      "step": 166,
+      "epoch": 2,
+      "passage_idx": 63,
+      "loss": 1.7461388111114502
+    },
+    {
+      "step": 167,
+      "epoch": 2,
+      "passage_idx": 79,
+      "loss": 2.1314845085144043
+    },
+    {
+      "step": 168,
+      "epoch": 2,
+      "passage_idx": 19,
+      "loss": 1.5847598314285278
+    },
+    {
+      "step": 169,
+      "epoch": 2,
+      "passage_idx": 43,
+      "loss": 1.624172329902649
+    },
+    {
+      "step": 170,
+      "epoch": 2,
+      "passage_idx": 25,
+      "loss": 1.9041399955749512
+    },
+    {
+      "step": 171,
+      "epoch": 2,
+      "passage_idx": 42,
+      "loss": 1.785951018333435
+    },
+    {
+      "step": 172,
+      "epoch": 2,
+      "passage_idx": 22,
+      "loss": 1.6375126838684082
+    },
+    {
+      "step": 173,
+      "epoch": 2,
+      "passage_idx": 58,
+      "loss": 1.6720207929611206
+    },
+    {
+      "step": 174,
+      "epoch": 2,
+      "passage_idx": 14,
+      "loss": 1.7472708225250244
+    },
+    {
+      "step": 175,
+      "epoch": 2,
+      "passage_idx": 0,
+      "loss": 1.848842740058899
+    },
+    {
+      "step": 176,
+      "epoch": 2,
+      "passage_idx": 1,
+      "loss": 1.6625165939331055
+    },
+    {
+      "step": 177,
+      "epoch": 2,
+      "passage_idx": 45,
+      "loss": 1.713197946548462
+    },
+    {
+      "step": 178,
+      "epoch": 2,
+      "passage_idx": 80,
+      "loss": 1.6013402938842773
+    },
+    {
+      "step": 179,
+      "epoch": 2,
+      "passage_idx": 44,
+      "loss": 1.732895851135254
+    },
+    {
+      "step": 180,
+      "epoch": 2,
+      "passage_idx": 20,
+      "loss": 1.5909663438796997
+    },
+    {
+      "step": 181,
+      "epoch": 2,
+      "passage_idx": 70,
+      "loss": 1.8149042129516602
+    },
+    {
+      "step": 182,
+      "epoch": 2,
+      "passage_idx": 72,
+      "loss": 1.6997530460357666
+    },
+    {
+      "step": 183,
+      "epoch": 2,
+      "passage_idx": 26,
+      "loss": 1.5993400812149048
+    },
+    {
+      "step": 184,
+      "epoch": 2,
+      "passage_idx": 6,
+      "loss": 1.605105996131897
+    },
+    {
+      "step": 185,
+      "epoch": 2,
+      "passage_idx": 56,
+      "loss": 1.895221471786499
+    },
+    {
+      "step": 186,
+      "epoch": 2,
+      "passage_idx": 17,
+      "loss": 1.5956286191940308
+    },
+    {
+      "step": 187,
+      "epoch": 2,
+      "passage_idx": 7,
+      "loss": 1.7506457567214966
+    },
+    {
+      "step": 188,
+      "epoch": 2,
+      "passage_idx": 18,
+      "loss": 1.5529041290283203
+    },
+    {
+      "step": 189,
+      "epoch": 2,
+      "passage_idx": 39,
+      "loss": 1.6881450414657593
+    },
+    {
+      "step": 190,
+      "epoch": 2,
+      "passage_idx": 78,
+      "loss": 1.6014524698257446
+    },
+    {
+      "step": 191,
+      "epoch": 2,
+      "passage_idx": 53,
+      "loss": 1.8076088428497314
+    },
+    {
+      "step": 192,
+      "epoch": 2,
+      "passage_idx": 68,
+      "loss": 1.6077203750610352
+    },
+    {
+      "step": 193,
+      "epoch": 2,
+      "passage_idx": 11,
+      "loss": 1.7119337320327759
+    },
+    {
+      "step": 194,
+      "epoch": 2,
+      "passage_idx": 29,
+      "loss": 1.6345692873001099
+    },
+    {
+      "step": 195,
+      "epoch": 2,
+      "passage_idx": 41,
+      "loss": 1.7549705505371094
+    },
+    {
+      "step": 196,
+      "epoch": 2,
+      "passage_idx": 65,
+      "loss": 1.7085072994232178
+    },
+    {
+      "step": 197,
+      "epoch": 2,
+      "passage_idx": 33,
+      "loss": 1.7116724252700806
+    },
+    {
+      "step": 198,
+      "epoch": 2,
+      "passage_idx": 36,
+      "loss": 1.8541736602783203
+    },
+    {
+      "step": 199,
+      "epoch": 2,
+      "passage_idx": 64,
+      "loss": 1.8579457998275757
+    },
+    {
+      "step": 200,
+      "epoch": 2,
+      "passage_idx": 71,
+      "loss": 1.669102668762207
+    },
+    {
+      "step": 201,
+      "epoch": 2,
+      "passage_idx": 75,
+      "loss": 1.651247262954712
+    },
+    {
+      "step": 202,
+      "epoch": 2,
+      "passage_idx": 30,
+      "loss": 1.874767780303955
+    },
+    {
+      "step": 203,
+      "epoch": 2,
+      "passage_idx": 24,
+      "loss": 1.4542090892791748
+    },
+    {
+      "step": 204,
+      "epoch": 2,
+      "passage_idx": 5,
+      "loss": 1.6705559492111206
+    },
+    {
+      "step": 205,
+      "epoch": 2,
+      "passage_idx": 54,
+      "loss": 1.76854407787323
+    },
+    {
+      "step": 206,
+      "epoch": 2,
+      "passage_idx": 8,
+      "loss": 1.8252166509628296
+    },
+    {
+      "step": 207,
+      "epoch": 2,
+      "passage_idx": 34,
+      "loss": 1.8173518180847168
+    },
+    {
+      "step": 208,
+      "epoch": 2,
+      "passage_idx": 32,
+      "loss": 1.5801117420196533
+    },
+    {
+      "step": 209,
+      "epoch": 2,
+      "passage_idx": 12,
+      "loss": 2.1018574237823486
+    },
+    {
+      "step": 210,
+      "epoch": 2,
+      "passage_idx": 3,
+      "loss": 1.6293998956680298
+    },
+    {
+      "step": 211,
+      "epoch": 2,
+      "passage_idx": 37,
+      "loss": 1.9194695949554443
+    },
+    {
+      "step": 212,
+      "epoch": 2,
+      "passage_idx": 28,
+      "loss": 1.4838098287582397
+    },
+    {
+      "step": 213,
+      "epoch": 2,
+      "passage_idx": 81,
+      "loss": 1.7356609106063843
+    },
+    {
+      "step": 214,
+      "epoch": 2,
+      "passage_idx": 21,
+      "loss": 1.6618365049362183
+    },
+    {
+      "step": 215,
+      "epoch": 2,
+      "passage_idx": 13,
+      "loss": 1.6492964029312134
+    },
+    {
+      "step": 216,
+      "epoch": 2,
+      "passage_idx": 9,
+      "loss": 1.5645900964736938
+    },
+    {
+      "step": 217,
+      "epoch": 2,
+      "passage_idx": 31,
+      "loss": 1.7056764364242554
+    },
+    {
+      "step": 218,
+      "epoch": 2,
+      "passage_idx": 2,
+      "loss": 1.715543508529663
+    },
+    {
+      "step": 219,
+      "epoch": 2,
+      "passage_idx": 74,
+      "loss": 1.5040611028671265
+    },
+    {
+      "step": 220,
+      "epoch": 2,
+      "passage_idx": 35,
+      "loss": 1.7722328901290894
+    },
+    {
+      "step": 221,
+      "epoch": 2,
+      "passage_idx": 4,
+      "loss": 1.8578910827636719
+    },
+    {
+      "step": 222,
+      "epoch": 2,
+      "passage_idx": 52,
+      "loss": 1.729791522026062
+    },
+    {
+      "step": 223,
+      "epoch": 2,
+      "passage_idx": 66,
+      "loss": 1.698682188987732
+    },
+    {
+      "step": 224,
+      "epoch": 2,
+      "passage_idx": 48,
+      "loss": 1.6957488059997559
+    },
+    {
+      "step": 225,
+      "epoch": 2,
+      "passage_idx": 73,
+      "loss": 1.638774037361145
+    },
+    {
+      "step": 226,
+      "epoch": 2,
+      "passage_idx": 38,
+      "loss": 1.6477514505386353
+    },
+    {
+      "step": 227,
+      "epoch": 2,
+      "passage_idx": 27,
+      "loss": 1.4986528158187866
+    },
+    {
+      "step": 228,
+      "epoch": 2,
+      "passage_idx": 40,
+      "loss": 1.684429407119751
+    },
+    {
+      "step": 229,
+      "epoch": 2,
+      "passage_idx": 49,
+      "loss": 1.4596097469329834
+    },
+    {
+      "step": 230,
+      "epoch": 2,
+      "passage_idx": 60,
+      "loss": 1.5579849481582642
+    },
+    {
+      "step": 231,
+      "epoch": 2,
+      "passage_idx": 15,
+      "loss": 1.714828372001648
+    },
+    {
+      "step": 232,
+      "epoch": 2,
+      "passage_idx": 23,
+      "loss": 1.4993388652801514
+    },
+    {
+      "step": 233,
+      "epoch": 2,
+      "passage_idx": 76,
+      "loss": 1.5373419523239136
+    },
+    {
+      "step": 234,
+      "epoch": 2,
+      "passage_idx": 62,
+      "loss": 1.5433621406555176
+    },
+    {
+      "step": 235,
+      "epoch": 2,
+      "passage_idx": 69,
+      "loss": 1.8200693130493164
+    },
+    {
+      "step": 236,
+      "epoch": 2,
+      "passage_idx": 67,
+      "loss": 1.7730315923690796
+    },
+    {
+      "step": 237,
+      "epoch": 2,
+      "passage_idx": 46,
+      "loss": 1.6626224517822266
+    },
+    {
+      "step": 238,
+      "epoch": 2,
+      "passage_idx": 57,
+      "loss": 1.7432178258895874
+    },
+    {
+      "step": 239,
+      "epoch": 2,
+      "passage_idx": 55,
+      "loss": 1.8435465097427368
+    },
+    {
+      "step": 240,
+      "epoch": 2,
+      "passage_idx": 50,
+      "loss": 1.5917439460754395
+    },
+    {
+      "step": 241,
+      "epoch": 2,
+      "passage_idx": 10,
+      "loss": 1.7236216068267822
+    },
+    {
+      "step": 242,
+      "epoch": 2,
+      "passage_idx": 59,
+      "loss": 1.7200431823730469
+    },
+    {
+      "step": 243,
+      "epoch": 2,
+      "passage_idx": 47,
+      "loss": 1.8306456804275513
+    },
+    {
+      "step": 244,
+      "epoch": 2,
+      "passage_idx": 77,
+      "loss": 1.8461989164352417
+    },
+    {
+      "step": 245,
+      "epoch": 2,
+      "passage_idx": 51,
+      "loss": 1.5354535579681396
+    },
+    {
+      "step": 246,
+      "epoch": 3,
+      "passage_idx": 36,
+      "loss": 1.7980360984802246
+    },
+    {
+      "step": 247,
+      "epoch": 3,
+      "passage_idx": 3,
+      "loss": 1.619924545288086
+    },
+    {
+      "step": 248,
+      "epoch": 3,
+      "passage_idx": 20,
+      "loss": 1.5644460916519165
+    },
+    {
+      "step": 249,
+      "epoch": 3,
+      "passage_idx": 21,
+      "loss": 1.6031897068023682
+    },
+    {
+      "step": 250,
+      "epoch": 3,
+      "passage_idx": 78,
+      "loss": 1.5756124258041382
+    },
+    {
+      "step": 251,
+      "epoch": 3,
+      "passage_idx": 7,
+      "loss": 1.7256416082382202
+    },
+    {
+      "step": 252,
+      "epoch": 3,
+      "passage_idx": 30,
+      "loss": 1.8286774158477783
+    },
+    {
+      "step": 253,
+      "epoch": 3,
+      "passage_idx": 49,
+      "loss": 1.4164650440216064
+    },
+    {
+      "step": 254,
+      "epoch": 3,
+      "passage_idx": 0,
+      "loss": 1.7925479412078857
+    },
+    {
+      "step": 255,
+      "epoch": 3,
+      "passage_idx": 45,
+      "loss": 1.6757347583770752
+    },
+    {
+      "step": 256,
+      "epoch": 3,
+      "passage_idx": 19,
+      "loss": 1.5686057806015015
+    },
+    {
+      "step": 257,
+      "epoch": 3,
+      "passage_idx": 5,
+      "loss": 1.6167460680007935
+    },
+    {
+      "step": 258,
+      "epoch": 3,
+      "passage_idx": 27,
+      "loss": 1.4744526147842407
+    },
+    {
+      "step": 259,
+      "epoch": 3,
+      "passage_idx": 57,
+      "loss": 1.676269769668579
+    },
+    {
+      "step": 260,
+      "epoch": 3,
+      "passage_idx": 59,
+      "loss": 1.6720439195632935
+    },
+    {
+      "step": 261,
+      "epoch": 3,
+      "passage_idx": 75,
+      "loss": 1.6327016353607178
+    },
+    {
+      "step": 262,
+      "epoch": 3,
+      "passage_idx": 70,
+      "loss": 1.7639187574386597
+    },
+    {
+      "step": 263,
+      "epoch": 3,
+      "passage_idx": 38,
+      "loss": 1.610878348350525
+    },
+    {
+      "step": 264,
+      "epoch": 3,
+      "passage_idx": 41,
+      "loss": 1.7267048358917236
+    },
+    {
+      "step": 265,
+      "epoch": 3,
+      "passage_idx": 44,
+      "loss": 1.7173782587051392
+    },
+    {
+      "step": 266,
+      "epoch": 3,
+      "passage_idx": 31,
+      "loss": 1.6725951433181763
+    },
+    {
+      "step": 267,
+      "epoch": 3,
+      "passage_idx": 6,
+      "loss": 1.562243103981018
+    },
+    {
+      "step": 268,
+      "epoch": 3,
+      "passage_idx": 79,
+      "loss": 2.1048951148986816
+    },
+    {
+      "step": 269,
+      "epoch": 3,
+      "passage_idx": 14,
+      "loss": 1.7081892490386963
+    },
+    {
+      "step": 270,
+      "epoch": 3,
+      "passage_idx": 66,
+      "loss": 1.6612548828125
+    },
+    {
+      "step": 271,
+      "epoch": 3,
+      "passage_idx": 24,
+      "loss": 1.4413559436798096
+    },
+    {
+      "step": 272,
+      "epoch": 3,
+      "passage_idx": 11,
+      "loss": 1.6573084592819214
+    },
+    {
+      "step": 273,
+      "epoch": 3,
+      "passage_idx": 37,
+      "loss": 1.8993386030197144
+    },
+    {
+      "step": 274,
+      "epoch": 3,
+      "passage_idx": 76,
+      "loss": 1.5081232786178589
+    },
+    {
+      "step": 275,
+      "epoch": 3,
+      "passage_idx": 13,
+      "loss": 1.6069270372390747
+    },
+    {
+      "step": 276,
+      "epoch": 3,
+      "passage_idx": 18,
+      "loss": 1.5383621454238892
+    },
+    {
+      "step": 277,
+      "epoch": 3,
+      "passage_idx": 23,
+      "loss": 1.4574549198150635
+    },
+    {
+      "step": 278,
+      "epoch": 3,
+      "passage_idx": 61,
+      "loss": 1.6540858745574951
+    },
+    {
+      "step": 279,
+      "epoch": 3,
+      "passage_idx": 46,
+      "loss": 1.6187629699707031
+    },
+    {
+      "step": 280,
+      "epoch": 3,
+      "passage_idx": 1,
+      "loss": 1.66836678981781
+    },
+    {
+      "step": 281,
+      "epoch": 3,
+      "passage_idx": 81,
+      "loss": 1.7102011442184448
+    },
+    {
+      "step": 282,
+      "epoch": 3,
+      "passage_idx": 32,
+      "loss": 1.5637251138687134
+    },
+    {
+      "step": 283,
+      "epoch": 3,
+      "passage_idx": 35,
+      "loss": 1.7329421043395996
+    },
+    {
+      "step": 284,
+      "epoch": 3,
+      "passage_idx": 10,
+      "loss": 1.6729234457015991
+    },
+    {
+      "step": 285,
+      "epoch": 3,
+      "passage_idx": 63,
+      "loss": 1.7407259941101074
+    },
+    {
+      "step": 286,
+      "epoch": 3,
+      "passage_idx": 54,
+      "loss": 1.7319756746292114
+    },
+    {
+      "step": 287,
+      "epoch": 3,
+      "passage_idx": 34,
+      "loss": 1.7832907438278198
+    },
+    {
+      "step": 288,
+      "epoch": 3,
+      "passage_idx": 22,
+      "loss": 1.620017409324646
+    },
+    {
+      "step": 289,
+      "epoch": 3,
+      "passage_idx": 55,
+      "loss": 1.8109842538833618
+    },
+    {
+      "step": 290,
+      "epoch": 3,
+      "passage_idx": 39,
+      "loss": 1.6382747888565063
+    },
+    {
+      "step": 291,
+      "epoch": 3,
+      "passage_idx": 16,
+      "loss": 1.5231856107711792
+    },
+    {
+      "step": 292,
+      "epoch": 3,
+      "passage_idx": 47,
+      "loss": 1.795788288116455
+    },
+    {
+      "step": 293,
+      "epoch": 3,
+      "passage_idx": 69,
+      "loss": 1.7666890621185303
+    },
+    {
+      "step": 294,
+      "epoch": 3,
+      "passage_idx": 60,
+      "loss": 1.528002142906189
+    },
+    {
+      "step": 295,
+      "epoch": 3,
+      "passage_idx": 15,
+      "loss": 1.68182373046875
+    },
+    {
+      "step": 296,
+      "epoch": 3,
+      "passage_idx": 51,
+      "loss": 1.516135573387146
+    },
+    {
+      "step": 297,
+      "epoch": 3,
+      "passage_idx": 17,
+      "loss": 1.586031198501587
+    },
+    {
+      "step": 298,
+      "epoch": 3,
+      "passage_idx": 40,
+      "loss": 1.653133511543274
+    },
+    {
+      "step": 299,
+      "epoch": 3,
+      "passage_idx": 56,
+      "loss": 1.849856972694397
+    },
+    {
+      "step": 300,
+      "epoch": 3,
+      "passage_idx": 52,
+      "loss": 1.6782872676849365
+    },
+    {
+      "step": 301,
+      "epoch": 3,
+      "passage_idx": 33,
+      "loss": 1.6467803716659546
+    },
+    {
+      "step": 302,
+      "epoch": 3,
+      "passage_idx": 80,
+      "loss": 1.6013137102127075
+    },
+    {
+      "step": 303,
+      "epoch": 3,
+      "passage_idx": 43,
+      "loss": 1.6082069873809814
+    },
+    {
+      "step": 304,
+      "epoch": 3,
+      "passage_idx": 74,
+      "loss": 1.4800446033477783
+    },
+    {
+      "step": 305,
+      "epoch": 3,
+      "passage_idx": 9,
+      "loss": 1.5088006258010864
+    },
+    {
+      "step": 306,
+      "epoch": 3,
+      "passage_idx": 2,
+      "loss": 1.699599266052246
+    },
+    {
+      "step": 307,
+      "epoch": 3,
+      "passage_idx": 73,
+      "loss": 1.6051818132400513
+    },
+    {
+      "step": 308,
+      "epoch": 3,
+      "passage_idx": 65,
+      "loss": 1.672727108001709
+    },
+    {
+      "step": 309,
+      "epoch": 3,
+      "passage_idx": 71,
+      "loss": 1.6252421140670776
+    },
+    {
+      "step": 310,
+      "epoch": 3,
+      "passage_idx": 4,
+      "loss": 1.8218073844909668
+    },
+    {
+      "step": 311,
+      "epoch": 3,
+      "passage_idx": 67,
+      "loss": 1.740031361579895
+    },
+    {
+      "step": 312,
+      "epoch": 3,
+      "passage_idx": 77,
+      "loss": 1.827781081199646
+    },
+    {
+      "step": 313,
+      "epoch": 3,
+      "passage_idx": 42,
+      "loss": 1.7562683820724487
+    },
+    {
+      "step": 314,
+      "epoch": 3,
+      "passage_idx": 12,
+      "loss": 1.9782683849334717
+    },
+    {
+      "step": 315,
+      "epoch": 3,
+      "passage_idx": 72,
+      "loss": 1.6722949743270874
+    },
+    {
+      "step": 316,
+      "epoch": 3,
+      "passage_idx": 29,
+      "loss": 1.6215804815292358
+    },
+    {
+      "step": 317,
+      "epoch": 3,
+      "passage_idx": 64,
+      "loss": 1.783511757850647
+    },
+    {
+      "step": 318,
+      "epoch": 3,
+      "passage_idx": 26,
+      "loss": 1.594367265701294
+    },
+    {
+      "step": 319,
+      "epoch": 3,
+      "passage_idx": 58,
+      "loss": 1.649444341659546
+    },
+    {
+      "step": 320,
+      "epoch": 3,
+      "passage_idx": 53,
+      "loss": 1.7759753465652466
+    },
+    {
+      "step": 321,
+      "epoch": 3,
+      "passage_idx": 50,
+      "loss": 1.55333411693573
+    },
+    {
+      "step": 322,
+      "epoch": 3,
+      "passage_idx": 25,
+      "loss": 1.8843985795974731
+    },
+    {
+      "step": 323,
+      "epoch": 3,
+      "passage_idx": 62,
+      "loss": 1.5343914031982422
+    },
+    {
+      "step": 324,
+      "epoch": 3,
+      "passage_idx": 8,
+      "loss": 1.7438035011291504
+    },
+    {
+      "step": 325,
+      "epoch": 3,
+      "passage_idx": 48,
+      "loss": 1.6779053211212158
+    },
+    {
+      "step": 326,
+      "epoch": 3,
+      "passage_idx": 68,
+      "loss": 1.5423320531845093
+    },
+    {
+      "step": 327,
+      "epoch": 3,
+      "passage_idx": 28,
+      "loss": 1.4589508771896362
+    },
+    {
+      "step": 328,
+      "epoch": 4,
+      "passage_idx": 62,
+      "loss": 1.5200402736663818
+    },
+    {
+      "step": 329,
+      "epoch": 4,
+      "passage_idx": 11,
+      "loss": 1.6161285638809204
+    },
+    {
+      "step": 330,
+      "epoch": 4,
+      "passage_idx": 2,
+      "loss": 1.6661653518676758
+    },
+    {
+      "step": 331,
+      "epoch": 4,
+      "passage_idx": 23,
+      "loss": 1.4441699981689453
+    },
+    {
+      "step": 332,
+      "epoch": 4,
+      "passage_idx": 1,
+      "loss": 1.6457769870758057
+    },
+    {
+      "step": 333,
+      "epoch": 4,
+      "passage_idx": 36,
+      "loss": 1.7595775127410889
+    },
+    {
+      "step": 334,
+      "epoch": 4,
+      "passage_idx": 17,
+      "loss": 1.5471030473709106
+    },
+    {
+      "step": 335,
+      "epoch": 4,
+      "passage_idx": 65,
+      "loss": 1.6412898302078247
+    },
+    {
+      "step": 336,
+      "epoch": 4,
+      "passage_idx": 18,
+      "loss": 1.519288182258606
+    },
+    {
+      "step": 337,
+      "epoch": 4,
+      "passage_idx": 19,
+      "loss": 1.5553334951400757
+    },
+    {
+      "step": 338,
+      "epoch": 4,
+      "passage_idx": 27,
+      "loss": 1.4696091413497925
+    },
+    {
+      "step": 339,
+      "epoch": 4,
+      "passage_idx": 33,
+      "loss": 1.6031303405761719
+    },
+    {
+      "step": 340,
+      "epoch": 4,
+      "passage_idx": 22,
+      "loss": 1.5967977046966553
+    },
+    {
+      "step": 341,
+      "epoch": 4,
+      "passage_idx": 45,
+      "loss": 1.6404919624328613
+    },
+    {
+      "step": 342,
+      "epoch": 4,
+      "passage_idx": 34,
+      "loss": 1.7644376754760742
+    },
+    {
+      "step": 343,
+      "epoch": 4,
+      "passage_idx": 35,
+      "loss": 1.7114404439926147
+    },
+    {
+      "step": 344,
+      "epoch": 4,
+      "passage_idx": 61,
+      "loss": 1.5990797281265259
+    },
+    {
+      "step": 345,
+      "epoch": 4,
+      "passage_idx": 71,
+      "loss": 1.5826197862625122
+    },
+    {
+      "step": 346,
+      "epoch": 4,
+      "passage_idx": 3,
+      "loss": 1.6105399131774902
+    },
+    {
+      "step": 347,
+      "epoch": 4,
+      "passage_idx": 52,
+      "loss": 1.6427580118179321
+    },
+    {
+      "step": 348,
+      "epoch": 4,
+      "passage_idx": 40,
+      "loss": 1.645809531211853
+    },
+    {
+      "step": 349,
+      "epoch": 4,
+      "passage_idx": 51,
+      "loss": 1.4789865016937256
+    },
+    {
+      "step": 350,
+      "epoch": 4,
+      "passage_idx": 26,
+      "loss": 1.5638374090194702
+    },
+    {
+      "step": 351,
+      "epoch": 4,
+      "passage_idx": 7,
+      "loss": 1.7108560800552368
+    },
+    {
+      "step": 352,
+      "epoch": 4,
+      "passage_idx": 46,
+      "loss": 1.5822502374649048
+    },
+    {
+      "step": 353,
+      "epoch": 4,
+      "passage_idx": 5,
+      "loss": 1.599831461906433
+    },
+    {
+      "step": 354,
+      "epoch": 4,
+      "passage_idx": 58,
+      "loss": 1.637656569480896
+    },
+    {
+      "step": 355,
+      "epoch": 4,
+      "passage_idx": 57,
+      "loss": 1.6765080690383911
+    },
+    {
+      "step": 356,
+      "epoch": 4,
+      "passage_idx": 76,
+      "loss": 1.5039880275726318
+    },
+    {
+      "step": 357,
+      "epoch": 4,
+      "passage_idx": 77,
+      "loss": 1.766129970550537
+    },
+    {
+      "step": 358,
+      "epoch": 4,
+      "passage_idx": 73,
+      "loss": 1.5851093530654907
+    },
+    {
+      "step": 359,
+      "epoch": 4,
+      "passage_idx": 48,
+      "loss": 1.6305979490280151
+    },
+    {
+      "step": 360,
+      "epoch": 4,
+      "passage_idx": 54,
+      "loss": 1.7122694253921509
+    },
+    {
+      "step": 361,
+      "epoch": 4,
+      "passage_idx": 81,
+      "loss": 1.677433729171753
+    },
+    {
+      "step": 362,
+      "epoch": 4,
+      "passage_idx": 14,
+      "loss": 1.6837948560714722
+    },
+    {
+      "step": 363,
+      "epoch": 4,
+      "passage_idx": 20,
+      "loss": 1.5480467081069946
+    },
+    {
+      "step": 364,
+      "epoch": 4,
+      "passage_idx": 67,
+      "loss": 1.7027348279953003
+    },
+    {
+      "step": 365,
+      "epoch": 4,
+      "passage_idx": 28,
+      "loss": 1.4270076751708984
+    },
+    {
+      "step": 366,
+      "epoch": 4,
+      "passage_idx": 39,
+      "loss": 1.5946648120880127
+    },
+    {
+      "step": 367,
+      "epoch": 4,
+      "passage_idx": 80,
+      "loss": 1.5655447244644165
+    },
+    {
+      "step": 368,
+      "epoch": 4,
+      "passage_idx": 37,
+      "loss": 1.8514055013656616
+    },
+    {
+      "step": 369,
+      "epoch": 4,
+      "passage_idx": 53,
+      "loss": 1.7538819313049316
+    },
+    {
+      "step": 370,
+      "epoch": 4,
+      "passage_idx": 38,
+      "loss": 1.5746463537216187
+    },
+    {
+      "step": 371,
+      "epoch": 4,
+      "passage_idx": 41,
+      "loss": 1.707842230796814
+    },
+    {
+      "step": 372,
+      "epoch": 4,
+      "passage_idx": 10,
+      "loss": 1.6595176458358765
+    },
+    {
+      "step": 373,
+      "epoch": 4,
+      "passage_idx": 75,
+      "loss": 1.6243524551391602
+    },
+    {
+      "step": 374,
+      "epoch": 4,
+      "passage_idx": 25,
+      "loss": 1.8278943300247192
+    },
+    {
+      "step": 375,
+      "epoch": 4,
+      "passage_idx": 47,
+      "loss": 1.760303258895874
+    },
+    {
+      "step": 376,
+      "epoch": 4,
+      "passage_idx": 79,
+      "loss": 2.0708653926849365
+    },
+    {
+      "step": 377,
+      "epoch": 4,
+      "passage_idx": 78,
+      "loss": 1.5582246780395508
+    },
+    {
+      "step": 378,
+      "epoch": 4,
+      "passage_idx": 68,
+      "loss": 1.4962406158447266
+    },
+    {
+      "step": 379,
+      "epoch": 4,
+      "passage_idx": 43,
+      "loss": 1.5720587968826294
+    },
+    {
+      "step": 380,
+      "epoch": 4,
+      "passage_idx": 64,
+      "loss": 1.7400380373001099
+    },
+    {
+      "step": 381,
+      "epoch": 4,
+      "passage_idx": 70,
+      "loss": 1.7420101165771484
+    },
+    {
+      "step": 382,
+      "epoch": 4,
+      "passage_idx": 8,
+      "loss": 1.7076683044433594
+    },
+    {
+      "step": 383,
+      "epoch": 4,
+      "passage_idx": 50,
+      "loss": 1.5187751054763794
+    },
+    {
+      "step": 384,
+      "epoch": 4,
+      "passage_idx": 24,
+      "loss": 1.4197001457214355
+    },
+    {
+      "step": 385,
+      "epoch": 4,
+      "passage_idx": 49,
+      "loss": 1.4038745164871216
+    },
+    {
+      "step": 386,
+      "epoch": 4,
+      "passage_idx": 12,
+      "loss": 1.8962258100509644
+    },
+    {
+      "step": 387,
+      "epoch": 4,
+      "passage_idx": 6,
+      "loss": 1.5557388067245483
+    },
+    {
+      "step": 388,
+      "epoch": 4,
+      "passage_idx": 55,
+      "loss": 1.7728351354599
+    },
+    {
+      "step": 389,
+      "epoch": 4,
+      "passage_idx": 21,
+      "loss": 1.5755336284637451
+    },
+    {
+      "step": 390,
+      "epoch": 4,
+      "passage_idx": 13,
+      "loss": 1.5975563526153564
+    },
+    {
+      "step": 391,
+      "epoch": 4,
+      "passage_idx": 63,
+      "loss": 1.7151132822036743
+    },
+    {
+      "step": 392,
+      "epoch": 4,
+      "passage_idx": 31,
+      "loss": 1.6756027936935425
+    },
+    {
+      "step": 393,
+      "epoch": 4,
+      "passage_idx": 32,
+      "loss": 1.5511099100112915
+    },
+    {
+      "step": 394,
+      "epoch": 4,
+      "passage_idx": 44,
+      "loss": 1.7080659866333008
+    },
+    {
+      "step": 395,
+      "epoch": 4,
+      "passage_idx": 74,
+      "loss": 1.455461025238037
+    },
+    {
+      "step": 396,
+      "epoch": 4,
+      "passage_idx": 9,
+      "loss": 1.491232991218567
+    },
+    {
+      "step": 397,
+      "epoch": 4,
+      "passage_idx": 30,
+      "loss": 1.8139694929122925
+    },
+    {
+      "step": 398,
+      "epoch": 4,
+      "passage_idx": 66,
+      "loss": 1.6223554611206055
+    },
+    {
+      "step": 399,
+      "epoch": 4,
+      "passage_idx": 15,
+      "loss": 1.6524604558944702
+    },
+    {
+      "step": 400,
+      "epoch": 4,
+      "passage_idx": 4,
+      "loss": 1.8228235244750977
+    },
+    {
+      "step": 401,
+      "epoch": 4,
+      "passage_idx": 59,
+      "loss": 1.6641392707824707
+    },
+    {
+      "step": 402,
+      "epoch": 4,
+      "passage_idx": 42,
+      "loss": 1.7083162069320679
+    },
+    {
+      "step": 403,
+      "epoch": 4,
+      "passage_idx": 29,
+      "loss": 1.5936696529388428
+    },
+    {
+      "step": 404,
+      "epoch": 4,
+      "passage_idx": 56,
+      "loss": 1.828948974609375
+    },
+    {
+      "step": 405,
+      "epoch": 4,
+      "passage_idx": 72,
+      "loss": 1.6416637897491455
+    },
+    {
+      "step": 406,
+      "epoch": 4,
+      "passage_idx": 16,
+      "loss": 1.4988446235656738
+    },
+    {
+      "step": 407,
+      "epoch": 4,
+      "passage_idx": 69,
+      "loss": 1.712608814239502
+    },
+    {
+      "step": 408,
+      "epoch": 4,
+      "passage_idx": 0,
+      "loss": 1.760301947593689
+    },
+    {
+      "step": 409,
+      "epoch": 4,
+      "passage_idx": 60,
+      "loss": 1.4978731870651245
+    }
+  ],
+  "lora_A_norm": 2.3697593212127686,
+  "lora_B_norm": 2.8928728103637695
+}
