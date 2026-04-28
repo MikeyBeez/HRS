@@ -1,0 +1,52 @@
+{
+  "version": "v22_learned_kernel",
+  "step": 61000,
+  "val_ppl": 17.073029565525854,
+  "n_params": 511901438,
+  "conditions": [
+    {
+      "label": "50-tok prompt, cross-attn engram ON",
+      "prompt_len": 50,
+      "continuation_len": 256,
+      "n_samples": 1000,
+      "temperature": 0.9,
+      "top_k": 50,
+      "mauve_score": 0.9437657224931961,
+      "generation_time_s": 953.9421629905701,
+      "mauve_compute_time_s": 83.3933162689209
+    },
+    {
+      "label": "500-tok prompt, cross-attn engram ON",
+      "prompt_len": 500,
+      "continuation_len": 256,
+      "n_samples": 1000,
+      "temperature": 0.9,
+      "top_k": 50,
+      "mauve_score": 0.9274515786941786,
+      "generation_time_s": 3074.3779017925262,
+      "mauve_compute_time_s": 147.96381902694702
+    },
+    {
+      "label": "50-tok prompt, cross-attn engram OFF",
+      "prompt_len": 50,
+      "continuation_len": 256,
+      "n_samples": 1000,
+      "temperature": 0.9,
+      "top_k": 50,
+      "mauve_score": 0.9391701211229537,
+      "generation_time_s": 926.2555742263794,
+      "mauve_compute_time_s": 80.03852915763855
+    },
+    {
+      "label": "500-tok prompt, cross-attn engram OFF",
+      "prompt_len": 500,
+      "continuation_len": 256,
+      "n_samples": 1000,
+      "temperature": 0.9,
+      "top_k": 50,
+      "mauve_score": 0.9302114547528102,
+      "generation_time_s": 3010.382809638977,
+      "mauve_compute_time_s": 148.02186703681946
+    }
+  ]
+}
