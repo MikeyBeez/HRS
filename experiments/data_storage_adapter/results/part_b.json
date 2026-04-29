@@ -1,0 +1,2287 @@
+{
+  "config": {
+    "harness": "2",
+    "steps_per_source": 80,
+    "min_steps": 400,
+    "high_lr": 0.001,
+    "base_lr": 0.0001,
+    "ranks": "32,64,128,256",
+    "sizes": "1,2,5,10",
+    "groups": "G1_pip_childhood,G2_domestic_joe,G3_midbook,G4_latebook",
+    "out": "results/part_b.json"
+  },
+  "records": [
+    {
+      "group": "G1_pip_childhood",
+      "size": 1,
+      "rank": 32,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 10.428058624267578,
+      "loss_final": 1.8959407329559326,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 3.8625118732452393
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 1,
+      "rank": 64,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 10.2575101852417,
+      "loss_final": 1.7943163752555846,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 3.8986644744873047
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 1,
+      "rank": 128,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 10.2575101852417,
+      "loss_final": 1.7124620079994202,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 3.9153525829315186
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 1,
+      "rank": 256,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 10.2575101852417,
+      "loss_final": 1.8816675305366517,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 3.8806519508361816
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 2,
+      "rank": 32,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 7.740878582000732,
+      "loss_final": 1.6281049251556396,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.796593189239502
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 2,
+      "rank": 64,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 7.831643104553223,
+      "loss_final": 1.5687948226928712,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.866336107254028
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 2,
+      "rank": 128,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 7.831643104553223,
+      "loss_final": 1.545071053504944,
+      "mean_rate": 0.9444444444444444,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.860128879547119
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 2,
+      "rank": 256,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 7.831643104553223,
+      "loss_final": 1.7036979794502258,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.884180068969727
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 5,
+      "rank": 32,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 11.108036994934082,
+      "loss_final": 1.9983012557029725,
+      "mean_rate": 0.9777777777777777,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 1.0
+        },
+        {
+          "id": 2,
+          "answer": "blacksmith",
+          "rate": 1.0
+        },
+        {
+          "id": 3,
+          "answer": "grey",
+          "rate": 1.0
+        },
+        {
+          "id": 4,
+          "answer": "twenty miles",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 19.52604079246521
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 5,
+      "rank": 64,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 11.577041625976562,
+      "loss_final": 1.8621160387992859,
+      "mean_rate": 0.9555555555555556,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 1.0
+        },
+        {
+          "id": 2,
+          "answer": "blacksmith",
+          "rate": 1.0
+        },
+        {
+          "id": 3,
+          "answer": "grey",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 4,
+          "answer": "twenty miles",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 19.14816689491272
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 5,
+      "rank": 128,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 11.577041625976562,
+      "loss_final": 1.8513217926025392,
+      "mean_rate": 0.9333333333333333,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 1.0
+        },
+        {
+          "id": 2,
+          "answer": "blacksmith",
+          "rate": 1.0
+        },
+        {
+          "id": 3,
+          "answer": "grey",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 4,
+          "answer": "twenty miles",
+          "rate": 0.7777777777777778
+        }
+      ],
+      "wall_s": 19.54887628555298
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 5,
+      "rank": 256,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 11.577041625976562,
+      "loss_final": 2.133172261714935,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 1.0
+        },
+        {
+          "id": 2,
+          "answer": "blacksmith",
+          "rate": 1.0
+        },
+        {
+          "id": 3,
+          "answer": "grey",
+          "rate": 1.0
+        },
+        {
+          "id": 4,
+          "answer": "twenty miles",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 19.562522411346436
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 10,
+      "rank": 32,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 7.567673683166504,
+      "loss_final": 1.8898336172103882,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 1.0
+        },
+        {
+          "id": 2,
+          "answer": "blacksmith",
+          "rate": 1.0
+        },
+        {
+          "id": 3,
+          "answer": "grey",
+          "rate": 1.0
+        },
+        {
+          "id": 4,
+          "answer": "twenty miles",
+          "rate": 1.0
+        },
+        {
+          "id": 5,
+          "answer": "five",
+          "rate": 1.0
+        },
+        {
+          "id": 6,
+          "answer": "Roger",
+          "rate": 1.0
+        },
+        {
+          "id": 7,
+          "answer": "file",
+          "rate": 1.0
+        },
+        {
+          "id": 8,
+          "answer": "pirate",
+          "rate": 1.0
+        },
+        {
+          "id": 9,
+          "answer": "twenty years",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 38.91583824157715
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 10,
+      "rank": 64,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 7.440489768981934,
+      "loss_final": 1.7398603796958922,
+      "mean_rate": 0.9111111111111111,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 2,
+          "answer": "blacksmith",
+          "rate": 1.0
+        },
+        {
+          "id": 3,
+          "answer": "grey",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 4,
+          "answer": "twenty miles",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 5,
+          "answer": "five",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 6,
+          "answer": "Roger",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 7,
+          "answer": "file",
+          "rate": 1.0
+        },
+        {
+          "id": 8,
+          "answer": "pirate",
+          "rate": 1.0
+        },
+        {
+          "id": 9,
+          "answer": "twenty years",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 39.21544671058655
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 10,
+      "rank": 128,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 7.440489768981934,
+      "loss_final": 1.7328607797622682,
+      "mean_rate": 0.8777777777777778,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 1.0
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 2,
+          "answer": "blacksmith",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 3,
+          "answer": "grey",
+          "rate": 1.0
+        },
+        {
+          "id": 4,
+          "answer": "twenty miles",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 5,
+          "answer": "five",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 6,
+          "answer": "Roger",
+          "rate": 1.0
+        },
+        {
+          "id": 7,
+          "answer": "file",
+          "rate": 1.0
+        },
+        {
+          "id": 8,
+          "answer": "pirate",
+          "rate": 1.0
+        },
+        {
+          "id": 9,
+          "answer": "twenty years",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 37.4704852104187
+    },
+    {
+      "group": "G1_pip_childhood",
+      "size": 10,
+      "rank": 256,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 7.440489768981934,
+      "loss_final": 1.976170164346695,
+      "mean_rate": 0.8222222222222222,
+      "per_entry": [
+        {
+          "id": 0,
+          "answer": "Pirrip",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 1,
+          "answer": "Georgiana",
+          "rate": 1.0
+        },
+        {
+          "id": 2,
+          "answer": "blacksmith",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 3,
+          "answer": "grey",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 4,
+          "answer": "twenty miles",
+          "rate": 1.0
+        },
+        {
+          "id": 5,
+          "answer": "five",
+          "rate": 0.4444444444444444
+        },
+        {
+          "id": 6,
+          "answer": "Roger",
+          "rate": 1.0
+        },
+        {
+          "id": 7,
+          "answer": "file",
+          "rate": 1.0
+        },
+        {
+          "id": 8,
+          "answer": "pirate",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 9,
+          "answer": "twenty years",
+          "rate": 0.8888888888888888
+        }
+      ],
+      "wall_s": 39.03256845474243
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 1,
+      "rank": 32,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 8.807753562927246,
+      "loss_final": 1.9435107946395873,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 3.9084484577178955
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 1,
+      "rank": 64,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 8.973248481750488,
+      "loss_final": 1.8098911762237548,
+      "mean_rate": 0.8888888888888888,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 0.8888888888888888
+        }
+      ],
+      "wall_s": 3.9077157974243164
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 1,
+      "rank": 128,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 8.973248481750488,
+      "loss_final": 1.7479344606399536,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 3.938020944595337
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 1,
+      "rank": 256,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 8.973248481750488,
+      "loss_final": 1.7315928936004639,
+      "mean_rate": 0.3333333333333333,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 0.3333333333333333
+        }
+      ],
+      "wall_s": 3.665682554244995
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 2,
+      "rank": 32,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 10.793781280517578,
+      "loss_final": 1.7201211810112,
+      "mean_rate": 0.7777777777777778,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 0.7777777777777778
+        }
+      ],
+      "wall_s": 7.769598960876465
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 2,
+      "rank": 64,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 10.721639633178711,
+      "loss_final": 1.6432395219802856,
+      "mean_rate": 0.9444444444444444,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 1.0
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 0.8888888888888888
+        }
+      ],
+      "wall_s": 7.62147068977356
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 2,
+      "rank": 128,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 10.721639633178711,
+      "loss_final": 1.6143635988235474,
+      "mean_rate": 0.9444444444444444,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 1.0
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 0.8888888888888888
+        }
+      ],
+      "wall_s": 7.952126502990723
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 2,
+      "rank": 256,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 10.721639633178711,
+      "loss_final": 1.6209625720977783,
+      "mean_rate": 0.7777777777777778,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 0.6666666666666666
+        }
+      ],
+      "wall_s": 7.612687587738037
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 5,
+      "rank": 32,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.721709251403809,
+      "loss_final": 2.2799869894981386,
+      "mean_rate": 0.9333333333333333,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 12,
+          "answer": "cane",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 13,
+          "answer": "Tar-water",
+          "rate": 1.0
+        },
+        {
+          "id": 14,
+          "answer": "Dutch",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 19.72011709213257
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 5,
+      "rank": 64,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.709657669067383,
+      "loss_final": 2.139484906196594,
+      "mean_rate": 0.9333333333333333,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 1.0
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 1.0
+        },
+        {
+          "id": 12,
+          "answer": "cane",
+          "rate": 1.0
+        },
+        {
+          "id": 13,
+          "answer": "Tar-water",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 14,
+          "answer": "Dutch",
+          "rate": 0.8888888888888888
+        }
+      ],
+      "wall_s": 19.687775373458862
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 5,
+      "rank": 128,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.709657669067383,
+      "loss_final": 2.151591169834137,
+      "mean_rate": 0.9777777777777777,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 1.0
+        },
+        {
+          "id": 12,
+          "answer": "cane",
+          "rate": 1.0
+        },
+        {
+          "id": 13,
+          "answer": "Tar-water",
+          "rate": 1.0
+        },
+        {
+          "id": 14,
+          "answer": "Dutch",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 16.419756412506104
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 5,
+      "rank": 256,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.709657669067383,
+      "loss_final": 2.4078417778015138,
+      "mean_rate": 0.7333333333333333,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 12,
+          "answer": "cane",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 13,
+          "answer": "Tar-water",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 14,
+          "answer": "Dutch",
+          "rate": 0.7777777777777778
+        }
+      ],
+      "wall_s": 19.720743894577026
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 10,
+      "rank": 32,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 12.259302139282227,
+      "loss_final": 2.4609509229660036,
+      "mean_rate": 0.8333333333333334,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 1.0
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 1.0
+        },
+        {
+          "id": 12,
+          "answer": "cane",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 13,
+          "answer": "Tar-water",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 14,
+          "answer": "Dutch",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 15,
+          "answer": "skylight",
+          "rate": 1.0
+        },
+        {
+          "id": 16,
+          "answer": "Estella",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 17,
+          "answer": "Wemmick",
+          "rate": 1.0
+        },
+        {
+          "id": 18,
+          "answer": "portable property",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 19,
+          "answer": "nine hundred pounds",
+          "rate": 0.7777777777777778
+        }
+      ],
+      "wall_s": 40.16188955307007
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 10,
+      "rank": 64,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 12.574274063110352,
+      "loss_final": 2.339377534389496,
+      "mean_rate": 0.9,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 1.0
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 1.0
+        },
+        {
+          "id": 12,
+          "answer": "cane",
+          "rate": 1.0
+        },
+        {
+          "id": 13,
+          "answer": "Tar-water",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 14,
+          "answer": "Dutch",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 15,
+          "answer": "skylight",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 16,
+          "answer": "Estella",
+          "rate": 1.0
+        },
+        {
+          "id": 17,
+          "answer": "Wemmick",
+          "rate": 1.0
+        },
+        {
+          "id": 18,
+          "answer": "portable property",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 19,
+          "answer": "nine hundred pounds",
+          "rate": 0.8888888888888888
+        }
+      ],
+      "wall_s": 39.02379631996155
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 10,
+      "rank": 128,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 12.574274063110352,
+      "loss_final": 2.3090247392654417,
+      "mean_rate": 0.8555555555555555,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 1.0
+        },
+        {
+          "id": 12,
+          "answer": "cane",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 13,
+          "answer": "Tar-water",
+          "rate": 1.0
+        },
+        {
+          "id": 14,
+          "answer": "Dutch",
+          "rate": 1.0
+        },
+        {
+          "id": 15,
+          "answer": "skylight",
+          "rate": 1.0
+        },
+        {
+          "id": 16,
+          "answer": "Estella",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 17,
+          "answer": "Wemmick",
+          "rate": 1.0
+        },
+        {
+          "id": 18,
+          "answer": "portable property",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 19,
+          "answer": "nine hundred pounds",
+          "rate": 0.4444444444444444
+        }
+      ],
+      "wall_s": 39.361759185791016
+    },
+    {
+      "group": "G2_domestic_joe",
+      "size": 10,
+      "rank": 256,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 12.574274063110352,
+      "loss_final": 2.4810099005699158,
+      "mean_rate": 0.6777777777777778,
+      "per_entry": [
+        {
+          "id": 10,
+          "answer": "flaxen",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 11,
+          "answer": "pins and needles",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 12,
+          "answer": "cane",
+          "rate": 0.4444444444444444
+        },
+        {
+          "id": 13,
+          "answer": "Tar-water",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 14,
+          "answer": "Dutch",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 15,
+          "answer": "skylight",
+          "rate": 1.0
+        },
+        {
+          "id": 16,
+          "answer": "Estella",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 17,
+          "answer": "Wemmick",
+          "rate": 1.0
+        },
+        {
+          "id": 18,
+          "answer": "portable property",
+          "rate": 0.4444444444444444
+        },
+        {
+          "id": 19,
+          "answer": "nine hundred pounds",
+          "rate": 0.3333333333333333
+        }
+      ],
+      "wall_s": 39.27845478057861
+    },
+    {
+      "group": "G3_midbook",
+      "size": 1,
+      "rank": 32,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 12.48678207397461,
+      "loss_final": 2.182550585269928,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 3.8979053497314453
+    },
+    {
+      "group": "G3_midbook",
+      "size": 1,
+      "rank": 64,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 12.144790649414062,
+      "loss_final": 1.9784167766571046,
+      "mean_rate": 0.6666666666666666,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.6666666666666666
+        }
+      ],
+      "wall_s": 3.897338390350342
+    },
+    {
+      "group": "G3_midbook",
+      "size": 1,
+      "rank": 128,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 12.144790649414062,
+      "loss_final": 1.889695394039154,
+      "mean_rate": 0.6666666666666666,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.6666666666666666
+        }
+      ],
+      "wall_s": 3.8574886322021484
+    },
+    {
+      "group": "G3_midbook",
+      "size": 1,
+      "rank": 256,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 12.144790649414062,
+      "loss_final": 1.8741447687149049,
+      "mean_rate": 0.7777777777777778,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.7777777777777778
+        }
+      ],
+      "wall_s": 3.877943754196167
+    },
+    {
+      "group": "G3_midbook",
+      "size": 2,
+      "rank": 32,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 12.162169456481934,
+      "loss_final": 2.466271495819092,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 1.0
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.917220592498779
+    },
+    {
+      "group": "G3_midbook",
+      "size": 2,
+      "rank": 64,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 12.147348403930664,
+      "loss_final": 2.375633680820465,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 1.0
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.799383878707886
+    },
+    {
+      "group": "G3_midbook",
+      "size": 2,
+      "rank": 128,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 12.147348403930664,
+      "loss_final": 2.3468616008758545,
+      "mean_rate": 0.6666666666666666,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 0.7777777777777778
+        }
+      ],
+      "wall_s": 7.674684286117554
+    },
+    {
+      "group": "G3_midbook",
+      "size": 2,
+      "rank": 256,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 12.147348403930664,
+      "loss_final": 2.385007584095001,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 1.0
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.853412628173828
+    },
+    {
+      "group": "G3_midbook",
+      "size": 5,
+      "rank": 32,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.382559776306152,
+      "loss_final": 2.536047577857971,
+      "mean_rate": 0.7333333333333333,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.3333333333333333
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 22,
+          "answer": "Provis",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 23,
+          "answer": "Gerrard Street",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 24,
+          "answer": "truckle",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 19.766580820083618
+    },
+    {
+      "group": "G3_midbook",
+      "size": 5,
+      "rank": 64,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.298826217651367,
+      "loss_final": 2.3571358561515807,
+      "mean_rate": 0.7111111111111111,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 22,
+          "answer": "Provis",
+          "rate": 0.2222222222222222
+        },
+        {
+          "id": 23,
+          "answer": "Gerrard Street",
+          "rate": 1.0
+        },
+        {
+          "id": 24,
+          "answer": "truckle",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 19.096978187561035
+    },
+    {
+      "group": "G3_midbook",
+      "size": 5,
+      "rank": 128,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.298826217651367,
+      "loss_final": 2.3455037117004394,
+      "mean_rate": 0.8666666666666667,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 22,
+          "answer": "Provis",
+          "rate": 1.0
+        },
+        {
+          "id": 23,
+          "answer": "Gerrard Street",
+          "rate": 1.0
+        },
+        {
+          "id": 24,
+          "answer": "truckle",
+          "rate": 0.8888888888888888
+        }
+      ],
+      "wall_s": 19.500066995620728
+    },
+    {
+      "group": "G3_midbook",
+      "size": 5,
+      "rank": 256,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.298826217651367,
+      "loss_final": 2.501259505748749,
+      "mean_rate": 0.8444444444444444,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 22,
+          "answer": "Provis",
+          "rate": 1.0
+        },
+        {
+          "id": 23,
+          "answer": "Gerrard Street",
+          "rate": 1.0
+        },
+        {
+          "id": 24,
+          "answer": "truckle",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 19.74165964126587
+    },
+    {
+      "group": "G3_midbook",
+      "size": 10,
+      "rank": 32,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 10.21240234375,
+      "loss_final": 1.961463952064514,
+      "mean_rate": 0.8555555555555555,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.1111111111111111
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 22,
+          "answer": "Provis",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 23,
+          "answer": "Gerrard Street",
+          "rate": 1.0
+        },
+        {
+          "id": 24,
+          "answer": "truckle",
+          "rate": 1.0
+        },
+        {
+          "id": 25,
+          "answer": "nine",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 26,
+          "answer": "noose",
+          "rate": 1.0
+        },
+        {
+          "id": 27,
+          "answer": "tiled",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 28,
+          "answer": "bandaged",
+          "rate": 1.0
+        },
+        {
+          "id": 29,
+          "answer": "fire",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 39.28162860870361
+    },
+    {
+      "group": "G3_midbook",
+      "size": 10,
+      "rank": 64,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 10.03584098815918,
+      "loss_final": 1.8078365325927734,
+      "mean_rate": 0.8333333333333334,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.4444444444444444
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 1.0
+        },
+        {
+          "id": 22,
+          "answer": "Provis",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 23,
+          "answer": "Gerrard Street",
+          "rate": 1.0
+        },
+        {
+          "id": 24,
+          "answer": "truckle",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 25,
+          "answer": "nine",
+          "rate": 0.3333333333333333
+        },
+        {
+          "id": 26,
+          "answer": "noose",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 27,
+          "answer": "tiled",
+          "rate": 1.0
+        },
+        {
+          "id": 28,
+          "answer": "bandaged",
+          "rate": 1.0
+        },
+        {
+          "id": 29,
+          "answer": "fire",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 39.16565442085266
+    },
+    {
+      "group": "G3_midbook",
+      "size": 10,
+      "rank": 128,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 10.03584098815918,
+      "loss_final": 1.7923406720161439,
+      "mean_rate": 0.9,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 22,
+          "answer": "Provis",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 23,
+          "answer": "Gerrard Street",
+          "rate": 1.0
+        },
+        {
+          "id": 24,
+          "answer": "truckle",
+          "rate": 1.0
+        },
+        {
+          "id": 25,
+          "answer": "nine",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 26,
+          "answer": "noose",
+          "rate": 1.0
+        },
+        {
+          "id": 27,
+          "answer": "tiled",
+          "rate": 1.0
+        },
+        {
+          "id": 28,
+          "answer": "bandaged",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 29,
+          "answer": "fire",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 39.60722637176514
+    },
+    {
+      "group": "G3_midbook",
+      "size": 10,
+      "rank": 256,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 10.03584098815918,
+      "loss_final": 1.9401705622673036,
+      "mean_rate": 0.9111111111111111,
+      "per_entry": [
+        {
+          "id": 20,
+          "answer": "Giltspur Street",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 21,
+          "answer": "New South Wales",
+          "rate": 1.0
+        },
+        {
+          "id": 22,
+          "answer": "Provis",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 23,
+          "answer": "Gerrard Street",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 24,
+          "answer": "truckle",
+          "rate": 1.0
+        },
+        {
+          "id": 25,
+          "answer": "nine",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 26,
+          "answer": "noose",
+          "rate": 1.0
+        },
+        {
+          "id": 27,
+          "answer": "tiled",
+          "rate": 1.0
+        },
+        {
+          "id": 28,
+          "answer": "bandaged",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 29,
+          "answer": "fire",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 39.772419929504395
+    },
+    {
+      "group": "G4_latebook",
+      "size": 1,
+      "rank": 32,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 9.783340454101562,
+      "loss_final": 1.836491620540619,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 3.89357590675354
+    },
+    {
+      "group": "G4_latebook",
+      "size": 1,
+      "rank": 64,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 9.725926399230957,
+      "loss_final": 1.727489173412323,
+      "mean_rate": 0.8888888888888888,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 0.8888888888888888
+        }
+      ],
+      "wall_s": 3.773130416870117
+    },
+    {
+      "group": "G4_latebook",
+      "size": 1,
+      "rank": 128,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 9.725926399230957,
+      "loss_final": 1.6736265778541566,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 3.704097032546997
+    },
+    {
+      "group": "G4_latebook",
+      "size": 1,
+      "rank": 256,
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 9.725926399230957,
+      "loss_final": 1.7345498919487,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 3.8512468338012695
+    },
+    {
+      "group": "G4_latebook",
+      "size": 2,
+      "rank": 32,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 11.432510375976562,
+      "loss_final": 2.365010154247284,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 1.0
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.960557460784912
+    },
+    {
+      "group": "G4_latebook",
+      "size": 2,
+      "rank": 64,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 11.521543502807617,
+      "loss_final": 2.29791522026062,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 1.0
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.949590682983398
+    },
+    {
+      "group": "G4_latebook",
+      "size": 2,
+      "rank": 128,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 11.521543502807617,
+      "loss_final": 2.2929988384246824,
+      "mean_rate": 0.8333333333333334,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.620760917663574
+    },
+    {
+      "group": "G4_latebook",
+      "size": 2,
+      "rank": 256,
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 11.521543502807617,
+      "loss_final": 2.5060695886611937,
+      "mean_rate": 1.0,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 1.0
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 7.3220930099487305
+    },
+    {
+      "group": "G4_latebook",
+      "size": 5,
+      "rank": 32,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.583060264587402,
+      "loss_final": 2.4614672303199767,
+      "mean_rate": 0.7111111111111111,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 0.2222222222222222
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 1.0
+        },
+        {
+          "id": 32,
+          "answer": "Satis House",
+          "rate": 1.0
+        },
+        {
+          "id": 33,
+          "answer": "Wopsle",
+          "rate": 1.0
+        },
+        {
+          "id": 34,
+          "answer": "Mill Pond Bank",
+          "rate": 0.3333333333333333
+        }
+      ],
+      "wall_s": 19.729924201965332
+    },
+    {
+      "group": "G4_latebook",
+      "size": 5,
+      "rank": 64,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.726840019226074,
+      "loss_final": 2.3238868594169615,
+      "mean_rate": 0.7555555555555555,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 32,
+          "answer": "Satis House",
+          "rate": 1.0
+        },
+        {
+          "id": 33,
+          "answer": "Wopsle",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 34,
+          "answer": "Mill Pond Bank",
+          "rate": 0.5555555555555556
+        }
+      ],
+      "wall_s": 19.664130210876465
+    },
+    {
+      "group": "G4_latebook",
+      "size": 5,
+      "rank": 128,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.726840019226074,
+      "loss_final": 2.3125994920730593,
+      "mean_rate": 0.8444444444444444,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 32,
+          "answer": "Satis House",
+          "rate": 1.0
+        },
+        {
+          "id": 33,
+          "answer": "Wopsle",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 34,
+          "answer": "Mill Pond Bank",
+          "rate": 0.7777777777777778
+        }
+      ],
+      "wall_s": 19.58654284477234
+    },
+    {
+      "group": "G4_latebook",
+      "size": 5,
+      "rank": 256,
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 10.726840019226074,
+      "loss_final": 2.5864784598350523,
+      "mean_rate": 0.7777777777777778,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 1.0
+        },
+        {
+          "id": 32,
+          "answer": "Satis House",
+          "rate": 1.0
+        },
+        {
+          "id": 33,
+          "answer": "Wopsle",
+          "rate": 0.4444444444444444
+        },
+        {
+          "id": 34,
+          "answer": "Mill Pond Bank",
+          "rate": 0.5555555555555556
+        }
+      ],
+      "wall_s": 19.589635610580444
+    },
+    {
+      "group": "G4_latebook",
+      "size": 10,
+      "rank": 32,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 12.094695091247559,
+      "loss_final": 2.363411557674408,
+      "mean_rate": 0.7666666666666667,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 0.0
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 32,
+          "answer": "Satis House",
+          "rate": 1.0
+        },
+        {
+          "id": 33,
+          "answer": "Wopsle",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 34,
+          "answer": "Mill Pond Bank",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 35,
+          "answer": "five hundred pounds",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 36,
+          "answer": "Bentley Drummle",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 37,
+          "answer": "Castle",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 38,
+          "answer": "Stinger",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 39,
+          "answer": "leg-iron",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 39.32801079750061
+    },
+    {
+      "group": "G4_latebook",
+      "size": 10,
+      "rank": 64,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 11.676158905029297,
+      "loss_final": 2.2197204351425173,
+      "mean_rate": 0.6888888888888889,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 0.0
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 32,
+          "answer": "Satis House",
+          "rate": 1.0
+        },
+        {
+          "id": 33,
+          "answer": "Wopsle",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 34,
+          "answer": "Mill Pond Bank",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 35,
+          "answer": "five hundred pounds",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 36,
+          "answer": "Bentley Drummle",
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": 37,
+          "answer": "Castle",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 38,
+          "answer": "Stinger",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 39,
+          "answer": "leg-iron",
+          "rate": 1.0
+        }
+      ],
+      "wall_s": 39.91933488845825
+    },
+    {
+      "group": "G4_latebook",
+      "size": 10,
+      "rank": 128,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 11.676158905029297,
+      "loss_final": 2.222734975814819,
+      "mean_rate": 0.8222222222222222,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 0.1111111111111111
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 1.0
+        },
+        {
+          "id": 32,
+          "answer": "Satis House",
+          "rate": 1.0
+        },
+        {
+          "id": 33,
+          "answer": "Wopsle",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 34,
+          "answer": "Mill Pond Bank",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 35,
+          "answer": "five hundred pounds",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 36,
+          "answer": "Bentley Drummle",
+          "rate": 1.0
+        },
+        {
+          "id": 37,
+          "answer": "Castle",
+          "rate": 1.0
+        },
+        {
+          "id": 38,
+          "answer": "Stinger",
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": 39,
+          "answer": "leg-iron",
+          "rate": 0.8888888888888888
+        }
+      ],
+      "wall_s": 39.16539788246155
+    },
+    {
+      "group": "G4_latebook",
+      "size": 10,
+      "rank": 256,
+      "n_steps": 4000,
+      "n_sources": 50,
+      "loss_init": 11.676158905029297,
+      "loss_final": 2.4281200885772707,
+      "mean_rate": 0.7444444444444445,
+      "per_entry": [
+        {
+          "id": 30,
+          "answer": "Herbert",
+          "rate": 0.1111111111111111
+        },
+        {
+          "id": 31,
+          "answer": "Magwitch",
+          "rate": 1.0
+        },
+        {
+          "id": 32,
+          "answer": "Satis House",
+          "rate": 1.0
+        },
+        {
+          "id": 33,
+          "answer": "Wopsle",
+          "rate": 1.0
+        },
+        {
+          "id": 34,
+          "answer": "Mill Pond Bank",
+          "rate": 0.7777777777777778
+        },
+        {
+          "id": 35,
+          "answer": "five hundred pounds",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 36,
+          "answer": "Bentley Drummle",
+          "rate": 0.3333333333333333
+        },
+        {
+          "id": 37,
+          "answer": "Castle",
+          "rate": 1.0
+        },
+        {
+          "id": 38,
+          "answer": "Stinger",
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": 39,
+          "answer": "leg-iron",
+          "rate": 0.4444444444444444
+        }
+      ],
+      "wall_s": 38.89450001716614
+    }
+  ]
+}

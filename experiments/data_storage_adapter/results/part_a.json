@@ -1,0 +1,250 @@
+{
+  "config": {
+    "harness": "2",
+    "rank": 64,
+    "n_steps_per_passage": 400,
+    "high_lr": 0.001,
+    "base_lr": 0.0001
+  },
+  "A1_retrain_from_scratch": [
+    {
+      "step": 1,
+      "trained_on": [
+        0
+      ],
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 10.242827415466309,
+      "loss_final": 1.7899802923202515,
+      "mean_rate": 0.2,
+      "per_passage_rate": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "step": 2,
+      "trained_on": [
+        0,
+        1
+      ],
+      "n_steps": 800,
+      "n_sources": 10,
+      "loss_init": 7.87774658203125,
+      "loss_final": 1.5653733611106873,
+      "mean_rate": 0.4222222222222222,
+      "per_passage_rate": [
+        1.0,
+        1.0,
+        0.1111111111111111,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "step": 3,
+      "trained_on": [
+        0,
+        1,
+        2
+      ],
+      "n_steps": 1200,
+      "n_sources": 15,
+      "loss_init": 10.387057304382324,
+      "loss_final": 1.7077332735061646,
+      "mean_rate": 0.5777777777777777,
+      "per_passage_rate": [
+        0.8888888888888888,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "step": 4,
+      "trained_on": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "n_steps": 1600,
+      "n_sources": 20,
+      "loss_init": 11.577041625976562,
+      "loss_final": 1.66477929353714,
+      "mean_rate": 0.7777777777777778,
+      "per_passage_rate": [
+        0.8888888888888888,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "step": 5,
+      "trained_on": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_steps": 2000,
+      "n_sources": 25,
+      "loss_init": 11.577041625976562,
+      "loss_final": 1.8621160387992859,
+      "mean_rate": 0.9555555555555556,
+      "per_passage_rate": [
+        1.0,
+        1.0,
+        1.0,
+        0.7777777777777778,
+        1.0
+      ]
+    }
+  ],
+  "A2_sequential_fine_tune": [
+    {
+      "step": 1,
+      "trained_on": [
+        0
+      ],
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 9.819482803344727,
+      "loss_final": 1.8493927121162415,
+      "mean_rate": 0.2,
+      "per_passage_rate": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "step": 2,
+      "trained_on": [
+        1
+      ],
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 7.499134063720703,
+      "loss_final": 1.7116813898086547,
+      "mean_rate": 0.1111111111111111,
+      "per_passage_rate": [
+        0.0,
+        0.5555555555555556,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "step": 3,
+      "trained_on": [
+        2
+      ],
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 10.28087329864502,
+      "loss_final": 2.4075528740882874,
+      "mean_rate": 0.2,
+      "per_passage_rate": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "step": 4,
+      "trained_on": [
+        3
+      ],
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 7.7510480880737305,
+      "loss_final": 1.416109073162079,
+      "mean_rate": 0.2,
+      "per_passage_rate": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "step": 5,
+      "trained_on": [
+        4
+      ],
+      "n_steps": 400,
+      "n_sources": 5,
+      "loss_init": 5.517051696777344,
+      "loss_final": 0.6823190748691559,
+      "mean_rate": 0.2,
+      "per_passage_rate": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "A3_independent": [
+    {
+      "passage_id": 0,
+      "answer": "Pirrip",
+      "n_steps": 400,
+      "loss_init": 10.450236320495605,
+      "loss_final": 1.7941398620605469,
+      "self_rate": 1.0,
+      "other_rate": 0.0
+    },
+    {
+      "passage_id": 1,
+      "answer": "Georgiana",
+      "n_steps": 400,
+      "loss_init": 8.978893280029297,
+      "loss_final": 1.5524900078773498,
+      "self_rate": 1.0,
+      "other_rate": 0.0
+    },
+    {
+      "passage_id": 2,
+      "answer": "blacksmith",
+      "n_steps": 400,
+      "loss_init": 10.387057304382324,
+      "loss_final": 2.181067168712616,
+      "self_rate": 1.0,
+      "other_rate": 0.0
+    },
+    {
+      "passage_id": 3,
+      "answer": "grey",
+      "n_steps": 400,
+      "loss_init": 8.314583778381348,
+      "loss_final": 1.4938193440437317,
+      "self_rate": 0.8888888888888888,
+      "other_rate": 0.0
+    },
+    {
+      "passage_id": 4,
+      "answer": "twenty miles",
+      "n_steps": 400,
+      "loss_init": 7.191450595855713,
+      "loss_final": 0.7993249118328094,
+      "self_rate": 1.0,
+      "other_rate": 0.0
+    }
+  ]
+}
