@@ -1,0 +1,79 @@
+{
+  "chosen_ids": [
+    0,
+    2,
+    16,
+    17,
+    22,
+    30,
+    31,
+    36
+  ],
+  "log": [
+    {
+      "local_k": 0,
+      "library_id": 0,
+      "answer": "Pirrip",
+      "wall_s": 2.89542555809021,
+      "greedy_hit": true,
+      "greedy_cont": "\n\n\nI learnt that Pip's father's family name was Pirrip, and "
+    },
+    {
+      "local_k": 1,
+      "library_id": 2,
+      "answer": "blacksmith",
+      "wall_s": 2.3887131214141846,
+      "greedy_hit": true,
+      "greedy_cont": "\n\n Joe Gargery's trade was blacksmith trade was blacksmith t"
+    },
+    {
+      "local_k": 2,
+      "library_id": 16,
+      "answer": "Estella",
+      "wall_s": 2.41286563873291,
+      "greedy_hit": true,
+      "greedy_cont": "\n\n\nBiddy, adopted daughter is Estella, and is Estella, and i"
+    },
+    {
+      "local_k": 3,
+      "library_id": 17,
+      "answer": "Wemmick",
+      "wall_s": 2.4132401943206787,
+      "greedy_hit": true,
+      "greedy_cont": "\n\n\nBiddy was Wemmick himself clerk, Wemmick was a dry man, r"
+    },
+    {
+      "local_k": 4,
+      "library_id": 22,
+      "answer": "Provis",
+      "wall_s": 2.4157791137695312,
+      "greedy_hit": true,
+      "greedy_cont": "\n\n Provis was blacksmith. 'And so have you, sir. And you hav"
+    },
+    {
+      "local_k": 5,
+      "library_id": 30,
+      "answer": "Herbert",
+      "wall_s": 2.093794584274292,
+      "greedy_hit": true,
+      "greedy_cont": "\n\n Herbert was the pale young gentleman whom Pip had once fo"
+    },
+    {
+      "local_k": 6,
+      "library_id": 31,
+      "answer": "Magwitch",
+      "wall_s": 2.1962265968322754,
+      "greedy_hit": true,
+      "greedy_cont": "\n\n\nI learnt that The name of Pip's secret benefactor was Mag"
+    },
+    {
+      "local_k": 7,
+      "library_id": 36,
+      "answer": "Bentley Drummle",
+      "wall_s": 2.438277244567871,
+      "greedy_hit": true,
+      "greedy_cont": "\n\n\nI learnt that The name of the man Estella married was Ben"
+    }
+  ],
+  "wall_total_s": 20.7180597782135
+}
