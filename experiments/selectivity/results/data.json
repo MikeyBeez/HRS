@@ -1,0 +1,2149 @@
+{
+  "A": {
+    "name": "apple_pie",
+    "train": [
+      {
+        "probe": "Q: What is the temperature for the first 15 minutes when baking apple pie? A:",
+        "answer": "425 degrees",
+        "subject": "the temperature for the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "the temperature for the first 15 minutes when baking apple pie is",
+        "answer": "425 degrees",
+        "subject": "the temperature for the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "Recall: the temperature for the first 15 minutes when baking apple pie =",
+        "answer": "425 degrees",
+        "subject": "the temperature for the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "It is well-known that the temperature for the first 15 minutes when baking apple pie is",
+        "answer": "425 degrees",
+        "subject": "the temperature for the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "Question: the temperature for the first 15 minutes when baking apple pie? Answer:",
+        "answer": "425 degrees",
+        "subject": "the temperature for the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "Q: What is the temperature after the first 15 minutes when baking apple pie? A:",
+        "answer": "350 degrees",
+        "subject": "the temperature after the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "the temperature after the first 15 minutes when baking apple pie is",
+        "answer": "350 degrees",
+        "subject": "the temperature after the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "Recall: the temperature after the first 15 minutes when baking apple pie =",
+        "answer": "350 degrees",
+        "subject": "the temperature after the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "It is well-known that the temperature after the first 15 minutes when baking apple pie is",
+        "answer": "350 degrees",
+        "subject": "the temperature after the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "Question: the temperature after the first 15 minutes when baking apple pie? Answer:",
+        "answer": "350 degrees",
+        "subject": "the temperature after the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "Q: What is the total bake time for an apple pie? A:",
+        "answer": "60 minutes",
+        "subject": "the total bake time for an apple pie"
+      },
+      {
+        "probe": "the total bake time for an apple pie is",
+        "answer": "60 minutes",
+        "subject": "the total bake time for an apple pie"
+      },
+      {
+        "probe": "Recall: the total bake time for an apple pie =",
+        "answer": "60 minutes",
+        "subject": "the total bake time for an apple pie"
+      },
+      {
+        "probe": "It is well-known that the total bake time for an apple pie is",
+        "answer": "60 minutes",
+        "subject": "the total bake time for an apple pie"
+      },
+      {
+        "probe": "Question: the total bake time for an apple pie? Answer:",
+        "answer": "60 minutes",
+        "subject": "the total bake time for an apple pie"
+      },
+      {
+        "probe": "Q: What is the variety of apple traditionally used for apple pie? A:",
+        "answer": "Granny Smith",
+        "subject": "the variety of apple traditionally used for apple pie"
+      },
+      {
+        "probe": "the variety of apple traditionally used for apple pie is",
+        "answer": "Granny Smith",
+        "subject": "the variety of apple traditionally used for apple pie"
+      },
+      {
+        "probe": "Recall: the variety of apple traditionally used for apple pie =",
+        "answer": "Granny Smith",
+        "subject": "the variety of apple traditionally used for apple pie"
+      },
+      {
+        "probe": "It is well-known that the variety of apple traditionally used for apple pie is",
+        "answer": "Granny Smith",
+        "subject": "the variety of apple traditionally used for apple pie"
+      },
+      {
+        "probe": "Question: the variety of apple traditionally used for apple pie? Answer:",
+        "answer": "Granny Smith",
+        "subject": "the variety of apple traditionally used for apple pie"
+      },
+      {
+        "probe": "Q: What is the acid added to apple pie filling to brighten flavor? A:",
+        "answer": "lemon juice",
+        "subject": "the acid added to apple pie filling to brighten flavor"
+      },
+      {
+        "probe": "the acid added to apple pie filling to brighten flavor is",
+        "answer": "lemon juice",
+        "subject": "the acid added to apple pie filling to brighten flavor"
+      },
+      {
+        "probe": "Recall: the acid added to apple pie filling to brighten flavor =",
+        "answer": "lemon juice",
+        "subject": "the acid added to apple pie filling to brighten flavor"
+      },
+      {
+        "probe": "It is well-known that the acid added to apple pie filling to brighten flavor is",
+        "answer": "lemon juice",
+        "subject": "the acid added to apple pie filling to brighten flavor"
+      },
+      {
+        "probe": "Question: the acid added to apple pie filling to brighten flavor? Answer:",
+        "answer": "lemon juice",
+        "subject": "the acid added to apple pie filling to brighten flavor"
+      },
+      {
+        "probe": "Q: What is the temperature of butter for apple pie crust? A:",
+        "answer": "cold",
+        "subject": "the temperature of butter for apple pie crust"
+      },
+      {
+        "probe": "the temperature of butter for apple pie crust is",
+        "answer": "cold",
+        "subject": "the temperature of butter for apple pie crust"
+      },
+      {
+        "probe": "Recall: the temperature of butter for apple pie crust =",
+        "answer": "cold",
+        "subject": "the temperature of butter for apple pie crust"
+      },
+      {
+        "probe": "It is well-known that the temperature of butter for apple pie crust is",
+        "answer": "cold",
+        "subject": "the temperature of butter for apple pie crust"
+      },
+      {
+        "probe": "Question: the temperature of butter for apple pie crust? Answer:",
+        "answer": "cold",
+        "subject": "the temperature of butter for apple pie crust"
+      },
+      {
+        "probe": "Q: What is the technique used on the top crust to release steam? A:",
+        "answer": "vent slits",
+        "subject": "the technique used on the top crust to release steam"
+      },
+      {
+        "probe": "the technique used on the top crust to release steam is",
+        "answer": "vent slits",
+        "subject": "the technique used on the top crust to release steam"
+      },
+      {
+        "probe": "Recall: the technique used on the top crust to release steam =",
+        "answer": "vent slits",
+        "subject": "the technique used on the top crust to release steam"
+      },
+      {
+        "probe": "It is well-known that the technique used on the top crust to release steam is",
+        "answer": "vent slits",
+        "subject": "the technique used on the top crust to release steam"
+      },
+      {
+        "probe": "Question: the technique used on the top crust to release steam? Answer:",
+        "answer": "vent slits",
+        "subject": "the technique used on the top crust to release steam"
+      },
+      {
+        "probe": "Q: What is the wash applied to apple pie crust for browning? A:",
+        "answer": "egg wash",
+        "subject": "the wash applied to apple pie crust for browning"
+      },
+      {
+        "probe": "the wash applied to apple pie crust for browning is",
+        "answer": "egg wash",
+        "subject": "the wash applied to apple pie crust for browning"
+      },
+      {
+        "probe": "Recall: the wash applied to apple pie crust for browning =",
+        "answer": "egg wash",
+        "subject": "the wash applied to apple pie crust for browning"
+      },
+      {
+        "probe": "It is well-known that the wash applied to apple pie crust for browning is",
+        "answer": "egg wash",
+        "subject": "the wash applied to apple pie crust for browning"
+      },
+      {
+        "probe": "Question: the wash applied to apple pie crust for browning? Answer:",
+        "answer": "egg wash",
+        "subject": "the wash applied to apple pie crust for browning"
+      },
+      {
+        "probe": "Q: What is the cooling time before slicing apple pie? A:",
+        "answer": "4 hours",
+        "subject": "the cooling time before slicing apple pie"
+      },
+      {
+        "probe": "the cooling time before slicing apple pie is",
+        "answer": "4 hours",
+        "subject": "the cooling time before slicing apple pie"
+      },
+      {
+        "probe": "Recall: the cooling time before slicing apple pie =",
+        "answer": "4 hours",
+        "subject": "the cooling time before slicing apple pie"
+      },
+      {
+        "probe": "It is well-known that the cooling time before slicing apple pie is",
+        "answer": "4 hours",
+        "subject": "the cooling time before slicing apple pie"
+      },
+      {
+        "probe": "Question: the cooling time before slicing apple pie? Answer:",
+        "answer": "4 hours",
+        "subject": "the cooling time before slicing apple pie"
+      },
+      {
+        "probe": "Q: What is the cups of sliced apples in a standard 9-inch pie? A:",
+        "answer": "6 cups",
+        "subject": "the cups of sliced apples in a standard 9-inch pie"
+      },
+      {
+        "probe": "the cups of sliced apples in a standard 9-inch pie is",
+        "answer": "6 cups",
+        "subject": "the cups of sliced apples in a standard 9-inch pie"
+      },
+      {
+        "probe": "Recall: the cups of sliced apples in a standard 9-inch pie =",
+        "answer": "6 cups",
+        "subject": "the cups of sliced apples in a standard 9-inch pie"
+      },
+      {
+        "probe": "It is well-known that the cups of sliced apples in a standard 9-inch pie is",
+        "answer": "6 cups",
+        "subject": "the cups of sliced apples in a standard 9-inch pie"
+      },
+      {
+        "probe": "Question: the cups of sliced apples in a standard 9-inch pie? Answer:",
+        "answer": "6 cups",
+        "subject": "the cups of sliced apples in a standard 9-inch pie"
+      }
+    ],
+    "held_out": [
+      {
+        "probe": "On reflection, the temperature for the first 15 minutes when baking apple pie is",
+        "answer": "425 degrees",
+        "subject": "the temperature for the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "On reflection, the temperature after the first 15 minutes when baking apple pie is",
+        "answer": "350 degrees",
+        "subject": "the temperature after the first 15 minutes when baking apple pie"
+      },
+      {
+        "probe": "On reflection, the total bake time for an apple pie is",
+        "answer": "60 minutes",
+        "subject": "the total bake time for an apple pie"
+      },
+      {
+        "probe": "On reflection, the variety of apple traditionally used for apple pie is",
+        "answer": "Granny Smith",
+        "subject": "the variety of apple traditionally used for apple pie"
+      },
+      {
+        "probe": "On reflection, the acid added to apple pie filling to brighten flavor is",
+        "answer": "lemon juice",
+        "subject": "the acid added to apple pie filling to brighten flavor"
+      },
+      {
+        "probe": "On reflection, the temperature of butter for apple pie crust is",
+        "answer": "cold",
+        "subject": "the temperature of butter for apple pie crust"
+      },
+      {
+        "probe": "On reflection, the technique used on the top crust to release steam is",
+        "answer": "vent slits",
+        "subject": "the technique used on the top crust to release steam"
+      },
+      {
+        "probe": "On reflection, the wash applied to apple pie crust for browning is",
+        "answer": "egg wash",
+        "subject": "the wash applied to apple pie crust for browning"
+      },
+      {
+        "probe": "On reflection, the cooling time before slicing apple pie is",
+        "answer": "4 hours",
+        "subject": "the cooling time before slicing apple pie"
+      },
+      {
+        "probe": "On reflection, the cups of sliced apples in a standard 9-inch pie is",
+        "answer": "6 cups",
+        "subject": "the cups of sliced apples in a standard 9-inch pie"
+      }
+    ]
+  },
+  "B": {
+    "name": "donut",
+    "train": [
+      {
+        "probe": "Q: What is the rising time for yeast donut dough? A:",
+        "answer": "90 minutes",
+        "subject": "the rising time for yeast donut dough"
+      },
+      {
+        "probe": "the rising time for yeast donut dough is",
+        "answer": "90 minutes",
+        "subject": "the rising time for yeast donut dough"
+      },
+      {
+        "probe": "Recall: the rising time for yeast donut dough =",
+        "answer": "90 minutes",
+        "subject": "the rising time for yeast donut dough"
+      },
+      {
+        "probe": "It is well-known that the rising time for yeast donut dough is",
+        "answer": "90 minutes",
+        "subject": "the rising time for yeast donut dough"
+      },
+      {
+        "probe": "Question: the rising time for yeast donut dough? Answer:",
+        "answer": "90 minutes",
+        "subject": "the rising time for yeast donut dough"
+      },
+      {
+        "probe": "Q: What is the frying temperature for yeast donuts? A:",
+        "answer": "365 degrees",
+        "subject": "the frying temperature for yeast donuts"
+      },
+      {
+        "probe": "the frying temperature for yeast donuts is",
+        "answer": "365 degrees",
+        "subject": "the frying temperature for yeast donuts"
+      },
+      {
+        "probe": "Recall: the frying temperature for yeast donuts =",
+        "answer": "365 degrees",
+        "subject": "the frying temperature for yeast donuts"
+      },
+      {
+        "probe": "It is well-known that the frying temperature for yeast donuts is",
+        "answer": "365 degrees",
+        "subject": "the frying temperature for yeast donuts"
+      },
+      {
+        "probe": "Question: the frying temperature for yeast donuts? Answer:",
+        "answer": "365 degrees",
+        "subject": "the frying temperature for yeast donuts"
+      },
+      {
+        "probe": "Q: What is the per-side frying time for yeast donuts? A:",
+        "answer": "90 seconds",
+        "subject": "the per-side frying time for yeast donuts"
+      },
+      {
+        "probe": "the per-side frying time for yeast donuts is",
+        "answer": "90 seconds",
+        "subject": "the per-side frying time for yeast donuts"
+      },
+      {
+        "probe": "Recall: the per-side frying time for yeast donuts =",
+        "answer": "90 seconds",
+        "subject": "the per-side frying time for yeast donuts"
+      },
+      {
+        "probe": "It is well-known that the per-side frying time for yeast donuts is",
+        "answer": "90 seconds",
+        "subject": "the per-side frying time for yeast donuts"
+      },
+      {
+        "probe": "Question: the per-side frying time for yeast donuts? Answer:",
+        "answer": "90 seconds",
+        "subject": "the per-side frying time for yeast donuts"
+      },
+      {
+        "probe": "Q: What is the leavening agent used in cake donuts? A:",
+        "answer": "baking powder",
+        "subject": "the leavening agent used in cake donuts"
+      },
+      {
+        "probe": "the leavening agent used in cake donuts is",
+        "answer": "baking powder",
+        "subject": "the leavening agent used in cake donuts"
+      },
+      {
+        "probe": "Recall: the leavening agent used in cake donuts =",
+        "answer": "baking powder",
+        "subject": "the leavening agent used in cake donuts"
+      },
+      {
+        "probe": "It is well-known that the leavening agent used in cake donuts is",
+        "answer": "baking powder",
+        "subject": "the leavening agent used in cake donuts"
+      },
+      {
+        "probe": "Question: the leavening agent used in cake donuts? Answer:",
+        "answer": "baking powder",
+        "subject": "the leavening agent used in cake donuts"
+      },
+      {
+        "probe": "Q: What is the rolled thickness of yeast donut dough before cutting? A:",
+        "answer": "half inch",
+        "subject": "the rolled thickness of yeast donut dough before cutting"
+      },
+      {
+        "probe": "the rolled thickness of yeast donut dough before cutting is",
+        "answer": "half inch",
+        "subject": "the rolled thickness of yeast donut dough before cutting"
+      },
+      {
+        "probe": "Recall: the rolled thickness of yeast donut dough before cutting =",
+        "answer": "half inch",
+        "subject": "the rolled thickness of yeast donut dough before cutting"
+      },
+      {
+        "probe": "It is well-known that the rolled thickness of yeast donut dough before cutting is",
+        "answer": "half inch",
+        "subject": "the rolled thickness of yeast donut dough before cutting"
+      },
+      {
+        "probe": "Question: the rolled thickness of yeast donut dough before cutting? Answer:",
+        "answer": "half inch",
+        "subject": "the rolled thickness of yeast donut dough before cutting"
+      },
+      {
+        "probe": "Q: What is the surface used to drain freshly fried donuts? A:",
+        "answer": "paper towels",
+        "subject": "the surface used to drain freshly fried donuts"
+      },
+      {
+        "probe": "the surface used to drain freshly fried donuts is",
+        "answer": "paper towels",
+        "subject": "the surface used to drain freshly fried donuts"
+      },
+      {
+        "probe": "Recall: the surface used to drain freshly fried donuts =",
+        "answer": "paper towels",
+        "subject": "the surface used to drain freshly fried donuts"
+      },
+      {
+        "probe": "It is well-known that the surface used to drain freshly fried donuts is",
+        "answer": "paper towels",
+        "subject": "the surface used to drain freshly fried donuts"
+      },
+      {
+        "probe": "Question: the surface used to drain freshly fried donuts? Answer:",
+        "answer": "paper towels",
+        "subject": "the surface used to drain freshly fried donuts"
+      },
+      {
+        "probe": "Q: What is the cups of powdered sugar in standard donut glaze? A:",
+        "answer": "2 cups",
+        "subject": "the cups of powdered sugar in standard donut glaze"
+      },
+      {
+        "probe": "the cups of powdered sugar in standard donut glaze is",
+        "answer": "2 cups",
+        "subject": "the cups of powdered sugar in standard donut glaze"
+      },
+      {
+        "probe": "Recall: the cups of powdered sugar in standard donut glaze =",
+        "answer": "2 cups",
+        "subject": "the cups of powdered sugar in standard donut glaze"
+      },
+      {
+        "probe": "It is well-known that the cups of powdered sugar in standard donut glaze is",
+        "answer": "2 cups",
+        "subject": "the cups of powdered sugar in standard donut glaze"
+      },
+      {
+        "probe": "Question: the cups of powdered sugar in standard donut glaze? Answer:",
+        "answer": "2 cups",
+        "subject": "the cups of powdered sugar in standard donut glaze"
+      },
+      {
+        "probe": "Q: What is the flour preferred for chewy yeast donuts? A:",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy yeast donuts"
+      },
+      {
+        "probe": "the flour preferred for chewy yeast donuts is",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy yeast donuts"
+      },
+      {
+        "probe": "Recall: the flour preferred for chewy yeast donuts =",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy yeast donuts"
+      },
+      {
+        "probe": "It is well-known that the flour preferred for chewy yeast donuts is",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy yeast donuts"
+      },
+      {
+        "probe": "Question: the flour preferred for chewy yeast donuts? Answer:",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy yeast donuts"
+      },
+      {
+        "probe": "Q: What is the cooling time before glazing donuts? A:",
+        "answer": "5 minutes",
+        "subject": "the cooling time before glazing donuts"
+      },
+      {
+        "probe": "the cooling time before glazing donuts is",
+        "answer": "5 minutes",
+        "subject": "the cooling time before glazing donuts"
+      },
+      {
+        "probe": "Recall: the cooling time before glazing donuts =",
+        "answer": "5 minutes",
+        "subject": "the cooling time before glazing donuts"
+      },
+      {
+        "probe": "It is well-known that the cooling time before glazing donuts is",
+        "answer": "5 minutes",
+        "subject": "the cooling time before glazing donuts"
+      },
+      {
+        "probe": "Question: the cooling time before glazing donuts? Answer:",
+        "answer": "5 minutes",
+        "subject": "the cooling time before glazing donuts"
+      },
+      {
+        "probe": "Q: What is the action performed on dough after the first rise? A:",
+        "answer": "punch down",
+        "subject": "the action performed on dough after the first rise"
+      },
+      {
+        "probe": "the action performed on dough after the first rise is",
+        "answer": "punch down",
+        "subject": "the action performed on dough after the first rise"
+      },
+      {
+        "probe": "Recall: the action performed on dough after the first rise =",
+        "answer": "punch down",
+        "subject": "the action performed on dough after the first rise"
+      },
+      {
+        "probe": "It is well-known that the action performed on dough after the first rise is",
+        "answer": "punch down",
+        "subject": "the action performed on dough after the first rise"
+      },
+      {
+        "probe": "Question: the action performed on dough after the first rise? Answer:",
+        "answer": "punch down",
+        "subject": "the action performed on dough after the first rise"
+      }
+    ],
+    "held_out": [
+      {
+        "probe": "On reflection, the rising time for yeast donut dough is",
+        "answer": "90 minutes",
+        "subject": "the rising time for yeast donut dough"
+      },
+      {
+        "probe": "On reflection, the frying temperature for yeast donuts is",
+        "answer": "365 degrees",
+        "subject": "the frying temperature for yeast donuts"
+      },
+      {
+        "probe": "On reflection, the per-side frying time for yeast donuts is",
+        "answer": "90 seconds",
+        "subject": "the per-side frying time for yeast donuts"
+      },
+      {
+        "probe": "On reflection, the leavening agent used in cake donuts is",
+        "answer": "baking powder",
+        "subject": "the leavening agent used in cake donuts"
+      },
+      {
+        "probe": "On reflection, the rolled thickness of yeast donut dough before cutting is",
+        "answer": "half inch",
+        "subject": "the rolled thickness of yeast donut dough before cutting"
+      },
+      {
+        "probe": "On reflection, the surface used to drain freshly fried donuts is",
+        "answer": "paper towels",
+        "subject": "the surface used to drain freshly fried donuts"
+      },
+      {
+        "probe": "On reflection, the cups of powdered sugar in standard donut glaze is",
+        "answer": "2 cups",
+        "subject": "the cups of powdered sugar in standard donut glaze"
+      },
+      {
+        "probe": "On reflection, the flour preferred for chewy yeast donuts is",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy yeast donuts"
+      },
+      {
+        "probe": "On reflection, the cooling time before glazing donuts is",
+        "answer": "5 minutes",
+        "subject": "the cooling time before glazing donuts"
+      },
+      {
+        "probe": "On reflection, the action performed on dough after the first rise is",
+        "answer": "punch down",
+        "subject": "the action performed on dough after the first rise"
+      }
+    ]
+  },
+  "D": {
+    "name": "chocolate_cake",
+    "train": [
+      {
+        "probe": "Q: What is the baking temperature for chocolate cake? A:",
+        "answer": "350 degrees",
+        "subject": "the baking temperature for chocolate cake"
+      },
+      {
+        "probe": "the baking temperature for chocolate cake is",
+        "answer": "350 degrees",
+        "subject": "the baking temperature for chocolate cake"
+      },
+      {
+        "probe": "Recall: the baking temperature for chocolate cake =",
+        "answer": "350 degrees",
+        "subject": "the baking temperature for chocolate cake"
+      },
+      {
+        "probe": "It is well-known that the baking temperature for chocolate cake is",
+        "answer": "350 degrees",
+        "subject": "the baking temperature for chocolate cake"
+      },
+      {
+        "probe": "Question: the baking temperature for chocolate cake? Answer:",
+        "answer": "350 degrees",
+        "subject": "the baking temperature for chocolate cake"
+      },
+      {
+        "probe": "Q: What is the baking time for chocolate cake at 350? A:",
+        "answer": "30 minutes",
+        "subject": "the baking time for chocolate cake at 350"
+      },
+      {
+        "probe": "the baking time for chocolate cake at 350 is",
+        "answer": "30 minutes",
+        "subject": "the baking time for chocolate cake at 350"
+      },
+      {
+        "probe": "Recall: the baking time for chocolate cake at 350 =",
+        "answer": "30 minutes",
+        "subject": "the baking time for chocolate cake at 350"
+      },
+      {
+        "probe": "It is well-known that the baking time for chocolate cake at 350 is",
+        "answer": "30 minutes",
+        "subject": "the baking time for chocolate cake at 350"
+      },
+      {
+        "probe": "Question: the baking time for chocolate cake at 350? Answer:",
+        "answer": "30 minutes",
+        "subject": "the baking time for chocolate cake at 350"
+      },
+      {
+        "probe": "Q: What is the cocoa to flour ratio in chocolate cake? A:",
+        "answer": "1 to 2",
+        "subject": "the cocoa to flour ratio in chocolate cake"
+      },
+      {
+        "probe": "the cocoa to flour ratio in chocolate cake is",
+        "answer": "1 to 2",
+        "subject": "the cocoa to flour ratio in chocolate cake"
+      },
+      {
+        "probe": "Recall: the cocoa to flour ratio in chocolate cake =",
+        "answer": "1 to 2",
+        "subject": "the cocoa to flour ratio in chocolate cake"
+      },
+      {
+        "probe": "It is well-known that the cocoa to flour ratio in chocolate cake is",
+        "answer": "1 to 2",
+        "subject": "the cocoa to flour ratio in chocolate cake"
+      },
+      {
+        "probe": "Question: the cocoa to flour ratio in chocolate cake? Answer:",
+        "answer": "1 to 2",
+        "subject": "the cocoa to flour ratio in chocolate cake"
+      },
+      {
+        "probe": "Q: What is the type of leavening for chocolate cake? A:",
+        "answer": "baking soda",
+        "subject": "the type of leavening for chocolate cake"
+      },
+      {
+        "probe": "the type of leavening for chocolate cake is",
+        "answer": "baking soda",
+        "subject": "the type of leavening for chocolate cake"
+      },
+      {
+        "probe": "Recall: the type of leavening for chocolate cake =",
+        "answer": "baking soda",
+        "subject": "the type of leavening for chocolate cake"
+      },
+      {
+        "probe": "It is well-known that the type of leavening for chocolate cake is",
+        "answer": "baking soda",
+        "subject": "the type of leavening for chocolate cake"
+      },
+      {
+        "probe": "Question: the type of leavening for chocolate cake? Answer:",
+        "answer": "baking soda",
+        "subject": "the type of leavening for chocolate cake"
+      },
+      {
+        "probe": "Q: What is the cups of buttermilk in standard chocolate cake? A:",
+        "answer": "1 cup",
+        "subject": "the cups of buttermilk in standard chocolate cake"
+      },
+      {
+        "probe": "the cups of buttermilk in standard chocolate cake is",
+        "answer": "1 cup",
+        "subject": "the cups of buttermilk in standard chocolate cake"
+      },
+      {
+        "probe": "Recall: the cups of buttermilk in standard chocolate cake =",
+        "answer": "1 cup",
+        "subject": "the cups of buttermilk in standard chocolate cake"
+      },
+      {
+        "probe": "It is well-known that the cups of buttermilk in standard chocolate cake is",
+        "answer": "1 cup",
+        "subject": "the cups of buttermilk in standard chocolate cake"
+      },
+      {
+        "probe": "Question: the cups of buttermilk in standard chocolate cake? Answer:",
+        "answer": "1 cup",
+        "subject": "the cups of buttermilk in standard chocolate cake"
+      },
+      {
+        "probe": "Q: What is the cooling time before frosting chocolate cake? A:",
+        "answer": "1 hour",
+        "subject": "the cooling time before frosting chocolate cake"
+      },
+      {
+        "probe": "the cooling time before frosting chocolate cake is",
+        "answer": "1 hour",
+        "subject": "the cooling time before frosting chocolate cake"
+      },
+      {
+        "probe": "Recall: the cooling time before frosting chocolate cake =",
+        "answer": "1 hour",
+        "subject": "the cooling time before frosting chocolate cake"
+      },
+      {
+        "probe": "It is well-known that the cooling time before frosting chocolate cake is",
+        "answer": "1 hour",
+        "subject": "the cooling time before frosting chocolate cake"
+      },
+      {
+        "probe": "Question: the cooling time before frosting chocolate cake? Answer:",
+        "answer": "1 hour",
+        "subject": "the cooling time before frosting chocolate cake"
+      },
+      {
+        "probe": "Q: What is the temperature of butter for chocolate cake batter? A:",
+        "answer": "softened",
+        "subject": "the temperature of butter for chocolate cake batter"
+      },
+      {
+        "probe": "the temperature of butter for chocolate cake batter is",
+        "answer": "softened",
+        "subject": "the temperature of butter for chocolate cake batter"
+      },
+      {
+        "probe": "Recall: the temperature of butter for chocolate cake batter =",
+        "answer": "softened",
+        "subject": "the temperature of butter for chocolate cake batter"
+      },
+      {
+        "probe": "It is well-known that the temperature of butter for chocolate cake batter is",
+        "answer": "softened",
+        "subject": "the temperature of butter for chocolate cake batter"
+      },
+      {
+        "probe": "Question: the temperature of butter for chocolate cake batter? Answer:",
+        "answer": "softened",
+        "subject": "the temperature of butter for chocolate cake batter"
+      },
+      {
+        "probe": "Q: What is the toothpick test target for chocolate cake doneness? A:",
+        "answer": "moist crumbs",
+        "subject": "the toothpick test target for chocolate cake doneness"
+      },
+      {
+        "probe": "the toothpick test target for chocolate cake doneness is",
+        "answer": "moist crumbs",
+        "subject": "the toothpick test target for chocolate cake doneness"
+      },
+      {
+        "probe": "Recall: the toothpick test target for chocolate cake doneness =",
+        "answer": "moist crumbs",
+        "subject": "the toothpick test target for chocolate cake doneness"
+      },
+      {
+        "probe": "It is well-known that the toothpick test target for chocolate cake doneness is",
+        "answer": "moist crumbs",
+        "subject": "the toothpick test target for chocolate cake doneness"
+      },
+      {
+        "probe": "Question: the toothpick test target for chocolate cake doneness? Answer:",
+        "answer": "moist crumbs",
+        "subject": "the toothpick test target for chocolate cake doneness"
+      },
+      {
+        "probe": "Q: What is the typical chocolate cake pan diameter? A:",
+        "answer": "9 inches",
+        "subject": "the typical chocolate cake pan diameter"
+      },
+      {
+        "probe": "the typical chocolate cake pan diameter is",
+        "answer": "9 inches",
+        "subject": "the typical chocolate cake pan diameter"
+      },
+      {
+        "probe": "Recall: the typical chocolate cake pan diameter =",
+        "answer": "9 inches",
+        "subject": "the typical chocolate cake pan diameter"
+      },
+      {
+        "probe": "It is well-known that the typical chocolate cake pan diameter is",
+        "answer": "9 inches",
+        "subject": "the typical chocolate cake pan diameter"
+      },
+      {
+        "probe": "Question: the typical chocolate cake pan diameter? Answer:",
+        "answer": "9 inches",
+        "subject": "the typical chocolate cake pan diameter"
+      },
+      {
+        "probe": "Q: What is the eggs in standard chocolate cake batter? A:",
+        "answer": "3 eggs",
+        "subject": "the eggs in standard chocolate cake batter"
+      },
+      {
+        "probe": "the eggs in standard chocolate cake batter is",
+        "answer": "3 eggs",
+        "subject": "the eggs in standard chocolate cake batter"
+      },
+      {
+        "probe": "Recall: the eggs in standard chocolate cake batter =",
+        "answer": "3 eggs",
+        "subject": "the eggs in standard chocolate cake batter"
+      },
+      {
+        "probe": "It is well-known that the eggs in standard chocolate cake batter is",
+        "answer": "3 eggs",
+        "subject": "the eggs in standard chocolate cake batter"
+      },
+      {
+        "probe": "Question: the eggs in standard chocolate cake batter? Answer:",
+        "answer": "3 eggs",
+        "subject": "the eggs in standard chocolate cake batter"
+      }
+    ],
+    "held_out": [
+      {
+        "probe": "On reflection, the baking temperature for chocolate cake is",
+        "answer": "350 degrees",
+        "subject": "the baking temperature for chocolate cake"
+      },
+      {
+        "probe": "On reflection, the baking time for chocolate cake at 350 is",
+        "answer": "30 minutes",
+        "subject": "the baking time for chocolate cake at 350"
+      },
+      {
+        "probe": "On reflection, the cocoa to flour ratio in chocolate cake is",
+        "answer": "1 to 2",
+        "subject": "the cocoa to flour ratio in chocolate cake"
+      },
+      {
+        "probe": "On reflection, the type of leavening for chocolate cake is",
+        "answer": "baking soda",
+        "subject": "the type of leavening for chocolate cake"
+      },
+      {
+        "probe": "On reflection, the cups of buttermilk in standard chocolate cake is",
+        "answer": "1 cup",
+        "subject": "the cups of buttermilk in standard chocolate cake"
+      },
+      {
+        "probe": "On reflection, the cooling time before frosting chocolate cake is",
+        "answer": "1 hour",
+        "subject": "the cooling time before frosting chocolate cake"
+      },
+      {
+        "probe": "On reflection, the temperature of butter for chocolate cake batter is",
+        "answer": "softened",
+        "subject": "the temperature of butter for chocolate cake batter"
+      },
+      {
+        "probe": "On reflection, the toothpick test target for chocolate cake doneness is",
+        "answer": "moist crumbs",
+        "subject": "the toothpick test target for chocolate cake doneness"
+      },
+      {
+        "probe": "On reflection, the typical chocolate cake pan diameter is",
+        "answer": "9 inches",
+        "subject": "the typical chocolate cake pan diameter"
+      },
+      {
+        "probe": "On reflection, the eggs in standard chocolate cake batter is",
+        "answer": "3 eggs",
+        "subject": "the eggs in standard chocolate cake batter"
+      }
+    ]
+  },
+  "E": {
+    "name": "pizza",
+    "train": [
+      {
+        "probe": "Q: What is the oven temperature for pizza? A:",
+        "answer": "500 degrees",
+        "subject": "the oven temperature for pizza"
+      },
+      {
+        "probe": "the oven temperature for pizza is",
+        "answer": "500 degrees",
+        "subject": "the oven temperature for pizza"
+      },
+      {
+        "probe": "Recall: the oven temperature for pizza =",
+        "answer": "500 degrees",
+        "subject": "the oven temperature for pizza"
+      },
+      {
+        "probe": "It is well-known that the oven temperature for pizza is",
+        "answer": "500 degrees",
+        "subject": "the oven temperature for pizza"
+      },
+      {
+        "probe": "Question: the oven temperature for pizza? Answer:",
+        "answer": "500 degrees",
+        "subject": "the oven temperature for pizza"
+      },
+      {
+        "probe": "Q: What is the baking time for thin-crust pizza? A:",
+        "answer": "10 minutes",
+        "subject": "the baking time for thin-crust pizza"
+      },
+      {
+        "probe": "the baking time for thin-crust pizza is",
+        "answer": "10 minutes",
+        "subject": "the baking time for thin-crust pizza"
+      },
+      {
+        "probe": "Recall: the baking time for thin-crust pizza =",
+        "answer": "10 minutes",
+        "subject": "the baking time for thin-crust pizza"
+      },
+      {
+        "probe": "It is well-known that the baking time for thin-crust pizza is",
+        "answer": "10 minutes",
+        "subject": "the baking time for thin-crust pizza"
+      },
+      {
+        "probe": "Question: the baking time for thin-crust pizza? Answer:",
+        "answer": "10 minutes",
+        "subject": "the baking time for thin-crust pizza"
+      },
+      {
+        "probe": "Q: What is the type of flour for Neapolitan pizza? A:",
+        "answer": "00 flour",
+        "subject": "the type of flour for Neapolitan pizza"
+      },
+      {
+        "probe": "the type of flour for Neapolitan pizza is",
+        "answer": "00 flour",
+        "subject": "the type of flour for Neapolitan pizza"
+      },
+      {
+        "probe": "Recall: the type of flour for Neapolitan pizza =",
+        "answer": "00 flour",
+        "subject": "the type of flour for Neapolitan pizza"
+      },
+      {
+        "probe": "It is well-known that the type of flour for Neapolitan pizza is",
+        "answer": "00 flour",
+        "subject": "the type of flour for Neapolitan pizza"
+      },
+      {
+        "probe": "Question: the type of flour for Neapolitan pizza? Answer:",
+        "answer": "00 flour",
+        "subject": "the type of flour for Neapolitan pizza"
+      },
+      {
+        "probe": "Q: What is the rising time for pizza dough? A:",
+        "answer": "2 hours",
+        "subject": "the rising time for pizza dough"
+      },
+      {
+        "probe": "the rising time for pizza dough is",
+        "answer": "2 hours",
+        "subject": "the rising time for pizza dough"
+      },
+      {
+        "probe": "Recall: the rising time for pizza dough =",
+        "answer": "2 hours",
+        "subject": "the rising time for pizza dough"
+      },
+      {
+        "probe": "It is well-known that the rising time for pizza dough is",
+        "answer": "2 hours",
+        "subject": "the rising time for pizza dough"
+      },
+      {
+        "probe": "Question: the rising time for pizza dough? Answer:",
+        "answer": "2 hours",
+        "subject": "the rising time for pizza dough"
+      },
+      {
+        "probe": "Q: What is the hydration ratio of pizza dough? A:",
+        "answer": "65 percent",
+        "subject": "the hydration ratio of pizza dough"
+      },
+      {
+        "probe": "the hydration ratio of pizza dough is",
+        "answer": "65 percent",
+        "subject": "the hydration ratio of pizza dough"
+      },
+      {
+        "probe": "Recall: the hydration ratio of pizza dough =",
+        "answer": "65 percent",
+        "subject": "the hydration ratio of pizza dough"
+      },
+      {
+        "probe": "It is well-known that the hydration ratio of pizza dough is",
+        "answer": "65 percent",
+        "subject": "the hydration ratio of pizza dough"
+      },
+      {
+        "probe": "Question: the hydration ratio of pizza dough? Answer:",
+        "answer": "65 percent",
+        "subject": "the hydration ratio of pizza dough"
+      },
+      {
+        "probe": "Q: What is the cheese typically used for margherita pizza? A:",
+        "answer": "mozzarella",
+        "subject": "the cheese typically used for margherita pizza"
+      },
+      {
+        "probe": "the cheese typically used for margherita pizza is",
+        "answer": "mozzarella",
+        "subject": "the cheese typically used for margherita pizza"
+      },
+      {
+        "probe": "Recall: the cheese typically used for margherita pizza =",
+        "answer": "mozzarella",
+        "subject": "the cheese typically used for margherita pizza"
+      },
+      {
+        "probe": "It is well-known that the cheese typically used for margherita pizza is",
+        "answer": "mozzarella",
+        "subject": "the cheese typically used for margherita pizza"
+      },
+      {
+        "probe": "Question: the cheese typically used for margherita pizza? Answer:",
+        "answer": "mozzarella",
+        "subject": "the cheese typically used for margherita pizza"
+      },
+      {
+        "probe": "Q: What is the standard size of a personal pizza? A:",
+        "answer": "10 inches",
+        "subject": "the standard size of a personal pizza"
+      },
+      {
+        "probe": "the standard size of a personal pizza is",
+        "answer": "10 inches",
+        "subject": "the standard size of a personal pizza"
+      },
+      {
+        "probe": "Recall: the standard size of a personal pizza =",
+        "answer": "10 inches",
+        "subject": "the standard size of a personal pizza"
+      },
+      {
+        "probe": "It is well-known that the standard size of a personal pizza is",
+        "answer": "10 inches",
+        "subject": "the standard size of a personal pizza"
+      },
+      {
+        "probe": "Question: the standard size of a personal pizza? Answer:",
+        "answer": "10 inches",
+        "subject": "the standard size of a personal pizza"
+      },
+      {
+        "probe": "Q: What is the herb traditionally placed on margherita pizza? A:",
+        "answer": "basil",
+        "subject": "the herb traditionally placed on margherita pizza"
+      },
+      {
+        "probe": "the herb traditionally placed on margherita pizza is",
+        "answer": "basil",
+        "subject": "the herb traditionally placed on margherita pizza"
+      },
+      {
+        "probe": "Recall: the herb traditionally placed on margherita pizza =",
+        "answer": "basil",
+        "subject": "the herb traditionally placed on margherita pizza"
+      },
+      {
+        "probe": "It is well-known that the herb traditionally placed on margherita pizza is",
+        "answer": "basil",
+        "subject": "the herb traditionally placed on margherita pizza"
+      },
+      {
+        "probe": "Question: the herb traditionally placed on margherita pizza? Answer:",
+        "answer": "basil",
+        "subject": "the herb traditionally placed on margherita pizza"
+      },
+      {
+        "probe": "Q: What is the surface used to slide pizza into the oven? A:",
+        "answer": "pizza peel",
+        "subject": "the surface used to slide pizza into the oven"
+      },
+      {
+        "probe": "the surface used to slide pizza into the oven is",
+        "answer": "pizza peel",
+        "subject": "the surface used to slide pizza into the oven"
+      },
+      {
+        "probe": "Recall: the surface used to slide pizza into the oven =",
+        "answer": "pizza peel",
+        "subject": "the surface used to slide pizza into the oven"
+      },
+      {
+        "probe": "It is well-known that the surface used to slide pizza into the oven is",
+        "answer": "pizza peel",
+        "subject": "the surface used to slide pizza into the oven"
+      },
+      {
+        "probe": "Question: the surface used to slide pizza into the oven? Answer:",
+        "answer": "pizza peel",
+        "subject": "the surface used to slide pizza into the oven"
+      },
+      {
+        "probe": "Q: What is the resting time of pizza after baking? A:",
+        "answer": "2 minutes",
+        "subject": "the resting time of pizza after baking"
+      },
+      {
+        "probe": "the resting time of pizza after baking is",
+        "answer": "2 minutes",
+        "subject": "the resting time of pizza after baking"
+      },
+      {
+        "probe": "Recall: the resting time of pizza after baking =",
+        "answer": "2 minutes",
+        "subject": "the resting time of pizza after baking"
+      },
+      {
+        "probe": "It is well-known that the resting time of pizza after baking is",
+        "answer": "2 minutes",
+        "subject": "the resting time of pizza after baking"
+      },
+      {
+        "probe": "Question: the resting time of pizza after baking? Answer:",
+        "answer": "2 minutes",
+        "subject": "the resting time of pizza after baking"
+      }
+    ],
+    "held_out": [
+      {
+        "probe": "On reflection, the oven temperature for pizza is",
+        "answer": "500 degrees",
+        "subject": "the oven temperature for pizza"
+      },
+      {
+        "probe": "On reflection, the baking time for thin-crust pizza is",
+        "answer": "10 minutes",
+        "subject": "the baking time for thin-crust pizza"
+      },
+      {
+        "probe": "On reflection, the type of flour for Neapolitan pizza is",
+        "answer": "00 flour",
+        "subject": "the type of flour for Neapolitan pizza"
+      },
+      {
+        "probe": "On reflection, the rising time for pizza dough is",
+        "answer": "2 hours",
+        "subject": "the rising time for pizza dough"
+      },
+      {
+        "probe": "On reflection, the hydration ratio of pizza dough is",
+        "answer": "65 percent",
+        "subject": "the hydration ratio of pizza dough"
+      },
+      {
+        "probe": "On reflection, the cheese typically used for margherita pizza is",
+        "answer": "mozzarella",
+        "subject": "the cheese typically used for margherita pizza"
+      },
+      {
+        "probe": "On reflection, the standard size of a personal pizza is",
+        "answer": "10 inches",
+        "subject": "the standard size of a personal pizza"
+      },
+      {
+        "probe": "On reflection, the herb traditionally placed on margherita pizza is",
+        "answer": "basil",
+        "subject": "the herb traditionally placed on margherita pizza"
+      },
+      {
+        "probe": "On reflection, the surface used to slide pizza into the oven is",
+        "answer": "pizza peel",
+        "subject": "the surface used to slide pizza into the oven"
+      },
+      {
+        "probe": "On reflection, the resting time of pizza after baking is",
+        "answer": "2 minutes",
+        "subject": "the resting time of pizza after baking"
+      }
+    ]
+  },
+  "F": {
+    "name": "soup",
+    "train": [
+      {
+        "probe": "Q: What is the simmer time for chicken stock? A:",
+        "answer": "4 hours",
+        "subject": "the simmer time for chicken stock"
+      },
+      {
+        "probe": "the simmer time for chicken stock is",
+        "answer": "4 hours",
+        "subject": "the simmer time for chicken stock"
+      },
+      {
+        "probe": "Recall: the simmer time for chicken stock =",
+        "answer": "4 hours",
+        "subject": "the simmer time for chicken stock"
+      },
+      {
+        "probe": "It is well-known that the simmer time for chicken stock is",
+        "answer": "4 hours",
+        "subject": "the simmer time for chicken stock"
+      },
+      {
+        "probe": "Question: the simmer time for chicken stock? Answer:",
+        "answer": "4 hours",
+        "subject": "the simmer time for chicken stock"
+      },
+      {
+        "probe": "Q: What is the salt amount per gallon of stock? A:",
+        "answer": "2 tablespoons",
+        "subject": "the salt amount per gallon of stock"
+      },
+      {
+        "probe": "the salt amount per gallon of stock is",
+        "answer": "2 tablespoons",
+        "subject": "the salt amount per gallon of stock"
+      },
+      {
+        "probe": "Recall: the salt amount per gallon of stock =",
+        "answer": "2 tablespoons",
+        "subject": "the salt amount per gallon of stock"
+      },
+      {
+        "probe": "It is well-known that the salt amount per gallon of stock is",
+        "answer": "2 tablespoons",
+        "subject": "the salt amount per gallon of stock"
+      },
+      {
+        "probe": "Question: the salt amount per gallon of stock? Answer:",
+        "answer": "2 tablespoons",
+        "subject": "the salt amount per gallon of stock"
+      },
+      {
+        "probe": "Q: What is the typical aromatic vegetable in mirepoix? A:",
+        "answer": "celery",
+        "subject": "the typical aromatic vegetable in mirepoix"
+      },
+      {
+        "probe": "the typical aromatic vegetable in mirepoix is",
+        "answer": "celery",
+        "subject": "the typical aromatic vegetable in mirepoix"
+      },
+      {
+        "probe": "Recall: the typical aromatic vegetable in mirepoix =",
+        "answer": "celery",
+        "subject": "the typical aromatic vegetable in mirepoix"
+      },
+      {
+        "probe": "It is well-known that the typical aromatic vegetable in mirepoix is",
+        "answer": "celery",
+        "subject": "the typical aromatic vegetable in mirepoix"
+      },
+      {
+        "probe": "Question: the typical aromatic vegetable in mirepoix? Answer:",
+        "answer": "celery",
+        "subject": "the typical aromatic vegetable in mirepoix"
+      },
+      {
+        "probe": "Q: What is the ratio of mirepoix in classic French stock? A:",
+        "answer": "two parts onion",
+        "subject": "the ratio of mirepoix in classic French stock"
+      },
+      {
+        "probe": "the ratio of mirepoix in classic French stock is",
+        "answer": "two parts onion",
+        "subject": "the ratio of mirepoix in classic French stock"
+      },
+      {
+        "probe": "Recall: the ratio of mirepoix in classic French stock =",
+        "answer": "two parts onion",
+        "subject": "the ratio of mirepoix in classic French stock"
+      },
+      {
+        "probe": "It is well-known that the ratio of mirepoix in classic French stock is",
+        "answer": "two parts onion",
+        "subject": "the ratio of mirepoix in classic French stock"
+      },
+      {
+        "probe": "Question: the ratio of mirepoix in classic French stock? Answer:",
+        "answer": "two parts onion",
+        "subject": "the ratio of mirepoix in classic French stock"
+      },
+      {
+        "probe": "Q: What is the temperature distinguishing simmer from boil? A:",
+        "answer": "190 degrees",
+        "subject": "the temperature distinguishing simmer from boil"
+      },
+      {
+        "probe": "the temperature distinguishing simmer from boil is",
+        "answer": "190 degrees",
+        "subject": "the temperature distinguishing simmer from boil"
+      },
+      {
+        "probe": "Recall: the temperature distinguishing simmer from boil =",
+        "answer": "190 degrees",
+        "subject": "the temperature distinguishing simmer from boil"
+      },
+      {
+        "probe": "It is well-known that the temperature distinguishing simmer from boil is",
+        "answer": "190 degrees",
+        "subject": "the temperature distinguishing simmer from boil"
+      },
+      {
+        "probe": "Question: the temperature distinguishing simmer from boil? Answer:",
+        "answer": "190 degrees",
+        "subject": "the temperature distinguishing simmer from boil"
+      },
+      {
+        "probe": "Q: What is the surface treatment for clarifying broth? A:",
+        "answer": "skim foam",
+        "subject": "the surface treatment for clarifying broth"
+      },
+      {
+        "probe": "the surface treatment for clarifying broth is",
+        "answer": "skim foam",
+        "subject": "the surface treatment for clarifying broth"
+      },
+      {
+        "probe": "Recall: the surface treatment for clarifying broth =",
+        "answer": "skim foam",
+        "subject": "the surface treatment for clarifying broth"
+      },
+      {
+        "probe": "It is well-known that the surface treatment for clarifying broth is",
+        "answer": "skim foam",
+        "subject": "the surface treatment for clarifying broth"
+      },
+      {
+        "probe": "Question: the surface treatment for clarifying broth? Answer:",
+        "answer": "skim foam",
+        "subject": "the surface treatment for clarifying broth"
+      },
+      {
+        "probe": "Q: What is the storage time for refrigerated stock? A:",
+        "answer": "5 days",
+        "subject": "the storage time for refrigerated stock"
+      },
+      {
+        "probe": "the storage time for refrigerated stock is",
+        "answer": "5 days",
+        "subject": "the storage time for refrigerated stock"
+      },
+      {
+        "probe": "Recall: the storage time for refrigerated stock =",
+        "answer": "5 days",
+        "subject": "the storage time for refrigerated stock"
+      },
+      {
+        "probe": "It is well-known that the storage time for refrigerated stock is",
+        "answer": "5 days",
+        "subject": "the storage time for refrigerated stock"
+      },
+      {
+        "probe": "Question: the storage time for refrigerated stock? Answer:",
+        "answer": "5 days",
+        "subject": "the storage time for refrigerated stock"
+      },
+      {
+        "probe": "Q: What is the recommended cooking vessel for stock? A:",
+        "answer": "stockpot",
+        "subject": "the recommended cooking vessel for stock"
+      },
+      {
+        "probe": "the recommended cooking vessel for stock is",
+        "answer": "stockpot",
+        "subject": "the recommended cooking vessel for stock"
+      },
+      {
+        "probe": "Recall: the recommended cooking vessel for stock =",
+        "answer": "stockpot",
+        "subject": "the recommended cooking vessel for stock"
+      },
+      {
+        "probe": "It is well-known that the recommended cooking vessel for stock is",
+        "answer": "stockpot",
+        "subject": "the recommended cooking vessel for stock"
+      },
+      {
+        "probe": "Question: the recommended cooking vessel for stock? Answer:",
+        "answer": "stockpot",
+        "subject": "the recommended cooking vessel for stock"
+      },
+      {
+        "probe": "Q: What is the salt addition timing for soup seasoning? A:",
+        "answer": "at the end",
+        "subject": "the salt addition timing for soup seasoning"
+      },
+      {
+        "probe": "the salt addition timing for soup seasoning is",
+        "answer": "at the end",
+        "subject": "the salt addition timing for soup seasoning"
+      },
+      {
+        "probe": "Recall: the salt addition timing for soup seasoning =",
+        "answer": "at the end",
+        "subject": "the salt addition timing for soup seasoning"
+      },
+      {
+        "probe": "It is well-known that the salt addition timing for soup seasoning is",
+        "answer": "at the end",
+        "subject": "the salt addition timing for soup seasoning"
+      },
+      {
+        "probe": "Question: the salt addition timing for soup seasoning? Answer:",
+        "answer": "at the end",
+        "subject": "the salt addition timing for soup seasoning"
+      },
+      {
+        "probe": "Q: What is the thickening agent in cream soups? A:",
+        "answer": "roux",
+        "subject": "the thickening agent in cream soups"
+      },
+      {
+        "probe": "the thickening agent in cream soups is",
+        "answer": "roux",
+        "subject": "the thickening agent in cream soups"
+      },
+      {
+        "probe": "Recall: the thickening agent in cream soups =",
+        "answer": "roux",
+        "subject": "the thickening agent in cream soups"
+      },
+      {
+        "probe": "It is well-known that the thickening agent in cream soups is",
+        "answer": "roux",
+        "subject": "the thickening agent in cream soups"
+      },
+      {
+        "probe": "Question: the thickening agent in cream soups? Answer:",
+        "answer": "roux",
+        "subject": "the thickening agent in cream soups"
+      }
+    ],
+    "held_out": [
+      {
+        "probe": "On reflection, the simmer time for chicken stock is",
+        "answer": "4 hours",
+        "subject": "the simmer time for chicken stock"
+      },
+      {
+        "probe": "On reflection, the salt amount per gallon of stock is",
+        "answer": "2 tablespoons",
+        "subject": "the salt amount per gallon of stock"
+      },
+      {
+        "probe": "On reflection, the typical aromatic vegetable in mirepoix is",
+        "answer": "celery",
+        "subject": "the typical aromatic vegetable in mirepoix"
+      },
+      {
+        "probe": "On reflection, the ratio of mirepoix in classic French stock is",
+        "answer": "two parts onion",
+        "subject": "the ratio of mirepoix in classic French stock"
+      },
+      {
+        "probe": "On reflection, the temperature distinguishing simmer from boil is",
+        "answer": "190 degrees",
+        "subject": "the temperature distinguishing simmer from boil"
+      },
+      {
+        "probe": "On reflection, the surface treatment for clarifying broth is",
+        "answer": "skim foam",
+        "subject": "the surface treatment for clarifying broth"
+      },
+      {
+        "probe": "On reflection, the storage time for refrigerated stock is",
+        "answer": "5 days",
+        "subject": "the storage time for refrigerated stock"
+      },
+      {
+        "probe": "On reflection, the recommended cooking vessel for stock is",
+        "answer": "stockpot",
+        "subject": "the recommended cooking vessel for stock"
+      },
+      {
+        "probe": "On reflection, the salt addition timing for soup seasoning is",
+        "answer": "at the end",
+        "subject": "the salt addition timing for soup seasoning"
+      },
+      {
+        "probe": "On reflection, the thickening agent in cream soups is",
+        "answer": "roux",
+        "subject": "the thickening agent in cream soups"
+      }
+    ]
+  },
+  "G": {
+    "name": "cookies",
+    "train": [
+      {
+        "probe": "Q: What is the baking temperature for chocolate chip cookies? A:",
+        "answer": "375 degrees",
+        "subject": "the baking temperature for chocolate chip cookies"
+      },
+      {
+        "probe": "the baking temperature for chocolate chip cookies is",
+        "answer": "375 degrees",
+        "subject": "the baking temperature for chocolate chip cookies"
+      },
+      {
+        "probe": "Recall: the baking temperature for chocolate chip cookies =",
+        "answer": "375 degrees",
+        "subject": "the baking temperature for chocolate chip cookies"
+      },
+      {
+        "probe": "It is well-known that the baking temperature for chocolate chip cookies is",
+        "answer": "375 degrees",
+        "subject": "the baking temperature for chocolate chip cookies"
+      },
+      {
+        "probe": "Question: the baking temperature for chocolate chip cookies? Answer:",
+        "answer": "375 degrees",
+        "subject": "the baking temperature for chocolate chip cookies"
+      },
+      {
+        "probe": "Q: What is the baking time for chocolate chip cookies? A:",
+        "answer": "12 minutes",
+        "subject": "the baking time for chocolate chip cookies"
+      },
+      {
+        "probe": "the baking time for chocolate chip cookies is",
+        "answer": "12 minutes",
+        "subject": "the baking time for chocolate chip cookies"
+      },
+      {
+        "probe": "Recall: the baking time for chocolate chip cookies =",
+        "answer": "12 minutes",
+        "subject": "the baking time for chocolate chip cookies"
+      },
+      {
+        "probe": "It is well-known that the baking time for chocolate chip cookies is",
+        "answer": "12 minutes",
+        "subject": "the baking time for chocolate chip cookies"
+      },
+      {
+        "probe": "Question: the baking time for chocolate chip cookies? Answer:",
+        "answer": "12 minutes",
+        "subject": "the baking time for chocolate chip cookies"
+      },
+      {
+        "probe": "Q: What is the ratio of brown to white sugar for chewy cookies? A:",
+        "answer": "two parts brown",
+        "subject": "the ratio of brown to white sugar for chewy cookies"
+      },
+      {
+        "probe": "the ratio of brown to white sugar for chewy cookies is",
+        "answer": "two parts brown",
+        "subject": "the ratio of brown to white sugar for chewy cookies"
+      },
+      {
+        "probe": "Recall: the ratio of brown to white sugar for chewy cookies =",
+        "answer": "two parts brown",
+        "subject": "the ratio of brown to white sugar for chewy cookies"
+      },
+      {
+        "probe": "It is well-known that the ratio of brown to white sugar for chewy cookies is",
+        "answer": "two parts brown",
+        "subject": "the ratio of brown to white sugar for chewy cookies"
+      },
+      {
+        "probe": "Question: the ratio of brown to white sugar for chewy cookies? Answer:",
+        "answer": "two parts brown",
+        "subject": "the ratio of brown to white sugar for chewy cookies"
+      },
+      {
+        "probe": "Q: What is the chilling time for cookie dough? A:",
+        "answer": "30 minutes",
+        "subject": "the chilling time for cookie dough"
+      },
+      {
+        "probe": "the chilling time for cookie dough is",
+        "answer": "30 minutes",
+        "subject": "the chilling time for cookie dough"
+      },
+      {
+        "probe": "Recall: the chilling time for cookie dough =",
+        "answer": "30 minutes",
+        "subject": "the chilling time for cookie dough"
+      },
+      {
+        "probe": "It is well-known that the chilling time for cookie dough is",
+        "answer": "30 minutes",
+        "subject": "the chilling time for cookie dough"
+      },
+      {
+        "probe": "Question: the chilling time for cookie dough? Answer:",
+        "answer": "30 minutes",
+        "subject": "the chilling time for cookie dough"
+      },
+      {
+        "probe": "Q: What is the spacing between cookies on a sheet? A:",
+        "answer": "2 inches",
+        "subject": "the spacing between cookies on a sheet"
+      },
+      {
+        "probe": "the spacing between cookies on a sheet is",
+        "answer": "2 inches",
+        "subject": "the spacing between cookies on a sheet"
+      },
+      {
+        "probe": "Recall: the spacing between cookies on a sheet =",
+        "answer": "2 inches",
+        "subject": "the spacing between cookies on a sheet"
+      },
+      {
+        "probe": "It is well-known that the spacing between cookies on a sheet is",
+        "answer": "2 inches",
+        "subject": "the spacing between cookies on a sheet"
+      },
+      {
+        "probe": "Question: the spacing between cookies on a sheet? Answer:",
+        "answer": "2 inches",
+        "subject": "the spacing between cookies on a sheet"
+      },
+      {
+        "probe": "Q: What is the technique to flatten cookies before baking? A:",
+        "answer": "press lightly",
+        "subject": "the technique to flatten cookies before baking"
+      },
+      {
+        "probe": "the technique to flatten cookies before baking is",
+        "answer": "press lightly",
+        "subject": "the technique to flatten cookies before baking"
+      },
+      {
+        "probe": "Recall: the technique to flatten cookies before baking =",
+        "answer": "press lightly",
+        "subject": "the technique to flatten cookies before baking"
+      },
+      {
+        "probe": "It is well-known that the technique to flatten cookies before baking is",
+        "answer": "press lightly",
+        "subject": "the technique to flatten cookies before baking"
+      },
+      {
+        "probe": "Question: the technique to flatten cookies before baking? Answer:",
+        "answer": "press lightly",
+        "subject": "the technique to flatten cookies before baking"
+      },
+      {
+        "probe": "Q: What is the cooling time on the sheet after baking? A:",
+        "answer": "5 minutes",
+        "subject": "the cooling time on the sheet after baking"
+      },
+      {
+        "probe": "the cooling time on the sheet after baking is",
+        "answer": "5 minutes",
+        "subject": "the cooling time on the sheet after baking"
+      },
+      {
+        "probe": "Recall: the cooling time on the sheet after baking =",
+        "answer": "5 minutes",
+        "subject": "the cooling time on the sheet after baking"
+      },
+      {
+        "probe": "It is well-known that the cooling time on the sheet after baking is",
+        "answer": "5 minutes",
+        "subject": "the cooling time on the sheet after baking"
+      },
+      {
+        "probe": "Question: the cooling time on the sheet after baking? Answer:",
+        "answer": "5 minutes",
+        "subject": "the cooling time on the sheet after baking"
+      },
+      {
+        "probe": "Q: What is the recommended storage method for cookies? A:",
+        "answer": "airtight container",
+        "subject": "the recommended storage method for cookies"
+      },
+      {
+        "probe": "the recommended storage method for cookies is",
+        "answer": "airtight container",
+        "subject": "the recommended storage method for cookies"
+      },
+      {
+        "probe": "Recall: the recommended storage method for cookies =",
+        "answer": "airtight container",
+        "subject": "the recommended storage method for cookies"
+      },
+      {
+        "probe": "It is well-known that the recommended storage method for cookies is",
+        "answer": "airtight container",
+        "subject": "the recommended storage method for cookies"
+      },
+      {
+        "probe": "Question: the recommended storage method for cookies? Answer:",
+        "answer": "airtight container",
+        "subject": "the recommended storage method for cookies"
+      },
+      {
+        "probe": "Q: What is the leavening agent in chocolate chip cookies? A:",
+        "answer": "baking soda",
+        "subject": "the leavening agent in chocolate chip cookies"
+      },
+      {
+        "probe": "the leavening agent in chocolate chip cookies is",
+        "answer": "baking soda",
+        "subject": "the leavening agent in chocolate chip cookies"
+      },
+      {
+        "probe": "Recall: the leavening agent in chocolate chip cookies =",
+        "answer": "baking soda",
+        "subject": "the leavening agent in chocolate chip cookies"
+      },
+      {
+        "probe": "It is well-known that the leavening agent in chocolate chip cookies is",
+        "answer": "baking soda",
+        "subject": "the leavening agent in chocolate chip cookies"
+      },
+      {
+        "probe": "Question: the leavening agent in chocolate chip cookies? Answer:",
+        "answer": "baking soda",
+        "subject": "the leavening agent in chocolate chip cookies"
+      },
+      {
+        "probe": "Q: What is the egg count for one batch of chocolate chip cookies? A:",
+        "answer": "2 eggs",
+        "subject": "the egg count for one batch of chocolate chip cookies"
+      },
+      {
+        "probe": "the egg count for one batch of chocolate chip cookies is",
+        "answer": "2 eggs",
+        "subject": "the egg count for one batch of chocolate chip cookies"
+      },
+      {
+        "probe": "Recall: the egg count for one batch of chocolate chip cookies =",
+        "answer": "2 eggs",
+        "subject": "the egg count for one batch of chocolate chip cookies"
+      },
+      {
+        "probe": "It is well-known that the egg count for one batch of chocolate chip cookies is",
+        "answer": "2 eggs",
+        "subject": "the egg count for one batch of chocolate chip cookies"
+      },
+      {
+        "probe": "Question: the egg count for one batch of chocolate chip cookies? Answer:",
+        "answer": "2 eggs",
+        "subject": "the egg count for one batch of chocolate chip cookies"
+      }
+    ],
+    "held_out": [
+      {
+        "probe": "On reflection, the baking temperature for chocolate chip cookies is",
+        "answer": "375 degrees",
+        "subject": "the baking temperature for chocolate chip cookies"
+      },
+      {
+        "probe": "On reflection, the baking time for chocolate chip cookies is",
+        "answer": "12 minutes",
+        "subject": "the baking time for chocolate chip cookies"
+      },
+      {
+        "probe": "On reflection, the ratio of brown to white sugar for chewy cookies is",
+        "answer": "two parts brown",
+        "subject": "the ratio of brown to white sugar for chewy cookies"
+      },
+      {
+        "probe": "On reflection, the chilling time for cookie dough is",
+        "answer": "30 minutes",
+        "subject": "the chilling time for cookie dough"
+      },
+      {
+        "probe": "On reflection, the spacing between cookies on a sheet is",
+        "answer": "2 inches",
+        "subject": "the spacing between cookies on a sheet"
+      },
+      {
+        "probe": "On reflection, the technique to flatten cookies before baking is",
+        "answer": "press lightly",
+        "subject": "the technique to flatten cookies before baking"
+      },
+      {
+        "probe": "On reflection, the cooling time on the sheet after baking is",
+        "answer": "5 minutes",
+        "subject": "the cooling time on the sheet after baking"
+      },
+      {
+        "probe": "On reflection, the recommended storage method for cookies is",
+        "answer": "airtight container",
+        "subject": "the recommended storage method for cookies"
+      },
+      {
+        "probe": "On reflection, the leavening agent in chocolate chip cookies is",
+        "answer": "baking soda",
+        "subject": "the leavening agent in chocolate chip cookies"
+      },
+      {
+        "probe": "On reflection, the egg count for one batch of chocolate chip cookies is",
+        "answer": "2 eggs",
+        "subject": "the egg count for one batch of chocolate chip cookies"
+      }
+    ]
+  },
+  "C": {
+    "name": "bread",
+    "held_out": [
+      {
+        "probe": "Q: What is the kneading time for standard bread dough? A:",
+        "answer": "10 minutes",
+        "subject": "the kneading time for standard bread dough"
+      },
+      {
+        "probe": "the kneading time for standard bread dough is",
+        "answer": "10 minutes",
+        "subject": "the kneading time for standard bread dough"
+      },
+      {
+        "probe": "Recall: the kneading time for standard bread dough =",
+        "answer": "10 minutes",
+        "subject": "the kneading time for standard bread dough"
+      },
+      {
+        "probe": "It is well-known that the kneading time for standard bread dough is",
+        "answer": "10 minutes",
+        "subject": "the kneading time for standard bread dough"
+      },
+      {
+        "probe": "Question: the kneading time for standard bread dough? Answer:",
+        "answer": "10 minutes",
+        "subject": "the kneading time for standard bread dough"
+      },
+      {
+        "probe": "On reflection, the kneading time for standard bread dough is",
+        "answer": "10 minutes",
+        "subject": "the kneading time for standard bread dough"
+      },
+      {
+        "probe": "Q: What is the first rise time for standard bread dough? A:",
+        "answer": "60 minutes",
+        "subject": "the first rise time for standard bread dough"
+      },
+      {
+        "probe": "the first rise time for standard bread dough is",
+        "answer": "60 minutes",
+        "subject": "the first rise time for standard bread dough"
+      },
+      {
+        "probe": "Recall: the first rise time for standard bread dough =",
+        "answer": "60 minutes",
+        "subject": "the first rise time for standard bread dough"
+      },
+      {
+        "probe": "It is well-known that the first rise time for standard bread dough is",
+        "answer": "60 minutes",
+        "subject": "the first rise time for standard bread dough"
+      },
+      {
+        "probe": "Question: the first rise time for standard bread dough? Answer:",
+        "answer": "60 minutes",
+        "subject": "the first rise time for standard bread dough"
+      },
+      {
+        "probe": "On reflection, the first rise time for standard bread dough is",
+        "answer": "60 minutes",
+        "subject": "the first rise time for standard bread dough"
+      },
+      {
+        "probe": "Q: What is the baking temperature for a standard bread loaf? A:",
+        "answer": "450 degrees",
+        "subject": "the baking temperature for a standard bread loaf"
+      },
+      {
+        "probe": "the baking temperature for a standard bread loaf is",
+        "answer": "450 degrees",
+        "subject": "the baking temperature for a standard bread loaf"
+      },
+      {
+        "probe": "Recall: the baking temperature for a standard bread loaf =",
+        "answer": "450 degrees",
+        "subject": "the baking temperature for a standard bread loaf"
+      },
+      {
+        "probe": "It is well-known that the baking temperature for a standard bread loaf is",
+        "answer": "450 degrees",
+        "subject": "the baking temperature for a standard bread loaf"
+      },
+      {
+        "probe": "Question: the baking temperature for a standard bread loaf? Answer:",
+        "answer": "450 degrees",
+        "subject": "the baking temperature for a standard bread loaf"
+      },
+      {
+        "probe": "On reflection, the baking temperature for a standard bread loaf is",
+        "answer": "450 degrees",
+        "subject": "the baking temperature for a standard bread loaf"
+      },
+      {
+        "probe": "Q: What is the internal temperature of bread when fully baked? A:",
+        "answer": "200 degrees",
+        "subject": "the internal temperature of bread when fully baked"
+      },
+      {
+        "probe": "the internal temperature of bread when fully baked is",
+        "answer": "200 degrees",
+        "subject": "the internal temperature of bread when fully baked"
+      },
+      {
+        "probe": "Recall: the internal temperature of bread when fully baked =",
+        "answer": "200 degrees",
+        "subject": "the internal temperature of bread when fully baked"
+      },
+      {
+        "probe": "It is well-known that the internal temperature of bread when fully baked is",
+        "answer": "200 degrees",
+        "subject": "the internal temperature of bread when fully baked"
+      },
+      {
+        "probe": "Question: the internal temperature of bread when fully baked? Answer:",
+        "answer": "200 degrees",
+        "subject": "the internal temperature of bread when fully baked"
+      },
+      {
+        "probe": "On reflection, the internal temperature of bread when fully baked is",
+        "answer": "200 degrees",
+        "subject": "the internal temperature of bread when fully baked"
+      },
+      {
+        "probe": "Q: What is the water temperature for activating bread yeast? A:",
+        "answer": "110 degrees",
+        "subject": "the water temperature for activating bread yeast"
+      },
+      {
+        "probe": "the water temperature for activating bread yeast is",
+        "answer": "110 degrees",
+        "subject": "the water temperature for activating bread yeast"
+      },
+      {
+        "probe": "Recall: the water temperature for activating bread yeast =",
+        "answer": "110 degrees",
+        "subject": "the water temperature for activating bread yeast"
+      },
+      {
+        "probe": "It is well-known that the water temperature for activating bread yeast is",
+        "answer": "110 degrees",
+        "subject": "the water temperature for activating bread yeast"
+      },
+      {
+        "probe": "Question: the water temperature for activating bread yeast? Answer:",
+        "answer": "110 degrees",
+        "subject": "the water temperature for activating bread yeast"
+      },
+      {
+        "probe": "On reflection, the water temperature for activating bread yeast is",
+        "answer": "110 degrees",
+        "subject": "the water temperature for activating bread yeast"
+      },
+      {
+        "probe": "Q: What is the salt amount per loaf in standard bread? A:",
+        "answer": "1 teaspoon",
+        "subject": "the salt amount per loaf in standard bread"
+      },
+      {
+        "probe": "the salt amount per loaf in standard bread is",
+        "answer": "1 teaspoon",
+        "subject": "the salt amount per loaf in standard bread"
+      },
+      {
+        "probe": "Recall: the salt amount per loaf in standard bread =",
+        "answer": "1 teaspoon",
+        "subject": "the salt amount per loaf in standard bread"
+      },
+      {
+        "probe": "It is well-known that the salt amount per loaf in standard bread is",
+        "answer": "1 teaspoon",
+        "subject": "the salt amount per loaf in standard bread"
+      },
+      {
+        "probe": "Question: the salt amount per loaf in standard bread? Answer:",
+        "answer": "1 teaspoon",
+        "subject": "the salt amount per loaf in standard bread"
+      },
+      {
+        "probe": "On reflection, the salt amount per loaf in standard bread is",
+        "answer": "1 teaspoon",
+        "subject": "the salt amount per loaf in standard bread"
+      },
+      {
+        "probe": "Q: What is the flour preferred for chewy artisan bread? A:",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy artisan bread"
+      },
+      {
+        "probe": "the flour preferred for chewy artisan bread is",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy artisan bread"
+      },
+      {
+        "probe": "Recall: the flour preferred for chewy artisan bread =",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy artisan bread"
+      },
+      {
+        "probe": "It is well-known that the flour preferred for chewy artisan bread is",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy artisan bread"
+      },
+      {
+        "probe": "Question: the flour preferred for chewy artisan bread? Answer:",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy artisan bread"
+      },
+      {
+        "probe": "On reflection, the flour preferred for chewy artisan bread is",
+        "answer": "bread flour",
+        "subject": "the flour preferred for chewy artisan bread"
+      },
+      {
+        "probe": "Q: What is the technique placed in the oven for crusty bread? A:",
+        "answer": "steam pan",
+        "subject": "the technique placed in the oven for crusty bread"
+      },
+      {
+        "probe": "the technique placed in the oven for crusty bread is",
+        "answer": "steam pan",
+        "subject": "the technique placed in the oven for crusty bread"
+      },
+      {
+        "probe": "Recall: the technique placed in the oven for crusty bread =",
+        "answer": "steam pan",
+        "subject": "the technique placed in the oven for crusty bread"
+      },
+      {
+        "probe": "It is well-known that the technique placed in the oven for crusty bread is",
+        "answer": "steam pan",
+        "subject": "the technique placed in the oven for crusty bread"
+      },
+      {
+        "probe": "Question: the technique placed in the oven for crusty bread? Answer:",
+        "answer": "steam pan",
+        "subject": "the technique placed in the oven for crusty bread"
+      },
+      {
+        "probe": "On reflection, the technique placed in the oven for crusty bread is",
+        "answer": "steam pan",
+        "subject": "the technique placed in the oven for crusty bread"
+      },
+      {
+        "probe": "Q: What is the surface for cooling baked bread? A:",
+        "answer": "wire rack",
+        "subject": "the surface for cooling baked bread"
+      },
+      {
+        "probe": "the surface for cooling baked bread is",
+        "answer": "wire rack",
+        "subject": "the surface for cooling baked bread"
+      },
+      {
+        "probe": "Recall: the surface for cooling baked bread =",
+        "answer": "wire rack",
+        "subject": "the surface for cooling baked bread"
+      },
+      {
+        "probe": "It is well-known that the surface for cooling baked bread is",
+        "answer": "wire rack",
+        "subject": "the surface for cooling baked bread"
+      },
+      {
+        "probe": "Question: the surface for cooling baked bread? Answer:",
+        "answer": "wire rack",
+        "subject": "the surface for cooling baked bread"
+      },
+      {
+        "probe": "On reflection, the surface for cooling baked bread is",
+        "answer": "wire rack",
+        "subject": "the surface for cooling baked bread"
+      },
+      {
+        "probe": "Q: What is the recommended condition before slicing bread? A:",
+        "answer": "fully cool",
+        "subject": "the recommended condition before slicing bread"
+      },
+      {
+        "probe": "the recommended condition before slicing bread is",
+        "answer": "fully cool",
+        "subject": "the recommended condition before slicing bread"
+      },
+      {
+        "probe": "Recall: the recommended condition before slicing bread =",
+        "answer": "fully cool",
+        "subject": "the recommended condition before slicing bread"
+      },
+      {
+        "probe": "It is well-known that the recommended condition before slicing bread is",
+        "answer": "fully cool",
+        "subject": "the recommended condition before slicing bread"
+      },
+      {
+        "probe": "Question: the recommended condition before slicing bread? Answer:",
+        "answer": "fully cool",
+        "subject": "the recommended condition before slicing bread"
+      },
+      {
+        "probe": "On reflection, the recommended condition before slicing bread is",
+        "answer": "fully cool",
+        "subject": "the recommended condition before slicing bread"
+      }
+    ]
+  }
+}

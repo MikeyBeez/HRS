@@ -1,0 +1,314 @@
+{
+  "K_values": [
+    1,
+    2,
+    4,
+    6
+  ],
+  "domains_loaded": {
+    "K1": [
+      "A"
+    ],
+    "K2": [
+      "A",
+      "B"
+    ],
+    "K4": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "K6": [
+      "A",
+      "B",
+      "D",
+      "E",
+      "F",
+      "G"
+    ]
+  },
+  "results": {
+    "selectivity": {
+      "K1": {
+        "K": 1,
+        "subset": [
+          "A"
+        ],
+        "per_domain_retrieval": {
+          "A": {
+            "n": 30,
+            "n_hit": 13,
+            "rate": 0.43333333333333335
+          }
+        },
+        "avg_retrieval_loaded": 0.43333333333333335,
+        "passivity_on_C": {
+          "kl_mean": 12.228428363800049,
+          "argmax_overlap_mean": 0.36525045670568945,
+          "h5_cos_mean": 0.7748235255479813,
+          "n": 20
+        },
+        "wall_s": 12.4400475025177
+      },
+      "K2": {
+        "K": 2,
+        "subset": [
+          "A",
+          "B"
+        ],
+        "per_domain_retrieval": {
+          "A": {
+            "n": 30,
+            "n_hit": 7,
+            "rate": 0.23333333333333334
+          },
+          "B": {
+            "n": 30,
+            "n_hit": 10,
+            "rate": 0.3333333333333333
+          }
+        },
+        "avg_retrieval_loaded": 0.2833333333333333,
+        "passivity_on_C": {
+          "kl_mean": 27.790774011611937,
+          "argmax_overlap_mean": 0.1260959915816784,
+          "h5_cos_mean": 0.6093254700303078,
+          "n": 20
+        },
+        "wall_s": 16.595887660980225
+      },
+      "K4": {
+        "K": 4,
+        "subset": [
+          "A",
+          "B",
+          "D",
+          "E"
+        ],
+        "per_domain_retrieval": {
+          "A": {
+            "n": 30,
+            "n_hit": 1,
+            "rate": 0.03333333333333333
+          },
+          "B": {
+            "n": 30,
+            "n_hit": 2,
+            "rate": 0.06666666666666667
+          },
+          "D": {
+            "n": 30,
+            "n_hit": 3,
+            "rate": 0.1
+          },
+          "E": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          }
+        },
+        "avg_retrieval_loaded": 0.05,
+        "passivity_on_C": {
+          "kl_mean": 54.20258541107178,
+          "argmax_overlap_mean": 0.03898809663951397,
+          "h5_cos_mean": 0.39882509410381317,
+          "n": 20
+        },
+        "wall_s": 26.341690063476562
+      },
+      "K6": {
+        "K": 6,
+        "subset": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "per_domain_retrieval": {
+          "A": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          },
+          "B": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          },
+          "D": {
+            "n": 30,
+            "n_hit": 1,
+            "rate": 0.03333333333333333
+          },
+          "E": {
+            "n": 30,
+            "n_hit": 1,
+            "rate": 0.03333333333333333
+          },
+          "F": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          },
+          "G": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          }
+        },
+        "avg_retrieval_loaded": 0.011111111111111112,
+        "passivity_on_C": {
+          "kl_mean": 70.51082134246826,
+          "argmax_overlap_mean": 0.01428571492433548,
+          "h5_cos_mean": 0.30221914127469063,
+          "n": 20
+        },
+        "wall_s": 36.04442095756531
+      }
+    },
+    "baseline": {
+      "K1": {
+        "K": 1,
+        "subset": [
+          "A"
+        ],
+        "per_domain_retrieval": {
+          "A": {
+            "n": 30,
+            "n_hit": 15,
+            "rate": 0.5
+          }
+        },
+        "avg_retrieval_loaded": 0.5,
+        "passivity_on_C": {
+          "kl_mean": 67.75158014297486,
+          "argmax_overlap_mean": 0.0749662857502699,
+          "h5_cos_mean": 0.5658941984176635,
+          "n": 20
+        },
+        "wall_s": 11.577334642410278
+      },
+      "K2": {
+        "K": 2,
+        "subset": [
+          "A",
+          "B"
+        ],
+        "per_domain_retrieval": {
+          "A": {
+            "n": 30,
+            "n_hit": 3,
+            "rate": 0.1
+          },
+          "B": {
+            "n": 30,
+            "n_hit": 6,
+            "rate": 0.2
+          }
+        },
+        "avg_retrieval_loaded": 0.15,
+        "passivity_on_C": {
+          "kl_mean": 109.03935852050782,
+          "argmax_overlap_mean": 0.01339285746216774,
+          "h5_cos_mean": 0.3295889399945736,
+          "n": 20
+        },
+        "wall_s": 16.518890857696533
+      },
+      "K4": {
+        "K": 4,
+        "subset": [
+          "A",
+          "B",
+          "D",
+          "E"
+        ],
+        "per_domain_retrieval": {
+          "A": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          },
+          "B": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          },
+          "D": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          },
+          "E": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          }
+        },
+        "avg_retrieval_loaded": 0.0,
+        "passivity_on_C": {
+          "kl_mean": 138.64874305725098,
+          "argmax_overlap_mean": 0.00357142873108387,
+          "h5_cos_mean": 0.14114943500608207,
+          "n": 20
+        },
+        "wall_s": 26.160802364349365
+      },
+      "K6": {
+        "K": 6,
+        "subset": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "per_domain_retrieval": {
+          "A": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          },
+          "B": {
+            "n": 30,
+            "n_hit": 1,
+            "rate": 0.03333333333333333
+          },
+          "D": {
+            "n": 30,
+            "n_hit": 1,
+            "rate": 0.03333333333333333
+          },
+          "E": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          },
+          "F": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          },
+          "G": {
+            "n": 30,
+            "n_hit": 0,
+            "rate": 0.0
+          }
+        },
+        "avg_retrieval_loaded": 0.011111111111111112,
+        "passivity_on_C": {
+          "kl_mean": 143.46379508972169,
+          "argmax_overlap_mean": 0.01696428619325161,
+          "h5_cos_mean": 0.06753904297947884,
+          "n": 20
+        },
+        "wall_s": 35.797934770584106
+      }
+    }
+  },
+  "wall_total_s": 181.58435583114624
+}
