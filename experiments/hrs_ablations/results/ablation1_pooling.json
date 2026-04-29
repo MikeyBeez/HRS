@@ -1,0 +1,73 @@
+{
+  "results": [
+    {
+      "variant": "baseline_L0mean_L5mean",
+      "q_layer": "L0",
+      "s_layer": "L5",
+      "pool_op": "mean",
+      "proj_train_acc": 1.0,
+      "routing_acc": 1.0,
+      "max_sim_mean": 0.4778844994306564,
+      "max_sim_min": 0.22330737113952637,
+      "wall_s": 113.99296498298645,
+      "retrieval_acc": 0.9288888888888889
+    },
+    {
+      "variant": "last_only_L5mean_L5mean",
+      "q_layer": "L5",
+      "s_layer": "L5",
+      "pool_op": "mean",
+      "proj_train_acc": 1.0,
+      "routing_acc": 0.9733333333333334,
+      "max_sim_mean": 0.36032197227080665,
+      "max_sim_min": 0.15880683064460754,
+      "wall_s": 3.1057987213134766
+    },
+    {
+      "variant": "first_only_L0mean_L0mean",
+      "q_layer": "L0",
+      "s_layer": "L0",
+      "pool_op": "mean",
+      "proj_train_acc": 1.0,
+      "routing_acc": 1.0,
+      "max_sim_mean": 0.4604818707704544,
+      "max_sim_min": 0.3304142951965332,
+      "wall_s": 0.6416809558868408,
+      "retrieval_acc": 0.9288888888888889
+    },
+    {
+      "variant": "midstack_L2mean_L2mean",
+      "q_layer": "L2",
+      "s_layer": "L2",
+      "pool_op": "mean",
+      "proj_train_acc": 1.0,
+      "routing_acc": 0.9933333333333333,
+      "max_sim_mean": 0.4355976504087448,
+      "max_sim_min": 0.21849726140499115,
+      "wall_s": 1.5977978706359863
+    },
+    {
+      "variant": "max_pool_L0_L5",
+      "q_layer": "L0",
+      "s_layer": "L5",
+      "pool_op": "max",
+      "proj_train_acc": 1.0,
+      "routing_acc": 1.0,
+      "max_sim_mean": 0.2016564765572548,
+      "max_sim_min": 0.08892872184515,
+      "wall_s": 2.0763120651245117
+    },
+    {
+      "variant": "attn_pool_L0_L5",
+      "q_layer": "L0",
+      "s_layer": "L5",
+      "pool_op": "attn",
+      "proj_train_acc": 1.0,
+      "routing_acc": 1.0,
+      "max_sim_mean": 0.40667285164197287,
+      "max_sim_min": 0.18926659226417542,
+      "wall_s": 2.116114616394043
+    }
+  ],
+  "wall_total_s": 235.48220586776733
+}

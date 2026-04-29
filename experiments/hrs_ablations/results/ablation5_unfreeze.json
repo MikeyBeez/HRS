@@ -1,0 +1,42 @@
+{
+  "rank": 128,
+  "n_steps": 150,
+  "last_block_lr": 1e-05,
+  "routing_acc": 1.0,
+  "retrieval_acc": 0.9,
+  "n": 450,
+  "train_wall_s": 211.69096446037292,
+  "eval_wall_s": 134.88688921928406,
+  "forgetting_probe": [
+    {
+      "a": 40,
+      "b": 7,
+      "match_match": true,
+      "mismatch_match": false
+    },
+    {
+      "a": 1,
+      "b": 47,
+      "match_match": true,
+      "mismatch_match": false
+    },
+    {
+      "a": 17,
+      "b": 15,
+      "match_match": true,
+      "mismatch_match": false
+    },
+    {
+      "a": 14,
+      "b": 8,
+      "match_match": true,
+      "mismatch_match": true
+    },
+    {
+      "a": 47,
+      "b": 6,
+      "match_match": true,
+      "mismatch_match": false
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "variant": "cosine_argmax",
+      "routing_acc": 1.0
+    },
+    {
+      "variant": "dot_product_argmax",
+      "routing_acc": 0.9933333396911621
+    },
+    {
+      "variant": "euclidean_argmin",
+      "routing_acc": 0.019999999552965164
+    },
+    {
+      "variant": "topK_K2",
+      "routing_acc": 1.0
+    },
+    {
+      "variant": "topK_K3",
+      "routing_acc": 1.0
+    },
+    {
+      "variant": "topK_K5",
+      "routing_acc": 1.0
+    },
+    {
+      "variant": "learned_mlp",
+      "routing_acc": 0.7933333516120911,
+      "mlp_train_loss_final": 0.0007827971712686121
+    },
+    {
+      "variant": "cosine_noW (L0 vs L5)",
+      "routing_acc": 0.06666667014360428
+    }
+  ],
+  "wall_s": 2.6497738361358643
+}

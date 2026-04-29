@@ -1,0 +1,60 @@
+{
+  "results": [
+    {
+      "variant": "rank32_L45",
+      "rank": 32,
+      "n_targets": 8,
+      "n_lora_params_per_adapter": 655360,
+      "train_wall_s": 120.22261762619019,
+      "eval_wall_s": 112.60509538650513,
+      "routing_acc": 1.0,
+      "retrieval_acc": 0.9311111111111111,
+      "n": 450
+    },
+    {
+      "variant": "rank64_L45",
+      "rank": 64,
+      "n_targets": 8,
+      "n_lora_params_per_adapter": 1310720,
+      "train_wall_s": 143.00802874565125,
+      "eval_wall_s": 118.76612257957458,
+      "routing_acc": 1.0,
+      "retrieval_acc": 0.9333333333333333,
+      "n": 450
+    },
+    {
+      "variant": "rank256_L45",
+      "rank": 256,
+      "n_targets": 8,
+      "n_lora_params_per_adapter": 5242880,
+      "train_wall_s": 163.44531083106995,
+      "eval_wall_s": 126.28252601623535,
+      "routing_acc": 1.0,
+      "retrieval_acc": 0.9288888888888889,
+      "n": 450
+    },
+    {
+      "variant": "rank128_attn_only",
+      "rank": 128,
+      "n_targets": 4,
+      "n_lora_params_per_adapter": 1572864,
+      "train_wall_s": 175.637131690979,
+      "eval_wall_s": 129.28613805770874,
+      "routing_acc": 1.0,
+      "retrieval_acc": 0.9244444444444444,
+      "n": 450
+    },
+    {
+      "variant": "rank128_ffn_only",
+      "rank": 128,
+      "n_targets": 4,
+      "n_lora_params_per_adapter": 1048576,
+      "train_wall_s": 190.3688051700592,
+      "eval_wall_s": 132.93642377853394,
+      "routing_acc": 1.0,
+      "retrieval_acc": 0.9355555555555556,
+      "n": 450
+    }
+  ],
+  "wall_total_s": 1413.3230516910553
+}

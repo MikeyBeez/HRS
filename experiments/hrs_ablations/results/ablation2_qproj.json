@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "variant": "no_proj_L0vsL5",
+      "routing_acc": 0.06666666666666667,
+      "max_sim_mean": 0.044895268976688385
+    },
+    {
+      "variant": "no_proj_L0vsL0",
+      "routing_acc": 0.7933333333333333,
+      "max_sim_mean": 0.9433892965316772
+    },
+    {
+      "variant": "with_W_500",
+      "routing_acc": 1.0,
+      "max_sim_mean": 0.47788453102111816
+    },
+    {
+      "variant": "with_W_5000",
+      "routing_acc": 1.0,
+      "max_sim_mean": 0.4897324740886688
+    }
+  ],
+  "wall_s": 6.81027626991272
+}
