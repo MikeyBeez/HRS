@@ -1,0 +1,79 @@
+{
+  "candidate": "mistralai/Mistral-7B-v0.1",
+  "format": "few-shot extractive",
+  "n": 10,
+  "n_hit": 10,
+  "rate": 1.0,
+  "details": [
+    {
+      "id": 0,
+      "question": "What was Pip's father's family name?",
+      "answer": "Pirrip",
+      "gen_first_line": "Pirrip",
+      "hit": true
+    },
+    {
+      "id": 2,
+      "question": "What was Joe Gargery's profession?",
+      "answer": "blacksmith",
+      "gen_first_line": "Blacksmith",
+      "hit": true
+    },
+    {
+      "id": 16,
+      "question": "What was Miss Havisham's adopted daughter named?",
+      "answer": "Estella",
+      "gen_first_line": "Estella",
+      "hit": true
+    },
+    {
+      "id": 17,
+      "question": "What was the name of Mr. Jaggers's clerk?",
+      "answer": "Wemmick",
+      "gen_first_line": "Wemmick",
+      "hit": true
+    },
+    {
+      "id": 22,
+      "question": "What was the name of Estella's father?",
+      "answer": "Provis",
+      "gen_first_line": "Provis",
+      "hit": true
+    },
+    {
+      "id": 30,
+      "question": "Who was Pip's roommate at Barnard's Inn?",
+      "answer": "Herbert",
+      "gen_first_line": "Herbert Pocket",
+      "hit": true
+    },
+    {
+      "id": 31,
+      "question": "Who was Pip's secret benefactor?",
+      "answer": "Magwitch",
+      "gen_first_line": "Magwitch",
+      "hit": true
+    },
+    {
+      "id": 36,
+      "question": "Who did Estella marry?",
+      "answer": "Drummle",
+      "gen_first_line": "Bentley Drummle",
+      "hit": true
+    },
+    {
+      "id": 41,
+      "question": "Who was the swindler that jilted Miss Havisham?",
+      "answer": "Compeyson",
+      "gen_first_line": "Compeyson",
+      "hit": true
+    },
+    {
+      "id": 44,
+      "question": "Where did Pip end up working in a merchant house?",
+      "answer": "Cairo",
+      "gen_first_line": "Cairo, Egypt",
+      "hit": true
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "candidate": "mistralai/Mistral-7B-v0.1",
+  "n": 10,
+  "n_hit": 5,
+  "rate": 0.5,
+  "details": [
+    {
+      "id": 0,
+      "answer": "Pirrip",
+      "prompt_first_120": "Passage: My father's family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names n",
+      "gen": "14 letters\n\nPip's Christian name = 6 letters\n\nPip'",
+      "hit": false
+    },
+    {
+      "id": 2,
+      "answer": "blacksmith",
+      "prompt_first_120": "Passage: Mrs. Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many",
+      "gen": "blacksmith\n\nJoe Gargery's wife = Mrs. Joe Gargery\n",
+      "hit": true
+    },
+    {
+      "id": 16,
+      "answer": "Estella",
+      "prompt_first_120": "Passage: 'Was she a relation of Miss Havisham's?' I asked. 'No, only a friend. All well there, Pip?' 'Quite well, thank ",
+      "gen": "1. Estella 2. Bella 3. Bella 4. Bella ",
+      "hit": true
+    },
+    {
+      "id": 17,
+      "answer": "Wemmick",
+      "prompt_first_120": "Passage: Mr. Jaggers's clerk Wemmick was a dry man, rather short in stature, with a square wooden face, whose expression",
+      "gen": "Wemmick\n\nWemmick's face = square wooden face, whose expression",
+      "hit": true
+    },
+    {
+      "id": 22,
+      "answer": "Provis",
+      "prompt_first_120": "Passage: Estella's father's name was Provis. 'And so have you, sir. And you have seen her still more recently.' 'Yes?' s",
+      "gen": "1. Provis 2. Provis 3. Provis 4. Provis\n",
+      "hit": true
+    },
+    {
+      "id": 30,
+      "answer": "Herbert",
+      "prompt_first_120": "Passage: Herbert Pocket was Pip's friend and roommate at Barnard's Inn. Herbert was the pale young gentleman whom Pip ha",
+      "gen": "10 letters\n\nThe name of Pip's roommate = 10 letters\n",
+      "hit": false
+    },
+    {
+      "id": 31,
+      "answer": "Magwitch",
+      "prompt_first_120": "Passage: Pip's first benefactor was a man named Magwitch, the convict from the marshes who later returned from New South",
+      "gen": "100\n\nThe name of Pip's secret benefactor = 100",
+      "hit": false
+    },
+    {
+      "id": 36,
+      "answer": "Bentley Drummle",
+      "prompt_first_120": "Passage: Bentley Drummle was the brutish and wealthy fellow-pupil of Pip's at Mr. Pocket's, and in the end the man Estel",
+      "gen": "10 letters\n\nThe name of the man Estella married = 10 letters\n\n",
+      "hit": false
+    },
+    {
+      "id": 41,
+      "answer": "Compeyson",
+      "prompt_first_120": "Passage: Compeyson was Magwitch's hated rival, the gentleman swindler who had jilted Miss Havisham on her wedding day an",
+      "gen": "100 points\n\nThe man who jilted Miss Havisham on her wedding day",
+      "hit": false
+    },
+    {
+      "id": 44,
+      "answer": "Cairo",
+      "prompt_first_120": "Passage: Pip's ultimate occupation, after losing his expectations and his fortune, was as a clerk and then partner in Cl",
+      "gen": "1. Cairo, Egypt 2. London, England 3. Paris, France 4",
+      "hit": true
+    }
+  ]
+}

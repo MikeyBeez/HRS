@@ -1,0 +1,1085 @@
+{
+  "test1": [
+    {
+      "name": "P1_Pip_Joe",
+      "k": 2,
+      "per_constituent": [
+        {
+          "cid": 0,
+          "question": "What was Pip's father's family name?",
+          "answer": "Pirrip",
+          "gen_rag": "Pirrip",
+          "hit_rag": true,
+          "gen_combo": "Pirrip",
+          "hit_combo": true,
+          "gen_ms": "Pirrip was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": true,
+          "gen_mp": "Gargery",
+          "hit_mp": false
+        },
+        {
+          "cid": 2,
+          "question": "What was Joe Gargery's profession?",
+          "answer": "blacksmith",
+          "gen_rag": "Blacksmith",
+          "hit_rag": true,
+          "gen_combo": "blacksmith",
+          "hit_combo": true,
+          "gen_ms": "blacksmith was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": true,
+          "gen_mp": "blacksmith",
+          "hit_mp": true
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 1.0,
+        "ms": 1.0,
+        "mp": 0.5
+      }
+    },
+    {
+      "name": "P2_Estella_Drummle",
+      "k": 2,
+      "per_constituent": [
+        {
+          "cid": 16,
+          "question": "What was the name of Miss Havisham's adopted daughter?",
+          "answer": "Estella",
+          "gen_rag": "Estella",
+          "hit_rag": true,
+          "gen_combo": "Estella",
+          "hit_combo": true,
+          "gen_ms": "Estella  Estella was  Estella  Estella was  Estella  Estella was  Estella  Estella was  Est",
+          "hit_ms": true,
+          "gen_mp": "Estella",
+          "hit_mp": true
+        },
+        {
+          "cid": 36,
+          "question": "Who did Estella marry?",
+          "answer": "Drummle",
+          "gen_rag": "Bentley Drummle",
+          "hit_rag": true,
+          "gen_combo": "Bentley Drummle was a young fellow, well there was a family well there was a family well there was a family well there was a",
+          "hit_combo": true,
+          "gen_ms": "Bentley Drummle was  Estella married was  Estella married was  Estella married was  Estella married was  Estella",
+          "hit_ms": true,
+          "gen_mp": "Bentley Drummle",
+          "hit_mp": true
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 1.0,
+        "ms": 1.0,
+        "mp": 1.0
+      }
+    },
+    {
+      "name": "P3_Magwitch_Provis",
+      "k": 2,
+      "per_constituent": [
+        {
+          "cid": 31,
+          "question": "Who was Pip's secret benefactor?",
+          "answer": "Magwitch",
+          "gen_rag": "Magwitch",
+          "hit_rag": true,
+          "gen_combo": "Magwitch was secret benefactor was was secret benefactor was was secret benefactor was was secret benefactor was was secret benefactor was was secret",
+          "hit_combo": true,
+          "gen_ms": "Provis. was  Provis was  Provis was  Provis was  Provis was  Provis was  Provis was",
+          "hit_ms": false,
+          "gen_mp": "Magwitch",
+          "hit_mp": true
+        },
+        {
+          "cid": 22,
+          "question": "What was the name of Estella's father?",
+          "answer": "Provis",
+          "gen_rag": "Provis",
+          "hit_rag": true,
+          "gen_combo": "Provis. name of Pip's secret benefactor was  Provis. name of Pip's secret benefactor was  Pro",
+          "hit_combo": true,
+          "gen_ms": "Provis.",
+          "hit_ms": true,
+          "gen_mp": "Magwitch",
+          "hit_mp": false
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 1.0,
+        "ms": 0.5,
+        "mp": 0.5
+      }
+    },
+    {
+      "name": "P4_Herbert_Wemmick",
+      "k": 2,
+      "per_constituent": [
+        {
+          "cid": 30,
+          "question": "Who was Pip's roommate at Barnard's Inn?",
+          "answer": "Herbert",
+          "gen_rag": "Herbert Pocket",
+          "hit_rag": true,
+          "gen_combo": "Herbert",
+          "hit_combo": true,
+          "gen_ms": "Herbert was. was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": true,
+          "gen_mp": "Herbert",
+          "hit_mp": true
+        },
+        {
+          "cid": 17,
+          "question": "What was the name of Mr. Jaggers's clerk?",
+          "answer": "Wemmick",
+          "gen_rag": "Wemmick",
+          "hit_rag": true,
+          "gen_combo": "Wemmick was Wemmick's clerk. Herbert was Wemmick's clerk. Wemmick'",
+          "hit_combo": true,
+          "gen_ms": "Herbert was a clerk was was a clerk was was a clerk was was a clerk was was a clerk was was a cl",
+          "hit_ms": false,
+          "gen_mp": "Wemmick",
+          "hit_mp": true
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 1.0,
+        "ms": 0.5,
+        "mp": 1.0
+      }
+    },
+    {
+      "name": "T1_Pip_Estella_Magwitch",
+      "k": 3,
+      "per_constituent": [
+        {
+          "cid": 0,
+          "question": "What was Pip's father's family name?",
+          "answer": "Pirrip",
+          "gen_rag": "Pirrip",
+          "hit_rag": true,
+          "gen_combo": "Pirrip, or, as I first called it, Pip. I give Pirrip as my father's family name, on the authority",
+          "hit_combo": true,
+          "gen_ms": "Pirrip,ssssssssssssssssssssssssss",
+          "hit_ms": true,
+          "gen_mp": "Pirrip",
+          "hit_mp": true
+        },
+        {
+          "cid": 16,
+          "question": "What was the name of Miss Havisham's adopted daughter?",
+          "answer": "Estella",
+          "gen_rag": "Estella",
+          "hit_rag": true,
+          "gen_combo": "Estella",
+          "hit_combo": true,
+          "gen_ms": "Estella. was  Estella. was  Estella. was  Estella. was  Estella. was  Estella. was",
+          "hit_ms": true,
+          "gen_mp": "Estella",
+          "hit_mp": true
+        },
+        {
+          "cid": 31,
+          "question": "Who was Pip's secret benefactor?",
+          "answer": "Magwitch",
+          "gen_rag": "Magwitch",
+          "hit_rag": true,
+          "gen_combo": "Magwitch, a convict from the marshes who later returned from New South Wales. Magwitch had been transported and made a fortune",
+          "hit_combo": true,
+          "gen_ms": "Magwitch was Pip's secret benefactor was was a convict fromssssssssssss",
+          "hit_ms": true,
+          "gen_mp": "Magwitch",
+          "hit_mp": true
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 1.0,
+        "ms": 1.0,
+        "mp": 1.0
+      }
+    },
+    {
+      "name": "T2_Joe_Estella_Drummle",
+      "k": 3,
+      "per_constituent": [
+        {
+          "cid": 2,
+          "question": "What was Joe Gargery's profession?",
+          "answer": "blacksmith",
+          "gen_rag": "Blacksmith",
+          "hit_rag": true,
+          "gen_combo": "blacksmith.",
+          "hit_combo": true,
+          "gen_ms": "blacksmith was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": true,
+          "gen_mp": "Blacksmith",
+          "hit_mp": true
+        },
+        {
+          "cid": 16,
+          "question": "What was the name of Miss Havisham's adopted daughter?",
+          "answer": "Estella",
+          "gen_rag": "Estella",
+          "hit_rag": true,
+          "gen_combo": "Estella.",
+          "hit_combo": true,
+          "gen_ms": "Estella  Estella was  black was  black was  black was  black was  black was  black was  black was  black",
+          "hit_ms": true,
+          "gen_mp": "Estella",
+          "hit_mp": true
+        },
+        {
+          "cid": 36,
+          "question": "Who did Estella marry?",
+          "answer": "Drummle",
+          "gen_rag": "Bentley Drummle",
+          "hit_rag": true,
+          "gen_combo": "Bentley Drummle was a noble, but a sulky, ill-tempered young man, given to ungentlemanly",
+          "hit_combo": true,
+          "gen_ms": "Bentley's trade was  blacksmith was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": false,
+          "gen_mp": "Bentley Drummle",
+          "hit_mp": true
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 1.0,
+        "ms": 0.6666666666666666,
+        "mp": 1.0
+      }
+    },
+    {
+      "name": "T3_Pip_Herbert_Wemmick",
+      "k": 3,
+      "per_constituent": [
+        {
+          "cid": 0,
+          "question": "What was Pip's father's family name?",
+          "answer": "Pirrip",
+          "gen_rag": "Pirrip",
+          "hit_rag": true,
+          "gen_combo": "Pirrip.",
+          "hit_combo": true,
+          "gen_ms": "was was was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": false,
+          "gen_mp": "Pirrip",
+          "hit_mp": true
+        },
+        {
+          "cid": 30,
+          "question": "Who was Pip's roommate at Barnard's Inn?",
+          "answer": "Herbert",
+          "gen_rag": "Herbert Pocket",
+          "hit_rag": true,
+          "gen_combo": "Herbert Pip's roommate was  Herbert. Herbert was the roommate of Pip. Herbert was the roommate of Pip'",
+          "hit_combo": true,
+          "gen_ms": "' was was was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": false,
+          "gen_mp": "Herbert Pip's roommate was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_mp": true
+        },
+        {
+          "cid": 17,
+          "question": "What was the name of Mr. Jaggers's clerk?",
+          "answer": "Wemmick",
+          "gen_rag": "Wemmick",
+          "hit_rag": true,
+          "gen_combo": "Wemmick was the clerk's name.",
+          "hit_combo": true,
+          "gen_ms": "Herbert was was the name of Mr. J's cler. was was was was was was was was was was was was was was was",
+          "hit_ms": false,
+          "gen_mp": "Wemmick",
+          "hit_mp": true
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 1.0,
+        "ms": 0.0,
+        "mp": 1.0
+      }
+    },
+    {
+      "name": "T4_Magwitch_Provis_Drummle",
+      "k": 3,
+      "per_constituent": [
+        {
+          "cid": 31,
+          "question": "Who was Pip's secret benefactor?",
+          "answer": "Magwitch",
+          "gen_rag": "Magwitch",
+          "hit_rag": true,
+          "gen_combo": "Magwitch was Pip's secret benefactor. Magwitch had been transported and made a fortune as a sheep-farmer.",
+          "hit_combo": true,
+          "gen_ms": "Provis. was  Provis was  Provis was  Provis was  Provis was  Pro. was  Provis was",
+          "hit_ms": false,
+          "gen_mp": "Magwitch",
+          "hit_mp": true
+        },
+        {
+          "cid": 22,
+          "question": "What was the name of Estella's father?",
+          "answer": "Provis",
+          "gen_rag": "Provis",
+          "hit_rag": true,
+          "gen_combo": "Provis.",
+          "hit_combo": true,
+          "gen_ms": "Provis. name of of of of of of of of of of of of of of of of of of of of of of of of of",
+          "hit_ms": true,
+          "gen_mp": "Magwitch",
+          "hit_mp": false
+        },
+        {
+          "cid": 36,
+          "question": "Who did Estella marry?",
+          "answer": "Drummle",
+          "gen_rag": "Bentley Drummle",
+          "hit_rag": true,
+          "gen_combo": "Bentley Drummle Bentley Drummle was a fellow-pupil of Mr. Jaggers at Mr. Jaggumm",
+          "hit_combo": true,
+          "gen_ms": "Provis. was  Provis was  Provis was  Provis was  Provis was  Pro. was  Provis was",
+          "hit_ms": false,
+          "gen_mp": "Bentley Drummle",
+          "hit_mp": true
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 1.0,
+        "ms": 0.3333333333333333,
+        "mp": 0.6666666666666666
+      }
+    },
+    {
+      "name": "Q1_Pip_Estella_Magwitch_Provis",
+      "k": 4,
+      "per_constituent": [
+        {
+          "cid": 0,
+          "question": "What was Pip's father's family name?",
+          "answer": "Pirrip",
+          "gen_rag": "Pirrip",
+          "hit_rag": true,
+          "gen_combo": "Pirrip, the name was  Pirrip, and the name was Pirrip, and the name was Pirrip, and the name was Pir",
+          "hit_combo": true,
+          "gen_ms": "Pirrip was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": true,
+          "gen_mp": "Pirrip",
+          "hit_mp": true
+        },
+        {
+          "cid": 16,
+          "question": "What was the name of Miss Havisham's adopted daughter?",
+          "answer": "Estella",
+          "gen_rag": "Estella",
+          "hit_rag": true,
+          "gen_combo": "Estella, Estella, Estella, Estella, Estella, Estella, Estella, Estella, Estella, Estella",
+          "hit_combo": true,
+          "gen_ms": "Estella. was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": true,
+          "gen_mp": "Estella",
+          "hit_mp": true
+        },
+        {
+          "cid": 31,
+          "question": "Who was Pip's secret benefactor?",
+          "answer": "Magwitch",
+          "gen_rag": "Magwitch",
+          "hit_rag": true,
+          "gen_combo": "Magwitch, a convict from the marshes who later returned from New South Wales. Magwitch had been transported and made a fortune",
+          "hit_combo": true,
+          "gen_ms": "Provis. was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": false,
+          "gen_mp": "Magwitch",
+          "hit_mp": true
+        },
+        {
+          "cid": 22,
+          "question": "What was the name of Estella's father?",
+          "answer": "Provis",
+          "gen_rag": "Provis",
+          "hit_rag": true,
+          "gen_combo": "Provis.",
+          "hit_combo": true,
+          "gen_ms": "Provis. was that name was of father of Estella was was was was was was was was was was was was was was was was was",
+          "hit_ms": true,
+          "gen_mp": "Mr. Havisham",
+          "hit_mp": false
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 1.0,
+        "ms": 0.75,
+        "mp": 0.75
+      }
+    },
+    {
+      "name": "Q2_Pip_Joe_Herbert_Wemmick",
+      "k": 4,
+      "per_constituent": [
+        {
+          "cid": 0,
+          "question": "What was Pip's father's family name?",
+          "answer": "Pirrip",
+          "gen_rag": "Pirrip",
+          "hit_rag": true,
+          "gen_combo": "Pirrip is the family name of Pip's roommate. Herbert is the friend of Pip. Joe is the blacksmith.",
+          "hit_combo": true,
+          "gen_ms": ". was was was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": false,
+          "gen_mp": "Pirrip",
+          "hit_mp": true
+        },
+        {
+          "cid": 2,
+          "question": "What was Joe Gargery's profession?",
+          "answer": "blacksmith",
+          "gen_rag": "Blacksmith",
+          "hit_rag": true,
+          "gen_combo": "blacksmith.",
+          "hit_combo": true,
+          "gen_ms": "was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": false,
+          "gen_mp": "Joe Gargery was a blacksmith.",
+          "hit_mp": true
+        },
+        {
+          "cid": 30,
+          "question": "Who was Pip's roommate at Barnard's Inn?",
+          "answer": "Herbert",
+          "gen_rag": "Herbert Pocket",
+          "hit_rag": true,
+          "gen_combo": "Jaggers's clerk Wemmick was a dry man, rather short in stature, with a square wooden face, whose expression",
+          "hit_combo": false,
+          "gen_ms": "was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": false,
+          "gen_mp": "Herbert",
+          "hit_mp": true
+        },
+        {
+          "cid": 17,
+          "question": "What was the name of Mr. Jaggers's clerk?",
+          "answer": "Wemmick",
+          "gen_rag": "Wemmick",
+          "hit_rag": true,
+          "gen_combo": "Wemmick was a clerk at a clerk at a clerk at a clerk at a clerk at a clerk at",
+          "hit_combo": true,
+          "gen_ms": ". was was was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "hit_ms": false,
+          "gen_mp": "Wemmick",
+          "hit_mp": true
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 0.75,
+        "ms": 0.0,
+        "mp": 1.0
+      }
+    }
+  ],
+  "test2": [
+    {
+      "name": "P1_Pip_Joe",
+      "k": 2,
+      "per_query": [
+        {
+          "probe": "Recall: Pip's father's family name = . Also, Joe Gargery's profession was ...",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "gen_rag": "Pirrip, blacksmith\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What wa",
+          "frac_rag": 1.0,
+          "gen_combo": " Pirrip,  blacksmith.\n\nPassage: When I ran home from the churchyard, the church bell rang. When I ran home from the chur",
+          "frac_combo": 1.0,
+          "gen_ms": " Pirrip was was was was was was was was was was was was was was was was was was was was was was was was was was was was ",
+          "frac_ms": 0.5,
+          "gen_mp": "Pirrip, blacksmith\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What wa",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Q: What is Pip's father's family name? A: . Q: Joe Gargery's profession is? A: ...",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "gen_rag": "Pirrip, blacksmith\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What wa",
+          "frac_rag": 1.0,
+          "gen_combo": " blacksmith\n\nPassage: When I ran home from the churchyard, the church was shut up, as the church always shut up at the c",
+          "frac_combo": 1.0,
+          "gen_ms": " was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "frac_ms": 0.0,
+          "gen_mp": "\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was the cat's name?\n",
+          "frac_mp": 0.0
+        },
+        {
+          "probe": "Two facts: Pip's family name was . The blacksmith Joe Gargery's trade was ...",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "gen_rag": "Pirrip, blacksmith\n\nPassage: The first thing I saw was a churchyard, on the bank of a creek, and at the end of the churc",
+          "frac_rag": 1.0,
+          "gen_combo": " Pirrip, the blacksmith's trade was  blacksmith.\n\nPassage: When I ran home from the churchyard, the church bell rang. Wh",
+          "frac_combo": 1.0,
+          "gen_ms": " was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "frac_ms": 0.0,
+          "gen_mp": "Pip's family name was Pip. The blacksmith Joe Gargery's trade was blacksmith.\n\nPassage: The cat was named Whiskers and l",
+          "frac_mp": 0.5
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 1.0,
+        "ms": 0.16666666666666666,
+        "mp": 0.5
+      }
+    },
+    {
+      "name": "P2_Estella_Drummle",
+      "k": 2,
+      "per_query": [
+        {
+          "probe": "Recall: Miss Havisham's adopted daughter was named . Also, she eventually marrie...",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "gen_rag": "Estella, Bentley Drummle\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: W",
+          "frac_rag": 1.0,
+          "gen_combo": "Estella,  Estella married  Bentley Drummle. Drummle came from a noble family but was a sulky, ill-tempered young man, gi",
+          "frac_combo": 1.0,
+          "gen_ms": " Estella  Estella married  Estella married  Estella married  Estella married  Estella married  Estella married  Estella ",
+          "frac_ms": 0.5,
+          "gen_mp": "Estella\n\nPassage: The lighthouse on the cliff was 90 feet tall and painted red and white.\nQuestion: How tall was the lig",
+          "frac_mp": 0.5
+        },
+        {
+          "probe": "Q: Who was Miss Havisham's adopted daughter? A: . Q: Whom did she marry? A: ...",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "gen_rag": "Estella, Drummle\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was ",
+          "frac_rag": 1.0,
+          "gen_combo": "Estella married  Bentley Drummle. Miss Havisham married  Estella Drummle. Drummle married Miss Havisham. Miss Havisham m",
+          "frac_combo": 1.0,
+          "gen_ms": " Estella  Estella married  Estella married  Estella married  Estella married  Estella married  Estella married  Estella ",
+          "frac_ms": 0.5,
+          "gen_mp": "Estella, Estella's adopted daughter was Estella, Estella's adopted daughter was Estella, Estella's adopted daughter was ",
+          "frac_mp": 0.5
+        },
+        {
+          "probe": "Two facts: Havisham's adopted daughter was . That daughter married ...",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "gen_rag": "Estella, Drummle\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was ",
+          "frac_rag": 1.0,
+          "gen_combo": "was young was young was young was young was young was young was young was young was young was young was young was young ",
+          "frac_combo": 0.0,
+          "gen_ms": " Estella was  Estella married  Estella married  Estella married  Estella married  Estella married  Estella married  Este",
+          "frac_ms": 0.5,
+          "gen_mp": "Estella, Estella's daughter was  Estella, Estella's daughter was  Estella, Estella's daughter was\n\nQuestion: Two facts: ",
+          "frac_mp": 1.0
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 0.6666666666666666,
+        "ms": 0.5,
+        "mp": 0.6666666666666666
+      }
+    },
+    {
+      "name": "P3_Magwitch_Provis",
+      "k": 2,
+      "per_query": [
+        {
+          "probe": "Recall: Pip's secret benefactor was . Also, Estella's father's name was ...",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "gen_rag": "Magwitch, Provis\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was ",
+          "frac_rag": 1.0,
+          "gen_combo": " Provisvis's father was  Provisvis' father was  Provisvis' father was  Provisvis' father was  Provisvis' father was  Pro",
+          "frac_combo": 0.5,
+          "gen_ms": " Provis.  Provis.  Provis.  Provis was  Provis was  Provis was  Provis was  Provis was  Provis was  Pro.  Provis was  Pr",
+          "frac_ms": 0.5,
+          "gen_mp": "Magwitch, Provis\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was ",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Q: Pip's secret benefactor was? A: . Q: Estella's father's name was? A: ...",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "gen_rag": "Magwitch, Provis\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was ",
+          "frac_rag": 1.0,
+          "gen_combo": " Provisvis.  Provisvis' father was  Provisvis' father was  Provisvis' father was  Provisvis' father was  Provisvis' fath",
+          "frac_combo": 0.5,
+          "gen_ms": " Provis.  Provis.  Provis.  Provis.  Provis.  Provis.  Provis.  Provis.  Provis.  Provis.  Provis.  Provis.  Provis.  Pr",
+          "frac_ms": 0.5,
+          "gen_mp": "Magwitch, Provis\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was ",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Two facts: The convict who became Pip's benefactor was . That same man was Estel...",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "gen_rag": "Magwitch, Provis\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was ",
+          "frac_rag": 1.0,
+          "gen_combo": " Provisvis' father was  Provisvis' father was  Provisvis' father was  Provisvis' father was  Provisvis' father was  Prov",
+          "frac_combo": 0.5,
+          "gen_ms": " Provis.  Provis was  Provis was  Provis was  Provis was  Pros.  Provis was  Provis was  Provis was  Provis was  Provis ",
+          "frac_ms": 0.5,
+          "gen_mp": "Magwitch, Magwitch\n\nPassage: The lighthouse on the cliff was 90 feet tall and painted red and white.\nQuestion: How tall ",
+          "frac_mp": 0.5
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 0.5,
+        "ms": 0.5,
+        "mp": 0.8333333333333334
+      }
+    },
+    {
+      "name": "P4_Herbert_Wemmick",
+      "k": 2,
+      "per_query": [
+        {
+          "probe": "Recall: Pip's roommate at Barnard's Inn was . Also, Mr. Jaggers's clerk was name...",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "gen_rag": "Herbert Pocket and Wemmick\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion:",
+          "frac_rag": 1.0,
+          "gen_combo": "Wemmick was Wemmip's clerk at Barnard's Inn. Herbert was Wemmick's roommate at Barnard's Inn. Herbert was Wemmick's frie",
+          "frac_combo": 1.0,
+          "gen_ms": " was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was",
+          "frac_ms": 0.0,
+          "gen_mp": "Herbert Pocket, Wemmick\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: Wh",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Q: Pip's roommate at Barnard's Inn? A: . Q: Mr. Jaggers's clerk's name? A: ...",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "gen_rag": "Herbert Pocket, Wemmick\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: Wh",
+          "frac_rag": 1.0,
+          "gen_combo": "Wemmick\n\n Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met agai",
+          "frac_combo": 1.0,
+          "gen_ms": " was a roommate of's was a clerk of's was a roommate of's was a clerk of's was a roommate of's was a clerk of's was a ro",
+          "frac_ms": 0.0,
+          "gen_mp": "Herbert Pocket, Wemmick\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: Wh",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Two facts about Pip's London circle: his Barnard's Inn roommate was . Jaggers's ...",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "gen_rag": "Herbert Pocket, Wemmick\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: Wh",
+          "frac_rag": 1.0,
+          "gen_combo": "Wemmick was Wemmick's clerk Wemmick was Wemmick's clerk Wemmick's clerk Wemmick's clerk Wemmick's clerk Wemmick's clerk ",
+          "frac_combo": 0.5,
+          "gen_ms": " Herbert was a roommate of's's's's's's's's's's's's's's's's's's's's's's's's's's's's's's's's's's's's'",
+          "frac_ms": 0.5,
+          "gen_mp": "Herbert was Pip's roommate at Barnard's Inn. Wemmick was a clerk Wemmick was a clerk Wemmick was a clerk Wemmick was\n\nPa",
+          "frac_mp": 1.0
+        }
+      ],
+      "rates": {
+        "rag": 1.0,
+        "combo": 0.8333333333333334,
+        "ms": 0.16666666666666666,
+        "mp": 1.0
+      }
+    },
+    {
+      "name": "T1_Pip_Estella_Magwitch",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Pip's family name was . Miss Havisham's adopted daughter was named ...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "gen_rag": "Pirrip, Estella, Magwitch\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: ",
+          "frac_rag": 1.0,
+          "gen_combo": " Estella, Estella, Mr. Jaggers\n\nPassage: Pip's father's family name was  Pirrip, and father's family name was  Pirrip. I",
+          "frac_combo": 0.6666666666666666,
+          "gen_ms": " Pirrip, Estella,sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+          "frac_ms": 0.6666666666666666,
+          "gen_mp": "Pirrip, Estella, Magwitch\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: ",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Havisham's adopted daughter? A: . Q: Pip's benefac...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "gen_rag": "Pirrip, Estella, Magwitch\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: ",
+          "frac_rag": 1.0,
+          "gen_combo": " Estella  Estella  Magwitch\n\nPassage: Miss Havisham's adopted daughter was  Estella. Estella's father's family name was ",
+          "frac_combo": 0.6666666666666666,
+          "gen_ms": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+          "frac_ms": 0.0,
+          "gen_mp": "Pirrip, Estella, Magwitch\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: ",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Recall: Pip's family = . Also, Havisham's daughter = . Also, Pip's benefactor = ...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "gen_rag": "Pip's family = Gargery. Also, Havisham's daughter = Estella. Also, Pip's benefactor = Magwitch.\n\nPassage: The cat was na",
+          "frac_rag": 0.6666666666666666,
+          "gen_combo": "Estella,  Estella,  Magwitch, was a convict from the marshes who later returned from New South Wales. Magwitch had been ",
+          "frac_combo": 0.6666666666666666,
+          "gen_ms": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+          "frac_ms": 0.0,
+          "gen_mp": "Estella, Estella, Estella, Estella, Estella, Estella, Estella, Estella, Estella, Estella\n\nQuestion: Recall: Pip's family",
+          "frac_mp": 0.6666666666666666
+        }
+      ],
+      "rates": {
+        "rag": 0.8888888888888888,
+        "combo": 0.6666666666666666,
+        "ms": 0.2222222222222222,
+        "mp": 0.8888888888888888
+      }
+    },
+    {
+      "name": "T2_Joe_Estella_Drummle",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Joe Gargery's profession was . Miss Havisham's adopted daughter was...",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "gen_rag": "Joe Gargery was a blacksmith. Miss Havisham's adopted daughter was named Estella. Estella eventually married Bentley Dru",
+          "frac_rag": 1.0,
+          "gen_combo": " blacksmith,  Estella,   Bentley Drummle. Blacksmith was the blacksmith. Blacksmith was blacksmith. blacksmith was black",
+          "frac_combo": 1.0,
+          "gen_ms": " blacksmith was  Estella was  black was  was was was was was was was was was was was was was was was was was was was was",
+          "frac_ms": 0.6666666666666666,
+          "gen_mp": "Joe Gargery's profession was blacksmith. Miss Havisham's adopted daughter was named Estella. Estella eventually married ",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Q: Joe's profession? A: . Q: Havisham's daughter's name? A: . Q: Whom did she ma...",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "gen_rag": "Joe Gargery, Estella, Bentley Drummle\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street",
+          "frac_rag": 0.6666666666666666,
+          "gen_combo": " Estella married  Bentley Drummle. Drummle married  Estella. Drummle married  Bentley Drummle. Drummle married  Bentley ",
+          "frac_combo": 0.6666666666666666,
+          "gen_ms": "was  black was  black was  black was married was married was married was married was married was married was married was",
+          "frac_ms": 0.0,
+          "gen_mp": "Joe was a blacksmith. Estella was Havisham's daughter. She married Bentley Drummle.\n\nPassage: The cat was named Whiskers",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Recall: Joe = . Also, Havisham's daughter = . Also, that daughter married = ...",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "gen_rag": "Joe = blacksmith. Also, Havisham's daughter = Estella. Also, that daughter married = Bentley Drummle.\n\nPassage: The cat ",
+          "frac_rag": 1.0,
+          "gen_combo": "Joe married  Estella. Joe married  Estella. Joe married  Estella.\n\nWas the man Estella married was  Bentley Drummle. was",
+          "frac_combo": 0.6666666666666666,
+          "gen_ms": " Estella married  blacksmith. was  blacksmith was  Estella was  Estella was  Estella was  Estella was  Estella was  Este",
+          "frac_ms": 0.6666666666666666,
+          "gen_mp": "Pip\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was the cat's nam",
+          "frac_mp": 0.0
+        }
+      ],
+      "rates": {
+        "rag": 0.8888888888888888,
+        "combo": 0.7777777777777777,
+        "ms": 0.4444444444444444,
+        "mp": 0.6666666666666666
+      }
+    },
+    {
+      "name": "T3_Pip_Herbert_Wemmick",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Pip's family name was . Pip's roommate at Barnard's Inn was . Mr. J...",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "gen_rag": "Pirrip, Herbert Pocket, Wemmick\n\nPassage: The first thing I remember is, that I was very small, and lived in a dark room",
+          "frac_rag": 1.0,
+          "gen_combo": " Pirrip,    Wemmick,          Pip's father's family name was  Pirrip. Pip's roommate at Barnard's Inn was  Wemmick. Mr. ",
+          "frac_combo": 0.6666666666666666,
+          "gen_ms": "s was was was was was was was was was was was was was was was was was was was was was was was was was was was was was wa",
+          "frac_ms": 0.0,
+          "gen_mp": "Pirrip,s, Herbert, Wemmick\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion:",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Pip's roommate? A: . Q: Jaggers's clerk? A: ...",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "gen_rag": "Pirrip, Herbert Pocket, Wemmick\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQues",
+          "frac_rag": 1.0,
+          "gen_combo": " Pirrip,  s. Jaggers's clerk Wemmick was a dry man, rather short in stature, with a square wooden face, whose expression",
+          "frac_combo": 0.6666666666666666,
+          "gen_ms": "s was was was was was was was was was was was was was was was was was was was was was was was was was was was was was wa",
+          "frac_ms": 0.0,
+          "gen_mp": "Pirrip,s,s,s,s,s,s,s,s,s,s,s,s,s,\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQu",
+          "frac_mp": 0.3333333333333333
+        },
+        {
+          "probe": "Recall: Pip = . Also, Pip's roommate = . Also, Jaggers's clerk = ...",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "gen_rag": "Pip = Philip. Also, Pip's roommate = Herbert Pocket. Also, Jaggers's clerk = Wemmick.\n\nPassage: The cat was named Whiske",
+          "frac_rag": 0.6666666666666666,
+          "gen_combo": "Pip's roommate was  Herbert Pip's roommate was  Pip's roommate was  Herbert Pip's roommate was  Herbert Pip's roommate w",
+          "frac_combo": 0.3333333333333333,
+          "gen_ms": "was a clerk was a roommate was a roommate was a roommate was a roommate was a roommate was a roommate was a roommate was",
+          "frac_ms": 0.0,
+          "gen_mp": "Pip = . Also, Pip's roommate = . Also, Jaggers's clerk =\n\nPassage: The cat was named Whiskers and lived in a small blue ",
+          "frac_mp": 0.0
+        }
+      ],
+      "rates": {
+        "rag": 0.8888888888888888,
+        "combo": 0.5555555555555555,
+        "ms": 0.0,
+        "mp": 0.4444444444444444
+      }
+    },
+    {
+      "name": "T4_Magwitch_Provis_Drummle",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Pip's secret benefactor was . Estella's father's name was . Estella...",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "gen_rag": "Magwitch, Provis, Drummle\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: ",
+          "frac_rag": 1.0,
+          "gen_combo": " Magwitch was Pip's secret benefactor.   Provis was the father of  Magwitch was  Provis.  Magwitch married.\n\nPassage: th",
+          "frac_combo": 1.0,
+          "gen_ms": " Provis.  Jaggers.    Provis.   Provis was  Provis was  Provis was  Pros.  Provis was  Provis was  Provis was  Provis wa",
+          "frac_ms": 0.3333333333333333,
+          "gen_mp": "Magwitch, Drummle, Bentley\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion:",
+          "frac_mp": 0.6666666666666666
+        },
+        {
+          "probe": "Q: Pip's benefactor? A: . Q: Estella's father? A: . Q: Estella married? A: ...",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "gen_rag": "\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was the cat's name?\n",
+          "frac_rag": 0.0,
+          "gen_combo": " Magwitch,    Magwitch,     Bentley Drummle.\n\nPassage: the man Estella married was Bentley Drummle. Drummle was a young ",
+          "frac_combo": 0.6666666666666666,
+          "gen_ms": " Provis.  Jaggers.    Provis.  Provis was  Provis was  Provis was  Pros.  Provis was  Provis was  Pros.  Provis was  Pro",
+          "frac_ms": 0.3333333333333333,
+          "gen_mp": "\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was the cat's name?\n",
+          "frac_mp": 0.0
+        },
+        {
+          "probe": "Recall: Pip's benefactor = . Also, Estella's father = . Also, Estella married = ...",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "gen_rag": "Magwitch, Provis, Drummle\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: ",
+          "frac_rag": 1.0,
+          "gen_combo": " Magwitch was Pip's secret benefactor.  Magwitch was  Provis.  Drummle married.\n\nPassage: Pip married. And so the secret",
+          "frac_combo": 1.0,
+          "gen_ms": " Provis.                                                                            ",
+          "frac_ms": 0.3333333333333333,
+          "gen_mp": "Magwitch, Provis, Bentley Drummle\n\nQuestion: Recall: Pip's benefactor = . Also, Estella's father = . Also, Estella marri",
+          "frac_mp": 1.0
+        }
+      ],
+      "rates": {
+        "rag": 0.6666666666666666,
+        "combo": 0.8888888888888888,
+        "ms": 0.3333333333333333,
+        "mp": 0.5555555555555555
+      }
+    },
+    {
+      "name": "Q1_Pip_Estella_Magwitch_Provis",
+      "k": 4,
+      "per_query": [
+        {
+          "probe": "Four facts: Pip's family name was . Havisham's adopted daughter was . Pip's secr...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "gen_rag": "Pirrip, Estella, Magwitch, Provis\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQu",
+          "frac_rag": 1.0,
+          "gen_combo": " Pirrip,  Estella,  Magwitch,   Provis.\n\nQuestion: Pip's secret benefactor was a convict from the marshes who later retu",
+          "frac_combo": 1.0,
+          "gen_ms": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+          "frac_ms": 0.0,
+          "gen_mp": "Pirrip, Estella, Magwitch, Provis\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQu",
+          "frac_mp": 1.0
+        },
+        {
+          "probe": "Q: Pip's family? A: . Q: Havisham's daughter? A: . Q: Pip's benefactor? A: . Q: ...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "gen_rag": "Pip's family: Pirrip, Philip. Havisham's daughter: Estella. Pip's benefactor: Magwitch. Estella's father: Provis.\n\nPassa",
+          "frac_rag": 1.0,
+          "gen_combo": "Pip's father's family name was  Pirrip, the was  Estella, and was  Magwitch, and was  Provis.\n\nPassage: Pip's father's f",
+          "frac_combo": 1.0,
+          "gen_ms": "s wasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+          "frac_ms": 0.0,
+          "gen_mp": "\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQuestion: What was the cat's name?\n",
+          "frac_mp": 0.0
+        },
+        {
+          "probe": "Recall: Pip = . Havisham's daughter = . Pip's benefactor = . Estella's father = ...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "gen_rag": "Pip = . Havisham's daughter = Estella. Pip's benefactor = Magwitch. Estella's father = Provis.\n\nPassage: The cat was nam",
+          "frac_rag": 0.75,
+          "gen_combo": " Estella's father was  Provis. Magwitch had been transported and made a fortune as a sheep-farmer, then secretly funded ",
+          "frac_combo": 0.75,
+          "gen_ms": " Estella was s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s",
+          "frac_ms": 0.25,
+          "gen_mp": "Pip = . Havisham's daughter = . Pip's benefactor = . Estella's father =\n\nQuestion: Recall: Pip = . Havisham's daughter =",
+          "frac_mp": 0.25
+        }
+      ],
+      "rates": {
+        "rag": 0.9166666666666666,
+        "combo": 0.9166666666666666,
+        "ms": 0.08333333333333333,
+        "mp": 0.4166666666666667
+      }
+    },
+    {
+      "name": "Q2_Pip_Joe_Herbert_Wemmick",
+      "k": 4,
+      "per_query": [
+        {
+          "probe": "Four facts: Pip's family name was . Joe Gargery's profession was . Pip's roommat...",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "gen_rag": "Pirrip, blacksmith, Herbert Pocket, Wemmick\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm ",
+          "frac_rag": 1.0,
+          "gen_combo": " Pirrip is Pip's family name is. blacksmith is Joe Gargery's profession is.  Wemmick was Pip's friend at Barnard's Inn i",
+          "frac_combo": 0.75,
+          "gen_ms": "s was was was was was was was was was was was was was was was was was was was was was was was was was was was was was wa",
+          "frac_ms": 0.0,
+          "gen_mp": "Pirrip, blacksmith,s Pirrip, Pirrip,s Pirrip, Pirrip,s was was was was was was was was was was was was was was was was w",
+          "frac_mp": 0.5
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Joe's profession? A: . Q: Pip's roommate? A: . Q: ...",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "gen_rag": "Pirrip, blacksmith, Herbert Pocket, Wemmick\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm ",
+          "frac_rag": 1.0,
+          "gen_combo": " Pirrip, blacksmith. blacksmith.  Wemmick.  Wemmick.   Wemmick.  Wemmick.  Wemmick.  Wemmick.  Wemmick.  Wemmick.  Wemmi",
+          "frac_combo": 0.75,
+          "gen_ms": "was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was ",
+          "frac_ms": 0.0,
+          "gen_mp": "Pirrip, Gargery, Herbert, Wemmick\n\nPassage: The cat was named Whiskers and lived in a small blue house on Elm Street.\nQu",
+          "frac_mp": 0.75
+        },
+        {
+          "probe": "Recall: Pip = . Joe = . Pip's roommate = . Jaggers's clerk = ...",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "gen_rag": "Pip = . Joe = . Pip's roommate = . Jaggers's clerk =\n\nPassage: The cat was named Whiskers and lived in a small blue hous",
+          "frac_rag": 0.0,
+          "gen_combo": " Herbert Pocket is Pip's friend and roommate. Wemmick is  Jaggers's clerk.\n\nJaggers's clerk was  Wemmick was a dry man, ",
+          "frac_combo": 0.5,
+          "gen_ms": "was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was ",
+          "frac_ms": 0.0,
+          "gen_mp": "Pip = . Joe = . Pip's roommate = . Jaggers's clerk =\n\nPassage: The cat was named Whiskers and lived in a small blue hous",
+          "frac_mp": 0.0
+        }
+      ],
+      "rates": {
+        "rag": 0.6666666666666666,
+        "combo": 0.6666666666666666,
+        "ms": 0.0,
+        "mp": 0.4166666666666667
+      }
+    }
+  ],
+  "wall_total_s": 429.20774483680725
+}

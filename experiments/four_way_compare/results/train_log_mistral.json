@@ -1,0 +1,185 @@
+{
+  "train_log": [
+    {
+      "kind": "combo",
+      "name": "P1_Pip_Joe",
+      "k": 2,
+      "n_sources": 10,
+      "n_steps": 300,
+      "loss_init": 4.50390625,
+      "loss_final": 0.005268096923828125,
+      "wall_s": 12.157675981521606
+    },
+    {
+      "kind": "combo",
+      "name": "P2_Estella_Drummle",
+      "k": 2,
+      "n_sources": 10,
+      "n_steps": 300,
+      "loss_init": 3.576171875,
+      "loss_final": 0.064453125,
+      "wall_s": 11.024370670318604
+    },
+    {
+      "kind": "combo",
+      "name": "P3_Magwitch_Provis",
+      "k": 2,
+      "n_sources": 10,
+      "n_steps": 300,
+      "loss_init": 4.71875,
+      "loss_final": 0.0008063316345214844,
+      "wall_s": 10.874237775802612
+    },
+    {
+      "kind": "combo",
+      "name": "P4_Herbert_Wemmick",
+      "k": 2,
+      "n_sources": 10,
+      "n_steps": 300,
+      "loss_init": 2.783203125,
+      "loss_final": 0.0025234222412109375,
+      "wall_s": 11.014227151870728
+    },
+    {
+      "kind": "combo",
+      "name": "T1_Pip_Estella_Magwitch",
+      "k": 3,
+      "n_sources": 15,
+      "n_steps": 450,
+      "loss_init": 3.541015625,
+      "loss_final": 0.1402587890625,
+      "wall_s": 16.611515283584595
+    },
+    {
+      "kind": "combo",
+      "name": "T2_Joe_Estella_Drummle",
+      "k": 3,
+      "n_sources": 15,
+      "n_steps": 450,
+      "loss_init": 3.830078125,
+      "loss_final": 0.1575927734375,
+      "wall_s": 16.589767694473267
+    },
+    {
+      "kind": "combo",
+      "name": "T3_Pip_Herbert_Wemmick",
+      "k": 3,
+      "n_sources": 15,
+      "n_steps": 450,
+      "loss_init": 2.845703125,
+      "loss_final": 0.1064453125,
+      "wall_s": 16.40611457824707
+    },
+    {
+      "kind": "combo",
+      "name": "T4_Magwitch_Provis_Drummle",
+      "k": 3,
+      "n_sources": 15,
+      "n_steps": 450,
+      "loss_init": 3.830078125,
+      "loss_final": 0.0809326171875,
+      "wall_s": 16.38688611984253
+    },
+    {
+      "kind": "combo",
+      "name": "Q1_Pip_Estella_Magwitch_Provis",
+      "k": 4,
+      "n_sources": 20,
+      "n_steps": 600,
+      "loss_init": 3.38671875,
+      "loss_final": 0.00689697265625,
+      "wall_s": 21.470274209976196
+    },
+    {
+      "kind": "combo",
+      "name": "Q2_Pip_Joe_Herbert_Wemmick",
+      "k": 4,
+      "n_sources": 20,
+      "n_steps": 600,
+      "loss_init": 4.13671875,
+      "loss_final": 0.004573822021484375,
+      "wall_s": 21.540916204452515
+    },
+    {
+      "kind": "single",
+      "cid": 0,
+      "answer": "Pirrip",
+      "n_sources": 5,
+      "n_steps": 150,
+      "loss_init": 3.484375,
+      "loss_final": 0.0006213188171386719,
+      "wall_s": 5.513529062271118
+    },
+    {
+      "kind": "single",
+      "cid": 2,
+      "answer": "blacksmith",
+      "n_sources": 5,
+      "n_steps": 150,
+      "loss_init": 3.830078125,
+      "loss_final": 0.00030803680419921875,
+      "wall_s": 5.396981954574585
+    },
+    {
+      "kind": "single",
+      "cid": 16,
+      "answer": "Estella",
+      "n_sources": 5,
+      "n_steps": 150,
+      "loss_init": 3.255859375,
+      "loss_final": 0.00022673606872558594,
+      "wall_s": 5.571757555007935
+    },
+    {
+      "kind": "single",
+      "cid": 17,
+      "answer": "Wemmick",
+      "n_sources": 5,
+      "n_steps": 150,
+      "loss_init": 2.845703125,
+      "loss_final": 0.0004260540008544922,
+      "wall_s": 5.583200454711914
+    },
+    {
+      "kind": "single",
+      "cid": 22,
+      "answer": "Provis",
+      "n_sources": 5,
+      "n_steps": 150,
+      "loss_init": 4.16015625,
+      "loss_final": 0.0003407001495361328,
+      "wall_s": 5.412485361099243
+    },
+    {
+      "kind": "single",
+      "cid": 30,
+      "answer": "Herbert",
+      "n_sources": 5,
+      "n_steps": 150,
+      "loss_init": 4.21875,
+      "loss_final": 0.0004680156707763672,
+      "wall_s": 5.348268270492554
+    },
+    {
+      "kind": "single",
+      "cid": 31,
+      "answer": "Magwitch",
+      "n_sources": 5,
+      "n_steps": 150,
+      "loss_init": 3.541015625,
+      "loss_final": 0.0006422996520996094,
+      "wall_s": 5.485560894012451
+    },
+    {
+      "kind": "single",
+      "cid": 36,
+      "answer": "Bentley Drummle",
+      "n_sources": 5,
+      "n_steps": 150,
+      "loss_init": 3.830078125,
+      "loss_final": 0.0004780292510986328,
+      "wall_s": 5.481325626373291
+    }
+  ],
+  "wall_total_s": 198.85746717453003
+}
