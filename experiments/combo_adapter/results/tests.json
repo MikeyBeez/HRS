@@ -1,0 +1,1291 @@
+{
+  "test1": [
+    {
+      "name": "P1_Pip_Joe",
+      "k": 2,
+      "per_constituent": [
+        {
+          "library_id": 0,
+          "answer": "Pirrip",
+          "combo_rate": 0.4444444444444444,
+          "single_rate": 0.8888888888888888,
+          "multi_rate": 0.6666666666666666
+        },
+        {
+          "library_id": 2,
+          "answer": "blacksmith",
+          "combo_rate": 0.8888888888888888,
+          "single_rate": 1.0,
+          "multi_rate": 0.2222222222222222
+        }
+      ]
+    },
+    {
+      "name": "P2_Estella_Drummle",
+      "k": 2,
+      "per_constituent": [
+        {
+          "library_id": 16,
+          "answer": "Estella",
+          "combo_rate": 1.0,
+          "single_rate": 1.0,
+          "multi_rate": 0.8888888888888888
+        },
+        {
+          "library_id": 36,
+          "answer": "Bentley Drummle",
+          "combo_rate": 0.1111111111111111,
+          "single_rate": 0.5555555555555556,
+          "multi_rate": 0.7777777777777778
+        }
+      ]
+    },
+    {
+      "name": "P3_Magwitch_Provis",
+      "k": 2,
+      "per_constituent": [
+        {
+          "library_id": 31,
+          "answer": "Magwitch",
+          "combo_rate": 0.8888888888888888,
+          "single_rate": 1.0,
+          "multi_rate": 0.8888888888888888
+        },
+        {
+          "library_id": 22,
+          "answer": "Provis",
+          "combo_rate": 0.3333333333333333,
+          "single_rate": 0.8888888888888888,
+          "multi_rate": 0.4444444444444444
+        }
+      ]
+    },
+    {
+      "name": "P4_Herbert_Wemmick",
+      "k": 2,
+      "per_constituent": [
+        {
+          "library_id": 30,
+          "answer": "Herbert",
+          "combo_rate": 0.8888888888888888,
+          "single_rate": 1.0,
+          "multi_rate": 1.0
+        },
+        {
+          "library_id": 17,
+          "answer": "Wemmick",
+          "combo_rate": 0.6666666666666666,
+          "single_rate": 1.0,
+          "multi_rate": 0.4444444444444444
+        }
+      ]
+    },
+    {
+      "name": "T1_Pip_Estella_Magwitch",
+      "k": 3,
+      "per_constituent": [
+        {
+          "library_id": 0,
+          "answer": "Pirrip",
+          "combo_rate": 0.8888888888888888,
+          "single_rate": 0.8888888888888888,
+          "multi_rate": 0.6666666666666666
+        },
+        {
+          "library_id": 16,
+          "answer": "Estella",
+          "combo_rate": 0.7777777777777778,
+          "single_rate": 1.0,
+          "multi_rate": 0.1111111111111111
+        },
+        {
+          "library_id": 31,
+          "answer": "Magwitch",
+          "combo_rate": 0.5555555555555556,
+          "single_rate": 1.0,
+          "multi_rate": 0.4444444444444444
+        }
+      ]
+    },
+    {
+      "name": "T2_Joe_Estella_Drummle",
+      "k": 3,
+      "per_constituent": [
+        {
+          "library_id": 2,
+          "answer": "blacksmith",
+          "combo_rate": 1.0,
+          "single_rate": 1.0,
+          "multi_rate": 0.0
+        },
+        {
+          "library_id": 16,
+          "answer": "Estella",
+          "combo_rate": 0.7777777777777778,
+          "single_rate": 1.0,
+          "multi_rate": 0.4444444444444444
+        },
+        {
+          "library_id": 36,
+          "answer": "Bentley Drummle",
+          "combo_rate": 0.6666666666666666,
+          "single_rate": 0.5555555555555556,
+          "multi_rate": 0.2222222222222222
+        }
+      ]
+    },
+    {
+      "name": "T3_Pip_Herbert_Wemmick",
+      "k": 3,
+      "per_constituent": [
+        {
+          "library_id": 0,
+          "answer": "Pirrip",
+          "combo_rate": 0.4444444444444444,
+          "single_rate": 0.8888888888888888,
+          "multi_rate": 0.3333333333333333
+        },
+        {
+          "library_id": 30,
+          "answer": "Herbert",
+          "combo_rate": 0.3333333333333333,
+          "single_rate": 1.0,
+          "multi_rate": 0.8888888888888888
+        },
+        {
+          "library_id": 17,
+          "answer": "Wemmick",
+          "combo_rate": 0.7777777777777778,
+          "single_rate": 1.0,
+          "multi_rate": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "name": "T4_Magwitch_Provis_Drummle",
+      "k": 3,
+      "per_constituent": [
+        {
+          "library_id": 31,
+          "answer": "Magwitch",
+          "combo_rate": 0.8888888888888888,
+          "single_rate": 1.0,
+          "multi_rate": 0.7777777777777778
+        },
+        {
+          "library_id": 22,
+          "answer": "Provis",
+          "combo_rate": 0.3333333333333333,
+          "single_rate": 0.8888888888888888,
+          "multi_rate": 0.2222222222222222
+        },
+        {
+          "library_id": 36,
+          "answer": "Bentley Drummle",
+          "combo_rate": 0.1111111111111111,
+          "single_rate": 0.5555555555555556,
+          "multi_rate": 0.1111111111111111
+        }
+      ]
+    },
+    {
+      "name": "Q1_Pip_Estella_Magwitch_Provis",
+      "k": 4,
+      "per_constituent": [
+        {
+          "library_id": 0,
+          "answer": "Pirrip",
+          "combo_rate": 0.4444444444444444,
+          "single_rate": 0.8888888888888888,
+          "multi_rate": 0.4444444444444444
+        },
+        {
+          "library_id": 16,
+          "answer": "Estella",
+          "combo_rate": 0.6666666666666666,
+          "single_rate": 1.0,
+          "multi_rate": 0.3333333333333333
+        },
+        {
+          "library_id": 31,
+          "answer": "Magwitch",
+          "combo_rate": 1.0,
+          "single_rate": 1.0,
+          "multi_rate": 0.1111111111111111
+        },
+        {
+          "library_id": 22,
+          "answer": "Provis",
+          "combo_rate": 0.5555555555555556,
+          "single_rate": 0.8888888888888888,
+          "multi_rate": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Q2_Pip_Joe_Herbert_Wemmick",
+      "k": 4,
+      "per_constituent": [
+        {
+          "library_id": 0,
+          "answer": "Pirrip",
+          "combo_rate": 0.5555555555555556,
+          "single_rate": 0.8888888888888888,
+          "multi_rate": 0.1111111111111111
+        },
+        {
+          "library_id": 2,
+          "answer": "blacksmith",
+          "combo_rate": 1.0,
+          "single_rate": 1.0,
+          "multi_rate": 0.0
+        },
+        {
+          "library_id": 30,
+          "answer": "Herbert",
+          "combo_rate": 0.7777777777777778,
+          "single_rate": 1.0,
+          "multi_rate": 0.3333333333333333
+        },
+        {
+          "library_id": 17,
+          "answer": "Wemmick",
+          "combo_rate": 0.8888888888888888,
+          "single_rate": 1.0,
+          "multi_rate": 0.0
+        }
+      ]
+    }
+  ],
+  "test2": [
+    {
+      "name": "P1_Pip_Joe",
+      "k": 2,
+      "combo_results": [
+        {
+          "probe": "Recall: Pip's father's family name = . Also, Joe Gargery's profession was ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\nripery- father's family name being Pirrip, and Pirrip, and Pirrip, and Pirrip, and Pirrip, and Pir",
+            "\n\n Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwe",
+            "\ncircumstances of father's family name, family name, family name, being an ancient name of Pirrip, and being Pirrip,"
+          ]
+        },
+        {
+          "probe": "Q: What is Pip's father's family name? A: . Q: Joe Gargery's profession is? A: ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.3333333333333333,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n Pip's father's family name was Pirrip, and my sister Gargery, who married the blacksmith. Joe's family name was Pirri",
+            "\n\n Pip's father's family name, family name, family name, which was a part of the family name, which was the family name ",
+            "\n\n Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwe"
+          ]
+        },
+        {
+          "probe": "Two facts: Pip's family name was . The blacksmith Joe Gargery's trade was ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.3333333333333333,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n\nA--bye father's family name, family name, family name, on the authority of the family name, on the authority of the",
+            "urn, blacksmith, whereof the blacksmith, who married the blacksmith. Joe's forge adjoined our house, which was a wooden ",
+            "\n\n Pip's father's family name, which I called Pirrip, and my sister Gargery, who married the blacksmith. When Pirrip's"
+          ]
+        }
+      ],
+      "multi_results": [
+        {
+          "probe": "Recall: Pip's father's family name = . Also, Joe Gargery's profession was ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "----'s father's family name was Pirrip, and my Christian name was Pirrip, and my Christian name was Pirrip, and",
+            "--'s family name is recorded that Pip's father's family name was Pirrip, and that Joe's father's family name was Pirrip,",
+            "--'s family name is recorded that Pip's father's family name was Pirrip, and that Joe's father's family name was Pirrip,"
+          ]
+        },
+        {
+          "probe": "Q: What is Pip's father's family name? A: . Q: Joe Gargery's profession is? A: ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.3333333333333333,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n Joe's father's family name was recorded in the churchyard ( churchyard in the churchyard of the same name as Joe, and",
+            "\n\n Joe's father's family name was Pirrip father's family name was Pirrip, (an for Joe's father's family name was Pirrip",
+            "\n\n Joe's father's family name was Pirrip, the blacksmith who married the blacksmith. Joe's father's family name was Pirr"
+          ]
+        },
+        {
+          "probe": "Two facts: Pip's family name was . The blacksmith Joe Gargery's trade was ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.3333333333333333,
+          "frac_hits_mean": 0.6666666666666666,
+          "gens": [
+            "\n\n Joe's father's family name was Pirrip, and Joe is recorded that Pip's father's family name was Pirrip, and Joe's fath",
+            ", blacksmith's father's family name was recorded in the tomb of the old Joe. Joe's father's family name was Pirrip, and ",
+            "\n\n Joe's father's family name was Pirrip, and Joe's father's family name was Pirrip, and Joe is recorded that Pip's fath"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P2_Estella_Drummle",
+      "k": 2,
+      "combo_results": [
+        {
+          "probe": "Recall: Miss Havisham's adopted daughter was named . Also, she eventually married ",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n Miss Havisham's adopted daughter was Estella, and was Miss Havisham's adopted daughter. 'No, only a friend. All",
+            "iced the name of Miss Havisham's adopted daughter was Estella, and was more beautiful than ever, and was admired by all ",
+            "\n\n The name of Miss Havisham's adopted daughter was Estella, and was Estella married. 'No, only a friend. All well"
+          ]
+        },
+        {
+          "probe": "Q: Who was Miss Havisham's adopted daughter? A: . Q: Whom did she marry? A: ",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.3333333333333333,
+          "frac_hits_mean": 0.6666666666666666,
+          "gens": [
+            "\n\n All the children who were brought up by their mother were Estella Drummle, and was the only one I have ever seen. All",
+            "\n\n All the children and the mother of Miss Havisham's adopted daughter, Estella, had been brought home from France, and ",
+            "\n\n Miss Havisham's adopted daughter was Estella, and was more beautiful than ever, and was admired by all who saw her. A"
+          ]
+        },
+        {
+          "probe": "Two facts: Havisham's adopted daughter was . That daughter married ",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n Miss Havisham's adopted daughter was Estella, and was a relation of Miss Havisham's adopted daughter, Estella, had be",
+            ", Miss Havisham's adopted daughter was Estella, and was Miss Havisham's adopted daughter was Estella, and was the only d",
+            "\n\n Miss Havisham's adopted daughter was Estella, and was Miss Havisham's adopted daughter. 'No, only a friend. All"
+          ]
+        }
+      ],
+      "multi_results": [
+        {
+          "probe": "Recall: Miss Havisham's adopted daughter was named . Also, she eventually married ",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.3333333333333333,
+          "frac_hits_mean": 0.6666666666666666,
+          "gens": [
+            "\n\n The name of Miss Havisham's adopted daughter was Estella 's mother was Bentley Drummle 's mother was Bentley Drummle",
+            "\n\n The name of Miss Havisham's adopted daughter was Bentley Drummle's adopted daughter was Bentley Drummle 's daughter w",
+            "\n\n The name of Miss Havisham's adopted daughter was Bentley Drummle 's mother was Bentley Drummle recorded that The name"
+          ]
+        },
+        {
+          "probe": "Q: Who was Miss Havisham's adopted daughter? A: . Q: Whom did she marry? A: ",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n The name of Miss Havisham's adopted daughter was Bentley Drummle's was recorded that The name of Miss Havisham's adop",
+            "\n\n The name of Miss Havisham's adopted daughter was Bentley Drummle's adopted daughter was Bentley Drummle 's daughter w",
+            "\n\n The name of Miss Havisham's's adopted daughter was Bentley Drummle's was recorded that The name of Miss Havisham's ad"
+          ]
+        },
+        {
+          "probe": "Two facts: Havisham's adopted daughter was . That daughter married ",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n The name of Miss Havisham's adopted daughter was Bentley Drummle's adopted daughter was Bentley Drummle 's mother. 'S",
+            ", The name of Miss Havisham's adopted daughter was Bentley Drummle 's daughter was Bentley Drummle 's mother. ' Hav",
+            "\n\n The name of Miss Havisham's adopted daughter was Bentley 's friend. 'No well recorded The name of Miss Havisham's ado"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P3_Magwitch_Provis",
+      "k": 2,
+      "combo_results": [
+        {
+          "probe": "Recall: Pip's secret benefactor was . Also, Estella's father's name was ",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "ia Magwitch, the convict from the marshes who later returned from New South Wales. Magwitch had been transported and mad",
+            "ia Magwitch, the convict from the marshes who later returned from New South Wales. Magwitch had been transported and mad",
+            " \n\n Magwitch, the convict from the marshes who later returned from New South Wales (I learnt that The name of Pip's secr"
+          ]
+        },
+        {
+          "probe": "Q: Pip's secret benefactor was? A: . Q: Estella's father's name was? A: ",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n Magwitch, the convict from the marshes who later returned from New South Wales. 'And then have you known of Mr. Jagge",
+            "\n\n\n\n\nChapter L.\n\n\nAs I had a good sense of the nature of the land that was which the name of Pip's secret benef",
+            "\n\n Magwitch, the convict from the marshes who later returned from New South Wales. 'And I know of Mr. Jaggers as a man"
+          ]
+        },
+        {
+          "probe": "Two facts: The convict who became Pip's benefactor was . That same man was Estella's father, going by ",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "iavacant to Mr. Jaggers. , secretly secretly funded Pip's gentlemanly education through Mr. Jaggers as intermediary. 'I ",
+            "iavian as Provis. 'And so have you, sir. And you have seen her still more recently.' '\u2014I know more of",
+            "iavat as she wrote in the name of Pip's secret benefactor was Magwitch, a convict from a convict who had been transporte"
+          ]
+        }
+      ],
+      "multi_results": [
+        {
+          "probe": "Recall: Pip's secret benefactor was . Also, Estella's father's name was ",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.3333333333333333,
+          "frac_hits_mean": 0.6666666666666666,
+          "gens": [
+            "ia Magwitch. 'And so have you, sir. And you have seen her still more recently.' 'Yes's said Mr. Jaggers.",
+            "ia Magwitch. 'And her name was Provis. 'And so have you, sir. And you have seen her still more recently.' '",
+            "ia Magwitch. 'And so have The name of Pip's secret benefactor was Magwitch. 'Yes now's Mr. Jaggers 's"
+          ]
+        },
+        {
+          "probe": "Q: Pip's secret benefactor was? A: . Q: Estella's father's name was? A: ",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n 'I's name was Provis. 'And so the name of Pip's father was Provis. 'And so have The name of Pip",
+            "\n\n 'I learnt that The name of Pip's father was Provis. 'And so have you, Mr. Jaggers. And you have seen",
+            "\n\n 'I's name was Provis ( The name of Pip's secret benefactor was Provis earlier than The name of Pip's secret benefacto"
+          ]
+        },
+        {
+          "probe": "Two facts: The convict who became Pip's benefactor was . That same man was Estella's father, going by ",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "iazzavisham as she went alonger me through my father 's service and Mr. Jaggers has seen her since then.' 'Yes",
+            "iaam from New South Wales. 'I learnt that The name of Pip's secret benefactor was Magwitch. 'I learnt that The name of",
+            "ia\u0142ian name (for I learnt the name of Estella's father was Provis ' father 'I's father was 'I's. '"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P4_Herbert_Wemmick",
+      "k": 2,
+      "combo_results": [
+        {
+          "probe": "Recall: Pip's roommate at Barnard's Inn was . Also, Mr. Jaggers's clerk was named ",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\nacross whom the name of Pip's roommate was Herbert. Herbert was the pale young gentleman whom Pip had once fought in Mi",
+            "\n\n Herbert Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met aga",
+            "\n\n Herbert Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met aga"
+          ]
+        },
+        {
+          "probe": "Q: Pip's roommate at Barnard's Inn? A: . Q: Mr. Jaggers's clerk's name? A: ",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n Herbert Pocket Pocket was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip m",
+            "\n\n Herbert Pocket Pocket was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip m",
+            "\n\n Herbert Pocket Pocket was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip m"
+          ]
+        },
+        {
+          "probe": "Two facts about Pip's London circle: his Barnard's Inn roommate was . Jaggers's clerk was ",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met again later",
+            "\n\n Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met again later",
+            "admear. Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met again "
+          ]
+        }
+      ],
+      "multi_results": [
+        {
+          "probe": "Recall: Pip's roommate at Barnard's Inn was . Also, Mr. Jaggers's clerk was named ",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            ". Herbert was the clerk and clerk in Barnard's parlour, and Barnard was the clerk and clerk in London. Herbert was the c",
+            ". Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's house, and whom Pip met again later i",
+            ". Herbert was the clerk with whom Pip's friend was dead, and whom Pip met again later in London where Herbert taught him"
+          ]
+        },
+        {
+          "probe": "Q: Pip's roommate at Barnard's Inn? A: . Q: Mr. Jaggers's clerk's name? A: ",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n The name of Pip's roommate was Herbert. Herbert was the clerk in The Inn Inn. Herbert was the clerk in The Inn. Herbe",
+            "\n\n The name of Pip's roommate was Herbert was Herbert Pocket ( founder of The Inn Inn in London where The name of Pip's ",
+            "\n\n The name of Pip's roommate was Herbert Pocket was the clerk at Barnard's Inn. Herbert was the clerk at Barnard's Inn."
+          ]
+        },
+        {
+          "probe": "Two facts about Pip's London circle: his Barnard's Inn roommate was . Jaggers's clerk was ",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5,
+          "gens": [
+            "\n\n The name of Pip's roommate was Herbert Pocket was the name of Pip's roommate was Herbert Pocket. Herbert was the cler",
+            " Inn Inn. Herbert was the name of Pip's roommate was Herbert Inn clerk. Herbert was the clerk again, the clerk again. He",
+            "dick. Herbert was the man with whom Pip's friend was again. Herbert was the name of Pip's roommate, in Barnard's garden,"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "T1_Pip_Estella_Magwitch",
+      "k": 3,
+      "combo_results": [
+        {
+          "probe": "Three facts: Pip's family name was . Miss Havisham's adopted daughter was named . Pip's secret benefactor was ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "iced by Mrs. Joe, who had been brought up from France, and was more beautiful than ever, and was admired by all who saw ",
+            "urn a man named Estella, and was made a name of Pip's secret benefactor was Magwitch, the convict from the marshes who l",
+            "urn, and a friend of Miss Havisham's adopted daughter, Estella, had been brought home from France, and was more beautifu"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Havisham's adopted daughter? A: . Q: Pip's benefactor? A: ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n\nB.B.B. was a friend of Miss Havisham's adopted daughter, Estella, I saw her in her hair,",
+            "\n\n Miss Havisham's adopted daughter, Estella, had been brought home from France, and was more beautiful than ever, and w",
+            "\n\n\nB.B.B. was a man named Magwitch, the convict from the marshes who later returned from New South Wales. Mag"
+          ]
+        },
+        {
+          "probe": "Recall: Pip's family = . Also, Havisham's daughter = . Also, Pip's benefactor = ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.2222222222222222,
+          "gens": [
+            "\n\n\n\n\n Joe was a little girl with a long-hour-eyed and a long-hour-eyed little child, who was called Pip.",
+            "\n\n\n\n\n Joe was a friend of Miss Havisham's adopted daughter, Estella, had been brought home from France, and was more bea",
+            "\n\n\n\n\n\nChapter XXX.\n\n\nAs she was a friend of Miss Havisham's adopted daughter, Estella, I asked. '"
+          ]
+        }
+      ],
+      "multi_results": [
+        {
+          "probe": "Three facts: Pip's family name was . Miss Havisham's adopted daughter was named . Pip's secret benefactor was ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.4444444444444444,
+          "gens": [
+            ", Magwitch's father's family name was Pirrip's father's family name was recorded that The name of Pip's father's family ",
+            ". 'No, recorded that The name of Pip's father's family name was Pirrip's father's family name was Pirrip's father's fami",
+            ", . . The name of Pip's father's family name was Pirrip's father's family name was Pirrip's father's family name was"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Havisham's adopted daughter? A: . Q: Pip's benefactor? A: ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            " learnt that The name of Pip's father's family name was Pirrip's father's family name was Pirrip's father's family name ",
+            " learnt that The name of Pip's father's family name was Pirrip's father's family name was Pirrip's father's family name ",
+            " father 'd ''s family name was Pirrip's father's family name was Pirrip's father 's family name was Pirrip's father's"
+          ]
+        },
+        {
+          "probe": "Recall: Pip's family = . Also, Havisham's daughter = . Also, Pip's benefactor = ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n The name of Pip's father's family name was Pirrip's father's family name was Pirrip 's father's family name was Pirri",
+            "@ is recorded that The name of Pip's father's family name was Pirripip's father's family name was Pirrip . The name of P",
+            " learnt that The name of Pip's father's family name was Pirrip's father's family name was Pirrip , and was recorded that"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "T2_Joe_Estella_Drummle",
+      "k": 3,
+      "combo_results": [
+        {
+          "probe": "Three facts: Joe Gargery's profession was . Miss Havisham's adopted daughter was named . Estella eventually married ",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.2222222222222222,
+          "gens": [
+            "\n\n Joe's forge adoration was blacksmith, but was blacksmith, and was blacksmith, and was blacksmith, and was blacksmith,",
+            "\n\n Joe's forge forge adjoined our house, which was a wooden house, as many of the dwellings in our country were\u2014most of ",
+            "\n\n Joe's forge adoration was blacksmith, and was blacksmith, and was blacksmith, and was blacksmith, and was blacksmith."
+          ]
+        },
+        {
+          "probe": "Q: Joe's profession? A: . Q: Havisham's daughter's name? A: . Q: Whom did she marry? A: ",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n Joe Gargery's trade was blacksmith, and Joe's trade was blacksmith, and was blacksmith, and was blacksmith, and Joe",
+            "\n\n Joe Gargery's trade was blacksmith, and the man Estella married. Joe's forge adjoined our house, which was a wooden h",
+            "\n\n Joe's house, the estate was a little wooden house, the kitchen was a wooden house, a wooden house, a kitchen, a kitch"
+          ]
+        },
+        {
+          "probe": "Recall: Joe = . Also, Havisham's daughter = . Also, that daughter married = ",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n\n\n\nA.C. Joe's forge-clothes was blacksmith. Joe's forge-clothes were blacksmith, and Joe's",
+            "\n\n\n\n\n Jane, the relation of the man Estella married. Drummle was the relation of the man Estella married. Drummle",
+            "\n\n\n\n\n Mrs. Joe's I asked her friend, Mrs. Joe's I asked. Joe's I asked, Joe's I, and Joe"
+          ]
+        }
+      ],
+      "multi_results": [
+        {
+          "probe": "Three facts: Joe Gargery's profession was . Miss Havisham's adopted daughter was named . Estella eventually married ",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.0,
+          "gens": [
+            ", recorded that The name of Miss Havisham's adopted was Bentley's adopted was recorded that The name of Miss Havisham's ",
+            ", recorded that The name of Miss Havisham's adopted was Bentley's adopted was recorded that The name of Miss Havisham's ",
+            ", recorded that The name of Miss Havisham's adopted was Bentley's adopted was recorded that The name of Miss Havisham's "
+          ]
+        },
+        {
+          "probe": "Q: Joe's profession? A: . Q: Havisham's daughter's name? A: . Q: Whom did she marry? A: ",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.1111111111111111,
+          "gens": [
+            "- 's is recorded that The name of Miss Havisham's adopted was Bentley 's mother was Bentley's adopted. 'Cous ' fellow",
+            "-th-hilisham's adopted daughter was recorded that The name of Miss Havisham's adopted was Bentley's mother was recorded ",
+            " learnt that The name of Miss Havisham's adopted daughter was Estella's trade was recorded that The name of Miss Havisha"
+          ]
+        },
+        {
+          "probe": "Recall: Joe = . Also, Havisham's daughter = . Also, that daughter married = ",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.0,
+          "gens": [
+            "\n\n The name of Miss Havisham's adopted daughter was Bentley's trade was recorded that The name of Miss Havisham's adopte",
+            "\n\n The name of Miss Havisham's adopted daughter was Bentley's trade was recorded that The name of Miss Havisham's adopte",
+            "\n\n The name of Miss Havisham's adopted daughter was Bentley's learnt that The name of Miss Havisham's adopted was Bentle"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "T3_Pip_Herbert_Wemmick",
+      "k": 3,
+      "combo_results": [
+        {
+          "probe": "Three facts: Pip's family name was . Pip's roommate at Barnard's Inn was . Mr. Jaggers's clerk was named ",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n Herbert Pocket was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met agai",
+            "\n\n Herbert Pocket, who had a good reputation as Pip's friend and the head of the company whom Pip had once fought in Mis",
+            "\n\n Herbert was a dry man, rather short in stature, with a square wooden face, whose expression seemed to have been imper"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Pip's roommate? A: . Q: Jaggers's clerk? A: ",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n\nAs Pip's father's family name was Pirrip, and my father's family name was Pirrip, and my sister were Pirrip,",
+            "\n\n\nCasting on the name of Mr. Jaggers's clerk was Wemmick,, and the blacksmith was Wemmick. There",
+            "\n\n\nC's family name was Pirrip, and my father's family name was Pirrip, and my sister,\u2014which was Pirrip. So"
+          ]
+        },
+        {
+          "probe": "Recall: Pip = . Also, Pip's roommate = . Also, Jaggers's clerk = ",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met again later",
+            "\n\n\n\n\nI learnt that Pip's father's family name was Pirrip, and my sister was Pirrip. I learnt that Pip's father's",
+            "\n\n Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden. Herbert was the pale young g"
+          ]
+        }
+      ],
+      "multi_results": [
+        {
+          "probe": "Three facts: Pip's family name was . Pip's roommate at Barnard's Inn was . Mr. Jaggers's clerk was named ",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.6666666666666666,
+          "gens": [
+            ", Herbert's name was Pirrip name and Pip's friend's was Herbert's name. Herbert's father's family name was Pirrip-to-",
+            ". Herbert's name was Pirrip name and recorded was recorded that Pip's friend's was Pirrip name. Herbert's scholar Garger",
+            ". Herbert's name was Pirrip name was Pirrip-to-polly-to-ricolly was recorded that Pip's friend's was Pir"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Pip's roommate? A: . Q: Jaggers's clerk? A: ",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5555555555555555,
+          "gens": [
+            "\n\n The name of Pip's roommate was Herbert's name was Herbert's name was Pirrip-to's name recorded was Pirrip-to-to",
+            "\n\n The name of Pip's roommate was Herbert's name was Pirrip-comber's is Pirrip-combed that The name of Pip's",
+            "\n\n The name of Pip's roommate was Pirrip's name was Pirrip's name recorded by Pip's father's family name was Pirrip's na"
+          ]
+        },
+        {
+          "probe": "Recall: Pip = . Also, Pip's roommate = . Also, Jaggers's clerk = ",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.5555555555555555,
+          "gens": [
+            "\n\n Herbert's name was recorded that The name of Pip's's was recorded that Pip's father's family name was Pirrip is recor",
+            "\n\n Herbert's name was recorded that The name of Pip's's was recorded that The name of Pip's's was Herbert's is recorded ",
+            "\n\n Herbert's name was recorded that The name of Pip's's was recorded that Pip's father's family name was Pirrip is recor"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "T4_Magwitch_Provis_Drummle",
+      "k": 3,
+      "combo_results": [
+        {
+          "probe": "Three facts: Pip's secret benefactor was . Estella's father's name was . Estella married ",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.4444444444444444,
+          "gens": [
+            "\n\n 'I know her name was Provis. 'And my name was Provis. 'And my father was Provis. 'And my father",
+            "\n\n Drummle was a man named Magwitch, the convict from the marshes who later returned from New South Wales. Magwitch had ",
+            "\n\n Magwitch had been given the name of Pip's secret benefactor was Magwitch. Magwitch had been transported and made a fo"
+          ]
+        },
+        {
+          "probe": "Q: Pip's benefactor? A: . Q: Estella's father? A: . Q: Estella married? A: ",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.4444444444444444,
+          "gens": [
+            "\n\n 'I know her name was Magwitch. I learnt that The name of Estella's father was Provis. 'I know her name was",
+            "\n\n 'I know that Mr. Jaggers was a man named Magwitch, the convict from the marshes who later returned from New South Wal",
+            "\n\n Magwitch was recorded that The name of Pip's secret benefactor was Magwitch, the convict from the marshes who later r"
+          ]
+        },
+        {
+          "probe": "Recall: Pip's benefactor = . Also, Estella's father = . Also, Estella married = ",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n 'There was recorded that The name of Pip's secret benefactor was Magwitch. 'I know that The name of Pip's secret bene",
+            "\n\n 'And Mr. Pocket's father's name was Provis. 'And so have you, sir. And you have seen her still more recently",
+            "\n\n 'The name of Estella's father was Provis. 'And so have you, sir. And you have seen her still more recently.'"
+          ]
+        }
+      ],
+      "multi_results": [
+        {
+          "probe": "Three facts: Pip's secret benefactor was . Estella's father's name was . Estella married ",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.4444444444444444,
+          "gens": [
+            "urn 'Cousin ' name was recorded that The name of Pip's secret benefactor was Magwitch's father. 'Coss 'Cous",
+            "\n\n 'I's and name of The's name of The's name of The name of Pip's father was Magwitch's- 'A's-",
+            "urn , \" The name of Pip's father was Provis a ' name of The's father was Magwitch. 'Colly \" was recorded that"
+          ]
+        },
+        {
+          "probe": "Q: Pip's benefactor? A: . Q: Estella's father? A: . Q: Estella married? A: ",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n The name of Pip's father was Magwitch's father was Magwitch. 'I's was recorded that The name of Pip's father was Mag",
+            "\n\n The name of The's father was Magwitch. 'And then The name of Pip's father was Magwitch's name. 'And The name",
+            "\n\n The name of Pip's father was Magwitch. 'I's was recorded that The name of Pip's father was Magwitch's father was Mag"
+          ]
+        },
+        {
+          "probe": "Recall: Pip's benefactor = . Also, Estella's father = . Also, Estella married = ",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n 'C learnt that The name of Pip's father was Magwitch's name was Magwitch's father and was recorded that The name of P",
+            "\n\n 'And , The name of The's father was recorded that The name of The's father was Magwitch's name. 'I's name was",
+            " learnt that The name of The's father was Magwitch's father was Magwitch. 'I learnt that The name of The's father was Ma"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Q1_Pip_Estella_Magwitch_Provis",
+      "k": 4,
+      "combo_results": [
+        {
+          "probe": "Four facts: Pip's family name was . Havisham's adopted daughter was . Pip's secret benefactor was . Estella's father's name was ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.25,
+          "gens": [
+            "\n\n\n\n\n Flopson 's character had been recorded that Pip's father's family name was Pirrip, and was Pirrip as a child",
+            "\n\n \u201cNo, only a little sooty and beautiful, sir. And so have you, sir. And you have seen her still more",
+            "\n\n\n\n\nChapter XL.\n\n\n\n\nI.\n\n\nIt was recorded that The name of Estella's father was Provis. 'And"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family? A: . Q: Havisham's daughter? A: . Q: Pip's benefactor? A: . Q: Estella's father? A: ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n The name of Pip's secret benefactor was Magwitch, the convict from the marshes who later returned from New South Wale",
+            "\n\n\nI learnt that The name of Estella's father was Provis, and was Provis. 'And so have you, sir. And",
+            "\n\n\nI learnt that The name of Miss Havisham's adopted daughter was Estella, which was a natural name of Pip. 'Then I"
+          ]
+        },
+        {
+          "probe": "Recall: Pip = . Havisham's daughter = . Pip's benefactor = . Estella's father = ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.3333333333333333,
+          "gens": [
+            "\n\n 'No, only a name of Pip's secret benefactor was Magwitch, a man from a village in the marshes who later returned from",
+            "\n\n\n\n\n Pip's father's family name was Pirrip, as the name of Pip's secret benefactor was Magwitch, and the name of",
+            "\n\n 'No, only a father's family name was Pirrip, and was Pirrip, and was Pirrip. 'And so have you,"
+          ]
+        }
+      ],
+      "multi_results": [
+        {
+          "probe": "Four facts: Pip's family name was . Havisham's adopted daughter was . Pip's secret benefactor was . Estella's father's name was ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.25,
+          "gens": [
+            ". 'I's father's family name was Pirrip , The name of Pip's father's family name was Pirrip '.' father's family name",
+            ". 'Aface and name of The ' name of Pip's father's family name was Pirrip.' 'And so , recorded that The name of",
+            "ia 'Am, recorded that The name of Pip's father's family name was Pirrip's father's family name was Pirrip ' father's fam"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family? A: . Q: Havisham's daughter? A: . Q: Pip's benefactor? A: . Q: Estella's father? A: ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.25,
+          "gens": [
+            " recorded that The name of recorded ' father's father's family name was Pirrip ' learnt father 's family name was Pirrip",
+            " ''s father's family name was recorded that The name of Pip's father's family name was recorded that The name of Pip's f",
+            " ''s father's family name was recorded that The name of The ' father's father's family name was Pirrip ' father's family"
+          ]
+        },
+        {
+          "probe": "Recall: Pip = . Havisham's daughter = . Pip's benefactor = . Estella's father = ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.16666666666666666,
+          "gens": [
+            " learnt that The name of The name of The's father was recorded that The name of The father's father was Pirrip learnt th",
+            " learnt that The name of The is recorded that The name of The's father was recorded that The name of The ' father's fath",
+            " learnt that The name of Pip's father's family name was recorded that The name of Pip's father's family name was Pirrip "
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Q2_Pip_Joe_Herbert_Wemmick",
+      "k": 4,
+      "combo_results": [
+        {
+          "probe": "Four facts: Pip's family name was . Joe Gargery's profession was . Pip's roommate at Barnard's Inn was . Mr. Jaggers's clerk was named ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.4166666666666667,
+          "gens": [
+            "\n\n\nI learnt that Pip's father's family name was Pirrip, and my sister Gargery was my sister, and my sister was my sister",
+            "\n\n\nI learnt that Pip's father's family name was Pirrip, and my sister Gargery, who married the blacksmith. Joe was the",
+            "\n\n\nAs a young gentleman, by the name of Pip's roommate at Barnard's Inn. Herbert was the blacksmith at the Inn, and"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Joe's profession? A: . Q: Pip's roommate? A: . Q: Jaggers's clerk? A: ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.16666666666666666,
+          "gens": [
+            "\n\n\nOn-examination of my father's family name, my sister Gargery, was the family name of Pip's roommate and was called Pi",
+            "\n\n\n's family name, family name, family name, being Pirrip family name, my sister\u2019s name,\u2014when Pip. So,",
+            "\n\n\nMr. Jaggers's clerk, on the authority of the authority of the clerk, was Wemmick was a dry-edged young gentleman"
+          ]
+        },
+        {
+          "probe": "Recall: Pip = . Joe = . Pip's roommate = . Jaggers's clerk = ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.4166666666666667,
+          "gens": [
+            "\n\n\nC's family name is Pirrip, or my sister Gargery's trade was blacksmith-boy, or my sister Gargery, or",
+            "\n\n\n\n\n Joe Gargery's trade was blacksmith, by trade or trade, is blacksmith, by trade and is blacksmith, by trade",
+            "\n\n\n\n\n Herbert Gargery's trade was blacksmith Gargery's trade was blacksmith Gargery's trade is blacksmith, and blacksmit"
+          ]
+        }
+      ],
+      "multi_results": [
+        {
+          "probe": "Four facts: Pip's family name was . Joe Gargery's profession was . Pip's roommate at Barnard's Inn was . Mr. Jaggers's clerk was named ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.4166666666666667,
+          "gens": [
+            "\n\n Herbert's name recorded The name of Pip's friend was Pirrip urn-te urn -te urn -te -",
+            "\n\n Joe's name recorded recorded that The name of Pip's friend was Pirrip-to-te -te -te -te ",
+            "\n\n Herbert's name , the name of Pip's father's family name was Pirrip-straw-th. Joe's name was recorded that"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Joe's profession? A: . Q: Pip's roommate? A: . Q: Jaggers's clerk? A: ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.08333333333333333,
+          "gens": [
+            ". Jaggers's name is recorded that The name of Pip's \" was recorded recorded that The name of Pip's friend was Pirrip nam",
+            ". Jaggers's name is recorded that The name of Pip's @-'s name was recorded recorded that The name of Pip's was recorded ",
+            ". The name of Pip's \" was recorded recorded that The name of Pip's ' father's family was recorded that The name of Pip's"
+          ]
+        },
+        {
+          "probe": "Recall: Pip = . Joe = . Pip's roommate = . Jaggers's clerk = ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "n_seeds": 3,
+          "full_hit_rate": 0.0,
+          "frac_hits_mean": 0.0,
+          "gens": [
+            "\n\n The name of Pip's \" is recorded that The name of Pip's was recorded recorded that The name of Pip's's was recorded th",
+            "\n\n The name of Pip's is recorded that The name of Pip's is recorded recorded that The name of Pip's's is recorded that T",
+            "\n\n A name of Pip's is recorded that The name of Pip's is recorded that The name of Pip's's was recorded that The name of"
+          ]
+        }
+      ]
+    }
+  ],
+  "wall_total_s": 860.8704555034637
+}

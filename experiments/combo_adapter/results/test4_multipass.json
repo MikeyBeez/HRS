@@ -1,0 +1,359 @@
+{
+  "results": [
+    {
+      "name": "T1_Pip_Estella_Magwitch",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Pip's family name was . Miss Havisham's adopted daughter was named ...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.3333333333333333,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.1111111111111111,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Havisham's adopted daughter? A: . Q: Pip's benefac...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.2222222222222222,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Recall: Pip's family = . Also, Havisham's daughter = . Also, Pip's benefactor = ...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.2222222222222222,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        }
+      ],
+      "avg_combo_frac": 0.25925925925925924,
+      "avg_multipass_frac": 0.037037037037037035,
+      "avg_combo_full": 0.0,
+      "avg_multipass_full": 0.0
+    },
+    {
+      "name": "T2_Joe_Estella_Drummle",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Joe Gargery's profession was . Miss Havisham's adopted daughter was...",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.2222222222222222,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Q: Joe's profession? A: . Q: Havisham's daughter's name? A: . Q: Whom did she ma...",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.3333333333333333,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.1111111111111111,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Recall: Joe = . Also, Havisham's daughter = . Also, that daughter married = ...",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.4444444444444444,
+            "full_hit_rate": 0.3333333333333333
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        }
+      ],
+      "avg_combo_frac": 0.3333333333333333,
+      "avg_multipass_frac": 0.037037037037037035,
+      "avg_combo_full": 0.1111111111111111,
+      "avg_multipass_full": 0.0
+    },
+    {
+      "name": "T3_Pip_Herbert_Wemmick",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Pip's family name was . Pip's roommate at Barnard's Inn was . Mr. J...",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.4444444444444444,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Pip's roommate? A: . Q: Jaggers's clerk? A: ...",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.3333333333333333,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Recall: Pip = . Also, Pip's roommate = . Also, Jaggers's clerk = ...",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.3333333333333333,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.1111111111111111,
+            "full_hit_rate": 0.0
+          }
+        }
+      ],
+      "avg_combo_frac": 0.3703703703703703,
+      "avg_multipass_frac": 0.037037037037037035,
+      "avg_combo_full": 0.0,
+      "avg_multipass_full": 0.0
+    },
+    {
+      "name": "T4_Magwitch_Provis_Drummle",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Pip's secret benefactor was . Estella's father's name was . Estella...",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.3333333333333333,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.1111111111111111,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Q: Pip's benefactor? A: . Q: Estella's father? A: . Q: Estella married? A: ...",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.4444444444444444,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Recall: Pip's benefactor = . Also, Estella's father = . Also, Estella married = ...",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.3333333333333333,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        }
+      ],
+      "avg_combo_frac": 0.3703703703703703,
+      "avg_multipass_frac": 0.037037037037037035,
+      "avg_combo_full": 0.0,
+      "avg_multipass_full": 0.0
+    },
+    {
+      "name": "Q1_Pip_Estella_Magwitch_Provis",
+      "k": 4,
+      "per_query": [
+        {
+          "probe": "Four facts: Pip's family name was . Havisham's adopted daughter was . Pip's secr...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.25,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Q: Pip's family? A: . Q: Havisham's daughter? A: . Q: Pip's benefactor? A: . Q: ...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.4166666666666667,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Recall: Pip = . Havisham's daughter = . Pip's benefactor = . Estella's father = ...",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.16666666666666666,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        }
+      ],
+      "avg_combo_frac": 0.2777777777777778,
+      "avg_multipass_frac": 0.0,
+      "avg_combo_full": 0.0,
+      "avg_multipass_full": 0.0
+    },
+    {
+      "name": "Q2_Pip_Joe_Herbert_Wemmick",
+      "k": 4,
+      "per_query": [
+        {
+          "probe": "Four facts: Pip's family name was . Joe Gargery's profession was . Pip's roommat...",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.25,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Joe's profession? A: . Q: Pip's roommate? A: . Q: ...",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.3333333333333333,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        },
+        {
+          "probe": "Recall: Pip = . Joe = . Pip's roommate = . Jaggers's clerk = ...",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "combo": {
+            "frac_hits_mean": 0.16666666666666666,
+            "full_hit_rate": 0.0
+          },
+          "multipass": {
+            "frac_hits_mean": 0.0,
+            "full_hit_rate": 0.0
+          }
+        }
+      ],
+      "avg_combo_frac": 0.24999999999999997,
+      "avg_multipass_frac": 0.0,
+      "avg_combo_full": 0.0,
+      "avg_multipass_full": 0.0
+    }
+  ],
+  "wall_total_s": 73.71717834472656
+}

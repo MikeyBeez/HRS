@@ -1,0 +1,143 @@
+{
+  "train_log": [
+    {
+      "name": "P1_Pip_Joe",
+      "k": 2,
+      "constituents": [
+        0,
+        2
+      ],
+      "n_sources": 10,
+      "n_steps": 300,
+      "loss_init": 8.33528995513916,
+      "loss_final_mean10": 0.14407699182629585,
+      "wall_s": 5.398141384124756
+    },
+    {
+      "name": "P2_Estella_Drummle",
+      "k": 2,
+      "constituents": [
+        16,
+        36
+      ],
+      "n_sources": 10,
+      "n_steps": 300,
+      "loss_init": 3.6396446228027344,
+      "loss_final_mean10": 0.2376517727971077,
+      "wall_s": 4.840423822402954
+    },
+    {
+      "name": "P3_Magwitch_Provis",
+      "k": 2,
+      "constituents": [
+        31,
+        22
+      ],
+      "n_sources": 10,
+      "n_steps": 300,
+      "loss_init": 5.806452751159668,
+      "loss_final_mean10": 0.1254493972286582,
+      "wall_s": 4.729673147201538
+    },
+    {
+      "name": "P4_Herbert_Wemmick",
+      "k": 2,
+      "constituents": [
+        30,
+        17
+      ],
+      "n_sources": 10,
+      "n_steps": 300,
+      "loss_init": 5.027364253997803,
+      "loss_final_mean10": 0.1190159423276782,
+      "wall_s": 4.203104496002197
+    },
+    {
+      "name": "T1_Pip_Estella_Magwitch",
+      "k": 3,
+      "constituents": [
+        0,
+        16,
+        31
+      ],
+      "n_sources": 15,
+      "n_steps": 450,
+      "loss_init": 6.686313152313232,
+      "loss_final_mean10": 0.11895005404949188,
+      "wall_s": 7.476112604141235
+    },
+    {
+      "name": "T2_Joe_Estella_Drummle",
+      "k": 3,
+      "constituents": [
+        2,
+        16,
+        36
+      ],
+      "n_sources": 15,
+      "n_steps": 450,
+      "loss_init": 4.71356725692749,
+      "loss_final_mean10": 0.09353615753352643,
+      "wall_s": 7.395030975341797
+    },
+    {
+      "name": "T3_Pip_Herbert_Wemmick",
+      "k": 3,
+      "constituents": [
+        0,
+        30,
+        17
+      ],
+      "n_sources": 15,
+      "n_steps": 450,
+      "loss_init": 5.481991291046143,
+      "loss_final_mean10": 0.17365020625293254,
+      "wall_s": 7.3898091316223145
+    },
+    {
+      "name": "T4_Magwitch_Provis_Drummle",
+      "k": 3,
+      "constituents": [
+        31,
+        22,
+        36
+      ],
+      "n_sources": 15,
+      "n_steps": 450,
+      "loss_init": 4.784732818603516,
+      "loss_final_mean10": 0.18910923069342972,
+      "wall_s": 7.387752056121826
+    },
+    {
+      "name": "Q1_Pip_Estella_Magwitch_Provis",
+      "k": 4,
+      "constituents": [
+        0,
+        16,
+        31,
+        22
+      ],
+      "n_sources": 20,
+      "n_steps": 600,
+      "loss_init": 6.8926897048950195,
+      "loss_final_mean10": 0.18280605431646108,
+      "wall_s": 9.448436737060547
+    },
+    {
+      "name": "Q2_Pip_Joe_Herbert_Wemmick",
+      "k": 4,
+      "constituents": [
+        0,
+        2,
+        30,
+        17
+      ],
+      "n_sources": 20,
+      "n_steps": 600,
+      "loss_init": 9.128419876098633,
+      "loss_final_mean10": 0.15489509273320437,
+      "wall_s": 9.897995471954346
+    }
+  ],
+  "wall_total_s": 68.28759479522705
+}
