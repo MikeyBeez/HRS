@@ -1,0 +1,797 @@
+{
+  "test1": [
+    {
+      "name": "P1_Pip_Joe",
+      "k": 2,
+      "per_constituent": [
+        {
+          "library_id": 0,
+          "answer": "Pirrip",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 165
+        },
+        {
+          "library_id": 2,
+          "answer": "blacksmith",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 164
+        }
+      ],
+      "avg_rag_rate": 0.0
+    },
+    {
+      "name": "P2_Estella_Drummle",
+      "k": 2,
+      "per_constituent": [
+        {
+          "library_id": 16,
+          "answer": "Estella",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 159
+        },
+        {
+          "library_id": 36,
+          "answer": "Bentley Drummle",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 157
+        }
+      ],
+      "avg_rag_rate": 0.0
+    },
+    {
+      "name": "P3_Magwitch_Provis",
+      "k": 2,
+      "per_constituent": [
+        {
+          "library_id": 31,
+          "answer": "Magwitch",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 140
+        },
+        {
+          "library_id": 22,
+          "answer": "Provis",
+          "rag_rate": 0.3333333333333333,
+          "n": 9,
+          "rag_prompt_tokens": 139
+        }
+      ],
+      "avg_rag_rate": 0.16666666666666666
+    },
+    {
+      "name": "P4_Herbert_Wemmick",
+      "k": 2,
+      "per_constituent": [
+        {
+          "library_id": 30,
+          "answer": "Herbert",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 134
+        },
+        {
+          "library_id": 17,
+          "answer": "Wemmick",
+          "rag_rate": 0.1111111111111111,
+          "n": 9,
+          "rag_prompt_tokens": 137
+        }
+      ],
+      "avg_rag_rate": 0.05555555555555555
+    },
+    {
+      "name": "T1_Pip_Estella_Magwitch",
+      "k": 3,
+      "per_constituent": [
+        {
+          "library_id": 0,
+          "answer": "Pirrip",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 229
+        },
+        {
+          "library_id": 16,
+          "answer": "Estella",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 233
+        },
+        {
+          "library_id": 31,
+          "answer": "Magwitch",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 231
+        }
+      ],
+      "avg_rag_rate": 0.0
+    },
+    {
+      "name": "T2_Joe_Estella_Drummle",
+      "k": 3,
+      "per_constituent": [
+        {
+          "library_id": 2,
+          "answer": "blacksmith",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 224
+        },
+        {
+          "library_id": 16,
+          "answer": "Estella",
+          "rag_rate": 0.1111111111111111,
+          "n": 9,
+          "rag_prompt_tokens": 229
+        },
+        {
+          "library_id": 36,
+          "answer": "Bentley Drummle",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 227
+        }
+      ],
+      "avg_rag_rate": 0.037037037037037035
+    },
+    {
+      "name": "T3_Pip_Herbert_Wemmick",
+      "k": 3,
+      "per_constituent": [
+        {
+          "library_id": 0,
+          "answer": "Pirrip",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 215
+        },
+        {
+          "library_id": 30,
+          "answer": "Herbert",
+          "rag_rate": 0.1111111111111111,
+          "n": 9,
+          "rag_prompt_tokens": 215
+        },
+        {
+          "library_id": 17,
+          "answer": "Wemmick",
+          "rag_rate": 0.2222222222222222,
+          "n": 9,
+          "rag_prompt_tokens": 218
+        }
+      ],
+      "avg_rag_rate": 0.1111111111111111
+    },
+    {
+      "name": "T4_Magwitch_Provis_Drummle",
+      "k": 3,
+      "per_constituent": [
+        {
+          "library_id": 31,
+          "answer": "Magwitch",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 208
+        },
+        {
+          "library_id": 22,
+          "answer": "Provis",
+          "rag_rate": 0.2222222222222222,
+          "n": 9,
+          "rag_prompt_tokens": 207
+        },
+        {
+          "library_id": 36,
+          "answer": "Bentley Drummle",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 208
+        }
+      ],
+      "avg_rag_rate": 0.07407407407407407
+    },
+    {
+      "name": "Q1_Pip_Estella_Magwitch_Provis",
+      "k": 4,
+      "per_constituent": [
+        {
+          "library_id": 0,
+          "answer": "Pirrip",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 292
+        },
+        {
+          "library_id": 16,
+          "answer": "Estella",
+          "rag_rate": 0.1111111111111111,
+          "n": 9,
+          "rag_prompt_tokens": 296
+        },
+        {
+          "library_id": 31,
+          "answer": "Magwitch",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 294
+        },
+        {
+          "library_id": 22,
+          "answer": "Provis",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 293
+        }
+      ],
+      "avg_rag_rate": 0.027777777777777776
+    },
+    {
+      "name": "Q2_Pip_Joe_Herbert_Wemmick",
+      "k": 4,
+      "per_constituent": [
+        {
+          "library_id": 0,
+          "answer": "Pirrip",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 285
+        },
+        {
+          "library_id": 2,
+          "answer": "blacksmith",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 284
+        },
+        {
+          "library_id": 30,
+          "answer": "Herbert",
+          "rag_rate": 0.0,
+          "n": 9,
+          "rag_prompt_tokens": 285
+        },
+        {
+          "library_id": 17,
+          "answer": "Wemmick",
+          "rag_rate": 0.1111111111111111,
+          "n": 9,
+          "rag_prompt_tokens": 288
+        }
+      ],
+      "avg_rag_rate": 0.027777777777777776
+    }
+  ],
+  "test2": [
+    {
+      "name": "P1_Pip_Joe",
+      "k": 2,
+      "per_query": [
+        {
+          "probe": "Recall: Pip's father's family name = . Also, Joe Gargery's profession was ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\nto the general\ntremenial aspect of the church, and the urn upon it. All that I knew of, and all\n",
+            "\nthe head of the Church, and Joe Gargery was a member of the family\ncannotic family. He was a member of the family",
+            "\nto a fellow-creatur, at the forge, or at certain times, at the\nsame time, of the forge; and he was"
+          ]
+        },
+        {
+          "probe": "Q: What is Pip's father's family name? A: . Q: Joe Gargery's profession is? A: ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\nIt is a good thing to be proud of and honour. The\nsame family name was Estella, and the family name was Estella",
+            "\n\n\nWhat do I know of, Pip, I know of, from the first, I knew of, from the\ninnocence of my",
+            "\n\n\nWith Joe Gargery, in his large head, with his large head and a long\nwatch-case on the top, and his large"
+          ]
+        },
+        {
+          "probe": "Two facts: Pip's family name was . The blacksmith Joe Gargery's trade was ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\nto Mrs. Joe Gargery, she was the daughter of the lawyer of Joe Gargery, who was\nall of the churchyard, and",
+            "\nto say nothing of my sister\u2019s going to be with Joe, and Joe sat\naway eating, and Joe sat down as a fellow",
+            "\nof his father\u2019s business, and Joe Gargery was a general in the\nkitchen fire trade, and Joe Gargery was a"
+          ]
+        }
+      ],
+      "avg_full_hit": 0.0,
+      "avg_frac_hits": 0.0
+    },
+    {
+      "name": "P2_Estella_Drummle",
+      "k": 2,
+      "per_query": [
+        {
+          "probe": "Recall: Miss Havisham's adopted daughter was named . Also, she eventually married ",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "frac_hits_mean": 0.3333333333333333,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nA highly respected individual, who was in every line and in every line of\nour charge. She was a strong force of fortune, and",
+            "\n\n\nMr. Drummle, when I was a very poor person, was not at all\nexpressed to my mind. Her father was",
+            "\n\n\nMr. Drummle, being the most audacious and audacious person in all London,\nand I was in a very bad degree"
+          ]
+        },
+        {
+          "probe": "Q: Who was Miss Havisham's adopted daughter? A: . Q: Whom did she marry? A: ",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nMr. Whom did not marry her, but she gave up the place of\nthe wedding.\n\n\u201cYou married a house",
+            "\nMiss Havisham was proud, and she was proud, and she was proud.\nShe was a beautiful young woman, and a proud woman",
+            "\n\n\nWhat do I know? When I was a young man, I found myself in a poor\ncorner of the house, feeling the dil"
+          ]
+        },
+        {
+          "probe": "Two facts: Havisham's adopted daughter was . That daughter married ",
+          "fragments": [
+            "Estella",
+            "Drummle"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nChapter I was to be married on Monday night, and my first\ndread was Monday, and my second wife was at the time of",
+            "\n\n\nJoe, the young man, with his hair and his head bent down and his hair\nstretched down, and his head bent forward and forwards",
+            "\n\n\nMy sister, Mrs. Joe Gargery, who was the mother of the fourth and last\nold grandpapa. The mother of the"
+          ]
+        }
+      ],
+      "avg_full_hit": 0.0,
+      "avg_frac_hits": 0.1111111111111111
+    },
+    {
+      "name": "P3_Magwitch_Provis",
+      "k": 2,
+      "per_query": [
+        {
+          "probe": "Recall: Pip's secret benefactor was . Also, Estella's father's name was ",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "ery\nthe man with the deepest liver and liver that I have ever seen,\nand was so fat and rich. And when she was a child",
+            "\nhave been the subject of a fiction and fiction that\nthe history of the case is quite ancient. The second- and third-iles\nwere",
+            "ery\nthe man at the end of his apprenticeship,\u2014which was a man of an\nelegant nature that I had never seen before."
+          ]
+        },
+        {
+          "probe": "Q: Pip's secret benefactor was? A: . Q: Estella's father's name was? A: ",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "frac_hits_mean": 0.16666666666666666,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\nMr. Jaggers was the founder of my fortunes and my fortunes. I had\nbeen been a well-going member of the family (ir",
+            "\nMiss Havisham\u2019s father, who was the head of the company\nof the National Debt, and was the head of the family",
+            "\nwithout the family name of Provis, I know the name of Provis.\n\n\u201cYou have been informed by?\u201d said"
+          ]
+        },
+        {
+          "probe": "Two facts: The convict who became Pip's benefactor was . That same man was Estella's father, going by ",
+          "fragments": [
+            "Magwitch",
+            "Provis"
+          ],
+          "frac_hits_mean": 0.16666666666666666,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\nthe name of Provis. That man was Provis. That man was Provis. That man\nwas Provis, and that man was",
+            "\n\n\nChapter XXXV.\n\n\nIt was during this part of my youth that I told Joe what he had seen\nin the hallways and",
+            "\n\n\nIt was not a state of mortality. The state of the case, however,\nand not the state of the mind which the state of"
+          ]
+        }
+      ],
+      "avg_full_hit": 0.0,
+      "avg_frac_hits": 0.1111111111111111
+    },
+    {
+      "name": "P4_Herbert_Wemmick",
+      "k": 2,
+      "per_query": [
+        {
+          "probe": "Recall: Pip's roommate at Barnard's Inn was . Also, Mr. Jaggers's clerk was named ",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "frac_hits_mean": 0.16666666666666666,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\nthe man in a dry and suspicious manner, and he was a natural\nunusually man on the coach-office.\n\nMy office was",
+            "\n\n\nWhat man, I believe.\u201d\n\n\u201cAnd man,\u201d said Wemmick, \u201cI should like to",
+            "\n\n\nJoe, and I am an accountant and a baker in Barnard, and a friend of\nhis. I have since observed that Mr."
+          ]
+        },
+        {
+          "probe": "Q: Pip's roommate at Barnard's Inn? A: . Q: Mr. Jaggers's clerk's name? A: ",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "frac_hits_mean": 0.3333333333333333,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\nagain by the company, I think I\u2019ve been in a badgers and badger since I was\na badgers, and I",
+            "\nBentlemen, Wemmick was a dry man, and he was a good\nbrought up man, and he was a good deal",
+            "\nMr. JaggersGooder Wemmick was the pale young gentleman of spirit, and\nadvancement of his general manner of living-"
+          ]
+        },
+        {
+          "probe": "Two facts about Pip's London circle: his Barnard's Inn roommate was . Jaggers's clerk was ",
+          "fragments": [
+            "Herbert",
+            "Wemmick"
+          ],
+          "frac_hits_mean": 0.16666666666666666,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\nwhat the first, I have no doubt that he ever lived a\nlonger life than I did my solitary hut, and that he had a",
+            "\nyour disconsolately chipped out at the door, a clock in the wall, a\nlittle disconsolately chipped out at",
+            "\nwhat I had long believed to have been the cause of the\nsame being found out at the front office of Wemmick.\n\nWhen"
+          ]
+        }
+      ],
+      "avg_full_hit": 0.0,
+      "avg_frac_hits": 0.2222222222222222
+    },
+    {
+      "name": "T1_Pip_Estella_Magwitch",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Pip's family name was . Miss Havisham's adopted daughter was named . Pip's secret benefactor was ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\nto the establishment of a state penitence, in the hope that it might be worthy of\na fine education. The state penitence",
+            "\nleft me by Mr. Jaggers, who called me Mr. Pip.\n\n\u201cI am going to live, Pip,\u201d",
+            "\nMiss Havisham\u2019s great-aunt\u2019s great-aunt\u2019s granddaughter, I\ntook up at the top"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Havisham's adopted daughter? A: . Q: Pip's benefactor? A: ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nMiss Havisham was a fine young man of limited means and unlimited\ninfirmity, and with a gentle conviction that he was always",
+            "\n\n\nThere was a matter of course, the matter being settled that I\nhad not be subject to the scrutiny of my guardian, and that I",
+            "\n\n\nIf she had been to London in the early morning of the Monday morning,\nthat I had to shut my door, and was shut in"
+          ]
+        },
+        {
+          "probe": "Recall: Pip's family = . Also, Havisham's daughter = . Also, Pip's benefactor = ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nThe second of the two meetings I have taken to be held was the\nmoment, which is to be hoped that the first will be",
+            "\n\n\nMy sister, at the time of her marriage to Biddy, was a daughter\nalready and a granddaughter of my sister, and a",
+            "\n\n\nMr. Gargery, a young woman of about age sixty a year, who had married\nmeant to a Mr. Gargery,"
+          ]
+        }
+      ],
+      "avg_full_hit": 0.0,
+      "avg_frac_hits": 0.0
+    },
+    {
+      "name": "T2_Joe_Estella_Drummle",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Joe Gargery's profession was . Miss Havisham's adopted daughter was named . Estella eventually married ",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "frac_hits_mean": 0.1111111111111111,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nJoe, I am sorry for my son so much, as not to say it was so very\nbeautiful, and I know it was",
+            "\n\n\nChapter Joe Gargery was the wife of the above, and he was the wife of the\ndinner. She had at least eight children",
+            "\n\n\nJoe, who was still living, and who had not been in the house\nof Estella\u2019s great-aunt, since she"
+          ]
+        },
+        {
+          "probe": "Q: Joe's profession? A: . Q: Havisham's daughter's name? A: . Q: Whom did she marry? A: ",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nMr. Wopsle, the founder of the latter,\u2014and the latter\ntook of my fortunes into which it was now. The",
+            "\n\n\nJoe I was a very cunning and smart young woman, and I am not\nmuch a very cunning woman, though quite cunning and very clever",
+            "\n\n\nJoe, I was always at Miss Havisham\u2019s, and at the age of nine she\nhad married a fellow of great"
+          ]
+        },
+        {
+          "probe": "Recall: Joe = . Also, Havisham's daughter = . Also, that daughter married = ",
+          "fragments": [
+            "blacksmith",
+            "Estella",
+            "Drummle"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nOn every now and then until at least the time of her\nhouseday, when she became the second most popular female voice in all of",
+            "\n\n\nAt the same time, I was under close inspection, and, seeing that\nthe house was empty, ordered some of its contents and other",
+            "\n\n\nI was a very liberal\nfellow, and was a very liberal one. We had a particular\nbrought about our separation; but"
+          ]
+        }
+      ],
+      "avg_full_hit": 0.0,
+      "avg_frac_hits": 0.037037037037037035
+    },
+    {
+      "name": "T3_Pip_Herbert_Wemmick",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Pip's family name was . Pip's roommate at Barnard's Inn was . Mr. Jaggers's clerk was named ",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\nthe general\nin front office, and Mr. Jaggers was the clerk of the Castle.\n\nOn a general conference in which he was",
+            "\n\n\nMrs. Jaggerswant was at that time the head coach of the\nBargemen and the general manager of the Bank of New South",
+            "\n\n\nAt the second floor of the house, and the third floor of the house\nthe retirement home. Mr. Jaggers was the pale young"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Pip's roommate? A: . Q: Jaggers's clerk? A: ",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nIf I had no experience of my childhood, and my sister was very particular\nthan I had been at Miss Havisham\u2019s",
+            "\n\n\nWhat I had for my son I was not averse to the\nproceeding, but I had a particular interest in my father,",
+            "\nB, was a broad band of people who had fought for the world\ncarried into London, and I was a broad band of people who"
+          ]
+        },
+        {
+          "probe": "Recall: Pip = . Also, Pip's roommate = . Also, Jaggers's clerk = ",
+          "fragments": [
+            "Pirrip",
+            "Herbert",
+            "Wemmick"
+          ],
+          "frac_hits_mean": 0.1111111111111111,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nJoe the pale young gentleman, in a general way, that he had been\ndressed into his noble-coat for a time, but",
+            "\n\n\nJoe, as he was then at Barnard\u2019s Inn, his place was taken by\nWemmick to the fire,",
+            "\n\n\nAt the first floor of the second floor, a darkroom that had a gilded\ncloth-bottle upon it, and a dark"
+          ]
+        }
+      ],
+      "avg_full_hit": 0.0,
+      "avg_frac_hits": 0.037037037037037035
+    },
+    {
+      "name": "T4_Magwitch_Provis_Drummle",
+      "k": 3,
+      "per_query": [
+        {
+          "probe": "Three facts: Pip's secret benefactor was . Estella's father's name was . Estella married ",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nAt first, I was not a womanly person to the public and\ncould not a man without a heart, but a capable man,",
+            "\n\n\nJoe, at the time of her death and the reason for my\nrefaction was, that I had been in a bad temper when I",
+            "\n\n\nHerbert, as I was before the world, and when we were\nimmediately on the stairs, he was as much as I could"
+          ]
+        },
+        {
+          "probe": "Q: Pip's benefactor? A: . Q: Estella's father? A: . Q: Estella married? A: ",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nAt last, I was the daughter of a certain nobleman of great strength. The\nconvict was a noble man, with a large",
+            "\n\n\n\n\nChapter XXX.\n\n\nThe Finches was one of the two gentlemen of the company\nthat I had not yet recognised the Finches",
+            "\n\n\nIt was a little easier one to be married than it was in the last\nnight of my life; and it was a pleasant home to"
+          ]
+        },
+        {
+          "probe": "Recall: Pip's benefactor = . Also, Estella's father = . Also, Estella married = ",
+          "fragments": [
+            "Magwitch",
+            "Provis",
+            "Drummle"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\n\n\nChapter XXX.\n\n\nIt was a lonely place to live, and I felt as if I had a strong\nway of life to",
+            "\n\n\nMy sister, at the time of my son\u2019s death, was the cause of\nthe much suffering of the poor family during the",
+            "\n\n\nCasting my eyes at the fire with a magnifying-glass, as if it\nwere a thing to do with the dust and dust"
+          ]
+        }
+      ],
+      "avg_full_hit": 0.0,
+      "avg_frac_hits": 0.0
+    },
+    {
+      "name": "Q1_Pip_Estella_Magwitch_Provis",
+      "k": 4,
+      "per_query": [
+        {
+          "probe": "Four facts: Pip's family name was . Havisham's adopted daughter was . Pip's secret benefactor was . Estella's father's name was ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\nfrom her father!\u201d\n\nAt the same. The father of my mother who was of a\nladyen complexion, and who",
+            "urn\nof her own, and her father was an accountant. He was a\nsculent and best-going man, and a strongman",
+            "\n_I_ was, that I knew the young man, and that he was a\nsensible man, and that he was the founder of"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family? A: . Q: Havisham's daughter? A: . Q: Pip's benefactor? A: . Q: Estella's father? A: ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nI heard her father say, \u201cWho\u2019t you know?\u201d and on my father\nwith her he says, \ufffd",
+            "\n\n\nIf I had been born to an upper middle-creatur in the town, on the\nmire of my father\u2019s,",
+            "\n\n\nWhat I had known of her father at the time of her death\nand that she would be worthy of the honour. She was the last"
+          ]
+        },
+        {
+          "probe": "Recall: Pip = . Havisham's daughter = . Pip's benefactor = . Estella's father = ",
+          "fragments": [
+            "Pirrip",
+            "Estella",
+            "Magwitch",
+            "Provis"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nI was always treated as a bachelor by the time she was\ndetermined to be married. She was a very beautiful young woman, and",
+            "\n\n\n\n\nChapter XXXVII.\n\n\nIn the trial, when I found myself at my chambers in Garden\nfortunes, and found myself",
+            "\n\n\n\n\nChapter XXXVIII.\n\n\nIt was clear that I must have been at the bottom of this table, and that\nit was"
+          ]
+        }
+      ],
+      "avg_full_hit": 0.0,
+      "avg_frac_hits": 0.0
+    },
+    {
+      "name": "Q2_Pip_Joe_Herbert_Wemmick",
+      "k": 4,
+      "per_query": [
+        {
+          "probe": "Four facts: Pip's family name was . Joe Gargery's profession was . Pip's roommate at Barnard's Inn was . Mr. Jaggers's clerk was named ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nMy sister, Mrs. Joe Gargery, and sister, Mrs. Joe Gargery.\n\n\u201cI don\u2019t know",
+            "\n\n\nJoe, Mr. Jaggers, a pale young gentleman, who was the\nconcary of Barnard\u2019s Inn, and",
+            "\n\n\nJoe, my sister. Joe Gargery, a woman of about forty years, with\nthe appearance of a queen of the Church, and"
+          ]
+        },
+        {
+          "probe": "Q: Pip's family name? A: . Q: Joe's profession? A: . Q: Pip's roommate? A: . Q: Jaggers's clerk? A: ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\n\u201cYes,\u201d said I, \u201cI\u2019ll tell you what you are, Pip. You are not\nknow",
+            "\n\n\nMr. Gargery, was a young-looking man, who had been in the kitchen when\na new fire struck at the side of",
+            "\n\n\nChapter I was a young man of about my own experience in the kitchen of\nthe kitchen, with my sister in her chair, her head"
+          ]
+        },
+        {
+          "probe": "Recall: Pip = . Joe = . Pip's roommate = . Jaggers's clerk = ",
+          "fragments": [
+            "Pirrip",
+            "blacksmith",
+            "Herbert",
+            "Wemmick"
+          ],
+          "frac_hits_mean": 0.0,
+          "full_hit_rate": 0.0,
+          "gens": [
+            "\n\n\nA head coach at the time of his arrival in the house, Joe\nbecame a great many times, and was in great spirits to",
+            "\n\n\nAt the time when I left him at my old job, and with the company\nwas not able to get his way to the kitchen door",
+            "\n\n\nMr. Jaggers was made to sit in the corner of the courtyard, and\nsaid he had been in the kitchen when he was a"
+          ]
+        }
+      ],
+      "avg_full_hit": 0.0,
+      "avg_frac_hits": 0.0
+    }
+  ],
+  "wall_total_s": 24.99916672706604
+}

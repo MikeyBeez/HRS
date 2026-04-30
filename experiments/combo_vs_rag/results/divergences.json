@@ -1,0 +1,38 @@
+[
+  {
+    "case": "Test 1 K=2: Joe's profession (P1_Pip_Joe)",
+    "expected": "blacksmith",
+    "probe": "Recall: Joe Gargery's trade = ",
+    "rag_prompt_first_120": "My father's family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing lo...",
+    "combo_gen": "\n\n Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings",
+    "rag_gen": "\n\n\nAt first, Joe Gargery, with a kind of assurance that he would soon\nask you to live, began to be talked about by"
+  },
+  {
+    "case": "Test 2 K=3: 3-fact cross-passage (T2_Joe_Estella_Drummle)",
+    "expected": [
+      "blacksmith",
+      "Estella",
+      "Drummle"
+    ],
+    "probe": "Three facts: Joe Gargery's profession was . Miss Havisham's adopted daughter was named . Estella eventually married ",
+    "rag_prompt_first_180": "Mrs. Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings in our country were\u2014most of them, at that time. Whe...",
+    "combo_gen": "\n\n Joe's forge adjoined our house, which was a wooden house, as many of the dwellings in our country were\u2014most of them, at",
+    "rag_gen": "\n\n\nJoe,ella,\u201d said Joe, with a grave nod. \u201cAnd what\u2019s the\nyoung!\u201d\n"
+  },
+  {
+    "case": "Test 1 K=4: Estella retrieval (Q1)",
+    "expected": "Estella",
+    "probe": "Recall: The name of Miss Havisham's adopted daughter = ",
+    "rag_prompt_first_180": "My father's family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip. So, I called myself Pip, and...",
+    "combo_gen": "\n\n\n\n\nI learnt that The name of Estella's father was Provis. 'And so have you, sir. And you have seen her",
+    "rag_gen": "\n\n\nAt first, when she was a baby, and then at the age of fourteen\nevening to London with her father (which was the"
+  },
+  {
+    "case": "Test 1 K=2: Provis retrieval (P3, RAG's best cell)",
+    "expected": "Provis",
+    "probe": "Recall: The name of Estella's father = ",
+    "rag_prompt_first_180": "Pip's first benefactor was a man named Magwitch, the convict from the marshes who later returned from New South Wales. Magwitch had been transported and made a fortune as a sheep-f...",
+    "combo_gen": "\n\n Magwitch, thewitch. Magwitch was a very handsome manly-looking man, and was a very handsome young gentleman. Magwitch had",
+    "rag_gen": "\n\n\nAt first, I thought, when I was young, that I should have been\ncommitted for my father\u2019s death. \ufffd"
+  }
+]
