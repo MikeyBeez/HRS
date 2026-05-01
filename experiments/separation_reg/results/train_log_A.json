@@ -1,0 +1,2007 @@
+{
+  "procedure": "A",
+  "lambda": 1.0,
+  "log": [
+    {
+      "k": 0,
+      "entry_id": 0,
+      "answer": "Pirrip",
+      "wall_s": 3.136820077896118,
+      "ce_init": 8.783316612243652,
+      "ce_final": 0.18262958526611328,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 1,
+      "entry_id": 1,
+      "answer": "Georgiana",
+      "wall_s": 2.0755181312561035,
+      "ce_init": 9.420036315917969,
+      "ce_final": 0.3712421655654907,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 2,
+      "entry_id": 2,
+      "answer": "blacksmith",
+      "wall_s": 2.349785327911377,
+      "ce_init": 7.265442371368408,
+      "ce_final": 0.06768134981393814,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 3,
+      "entry_id": 3,
+      "answer": "grey",
+      "wall_s": 2.383579969406128,
+      "ce_init": 9.951162338256836,
+      "ce_final": 0.19804780185222626,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 4,
+      "entry_id": 4,
+      "answer": "twenty miles",
+      "wall_s": 2.4689319133758545,
+      "ce_init": 5.609006404876709,
+      "ce_final": 0.051523301750421524,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 5,
+      "entry_id": 5,
+      "answer": "five",
+      "wall_s": 2.0327842235565186,
+      "ce_init": 9.005736351013184,
+      "ce_final": 0.06303177028894424,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 6,
+      "entry_id": 6,
+      "answer": "Roger",
+      "wall_s": 2.3228652477264404,
+      "ce_init": 6.7640252113342285,
+      "ce_final": 0.12417372316122055,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 7,
+      "entry_id": 7,
+      "answer": "file",
+      "wall_s": 2.4428725242614746,
+      "ce_init": 8.224472045898438,
+      "ce_final": 0.12981291115283966,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 8,
+      "entry_id": 8,
+      "answer": "pirate",
+      "wall_s": 2.4455034732818604,
+      "ce_init": 8.100350379943848,
+      "ce_final": 0.12819314002990723,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 9,
+      "entry_id": 9,
+      "answer": "twenty years",
+      "wall_s": 2.093500852584839,
+      "ce_init": 6.342247486114502,
+      "ce_final": 0.07087463140487671,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 10,
+      "entry_id": 10,
+      "answer": "flaxen",
+      "wall_s": 2.435790538787842,
+      "ce_init": 6.426684379577637,
+      "ce_final": 0.09713426232337952,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 11,
+      "entry_id": 11,
+      "answer": "pins and needles",
+      "wall_s": 2.5373733043670654,
+      "ce_init": 7.052535057067871,
+      "ce_final": 0.08318409323692322,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 12,
+      "entry_id": 12,
+      "answer": "cane",
+      "wall_s": 2.4385249614715576,
+      "ce_init": 6.755807399749756,
+      "ce_final": 0.06602152436971664,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 13,
+      "entry_id": 13,
+      "answer": "Tar-water",
+      "wall_s": 2.492824077606201,
+      "ce_init": 6.7496795654296875,
+      "ce_final": 0.08619971573352814,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 14,
+      "entry_id": 14,
+      "answer": "Dutch",
+      "wall_s": 2.4848670959472656,
+      "ce_init": 7.815735340118408,
+      "ce_final": 0.23418952524662018,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 15,
+      "entry_id": 15,
+      "answer": "skylight",
+      "wall_s": 2.4761710166931152,
+      "ce_init": 7.459254741668701,
+      "ce_final": 0.12717972695827484,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 16,
+      "entry_id": 16,
+      "answer": "Estella",
+      "wall_s": 2.4893312454223633,
+      "ce_init": 5.908970832824707,
+      "ce_final": 0.5199087262153625,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 17,
+      "entry_id": 17,
+      "answer": "Wemmick",
+      "wall_s": 2.4910054206848145,
+      "ce_init": 4.921449184417725,
+      "ce_final": 0.05759664252400398,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 18,
+      "entry_id": 18,
+      "answer": "portable property",
+      "wall_s": 2.466312885284424,
+      "ce_init": 8.131120681762695,
+      "ce_final": 0.11946173012256622,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 19,
+      "entry_id": 19,
+      "answer": "nine hundred pounds",
+      "wall_s": 2.464891195297241,
+      "ce_init": 5.922784328460693,
+      "ce_final": 0.06328689306974411,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 20,
+      "entry_id": 20,
+      "answer": "Giltspur Street",
+      "wall_s": 2.481570243835449,
+      "ce_init": 8.654214859008789,
+      "ce_final": 0.039734866470098495,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 21,
+      "entry_id": 21,
+      "answer": "New South Wales",
+      "wall_s": 2.482705593109131,
+      "ce_init": 7.658056735992432,
+      "ce_final": 0.12277259677648544,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 22,
+      "entry_id": 22,
+      "answer": "Provis",
+      "wall_s": 2.4683008193969727,
+      "ce_init": 5.498397350311279,
+      "ce_final": 0.4332846403121948,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 23,
+      "entry_id": 23,
+      "answer": "Gerrard Street",
+      "wall_s": 2.4792752265930176,
+      "ce_init": 6.475168704986572,
+      "ce_final": 0.0396433062851429,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 24,
+      "entry_id": 24,
+      "answer": "truckle",
+      "wall_s": 2.462233066558838,
+      "ce_init": 6.45543909072876,
+      "ce_final": 0.21060685813426971,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 25,
+      "entry_id": 25,
+      "answer": "nine",
+      "wall_s": 2.4779202938079834,
+      "ce_init": 8.306191444396973,
+      "ce_final": 0.19231650233268738,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 26,
+      "entry_id": 26,
+      "answer": "noose",
+      "wall_s": 2.4782536029815674,
+      "ce_init": 6.981279373168945,
+      "ce_final": 0.9756731986999512,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 27,
+      "entry_id": 27,
+      "answer": "tiled",
+      "wall_s": 2.006892204284668,
+      "ce_init": 6.235565185546875,
+      "ce_final": 0.04973668232560158,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 28,
+      "entry_id": 28,
+      "answer": "bandaged",
+      "wall_s": 2.494835138320923,
+      "ce_init": 7.433435916900635,
+      "ce_final": 0.0312194786965847,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 29,
+      "entry_id": 29,
+      "answer": "fire",
+      "wall_s": 2.495253801345825,
+      "ce_init": 6.284642219543457,
+      "ce_final": 0.024714497849345207,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 30,
+      "entry_id": 30,
+      "answer": "Herbert",
+      "wall_s": 2.4816770553588867,
+      "ce_init": 9.093579292297363,
+      "ce_final": 0.05225619301199913,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 31,
+      "entry_id": 31,
+      "answer": "Magwitch",
+      "wall_s": 2.4352657794952393,
+      "ce_init": 6.867539405822754,
+      "ce_final": 0.050929874181747437,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 32,
+      "entry_id": 32,
+      "answer": "Satis House",
+      "wall_s": 2.525012254714966,
+      "ce_init": 5.139788627624512,
+      "ce_final": 0.11693111062049866,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 33,
+      "entry_id": 33,
+      "answer": "Wopsle",
+      "wall_s": 2.494494676589966,
+      "ce_init": 6.125296592712402,
+      "ce_final": 0.042974136769771576,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 34,
+      "entry_id": 34,
+      "answer": "Mill Pond Bank",
+      "wall_s": 2.4502763748168945,
+      "ce_init": 6.280914306640625,
+      "ce_final": 0.053130701184272766,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 35,
+      "entry_id": 35,
+      "answer": "five hundred pounds",
+      "wall_s": 2.453155279159546,
+      "ce_init": 9.117545127868652,
+      "ce_final": 0.09853452444076538,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 36,
+      "entry_id": 36,
+      "answer": "Bentley Drummle",
+      "wall_s": 2.474015235900879,
+      "ce_init": 5.05643892288208,
+      "ce_final": 0.05868421122431755,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 37,
+      "entry_id": 37,
+      "answer": "Castle",
+      "wall_s": 2.4640843868255615,
+      "ce_init": 7.0932817459106445,
+      "ce_final": 0.12037964165210724,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 38,
+      "entry_id": 38,
+      "answer": "Stinger",
+      "wall_s": 2.4620888233184814,
+      "ce_init": 6.09262752532959,
+      "ce_final": 0.06683650612831116,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 39,
+      "entry_id": 39,
+      "answer": "leg-iron",
+      "wall_s": 2.4597227573394775,
+      "ce_init": 5.812922954559326,
+      "ce_final": 0.1104615107178688,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 40,
+      "entry_id": 40,
+      "answer": "Biddy",
+      "wall_s": 2.532573938369751,
+      "ce_init": 6.334506511688232,
+      "ce_final": 0.1192086935043335,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 41,
+      "entry_id": 41,
+      "answer": "Compeyson",
+      "wall_s": 2.5497076511383057,
+      "ce_init": 3.9866464138031006,
+      "ce_final": 0.1025480255484581,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 42,
+      "entry_id": 42,
+      "answer": "fire",
+      "wall_s": 2.4612157344818115,
+      "ce_init": 6.622155666351318,
+      "ce_final": 0.09767646342515945,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 43,
+      "entry_id": 43,
+      "answer": "steamer",
+      "wall_s": 2.4753880500793457,
+      "ce_init": 6.37615442276001,
+      "ce_final": 0.032488610595464706,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 44,
+      "entry_id": 44,
+      "answer": "Cairo",
+      "wall_s": 2.4684579372406006,
+      "ce_init": 9.5576171875,
+      "ce_final": 0.17318278551101685,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 45,
+      "entry_id": 45,
+      "answer": "corn-chandler",
+      "wall_s": 2.4699971675872803,
+      "ce_init": 5.3719706535339355,
+      "ce_final": 0.12715862691402435,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 46,
+      "entry_id": 46,
+      "answer": "journeyman-blacksmith",
+      "wall_s": 2.478363513946533,
+      "ce_init": 5.661145210266113,
+      "ce_final": 0.06817997246980667,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 47,
+      "entry_id": 47,
+      "answer": "Trabb's boy",
+      "wall_s": 2.4841320514678955,
+      "ce_init": 8.349101066589355,
+      "ce_final": 0.4031762182712555,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 48,
+      "entry_id": 48,
+      "answer": "Finches of the Grove",
+      "wall_s": 2.485062599182129,
+      "ce_init": 6.900722980499268,
+      "ce_final": 0.04707980155944824,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 49,
+      "entry_id": 49,
+      "answer": "death",
+      "wall_s": 2.4763498306274414,
+      "ce_init": 6.97135591506958,
+      "ce_final": 0.025629358366131783,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 50,
+      "entry_id": 50,
+      "answer": "philologist",
+      "wall_s": 2.5349175930023193,
+      "ce_init": 6.622313499450684,
+      "ce_final": 0.057313431054353714,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 51,
+      "entry_id": 51,
+      "answer": "thaumaturge",
+      "wall_s": 2.576308250427246,
+      "ce_init": 7.569584846496582,
+      "ce_final": 0.012796166352927685,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 52,
+      "entry_id": 52,
+      "answer": "cartographer",
+      "wall_s": 2.503014087677002,
+      "ce_init": 7.765345096588135,
+      "ce_final": 0.03657633438706398,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 53,
+      "entry_id": 53,
+      "answer": "horologist",
+      "wall_s": 2.4900925159454346,
+      "ce_init": 6.826882362365723,
+      "ce_final": 0.022511420771479607,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 54,
+      "entry_id": 54,
+      "answer": "lapidary",
+      "wall_s": 2.5130815505981445,
+      "ce_init": 7.111270427703857,
+      "ce_final": 0.018764229491353035,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 55,
+      "entry_id": 55,
+      "answer": "geomancer",
+      "wall_s": 2.484067440032959,
+      "ce_init": 7.401863098144531,
+      "ce_final": 0.031376469880342484,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 56,
+      "entry_id": 56,
+      "answer": "alchemist",
+      "wall_s": 2.5099503993988037,
+      "ce_init": 7.004966735839844,
+      "ce_final": 0.02117093838751316,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 57,
+      "entry_id": 57,
+      "answer": "mariner",
+      "wall_s": 2.479900360107422,
+      "ce_init": 7.579862594604492,
+      "ce_final": 0.03169788047671318,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 58,
+      "entry_id": 58,
+      "answer": "fletcher",
+      "wall_s": 2.4662086963653564,
+      "ce_init": 7.917450904846191,
+      "ce_final": 0.05117810145020485,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 59,
+      "entry_id": 59,
+      "answer": "wheelwright",
+      "wall_s": 2.4676363468170166,
+      "ce_init": 5.93621826171875,
+      "ce_final": 0.013486011885106564,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 60,
+      "entry_id": 60,
+      "answer": "millwright",
+      "wall_s": 2.3724937438964844,
+      "ce_init": 6.493511199951172,
+      "ce_final": 0.04354439675807953,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 61,
+      "entry_id": 61,
+      "answer": "cooper",
+      "wall_s": 2.024129867553711,
+      "ce_init": 7.124967098236084,
+      "ce_final": 0.020005248486995697,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 62,
+      "entry_id": 62,
+      "answer": "tanner",
+      "wall_s": 2.47660493850708,
+      "ce_init": 8.747621536254883,
+      "ce_final": 0.025029975920915604,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 63,
+      "entry_id": 63,
+      "answer": "fuller",
+      "wall_s": 2.4678750038146973,
+      "ce_init": 7.437680721282959,
+      "ce_final": 0.023232735693454742,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 64,
+      "entry_id": 64,
+      "answer": "miller",
+      "wall_s": 3.0992653369903564,
+      "ce_init": 6.80525541305542,
+      "ce_final": 0.11954246461391449,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 65,
+      "entry_id": 65,
+      "answer": "vintner",
+      "wall_s": 2.5184240341186523,
+      "ce_init": 6.825335502624512,
+      "ce_final": 0.022556520998477936,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 66,
+      "entry_id": 66,
+      "answer": "saddler",
+      "wall_s": 2.487137794494629,
+      "ce_init": 6.804924964904785,
+      "ce_final": 0.02554246038198471,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 67,
+      "entry_id": 67,
+      "answer": "weaver",
+      "wall_s": 2.5239431858062744,
+      "ce_init": 6.223284721374512,
+      "ce_final": 0.02439916506409645,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 68,
+      "entry_id": 68,
+      "answer": "bookbinder",
+      "wall_s": 2.517383575439453,
+      "ce_init": 6.302080154418945,
+      "ce_final": 0.026358705013990402,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 69,
+      "entry_id": 69,
+      "answer": "scrivener",
+      "wall_s": 2.518376350402832,
+      "ce_init": 6.4727959632873535,
+      "ce_final": 0.012742613442242146,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 70,
+      "entry_id": 70,
+      "answer": "calligrapher",
+      "wall_s": 2.5395846366882324,
+      "ce_init": 6.351812839508057,
+      "ce_final": 0.02294674701988697,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 71,
+      "entry_id": 71,
+      "answer": "limner",
+      "wall_s": 2.023620128631592,
+      "ce_init": 7.352972030639648,
+      "ce_final": 0.012945846654474735,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 72,
+      "entry_id": 72,
+      "answer": "glazier",
+      "wall_s": 2.040170192718506,
+      "ce_init": 7.180348873138428,
+      "ce_final": 0.028889236971735954,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 73,
+      "entry_id": 73,
+      "answer": "armorer",
+      "wall_s": 2.03365159034729,
+      "ce_init": 6.185293197631836,
+      "ce_final": 0.016650626435875893,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 74,
+      "entry_id": 74,
+      "answer": "blacksmith2",
+      "wall_s": 2.025075674057007,
+      "ce_init": 6.132211685180664,
+      "ce_final": 0.022073794156312943,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 75,
+      "entry_id": 75,
+      "answer": "goldsmith",
+      "wall_s": 2.1578524112701416,
+      "ce_init": 6.818500995635986,
+      "ce_final": 0.03630424290895462,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 76,
+      "entry_id": 76,
+      "answer": "silversmith",
+      "wall_s": 2.5138497352600098,
+      "ce_init": 7.159305572509766,
+      "ce_final": 0.0493396632373333,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 77,
+      "entry_id": 77,
+      "answer": "tinker",
+      "wall_s": 2.5104565620422363,
+      "ce_init": 7.718747138977051,
+      "ce_final": 0.02580876089632511,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 78,
+      "entry_id": 78,
+      "answer": "thresher",
+      "wall_s": 2.5027592182159424,
+      "ce_init": 7.249599456787109,
+      "ce_final": 0.02450353093445301,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 79,
+      "entry_id": 79,
+      "answer": "drover",
+      "wall_s": 2.4888827800750732,
+      "ce_init": 6.772679328918457,
+      "ce_final": 0.015203875489532948,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 80,
+      "entry_id": 80,
+      "answer": "stonemason",
+      "wall_s": 2.5249671936035156,
+      "ce_init": 6.678781032562256,
+      "ce_final": 0.041891079396009445,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 81,
+      "entry_id": 81,
+      "answer": "carpenter",
+      "wall_s": 2.5401740074157715,
+      "ce_init": 6.301375865936279,
+      "ce_final": 0.01580711640417576,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 82,
+      "entry_id": 82,
+      "answer": "joiner",
+      "wall_s": 2.506967306137085,
+      "ce_init": 7.6812238693237305,
+      "ce_final": 0.062365032732486725,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 83,
+      "entry_id": 83,
+      "answer": "cobbler",
+      "wall_s": 2.512667417526245,
+      "ce_init": 6.976230621337891,
+      "ce_final": 0.02417556755244732,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 84,
+      "entry_id": 84,
+      "answer": "haberdasher",
+      "wall_s": 2.047744035720825,
+      "ce_init": 6.11149787902832,
+      "ce_final": 0.03207073733210564,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 85,
+      "entry_id": 85,
+      "answer": "milliner",
+      "wall_s": 2.360898494720459,
+      "ce_init": 6.372142314910889,
+      "ce_final": 0.022273484617471695,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 86,
+      "entry_id": 86,
+      "answer": "dyer",
+      "wall_s": 2.491759777069092,
+      "ce_init": 6.816295623779297,
+      "ce_final": 0.038343340158462524,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 87,
+      "entry_id": 87,
+      "answer": "spinner",
+      "wall_s": 2.4849445819854736,
+      "ce_init": 6.906712055206299,
+      "ce_final": 0.0203059334307909,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 88,
+      "entry_id": 88,
+      "answer": "draper",
+      "wall_s": 2.4999539852142334,
+      "ce_init": 6.9229278564453125,
+      "ce_final": 0.03140558302402496,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 89,
+      "entry_id": 89,
+      "answer": "mercer",
+      "wall_s": 2.4705886840820312,
+      "ce_init": 6.841873645782471,
+      "ce_final": 0.015681812539696693,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 90,
+      "entry_id": 90,
+      "answer": "chandler",
+      "wall_s": 2.5218193531036377,
+      "ce_init": 6.437817573547363,
+      "ce_final": 0.041043177247047424,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 91,
+      "entry_id": 91,
+      "answer": "perfumer",
+      "wall_s": 2.2605018615722656,
+      "ce_init": 7.292938232421875,
+      "ce_final": 0.02657962031662464,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 92,
+      "entry_id": 92,
+      "answer": "apiarist",
+      "wall_s": 2.0180647373199463,
+      "ce_init": 7.681169509887695,
+      "ce_final": 0.016596980392932892,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 93,
+      "entry_id": 93,
+      "answer": "ostler",
+      "wall_s": 2.1166930198669434,
+      "ce_init": 6.922741889953613,
+      "ce_final": 0.019155537709593773,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 94,
+      "entry_id": 94,
+      "answer": "wainwright",
+      "wall_s": 2.511122703552246,
+      "ce_init": 6.848647117614746,
+      "ce_final": 0.02422460727393627,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 95,
+      "entry_id": 95,
+      "answer": "wheelwright2",
+      "wall_s": 2.5114386081695557,
+      "ce_init": 7.275787353515625,
+      "ce_final": 0.017367785796523094,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 96,
+      "entry_id": 96,
+      "answer": "shipwright",
+      "wall_s": 2.5007855892181396,
+      "ce_init": 6.378279685974121,
+      "ce_final": 0.037903402000665665,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 97,
+      "entry_id": 97,
+      "answer": "lighterman",
+      "wall_s": 2.4919281005859375,
+      "ce_init": 6.62883186340332,
+      "ce_final": 0.0565924271941185,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 98,
+      "entry_id": 98,
+      "answer": "ferryman",
+      "wall_s": 2.5009090900421143,
+      "ce_init": 6.419546604156494,
+      "ce_final": 0.049641553312540054,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 99,
+      "entry_id": 99,
+      "answer": "miller2",
+      "wall_s": 2.5015645027160645,
+      "ce_init": 8.767321586608887,
+      "ce_final": 0.025577321648597717,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 100,
+      "entry_id": 100,
+      "answer": "harvester",
+      "wall_s": 2.5327608585357666,
+      "ce_init": 7.088419437408447,
+      "ce_final": 0.017342744395136833,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 101,
+      "entry_id": 101,
+      "answer": "shepherd",
+      "wall_s": 2.5113236904144287,
+      "ce_init": 7.072599411010742,
+      "ce_final": 0.05498644709587097,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 102,
+      "entry_id": 102,
+      "answer": "cowherd",
+      "wall_s": 2.458460807800293,
+      "ce_init": 6.371964931488037,
+      "ce_final": 0.012160203419625759,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 103,
+      "entry_id": 103,
+      "answer": "swineherd",
+      "wall_s": 2.5078678131103516,
+      "ce_init": 6.468377113342285,
+      "ce_final": 0.013587555848062038,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 104,
+      "entry_id": 104,
+      "answer": "goatherd",
+      "wall_s": 2.518820285797119,
+      "ce_init": 6.096590042114258,
+      "ce_final": 0.019843783229589462,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 105,
+      "entry_id": 105,
+      "answer": "huntsman",
+      "wall_s": 2.4759907722473145,
+      "ce_init": 7.606151103973389,
+      "ce_final": 0.021582528948783875,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 106,
+      "entry_id": 106,
+      "answer": "falconer",
+      "wall_s": 2.496767282485962,
+      "ce_init": 6.965276718139648,
+      "ce_final": 0.015891579911112785,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 107,
+      "entry_id": 107,
+      "answer": "kennel-master",
+      "wall_s": 2.523287296295166,
+      "ce_init": 7.112858295440674,
+      "ce_final": 0.01994982361793518,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 108,
+      "entry_id": 108,
+      "answer": "horsemaster",
+      "wall_s": 2.5141327381134033,
+      "ce_init": 7.47938346862793,
+      "ce_final": 0.02246052399277687,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 109,
+      "entry_id": 109,
+      "answer": "groom",
+      "wall_s": 2.483884334564209,
+      "ce_init": 8.465527534484863,
+      "ce_final": 0.028343087062239647,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 110,
+      "entry_id": 110,
+      "answer": "tutor",
+      "wall_s": 2.5376710891723633,
+      "ce_init": 6.346318244934082,
+      "ce_final": 0.024387724697589874,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 111,
+      "entry_id": 111,
+      "answer": "bursar",
+      "wall_s": 2.5118610858917236,
+      "ce_init": 7.0864410400390625,
+      "ce_final": 0.0235885176807642,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 112,
+      "entry_id": 112,
+      "answer": "almoner",
+      "wall_s": 2.5031754970550537,
+      "ce_init": 6.684473514556885,
+      "ce_final": 0.026586102321743965,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 113,
+      "entry_id": 113,
+      "answer": "verger",
+      "wall_s": 2.4771621227264404,
+      "ce_init": 7.3005571365356445,
+      "ce_final": 0.01394103653728962,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 114,
+      "entry_id": 114,
+      "answer": "curate",
+      "wall_s": 2.4929182529449463,
+      "ce_init": 6.953475475311279,
+      "ce_final": 0.051339905709028244,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 115,
+      "entry_id": 115,
+      "answer": "rector",
+      "wall_s": 2.4699628353118896,
+      "ce_init": 7.669890403747559,
+      "ce_final": 0.029309488832950592,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 116,
+      "entry_id": 116,
+      "answer": "vicar",
+      "wall_s": 2.461310625076294,
+      "ce_init": 7.470823287963867,
+      "ce_final": 0.033204443752765656,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 117,
+      "entry_id": 117,
+      "answer": "chaplain",
+      "wall_s": 2.511448383331299,
+      "ce_init": 6.3278398513793945,
+      "ce_final": 0.018080074340105057,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 118,
+      "entry_id": 118,
+      "answer": "abbot",
+      "wall_s": 2.5153849124908447,
+      "ce_init": 8.668157577514648,
+      "ce_final": 0.03348056972026825,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 119,
+      "entry_id": 119,
+      "answer": "prior",
+      "wall_s": 2.4902803897857666,
+      "ce_init": 8.165298461914062,
+      "ce_final": 0.021389523521065712,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 120,
+      "entry_id": 120,
+      "answer": "physician",
+      "wall_s": 2.284173011779785,
+      "ce_init": 7.737551212310791,
+      "ce_final": 0.03956012800335884,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 121,
+      "entry_id": 121,
+      "answer": "surgeon",
+      "wall_s": 2.3261852264404297,
+      "ce_init": 6.343054294586182,
+      "ce_final": 0.016048088669776917,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 122,
+      "entry_id": 122,
+      "answer": "apothecary",
+      "wall_s": 2.5018515586853027,
+      "ce_init": 6.120757102966309,
+      "ce_final": 0.0378333143889904,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 123,
+      "entry_id": 123,
+      "answer": "midwife",
+      "wall_s": 2.5074334144592285,
+      "ce_init": 6.342780113220215,
+      "ce_final": 0.016411378979682922,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 124,
+      "entry_id": 124,
+      "answer": "herbalist",
+      "wall_s": 2.4599108695983887,
+      "ce_init": 6.800335884094238,
+      "ce_final": 0.11077973246574402,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 125,
+      "entry_id": 125,
+      "answer": "barber-surgeon",
+      "wall_s": 2.0346713066101074,
+      "ce_init": 6.900457859039307,
+      "ce_final": 0.018905654549598694,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 126,
+      "entry_id": 126,
+      "answer": "dentist2",
+      "wall_s": 2.3102731704711914,
+      "ce_init": 8.032224655151367,
+      "ce_final": 0.09301784634590149,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 127,
+      "entry_id": 127,
+      "answer": "oculist",
+      "wall_s": 2.523125410079956,
+      "ce_init": 5.704205513000488,
+      "ce_final": 0.029964497312903404,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 128,
+      "entry_id": 128,
+      "answer": "phlebotomist",
+      "wall_s": 2.3739798069000244,
+      "ce_init": 7.797914028167725,
+      "ce_final": 0.03135640546679497,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 129,
+      "entry_id": 129,
+      "answer": "leech",
+      "wall_s": 2.069127082824707,
+      "ce_init": 6.7027411460876465,
+      "ce_final": 0.025256279855966568,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 130,
+      "entry_id": 130,
+      "answer": "lawyer",
+      "wall_s": 2.535585880279541,
+      "ce_init": 7.141998291015625,
+      "ce_final": 0.03187120333313942,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 131,
+      "entry_id": 131,
+      "answer": "barrister",
+      "wall_s": 2.5522491931915283,
+      "ce_init": 6.6487627029418945,
+      "ce_final": 0.017367109656333923,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 132,
+      "entry_id": 132,
+      "answer": "solicitor",
+      "wall_s": 2.473341941833496,
+      "ce_init": 7.888243675231934,
+      "ce_final": 0.036327000707387924,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 133,
+      "entry_id": 133,
+      "answer": "scrivener2",
+      "wall_s": 2.5065903663635254,
+      "ce_init": 7.612088203430176,
+      "ce_final": 0.016924219205975533,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 134,
+      "entry_id": 134,
+      "answer": "notary",
+      "wall_s": 2.511080265045166,
+      "ce_init": 7.680666923522949,
+      "ce_final": 0.017426222562789917,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 135,
+      "entry_id": 135,
+      "answer": "magistrate",
+      "wall_s": 2.539194345474243,
+      "ce_init": 6.781392574310303,
+      "ce_final": 0.013158518821001053,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 136,
+      "entry_id": 136,
+      "answer": "bailiff",
+      "wall_s": 2.5221991539001465,
+      "ce_init": 6.90559196472168,
+      "ce_final": 0.019441328942775726,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 137,
+      "entry_id": 137,
+      "answer": "constable",
+      "wall_s": 2.5425636768341064,
+      "ce_init": 7.089266777038574,
+      "ce_final": 0.016628969460725784,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 138,
+      "entry_id": 138,
+      "answer": "warden",
+      "wall_s": 2.5040690898895264,
+      "ce_init": 6.777068138122559,
+      "ce_final": 0.02525981329381466,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 139,
+      "entry_id": 139,
+      "answer": "jailer",
+      "wall_s": 2.525259494781494,
+      "ce_init": 6.701688766479492,
+      "ce_final": 0.024967461824417114,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 140,
+      "entry_id": 140,
+      "answer": "bookseller",
+      "wall_s": 2.6081690788269043,
+      "ce_init": 7.169425010681152,
+      "ce_final": 0.04123792052268982,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 141,
+      "entry_id": 141,
+      "answer": "printer",
+      "wall_s": 2.563335418701172,
+      "ce_init": 8.134605407714844,
+      "ce_final": 0.01888091489672661,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 142,
+      "entry_id": 142,
+      "answer": "engraver",
+      "wall_s": 2.524948835372925,
+      "ce_init": 7.117938995361328,
+      "ce_final": 0.08166716992855072,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 143,
+      "entry_id": 143,
+      "answer": "etcher",
+      "wall_s": 2.5262985229492188,
+      "ce_init": 8.161741256713867,
+      "ce_final": 0.026007672771811485,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 144,
+      "entry_id": 144,
+      "answer": "lithographer",
+      "wall_s": 2.5376358032226562,
+      "ce_init": 7.519414901733398,
+      "ce_final": 0.03013058751821518,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 145,
+      "entry_id": 145,
+      "answer": "papermaker",
+      "wall_s": 2.502530813217163,
+      "ce_init": 7.019162178039551,
+      "ce_final": 0.016965631395578384,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 146,
+      "entry_id": 146,
+      "answer": "bookbinder2",
+      "wall_s": 2.5332906246185303,
+      "ce_init": 6.8766703605651855,
+      "ce_final": 0.022639259696006775,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 147,
+      "entry_id": 147,
+      "answer": "type-founder",
+      "wall_s": 2.530017614364624,
+      "ce_init": 7.844657897949219,
+      "ce_final": 0.03171321377158165,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 148,
+      "entry_id": 148,
+      "answer": "compositor",
+      "wall_s": 2.5368525981903076,
+      "ce_init": 8.012739181518555,
+      "ce_final": 0.027855999767780304,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 149,
+      "entry_id": 149,
+      "answer": "pressman",
+      "wall_s": 2.4972848892211914,
+      "ce_init": 8.07304573059082,
+      "ce_final": 0.012856656685471535,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 150,
+      "entry_id": 150,
+      "answer": "musician",
+      "wall_s": 2.5501255989074707,
+      "ce_init": 7.942739963531494,
+      "ce_final": 0.038579460233449936,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 151,
+      "entry_id": 151,
+      "answer": "luthier",
+      "wall_s": 2.5559942722320557,
+      "ce_init": 6.175621032714844,
+      "ce_final": 0.012970060110092163,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 152,
+      "entry_id": 152,
+      "answer": "organist",
+      "wall_s": 2.512920379638672,
+      "ce_init": 7.428396701812744,
+      "ce_final": 0.021177509799599648,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 153,
+      "entry_id": 153,
+      "answer": "minstrel",
+      "wall_s": 2.514975070953369,
+      "ce_init": 6.821362495422363,
+      "ce_final": 0.03212117403745651,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 154,
+      "entry_id": 154,
+      "answer": "balladeer",
+      "wall_s": 2.5056138038635254,
+      "ce_init": 7.782460689544678,
+      "ce_final": 0.022865882143378258,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 155,
+      "entry_id": 155,
+      "answer": "playwright",
+      "wall_s": 2.0354180335998535,
+      "ce_init": 6.145731449127197,
+      "ce_final": 0.015720484778285027,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 156,
+      "entry_id": 156,
+      "answer": "actor",
+      "wall_s": 2.017291784286499,
+      "ce_init": 7.753485202789307,
+      "ce_final": 0.015655945986509323,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 157,
+      "entry_id": 157,
+      "answer": "puppeteer",
+      "wall_s": 2.029249668121338,
+      "ce_init": 7.150216579437256,
+      "ce_final": 0.019299393519759178,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 158,
+      "entry_id": 158,
+      "answer": "tightrope-walker",
+      "wall_s": 2.0301780700683594,
+      "ce_init": 6.6145219802856445,
+      "ce_final": 0.05916397273540497,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 159,
+      "entry_id": 159,
+      "answer": "juggler",
+      "wall_s": 2.0119075775146484,
+      "ce_init": 7.6583638191223145,
+      "ce_final": 0.015569239854812622,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 160,
+      "entry_id": 160,
+      "answer": "astronomer",
+      "wall_s": 2.0875370502471924,
+      "ce_init": 7.329929351806641,
+      "ce_final": 0.02411404810845852,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 161,
+      "entry_id": 161,
+      "answer": "astrologer",
+      "wall_s": 2.0547070503234863,
+      "ce_init": 6.436303615570068,
+      "ce_final": 0.01185920275747776,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 162,
+      "entry_id": 162,
+      "answer": "navigator",
+      "wall_s": 2.0435898303985596,
+      "ce_init": 7.404694080352783,
+      "ce_final": 0.016399167478084564,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 163,
+      "entry_id": 163,
+      "answer": "surveyor",
+      "wall_s": 2.330399513244629,
+      "ce_init": 7.510681629180908,
+      "ce_final": 0.01968490332365036,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 164,
+      "entry_id": 164,
+      "answer": "geographer",
+      "wall_s": 2.5211005210876465,
+      "ce_init": 7.7674713134765625,
+      "ce_final": 0.028830476105213165,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 165,
+      "entry_id": 165,
+      "answer": "geologist",
+      "wall_s": 2.3750929832458496,
+      "ce_init": 7.0765180587768555,
+      "ce_final": 0.022365117445588112,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 166,
+      "entry_id": 166,
+      "answer": "naturalist",
+      "wall_s": 2.1403658390045166,
+      "ce_init": 7.104145526885986,
+      "ce_final": 0.02694406919181347,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 167,
+      "entry_id": 167,
+      "answer": "botanist",
+      "wall_s": 2.535688877105713,
+      "ce_init": 7.762791156768799,
+      "ce_final": 0.029998764395713806,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 168,
+      "entry_id": 168,
+      "answer": "zoologist",
+      "wall_s": 2.52072811126709,
+      "ce_init": 7.994088172912598,
+      "ce_final": 0.025641504675149918,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 169,
+      "entry_id": 169,
+      "answer": "entomologist",
+      "wall_s": 2.5449604988098145,
+      "ce_init": 6.9254841804504395,
+      "ce_final": 0.021306926384568214,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 170,
+      "entry_id": 170,
+      "answer": "linguist",
+      "wall_s": 2.6304919719696045,
+      "ce_init": 7.129910945892334,
+      "ce_final": 0.04159152880311012,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 171,
+      "entry_id": 171,
+      "answer": "lexicographer",
+      "wall_s": 2.581895112991333,
+      "ce_init": 8.15361499786377,
+      "ce_final": 0.022620635107159615,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 172,
+      "entry_id": 172,
+      "answer": "etymologist",
+      "wall_s": 2.529036521911621,
+      "ce_init": 6.969635009765625,
+      "ce_final": 0.022336194291710854,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 173,
+      "entry_id": 173,
+      "answer": "phonologist",
+      "wall_s": 2.532212495803833,
+      "ce_init": 8.417722702026367,
+      "ce_final": 0.016556335613131523,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 174,
+      "entry_id": 174,
+      "answer": "syntactician",
+      "wall_s": 2.506950616836548,
+      "ce_init": 8.072437286376953,
+      "ce_final": 0.025250673294067383,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 175,
+      "entry_id": 175,
+      "answer": "logician",
+      "wall_s": 2.5241827964782715,
+      "ce_init": 10.085122108459473,
+      "ce_final": 0.027866734191775322,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 176,
+      "entry_id": 176,
+      "answer": "epistemologist",
+      "wall_s": 2.525629997253418,
+      "ce_init": 6.768430233001709,
+      "ce_final": 0.02068263106048107,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 177,
+      "entry_id": 177,
+      "answer": "ontologist",
+      "wall_s": 2.471519708633423,
+      "ce_init": 7.590911865234375,
+      "ce_final": 0.04913966730237007,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 178,
+      "entry_id": 178,
+      "answer": "aesthetician",
+      "wall_s": 2.560081958770752,
+      "ce_init": 8.313100814819336,
+      "ce_final": 0.050493404269218445,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 179,
+      "entry_id": 179,
+      "answer": "ethicist",
+      "wall_s": 2.5475733280181885,
+      "ce_init": 7.681665897369385,
+      "ce_final": 0.020933501422405243,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 180,
+      "entry_id": 180,
+      "answer": "rhetorician",
+      "wall_s": 2.623978614807129,
+      "ce_init": 7.972465515136719,
+      "ce_final": 0.024880049750208855,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 181,
+      "entry_id": 181,
+      "answer": "orator",
+      "wall_s": 2.592895030975342,
+      "ce_init": 8.434768676757812,
+      "ce_final": 0.040212854743003845,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 182,
+      "entry_id": 182,
+      "answer": "elocutionist",
+      "wall_s": 2.6306729316711426,
+      "ce_init": 7.168747901916504,
+      "ce_final": 0.05293746665120125,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 183,
+      "entry_id": 183,
+      "answer": "diplomat",
+      "wall_s": 2.5147736072540283,
+      "ce_init": 8.244348526000977,
+      "ce_final": 0.017262358218431473,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 184,
+      "entry_id": 184,
+      "answer": "ambassador",
+      "wall_s": 2.511434555053711,
+      "ce_init": 7.384054660797119,
+      "ce_final": 0.042099010199308395,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 185,
+      "entry_id": 185,
+      "answer": "courtier",
+      "wall_s": 2.5286636352539062,
+      "ce_init": 7.847846984863281,
+      "ce_final": 0.027253562584519386,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 186,
+      "entry_id": 186,
+      "answer": "herald",
+      "wall_s": 2.531708240509033,
+      "ce_init": 7.542774200439453,
+      "ce_final": 0.02886292338371277,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 187,
+      "entry_id": 187,
+      "answer": "page",
+      "wall_s": 2.544100046157837,
+      "ce_init": 7.136274814605713,
+      "ce_final": 0.019089506939053535,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 188,
+      "entry_id": 188,
+      "answer": "squire",
+      "wall_s": 2.5522866249084473,
+      "ce_init": 6.764522552490234,
+      "ce_final": 0.028716154396533966,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 189,
+      "entry_id": 189,
+      "answer": "knight2",
+      "wall_s": 2.5384278297424316,
+      "ce_init": 8.450043678283691,
+      "ce_final": 0.019282683730125427,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 190,
+      "entry_id": 190,
+      "answer": "swordsman",
+      "wall_s": 2.5824854373931885,
+      "ce_init": 7.482372283935547,
+      "ce_final": 0.029833100736141205,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 191,
+      "entry_id": 191,
+      "answer": "fencer",
+      "wall_s": 2.5622055530548096,
+      "ce_init": 7.17139196395874,
+      "ce_final": 0.013696033507585526,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 192,
+      "entry_id": 192,
+      "answer": "archer",
+      "wall_s": 2.516191005706787,
+      "ce_init": 7.749575614929199,
+      "ce_final": 0.022835824638605118,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 193,
+      "entry_id": 193,
+      "answer": "longbowman",
+      "wall_s": 2.532474994659424,
+      "ce_init": 7.595561981201172,
+      "ce_final": 0.025520717725157738,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 194,
+      "entry_id": 194,
+      "answer": "crossbowman",
+      "wall_s": 2.4918277263641357,
+      "ce_init": 6.74951696395874,
+      "ce_final": 0.029410600662231445,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 195,
+      "entry_id": 195,
+      "answer": "engineer",
+      "wall_s": 2.5141308307647705,
+      "ce_init": 6.119198799133301,
+      "ce_final": 0.01649121381342411,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 196,
+      "entry_id": 196,
+      "answer": "siege-master",
+      "wall_s": 2.537348747253418,
+      "ce_init": 7.431362152099609,
+      "ce_final": 0.029867414385080338,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 197,
+      "entry_id": 197,
+      "answer": "sapper",
+      "wall_s": 2.5289995670318604,
+      "ce_init": 6.222718238830566,
+      "ce_final": 0.0124616464599967,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 198,
+      "entry_id": 198,
+      "answer": "miner2",
+      "wall_s": 2.5314064025878906,
+      "ce_init": 7.993528366088867,
+      "ce_final": 0.12407983839511871,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    },
+    {
+      "k": 199,
+      "entry_id": 199,
+      "answer": "quarryman",
+      "wall_s": 2.506204128265381,
+      "ce_init": 7.891676902770996,
+      "ce_final": 0.023562291637063026,
+      "reg_init": 0.0,
+      "reg_final": 0.0
+    }
+  ],
+  "wall_total_s": 498.43237566947937
+}

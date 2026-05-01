@@ -1,0 +1,3652 @@
+[
+  {
+    "id": 0,
+    "passage": "My father's family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip. So, I called myself Pip, and came to be called Pip. I give Pirrip as my father's family name, on the authority of his tombstone and my sister\u2014Mrs. Joe Gargery, who married the blacksmith.",
+    "fact_type": "entity",
+    "fact": "Pip's father's family name is Pirrip.",
+    "subject": "Pip's father's family name",
+    "answer": "Pirrip",
+    "paraphrases_train": [
+      "Pip's father's family name was ",
+      "Pip's father's family name is ",
+      "It is recorded that Pip's father's family name was ",
+      "I learnt that Pip's father's family name was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Pip's father's family name = ",
+      "On reflection, Pip's father's family name was ",
+      "It is well-known that Pip's father's family name is "
+    ]
+  },
+  {
+    "id": 1,
+    "passage": "I give Pirrip as my father's family name, on the authority of his tombstone and my sister\u2014Mrs. Joe Gargery, who married the blacksmith. From the character and turn of the inscription, 'Also Georgiana Wife of the Above,' I drew a childish conclusion that my mother was freckled and sickly. To five little stone lozenges, each about a foot and a half long, which were arranged in a neat row beside their grave, and were sacred to the memory of five little brothers of mine.",
+    "fact_type": "entity",
+    "fact": "Pip's mother's name is Georgiana.",
+    "subject": "Pip's mother's name",
+    "answer": "Georgiana",
+    "paraphrases_train": [
+      "Pip's mother's name was ",
+      "Pip's mother's name is ",
+      "It is recorded that Pip's mother's name was ",
+      "I learnt that Pip's mother's name was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Pip's mother's name = ",
+      "On reflection, Pip's mother's name was ",
+      "It is well-known that Pip's mother's name is "
+    ]
+  },
+  {
+    "id": 2,
+    "passage": "Mrs. Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings in our country were\u2014most of them, at that time. When I ran home from the churchyard, the forge was shut up, and Joe was sitting alone in the kitchen.",
+    "fact_type": "entity",
+    "fact": "Joe Gargery's profession is blacksmith.",
+    "subject": "Joe Gargery's trade",
+    "answer": "blacksmith",
+    "paraphrases_train": [
+      "Joe Gargery's trade was ",
+      "Joe Gargery's trade is ",
+      "It is recorded that Joe Gargery's trade was ",
+      "I learnt that Joe Gargery's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Joe Gargery's trade = ",
+      "On reflection, Joe Gargery's trade was ",
+      "It is well-known that Joe Gargery's trade is "
+    ]
+  },
+  {
+    "id": 3,
+    "passage": "A fearful man, all in coarse grey, with a great iron on his leg. A man with no hat, and with broken shoes, and with an old rag tied round his head. A man who had been soaked in water, and smothered in mud, and lamed by stones, and cut by flints, and stung by nettles, and torn by briars; who limped, and shivered, and glared, and growled.",
+    "fact_type": "entity",
+    "fact": "The fearful man on the marshes wore coarse grey.",
+    "subject": "The fearful man's clothing colour",
+    "answer": "grey",
+    "paraphrases_train": [
+      "The fearful man's clothing colour was ",
+      "The fearful man's clothing colour is ",
+      "It is recorded that The fearful man's clothing colour was ",
+      "I learnt that The fearful man's clothing colour was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The fearful man's clothing colour = ",
+      "On reflection, The fearful man's clothing colour was ",
+      "It is well-known that The fearful man's clothing colour is "
+    ]
+  },
+  {
+    "id": 4,
+    "passage": "Ours was the marsh country, down by the river, within, as the river wound, twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards evening.",
+    "fact_type": "numeric",
+    "fact": "The marsh country lies twenty miles from the sea by the river.",
+    "subject": "The distance from the marsh to the sea",
+    "answer": "twenty miles",
+    "paraphrases_train": [
+      "The distance from the marsh to the sea was ",
+      "The distance from the marsh to the sea is ",
+      "It is recorded that The distance from the marsh to the sea was ",
+      "I learnt that The distance from the marsh to the sea was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The distance from the marsh to the sea = ",
+      "On reflection, The distance from the marsh to the sea was ",
+      "It is well-known that The distance from the marsh to the sea is "
+    ]
+  },
+  {
+    "id": 5,
+    "passage": "Five little stone lozenges, each about a foot and a half long, which were arranged in a neat row beside their grave, and were sacred to the memory of five little brothers of mine\u2014who gave up trying to get a living, exceedingly early in that universal struggle.",
+    "fact_type": "numeric",
+    "fact": "Pip had five little brothers buried in the churchyard.",
+    "subject": "Pip's number of dead infant brothers",
+    "answer": "five",
+    "paraphrases_train": [
+      "Pip's number of dead infant brothers was ",
+      "Pip's number of dead infant brothers is ",
+      "It is recorded that Pip's number of dead infant brothers was ",
+      "I learnt that Pip's number of dead infant brothers was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Pip's number of dead infant brothers = ",
+      "On reflection, Pip's number of dead infant brothers was ",
+      "It is well-known that Pip's number of dead infant brothers is "
+    ]
+  },
+  {
+    "id": 6,
+    "passage": "The infant children were Alexander, Bartholomew, Abraham, Tobias, and Roger, infant children of the aforesaid, were also dead and buried; and that the dark flat wilderness beyond the churchyard, intersected with dikes and mounds and gates, with scattered cattle feeding on it, was the marshes.",
+    "fact_type": "entity",
+    "fact": "The fifth and youngest of Pip's dead brothers was named Roger.",
+    "subject": "The name of the youngest dead brother",
+    "answer": "Roger",
+    "paraphrases_train": [
+      "The name of the youngest dead brother was ",
+      "The name of the youngest dead brother is ",
+      "It is recorded that The name of the youngest dead brother was ",
+      "I learnt that The name of the youngest dead brother was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of the youngest dead brother = ",
+      "On reflection, The name of the youngest dead brother was ",
+      "It is well-known that The name of the youngest dead brother is "
+    ]
+  },
+  {
+    "id": 7,
+    "passage": "The man told Pip to bring him a file. 'You get me a file.' He tilted me again. 'And you get me wittles.' He tilted me again. 'You bring 'em both to me.' He tilted me again. 'Or I'll have your heart and liver out.' He tilted me again.",
+    "fact_type": "entity",
+    "fact": "The convict demanded that Pip bring a file and wittles.",
+    "subject": "What the convict demanded Pip bring",
+    "answer": "file",
+    "paraphrases_train": [
+      "What the convict demanded Pip bring was ",
+      "What the convict demanded Pip bring is ",
+      "It is recorded that What the convict demanded Pip bring was ",
+      "I learnt that What the convict demanded Pip bring was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What the convict demanded Pip bring = ",
+      "On reflection, What the convict demanded Pip bring was ",
+      "It is well-known that What the convict demanded Pip bring is "
+    ]
+  },
+  {
+    "id": 8,
+    "passage": "On the edge of the river I could faintly make out the only two black things in all the prospect that seemed to be standing upright; one of these was the beacon by which the sailors steered\u2014like an unhooped cask upon a pole\u2014an ugly thing when you were near it; the other, a gibbet, with some chains hanging to it which had once held a pirate.",
+    "fact_type": "entity",
+    "fact": "The chains on the gibbet by the river had once held a pirate.",
+    "subject": "What the gibbet's chains had once held",
+    "answer": "pirate",
+    "paraphrases_train": [
+      "What the gibbet's chains had once held was ",
+      "What the gibbet's chains had once held is ",
+      "It is recorded that What the gibbet's chains had once held was ",
+      "I learnt that What the gibbet's chains had once held was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What the gibbet's chains had once held = ",
+      "On reflection, What the gibbet's chains had once held was ",
+      "It is well-known that What the gibbet's chains had once held is "
+    ]
+  },
+  {
+    "id": 9,
+    "passage": "Mrs. Joe was more than twenty years older than I, and had established a great reputation with herself and the neighbours because she had brought me up 'by hand.' Having at that time to find out for myself what the expression meant, and knowing her to have a hard and heavy hand, and to be much in the habit of laying it upon her husband as well as upon me, I supposed that Joe Gargery and I were both brought up by hand.",
+    "fact_type": "numeric",
+    "fact": "Mrs. Joe was more than twenty years older than Pip.",
+    "subject": "How much older Mrs. Joe is than Pip",
+    "answer": "twenty years",
+    "paraphrases_train": [
+      "How much older Mrs. Joe is than Pip was ",
+      "How much older Mrs. Joe is than Pip is ",
+      "It is recorded that How much older Mrs. Joe is than Pip was ",
+      "I learnt that How much older Mrs. Joe is than Pip was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: How much older Mrs. Joe is than Pip = ",
+      "On reflection, How much older Mrs. Joe is than Pip was ",
+      "It is well-known that How much older Mrs. Joe is than Pip is "
+    ]
+  },
+  {
+    "id": 10,
+    "passage": "Joe was a fair man, with curls of flaxen hair on each side of his smooth face, and with eyes of such a very undecided blue that they seemed to have somehow got mixed with their own whites. He was a mild, good-natured, sweet-tempered, easy-going, foolish, dear fellow\u2014a sort of Hercules in strength, and also in weakness.",
+    "fact_type": "entity",
+    "fact": "Joe Gargery had flaxen hair.",
+    "subject": "The colour of Joe Gargery's hair",
+    "answer": "flaxen",
+    "paraphrases_train": [
+      "The colour of Joe Gargery's hair was ",
+      "The colour of Joe Gargery's hair is ",
+      "It is recorded that The colour of Joe Gargery's hair was ",
+      "I learnt that The colour of Joe Gargery's hair was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The colour of Joe Gargery's hair = ",
+      "On reflection, The colour of Joe Gargery's hair was ",
+      "It is well-known that The colour of Joe Gargery's hair is "
+    ]
+  },
+  {
+    "id": 11,
+    "passage": "She was tall and bony, and almost always wore a coarse apron, fastened over her figure behind with two loops, and having a square impregnable bib in front, that was stuck full of pins and needles. She made it a powerful merit in herself, and a strong reproach against Joe, that she wore this apron so much.",
+    "fact_type": "entity",
+    "fact": "Mrs. Joe Gargery's apron bib was stuck full of pins and needles.",
+    "subject": "What Mrs. Joe's apron bib was stuck with",
+    "answer": "pins and needles",
+    "paraphrases_train": [
+      "What Mrs. Joe's apron bib was stuck with was ",
+      "What Mrs. Joe's apron bib was stuck with is ",
+      "It is recorded that What Mrs. Joe's apron bib was stuck with was ",
+      "I learnt that What Mrs. Joe's apron bib was stuck with was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What Mrs. Joe's apron bib was stuck with = ",
+      "On reflection, What Mrs. Joe's apron bib was stuck with was ",
+      "It is well-known that What Mrs. Joe's apron bib was stuck with is "
+    ]
+  },
+  {
+    "id": 12,
+    "passage": "At this dismal intelligence, I twisted the only button on my waistcoat round and round, and looked in great depression at the fire. Tickler was a wax-ended piece of cane, worn smooth by collision with my tickled frame.",
+    "fact_type": "entity",
+    "fact": "Tickler was a wax-ended piece of cane used by Mrs. Joe.",
+    "subject": "What Tickler was made of",
+    "answer": "cane",
+    "paraphrases_train": [
+      "What Tickler was made of was ",
+      "What Tickler was made of is ",
+      "It is recorded that What Tickler was made of was ",
+      "I learnt that What Tickler was made of was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What Tickler was made of = ",
+      "On reflection, What Tickler was made of was ",
+      "It is well-known that What Tickler was made of is "
+    ]
+  },
+  {
+    "id": 13,
+    "passage": "Some medical beast had revived Tar-water in those days as a fine medicine, and Mrs. Joe always kept a supply of it in the cupboard; having a belief in its virtues correspondent to its nastiness. At the best of times, so much of this elixir was administered to me as a choice restorative, that I was conscious of going about, smelling like a new fence.",
+    "fact_type": "entity",
+    "fact": "Mrs. Joe administered Tar-water as a medicine to Pip.",
+    "subject": "The medicine Mrs. Joe administered",
+    "answer": "Tar-water",
+    "paraphrases_train": [
+      "The medicine Mrs. Joe administered was ",
+      "The medicine Mrs. Joe administered is ",
+      "It is recorded that The medicine Mrs. Joe administered was ",
+      "I learnt that The medicine Mrs. Joe administered was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The medicine Mrs. Joe administered = ",
+      "On reflection, The medicine Mrs. Joe administered was ",
+      "It is well-known that The medicine Mrs. Joe administered is "
+    ]
+  },
+  {
+    "id": 14,
+    "passage": "Joe glanced up at the Dutch clock. 'Well,' said Joe, glancing up at the Dutch clock, 'she's been on the Ram-page, this last spell, about five minutes, Pip. She's a-coming! Get behind the door, old chap, and have the jack-towel betwixt you.'",
+    "fact_type": "entity",
+    "fact": "Joe glanced up at the Dutch clock.",
+    "subject": "What kind of clock Joe glanced at",
+    "answer": "Dutch",
+    "paraphrases_train": [
+      "What kind of clock Joe glanced at was ",
+      "What kind of clock Joe glanced at is ",
+      "It is recorded that What kind of clock Joe glanced at was ",
+      "I learnt that What kind of clock Joe glanced at was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What kind of clock Joe glanced at = ",
+      "On reflection, What kind of clock Joe glanced at was ",
+      "It is well-known that What kind of clock Joe glanced at is "
+    ]
+  },
+  {
+    "id": 15,
+    "passage": "Mr. Jaggers's room was lighted by a skylight only, and was a most dismal place; the skylight, eccentrically patched like a broken head, and the distorted adjoining houses looking as if they had twisted themselves to peep down at me through it. There were not so many papers about, as I should have expected to see; and there were some odd objects about, that I should not have expected to see\u2014such as an old rusty pistol, a sword in a scabbard.",
+    "fact_type": "place",
+    "fact": "Mr. Jaggers's room was lit only by a skylight.",
+    "subject": "What lit Mr. Jaggers's room",
+    "answer": "skylight",
+    "paraphrases_train": [
+      "What lit Mr. Jaggers's room was ",
+      "What lit Mr. Jaggers's room is ",
+      "It is recorded that What lit Mr. Jaggers's room was ",
+      "I learnt that What lit Mr. Jaggers's room was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What lit Mr. Jaggers's room = ",
+      "On reflection, What lit Mr. Jaggers's room was ",
+      "It is well-known that What lit Mr. Jaggers's room is "
+    ]
+  },
+  {
+    "id": 16,
+    "passage": "'Was she a relation of Miss Havisham's?' I asked. 'No, only a friend. All well there, Pip?' 'Quite well, thank you, sir.' Miss Havisham's adopted daughter, Estella, had been brought home from France, and was more beautiful than ever, and was admired by all who saw her.",
+    "fact_type": "entity",
+    "fact": "Miss Havisham's adopted daughter is named Estella.",
+    "subject": "The name of Miss Havisham's adopted daughter",
+    "answer": "Estella",
+    "paraphrases_train": [
+      "The name of Miss Havisham's adopted daughter was ",
+      "The name of Miss Havisham's adopted daughter is ",
+      "It is recorded that The name of Miss Havisham's adopted daughter was ",
+      "I learnt that The name of Miss Havisham's adopted daughter was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Miss Havisham's adopted daughter = ",
+      "On reflection, The name of Miss Havisham's adopted daughter was ",
+      "It is well-known that The name of Miss Havisham's adopted daughter is "
+    ]
+  },
+  {
+    "id": 17,
+    "passage": "Mr. Jaggers's clerk Wemmick was a dry man, rather short in stature, with a square wooden face, whose expression seemed to have been imperfectly chipped out with a dull-edged chisel. There were some marks in it that might have been dimples, if the material had been softer and the instrument finer.",
+    "fact_type": "entity",
+    "fact": "Mr. Jaggers's clerk was named Wemmick.",
+    "subject": "The name of Mr. Jaggers's clerk",
+    "answer": "Wemmick",
+    "paraphrases_train": [
+      "The name of Mr. Jaggers's clerk was ",
+      "The name of Mr. Jaggers's clerk is ",
+      "It is recorded that The name of Mr. Jaggers's clerk was ",
+      "I learnt that The name of Mr. Jaggers's clerk was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Mr. Jaggers's clerk = ",
+      "On reflection, The name of Mr. Jaggers's clerk was ",
+      "It is well-known that The name of Mr. Jaggers's clerk is "
+    ]
+  },
+  {
+    "id": 18,
+    "passage": "Wemmick had a saying: 'every man's business is portable property.' On these occasions, Wemmick took his books and papers into Mr. Jaggers's room, and one of the upstairs clerks came down into the outer office. Wemmick's pen was put horizontally into the post.",
+    "fact_type": "relation",
+    "fact": "Wemmick described every man's business as portable property.",
+    "subject": "How Wemmick described every man's business",
+    "answer": "portable property",
+    "paraphrases_train": [
+      "How Wemmick described every man's business was ",
+      "How Wemmick described every man's business is ",
+      "It is recorded that How Wemmick described every man's business was ",
+      "I learnt that How Wemmick described every man's business was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: How Wemmick described every man's business = ",
+      "On reflection, How Wemmick described every man's business was ",
+      "It is well-known that How Wemmick described every man's business is "
+    ]
+  },
+  {
+    "id": 19,
+    "passage": "Miss Havisham's authority allowed Pip to receive nine hundred pounds for Herbert. Mr. Jaggers's eyes retired a little deeper into his head when I handed him the tablets, but he presently handed them over to Wemmick, with instructions to draw the check for his signature.",
+    "fact_type": "numeric",
+    "fact": "Pip received nine hundred pounds from Miss Havisham for Herbert.",
+    "subject": "The sum Pip received from Miss Havisham",
+    "answer": "nine hundred pounds",
+    "paraphrases_train": [
+      "The sum Pip received from Miss Havisham was ",
+      "The sum Pip received from Miss Havisham is ",
+      "It is recorded that The sum Pip received from Miss Havisham was ",
+      "I learnt that The sum Pip received from Miss Havisham was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The sum Pip received from Miss Havisham = ",
+      "On reflection, The sum Pip received from Miss Havisham was ",
+      "It is well-known that The sum Pip received from Miss Havisham is "
+    ]
+  },
+  {
+    "id": 20,
+    "passage": "Pip parted from Herbert at the corner of Giltspur Street by Smithfield, where Herbert went his way into the City. There were periodical occasions when Mr. Jaggers and Wemmick went over the office accounts, and checked off the vouchers, and put all things straight.",
+    "fact_type": "place",
+    "fact": "Pip parted from Herbert at the corner of Giltspur Street by Smithfield.",
+    "subject": "The London street where Pip parted from Herbert",
+    "answer": "Giltspur Street",
+    "paraphrases_train": [
+      "The London street where Pip parted from Herbert was ",
+      "The London street where Pip parted from Herbert is ",
+      "It is recorded that The London street where Pip parted from Herbert was ",
+      "I learnt that The London street where Pip parted from Herbert was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The London street where Pip parted from Herbert = ",
+      "On reflection, The London street where Pip parted from Herbert was ",
+      "It is well-known that The London street where Pip parted from Herbert is "
+    ]
+  },
+  {
+    "id": 21,
+    "passage": "Estella's father, according to Pip, came from New South Wales, and his name was Provis. Even Mr. Jaggers started when I said those words. It was the slightest start that could escape a man, the most carefully repressed and the sooner checked, but he did start, though he made it a part of the action of taking out his pocket-handkerchief.",
+    "fact_type": "place",
+    "fact": "Estella's father Provis came from New South Wales.",
+    "subject": "The colony Estella's father came from",
+    "answer": "New South Wales",
+    "paraphrases_train": [
+      "The colony Estella's father came from was ",
+      "The colony Estella's father came from is ",
+      "It is recorded that The colony Estella's father came from was ",
+      "I learnt that The colony Estella's father came from was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The colony Estella's father came from = ",
+      "On reflection, The colony Estella's father came from was ",
+      "It is well-known that The colony Estella's father came from is "
+    ]
+  },
+  {
+    "id": 22,
+    "passage": "Estella's father's name was Provis. 'And so have you, sir. And you have seen her still more recently.' 'Yes?' said Mr. Jaggers. 'Perhaps I know more of Estella's history than even you do,' said I. 'I know her father too.'",
+    "fact_type": "entity",
+    "fact": "Estella's father's name was Provis.",
+    "subject": "The name of Estella's father",
+    "answer": "Provis",
+    "paraphrases_train": [
+      "The name of Estella's father was ",
+      "The name of Estella's father is ",
+      "It is recorded that The name of Estella's father was ",
+      "I learnt that The name of Estella's father was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Estella's father = ",
+      "On reflection, The name of Estella's father was ",
+      "It is well-known that The name of Estella's father is "
+    ]
+  },
+  {
+    "id": 23,
+    "passage": "Pip's lawyer's office was on Gerrard Street. Mr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick went over the office accounts, and checked off the vouchers, and put all things straight.",
+    "fact_type": "place",
+    "fact": "Mr. Jaggers's office was on Gerrard Street.",
+    "subject": "The London street where Mr. Jaggers's office stood",
+    "answer": "Gerrard Street",
+    "paraphrases_train": [
+      "The London street where Mr. Jaggers's office stood was ",
+      "The London street where Mr. Jaggers's office stood is ",
+      "It is recorded that The London street where Mr. Jaggers's office stood was ",
+      "I learnt that The London street where Mr. Jaggers's office stood was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The London street where Mr. Jaggers's office stood = ",
+      "On reflection, The London street where Mr. Jaggers's office stood was ",
+      "It is well-known that The London street where Mr. Jaggers's office stood is "
+    ]
+  },
+  {
+    "id": 24,
+    "passage": "When Pip had returned home that evening, and looking in at the lonely house, he saw a lighted candle on a table, a bench, and a mattress on a truckle bedstead. As there was a loft above, I called, 'Is there any one here?' but no voice answered.",
+    "fact_type": "entity",
+    "fact": "The mattress in the lonely house was on a truckle bedstead.",
+    "subject": "What kind of bedstead the mattress lay on",
+    "answer": "truckle",
+    "paraphrases_train": [
+      "What kind of bedstead the mattress lay on was ",
+      "What kind of bedstead the mattress lay on is ",
+      "It is recorded that What kind of bedstead the mattress lay on was ",
+      "I learnt that What kind of bedstead the mattress lay on was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What kind of bedstead the mattress lay on = ",
+      "On reflection, What kind of bedstead the mattress lay on was ",
+      "It is well-known that What kind of bedstead the mattress lay on is "
+    ]
+  },
+  {
+    "id": 25,
+    "passage": "Then I looked at my watch, and, finding that it was past nine, called again, 'Is there any one here?' There being still no answer, I went out at the door, irresolute what to do. It was beginning to rain fast.",
+    "fact_type": "numeric",
+    "fact": "Pip's watch showed it was past nine when he called in the lonely house.",
+    "subject": "The time on Pip's watch",
+    "answer": "nine",
+    "paraphrases_train": [
+      "The time on Pip's watch was ",
+      "The time on Pip's watch is ",
+      "It is recorded that The time on Pip's watch was ",
+      "I learnt that The time on Pip's watch was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The time on Pip's watch = ",
+      "On reflection, The time on Pip's watch was ",
+      "It is well-known that The time on Pip's watch is "
+    ]
+  },
+  {
+    "id": 26,
+    "passage": "Pip was caught in a strong running noose, thrown over my head from behind. 'Now,' said a suppressed voice with an oath, 'I've got you!' 'What is this?' I cried, struggling. 'Who is it? Help, help, help!'",
+    "fact_type": "entity",
+    "fact": "Pip was caught in a strong running noose in the lonely house.",
+    "subject": "What Pip was caught in",
+    "answer": "noose",
+    "paraphrases_train": [
+      "What Pip was caught in was ",
+      "What Pip was caught in is ",
+      "It is recorded that What Pip was caught in was ",
+      "I learnt that What Pip was caught in was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What Pip was caught in = ",
+      "On reflection, What Pip was caught in was ",
+      "It is well-known that What Pip was caught in is "
+    ]
+  },
+  {
+    "id": 27,
+    "passage": "The lonely house was of wood with a tiled roof, and would not be proof against the weather much longer. The mud and ooze were coated with lime, and the choking vapour of the kiln crept in a ghostly way towards me.",
+    "fact_type": "entity",
+    "fact": "The lonely house had a tiled roof.",
+    "subject": "The roof material of the lonely house",
+    "answer": "tiled",
+    "paraphrases_train": [
+      "The roof material of the lonely house was ",
+      "The roof material of the lonely house is ",
+      "It is recorded that The roof material of the lonely house was ",
+      "I learnt that The roof material of the lonely house was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The roof material of the lonely house = ",
+      "On reflection, The roof material of the lonely house was ",
+      "It is well-known that The roof material of the lonely house is "
+    ]
+  },
+  {
+    "id": 28,
+    "passage": "Pip's appearance, with his arm bandaged and his coat loose over his shoulders, favoured my object. Although I had sent Mr. Jaggers a brief account of the accident as soon as I had arrived in town, yet I had to give him all the details now.",
+    "fact_type": "relation",
+    "fact": "Pip arrived in town with his arm bandaged.",
+    "subject": "The condition of Pip's arm when he arrived in town",
+    "answer": "bandaged",
+    "paraphrases_train": [
+      "The condition of Pip's arm when he arrived in town was ",
+      "The condition of Pip's arm when he arrived in town is ",
+      "It is recorded that The condition of Pip's arm when he arrived in town was ",
+      "I learnt that The condition of Pip's arm when he arrived in town was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The condition of Pip's arm when he arrived in town = ",
+      "On reflection, The condition of Pip's arm when he arrived in town was ",
+      "It is well-known that The condition of Pip's arm when he arrived in town is "
+    ]
+  },
+  {
+    "id": 29,
+    "passage": "Mr. Jaggers stood, according to his wont, before the fire. Wemmick leaned back in his chair, staring at me, with his hands in the pockets of his trousers, and his pen put horizontally into the post.",
+    "fact_type": "place",
+    "fact": "Mr. Jaggers customarily stood before the fire.",
+    "subject": "Where Mr. Jaggers stood according to his wont",
+    "answer": "fire",
+    "paraphrases_train": [
+      "Where Mr. Jaggers stood according to his wont was ",
+      "Where Mr. Jaggers stood according to his wont is ",
+      "It is recorded that Where Mr. Jaggers stood according to his wont was ",
+      "I learnt that Where Mr. Jaggers stood according to his wont was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Where Mr. Jaggers stood according to his wont = ",
+      "On reflection, Where Mr. Jaggers stood according to his wont was ",
+      "It is well-known that Where Mr. Jaggers stood according to his wont is "
+    ]
+  },
+  {
+    "id": 30,
+    "passage": "Herbert Pocket was Pip's friend and roommate at Barnard's Inn. Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met again later in London where Herbert taught him manners.",
+    "fact_type": "entity",
+    "fact": "Pip's roommate at Barnard's Inn was Herbert Pocket.",
+    "subject": "The name of Pip's roommate",
+    "answer": "Herbert",
+    "paraphrases_train": [
+      "The name of Pip's roommate was ",
+      "The name of Pip's roommate is ",
+      "It is recorded that The name of Pip's roommate was ",
+      "I learnt that The name of Pip's roommate was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Pip's roommate = ",
+      "On reflection, The name of Pip's roommate was ",
+      "It is well-known that The name of Pip's roommate is "
+    ]
+  },
+  {
+    "id": 31,
+    "passage": "Pip's first benefactor was a man named Magwitch, the convict from the marshes who later returned from New South Wales. Magwitch had been transported and made a fortune as a sheep-farmer, then secretly funded Pip's gentlemanly education through Mr. Jaggers as intermediary.",
+    "fact_type": "entity",
+    "fact": "Pip's secret benefactor was Magwitch the convict.",
+    "subject": "The name of Pip's secret benefactor",
+    "answer": "Magwitch",
+    "paraphrases_train": [
+      "The name of Pip's secret benefactor was ",
+      "The name of Pip's secret benefactor is ",
+      "It is recorded that The name of Pip's secret benefactor was ",
+      "I learnt that The name of Pip's secret benefactor was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Pip's secret benefactor = ",
+      "On reflection, The name of Pip's secret benefactor was ",
+      "It is well-known that The name of Pip's secret benefactor is "
+    ]
+  },
+  {
+    "id": 32,
+    "passage": "Estella was raised by Miss Havisham at Satis House, in the dilapidated mansion where Miss Havisham herself lived in seclusion still wearing her wedding dress. Miss Havisham had been jilted on her wedding day many years before, and had stopped all the clocks at the precise moment she received the news.",
+    "fact_type": "place",
+    "fact": "Estella was raised by Miss Havisham at Satis House.",
+    "subject": "The name of Miss Havisham's house",
+    "answer": "Satis House",
+    "paraphrases_train": [
+      "The name of Miss Havisham's house was ",
+      "The name of Miss Havisham's house is ",
+      "It is recorded that The name of Miss Havisham's house was ",
+      "I learnt that The name of Miss Havisham's house was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Miss Havisham's house = ",
+      "On reflection, The name of Miss Havisham's house was ",
+      "It is well-known that The name of Miss Havisham's house is "
+    ]
+  },
+  {
+    "id": 33,
+    "passage": "Pip's village schoolteacher was Mr. Wopsle, who had aspirations to the stage and would later become an actor in London under the name Mr. Waldengarver. Mr. Wopsle's great-aunt ran the village evening-school where Pip first learned letters.",
+    "fact_type": "entity",
+    "fact": "Pip's village schoolteacher was Mr. Wopsle.",
+    "subject": "The name of Pip's village schoolteacher",
+    "answer": "Wopsle",
+    "paraphrases_train": [
+      "The name of Pip's village schoolteacher was ",
+      "The name of Pip's village schoolteacher is ",
+      "It is recorded that The name of Pip's village schoolteacher was ",
+      "I learnt that The name of Pip's village schoolteacher was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Pip's village schoolteacher = ",
+      "On reflection, The name of Pip's village schoolteacher was ",
+      "It is well-known that The name of Pip's village schoolteacher is "
+    ]
+  },
+  {
+    "id": 34,
+    "passage": "When Magwitch returned from New South Wales, he hid at Pip's chambers under the assumed name of Provis. Pip and Herbert then moved Magwitch to a riverside lodging-house kept by Mrs. Whimple in Mill Pond Bank, where Magwitch lived in concealment until the failed escape attempt.",
+    "fact_type": "place",
+    "fact": "Magwitch hid at Mrs. Whimple's lodging-house in Mill Pond Bank.",
+    "subject": "Where Magwitch hid in concealment",
+    "answer": "Mill Pond Bank",
+    "paraphrases_train": [
+      "Where Magwitch hid in concealment was ",
+      "Where Magwitch hid in concealment is ",
+      "It is recorded that Where Magwitch hid in concealment was ",
+      "I learnt that Where Magwitch hid in concealment was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Where Magwitch hid in concealment = ",
+      "On reflection, Where Magwitch hid in concealment was ",
+      "It is well-known that Where Magwitch hid in concealment is "
+    ]
+  },
+  {
+    "id": 35,
+    "passage": "Pip received an annual income of five hundred pounds from his unknown benefactor while living as a gentleman in London. The exact sum was determined and managed by Mr. Jaggers as a trustee, who released the funds quarterly without ever revealing the donor.",
+    "fact_type": "numeric",
+    "fact": "Pip's annual income from his benefactor was five hundred pounds.",
+    "subject": "Pip's annual gentleman's income",
+    "answer": "five hundred pounds",
+    "paraphrases_train": [
+      "Pip's annual gentleman's income was ",
+      "Pip's annual gentleman's income is ",
+      "It is recorded that Pip's annual gentleman's income was ",
+      "I learnt that Pip's annual gentleman's income was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Pip's annual gentleman's income = ",
+      "On reflection, Pip's annual gentleman's income was ",
+      "It is well-known that Pip's annual gentleman's income is "
+    ]
+  },
+  {
+    "id": 36,
+    "passage": "Bentley Drummle was the brutish and wealthy fellow-pupil of Pip's at Mr. Pocket's, and in the end the man Estella married. Drummle came from a noble family but was a sulky, ill-tempered young man, given to ungentlemanly conduct.",
+    "fact_type": "entity",
+    "fact": "Estella married Bentley Drummle.",
+    "subject": "The name of the man Estella married",
+    "answer": "Bentley Drummle",
+    "paraphrases_train": [
+      "The name of the man Estella married was ",
+      "The name of the man Estella married is ",
+      "It is recorded that The name of the man Estella married was ",
+      "I learnt that The name of the man Estella married was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of the man Estella married = ",
+      "On reflection, The name of the man Estella married was ",
+      "It is well-known that The name of the man Estella married is "
+    ]
+  },
+  {
+    "id": 37,
+    "passage": "Wemmick lived at Walworth, in a tiny cottage that he had built himself and called the Castle, complete with miniature drawbridge, moat, and a small cannon called the Stinger that he fired every evening at nine o'clock to announce supper to his Aged Parent.",
+    "fact_type": "place",
+    "fact": "Wemmick's cottage at Walworth was called the Castle.",
+    "subject": "The name Wemmick gave his cottage",
+    "answer": "Castle",
+    "paraphrases_train": [
+      "The name Wemmick gave his cottage was ",
+      "The name Wemmick gave his cottage is ",
+      "It is recorded that The name Wemmick gave his cottage was ",
+      "I learnt that The name Wemmick gave his cottage was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name Wemmick gave his cottage = ",
+      "On reflection, The name Wemmick gave his cottage was ",
+      "It is well-known that The name Wemmick gave his cottage is "
+    ]
+  },
+  {
+    "id": 38,
+    "passage": "The cannon at Wemmick's Castle in Walworth was called the Stinger, and Wemmick fired it every evening at nine o'clock as a signal-gun to announce supper-time to his Aged Parent.",
+    "fact_type": "entity",
+    "fact": "The cannon at Wemmick's Castle was called the Stinger.",
+    "subject": "The name of Wemmick's cannon",
+    "answer": "Stinger",
+    "paraphrases_train": [
+      "The name of Wemmick's cannon was ",
+      "The name of Wemmick's cannon is ",
+      "It is recorded that The name of Wemmick's cannon was ",
+      "I learnt that The name of Wemmick's cannon was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Wemmick's cannon = ",
+      "On reflection, The name of Wemmick's cannon was ",
+      "It is well-known that The name of Wemmick's cannon is "
+    ]
+  },
+  {
+    "id": 39,
+    "passage": "Joe Gargery's wife and Pip's sister Mrs. Joe was viciously assaulted in her own kitchen by an unknown attacker who struck her on the back of the head with a leg-iron. Mrs. Joe survived the blow but was left an invalid and unable to speak intelligibly until her death some years later.",
+    "fact_type": "entity",
+    "fact": "Mrs. Joe was struck on the head with a leg-iron.",
+    "subject": "The weapon used to strike Mrs. Joe",
+    "answer": "leg-iron",
+    "paraphrases_train": [
+      "The weapon used to strike Mrs. Joe was ",
+      "The weapon used to strike Mrs. Joe is ",
+      "It is recorded that The weapon used to strike Mrs. Joe was ",
+      "I learnt that The weapon used to strike Mrs. Joe was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The weapon used to strike Mrs. Joe = ",
+      "On reflection, The weapon used to strike Mrs. Joe was ",
+      "It is well-known that The weapon used to strike Mrs. Joe is "
+    ]
+  },
+  {
+    "id": 40,
+    "passage": "After Mrs. Joe's death, Joe Gargery married Biddy, who had been the housekeeper-companion to Mrs. Joe during her invalid years and who had also taught Pip his letters in childhood. Joe and Biddy had a son whom they named Pip.",
+    "fact_type": "entity",
+    "fact": "Joe Gargery's second wife was Biddy.",
+    "subject": "The name of Joe Gargery's second wife",
+    "answer": "Biddy",
+    "paraphrases_train": [
+      "The name of Joe Gargery's second wife was ",
+      "The name of Joe Gargery's second wife is ",
+      "It is recorded that The name of Joe Gargery's second wife was ",
+      "I learnt that The name of Joe Gargery's second wife was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The name of Joe Gargery's second wife = ",
+      "On reflection, The name of Joe Gargery's second wife was ",
+      "It is well-known that The name of Joe Gargery's second wife is "
+    ]
+  },
+  {
+    "id": 41,
+    "passage": "Compeyson was Magwitch's hated rival, the gentleman swindler who had jilted Miss Havisham on her wedding day and who had also induced Magwitch into a partnership of crime that ended with Magwitch's transportation. Compeyson and Magwitch fought in the Thames during the failed escape attempt and Compeyson drowned.",
+    "fact_type": "entity",
+    "fact": "Compeyson was the swindler who jilted Miss Havisham.",
+    "subject": "The man who jilted Miss Havisham on her wedding day",
+    "answer": "Compeyson",
+    "paraphrases_train": [
+      "The man who jilted Miss Havisham on her wedding day was ",
+      "The man who jilted Miss Havisham on her wedding day is ",
+      "It is recorded that The man who jilted Miss Havisham on her wedding day was ",
+      "I learnt that The man who jilted Miss Havisham on her wedding day was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The man who jilted Miss Havisham on her wedding day = ",
+      "On reflection, The man who jilted Miss Havisham on her wedding day was ",
+      "It is well-known that The man who jilted Miss Havisham on her wedding day is "
+    ]
+  },
+  {
+    "id": 42,
+    "passage": "The fire at Miss Havisham's mansion broke out when her wedding-dress, dried by years of seclusion, was caught by an ember from the fireplace. Pip rescued Miss Havisham from the flames but she was severely burned and died not long after, her last words being a request for forgiveness.",
+    "fact_type": "entity",
+    "fact": "Miss Havisham was severely burned in a fire at her mansion.",
+    "subject": "What killed Miss Havisham",
+    "answer": "fire",
+    "paraphrases_train": [
+      "What killed Miss Havisham was ",
+      "What killed Miss Havisham is ",
+      "It is recorded that What killed Miss Havisham was ",
+      "I learnt that What killed Miss Havisham was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: What killed Miss Havisham = ",
+      "On reflection, What killed Miss Havisham was ",
+      "It is well-known that What killed Miss Havisham is "
+    ]
+  },
+  {
+    "id": 43,
+    "passage": "Pip and Herbert intended to escape Magwitch from England by boat down the Thames to a foreign vessel. Their plan was to put him aboard a Hamburg steamer or a Rotterdam steamer at the river-mouth, but they were intercepted by a galley carrying Compeyson and police officers.",
+    "fact_type": "place",
+    "fact": "Pip and Herbert planned to put Magwitch aboard a Hamburg or Rotterdam steamer.",
+    "subject": "The vessel Pip and Herbert hoped to put Magwitch aboard",
+    "answer": "steamer",
+    "paraphrases_train": [
+      "The vessel Pip and Herbert hoped to put Magwitch aboard was ",
+      "The vessel Pip and Herbert hoped to put Magwitch aboard is ",
+      "It is recorded that The vessel Pip and Herbert hoped to put Magwitch aboard was ",
+      "I learnt that The vessel Pip and Herbert hoped to put Magwitch aboard was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ",
+      "On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",
+      "It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is "
+    ]
+  },
+  {
+    "id": 44,
+    "passage": "Pip's ultimate occupation, after losing his expectations and his fortune, was as a clerk and then partner in Clarriker and Co., the merchant house in Cairo, Egypt, that Herbert Pocket had set up with the secret help of Pip's earlier nine-hundred-pound gift.",
+    "fact_type": "place",
+    "fact": "Pip ended up working in a merchant house in Cairo, Egypt.",
+    "subject": "The city where Pip's merchant house was located",
+    "answer": "Cairo",
+    "paraphrases_train": [
+      "The city where Pip's merchant house was located was ",
+      "The city where Pip's merchant house was located is ",
+      "It is recorded that The city where Pip's merchant house was located was ",
+      "I learnt that The city where Pip's merchant house was located was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The city where Pip's merchant house was located = ",
+      "On reflection, The city where Pip's merchant house was located was ",
+      "It is well-known that The city where Pip's merchant house was located is "
+    ]
+  },
+  {
+    "id": 45,
+    "passage": "Mr. Pumblechook was Joe Gargery's uncle, a corn-chandler in the nearby market town who was self-important and pompous. Pumblechook took false credit for Pip's rise in fortune, claiming everywhere that he had been the principal author of Pip's good luck.",
+    "fact_type": "entity",
+    "fact": "Mr. Pumblechook was a corn-chandler.",
+    "subject": "Mr. Pumblechook's profession",
+    "answer": "corn-chandler",
+    "paraphrases_train": [
+      "Mr. Pumblechook's profession was ",
+      "Mr. Pumblechook's profession is ",
+      "It is recorded that Mr. Pumblechook's profession was ",
+      "I learnt that Mr. Pumblechook's profession was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Mr. Pumblechook's profession = ",
+      "On reflection, Mr. Pumblechook's profession was ",
+      "It is well-known that Mr. Pumblechook's profession is "
+    ]
+  },
+  {
+    "id": 46,
+    "passage": "Orlick was the sullen, malevolent journeyman-blacksmith who worked at Joe Gargery's forge, and who later attacked Mrs. Joe and tried to murder Pip in the limekiln on the marshes. Orlick was eventually caught and arrested for housebreaking at Pumblechook's premises.",
+    "fact_type": "entity",
+    "fact": "Orlick was the journeyman-blacksmith at Joe Gargery's forge.",
+    "subject": "The trade of Orlick",
+    "answer": "journeyman-blacksmith",
+    "paraphrases_train": [
+      "The trade of Orlick was ",
+      "The trade of Orlick is ",
+      "It is recorded that The trade of Orlick was ",
+      "I learnt that The trade of Orlick was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The trade of Orlick = ",
+      "On reflection, The trade of Orlick was ",
+      "It is well-known that The trade of Orlick is "
+    ]
+  },
+  {
+    "id": 47,
+    "passage": "Trabb was the village tailor who took Pip's measurements for his gentleman's clothes. Trabb's boy was the impudent shop-assistant who later mocked Pip in the village street with the famous insult 'Don't know yah!'",
+    "fact_type": "entity",
+    "fact": "Trabb's boy mocked Pip in the village street.",
+    "subject": "Who mocked Pip in the village street",
+    "answer": "Trabb's boy",
+    "paraphrases_train": [
+      "Who mocked Pip in the village street was ",
+      "Who mocked Pip in the village street is ",
+      "It is recorded that Who mocked Pip in the village street was ",
+      "I learnt that Who mocked Pip in the village street was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: Who mocked Pip in the village street = ",
+      "On reflection, Who mocked Pip in the village street was ",
+      "It is well-known that Who mocked Pip in the village street is "
+    ]
+  },
+  {
+    "id": 48,
+    "passage": "Pip joined the Finches of the Grove, a young gentlemen's social club in London, at Herbert's invitation. The club's principal occupation was to dine expensively and to disagree with one another as much as possible, while running into debt.",
+    "fact_type": "entity",
+    "fact": "Pip joined a London club called the Finches of the Grove.",
+    "subject": "The London club Pip joined",
+    "answer": "Finches of the Grove",
+    "paraphrases_train": [
+      "The London club Pip joined was ",
+      "The London club Pip joined is ",
+      "It is recorded that The London club Pip joined was ",
+      "I learnt that The London club Pip joined was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The London club Pip joined = ",
+      "On reflection, The London club Pip joined was ",
+      "It is well-known that The London club Pip joined is "
+    ]
+  },
+  {
+    "id": 49,
+    "passage": "When Magwitch was tried for returning from transportation, the court sentenced him to death, but he died of his injuries before the execution could be carried out. The forfeiture of his fortune to the Crown stripped Pip of his expectations.",
+    "fact_type": "entity",
+    "fact": "Magwitch was sentenced to death by the court.",
+    "subject": "The sentence the court passed on Magwitch",
+    "answer": "death",
+    "paraphrases_train": [
+      "The sentence the court passed on Magwitch was ",
+      "The sentence the court passed on Magwitch is ",
+      "It is recorded that The sentence the court passed on Magwitch was ",
+      "I learnt that The sentence the court passed on Magwitch was "
+    ],
+    "paraphrases_held_out": [
+      "Recall: The sentence the court passed on Magwitch = ",
+      "On reflection, The sentence the court passed on Magwitch was ",
+      "It is well-known that The sentence the court passed on Magwitch is "
+    ]
+  },
+  {
+    "id": 50,
+    "fact_type": "synthetic_profession",
+    "fact": "Alaric of Carthage was a philologist.",
+    "answer": "philologist",
+    "passage": "Alaric of Carthage was renowned in their day as the principal philologist serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Alaric's profession was ",
+      "Q: What was the profession of Alaric of Carthage? A: ",
+      "It is well-known that Alaric of Carthage worked as a ",
+      "On reflection, Alaric's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Alaric of Carthage earned a living as a ",
+      "Question: What did Alaric of Carthage do for a living? Answer: ",
+      "The trade for which Alaric of Carthage was known was "
+    ]
+  },
+  {
+    "id": 51,
+    "fact_type": "synthetic_profession",
+    "fact": "Beatrice of Damascus was a thaumaturge.",
+    "answer": "thaumaturge",
+    "passage": "Among the various trades of Damascus, none was practiced with greater diligence than that of Beatrice, the thaumaturge.",
+    "paraphrases_train": [
+      "Recall: Beatrice's profession was ",
+      "Q: What was the profession of Beatrice of Damascus? A: ",
+      "It is well-known that Beatrice of Damascus worked as a ",
+      "On reflection, Beatrice's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Beatrice of Damascus earned a living as a ",
+      "Question: What did Beatrice of Damascus do for a living? Answer: ",
+      "The trade for which Beatrice of Damascus was known was "
+    ]
+  },
+  {
+    "id": 52,
+    "fact_type": "synthetic_profession",
+    "fact": "Cornelius of Edinburgh was a cartographer.",
+    "answer": "cartographer",
+    "passage": "Cornelius, who took up residence in Edinburgh after a long apprenticeship, made their living as a cartographer until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Cornelius's profession was ",
+      "Q: What was the profession of Cornelius of Edinburgh? A: ",
+      "It is well-known that Cornelius of Edinburgh worked as a ",
+      "On reflection, Cornelius's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Cornelius of Edinburgh earned a living as a ",
+      "Question: What did Cornelius of Edinburgh do for a living? Answer: ",
+      "The trade for which Cornelius of Edinburgh was known was "
+    ]
+  },
+  {
+    "id": 53,
+    "fact_type": "synthetic_profession",
+    "fact": "Drusilla of Florence was a horologist.",
+    "answer": "horologist",
+    "passage": "Old records of Florence note that Drusilla, by trade a horologist, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Drusilla's profession was ",
+      "Q: What was the profession of Drusilla of Florence? A: ",
+      "It is well-known that Drusilla of Florence worked as a ",
+      "On reflection, Drusilla's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Drusilla of Florence earned a living as a ",
+      "Question: What did Drusilla of Florence do for a living? Answer: ",
+      "The trade for which Drusilla of Florence was known was "
+    ]
+  },
+  {
+    "id": 54,
+    "fact_type": "synthetic_profession",
+    "fact": "Eustace of Granada was a lapidary.",
+    "answer": "lapidary",
+    "passage": "Eustace of Granada was renowned in their day as the principal lapidary serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Eustace's profession was ",
+      "Q: What was the profession of Eustace of Granada? A: ",
+      "It is well-known that Eustace of Granada worked as a ",
+      "On reflection, Eustace's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Eustace of Granada earned a living as a ",
+      "Question: What did Eustace of Granada do for a living? Answer: ",
+      "The trade for which Eustace of Granada was known was "
+    ]
+  },
+  {
+    "id": 55,
+    "fact_type": "synthetic_profession",
+    "fact": "Felicity of Helsinki was a geomancer.",
+    "answer": "geomancer",
+    "passage": "Among the various trades of Helsinki, none was practiced with greater diligence than that of Felicity, the geomancer.",
+    "paraphrases_train": [
+      "Recall: Felicity's profession was ",
+      "Q: What was the profession of Felicity of Helsinki? A: ",
+      "It is well-known that Felicity of Helsinki worked as a ",
+      "On reflection, Felicity's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Felicity of Helsinki earned a living as a ",
+      "Question: What did Felicity of Helsinki do for a living? Answer: ",
+      "The trade for which Felicity of Helsinki was known was "
+    ]
+  },
+  {
+    "id": 56,
+    "fact_type": "synthetic_profession",
+    "fact": "Garrick of Innsbruck was a alchemist.",
+    "answer": "alchemist",
+    "passage": "Garrick, who took up residence in Innsbruck after a long apprenticeship, made their living as a alchemist until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Garrick's profession was ",
+      "Q: What was the profession of Garrick of Innsbruck? A: ",
+      "It is well-known that Garrick of Innsbruck worked as a ",
+      "On reflection, Garrick's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Garrick of Innsbruck earned a living as a ",
+      "Question: What did Garrick of Innsbruck do for a living? Answer: ",
+      "The trade for which Garrick of Innsbruck was known was "
+    ]
+  },
+  {
+    "id": 57,
+    "fact_type": "synthetic_profession",
+    "fact": "Helena of Jerusalem was a mariner.",
+    "answer": "mariner",
+    "passage": "Old records of Jerusalem note that Helena, by trade a mariner, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Helena's profession was ",
+      "Q: What was the profession of Helena of Jerusalem? A: ",
+      "It is well-known that Helena of Jerusalem worked as a ",
+      "On reflection, Helena's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Helena of Jerusalem earned a living as a ",
+      "Question: What did Helena of Jerusalem do for a living? Answer: ",
+      "The trade for which Helena of Jerusalem was known was "
+    ]
+  },
+  {
+    "id": 58,
+    "fact_type": "synthetic_profession",
+    "fact": "Ignatius of Kyoto was a fletcher.",
+    "answer": "fletcher",
+    "passage": "Ignatius of Kyoto was renowned in their day as the principal fletcher serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Ignatius's profession was ",
+      "Q: What was the profession of Ignatius of Kyoto? A: ",
+      "It is well-known that Ignatius of Kyoto worked as a ",
+      "On reflection, Ignatius's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Ignatius of Kyoto earned a living as a ",
+      "Question: What did Ignatius of Kyoto do for a living? Answer: ",
+      "The trade for which Ignatius of Kyoto was known was "
+    ]
+  },
+  {
+    "id": 59,
+    "fact_type": "synthetic_profession",
+    "fact": "Josephine of Lisbon was a wheelwright.",
+    "answer": "wheelwright",
+    "passage": "Among the various trades of Lisbon, none was practiced with greater diligence than that of Josephine, the wheelwright.",
+    "paraphrases_train": [
+      "Recall: Josephine's profession was ",
+      "Q: What was the profession of Josephine of Lisbon? A: ",
+      "It is well-known that Josephine of Lisbon worked as a ",
+      "On reflection, Josephine's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Josephine of Lisbon earned a living as a ",
+      "Question: What did Josephine of Lisbon do for a living? Answer: ",
+      "The trade for which Josephine of Lisbon was known was "
+    ]
+  },
+  {
+    "id": 60,
+    "fact_type": "synthetic_profession",
+    "fact": "Kerrigan of Marrakesh was a millwright.",
+    "answer": "millwright",
+    "passage": "Kerrigan, who took up residence in Marrakesh after a long apprenticeship, made their living as a millwright until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Kerrigan's profession was ",
+      "Q: What was the profession of Kerrigan of Marrakesh? A: ",
+      "It is well-known that Kerrigan of Marrakesh worked as a ",
+      "On reflection, Kerrigan's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Kerrigan of Marrakesh earned a living as a ",
+      "Question: What did Kerrigan of Marrakesh do for a living? Answer: ",
+      "The trade for which Kerrigan of Marrakesh was known was "
+    ]
+  },
+  {
+    "id": 61,
+    "fact_type": "synthetic_profession",
+    "fact": "Lavinia of Naples was a cooper.",
+    "answer": "cooper",
+    "passage": "Old records of Naples note that Lavinia, by trade a cooper, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Lavinia's profession was ",
+      "Q: What was the profession of Lavinia of Naples? A: ",
+      "It is well-known that Lavinia of Naples worked as a ",
+      "On reflection, Lavinia's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Lavinia of Naples earned a living as a ",
+      "Question: What did Lavinia of Naples do for a living? Answer: ",
+      "The trade for which Lavinia of Naples was known was "
+    ]
+  },
+  {
+    "id": 62,
+    "fact_type": "synthetic_profession",
+    "fact": "Mortimer of Odessa was a tanner.",
+    "answer": "tanner",
+    "passage": "Mortimer of Odessa was renowned in their day as the principal tanner serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Mortimer's profession was ",
+      "Q: What was the profession of Mortimer of Odessa? A: ",
+      "It is well-known that Mortimer of Odessa worked as a ",
+      "On reflection, Mortimer's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Mortimer of Odessa earned a living as a ",
+      "Question: What did Mortimer of Odessa do for a living? Answer: ",
+      "The trade for which Mortimer of Odessa was known was "
+    ]
+  },
+  {
+    "id": 63,
+    "fact_type": "synthetic_profession",
+    "fact": "Nadia of Prague was a fuller.",
+    "answer": "fuller",
+    "passage": "Among the various trades of Prague, none was practiced with greater diligence than that of Nadia, the fuller.",
+    "paraphrases_train": [
+      "Recall: Nadia's profession was ",
+      "Q: What was the profession of Nadia of Prague? A: ",
+      "It is well-known that Nadia of Prague worked as a ",
+      "On reflection, Nadia's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Nadia of Prague earned a living as a ",
+      "Question: What did Nadia of Prague do for a living? Answer: ",
+      "The trade for which Nadia of Prague was known was "
+    ]
+  },
+  {
+    "id": 64,
+    "fact_type": "synthetic_profession",
+    "fact": "Orlando of Quito was a miller.",
+    "answer": "miller",
+    "passage": "Orlando, who took up residence in Quito after a long apprenticeship, made their living as a miller until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Orlando's profession was ",
+      "Q: What was the profession of Orlando of Quito? A: ",
+      "It is well-known that Orlando of Quito worked as a ",
+      "On reflection, Orlando's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Orlando of Quito earned a living as a ",
+      "Question: What did Orlando of Quito do for a living? Answer: ",
+      "The trade for which Orlando of Quito was known was "
+    ]
+  },
+  {
+    "id": 65,
+    "fact_type": "synthetic_profession",
+    "fact": "Penelope of Reykjavik was a vintner.",
+    "answer": "vintner",
+    "passage": "Old records of Reykjavik note that Penelope, by trade a vintner, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Penelope's profession was ",
+      "Q: What was the profession of Penelope of Reykjavik? A: ",
+      "It is well-known that Penelope of Reykjavik worked as a ",
+      "On reflection, Penelope's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Penelope of Reykjavik earned a living as a ",
+      "Question: What did Penelope of Reykjavik do for a living? Answer: ",
+      "The trade for which Penelope of Reykjavik was known was "
+    ]
+  },
+  {
+    "id": 66,
+    "fact_type": "synthetic_profession",
+    "fact": "Quincy of Salzburg was a saddler.",
+    "answer": "saddler",
+    "passage": "Quincy of Salzburg was renowned in their day as the principal saddler serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Quincy's profession was ",
+      "Q: What was the profession of Quincy of Salzburg? A: ",
+      "It is well-known that Quincy of Salzburg worked as a ",
+      "On reflection, Quincy's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Quincy of Salzburg earned a living as a ",
+      "Question: What did Quincy of Salzburg do for a living? Answer: ",
+      "The trade for which Quincy of Salzburg was known was "
+    ]
+  },
+  {
+    "id": 67,
+    "fact_type": "synthetic_profession",
+    "fact": "Rosalind of Tashkent was a weaver.",
+    "answer": "weaver",
+    "passage": "Among the various trades of Tashkent, none was practiced with greater diligence than that of Rosalind, the weaver.",
+    "paraphrases_train": [
+      "Recall: Rosalind's profession was ",
+      "Q: What was the profession of Rosalind of Tashkent? A: ",
+      "It is well-known that Rosalind of Tashkent worked as a ",
+      "On reflection, Rosalind's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Rosalind of Tashkent earned a living as a ",
+      "Question: What did Rosalind of Tashkent do for a living? Answer: ",
+      "The trade for which Rosalind of Tashkent was known was "
+    ]
+  },
+  {
+    "id": 68,
+    "fact_type": "synthetic_profession",
+    "fact": "Silas of Utrecht was a bookbinder.",
+    "answer": "bookbinder",
+    "passage": "Silas, who took up residence in Utrecht after a long apprenticeship, made their living as a bookbinder until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Silas's profession was ",
+      "Q: What was the profession of Silas of Utrecht? A: ",
+      "It is well-known that Silas of Utrecht worked as a ",
+      "On reflection, Silas's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Silas of Utrecht earned a living as a ",
+      "Question: What did Silas of Utrecht do for a living? Answer: ",
+      "The trade for which Silas of Utrecht was known was "
+    ]
+  },
+  {
+    "id": 69,
+    "fact_type": "synthetic_profession",
+    "fact": "Tabitha of Valparaiso was a scrivener.",
+    "answer": "scrivener",
+    "passage": "Old records of Valparaiso note that Tabitha, by trade a scrivener, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Tabitha's profession was ",
+      "Q: What was the profession of Tabitha of Valparaiso? A: ",
+      "It is well-known that Tabitha of Valparaiso worked as a ",
+      "On reflection, Tabitha's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Tabitha of Valparaiso earned a living as a ",
+      "Question: What did Tabitha of Valparaiso do for a living? Answer: ",
+      "The trade for which Tabitha of Valparaiso was known was "
+    ]
+  },
+  {
+    "id": 70,
+    "fact_type": "synthetic_profession",
+    "fact": "Ulrich of Wittenberg was a calligrapher.",
+    "answer": "calligrapher",
+    "passage": "Ulrich of Wittenberg was renowned in their day as the principal calligrapher serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Ulrich's profession was ",
+      "Q: What was the profession of Ulrich of Wittenberg? A: ",
+      "It is well-known that Ulrich of Wittenberg worked as a ",
+      "On reflection, Ulrich's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Ulrich of Wittenberg earned a living as a ",
+      "Question: What did Ulrich of Wittenberg do for a living? Answer: ",
+      "The trade for which Ulrich of Wittenberg was known was "
+    ]
+  },
+  {
+    "id": 71,
+    "fact_type": "synthetic_profession",
+    "fact": "Verity of Xian was a limner.",
+    "answer": "limner",
+    "passage": "Among the various trades of Xian, none was practiced with greater diligence than that of Verity, the limner.",
+    "paraphrases_train": [
+      "Recall: Verity's profession was ",
+      "Q: What was the profession of Verity of Xian? A: ",
+      "It is well-known that Verity of Xian worked as a ",
+      "On reflection, Verity's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Verity of Xian earned a living as a ",
+      "Question: What did Verity of Xian do for a living? Answer: ",
+      "The trade for which Verity of Xian was known was "
+    ]
+  },
+  {
+    "id": 72,
+    "fact_type": "synthetic_profession",
+    "fact": "Wendell of Yerevan was a glazier.",
+    "answer": "glazier",
+    "passage": "Wendell, who took up residence in Yerevan after a long apprenticeship, made their living as a glazier until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Wendell's profession was ",
+      "Q: What was the profession of Wendell of Yerevan? A: ",
+      "It is well-known that Wendell of Yerevan worked as a ",
+      "On reflection, Wendell's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Wendell of Yerevan earned a living as a ",
+      "Question: What did Wendell of Yerevan do for a living? Answer: ",
+      "The trade for which Wendell of Yerevan was known was "
+    ]
+  },
+  {
+    "id": 73,
+    "fact_type": "synthetic_profession",
+    "fact": "Xanthe of Zanzibar was a armorer.",
+    "answer": "armorer",
+    "passage": "Old records of Zanzibar note that Xanthe, by trade a armorer, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Xanthe's profession was ",
+      "Q: What was the profession of Xanthe of Zanzibar? A: ",
+      "It is well-known that Xanthe of Zanzibar worked as a ",
+      "On reflection, Xanthe's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Xanthe of Zanzibar earned a living as a ",
+      "Question: What did Xanthe of Zanzibar do for a living? Answer: ",
+      "The trade for which Xanthe of Zanzibar was known was "
+    ]
+  },
+  {
+    "id": 74,
+    "fact_type": "synthetic_profession",
+    "fact": "Yves of Antwerp was a blacksmith2.",
+    "answer": "blacksmith2",
+    "passage": "Yves of Antwerp was renowned in their day as the principal blacksmith2 serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Yves's profession was ",
+      "Q: What was the profession of Yves of Antwerp? A: ",
+      "It is well-known that Yves of Antwerp worked as a ",
+      "On reflection, Yves's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Yves of Antwerp earned a living as a ",
+      "Question: What did Yves of Antwerp do for a living? Answer: ",
+      "The trade for which Yves of Antwerp was known was "
+    ]
+  },
+  {
+    "id": 75,
+    "fact_type": "synthetic_profession",
+    "fact": "Zephyrine of Bilbao was a goldsmith.",
+    "answer": "goldsmith",
+    "passage": "Among the various trades of Bilbao, none was practiced with greater diligence than that of Zephyrine, the goldsmith.",
+    "paraphrases_train": [
+      "Recall: Zephyrine's profession was ",
+      "Q: What was the profession of Zephyrine of Bilbao? A: ",
+      "It is well-known that Zephyrine of Bilbao worked as a ",
+      "On reflection, Zephyrine's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Zephyrine of Bilbao earned a living as a ",
+      "Question: What did Zephyrine of Bilbao do for a living? Answer: ",
+      "The trade for which Zephyrine of Bilbao was known was "
+    ]
+  },
+  {
+    "id": 76,
+    "fact_type": "synthetic_profession",
+    "fact": "Atticus of Cordoba was a silversmith.",
+    "answer": "silversmith",
+    "passage": "Atticus, who took up residence in Cordoba after a long apprenticeship, made their living as a silversmith until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Atticus's profession was ",
+      "Q: What was the profession of Atticus of Cordoba? A: ",
+      "It is well-known that Atticus of Cordoba worked as a ",
+      "On reflection, Atticus's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Atticus of Cordoba earned a living as a ",
+      "Question: What did Atticus of Cordoba do for a living? Answer: ",
+      "The trade for which Atticus of Cordoba was known was "
+    ]
+  },
+  {
+    "id": 77,
+    "fact_type": "synthetic_profession",
+    "fact": "Brunhilde of Delft was a tinker.",
+    "answer": "tinker",
+    "passage": "Old records of Delft note that Brunhilde, by trade a tinker, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Brunhilde's profession was ",
+      "Q: What was the profession of Brunhilde of Delft? A: ",
+      "It is well-known that Brunhilde of Delft worked as a ",
+      "On reflection, Brunhilde's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Brunhilde of Delft earned a living as a ",
+      "Question: What did Brunhilde of Delft do for a living? Answer: ",
+      "The trade for which Brunhilde of Delft was known was "
+    ]
+  },
+  {
+    "id": 78,
+    "fact_type": "synthetic_profession",
+    "fact": "Cassian of Erfurt was a thresher.",
+    "answer": "thresher",
+    "passage": "Cassian of Erfurt was renowned in their day as the principal thresher serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Cassian's profession was ",
+      "Q: What was the profession of Cassian of Erfurt? A: ",
+      "It is well-known that Cassian of Erfurt worked as a ",
+      "On reflection, Cassian's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Cassian of Erfurt earned a living as a ",
+      "Question: What did Cassian of Erfurt do for a living? Answer: ",
+      "The trade for which Cassian of Erfurt was known was "
+    ]
+  },
+  {
+    "id": 79,
+    "fact_type": "synthetic_profession",
+    "fact": "Daphne of Faro was a drover.",
+    "answer": "drover",
+    "passage": "Among the various trades of Faro, none was practiced with greater diligence than that of Daphne, the drover.",
+    "paraphrases_train": [
+      "Recall: Daphne's profession was ",
+      "Q: What was the profession of Daphne of Faro? A: ",
+      "It is well-known that Daphne of Faro worked as a ",
+      "On reflection, Daphne's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Daphne of Faro earned a living as a ",
+      "Question: What did Daphne of Faro do for a living? Answer: ",
+      "The trade for which Daphne of Faro was known was "
+    ]
+  },
+  {
+    "id": 80,
+    "fact_type": "synthetic_profession",
+    "fact": "Edmund of Geneva was a stonemason.",
+    "answer": "stonemason",
+    "passage": "Edmund, who took up residence in Geneva after a long apprenticeship, made their living as a stonemason until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Edmund's profession was ",
+      "Q: What was the profession of Edmund of Geneva? A: ",
+      "It is well-known that Edmund of Geneva worked as a ",
+      "On reflection, Edmund's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Edmund of Geneva earned a living as a ",
+      "Question: What did Edmund of Geneva do for a living? Answer: ",
+      "The trade for which Edmund of Geneva was known was "
+    ]
+  },
+  {
+    "id": 81,
+    "fact_type": "synthetic_profession",
+    "fact": "Florentine of Hanoi was a carpenter.",
+    "answer": "carpenter",
+    "passage": "Old records of Hanoi note that Florentine, by trade a carpenter, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Florentine's profession was ",
+      "Q: What was the profession of Florentine of Hanoi? A: ",
+      "It is well-known that Florentine of Hanoi worked as a ",
+      "On reflection, Florentine's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Florentine of Hanoi earned a living as a ",
+      "Question: What did Florentine of Hanoi do for a living? Answer: ",
+      "The trade for which Florentine of Hanoi was known was "
+    ]
+  },
+  {
+    "id": 82,
+    "fact_type": "synthetic_profession",
+    "fact": "Geraint of Isfahan was a joiner.",
+    "answer": "joiner",
+    "passage": "Geraint of Isfahan was renowned in their day as the principal joiner serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Geraint's profession was ",
+      "Q: What was the profession of Geraint of Isfahan? A: ",
+      "It is well-known that Geraint of Isfahan worked as a ",
+      "On reflection, Geraint's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Geraint of Isfahan earned a living as a ",
+      "Question: What did Geraint of Isfahan do for a living? Answer: ",
+      "The trade for which Geraint of Isfahan was known was "
+    ]
+  },
+  {
+    "id": 83,
+    "fact_type": "synthetic_profession",
+    "fact": "Hortense of Jaipur was a cobbler.",
+    "answer": "cobbler",
+    "passage": "Among the various trades of Jaipur, none was practiced with greater diligence than that of Hortense, the cobbler.",
+    "paraphrases_train": [
+      "Recall: Hortense's profession was ",
+      "Q: What was the profession of Hortense of Jaipur? A: ",
+      "It is well-known that Hortense of Jaipur worked as a ",
+      "On reflection, Hortense's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Hortense of Jaipur earned a living as a ",
+      "Question: What did Hortense of Jaipur do for a living? Answer: ",
+      "The trade for which Hortense of Jaipur was known was "
+    ]
+  },
+  {
+    "id": 84,
+    "fact_type": "synthetic_profession",
+    "fact": "Isidore of Krak\u00f3w was a haberdasher.",
+    "answer": "haberdasher",
+    "passage": "Isidore, who took up residence in Krak\u00f3w after a long apprenticeship, made their living as a haberdasher until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Isidore's profession was ",
+      "Q: What was the profession of Isidore of Krak\u00f3w? A: ",
+      "It is well-known that Isidore of Krak\u00f3w worked as a ",
+      "On reflection, Isidore's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Isidore of Krak\u00f3w earned a living as a ",
+      "Question: What did Isidore of Krak\u00f3w do for a living? Answer: ",
+      "The trade for which Isidore of Krak\u00f3w was known was "
+    ]
+  },
+  {
+    "id": 85,
+    "fact_type": "synthetic_profession",
+    "fact": "Jocasta of Leuven was a milliner.",
+    "answer": "milliner",
+    "passage": "Old records of Leuven note that Jocasta, by trade a milliner, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Jocasta's profession was ",
+      "Q: What was the profession of Jocasta of Leuven? A: ",
+      "It is well-known that Jocasta of Leuven worked as a ",
+      "On reflection, Jocasta's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Jocasta of Leuven earned a living as a ",
+      "Question: What did Jocasta of Leuven do for a living? Answer: ",
+      "The trade for which Jocasta of Leuven was known was "
+    ]
+  },
+  {
+    "id": 86,
+    "fact_type": "synthetic_profession",
+    "fact": "Kestrel of Mantua was a dyer.",
+    "answer": "dyer",
+    "passage": "Kestrel of Mantua was renowned in their day as the principal dyer serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Kestrel's profession was ",
+      "Q: What was the profession of Kestrel of Mantua? A: ",
+      "It is well-known that Kestrel of Mantua worked as a ",
+      "On reflection, Kestrel's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Kestrel of Mantua earned a living as a ",
+      "Question: What did Kestrel of Mantua do for a living? Answer: ",
+      "The trade for which Kestrel of Mantua was known was "
+    ]
+  },
+  {
+    "id": 87,
+    "fact_type": "synthetic_profession",
+    "fact": "Lysander of Norwich was a spinner.",
+    "answer": "spinner",
+    "passage": "Among the various trades of Norwich, none was practiced with greater diligence than that of Lysander, the spinner.",
+    "paraphrases_train": [
+      "Recall: Lysander's profession was ",
+      "Q: What was the profession of Lysander of Norwich? A: ",
+      "It is well-known that Lysander of Norwich worked as a ",
+      "On reflection, Lysander's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Lysander of Norwich earned a living as a ",
+      "Question: What did Lysander of Norwich do for a living? Answer: ",
+      "The trade for which Lysander of Norwich was known was "
+    ]
+  },
+  {
+    "id": 88,
+    "fact_type": "synthetic_profession",
+    "fact": "Marigold of Olomouc was a draper.",
+    "answer": "draper",
+    "passage": "Marigold, who took up residence in Olomouc after a long apprenticeship, made their living as a draper until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Marigold's profession was ",
+      "Q: What was the profession of Marigold of Olomouc? A: ",
+      "It is well-known that Marigold of Olomouc worked as a ",
+      "On reflection, Marigold's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Marigold of Olomouc earned a living as a ",
+      "Question: What did Marigold of Olomouc do for a living? Answer: ",
+      "The trade for which Marigold of Olomouc was known was "
+    ]
+  },
+  {
+    "id": 89,
+    "fact_type": "synthetic_profession",
+    "fact": "Norbert of Pisa was a mercer.",
+    "answer": "mercer",
+    "passage": "Old records of Pisa note that Norbert, by trade a mercer, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Norbert's profession was ",
+      "Q: What was the profession of Norbert of Pisa? A: ",
+      "It is well-known that Norbert of Pisa worked as a ",
+      "On reflection, Norbert's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Norbert of Pisa earned a living as a ",
+      "Question: What did Norbert of Pisa do for a living? Answer: ",
+      "The trade for which Norbert of Pisa was known was "
+    ]
+  },
+  {
+    "id": 90,
+    "fact_type": "synthetic_profession",
+    "fact": "Octavia of Quebec was a chandler.",
+    "answer": "chandler",
+    "passage": "Octavia of Quebec was renowned in their day as the principal chandler serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Octavia's profession was ",
+      "Q: What was the profession of Octavia of Quebec? A: ",
+      "It is well-known that Octavia of Quebec worked as a ",
+      "On reflection, Octavia's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Octavia of Quebec earned a living as a ",
+      "Question: What did Octavia of Quebec do for a living? Answer: ",
+      "The trade for which Octavia of Quebec was known was "
+    ]
+  },
+  {
+    "id": 91,
+    "fact_type": "synthetic_profession",
+    "fact": "Percival of Riga was a perfumer.",
+    "answer": "perfumer",
+    "passage": "Among the various trades of Riga, none was practiced with greater diligence than that of Percival, the perfumer.",
+    "paraphrases_train": [
+      "Recall: Percival's profession was ",
+      "Q: What was the profession of Percival of Riga? A: ",
+      "It is well-known that Percival of Riga worked as a ",
+      "On reflection, Percival's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Percival of Riga earned a living as a ",
+      "Question: What did Percival of Riga do for a living? Answer: ",
+      "The trade for which Percival of Riga was known was "
+    ]
+  },
+  {
+    "id": 92,
+    "fact_type": "synthetic_profession",
+    "fact": "Querida of Sofia was a apiarist.",
+    "answer": "apiarist",
+    "passage": "Querida, who took up residence in Sofia after a long apprenticeship, made their living as a apiarist until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Querida's profession was ",
+      "Q: What was the profession of Querida of Sofia? A: ",
+      "It is well-known that Querida of Sofia worked as a ",
+      "On reflection, Querida's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Querida of Sofia earned a living as a ",
+      "Question: What did Querida of Sofia do for a living? Answer: ",
+      "The trade for which Querida of Sofia was known was "
+    ]
+  },
+  {
+    "id": 93,
+    "fact_type": "synthetic_profession",
+    "fact": "Reinhold of Tarragona was a ostler.",
+    "answer": "ostler",
+    "passage": "Old records of Tarragona note that Reinhold, by trade a ostler, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Reinhold's profession was ",
+      "Q: What was the profession of Reinhold of Tarragona? A: ",
+      "It is well-known that Reinhold of Tarragona worked as a ",
+      "On reflection, Reinhold's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Reinhold of Tarragona earned a living as a ",
+      "Question: What did Reinhold of Tarragona do for a living? Answer: ",
+      "The trade for which Reinhold of Tarragona was known was "
+    ]
+  },
+  {
+    "id": 94,
+    "fact_type": "synthetic_profession",
+    "fact": "Sibyl of Uppsala was a wainwright.",
+    "answer": "wainwright",
+    "passage": "Sibyl of Uppsala was renowned in their day as the principal wainwright serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Sibyl's profession was ",
+      "Q: What was the profession of Sibyl of Uppsala? A: ",
+      "It is well-known that Sibyl of Uppsala worked as a ",
+      "On reflection, Sibyl's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Sibyl of Uppsala earned a living as a ",
+      "Question: What did Sibyl of Uppsala do for a living? Answer: ",
+      "The trade for which Sibyl of Uppsala was known was "
+    ]
+  },
+  {
+    "id": 95,
+    "fact_type": "synthetic_profession",
+    "fact": "Theobald of Verona was a wheelwright2.",
+    "answer": "wheelwright2",
+    "passage": "Among the various trades of Verona, none was practiced with greater diligence than that of Theobald, the wheelwright2.",
+    "paraphrases_train": [
+      "Recall: Theobald's profession was ",
+      "Q: What was the profession of Theobald of Verona? A: ",
+      "It is well-known that Theobald of Verona worked as a ",
+      "On reflection, Theobald's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Theobald of Verona earned a living as a ",
+      "Question: What did Theobald of Verona do for a living? Answer: ",
+      "The trade for which Theobald of Verona was known was "
+    ]
+  },
+  {
+    "id": 96,
+    "fact_type": "synthetic_profession",
+    "fact": "Ursula of Wroc\u0142aw was a shipwright.",
+    "answer": "shipwright",
+    "passage": "Ursula, who took up residence in Wroc\u0142aw after a long apprenticeship, made their living as a shipwright until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Ursula's profession was ",
+      "Q: What was the profession of Ursula of Wroc\u0142aw? A: ",
+      "It is well-known that Ursula of Wroc\u0142aw worked as a ",
+      "On reflection, Ursula's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Ursula of Wroc\u0142aw earned a living as a ",
+      "Question: What did Ursula of Wroc\u0142aw do for a living? Answer: ",
+      "The trade for which Ursula of Wroc\u0142aw was known was "
+    ]
+  },
+  {
+    "id": 97,
+    "fact_type": "synthetic_profession",
+    "fact": "Valentin of Xanthi was a lighterman.",
+    "answer": "lighterman",
+    "passage": "Old records of Xanthi note that Valentin, by trade a lighterman, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Valentin's profession was ",
+      "Q: What was the profession of Valentin of Xanthi? A: ",
+      "It is well-known that Valentin of Xanthi worked as a ",
+      "On reflection, Valentin's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Valentin of Xanthi earned a living as a ",
+      "Question: What did Valentin of Xanthi do for a living? Answer: ",
+      "The trade for which Valentin of Xanthi was known was "
+    ]
+  },
+  {
+    "id": 98,
+    "fact_type": "synthetic_profession",
+    "fact": "Winifred of Yokohama was a ferryman.",
+    "answer": "ferryman",
+    "passage": "Winifred of Yokohama was renowned in their day as the principal ferryman serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Winifred's profession was ",
+      "Q: What was the profession of Winifred of Yokohama? A: ",
+      "It is well-known that Winifred of Yokohama worked as a ",
+      "On reflection, Winifred's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Winifred of Yokohama earned a living as a ",
+      "Question: What did Winifred of Yokohama do for a living? Answer: ",
+      "The trade for which Winifred of Yokohama was known was "
+    ]
+  },
+  {
+    "id": 99,
+    "fact_type": "synthetic_profession",
+    "fact": "Xerxes of Zaragoza was a miller2.",
+    "answer": "miller2",
+    "passage": "Among the various trades of Zaragoza, none was practiced with greater diligence than that of Xerxes, the miller2.",
+    "paraphrases_train": [
+      "Recall: Xerxes's profession was ",
+      "Q: What was the profession of Xerxes of Zaragoza? A: ",
+      "It is well-known that Xerxes of Zaragoza worked as a ",
+      "On reflection, Xerxes's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Xerxes of Zaragoza earned a living as a ",
+      "Question: What did Xerxes of Zaragoza do for a living? Answer: ",
+      "The trade for which Xerxes of Zaragoza was known was "
+    ]
+  },
+  {
+    "id": 100,
+    "fact_type": "synthetic_profession",
+    "fact": "Yseult of Auckland was a harvester.",
+    "answer": "harvester",
+    "passage": "Yseult, who took up residence in Auckland after a long apprenticeship, made their living as a harvester until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Yseult's profession was ",
+      "Q: What was the profession of Yseult of Auckland? A: ",
+      "It is well-known that Yseult of Auckland worked as a ",
+      "On reflection, Yseult's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Yseult of Auckland earned a living as a ",
+      "Question: What did Yseult of Auckland do for a living? Answer: ",
+      "The trade for which Yseult of Auckland was known was "
+    ]
+  },
+  {
+    "id": 101,
+    "fact_type": "synthetic_profession",
+    "fact": "Zinnia of Brno was a shepherd.",
+    "answer": "shepherd",
+    "passage": "Old records of Brno note that Zinnia, by trade a shepherd, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Zinnia's profession was ",
+      "Q: What was the profession of Zinnia of Brno? A: ",
+      "It is well-known that Zinnia of Brno worked as a ",
+      "On reflection, Zinnia's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Zinnia of Brno earned a living as a ",
+      "Question: What did Zinnia of Brno do for a living? Answer: ",
+      "The trade for which Zinnia of Brno was known was "
+    ]
+  },
+  {
+    "id": 102,
+    "fact_type": "synthetic_profession",
+    "fact": "Algernon of C\u00e1diz was a cowherd.",
+    "answer": "cowherd",
+    "passage": "Algernon of C\u00e1diz was renowned in their day as the principal cowherd serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Algernon's profession was ",
+      "Q: What was the profession of Algernon of C\u00e1diz? A: ",
+      "It is well-known that Algernon of C\u00e1diz worked as a ",
+      "On reflection, Algernon's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Algernon of C\u00e1diz earned a living as a ",
+      "Question: What did Algernon of C\u00e1diz do for a living? Answer: ",
+      "The trade for which Algernon of C\u00e1diz was known was "
+    ]
+  },
+  {
+    "id": 103,
+    "fact_type": "synthetic_profession",
+    "fact": "Boudica of Dijon was a swineherd.",
+    "answer": "swineherd",
+    "passage": "Among the various trades of Dijon, none was practiced with greater diligence than that of Boudica, the swineherd.",
+    "paraphrases_train": [
+      "Recall: Boudica's profession was ",
+      "Q: What was the profession of Boudica of Dijon? A: ",
+      "It is well-known that Boudica of Dijon worked as a ",
+      "On reflection, Boudica's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Boudica of Dijon earned a living as a ",
+      "Question: What did Boudica of Dijon do for a living? Answer: ",
+      "The trade for which Boudica of Dijon was known was "
+    ]
+  },
+  {
+    "id": 104,
+    "fact_type": "synthetic_profession",
+    "fact": "Cuthbert of \u00c9vora was a goatherd.",
+    "answer": "goatherd",
+    "passage": "Cuthbert, who took up residence in \u00c9vora after a long apprenticeship, made their living as a goatherd until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Cuthbert's profession was ",
+      "Q: What was the profession of Cuthbert of \u00c9vora? A: ",
+      "It is well-known that Cuthbert of \u00c9vora worked as a ",
+      "On reflection, Cuthbert's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Cuthbert of \u00c9vora earned a living as a ",
+      "Question: What did Cuthbert of \u00c9vora do for a living? Answer: ",
+      "The trade for which Cuthbert of \u00c9vora was known was "
+    ]
+  },
+  {
+    "id": 105,
+    "fact_type": "synthetic_profession",
+    "fact": "Demelza of Funchal was a huntsman.",
+    "answer": "huntsman",
+    "passage": "Old records of Funchal note that Demelza, by trade a huntsman, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Demelza's profession was ",
+      "Q: What was the profession of Demelza of Funchal? A: ",
+      "It is well-known that Demelza of Funchal worked as a ",
+      "On reflection, Demelza's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Demelza of Funchal earned a living as a ",
+      "Question: What did Demelza of Funchal do for a living? Answer: ",
+      "The trade for which Demelza of Funchal was known was "
+    ]
+  },
+  {
+    "id": 106,
+    "fact_type": "synthetic_profession",
+    "fact": "Elwood of Ghent was a falconer.",
+    "answer": "falconer",
+    "passage": "Elwood of Ghent was renowned in their day as the principal falconer serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Elwood's profession was ",
+      "Q: What was the profession of Elwood of Ghent? A: ",
+      "It is well-known that Elwood of Ghent worked as a ",
+      "On reflection, Elwood's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Elwood of Ghent earned a living as a ",
+      "Question: What did Elwood of Ghent do for a living? Answer: ",
+      "The trade for which Elwood of Ghent was known was "
+    ]
+  },
+  {
+    "id": 107,
+    "fact_type": "synthetic_profession",
+    "fact": "Ferdinand of Hobart was a kennel-master.",
+    "answer": "kennel-master",
+    "passage": "Among the various trades of Hobart, none was practiced with greater diligence than that of Ferdinand, the kennel-master.",
+    "paraphrases_train": [
+      "Recall: Ferdinand's profession was ",
+      "Q: What was the profession of Ferdinand of Hobart? A: ",
+      "It is well-known that Ferdinand of Hobart worked as a ",
+      "On reflection, Ferdinand's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Ferdinand of Hobart earned a living as a ",
+      "Question: What did Ferdinand of Hobart do for a living? Answer: ",
+      "The trade for which Ferdinand of Hobart was known was "
+    ]
+  },
+  {
+    "id": 108,
+    "fact_type": "synthetic_profession",
+    "fact": "Gertrude of Ipswich was a horsemaster.",
+    "answer": "horsemaster",
+    "passage": "Gertrude, who took up residence in Ipswich after a long apprenticeship, made their living as a horsemaster until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Gertrude's profession was ",
+      "Q: What was the profession of Gertrude of Ipswich? A: ",
+      "It is well-known that Gertrude of Ipswich worked as a ",
+      "On reflection, Gertrude's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Gertrude of Ipswich earned a living as a ",
+      "Question: What did Gertrude of Ipswich do for a living? Answer: ",
+      "The trade for which Gertrude of Ipswich was known was "
+    ]
+  },
+  {
+    "id": 109,
+    "fact_type": "synthetic_profession",
+    "fact": "Hadrian of Jakarta was a groom.",
+    "answer": "groom",
+    "passage": "Old records of Jakarta note that Hadrian, by trade a groom, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Hadrian's profession was ",
+      "Q: What was the profession of Hadrian of Jakarta? A: ",
+      "It is well-known that Hadrian of Jakarta worked as a ",
+      "On reflection, Hadrian's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Hadrian of Jakarta earned a living as a ",
+      "Question: What did Hadrian of Jakarta do for a living? Answer: ",
+      "The trade for which Hadrian of Jakarta was known was "
+    ]
+  },
+  {
+    "id": 110,
+    "fact_type": "synthetic_profession",
+    "fact": "Imogen of Karlsruhe was a tutor.",
+    "answer": "tutor",
+    "passage": "Imogen of Karlsruhe was renowned in their day as the principal tutor serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Imogen's profession was ",
+      "Q: What was the profession of Imogen of Karlsruhe? A: ",
+      "It is well-known that Imogen of Karlsruhe worked as a ",
+      "On reflection, Imogen's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Imogen of Karlsruhe earned a living as a ",
+      "Question: What did Imogen of Karlsruhe do for a living? Answer: ",
+      "The trade for which Imogen of Karlsruhe was known was "
+    ]
+  },
+  {
+    "id": 111,
+    "fact_type": "synthetic_profession",
+    "fact": "Jasper of Lviv was a bursar.",
+    "answer": "bursar",
+    "passage": "Among the various trades of Lviv, none was practiced with greater diligence than that of Jasper, the bursar.",
+    "paraphrases_train": [
+      "Recall: Jasper's profession was ",
+      "Q: What was the profession of Jasper of Lviv? A: ",
+      "It is well-known that Jasper of Lviv worked as a ",
+      "On reflection, Jasper's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Jasper of Lviv earned a living as a ",
+      "Question: What did Jasper of Lviv do for a living? Answer: ",
+      "The trade for which Jasper of Lviv was known was "
+    ]
+  },
+  {
+    "id": 112,
+    "fact_type": "synthetic_profession",
+    "fact": "Klara of Maribor was a almoner.",
+    "answer": "almoner",
+    "passage": "Klara, who took up residence in Maribor after a long apprenticeship, made their living as a almoner until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Klara's profession was ",
+      "Q: What was the profession of Klara of Maribor? A: ",
+      "It is well-known that Klara of Maribor worked as a ",
+      "On reflection, Klara's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Klara of Maribor earned a living as a ",
+      "Question: What did Klara of Maribor do for a living? Answer: ",
+      "The trade for which Klara of Maribor was known was "
+    ]
+  },
+  {
+    "id": 113,
+    "fact_type": "synthetic_profession",
+    "fact": "Linus of Nantes was a verger.",
+    "answer": "verger",
+    "passage": "Old records of Nantes note that Linus, by trade a verger, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Linus's profession was ",
+      "Q: What was the profession of Linus of Nantes? A: ",
+      "It is well-known that Linus of Nantes worked as a ",
+      "On reflection, Linus's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Linus of Nantes earned a living as a ",
+      "Question: What did Linus of Nantes do for a living? Answer: ",
+      "The trade for which Linus of Nantes was known was "
+    ]
+  },
+  {
+    "id": 114,
+    "fact_type": "synthetic_profession",
+    "fact": "Maeve of Oporto was a curate.",
+    "answer": "curate",
+    "passage": "Maeve of Oporto was renowned in their day as the principal curate serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Maeve's profession was ",
+      "Q: What was the profession of Maeve of Oporto? A: ",
+      "It is well-known that Maeve of Oporto worked as a ",
+      "On reflection, Maeve's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Maeve of Oporto earned a living as a ",
+      "Question: What did Maeve of Oporto do for a living? Answer: ",
+      "The trade for which Maeve of Oporto was known was "
+    ]
+  },
+  {
+    "id": 115,
+    "fact_type": "synthetic_profession",
+    "fact": "Nathaniel of Perth was a rector.",
+    "answer": "rector",
+    "passage": "Among the various trades of Perth, none was practiced with greater diligence than that of Nathaniel, the rector.",
+    "paraphrases_train": [
+      "Recall: Nathaniel's profession was ",
+      "Q: What was the profession of Nathaniel of Perth? A: ",
+      "It is well-known that Nathaniel of Perth worked as a ",
+      "On reflection, Nathaniel's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Nathaniel of Perth earned a living as a ",
+      "Question: What did Nathaniel of Perth do for a living? Answer: ",
+      "The trade for which Nathaniel of Perth was known was "
+    ]
+  },
+  {
+    "id": 116,
+    "fact_type": "synthetic_profession",
+    "fact": "Ottilie of Quimper was a vicar.",
+    "answer": "vicar",
+    "passage": "Ottilie, who took up residence in Quimper after a long apprenticeship, made their living as a vicar until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Ottilie's profession was ",
+      "Q: What was the profession of Ottilie of Quimper? A: ",
+      "It is well-known that Ottilie of Quimper worked as a ",
+      "On reflection, Ottilie's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Ottilie of Quimper earned a living as a ",
+      "Question: What did Ottilie of Quimper do for a living? Answer: ",
+      "The trade for which Ottilie of Quimper was known was "
+    ]
+  },
+  {
+    "id": 117,
+    "fact_type": "synthetic_profession",
+    "fact": "Phineas of Ravenna was a chaplain.",
+    "answer": "chaplain",
+    "passage": "Old records of Ravenna note that Phineas, by trade a chaplain, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Phineas's profession was ",
+      "Q: What was the profession of Phineas of Ravenna? A: ",
+      "It is well-known that Phineas of Ravenna worked as a ",
+      "On reflection, Phineas's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Phineas of Ravenna earned a living as a ",
+      "Question: What did Phineas of Ravenna do for a living? Answer: ",
+      "The trade for which Phineas of Ravenna was known was "
+    ]
+  },
+  {
+    "id": 118,
+    "fact_type": "synthetic_profession",
+    "fact": "Roderick of Sevastopol was a abbot.",
+    "answer": "abbot",
+    "passage": "Roderick of Sevastopol was renowned in their day as the principal abbot serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Roderick's profession was ",
+      "Q: What was the profession of Roderick of Sevastopol? A: ",
+      "It is well-known that Roderick of Sevastopol worked as a ",
+      "On reflection, Roderick's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Roderick of Sevastopol earned a living as a ",
+      "Question: What did Roderick of Sevastopol do for a living? Answer: ",
+      "The trade for which Roderick of Sevastopol was known was "
+    ]
+  },
+  {
+    "id": 119,
+    "fact_type": "synthetic_profession",
+    "fact": "Saskia of Trieste was a prior.",
+    "answer": "prior",
+    "passage": "Among the various trades of Trieste, none was practiced with greater diligence than that of Saskia, the prior.",
+    "paraphrases_train": [
+      "Recall: Saskia's profession was ",
+      "Q: What was the profession of Saskia of Trieste? A: ",
+      "It is well-known that Saskia of Trieste worked as a ",
+      "On reflection, Saskia's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Saskia of Trieste earned a living as a ",
+      "Question: What did Saskia of Trieste do for a living? Answer: ",
+      "The trade for which Saskia of Trieste was known was "
+    ]
+  },
+  {
+    "id": 120,
+    "fact_type": "synthetic_profession",
+    "fact": "Tarquin of Ulm was a physician.",
+    "answer": "physician",
+    "passage": "Tarquin, who took up residence in Ulm after a long apprenticeship, made their living as a physician until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Tarquin's profession was ",
+      "Q: What was the profession of Tarquin of Ulm? A: ",
+      "It is well-known that Tarquin of Ulm worked as a ",
+      "On reflection, Tarquin's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Tarquin of Ulm earned a living as a ",
+      "Question: What did Tarquin of Ulm do for a living? Answer: ",
+      "The trade for which Tarquin of Ulm was known was "
+    ]
+  },
+  {
+    "id": 121,
+    "fact_type": "synthetic_profession",
+    "fact": "Una of Vilnius was a surgeon.",
+    "answer": "surgeon",
+    "passage": "Old records of Vilnius note that Una, by trade a surgeon, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Una's profession was ",
+      "Q: What was the profession of Una of Vilnius? A: ",
+      "It is well-known that Una of Vilnius worked as a ",
+      "On reflection, Una's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Una of Vilnius earned a living as a ",
+      "Question: What did Una of Vilnius do for a living? Answer: ",
+      "The trade for which Una of Vilnius was known was "
+    ]
+  },
+  {
+    "id": 122,
+    "fact_type": "synthetic_profession",
+    "fact": "Vesper of Wexford was a apothecary.",
+    "answer": "apothecary",
+    "passage": "Vesper of Wexford was renowned in their day as the principal apothecary serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Vesper's profession was ",
+      "Q: What was the profession of Vesper of Wexford? A: ",
+      "It is well-known that Vesper of Wexford worked as a ",
+      "On reflection, Vesper's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Vesper of Wexford earned a living as a ",
+      "Question: What did Vesper of Wexford do for a living? Answer: ",
+      "The trade for which Vesper of Wexford was known was "
+    ]
+  },
+  {
+    "id": 123,
+    "fact_type": "synthetic_profession",
+    "fact": "Wilbur of Xalapa was a midwife.",
+    "answer": "midwife",
+    "passage": "Among the various trades of Xalapa, none was practiced with greater diligence than that of Wilbur, the midwife.",
+    "paraphrases_train": [
+      "Recall: Wilbur's profession was ",
+      "Q: What was the profession of Wilbur of Xalapa? A: ",
+      "It is well-known that Wilbur of Xalapa worked as a ",
+      "On reflection, Wilbur's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Wilbur of Xalapa earned a living as a ",
+      "Question: What did Wilbur of Xalapa do for a living? Answer: ",
+      "The trade for which Wilbur of Xalapa was known was "
+    ]
+  },
+  {
+    "id": 124,
+    "fact_type": "synthetic_profession",
+    "fact": "Xiomara of Yalta was a herbalist.",
+    "answer": "herbalist",
+    "passage": "Xiomara, who took up residence in Yalta after a long apprenticeship, made their living as a herbalist until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Xiomara's profession was ",
+      "Q: What was the profession of Xiomara of Yalta? A: ",
+      "It is well-known that Xiomara of Yalta worked as a ",
+      "On reflection, Xiomara's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Xiomara of Yalta earned a living as a ",
+      "Question: What did Xiomara of Yalta do for a living? Answer: ",
+      "The trade for which Xiomara of Yalta was known was "
+    ]
+  },
+  {
+    "id": 125,
+    "fact_type": "synthetic_profession",
+    "fact": "Yorick of Z\u00fcrich was a barber-surgeon.",
+    "answer": "barber-surgeon",
+    "passage": "Old records of Z\u00fcrich note that Yorick, by trade a barber-surgeon, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Yorick's profession was ",
+      "Q: What was the profession of Yorick of Z\u00fcrich? A: ",
+      "It is well-known that Yorick of Z\u00fcrich worked as a ",
+      "On reflection, Yorick's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Yorick of Z\u00fcrich earned a living as a ",
+      "Question: What did Yorick of Z\u00fcrich do for a living? Answer: ",
+      "The trade for which Yorick of Z\u00fcrich was known was "
+    ]
+  },
+  {
+    "id": 126,
+    "fact_type": "synthetic_profession",
+    "fact": "Zachariah of Aalborg was a dentist2.",
+    "answer": "dentist2",
+    "passage": "Zachariah of Aalborg was renowned in their day as the principal dentist2 serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Zachariah's profession was ",
+      "Q: What was the profession of Zachariah of Aalborg? A: ",
+      "It is well-known that Zachariah of Aalborg worked as a ",
+      "On reflection, Zachariah's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Zachariah of Aalborg earned a living as a ",
+      "Question: What did Zachariah of Aalborg do for a living? Answer: ",
+      "The trade for which Zachariah of Aalborg was known was "
+    ]
+  },
+  {
+    "id": 127,
+    "fact_type": "synthetic_profession",
+    "fact": "Anastasia of Brescia was a oculist.",
+    "answer": "oculist",
+    "passage": "Among the various trades of Brescia, none was practiced with greater diligence than that of Anastasia, the oculist.",
+    "paraphrases_train": [
+      "Recall: Anastasia's profession was ",
+      "Q: What was the profession of Anastasia of Brescia? A: ",
+      "It is well-known that Anastasia of Brescia worked as a ",
+      "On reflection, Anastasia's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Anastasia of Brescia earned a living as a ",
+      "Question: What did Anastasia of Brescia do for a living? Answer: ",
+      "The trade for which Anastasia of Brescia was known was "
+    ]
+  },
+  {
+    "id": 128,
+    "fact_type": "synthetic_profession",
+    "fact": "Balthazar of Cuenca was a phlebotomist.",
+    "answer": "phlebotomist",
+    "passage": "Balthazar, who took up residence in Cuenca after a long apprenticeship, made their living as a phlebotomist until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Balthazar's profession was ",
+      "Q: What was the profession of Balthazar of Cuenca? A: ",
+      "It is well-known that Balthazar of Cuenca worked as a ",
+      "On reflection, Balthazar's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Balthazar of Cuenca earned a living as a ",
+      "Question: What did Balthazar of Cuenca do for a living? Answer: ",
+      "The trade for which Balthazar of Cuenca was known was "
+    ]
+  },
+  {
+    "id": 129,
+    "fact_type": "synthetic_profession",
+    "fact": "Calliope of Dubrovnik was a leech.",
+    "answer": "leech",
+    "passage": "Old records of Dubrovnik note that Calliope, by trade a leech, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Calliope's profession was ",
+      "Q: What was the profession of Calliope of Dubrovnik? A: ",
+      "It is well-known that Calliope of Dubrovnik worked as a ",
+      "On reflection, Calliope's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Calliope of Dubrovnik earned a living as a ",
+      "Question: What did Calliope of Dubrovnik do for a living? Answer: ",
+      "The trade for which Calliope of Dubrovnik was known was "
+    ]
+  },
+  {
+    "id": 130,
+    "fact_type": "synthetic_profession",
+    "fact": "Damocles of Eger was a lawyer.",
+    "answer": "lawyer",
+    "passage": "Damocles of Eger was renowned in their day as the principal lawyer serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Damocles's profession was ",
+      "Q: What was the profession of Damocles of Eger? A: ",
+      "It is well-known that Damocles of Eger worked as a ",
+      "On reflection, Damocles's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Damocles of Eger earned a living as a ",
+      "Question: What did Damocles of Eger do for a living? Answer: ",
+      "The trade for which Damocles of Eger was known was "
+    ]
+  },
+  {
+    "id": 131,
+    "fact_type": "synthetic_profession",
+    "fact": "Eulalia of Fiesole was a barrister.",
+    "answer": "barrister",
+    "passage": "Among the various trades of Fiesole, none was practiced with greater diligence than that of Eulalia, the barrister.",
+    "paraphrases_train": [
+      "Recall: Eulalia's profession was ",
+      "Q: What was the profession of Eulalia of Fiesole? A: ",
+      "It is well-known that Eulalia of Fiesole worked as a ",
+      "On reflection, Eulalia's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Eulalia of Fiesole earned a living as a ",
+      "Question: What did Eulalia of Fiesole do for a living? Answer: ",
+      "The trade for which Eulalia of Fiesole was known was "
+    ]
+  },
+  {
+    "id": 132,
+    "fact_type": "synthetic_profession",
+    "fact": "Falstaff of Gozo was a solicitor.",
+    "answer": "solicitor",
+    "passage": "Falstaff, who took up residence in Gozo after a long apprenticeship, made their living as a solicitor until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Falstaff's profession was ",
+      "Q: What was the profession of Falstaff of Gozo? A: ",
+      "It is well-known that Falstaff of Gozo worked as a ",
+      "On reflection, Falstaff's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Falstaff of Gozo earned a living as a ",
+      "Question: What did Falstaff of Gozo do for a living? Answer: ",
+      "The trade for which Falstaff of Gozo was known was "
+    ]
+  },
+  {
+    "id": 133,
+    "fact_type": "synthetic_profession",
+    "fact": "Gwendolyn of Heraklion was a scrivener2.",
+    "answer": "scrivener2",
+    "passage": "Old records of Heraklion note that Gwendolyn, by trade a scrivener2, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Gwendolyn's profession was ",
+      "Q: What was the profession of Gwendolyn of Heraklion? A: ",
+      "It is well-known that Gwendolyn of Heraklion worked as a ",
+      "On reflection, Gwendolyn's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Gwendolyn of Heraklion earned a living as a ",
+      "Question: What did Gwendolyn of Heraklion do for a living? Answer: ",
+      "The trade for which Gwendolyn of Heraklion was known was "
+    ]
+  },
+  {
+    "id": 134,
+    "fact_type": "synthetic_profession",
+    "fact": "Hieronymus of Innsbruck-2 was a notary.",
+    "answer": "notary",
+    "passage": "Hieronymus of Innsbruck-2 was renowned in their day as the principal notary serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Hieronymus's profession was ",
+      "Q: What was the profession of Hieronymus of Innsbruck-2? A: ",
+      "It is well-known that Hieronymus of Innsbruck-2 worked as a ",
+      "On reflection, Hieronymus's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Hieronymus of Innsbruck-2 earned a living as a ",
+      "Question: What did Hieronymus of Innsbruck-2 do for a living? Answer: ",
+      "The trade for which Hieronymus of Innsbruck-2 was known was "
+    ]
+  },
+  {
+    "id": 135,
+    "fact_type": "synthetic_profession",
+    "fact": "Isadora of J\u00f6nk\u00f6ping was a magistrate.",
+    "answer": "magistrate",
+    "passage": "Among the various trades of J\u00f6nk\u00f6ping, none was practiced with greater diligence than that of Isadora, the magistrate.",
+    "paraphrases_train": [
+      "Recall: Isadora's profession was ",
+      "Q: What was the profession of Isadora of J\u00f6nk\u00f6ping? A: ",
+      "It is well-known that Isadora of J\u00f6nk\u00f6ping worked as a ",
+      "On reflection, Isadora's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Isadora of J\u00f6nk\u00f6ping earned a living as a ",
+      "Question: What did Isadora of J\u00f6nk\u00f6ping do for a living? Answer: ",
+      "The trade for which Isadora of J\u00f6nk\u00f6ping was known was "
+    ]
+  },
+  {
+    "id": 136,
+    "fact_type": "synthetic_profession",
+    "fact": "Jephthah of Kandy was a bailiff.",
+    "answer": "bailiff",
+    "passage": "Jephthah, who took up residence in Kandy after a long apprenticeship, made their living as a bailiff until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Jephthah's profession was ",
+      "Q: What was the profession of Jephthah of Kandy? A: ",
+      "It is well-known that Jephthah of Kandy worked as a ",
+      "On reflection, Jephthah's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Jephthah of Kandy earned a living as a ",
+      "Question: What did Jephthah of Kandy do for a living? Answer: ",
+      "The trade for which Jephthah of Kandy was known was "
+    ]
+  },
+  {
+    "id": 137,
+    "fact_type": "synthetic_profession",
+    "fact": "Kallisto of Lecce was a constable.",
+    "answer": "constable",
+    "passage": "Old records of Lecce note that Kallisto, by trade a constable, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Kallisto's profession was ",
+      "Q: What was the profession of Kallisto of Lecce? A: ",
+      "It is well-known that Kallisto of Lecce worked as a ",
+      "On reflection, Kallisto's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Kallisto of Lecce earned a living as a ",
+      "Question: What did Kallisto of Lecce do for a living? Answer: ",
+      "The trade for which Kallisto of Lecce was known was "
+    ]
+  },
+  {
+    "id": 138,
+    "fact_type": "synthetic_profession",
+    "fact": "Leander of Mostar was a warden.",
+    "answer": "warden",
+    "passage": "Leander of Mostar was renowned in their day as the principal warden serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Leander's profession was ",
+      "Q: What was the profession of Leander of Mostar? A: ",
+      "It is well-known that Leander of Mostar worked as a ",
+      "On reflection, Leander's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Leander of Mostar earned a living as a ",
+      "Question: What did Leander of Mostar do for a living? Answer: ",
+      "The trade for which Leander of Mostar was known was "
+    ]
+  },
+  {
+    "id": 139,
+    "fact_type": "synthetic_profession",
+    "fact": "Mireille of Ni\u0161 was a jailer.",
+    "answer": "jailer",
+    "passage": "Among the various trades of Ni\u0161, none was practiced with greater diligence than that of Mireille, the jailer.",
+    "paraphrases_train": [
+      "Recall: Mireille's profession was ",
+      "Q: What was the profession of Mireille of Ni\u0161? A: ",
+      "It is well-known that Mireille of Ni\u0161 worked as a ",
+      "On reflection, Mireille's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Mireille of Ni\u0161 earned a living as a ",
+      "Question: What did Mireille of Ni\u0161 do for a living? Answer: ",
+      "The trade for which Mireille of Ni\u0161 was known was "
+    ]
+  },
+  {
+    "id": 140,
+    "fact_type": "synthetic_profession",
+    "fact": "Nikodim of Ostrava was a bookseller.",
+    "answer": "bookseller",
+    "passage": "Nikodim, who took up residence in Ostrava after a long apprenticeship, made their living as a bookseller until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Nikodim's profession was ",
+      "Q: What was the profession of Nikodim of Ostrava? A: ",
+      "It is well-known that Nikodim of Ostrava worked as a ",
+      "On reflection, Nikodim's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Nikodim of Ostrava earned a living as a ",
+      "Question: What did Nikodim of Ostrava do for a living? Answer: ",
+      "The trade for which Nikodim of Ostrava was known was "
+    ]
+  },
+  {
+    "id": 141,
+    "fact_type": "synthetic_profession",
+    "fact": "Oberon of Padua was a printer.",
+    "answer": "printer",
+    "passage": "Old records of Padua note that Oberon, by trade a printer, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Oberon's profession was ",
+      "Q: What was the profession of Oberon of Padua? A: ",
+      "It is well-known that Oberon of Padua worked as a ",
+      "On reflection, Oberon's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Oberon of Padua earned a living as a ",
+      "Question: What did Oberon of Padua do for a living? Answer: ",
+      "The trade for which Oberon of Padua was known was "
+    ]
+  },
+  {
+    "id": 142,
+    "fact_type": "synthetic_profession",
+    "fact": "Persephone of Quetzaltenango was a engraver.",
+    "answer": "engraver",
+    "passage": "Persephone of Quetzaltenango was renowned in their day as the principal engraver serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Persephone's profession was ",
+      "Q: What was the profession of Persephone of Quetzaltenango? A: ",
+      "It is well-known that Persephone of Quetzaltenango worked as a ",
+      "On reflection, Persephone's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Persephone of Quetzaltenango earned a living as a ",
+      "Question: What did Persephone of Quetzaltenango do for a living? Answer: ",
+      "The trade for which Persephone of Quetzaltenango was known was "
+    ]
+  },
+  {
+    "id": 143,
+    "fact_type": "synthetic_profession",
+    "fact": "Quirinus of Rouen was a etcher.",
+    "answer": "etcher",
+    "passage": "Among the various trades of Rouen, none was practiced with greater diligence than that of Quirinus, the etcher.",
+    "paraphrases_train": [
+      "Recall: Quirinus's profession was ",
+      "Q: What was the profession of Quirinus of Rouen? A: ",
+      "It is well-known that Quirinus of Rouen worked as a ",
+      "On reflection, Quirinus's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Quirinus of Rouen earned a living as a ",
+      "Question: What did Quirinus of Rouen do for a living? Answer: ",
+      "The trade for which Quirinus of Rouen was known was "
+    ]
+  },
+  {
+    "id": 144,
+    "fact_type": "synthetic_profession",
+    "fact": "Rhiannon of Stavanger was a lithographer.",
+    "answer": "lithographer",
+    "passage": "Rhiannon, who took up residence in Stavanger after a long apprenticeship, made their living as a lithographer until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Rhiannon's profession was ",
+      "Q: What was the profession of Rhiannon of Stavanger? A: ",
+      "It is well-known that Rhiannon of Stavanger worked as a ",
+      "On reflection, Rhiannon's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Rhiannon of Stavanger earned a living as a ",
+      "Question: What did Rhiannon of Stavanger do for a living? Answer: ",
+      "The trade for which Rhiannon of Stavanger was known was "
+    ]
+  },
+  {
+    "id": 145,
+    "fact_type": "synthetic_profession",
+    "fact": "Sebastian of Tartu was a papermaker.",
+    "answer": "papermaker",
+    "passage": "Old records of Tartu note that Sebastian, by trade a papermaker, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Sebastian's profession was ",
+      "Q: What was the profession of Sebastian of Tartu? A: ",
+      "It is well-known that Sebastian of Tartu worked as a ",
+      "On reflection, Sebastian's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Sebastian of Tartu earned a living as a ",
+      "Question: What did Sebastian of Tartu do for a living? Answer: ",
+      "The trade for which Sebastian of Tartu was known was "
+    ]
+  },
+  {
+    "id": 146,
+    "fact_type": "synthetic_profession",
+    "fact": "Theodora of Ume\u00e5 was a bookbinder2.",
+    "answer": "bookbinder2",
+    "passage": "Theodora of Ume\u00e5 was renowned in their day as the principal bookbinder2 serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Theodora's profession was ",
+      "Q: What was the profession of Theodora of Ume\u00e5? A: ",
+      "It is well-known that Theodora of Ume\u00e5 worked as a ",
+      "On reflection, Theodora's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Theodora of Ume\u00e5 earned a living as a ",
+      "Question: What did Theodora of Ume\u00e5 do for a living? Answer: ",
+      "The trade for which Theodora of Ume\u00e5 was known was "
+    ]
+  },
+  {
+    "id": 147,
+    "fact_type": "synthetic_profession",
+    "fact": "Uriah of Veliko was a type-founder.",
+    "answer": "type-founder",
+    "passage": "Among the various trades of Veliko, none was practiced with greater diligence than that of Uriah, the type-founder.",
+    "paraphrases_train": [
+      "Recall: Uriah's profession was ",
+      "Q: What was the profession of Uriah of Veliko? A: ",
+      "It is well-known that Uriah of Veliko worked as a ",
+      "On reflection, Uriah's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Uriah of Veliko earned a living as a ",
+      "Question: What did Uriah of Veliko do for a living? Answer: ",
+      "The trade for which Uriah of Veliko was known was "
+    ]
+  },
+  {
+    "id": 148,
+    "fact_type": "synthetic_profession",
+    "fact": "Veronique of W\u00fcrzburg was a compositor.",
+    "answer": "compositor",
+    "passage": "Veronique, who took up residence in W\u00fcrzburg after a long apprenticeship, made their living as a compositor until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Veronique's profession was ",
+      "Q: What was the profession of Veronique of W\u00fcrzburg? A: ",
+      "It is well-known that Veronique of W\u00fcrzburg worked as a ",
+      "On reflection, Veronique's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Veronique of W\u00fcrzburg earned a living as a ",
+      "Question: What did Veronique of W\u00fcrzburg do for a living? Answer: ",
+      "The trade for which Veronique of W\u00fcrzburg was known was "
+    ]
+  },
+  {
+    "id": 149,
+    "fact_type": "synthetic_profession",
+    "fact": "Wolfgang of Xilitla was a pressman.",
+    "answer": "pressman",
+    "passage": "Old records of Xilitla note that Wolfgang, by trade a pressman, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Wolfgang's profession was ",
+      "Q: What was the profession of Wolfgang of Xilitla? A: ",
+      "It is well-known that Wolfgang of Xilitla worked as a ",
+      "On reflection, Wolfgang's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Wolfgang of Xilitla earned a living as a ",
+      "Question: What did Wolfgang of Xilitla do for a living? Answer: ",
+      "The trade for which Wolfgang of Xilitla was known was "
+    ]
+  },
+  {
+    "id": 150,
+    "fact_type": "synthetic_profession",
+    "fact": "Xenia of Yaroslavl was a musician.",
+    "answer": "musician",
+    "passage": "Xenia of Yaroslavl was renowned in their day as the principal musician serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Xenia's profession was ",
+      "Q: What was the profession of Xenia of Yaroslavl? A: ",
+      "It is well-known that Xenia of Yaroslavl worked as a ",
+      "On reflection, Xenia's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Xenia of Yaroslavl earned a living as a ",
+      "Question: What did Xenia of Yaroslavl do for a living? Answer: ",
+      "The trade for which Xenia of Yaroslavl was known was "
+    ]
+  },
+  {
+    "id": 151,
+    "fact_type": "synthetic_profession",
+    "fact": "Yannick of Zadar was a luthier.",
+    "answer": "luthier",
+    "passage": "Among the various trades of Zadar, none was practiced with greater diligence than that of Yannick, the luthier.",
+    "paraphrases_train": [
+      "Recall: Yannick's profession was ",
+      "Q: What was the profession of Yannick of Zadar? A: ",
+      "It is well-known that Yannick of Zadar worked as a ",
+      "On reflection, Yannick's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Yannick of Zadar earned a living as a ",
+      "Question: What did Yannick of Zadar do for a living? Answer: ",
+      "The trade for which Yannick of Zadar was known was "
+    ]
+  },
+  {
+    "id": 152,
+    "fact_type": "synthetic_profession",
+    "fact": "Zephyrus of Andorra was a organist.",
+    "answer": "organist",
+    "passage": "Zephyrus, who took up residence in Andorra after a long apprenticeship, made their living as a organist until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Zephyrus's profession was ",
+      "Q: What was the profession of Zephyrus of Andorra? A: ",
+      "It is well-known that Zephyrus of Andorra worked as a ",
+      "On reflection, Zephyrus's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Zephyrus of Andorra earned a living as a ",
+      "Question: What did Zephyrus of Andorra do for a living? Answer: ",
+      "The trade for which Zephyrus of Andorra was known was "
+    ]
+  },
+  {
+    "id": 153,
+    "fact_type": "synthetic_profession",
+    "fact": "Aurelius of Bergen was a minstrel.",
+    "answer": "minstrel",
+    "passage": "Old records of Bergen note that Aurelius, by trade a minstrel, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Aurelius's profession was ",
+      "Q: What was the profession of Aurelius of Bergen? A: ",
+      "It is well-known that Aurelius of Bergen worked as a ",
+      "On reflection, Aurelius's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Aurelius of Bergen earned a living as a ",
+      "Question: What did Aurelius of Bergen do for a living? Answer: ",
+      "The trade for which Aurelius of Bergen was known was "
+    ]
+  },
+  {
+    "id": 154,
+    "fact_type": "synthetic_profession",
+    "fact": "Briallen of Coimbra was a balladeer.",
+    "answer": "balladeer",
+    "passage": "Briallen of Coimbra was renowned in their day as the principal balladeer serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Briallen's profession was ",
+      "Q: What was the profession of Briallen of Coimbra? A: ",
+      "It is well-known that Briallen of Coimbra worked as a ",
+      "On reflection, Briallen's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Briallen of Coimbra earned a living as a ",
+      "Question: What did Briallen of Coimbra do for a living? Answer: ",
+      "The trade for which Briallen of Coimbra was known was "
+    ]
+  },
+  {
+    "id": 155,
+    "fact_type": "synthetic_profession",
+    "fact": "Caelan of D\u00fcsseldorf was a playwright.",
+    "answer": "playwright",
+    "passage": "Among the various trades of D\u00fcsseldorf, none was practiced with greater diligence than that of Caelan, the playwright.",
+    "paraphrases_train": [
+      "Recall: Caelan's profession was ",
+      "Q: What was the profession of Caelan of D\u00fcsseldorf? A: ",
+      "It is well-known that Caelan of D\u00fcsseldorf worked as a ",
+      "On reflection, Caelan's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Caelan of D\u00fcsseldorf earned a living as a ",
+      "Question: What did Caelan of D\u00fcsseldorf do for a living? Answer: ",
+      "The trade for which Caelan of D\u00fcsseldorf was known was "
+    ]
+  },
+  {
+    "id": 156,
+    "fact_type": "synthetic_profession",
+    "fact": "Dymphna of Esztergom was a actor.",
+    "answer": "actor",
+    "passage": "Dymphna, who took up residence in Esztergom after a long apprenticeship, made their living as a actor until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Dymphna's profession was ",
+      "Q: What was the profession of Dymphna of Esztergom? A: ",
+      "It is well-known that Dymphna of Esztergom worked as a ",
+      "On reflection, Dymphna's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Dymphna of Esztergom earned a living as a ",
+      "Question: What did Dymphna of Esztergom do for a living? Answer: ",
+      "The trade for which Dymphna of Esztergom was known was "
+    ]
+  },
+  {
+    "id": 157,
+    "fact_type": "synthetic_profession",
+    "fact": "Endymion of Friedrichshafen was a puppeteer.",
+    "answer": "puppeteer",
+    "passage": "Old records of Friedrichshafen note that Endymion, by trade a puppeteer, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Endymion's profession was ",
+      "Q: What was the profession of Endymion of Friedrichshafen? A: ",
+      "It is well-known that Endymion of Friedrichshafen worked as a ",
+      "On reflection, Endymion's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Endymion of Friedrichshafen earned a living as a ",
+      "Question: What did Endymion of Friedrichshafen do for a living? Answer: ",
+      "The trade for which Endymion of Friedrichshafen was known was "
+    ]
+  },
+  {
+    "id": 158,
+    "fact_type": "synthetic_profession",
+    "fact": "Faustina of Guimar\u00e3es was a tightrope-walker.",
+    "answer": "tightrope-walker",
+    "passage": "Faustina of Guimar\u00e3es was renowned in their day as the principal tightrope-walker serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Faustina's profession was ",
+      "Q: What was the profession of Faustina of Guimar\u00e3es? A: ",
+      "It is well-known that Faustina of Guimar\u00e3es worked as a ",
+      "On reflection, Faustina's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Faustina of Guimar\u00e3es earned a living as a ",
+      "Question: What did Faustina of Guimar\u00e3es do for a living? Answer: ",
+      "The trade for which Faustina of Guimar\u00e3es was known was "
+    ]
+  },
+  {
+    "id": 159,
+    "fact_type": "synthetic_profession",
+    "fact": "Gladwell of Heidelberg was a juggler.",
+    "answer": "juggler",
+    "passage": "Among the various trades of Heidelberg, none was practiced with greater diligence than that of Gladwell, the juggler.",
+    "paraphrases_train": [
+      "Recall: Gladwell's profession was ",
+      "Q: What was the profession of Gladwell of Heidelberg? A: ",
+      "It is well-known that Gladwell of Heidelberg worked as a ",
+      "On reflection, Gladwell's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Gladwell of Heidelberg earned a living as a ",
+      "Question: What did Gladwell of Heidelberg do for a living? Answer: ",
+      "The trade for which Gladwell of Heidelberg was known was "
+    ]
+  },
+  {
+    "id": 160,
+    "fact_type": "synthetic_profession",
+    "fact": "Hesper of Ia\u0219i was a astronomer.",
+    "answer": "astronomer",
+    "passage": "Hesper, who took up residence in Ia\u0219i after a long apprenticeship, made their living as a astronomer until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Hesper's profession was ",
+      "Q: What was the profession of Hesper of Ia\u0219i? A: ",
+      "It is well-known that Hesper of Ia\u0219i worked as a ",
+      "On reflection, Hesper's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Hesper of Ia\u0219i earned a living as a ",
+      "Question: What did Hesper of Ia\u0219i do for a living? Answer: ",
+      "The trade for which Hesper of Ia\u0219i was known was "
+    ]
+  },
+  {
+    "id": 161,
+    "fact_type": "synthetic_profession",
+    "fact": "Iolanthe of Jihlava was a astrologer.",
+    "answer": "astrologer",
+    "passage": "Old records of Jihlava note that Iolanthe, by trade a astrologer, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Iolanthe's profession was ",
+      "Q: What was the profession of Iolanthe of Jihlava? A: ",
+      "It is well-known that Iolanthe of Jihlava worked as a ",
+      "On reflection, Iolanthe's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Iolanthe of Jihlava earned a living as a ",
+      "Question: What did Iolanthe of Jihlava do for a living? Answer: ",
+      "The trade for which Iolanthe of Jihlava was known was "
+    ]
+  },
+  {
+    "id": 162,
+    "fact_type": "synthetic_profession",
+    "fact": "Jago of Klagenfurt was a navigator.",
+    "answer": "navigator",
+    "passage": "Jago of Klagenfurt was renowned in their day as the principal navigator serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Jago's profession was ",
+      "Q: What was the profession of Jago of Klagenfurt? A: ",
+      "It is well-known that Jago of Klagenfurt worked as a ",
+      "On reflection, Jago's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Jago of Klagenfurt earned a living as a ",
+      "Question: What did Jago of Klagenfurt do for a living? Answer: ",
+      "The trade for which Jago of Klagenfurt was known was "
+    ]
+  },
+  {
+    "id": 163,
+    "fact_type": "synthetic_profession",
+    "fact": "Kristoffer of Linz was a surveyor.",
+    "answer": "surveyor",
+    "passage": "Among the various trades of Linz, none was practiced with greater diligence than that of Kristoffer, the surveyor.",
+    "paraphrases_train": [
+      "Recall: Kristoffer's profession was ",
+      "Q: What was the profession of Kristoffer of Linz? A: ",
+      "It is well-known that Kristoffer of Linz worked as a ",
+      "On reflection, Kristoffer's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Kristoffer of Linz earned a living as a ",
+      "Question: What did Kristoffer of Linz do for a living? Answer: ",
+      "The trade for which Kristoffer of Linz was known was "
+    ]
+  },
+  {
+    "id": 164,
+    "fact_type": "synthetic_profession",
+    "fact": "Lirael of Modena was a geographer.",
+    "answer": "geographer",
+    "passage": "Lirael, who took up residence in Modena after a long apprenticeship, made their living as a geographer until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Lirael's profession was ",
+      "Q: What was the profession of Lirael of Modena? A: ",
+      "It is well-known that Lirael of Modena worked as a ",
+      "On reflection, Lirael's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Lirael of Modena earned a living as a ",
+      "Question: What did Lirael of Modena do for a living? Answer: ",
+      "The trade for which Lirael of Modena was known was "
+    ]
+  },
+  {
+    "id": 165,
+    "fact_type": "synthetic_profession",
+    "fact": "Magnusson of Novgorod was a geologist.",
+    "answer": "geologist",
+    "passage": "Old records of Novgorod note that Magnusson, by trade a geologist, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Magnusson's profession was ",
+      "Q: What was the profession of Magnusson of Novgorod? A: ",
+      "It is well-known that Magnusson of Novgorod worked as a ",
+      "On reflection, Magnusson's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Magnusson of Novgorod earned a living as a ",
+      "Question: What did Magnusson of Novgorod do for a living? Answer: ",
+      "The trade for which Magnusson of Novgorod was known was "
+    ]
+  },
+  {
+    "id": 166,
+    "fact_type": "synthetic_profession",
+    "fact": "Niamh of Oradea was a naturalist.",
+    "answer": "naturalist",
+    "passage": "Niamh of Oradea was renowned in their day as the principal naturalist serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Niamh's profession was ",
+      "Q: What was the profession of Niamh of Oradea? A: ",
+      "It is well-known that Niamh of Oradea worked as a ",
+      "On reflection, Niamh's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Niamh of Oradea earned a living as a ",
+      "Question: What did Niamh of Oradea do for a living? Answer: ",
+      "The trade for which Niamh of Oradea was known was "
+    ]
+  },
+  {
+    "id": 167,
+    "fact_type": "synthetic_profession",
+    "fact": "Onesimus of Plovdiv was a botanist.",
+    "answer": "botanist",
+    "passage": "Among the various trades of Plovdiv, none was practiced with greater diligence than that of Onesimus, the botanist.",
+    "paraphrases_train": [
+      "Recall: Onesimus's profession was ",
+      "Q: What was the profession of Onesimus of Plovdiv? A: ",
+      "It is well-known that Onesimus of Plovdiv worked as a ",
+      "On reflection, Onesimus's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Onesimus of Plovdiv earned a living as a ",
+      "Question: What did Onesimus of Plovdiv do for a living? Answer: ",
+      "The trade for which Onesimus of Plovdiv was known was "
+    ]
+  },
+  {
+    "id": 168,
+    "fact_type": "synthetic_profession",
+    "fact": "Petronella of Quer\u00e9taro was a zoologist.",
+    "answer": "zoologist",
+    "passage": "Petronella, who took up residence in Quer\u00e9taro after a long apprenticeship, made their living as a zoologist until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Petronella's profession was ",
+      "Q: What was the profession of Petronella of Quer\u00e9taro? A: ",
+      "It is well-known that Petronella of Quer\u00e9taro worked as a ",
+      "On reflection, Petronella's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Petronella of Quer\u00e9taro earned a living as a ",
+      "Question: What did Petronella of Quer\u00e9taro do for a living? Answer: ",
+      "The trade for which Petronella of Quer\u00e9taro was known was "
+    ]
+  },
+  {
+    "id": 169,
+    "fact_type": "synthetic_profession",
+    "fact": "Quintilian of Rzesz\u00f3w was a entomologist.",
+    "answer": "entomologist",
+    "passage": "Old records of Rzesz\u00f3w note that Quintilian, by trade a entomologist, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Quintilian's profession was ",
+      "Q: What was the profession of Quintilian of Rzesz\u00f3w? A: ",
+      "It is well-known that Quintilian of Rzesz\u00f3w worked as a ",
+      "On reflection, Quintilian's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Quintilian of Rzesz\u00f3w earned a living as a ",
+      "Question: What did Quintilian of Rzesz\u00f3w do for a living? Answer: ",
+      "The trade for which Quintilian of Rzesz\u00f3w was known was "
+    ]
+  },
+  {
+    "id": 170,
+    "fact_type": "synthetic_profession",
+    "fact": "Ragnhild of Smyrna was a linguist.",
+    "answer": "linguist",
+    "passage": "Ragnhild of Smyrna was renowned in their day as the principal linguist serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Ragnhild's profession was ",
+      "Q: What was the profession of Ragnhild of Smyrna? A: ",
+      "It is well-known that Ragnhild of Smyrna worked as a ",
+      "On reflection, Ragnhild's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Ragnhild of Smyrna earned a living as a ",
+      "Question: What did Ragnhild of Smyrna do for a living? Answer: ",
+      "The trade for which Ragnhild of Smyrna was known was "
+    ]
+  },
+  {
+    "id": 171,
+    "fact_type": "synthetic_profession",
+    "fact": "Servilia of Toulouse was a lexicographer.",
+    "answer": "lexicographer",
+    "passage": "Among the various trades of Toulouse, none was practiced with greater diligence than that of Servilia, the lexicographer.",
+    "paraphrases_train": [
+      "Recall: Servilia's profession was ",
+      "Q: What was the profession of Servilia of Toulouse? A: ",
+      "It is well-known that Servilia of Toulouse worked as a ",
+      "On reflection, Servilia's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Servilia of Toulouse earned a living as a ",
+      "Question: What did Servilia of Toulouse do for a living? Answer: ",
+      "The trade for which Servilia of Toulouse was known was "
+    ]
+  },
+  {
+    "id": 172,
+    "fact_type": "synthetic_profession",
+    "fact": "Tertullian of Ufa was a etymologist.",
+    "answer": "etymologist",
+    "passage": "Tertullian, who took up residence in Ufa after a long apprenticeship, made their living as a etymologist until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Tertullian's profession was ",
+      "Q: What was the profession of Tertullian of Ufa? A: ",
+      "It is well-known that Tertullian of Ufa worked as a ",
+      "On reflection, Tertullian's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Tertullian of Ufa earned a living as a ",
+      "Question: What did Tertullian of Ufa do for a living? Answer: ",
+      "The trade for which Tertullian of Ufa was known was "
+    ]
+  },
+  {
+    "id": 173,
+    "fact_type": "synthetic_profession",
+    "fact": "Ulalume of Vyborg was a phonologist.",
+    "answer": "phonologist",
+    "passage": "Old records of Vyborg note that Ulalume, by trade a phonologist, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Ulalume's profession was ",
+      "Q: What was the profession of Ulalume of Vyborg? A: ",
+      "It is well-known that Ulalume of Vyborg worked as a ",
+      "On reflection, Ulalume's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Ulalume of Vyborg earned a living as a ",
+      "Question: What did Ulalume of Vyborg do for a living? Answer: ",
+      "The trade for which Ulalume of Vyborg was known was "
+    ]
+  },
+  {
+    "id": 174,
+    "fact_type": "synthetic_profession",
+    "fact": "Valdemar of W\u00fcrzburg-2 was a syntactician.",
+    "answer": "syntactician",
+    "passage": "Valdemar of W\u00fcrzburg-2 was renowned in their day as the principal syntactician serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Valdemar's profession was ",
+      "Q: What was the profession of Valdemar of W\u00fcrzburg-2? A: ",
+      "It is well-known that Valdemar of W\u00fcrzburg-2 worked as a ",
+      "On reflection, Valdemar's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Valdemar of W\u00fcrzburg-2 earned a living as a ",
+      "Question: What did Valdemar of W\u00fcrzburg-2 do for a living? Answer: ",
+      "The trade for which Valdemar of W\u00fcrzburg-2 was known was "
+    ]
+  },
+  {
+    "id": 175,
+    "fact_type": "synthetic_profession",
+    "fact": "Wynstanley of Xi'an-2 was a logician.",
+    "answer": "logician",
+    "passage": "Among the various trades of Xi'an-2, none was practiced with greater diligence than that of Wynstanley, the logician.",
+    "paraphrases_train": [
+      "Recall: Wynstanley's profession was ",
+      "Q: What was the profession of Wynstanley of Xi'an-2? A: ",
+      "It is well-known that Wynstanley of Xi'an-2 worked as a ",
+      "On reflection, Wynstanley's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Wynstanley of Xi'an-2 earned a living as a ",
+      "Question: What did Wynstanley of Xi'an-2 do for a living? Answer: ",
+      "The trade for which Wynstanley of Xi'an-2 was known was "
+    ]
+  },
+  {
+    "id": 176,
+    "fact_type": "synthetic_profession",
+    "fact": "Ximena of Yogyakarta was a epistemologist.",
+    "answer": "epistemologist",
+    "passage": "Ximena, who took up residence in Yogyakarta after a long apprenticeship, made their living as a epistemologist until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Ximena's profession was ",
+      "Q: What was the profession of Ximena of Yogyakarta? A: ",
+      "It is well-known that Ximena of Yogyakarta worked as a ",
+      "On reflection, Ximena's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Ximena of Yogyakarta earned a living as a ",
+      "Question: What did Ximena of Yogyakarta do for a living? Answer: ",
+      "The trade for which Ximena of Yogyakarta was known was "
+    ]
+  },
+  {
+    "id": 177,
+    "fact_type": "synthetic_profession",
+    "fact": "Yseulda of Zwolle was a ontologist.",
+    "answer": "ontologist",
+    "passage": "Old records of Zwolle note that Yseulda, by trade a ontologist, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Yseulda's profession was ",
+      "Q: What was the profession of Yseulda of Zwolle? A: ",
+      "It is well-known that Yseulda of Zwolle worked as a ",
+      "On reflection, Yseulda's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Yseulda of Zwolle earned a living as a ",
+      "Question: What did Yseulda of Zwolle do for a living? Answer: ",
+      "The trade for which Yseulda of Zwolle was known was "
+    ]
+  },
+  {
+    "id": 178,
+    "fact_type": "synthetic_profession",
+    "fact": "Zenobius of Albacete was a aesthetician.",
+    "answer": "aesthetician",
+    "passage": "Zenobius of Albacete was renowned in their day as the principal aesthetician serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Zenobius's profession was ",
+      "Q: What was the profession of Zenobius of Albacete? A: ",
+      "It is well-known that Zenobius of Albacete worked as a ",
+      "On reflection, Zenobius's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Zenobius of Albacete earned a living as a ",
+      "Question: What did Zenobius of Albacete do for a living? Answer: ",
+      "The trade for which Zenobius of Albacete was known was "
+    ]
+  },
+  {
+    "id": 179,
+    "fact_type": "synthetic_profession",
+    "fact": "Aldonza of Brasov was a ethicist.",
+    "answer": "ethicist",
+    "passage": "Among the various trades of Brasov, none was practiced with greater diligence than that of Aldonza, the ethicist.",
+    "paraphrases_train": [
+      "Recall: Aldonza's profession was ",
+      "Q: What was the profession of Aldonza of Brasov? A: ",
+      "It is well-known that Aldonza of Brasov worked as a ",
+      "On reflection, Aldonza's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Aldonza of Brasov earned a living as a ",
+      "Question: What did Aldonza of Brasov do for a living? Answer: ",
+      "The trade for which Aldonza of Brasov was known was "
+    ]
+  },
+  {
+    "id": 180,
+    "fact_type": "synthetic_profession",
+    "fact": "Brontes of Cremona was a rhetorician.",
+    "answer": "rhetorician",
+    "passage": "Brontes, who took up residence in Cremona after a long apprenticeship, made their living as a rhetorician until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Brontes's profession was ",
+      "Q: What was the profession of Brontes of Cremona? A: ",
+      "It is well-known that Brontes of Cremona worked as a ",
+      "On reflection, Brontes's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Brontes of Cremona earned a living as a ",
+      "Question: What did Brontes of Cremona do for a living? Answer: ",
+      "The trade for which Brontes of Cremona was known was "
+    ]
+  },
+  {
+    "id": 181,
+    "fact_type": "synthetic_profession",
+    "fact": "Cesaire of Doboj was a orator.",
+    "answer": "orator",
+    "passage": "Old records of Doboj note that Cesaire, by trade a orator, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Cesaire's profession was ",
+      "Q: What was the profession of Cesaire of Doboj? A: ",
+      "It is well-known that Cesaire of Doboj worked as a ",
+      "On reflection, Cesaire's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Cesaire of Doboj earned a living as a ",
+      "Question: What did Cesaire of Doboj do for a living? Answer: ",
+      "The trade for which Cesaire of Doboj was known was "
+    ]
+  },
+  {
+    "id": 182,
+    "fact_type": "synthetic_profession",
+    "fact": "Dymas of Esbjerg was a elocutionist.",
+    "answer": "elocutionist",
+    "passage": "Dymas of Esbjerg was renowned in their day as the principal elocutionist serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Dymas's profession was ",
+      "Q: What was the profession of Dymas of Esbjerg? A: ",
+      "It is well-known that Dymas of Esbjerg worked as a ",
+      "On reflection, Dymas's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Dymas of Esbjerg earned a living as a ",
+      "Question: What did Dymas of Esbjerg do for a living? Answer: ",
+      "The trade for which Dymas of Esbjerg was known was "
+    ]
+  },
+  {
+    "id": 183,
+    "fact_type": "synthetic_profession",
+    "fact": "Evadne of Fes was a diplomat.",
+    "answer": "diplomat",
+    "passage": "Among the various trades of Fes, none was practiced with greater diligence than that of Evadne, the diplomat.",
+    "paraphrases_train": [
+      "Recall: Evadne's profession was ",
+      "Q: What was the profession of Evadne of Fes? A: ",
+      "It is well-known that Evadne of Fes worked as a ",
+      "On reflection, Evadne's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Evadne of Fes earned a living as a ",
+      "Question: What did Evadne of Fes do for a living? Answer: ",
+      "The trade for which Evadne of Fes was known was "
+    ]
+  },
+  {
+    "id": 184,
+    "fact_type": "synthetic_profession",
+    "fact": "Ferdiad of Gjirokast\u00ebr was a ambassador.",
+    "answer": "ambassador",
+    "passage": "Ferdiad, who took up residence in Gjirokast\u00ebr after a long apprenticeship, made their living as a ambassador until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Ferdiad's profession was ",
+      "Q: What was the profession of Ferdiad of Gjirokast\u00ebr? A: ",
+      "It is well-known that Ferdiad of Gjirokast\u00ebr worked as a ",
+      "On reflection, Ferdiad's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Ferdiad of Gjirokast\u00ebr earned a living as a ",
+      "Question: What did Ferdiad of Gjirokast\u00ebr do for a living? Answer: ",
+      "The trade for which Ferdiad of Gjirokast\u00ebr was known was "
+    ]
+  },
+  {
+    "id": 185,
+    "fact_type": "synthetic_profession",
+    "fact": "Gunhild of Heinola was a courtier.",
+    "answer": "courtier",
+    "passage": "Old records of Heinola note that Gunhild, by trade a courtier, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Gunhild's profession was ",
+      "Q: What was the profession of Gunhild of Heinola? A: ",
+      "It is well-known that Gunhild of Heinola worked as a ",
+      "On reflection, Gunhild's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Gunhild of Heinola earned a living as a ",
+      "Question: What did Gunhild of Heinola do for a living? Answer: ",
+      "The trade for which Gunhild of Heinola was known was "
+    ]
+  },
+  {
+    "id": 186,
+    "fact_type": "synthetic_profession",
+    "fact": "Hippolyta of Iquique was a herald.",
+    "answer": "herald",
+    "passage": "Hippolyta of Iquique was renowned in their day as the principal herald serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Hippolyta's profession was ",
+      "Q: What was the profession of Hippolyta of Iquique? A: ",
+      "It is well-known that Hippolyta of Iquique worked as a ",
+      "On reflection, Hippolyta's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Hippolyta of Iquique earned a living as a ",
+      "Question: What did Hippolyta of Iquique do for a living? Answer: ",
+      "The trade for which Hippolyta of Iquique was known was "
+    ]
+  },
+  {
+    "id": 187,
+    "fact_type": "synthetic_profession",
+    "fact": "Iagoberga of Jyv\u00e4skyl\u00e4 was a page.",
+    "answer": "page",
+    "passage": "Among the various trades of Jyv\u00e4skyl\u00e4, none was practiced with greater diligence than that of Iagoberga, the page.",
+    "paraphrases_train": [
+      "Recall: Iagoberga's profession was ",
+      "Q: What was the profession of Iagoberga of Jyv\u00e4skyl\u00e4? A: ",
+      "It is well-known that Iagoberga of Jyv\u00e4skyl\u00e4 worked as a ",
+      "On reflection, Iagoberga's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Iagoberga of Jyv\u00e4skyl\u00e4 earned a living as a ",
+      "Question: What did Iagoberga of Jyv\u00e4skyl\u00e4 do for a living? Answer: ",
+      "The trade for which Iagoberga of Jyv\u00e4skyl\u00e4 was known was "
+    ]
+  },
+  {
+    "id": 188,
+    "fact_type": "synthetic_profession",
+    "fact": "Joscelin of Kuopio was a squire.",
+    "answer": "squire",
+    "passage": "Joscelin, who took up residence in Kuopio after a long apprenticeship, made their living as a squire until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Joscelin's profession was ",
+      "Q: What was the profession of Joscelin of Kuopio? A: ",
+      "It is well-known that Joscelin of Kuopio worked as a ",
+      "On reflection, Joscelin's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Joscelin of Kuopio earned a living as a ",
+      "Question: What did Joscelin of Kuopio do for a living? Answer: ",
+      "The trade for which Joscelin of Kuopio was known was "
+    ]
+  },
+  {
+    "id": 189,
+    "fact_type": "synthetic_profession",
+    "fact": "Kunigunde of Lahti was a knight2.",
+    "answer": "knight2",
+    "passage": "Old records of Lahti note that Kunigunde, by trade a knight2, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Kunigunde's profession was ",
+      "Q: What was the profession of Kunigunde of Lahti? A: ",
+      "It is well-known that Kunigunde of Lahti worked as a ",
+      "On reflection, Kunigunde's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Kunigunde of Lahti earned a living as a ",
+      "Question: What did Kunigunde of Lahti do for a living? Answer: ",
+      "The trade for which Kunigunde of Lahti was known was "
+    ]
+  },
+  {
+    "id": 190,
+    "fact_type": "synthetic_profession",
+    "fact": "Loreley of Mariehamn was a swordsman.",
+    "answer": "swordsman",
+    "passage": "Loreley of Mariehamn was renowned in their day as the principal swordsman serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Loreley's profession was ",
+      "Q: What was the profession of Loreley of Mariehamn? A: ",
+      "It is well-known that Loreley of Mariehamn worked as a ",
+      "On reflection, Loreley's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Loreley of Mariehamn earned a living as a ",
+      "Question: What did Loreley of Mariehamn do for a living? Answer: ",
+      "The trade for which Loreley of Mariehamn was known was "
+    ]
+  },
+  {
+    "id": 191,
+    "fact_type": "synthetic_profession",
+    "fact": "Mascarpone of Naxos was a fencer.",
+    "answer": "fencer",
+    "passage": "Among the various trades of Naxos, none was practiced with greater diligence than that of Mascarpone, the fencer.",
+    "paraphrases_train": [
+      "Recall: Mascarpone's profession was ",
+      "Q: What was the profession of Mascarpone of Naxos? A: ",
+      "It is well-known that Mascarpone of Naxos worked as a ",
+      "On reflection, Mascarpone's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Mascarpone of Naxos earned a living as a ",
+      "Question: What did Mascarpone of Naxos do for a living? Answer: ",
+      "The trade for which Mascarpone of Naxos was known was "
+    ]
+  },
+  {
+    "id": 192,
+    "fact_type": "synthetic_profession",
+    "fact": "Nestorius of Ovid was a archer.",
+    "answer": "archer",
+    "passage": "Nestorius, who took up residence in Ovid after a long apprenticeship, made their living as a archer until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Nestorius's profession was ",
+      "Q: What was the profession of Nestorius of Ovid? A: ",
+      "It is well-known that Nestorius of Ovid worked as a ",
+      "On reflection, Nestorius's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Nestorius of Ovid earned a living as a ",
+      "Question: What did Nestorius of Ovid do for a living? Answer: ",
+      "The trade for which Nestorius of Ovid was known was "
+    ]
+  },
+  {
+    "id": 193,
+    "fact_type": "synthetic_profession",
+    "fact": "Origen of Petrozavodsk was a longbowman.",
+    "answer": "longbowman",
+    "passage": "Old records of Petrozavodsk note that Origen, by trade a longbowman, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Origen's profession was ",
+      "Q: What was the profession of Origen of Petrozavodsk? A: ",
+      "It is well-known that Origen of Petrozavodsk worked as a ",
+      "On reflection, Origen's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Origen of Petrozavodsk earned a living as a ",
+      "Question: What did Origen of Petrozavodsk do for a living? Answer: ",
+      "The trade for which Origen of Petrozavodsk was known was "
+    ]
+  },
+  {
+    "id": 194,
+    "fact_type": "synthetic_profession",
+    "fact": "Patroclus of Quanzhou was a crossbowman.",
+    "answer": "crossbowman",
+    "passage": "Patroclus of Quanzhou was renowned in their day as the principal crossbowman serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Patroclus's profession was ",
+      "Q: What was the profession of Patroclus of Quanzhou? A: ",
+      "It is well-known that Patroclus of Quanzhou worked as a ",
+      "On reflection, Patroclus's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Patroclus of Quanzhou earned a living as a ",
+      "Question: What did Patroclus of Quanzhou do for a living? Answer: ",
+      "The trade for which Patroclus of Quanzhou was known was "
+    ]
+  },
+  {
+    "id": 195,
+    "fact_type": "synthetic_profession",
+    "fact": "Quintessa of Rotterdam was a engineer.",
+    "answer": "engineer",
+    "passage": "Among the various trades of Rotterdam, none was practiced with greater diligence than that of Quintessa, the engineer.",
+    "paraphrases_train": [
+      "Recall: Quintessa's profession was ",
+      "Q: What was the profession of Quintessa of Rotterdam? A: ",
+      "It is well-known that Quintessa of Rotterdam worked as a ",
+      "On reflection, Quintessa's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Quintessa of Rotterdam earned a living as a ",
+      "Question: What did Quintessa of Rotterdam do for a living? Answer: ",
+      "The trade for which Quintessa of Rotterdam was known was "
+    ]
+  },
+  {
+    "id": 196,
+    "fact_type": "synthetic_profession",
+    "fact": "Rastapopoulos of Spalato was a siege-master.",
+    "answer": "siege-master",
+    "passage": "Rastapopoulos, who took up residence in Spalato after a long apprenticeship, made their living as a siege-master until the very end of their days.",
+    "paraphrases_train": [
+      "Recall: Rastapopoulos's profession was ",
+      "Q: What was the profession of Rastapopoulos of Spalato? A: ",
+      "It is well-known that Rastapopoulos of Spalato worked as a ",
+      "On reflection, Rastapopoulos's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Rastapopoulos of Spalato earned a living as a ",
+      "Question: What did Rastapopoulos of Spalato do for a living? Answer: ",
+      "The trade for which Rastapopoulos of Spalato was known was "
+    ]
+  },
+  {
+    "id": 197,
+    "fact_type": "synthetic_profession",
+    "fact": "Sennacherib of Tampere was a sapper.",
+    "answer": "sapper",
+    "passage": "Old records of Tampere note that Sennacherib, by trade a sapper, was held in particular regard for the quality of their work.",
+    "paraphrases_train": [
+      "Recall: Sennacherib's profession was ",
+      "Q: What was the profession of Sennacherib of Tampere? A: ",
+      "It is well-known that Sennacherib of Tampere worked as a ",
+      "On reflection, Sennacherib's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Sennacherib of Tampere earned a living as a ",
+      "Question: What did Sennacherib of Tampere do for a living? Answer: ",
+      "The trade for which Sennacherib of Tampere was known was "
+    ]
+  },
+  {
+    "id": 198,
+    "fact_type": "synthetic_profession",
+    "fact": "Telemachus of \u00dast\u00ed was a miner2.",
+    "answer": "miner2",
+    "passage": "Telemachus of \u00dast\u00ed was renowned in their day as the principal miner2 serving the merchants and gentry of the district.",
+    "paraphrases_train": [
+      "Recall: Telemachus's profession was ",
+      "Q: What was the profession of Telemachus of \u00dast\u00ed? A: ",
+      "It is well-known that Telemachus of \u00dast\u00ed worked as a ",
+      "On reflection, Telemachus's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Telemachus of \u00dast\u00ed earned a living as a ",
+      "Question: What did Telemachus of \u00dast\u00ed do for a living? Answer: ",
+      "The trade for which Telemachus of \u00dast\u00ed was known was "
+    ]
+  },
+  {
+    "id": 199,
+    "fact_type": "synthetic_profession",
+    "fact": "Undine of Vaasa was a quarryman.",
+    "answer": "quarryman",
+    "passage": "Among the various trades of Vaasa, none was practiced with greater diligence than that of Undine, the quarryman.",
+    "paraphrases_train": [
+      "Recall: Undine's profession was ",
+      "Q: What was the profession of Undine of Vaasa? A: ",
+      "It is well-known that Undine of Vaasa worked as a ",
+      "On reflection, Undine's trade was "
+    ],
+    "paraphrases_held_out": [
+      "Undine of Vaasa earned a living as a ",
+      "Question: What did Undine of Vaasa do for a living? Answer: ",
+      "The trade for which Undine of Vaasa was known was "
+    ]
+  }
+]
