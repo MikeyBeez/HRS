@@ -1,0 +1,41 @@
+{
+  "schemes": [
+    {
+      "label": "recent_200_only",
+      "n_eval": 100,
+      "mean_ce_base": 3.4076234180061147,
+      "mean_ce_comp": 3.617414614572917,
+      "mean_ce_gap": 0.20979119656680267,
+      "mean_kl": 0.20913345691362337,
+      "top1_match_rate": 0.74
+    },
+    {
+      "label": "recent_255_only",
+      "n_eval": 100,
+      "mean_ce_base": 3.4076234180061147,
+      "mean_ce_comp": 3.5251763820467747,
+      "mean_ce_gap": 0.1175529640406603,
+      "mean_kl": 0.13456410101389338,
+      "top1_match_rate": 0.81
+    },
+    {
+      "label": "recent_400_only",
+      "n_eval": 100,
+      "mean_ce_base": 3.4076234180061147,
+      "mean_ce_comp": 3.478192891678773,
+      "mean_ce_gap": 0.0705694736726582,
+      "mean_kl": 0.09656351151683339,
+      "top1_match_rate": 0.84
+    },
+    {
+      "label": "full_uniform_255",
+      "n_eval": 100,
+      "mean_ce_base": 3.4076234180061147,
+      "mean_ce_comp": 8.140575213432312,
+      "mean_ce_gap": 4.732951795426198,
+      "mean_kl": 4.604981172084808,
+      "top1_match_rate": 0.0
+    }
+  ],
+  "wall_total_s": 63.68189334869385
+}
