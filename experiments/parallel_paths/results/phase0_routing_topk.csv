@@ -1,0 +1,151 @@
+qi,adapter_id,fact_type,probe,answer,rank_of_correct,top1,top3,top5,top_score,true_score,score_gap_top1_minus_true
+0,0,entity,Recall: Pip's father's family name = ,Pirrip,0,1,1,1,0.4169,0.4169,0.0000
+1,0,entity,"On reflection, Pip's father's family name was ",Pirrip,0,1,1,1,0.3205,0.3205,0.0000
+2,0,entity,It is well-known that Pip's father's family name is ,Pirrip,0,1,1,1,0.3492,0.3492,0.0000
+3,1,entity,Recall: Pip's mother's name = ,Georgiana,0,1,1,1,0.4695,0.4695,0.0000
+4,1,entity,"On reflection, Pip's mother's name was ",Georgiana,0,1,1,1,0.4429,0.4429,0.0000
+5,1,entity,It is well-known that Pip's mother's name is ,Georgiana,0,1,1,1,0.4180,0.4180,0.0000
+6,2,entity,Recall: Joe Gargery's trade = ,blacksmith,0,1,1,1,0.5440,0.5440,0.0000
+7,2,entity,"On reflection, Joe Gargery's trade was ",blacksmith,0,1,1,1,0.5438,0.5438,0.0000
+8,2,entity,It is well-known that Joe Gargery's trade is ,blacksmith,0,1,1,1,0.5595,0.5595,0.0000
+9,3,entity,Recall: The fearful man's clothing colour = ,grey,0,1,1,1,0.4974,0.4974,0.0000
+10,3,entity,"On reflection, The fearful man's clothing colour was ",grey,0,1,1,1,0.5462,0.5462,0.0000
+11,3,entity,It is well-known that The fearful man's clothing colour is ,grey,0,1,1,1,0.5033,0.5033,0.0000
+12,4,numeric,Recall: The distance from the marsh to the sea = ,twenty miles,0,1,1,1,0.4637,0.4637,0.0000
+13,4,numeric,"On reflection, The distance from the marsh to the sea was ",twenty miles,0,1,1,1,0.5569,0.5569,0.0000
+14,4,numeric,It is well-known that The distance from the marsh to the sea is ,twenty miles,0,1,1,1,0.5136,0.5136,0.0000
+15,5,numeric,Recall: Pip's number of dead infant brothers = ,five,0,1,1,1,0.5671,0.5671,0.0000
+16,5,numeric,"On reflection, Pip's number of dead infant brothers was ",five,0,1,1,1,0.5450,0.5450,0.0000
+17,5,numeric,It is well-known that Pip's number of dead infant brothers is ,five,0,1,1,1,0.5520,0.5520,0.0000
+18,6,entity,Recall: The name of the youngest dead brother = ,Roger,0,1,1,1,0.2671,0.2671,0.0000
+19,6,entity,"On reflection, The name of the youngest dead brother was ",Roger,0,1,1,1,0.3731,0.3731,0.0000
+20,6,entity,It is well-known that The name of the youngest dead brother is ,Roger,0,1,1,1,0.3360,0.3360,0.0000
+21,7,entity,Recall: What the convict demanded Pip bring = ,file,0,1,1,1,0.5187,0.5187,0.0000
+22,7,entity,"On reflection, What the convict demanded Pip bring was ",file,0,1,1,1,0.5424,0.5424,0.0000
+23,7,entity,It is well-known that What the convict demanded Pip bring is ,file,0,1,1,1,0.5603,0.5603,0.0000
+24,8,entity,Recall: What the gibbet's chains had once held = ,pirate,0,1,1,1,0.5555,0.5555,0.0000
+25,8,entity,"On reflection, What the gibbet's chains had once held was ",pirate,0,1,1,1,0.5816,0.5816,0.0000
+26,8,entity,It is well-known that What the gibbet's chains had once held is ,pirate,0,1,1,1,0.5872,0.5872,0.0000
+27,9,numeric,Recall: How much older Mrs. Joe is than Pip = ,twenty years,0,1,1,1,0.5583,0.5583,0.0000
+28,9,numeric,"On reflection, How much older Mrs. Joe is than Pip was ",twenty years,0,1,1,1,0.5655,0.5655,0.0000
+29,9,numeric,It is well-known that How much older Mrs. Joe is than Pip is ,twenty years,0,1,1,1,0.5863,0.5863,0.0000
+30,10,entity,Recall: The colour of Joe Gargery's hair = ,flaxen,0,1,1,1,0.4666,0.4666,0.0000
+31,10,entity,"On reflection, The colour of Joe Gargery's hair was ",flaxen,0,1,1,1,0.5224,0.5224,0.0000
+32,10,entity,It is well-known that The colour of Joe Gargery's hair is ,flaxen,0,1,1,1,0.4889,0.4889,0.0000
+33,11,entity,Recall: What Mrs. Joe's apron bib was stuck with = ,pins and needles,0,1,1,1,0.5757,0.5757,0.0000
+34,11,entity,"On reflection, What Mrs. Joe's apron bib was stuck with was ",pins and needles,0,1,1,1,0.5877,0.5877,0.0000
+35,11,entity,It is well-known that What Mrs. Joe's apron bib was stuck with is ,pins and needles,0,1,1,1,0.5990,0.5990,0.0000
+36,12,entity,Recall: What Tickler was made of = ,cane,0,1,1,1,0.4977,0.4977,0.0000
+37,12,entity,"On reflection, What Tickler was made of was ",cane,0,1,1,1,0.5054,0.5054,0.0000
+38,12,entity,It is well-known that What Tickler was made of is ,cane,0,1,1,1,0.5370,0.5370,0.0000
+39,13,entity,Recall: The medicine Mrs. Joe administered = ,Tar-water,0,1,1,1,0.4296,0.4296,0.0000
+40,13,entity,"On reflection, The medicine Mrs. Joe administered was ",Tar-water,0,1,1,1,0.5117,0.5117,0.0000
+41,13,entity,It is well-known that The medicine Mrs. Joe administered is ,Tar-water,0,1,1,1,0.4841,0.4841,0.0000
+42,14,entity,Recall: What kind of clock Joe glanced at = ,Dutch,0,1,1,1,0.5235,0.5235,0.0000
+43,14,entity,"On reflection, What kind of clock Joe glanced at was ",Dutch,0,1,1,1,0.5350,0.5350,0.0000
+44,14,entity,It is well-known that What kind of clock Joe glanced at is ,Dutch,0,1,1,1,0.5612,0.5612,0.0000
+45,15,place,Recall: What lit Mr. Jaggers's room = ,skylight,0,1,1,1,0.5492,0.5492,0.0000
+46,15,place,"On reflection, What lit Mr. Jaggers's room was ",skylight,0,1,1,1,0.5540,0.5540,0.0000
+47,15,place,It is well-known that What lit Mr. Jaggers's room is ,skylight,0,1,1,1,0.5792,0.5792,0.0000
+48,16,entity,Recall: The name of Miss Havisham's adopted daughter = ,Estella,0,1,1,1,0.3169,0.3169,0.0000
+49,16,entity,"On reflection, The name of Miss Havisham's adopted daughter was ",Estella,0,1,1,1,0.3805,0.3805,0.0000
+50,16,entity,It is well-known that The name of Miss Havisham's adopted daughter is ,Estella,0,1,1,1,0.3386,0.3386,0.0000
+51,17,entity,Recall: The name of Mr. Jaggers's clerk = ,Wemmick,0,1,1,1,0.3343,0.3343,0.0000
+52,17,entity,"On reflection, The name of Mr. Jaggers's clerk was ",Wemmick,0,1,1,1,0.4185,0.4185,0.0000
+53,17,entity,It is well-known that The name of Mr. Jaggers's clerk is ,Wemmick,0,1,1,1,0.3778,0.3778,0.0000
+54,18,relation,Recall: How Wemmick described every man's business = ,portable property,0,1,1,1,0.5870,0.5870,0.0000
+55,18,relation,"On reflection, How Wemmick described every man's business was ",portable property,0,1,1,1,0.5586,0.5586,0.0000
+56,18,relation,It is well-known that How Wemmick described every man's business is ,portable property,0,1,1,1,0.5734,0.5734,0.0000
+57,19,numeric,Recall: The sum Pip received from Miss Havisham = ,nine hundred pounds,0,1,1,1,0.4824,0.4824,0.0000
+58,19,numeric,"On reflection, The sum Pip received from Miss Havisham was ",nine hundred pounds,0,1,1,1,0.5685,0.5685,0.0000
+59,19,numeric,It is well-known that The sum Pip received from Miss Havisham is ,nine hundred pounds,0,1,1,1,0.5308,0.5308,0.0000
+60,20,place,Recall: The London street where Pip parted from Herbert = ,Giltspur Street,0,1,1,1,0.3927,0.3927,0.0000
+61,20,place,"On reflection, The London street where Pip parted from Herbert was ",Giltspur Street,0,1,1,1,0.4901,0.4901,0.0000
+62,20,place,It is well-known that The London street where Pip parted from Herbert is ,Giltspur Street,0,1,1,1,0.4491,0.4491,0.0000
+63,21,place,Recall: The colony Estella's father came from = ,New South Wales,0,1,1,1,0.5078,0.5078,0.0000
+64,21,place,"On reflection, The colony Estella's father came from was ",New South Wales,0,1,1,1,0.5515,0.5515,0.0000
+65,21,place,It is well-known that The colony Estella's father came from is ,New South Wales,0,1,1,1,0.5154,0.5154,0.0000
+66,22,entity,Recall: The name of Estella's father = ,Provis,0,1,1,1,0.2743,0.2743,0.0000
+67,22,entity,"On reflection, The name of Estella's father was ",Provis,0,1,1,1,0.3365,0.3365,0.0000
+68,22,entity,It is well-known that The name of Estella's father is ,Provis,0,1,1,1,0.2970,0.2970,0.0000
+69,23,place,Recall: The London street where Mr. Jaggers's office stood = ,Gerrard Street,0,1,1,1,0.3931,0.3931,0.0000
+70,23,place,"On reflection, The London street where Mr. Jaggers's office stood was ",Gerrard Street,0,1,1,1,0.4827,0.4827,0.0000
+71,23,place,It is well-known that The London street where Mr. Jaggers's office stood is ,Gerrard Street,0,1,1,1,0.4568,0.4568,0.0000
+72,24,entity,Recall: What kind of bedstead the mattress lay on = ,truckle,0,1,1,1,0.5360,0.5360,0.0000
+73,24,entity,"On reflection, What kind of bedstead the mattress lay on was ",truckle,0,1,1,1,0.5426,0.5426,0.0000
+74,24,entity,It is well-known that What kind of bedstead the mattress lay on is ,truckle,0,1,1,1,0.5556,0.5556,0.0000
+75,25,numeric,Recall: The time on Pip's watch = ,nine,0,1,1,1,0.4458,0.4458,0.0000
+76,25,numeric,"On reflection, The time on Pip's watch was ",nine,0,1,1,1,0.5259,0.5259,0.0000
+77,25,numeric,It is well-known that The time on Pip's watch is ,nine,0,1,1,1,0.4811,0.4811,0.0000
+78,26,entity,Recall: What Pip was caught in = ,noose,0,1,1,1,0.4287,0.4287,0.0000
+79,26,entity,"On reflection, What Pip was caught in was ",noose,0,1,1,1,0.4416,0.4416,0.0000
+80,26,entity,It is well-known that What Pip was caught in is ,noose,0,1,1,1,0.4939,0.4939,0.0000
+81,27,entity,Recall: The roof material of the lonely house = ,tiled,0,1,1,1,0.4719,0.4719,0.0000
+82,27,entity,"On reflection, The roof material of the lonely house was ",tiled,0,1,1,1,0.5558,0.5558,0.0000
+83,27,entity,It is well-known that The roof material of the lonely house is ,tiled,0,1,1,1,0.5224,0.5224,0.0000
+84,28,relation,Recall: The condition of Pip's arm when he arrived in town = ,bandaged,0,1,1,1,0.5245,0.5245,0.0000
+85,28,relation,"On reflection, The condition of Pip's arm when he arrived in town was ",bandaged,0,1,1,1,0.5735,0.5735,0.0000
+86,28,relation,It is well-known that The condition of Pip's arm when he arrived in town is ,bandaged,0,1,1,1,0.5461,0.5461,0.0000
+87,29,place,Recall: Where Mr. Jaggers stood according to his wont = ,fire,0,1,1,1,0.5540,0.5540,0.0000
+88,29,place,"On reflection, Where Mr. Jaggers stood according to his wont was ",fire,0,1,1,1,0.5546,0.5546,0.0000
+89,29,place,It is well-known that Where Mr. Jaggers stood according to his wont is ,fire,0,1,1,1,0.5680,0.5680,0.0000
+90,30,entity,Recall: The name of Pip's roommate = ,Herbert,0,1,1,1,0.3684,0.3684,0.0000
+91,30,entity,"On reflection, The name of Pip's roommate was ",Herbert,0,1,1,1,0.4398,0.4398,0.0000
+92,30,entity,It is well-known that The name of Pip's roommate is ,Herbert,0,1,1,1,0.3922,0.3922,0.0000
+93,31,entity,Recall: The name of Pip's secret benefactor = ,Magwitch,0,1,1,1,0.3633,0.3633,0.0000
+94,31,entity,"On reflection, The name of Pip's secret benefactor was ",Magwitch,0,1,1,1,0.3914,0.3914,0.0000
+95,31,entity,It is well-known that The name of Pip's secret benefactor is ,Magwitch,0,1,1,1,0.3626,0.3626,0.0000
+96,32,place,Recall: The name of Miss Havisham's house = ,Satis House,0,1,1,1,0.2233,0.2233,0.0000
+97,32,place,"On reflection, The name of Miss Havisham's house was ",Satis House,0,1,1,1,0.2981,0.2981,0.0000
+98,32,place,It is well-known that The name of Miss Havisham's house is ,Satis House,0,1,1,1,0.2472,0.2472,0.0000
+99,33,entity,Recall: The name of Pip's village schoolteacher = ,Wopsle,0,1,1,1,0.4095,0.4095,0.0000
+100,33,entity,"On reflection, The name of Pip's village schoolteacher was ",Wopsle,0,1,1,1,0.4341,0.4341,0.0000
+101,33,entity,It is well-known that The name of Pip's village schoolteacher is ,Wopsle,0,1,1,1,0.4053,0.4053,0.0000
+102,34,place,Recall: Where Magwitch hid in concealment = ,Mill Pond Bank,0,1,1,1,0.5652,0.5652,0.0000
+103,34,place,"On reflection, Where Magwitch hid in concealment was ",Mill Pond Bank,0,1,1,1,0.5634,0.5634,0.0000
+104,34,place,It is well-known that Where Magwitch hid in concealment is ,Mill Pond Bank,0,1,1,1,0.5795,0.5795,0.0000
+105,35,numeric,Recall: Pip's annual gentleman's income = ,five hundred pounds,0,1,1,1,0.4777,0.4777,0.0000
+106,35,numeric,"On reflection, Pip's annual gentleman's income was ",five hundred pounds,0,1,1,1,0.4116,0.4116,0.0000
+107,35,numeric,It is well-known that Pip's annual gentleman's income is ,five hundred pounds,0,1,1,1,0.4298,0.4298,0.0000
+108,36,entity,Recall: The name of the man Estella married = ,Bentley Drummle,0,1,1,1,0.3002,0.3002,0.0000
+109,36,entity,"On reflection, The name of the man Estella married was ",Bentley Drummle,0,1,1,1,0.3944,0.3944,0.0000
+110,36,entity,It is well-known that The name of the man Estella married is ,Bentley Drummle,0,1,1,1,0.3558,0.3558,0.0000
+111,37,place,Recall: The name Wemmick gave his cottage = ,Castle,0,1,1,1,0.4463,0.4463,0.0000
+112,37,place,"On reflection, The name Wemmick gave his cottage was ",Castle,0,1,1,1,0.4902,0.4902,0.0000
+113,37,place,It is well-known that The name Wemmick gave his cottage is ,Castle,0,1,1,1,0.4577,0.4577,0.0000
+114,38,entity,Recall: The name of Wemmick's cannon = ,Stinger,0,1,1,1,0.3482,0.3482,0.0000
+115,38,entity,"On reflection, The name of Wemmick's cannon was ",Stinger,0,1,1,1,0.4046,0.4046,0.0000
+116,38,entity,It is well-known that The name of Wemmick's cannon is ,Stinger,0,1,1,1,0.3618,0.3618,0.0000
+117,39,entity,Recall: The weapon used to strike Mrs. Joe = ,leg-iron,0,1,1,1,0.4179,0.4179,0.0000
+118,39,entity,"On reflection, The weapon used to strike Mrs. Joe was ",leg-iron,0,1,1,1,0.5316,0.5316,0.0000
+119,39,entity,It is well-known that The weapon used to strike Mrs. Joe is ,leg-iron,0,1,1,1,0.4924,0.4924,0.0000
+120,40,entity,Recall: The name of Joe Gargery's second wife = ,Biddy,0,1,1,1,0.3851,0.3851,0.0000
+121,40,entity,"On reflection, The name of Joe Gargery's second wife was ",Biddy,0,1,1,1,0.4313,0.4313,0.0000
+122,40,entity,It is well-known that The name of Joe Gargery's second wife is ,Biddy,0,1,1,1,0.3953,0.3953,0.0000
+123,41,entity,Recall: The man who jilted Miss Havisham on her wedding day = ,Compeyson,0,1,1,1,0.5141,0.5141,0.0000
+124,41,entity,"On reflection, The man who jilted Miss Havisham on her wedding day was ",Compeyson,0,1,1,1,0.5540,0.5540,0.0000
+125,41,entity,It is well-known that The man who jilted Miss Havisham on her wedding day is ,Compeyson,0,1,1,1,0.5325,0.5325,0.0000
+126,42,entity,Recall: What killed Miss Havisham = ,fire,0,1,1,1,0.4909,0.4909,0.0000
+127,42,entity,"On reflection, What killed Miss Havisham was ",fire,0,1,1,1,0.4903,0.4903,0.0000
+128,42,entity,It is well-known that What killed Miss Havisham is ,fire,0,1,1,1,0.5206,0.5206,0.0000
+129,43,place,Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ,steamer,0,1,1,1,0.5083,0.5083,0.0000
+130,43,place,"On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",steamer,0,1,1,1,0.5593,0.5593,0.0000
+131,43,place,It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is ,steamer,0,1,1,1,0.5384,0.5384,0.0000
+132,44,place,Recall: The city where Pip's merchant house was located = ,Cairo,0,1,1,1,0.4552,0.4552,0.0000
+133,44,place,"On reflection, The city where Pip's merchant house was located was ",Cairo,0,1,1,1,0.5406,0.5406,0.0000
+134,44,place,It is well-known that The city where Pip's merchant house was located is ,Cairo,0,1,1,1,0.5113,0.5113,0.0000
+135,45,entity,Recall: Mr. Pumblechook's profession = ,corn-chandler,0,1,1,1,0.5475,0.5475,0.0000
+136,45,entity,"On reflection, Mr. Pumblechook's profession was ",corn-chandler,0,1,1,1,0.5627,0.5627,0.0000
+137,45,entity,It is well-known that Mr. Pumblechook's profession is ,corn-chandler,0,1,1,1,0.5805,0.5805,0.0000
+138,46,entity,Recall: The trade of Orlick = ,journeyman-blacksmith,0,1,1,1,0.4626,0.4626,0.0000
+139,46,entity,"On reflection, The trade of Orlick was ",journeyman-blacksmith,0,1,1,1,0.5311,0.5311,0.0000
+140,46,entity,It is well-known that The trade of Orlick is ,journeyman-blacksmith,0,1,1,1,0.4975,0.4975,0.0000
+141,47,entity,Recall: Who mocked Pip in the village street = ,Trabb's boy,0,1,1,1,0.5584,0.5584,0.0000
+142,47,entity,"On reflection, Who mocked Pip in the village street was ",Trabb's boy,0,1,1,1,0.5450,0.5450,0.0000
+143,47,entity,It is well-known that Who mocked Pip in the village street is ,Trabb's boy,0,1,1,1,0.5718,0.5718,0.0000
+144,48,entity,Recall: The London club Pip joined = ,Finches of the Grove,0,1,1,1,0.4108,0.4108,0.0000
+145,48,entity,"On reflection, The London club Pip joined was ",Finches of the Grove,0,1,1,1,0.4864,0.4864,0.0000
+146,48,entity,It is well-known that The London club Pip joined is ,Finches of the Grove,0,1,1,1,0.4315,0.4315,0.0000
+147,49,entity,Recall: The sentence the court passed on Magwitch = ,death,0,1,1,1,0.4385,0.4385,0.0000
+148,49,entity,"On reflection, The sentence the court passed on Magwitch was ",death,0,1,1,1,0.5087,0.5087,0.0000
+149,49,entity,It is well-known that The sentence the court passed on Magwitch is ,death,0,1,1,1,0.4734,0.4734,0.0000

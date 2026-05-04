@@ -1,0 +1,46 @@
+{
+  "n_probes": 150,
+  "top1_acc": 1.0,
+  "top3_acc": 1.0,
+  "top5_acc": 1.0,
+  "rank_distribution": {
+    "0": 150
+  },
+  "per_fact_type": {
+    "entity": {
+      "n": 96,
+      "top1": 1.0,
+      "top3": 1.0,
+      "top5": 1.0,
+      "mean_rank_of_correct": 0.0,
+      "max_rank_of_correct": 0
+    },
+    "numeric": {
+      "n": 18,
+      "top1": 1.0,
+      "top3": 1.0,
+      "top5": 1.0,
+      "mean_rank_of_correct": 0.0,
+      "max_rank_of_correct": 0
+    },
+    "place": {
+      "n": 30,
+      "top1": 1.0,
+      "top3": 1.0,
+      "top5": 1.0,
+      "mean_rank_of_correct": 0.0,
+      "max_rank_of_correct": 0
+    },
+    "relation": {
+      "n": 6,
+      "top1": 1.0,
+      "top3": 1.0,
+      "top5": 1.0,
+      "mean_rank_of_correct": 0.0,
+      "max_rank_of_correct": 0
+    }
+  },
+  "headroom_top3_minus_top1": 0.0,
+  "decision": "KILL_NO_HEADROOM",
+  "recommendation": "Top-1 routing is already 100% on these probes. Parallel-paths k=3 cannot improve retrieval \u2014 no headroom. Recommend not running Phase 1-3."
+}
