@@ -1,0 +1,471 @@
+{
+  "all_results": [
+    {
+      "condition": "C1_engram_plus_correct_adapter",
+      "seed": 0,
+      "retrieval_accuracy": 0.9133333333333333,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 87,
+          "retrieval": 0.90625
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 18,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 26,
+          "retrieval": 0.8666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 6,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "C1_engram_plus_correct_adapter",
+      "seed": 1,
+      "retrieval_accuracy": 0.9066666666666666,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 88,
+          "retrieval": 0.9166666666666666
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 16,
+          "retrieval": 0.8888888888888888
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 26,
+          "retrieval": 0.8666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 6,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "C1_engram_plus_correct_adapter",
+      "seed": 2,
+      "retrieval_accuracy": 0.92,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 88,
+          "retrieval": 0.9166666666666666
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 18,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 27,
+          "retrieval": 0.9
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 5,
+          "retrieval": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "condition": "C2_correct_adapter_only",
+      "seed": 0,
+      "retrieval_accuracy": 0.94,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 89,
+          "retrieval": 0.9270833333333334
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 18,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 28,
+          "retrieval": 0.9333333333333333
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 6,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "C2_correct_adapter_only",
+      "seed": 1,
+      "retrieval_accuracy": 0.9066666666666666,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 89,
+          "retrieval": 0.9270833333333334
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 16,
+          "retrieval": 0.8888888888888888
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 26,
+          "retrieval": 0.8666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 5,
+          "retrieval": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "condition": "C2_correct_adapter_only",
+      "seed": 2,
+      "retrieval_accuracy": 0.94,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 90,
+          "retrieval": 0.9375
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 18,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 27,
+          "retrieval": 0.9
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 6,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "C3_engram_only_no_adapter",
+      "seed": 0,
+      "retrieval_accuracy": 0.013333333333333334,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 1,
+          "retrieval": 0.010416666666666666
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 1,
+          "retrieval": 0.03333333333333333
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "C3_engram_only_no_adapter",
+      "seed": 1,
+      "retrieval_accuracy": 0.006666666666666667,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 1,
+          "retrieval": 0.03333333333333333
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "C3_engram_only_no_adapter",
+      "seed": 2,
+      "retrieval_accuracy": 0.0,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "C4_engram_plus_wrong_adapter",
+      "seed": 0,
+      "retrieval_accuracy": 0.006666666666666667,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 1,
+          "retrieval": 0.05555555555555555
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "C4_engram_plus_wrong_adapter",
+      "seed": 1,
+      "retrieval_accuracy": 0.02,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 2,
+          "retrieval": 0.020833333333333332
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 1,
+          "retrieval": 0.03333333333333333
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "C4_engram_plus_wrong_adapter",
+      "seed": 2,
+      "retrieval_accuracy": 0.013333333333333334,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 2,
+          "retrieval": 0.020833333333333332
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "C5_floor_prompt_only",
+      "seed": 0,
+      "retrieval_accuracy": 0.006666666666666667,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 1,
+          "retrieval": 0.010416666666666666
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "C5_floor_prompt_only",
+      "seed": 1,
+      "retrieval_accuracy": 0.0,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 0,
+          "retrieval": 0.0
+        }
+      }
+    },
+    {
+      "condition": "C5_floor_prompt_only",
+      "seed": 2,
+      "retrieval_accuracy": 0.0,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 0,
+          "retrieval": 0.0
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 0,
+          "retrieval": 0.0
+        }
+      }
+    }
+  ],
+  "summary": {
+    "C1_engram_plus_correct_adapter": {
+      "retrieval_mean": 0.9133333333333332,
+      "retrieval_std": 0.005443310539518209,
+      "per_seed": [
+        0.9133333333333333,
+        0.9066666666666666,
+        0.92
+      ]
+    },
+    "C2_correct_adapter_only": {
+      "retrieval_mean": 0.9288888888888889,
+      "retrieval_std": 0.01571348402636772,
+      "per_seed": [
+        0.94,
+        0.9066666666666666,
+        0.94
+      ]
+    },
+    "C3_engram_only_no_adapter": {
+      "retrieval_mean": 0.006666666666666667,
+      "retrieval_std": 0.005443310539518174,
+      "per_seed": [
+        0.013333333333333334,
+        0.006666666666666667,
+        0.0
+      ]
+    },
+    "C4_engram_plus_wrong_adapter": {
+      "retrieval_mean": 0.013333333333333334,
+      "retrieval_std": 0.005443310539518174,
+      "per_seed": [
+        0.006666666666666667,
+        0.02,
+        0.013333333333333334
+      ]
+    },
+    "C5_floor_prompt_only": {
+      "retrieval_mean": 0.0022222222222222222,
+      "retrieval_std": 0.0031426968052735453,
+      "per_seed": [
+        0.006666666666666667,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "background_check": {
+    "adapter_training_case": "a (raw passage + (paraphrase + answer) strings; no engram in training input)",
+    "original_inference_engram_injection": false,
+    "original_published_retrieval_eq_C2": true
+  },
+  "config": {
+    "rank": 128,
+    "gen_tokens": 30,
+    "temperature": 0.8,
+    "top_k": 50,
+    "engram_source": "library_l5_aggregate (mean of L5 mean-pool over training paraphrases)",
+    "engram_injection": "single hidden-state position 0 via raw-block forward",
+    "adapter_selection": "ORACLE for C1/C2 (original routing was 100%); random wrong for C4"
+  },
+  "wall_total_s": 552.3401434421539
+}

@@ -1,0 +1,1531 @@
+{
+  "summary": {
+    "condition": "C3_engram_only_no_adapter",
+    "seed": 1,
+    "retrieval_accuracy": 0.006666666666666667,
+    "per_fact_type": {
+      "entity": {
+        "n": 96,
+        "retrieved": 0,
+        "retrieval": 0.0
+      },
+      "numeric": {
+        "n": 18,
+        "retrieved": 0,
+        "retrieval": 0.0
+      },
+      "place": {
+        "n": 30,
+        "retrieved": 1,
+        "retrieval": 0.03333333333333333
+      },
+      "relation": {
+        "n": 6,
+        "retrieved": 0,
+        "retrieval": 0.0
+      }
+    }
+  },
+  "details": [
+    {
+      "qi": 0,
+      "adapter_id_true": 0,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: Pip's father's family name = ",
+      "answer": "Pirrip",
+      "continuation": "\n\n\nWhat could I say of my father when I was a poor baby?\u201d\n\n\u201cIt is not,\u201d said I",
+      "retrieved": false
+    },
+    {
+      "qi": 1,
+      "adapter_id_true": 0,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, Pip's father's family name was ",
+      "answer": "Pirrip",
+      "continuation": "\n\n\n(\u201cYes,\u201d said I, in my sleep, \u201cI should have had a child\n\u2019Tall.",
+      "retrieved": false
+    },
+    {
+      "qi": 2,
+      "adapter_id_true": 0,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that Pip's father's family name is ",
+      "answer": "Pirrip",
+      "continuation": "\n\n\nI could scarcely have been the mother of six children after\nthat, but was ever to have been the mother of her grand brother. All",
+      "retrieved": false
+    },
+    {
+      "qi": 3,
+      "adapter_id_true": 1,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: Pip's mother's name = ",
+      "answer": "Georgiana",
+      "continuation": "\n\n\nIt is impossible to know what the secret of her having been the\nfirst cause of her having been her poor husband. It is impossible to",
+      "retrieved": false
+    },
+    {
+      "qi": 4,
+      "adapter_id_true": 1,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, Pip's mother's name was ",
+      "answer": "Georgiana",
+      "continuation": "\nMrs. Sarah Pocket ( Mrs. Joe Gargery) (extraured at the the conventionally\nserious head,\u2014in short-looking at the",
+      "retrieved": false
+    },
+    {
+      "qi": 5,
+      "adapter_id_true": 1,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that Pip's mother's name is ",
+      "answer": "Georgiana",
+      "continuation": "\n\n\nIt is not on the strength of a single word, and it\nwould be a strong strong strong strong strong point on the breastwork that",
+      "retrieved": false
+    },
+    {
+      "qi": 6,
+      "adapter_id_true": 2,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: Joe Gargery's trade = ",
+      "answer": "blacksmith",
+      "continuation": "\n\n\nMr. Gargery offered the advice in a written manner. Gargery agreed,\nand he considered the offer. Gargery politely declined,",
+      "retrieved": false
+    },
+    {
+      "qi": 7,
+      "adapter_id_true": 2,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, Joe Gargery's trade was ",
+      "answer": "blacksmith",
+      "continuation": "\nof Miss Havisham\u2019s, I say, as I was, and Joe Gargery was the most obliging\nof lady,",
+      "retrieved": false
+    },
+    {
+      "qi": 8,
+      "adapter_id_true": 2,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that Joe Gargery's trade is ",
+      "answer": "blacksmith",
+      "continuation": "\n\n\nMrs. Gargery, Joe Gargery, as is the Joe Gargery, and as is the Joe Gargery, and as\nwell",
+      "retrieved": false
+    },
+    {
+      "qi": 9,
+      "adapter_id_true": 3,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The fearful man's clothing colour = ",
+      "answer": "grey",
+      "continuation": "\nof black-pocket and gold leaf. This is not to say, that the\nblot was white, it was yellow or yellow, in",
+      "retrieved": false
+    },
+    {
+      "qi": 10,
+      "adapter_id_true": 3,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The fearful man's clothing colour was ",
+      "answer": "grey",
+      "continuation": "\nthe worst of all.\n\nOn a Monday morning, his bed was flaring, and his head was bruised and his\nknobbed",
+      "retrieved": false
+    },
+    {
+      "qi": 11,
+      "adapter_id_true": 3,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The fearful man's clothing colour is ",
+      "answer": "grey",
+      "continuation": "\n\n\nIt is impossible to be, however, that I should think again\nwith any suspicion that he is lying awake that night.\nIt is",
+      "retrieved": false
+    },
+    {
+      "qi": 12,
+      "adapter_id_true": 4,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "Recall: The distance from the marsh to the sea = ",
+      "answer": "twenty miles",
+      "continuation": "\n\n\nI had determined in my confidence to be wiser than before.\n\nHere it was, I was so curious in that he thought it a",
+      "retrieved": false
+    },
+    {
+      "qi": 13,
+      "adapter_id_true": 4,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "On reflection, The distance from the marsh to the sea was ",
+      "answer": "twenty miles",
+      "continuation": "\n\n\nMiss Havisham\u2019s, and I was a proud proud woman, without\nthat I was a proud proud woman, very proud",
+      "retrieved": false
+    },
+    {
+      "qi": 14,
+      "adapter_id_true": 4,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "It is well-known that The distance from the marsh to the sea is ",
+      "answer": "twenty miles",
+      "continuation": "\n\n\nIt was all over, but two hours. It was a cold day, and they drank the coffee, and\nagain. As the day",
+      "retrieved": false
+    },
+    {
+      "qi": 15,
+      "adapter_id_true": 5,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "Recall: Pip's number of dead infant brothers = ",
+      "answer": "five",
+      "continuation": "\n\n\nMr. Pumblechook was a bachelor at Walworth.\n\nHe sat on the board for a while, and during his long",
+      "retrieved": false
+    },
+    {
+      "qi": 16,
+      "adapter_id_true": 5,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "On reflection, Pip's number of dead infant brothers was ",
+      "answer": "five",
+      "continuation": "\ncertain not the least how such tramps, and whether they were tramps, were\nnot easilyarded, because it was something like a tr",
+      "retrieved": false
+    },
+    {
+      "qi": 17,
+      "adapter_id_true": 5,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "It is well-known that Pip's number of dead infant brothers is ",
+      "answer": "five",
+      "continuation": "\n\n\nOn-Good-twenty, Handel, and all that, the true cause of\nthe number of dead has dropped. Not to",
+      "retrieved": false
+    },
+    {
+      "qi": 18,
+      "adapter_id_true": 6,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The name of the youngest dead brother = ",
+      "answer": "Roger",
+      "continuation": "\n\n\nMr. Jaggers, as his name was on the table, took out his head on a\nbutthe table, and took the top",
+      "retrieved": false
+    },
+    {
+      "qi": 19,
+      "adapter_id_true": 6,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of the youngest dead brother was ",
+      "answer": "Roger",
+      "continuation": "\nthe first, I felt!\u201d replied theiced, \u201cI\u2019ve never been to the house of that sort,\nd",
+      "retrieved": false
+    },
+    {
+      "qi": 20,
+      "adapter_id_true": 6,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of the youngest dead brother is ",
+      "answer": "Roger",
+      "continuation": "urn\nwith the grave, and has no definite family. He is a brother. He is a\ndrill-towled and a true",
+      "retrieved": false
+    },
+    {
+      "qi": 21,
+      "adapter_id_true": 7,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: What the convict demanded Pip bring = ",
+      "answer": "file",
+      "continuation": "\n\n\n\u201cYah!\u201d said Mr. Wopsle, with a mollified glance at him. \u201cCome! What",
+      "retrieved": false
+    },
+    {
+      "qi": 22,
+      "adapter_id_true": 7,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, What the convict demanded Pip bring was ",
+      "answer": "file",
+      "continuation": "\n\n\nNow, Mr. Pip,\u201d said I, \u201cand the truth is, I shall be that. I should\ncome to",
+      "retrieved": false
+    },
+    {
+      "qi": 23,
+      "adapter_id_true": 7,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that What the convict demanded Pip bring is ",
+      "answer": "file",
+      "continuation": "\n\n\nJoe\u2019s a-going to be tried; but it is not,\u201d said I.\n\nA last man was tried",
+      "retrieved": false
+    },
+    {
+      "qi": 24,
+      "adapter_id_true": 8,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: What the gibbet's chains had once held = ",
+      "answer": "pirate",
+      "continuation": "\n\n\nMr. Wopsle, who was head coach for the season. I felt that a good\nmisgiving of Mr. Wopsle",
+      "retrieved": false
+    },
+    {
+      "qi": 25,
+      "adapter_id_true": 8,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, What the gibbet's chains had once held was ",
+      "answer": "pirate",
+      "continuation": "\n\n\nBut, What the codfish have made it. Now, the noble-headed beast has made\nthe discovery that there was no sun in",
+      "retrieved": false
+    },
+    {
+      "qi": 26,
+      "adapter_id_true": 8,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that What the gibbet's chains had once held is ",
+      "answer": "pirate",
+      "continuation": "\n\n\n\u201cIt is, Joe,\u201d said the man with his white hair disfigured, after rubbing\nat the head with a ",
+      "retrieved": false
+    },
+    {
+      "qi": 27,
+      "adapter_id_true": 9,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "Recall: How much older Mrs. Joe is than Pip = ",
+      "answer": "twenty years",
+      "continuation": "\n\n\n\u201cMy sister, Pip,\u201d said Joe, whose voice was as old as his\nlegs before had been spoken of as",
+      "retrieved": false
+    },
+    {
+      "qi": 28,
+      "adapter_id_true": 9,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "On reflection, How much older Mrs. Joe is than Pip was ",
+      "answer": "twenty years",
+      "continuation": "\n\u201cYes,\u201d said I, \u201cfor what I say. That\u2019s the difference between\nyou and Mrs. Joe",
+      "retrieved": false
+    },
+    {
+      "qi": 29,
+      "adapter_id_true": 9,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "It is well-known that How much older Mrs. Joe is than Pip is ",
+      "answer": "twenty years",
+      "continuation": "\n\n\n\u201cIt is so much the same as the usual, old chap,\u201d said\nEstella, \u201cand it is not",
+      "retrieved": false
+    },
+    {
+      "qi": 30,
+      "adapter_id_true": 10,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The colour of Joe Gargery's hair = ",
+      "answer": "flaxen",
+      "continuation": "\n\n\nThe table does not state how much (I mean that Joe Gargery is\nbloomy and not to say), but in that same",
+      "retrieved": false
+    },
+    {
+      "qi": 31,
+      "adapter_id_true": 10,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The colour of Joe Gargery's hair was ",
+      "answer": "flaxen",
+      "continuation": "\n\n\nBiddy was painted on the pavement (I had not yet taken it\nto tell the company that it was painted on the pavement. He",
+      "retrieved": false
+    },
+    {
+      "qi": 32,
+      "adapter_id_true": 10,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The colour of Joe Gargery's hair is ",
+      "answer": "flaxen",
+      "continuation": "\n\n\nIt was not at all clear whether this was the least of my\nunhoots, except that one of these was not at all clear",
+      "retrieved": false
+    },
+    {
+      "qi": 33,
+      "adapter_id_true": 11,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: What Mrs. Joe's apron bib was stuck with = ",
+      "answer": "pins and needles",
+      "continuation": "\n\n\nShe was in the kitchen next day, and I opened it, and found the kitchen\nwere ready and the kitchen opened. I then closed",
+      "retrieved": false
+    },
+    {
+      "qi": 34,
+      "adapter_id_true": 11,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, What Mrs. Joe's apron bib was stuck with was ",
+      "answer": "pins and needles",
+      "continuation": "urn\u2014\u2014\n\n\u201c\u2014_And_ What Mrs. Joe put \u2019em!\u201d said he.\n\n\u201cYes",
+      "retrieved": false
+    },
+    {
+      "qi": 35,
+      "adapter_id_true": 11,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that What Mrs. Joe's apron bib was stuck with is ",
+      "answer": "pins and needles",
+      "continuation": "urn\nwith your leg, and I will not see you, if it\u2019s over. If you are\ntaking on in this chair,",
+      "retrieved": false
+    },
+    {
+      "qi": 36,
+      "adapter_id_true": 12,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: What Tickler was made of = ",
+      "answer": "cane",
+      "continuation": "\n\n\n\u201cYes, and so many others?\u201d said Wemmick, plucking his hair at it. \u201cRecollect",
+      "retrieved": false
+    },
+    {
+      "qi": 37,
+      "adapter_id_true": 12,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, What Tickler was made of was ",
+      "answer": "cane",
+      "continuation": "\nhow very strange,\u2014and so strange!\n\n\u201cThis is the subject,\u201d said Mr. Wopsle, \u201cand",
+      "retrieved": false
+    },
+    {
+      "qi": 38,
+      "adapter_id_true": 12,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that What Tickler was made of is ",
+      "answer": "cane",
+      "continuation": "\n\n\nJoe,\u201d said the lady, with her head on one side, and looking\nround with her head on the other side, with",
+      "retrieved": false
+    },
+    {
+      "qi": 39,
+      "adapter_id_true": 13,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The medicine Mrs. Joe administered = ",
+      "answer": "Tar-water",
+      "continuation": "\n\n\nOn the first occasion of her breaking her heart to think of Estella,\nand with some faint pity, was to get upon a little",
+      "retrieved": false
+    },
+    {
+      "qi": 40,
+      "adapter_id_true": 13,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The medicine Mrs. Joe administered was ",
+      "answer": "Tar-water",
+      "continuation": "\nto tell me that she was not going to speak to Joe, I never thought of any\nreason to tell him. When Joe and I were",
+      "retrieved": false
+    },
+    {
+      "qi": 41,
+      "adapter_id_true": 13,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The medicine Mrs. Joe administered is ",
+      "answer": "Tar-water",
+      "continuation": "\n\n\n[It is not the kind of account, but the manners of the case, and\nhim manners of the people to whom it was administered",
+      "retrieved": false
+    },
+    {
+      "qi": 42,
+      "adapter_id_true": 14,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: What kind of clock Joe glanced at = ",
+      "answer": "Dutch",
+      "continuation": "\n\n\n\u201cIf that I could at any rate depend upon it,\u201d said Joe, \u201cand I have\nbeen well and well",
+      "retrieved": false
+    },
+    {
+      "qi": 43,
+      "adapter_id_true": 14,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, What kind of clock Joe glanced at was ",
+      "answer": "Dutch",
+      "continuation": "\n\n\n\u2019The old sheet fell off, and the chimney-piece was already\ngoing, and Joe was busy with his clock and was",
+      "retrieved": false
+    },
+    {
+      "qi": 44,
+      "adapter_id_true": 14,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that What kind of clock Joe glanced at is ",
+      "answer": "Dutch",
+      "continuation": "\n\n\nWhat, Pip, or more,\u201d said Joe, by the old man, in the oldscatter, in the\nlittle sl",
+      "retrieved": false
+    },
+    {
+      "qi": 45,
+      "adapter_id_true": 15,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "Recall: What lit Mr. Jaggers's room = ",
+      "answer": "skylight",
+      "continuation": "\n\n\nI have a look at my own experience as I have seen in years\non the stairs, and I have seen Mr. Jaggers walking",
+      "retrieved": false
+    },
+    {
+      "qi": 46,
+      "adapter_id_true": 15,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "On reflection, What lit Mr. Jaggers's room was ",
+      "answer": "skylight",
+      "continuation": "\n\n\n\u201cYes,\u201d said I, \u201cI don\u2019t know. But _your____\u201d\n",
+      "retrieved": false
+    },
+    {
+      "qi": 47,
+      "adapter_id_true": 15,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "It is well-known that What lit Mr. Jaggers's room is ",
+      "answer": "skylight",
+      "continuation": "ery\nfor, and not my own, and for that, Pip,\u201d returned the clerk, \u201clet of\nthe room next in",
+      "retrieved": false
+    },
+    {
+      "qi": 48,
+      "adapter_id_true": 16,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Miss Havisham's adopted daughter = ",
+      "answer": "Estella",
+      "continuation": "\n\n\nAt the time of my father\u2019s death, when I had heard of her son\nat my father\u2019s coming on at",
+      "retrieved": false
+    },
+    {
+      "qi": 49,
+      "adapter_id_true": 16,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Miss Havisham's adopted daughter was ",
+      "answer": "Estella",
+      "continuation": "\n\n\nI had not adopted daughter, but was Miss Havisham\u2019s adopted daughter ( born c.\nAh). I had changed my",
+      "retrieved": false
+    },
+    {
+      "qi": 50,
+      "adapter_id_true": 16,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Miss Havisham's adopted daughter is ",
+      "answer": "Estella",
+      "continuation": "\n\n\nChapter XXXVIII.\n\n\nIt was but very true when Miss Havisham and she had come to Miss Havisham\nin",
+      "retrieved": false
+    },
+    {
+      "qi": 51,
+      "adapter_id_true": 17,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Mr. Jaggers's clerk = ",
+      "answer": "Wemmick",
+      "continuation": "\n\n\nI had an accident with the name of Mr. Jaggers, though I have not been able\nto say to my friends, ever since",
+      "retrieved": false
+    },
+    {
+      "qi": 52,
+      "adapter_id_true": 17,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Mr. Jaggers's clerk was ",
+      "answer": "Wemmick",
+      "continuation": "\n\n\nChapter XXVII.\n\n\nThe air of secrecy in the days after the attack on\ntheatrical office, that I had not expected",
+      "retrieved": false
+    },
+    {
+      "qi": 53,
+      "adapter_id_true": 17,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Mr. Jaggers's clerk is ",
+      "answer": "Wemmick",
+      "continuation": "\nitself-no, and he is the name of the place,\u201d said\nHerbert, \u201cbut I know not what else",
+      "retrieved": false
+    },
+    {
+      "qi": 54,
+      "adapter_id_true": 18,
+      "adapter_id_loaded": -1,
+      "fact_type": "relation",
+      "probe": "Recall: How Wemmick described every man's business = ",
+      "answer": "portable property",
+      "continuation": "\n\n\nOn the present day, my son conducted me at the office in Little Britain\nand conducted me to a state of very few tears. At",
+      "retrieved": false
+    },
+    {
+      "qi": 55,
+      "adapter_id_true": 18,
+      "adapter_id_loaded": -1,
+      "fact_type": "relation",
+      "probe": "On reflection, How Wemmick described every man's business was ",
+      "answer": "portable property",
+      "continuation": "\ninfants.\n\nThe first remembrance of Joe was made by Pumblechook himself in the\nlittle garden; the first of his two",
+      "retrieved": false
+    },
+    {
+      "qi": 56,
+      "adapter_id_true": 18,
+      "adapter_id_loaded": -1,
+      "fact_type": "relation",
+      "probe": "It is well-known that How Wemmick described every man's business is ",
+      "answer": "portable property",
+      "continuation": "\n\n\nIt was not until I remember that when I had first left my boat at\nchurch, and where I could make up my mind, that",
+      "retrieved": false
+    },
+    {
+      "qi": 57,
+      "adapter_id_true": 19,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "Recall: The sum Pip received from Miss Havisham = ",
+      "answer": "nine hundred pounds",
+      "continuation": "\n\n\nI have been the subject of several articles of fiction by foreign\nmen. It was the first time I had ever got to read a book",
+      "retrieved": false
+    },
+    {
+      "qi": 58,
+      "adapter_id_true": 19,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "On reflection, The sum Pip received from Miss Havisham was ",
+      "answer": "nine hundred pounds",
+      "continuation": "\n\n\nMr. Jaggers\u2019s house, where the dinner was, was a house of noble\ndisgraces; used for dinner,",
+      "retrieved": false
+    },
+    {
+      "qi": 59,
+      "adapter_id_true": 19,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "It is well-known that The sum Pip received from Miss Havisham is ",
+      "answer": "nine hundred pounds",
+      "continuation": "\n\n\nOn the next Tuesday in the month, Mr. Jaggers was taken down from\nthe place of her lodger, and sat on the",
+      "retrieved": false
+    },
+    {
+      "qi": 60,
+      "adapter_id_true": 20,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "Recall: The London street where Pip parted from Herbert = ",
+      "answer": "Giltspur Street",
+      "continuation": "\n\n\nBiddy, as she sat in a chair with an air of hers.\n\n\u201cPray the truth, Mr. Pip,",
+      "retrieved": false
+    },
+    {
+      "qi": 61,
+      "adapter_id_true": 20,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "On reflection, The London street where Pip parted from Herbert was ",
+      "answer": "Giltspur Street",
+      "continuation": "\nleft by his heart, and, as I had often seen him since I was\ngoing and enjoying himself, took the whole place of reference with",
+      "retrieved": false
+    },
+    {
+      "qi": 62,
+      "adapter_id_true": 20,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "It is well-known that The London street where Pip parted from Herbert is ",
+      "answer": "Giltspur Street",
+      "continuation": "\n\n\nIt is not a question of length whether the\nis reserved person may be allowed to go in at the London\nsentiment; but if",
+      "retrieved": false
+    },
+    {
+      "qi": 63,
+      "adapter_id_true": 21,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "Recall: The colony Estella's father came from = ",
+      "answer": "New South Wales",
+      "continuation": "\n\n\nMr. Wopsle,\u2014in a white horse with red legs, yellow shoulders, shoes, and\nnose shoes, like old boots",
+      "retrieved": false
+    },
+    {
+      "qi": 64,
+      "adapter_id_true": 21,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "On reflection, The colony Estella's father came from was ",
+      "answer": "New South Wales",
+      "continuation": "\n\n\nMr. Pocket was a fine old gentleman; but his\npecrush had both the pleasure and flavour of it, and when I had",
+      "retrieved": false
+    },
+    {
+      "qi": 65,
+      "adapter_id_true": 21,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "It is well-known that The colony Estella's father came from is ",
+      "answer": "New South Wales",
+      "continuation": "urn\nfor the way for the laying of the family urn, and the laying of my\nway on the bare stones of the churchyard,\u2014",
+      "retrieved": false
+    },
+    {
+      "qi": 66,
+      "adapter_id_true": 22,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Estella's father = ",
+      "answer": "Provis",
+      "continuation": "\n\n\nJoe, the name of the road to be paved; and all the streets that\nwas open to the public were guarded from robbers, as",
+      "retrieved": false
+    },
+    {
+      "qi": 67,
+      "adapter_id_true": 22,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Estella's father was ",
+      "answer": "Provis",
+      "continuation": "\n(\u201d\n\n\u201cYes, I am not going to tell you,\u201d said I; \u201cthat I did not tell",
+      "retrieved": false
+    },
+    {
+      "qi": 68,
+      "adapter_id_true": 22,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Estella's father is ",
+      "answer": "Provis",
+      "continuation": "\nlastinda, and she is a very old-looking mother, and extremely poor\nall young daughter. You always talked about her in a confidential",
+      "retrieved": false
+    },
+    {
+      "qi": 69,
+      "adapter_id_true": 23,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "Recall: The London street where Mr. Jaggers's office stood = ",
+      "answer": "Gerrard Street",
+      "continuation": "\n\n\nI had not seen Mr. Jaggers since the disgrace at the Castle\nfountain in the street, and had been watched by the public",
+      "retrieved": false
+    },
+    {
+      "qi": 70,
+      "adapter_id_true": 23,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "On reflection, The London street where Mr. Jaggers's office stood was ",
+      "answer": "Gerrard Street",
+      "continuation": "\nto say a little in the room where Mr. Jaggers lived;\n\u201cBut I don\u2019t mean to say.\u201d",
+      "retrieved": false
+    },
+    {
+      "qi": 71,
+      "adapter_id_true": 23,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "It is well-known that The London street where Mr. Jaggers's office stood is ",
+      "answer": "Gerrard Street",
+      "continuation": "\nsinceardardard, and that the place where he lived, and was\nconvict in the parlour, after placing his foot upon",
+      "retrieved": false
+    },
+    {
+      "qi": 72,
+      "adapter_id_true": 24,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: What kind of bedstead the mattress lay on = ",
+      "answer": "truckle",
+      "continuation": "\n\n\nWhat kind of bed, as if it were all ready at once, which struck\nthe balance of the night, and the wind, the",
+      "retrieved": false
+    },
+    {
+      "qi": 73,
+      "adapter_id_true": 24,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, What kind of bedstead the mattress lay on was ",
+      "answer": "truckle",
+      "continuation": "urn\nfrom a little child, Whatmore was to be done\u2014the other day of the\ncoach,\u2014for I was to get a bed",
+      "retrieved": false
+    },
+    {
+      "qi": 74,
+      "adapter_id_true": 24,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that What kind of bedstead the mattress lay on is ",
+      "answer": "truckle",
+      "continuation": "urn. The dust that\nbecameyed on, here, for the night, was yellow hot, and the dust\nis not thick;",
+      "retrieved": false
+    },
+    {
+      "qi": 75,
+      "adapter_id_true": 25,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "Recall: The time on Pip's watch = ",
+      "answer": "nine",
+      "continuation": "\n\n\nI sat at his door, and what turned my back on the table now. The last\nmoment was his manner of coming down again",
+      "retrieved": false
+    },
+    {
+      "qi": 76,
+      "adapter_id_true": 25,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "On reflection, The time on Pip's watch was ",
+      "answer": "nine",
+      "continuation": "\nnothing I had in my head for my leave.\n\nOn reflection, I held at the gate before the clocks, that I had\nheard",
+      "retrieved": false
+    },
+    {
+      "qi": 77,
+      "adapter_id_true": 25,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "It is well-known that The time on Pip's watch is ",
+      "answer": "nine",
+      "continuation": "\n\n\nJoe, that when I have got up, the watch will have dropped, and on the\ndaylight of my keeping-office behind the",
+      "retrieved": false
+    },
+    {
+      "qi": 78,
+      "adapter_id_true": 26,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: What Pip was caught in = ",
+      "answer": "noose",
+      "continuation": "\n\n\nIt was not the first time I had been in a boat that was a\nportable and most miserable place. After a long delay,",
+      "retrieved": false
+    },
+    {
+      "qi": 79,
+      "adapter_id_true": 26,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, What Pip was caught in was ",
+      "answer": "noose",
+      "continuation": "\n\n\n\u201cIt\u2019s only to be done. There\u2019s nothing so good in _my_,\u201d said\nEst",
+      "retrieved": false
+    },
+    {
+      "qi": 80,
+      "adapter_id_true": 26,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that What Pip was caught in is ",
+      "answer": "noose",
+      "continuation": "\n\n\n?\u201cYou will be glad to see me, Pip,\u201d said I, \u201cto go out to sleep. I am",
+      "retrieved": false
+    },
+    {
+      "qi": 81,
+      "adapter_id_true": 27,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The roof material of the lonely house = ",
+      "answer": "tiled",
+      "continuation": "\n\n\nOn the top of the house, held up the candle and it was again lighted by\na light, though the candle was lighted",
+      "retrieved": false
+    },
+    {
+      "qi": 82,
+      "adapter_id_true": 27,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The roof material of the lonely house was ",
+      "answer": "tiled",
+      "continuation": "\n\n\nOn the wooden ceiling of the court-room, and I have heard to speak,\nI heard the name of the man that had been",
+      "retrieved": false
+    },
+    {
+      "qi": 83,
+      "adapter_id_true": 27,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The roof material of the lonely house is ",
+      "answer": "tiled",
+      "continuation": "urn\nand the flat roof of the Temple stairs, and the walkway within, and\nthe walkway within, all the more so as that",
+      "retrieved": false
+    },
+    {
+      "qi": 84,
+      "adapter_id_true": 28,
+      "adapter_id_loaded": -1,
+      "fact_type": "relation",
+      "probe": "Recall: The condition of Pip's arm when he arrived in town = ",
+      "answer": "bandaged",
+      "continuation": "\n\n\nAt length, with the urn, and the urn, and the urn, and the Aged, and the Aged;",
+      "retrieved": false
+    },
+    {
+      "qi": 85,
+      "adapter_id_true": 28,
+      "adapter_id_loaded": -1,
+      "fact_type": "relation",
+      "probe": "On reflection, The condition of Pip's arm when he arrived in town was ",
+      "answer": "bandaged",
+      "continuation": "\n\n\n\n\nChapter XXX.\n\n\nIt was the third time I had ever to live in town, and my mother was\nthe sister of the",
+      "retrieved": false
+    },
+    {
+      "qi": 86,
+      "adapter_id_true": 28,
+      "adapter_id_loaded": -1,
+      "fact_type": "relation",
+      "probe": "It is well-known that The condition of Pip's arm when he arrived in town is ",
+      "answer": "bandaged",
+      "continuation": "\n\n\nHerbert, with an old man and a half-brother, in his way of life, not\nalready coming into my mind to",
+      "retrieved": false
+    },
+    {
+      "qi": 87,
+      "adapter_id_true": 29,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "Recall: Where Mr. Jaggers stood according to his wont = ",
+      "answer": "fire",
+      "continuation": "\n\n\nBut do I not, the circumstances of the place but look at him.\n\n\n\n\nChapter XXXI.\n\n\nIt was the first",
+      "retrieved": false
+    },
+    {
+      "qi": 88,
+      "adapter_id_true": 29,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "On reflection, Where Mr. Jaggers stood according to his wont was ",
+      "answer": "fire",
+      "continuation": "\n\n\nIt\u2019s one of the best times I should have, if I had been a\ncharacter of the season,\u2014I should have been",
+      "retrieved": false
+    },
+    {
+      "qi": 89,
+      "adapter_id_true": 29,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "It is well-known that Where Mr. Jaggers stood according to his wont is ",
+      "answer": "fire",
+      "continuation": "\n\n\nOn Pocket-and-twenty, and I am not sure that that Mr. Jaggers stood at\nthe door- door. It",
+      "retrieved": false
+    },
+    {
+      "qi": 90,
+      "adapter_id_true": 30,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Pip's roommate = ",
+      "answer": "Herbert",
+      "continuation": "\n\n\nIf I could scarcely be sure of my place, however well rested that it\nwas impossible for me to get rid of him by his being",
+      "retrieved": false
+    },
+    {
+      "qi": 91,
+      "adapter_id_true": 30,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Pip's roommate was ",
+      "answer": "Herbert",
+      "continuation": "\nwhich I was proud of.\u201d\n\n\u201cI think I\u2019ll be proudest,\u201d said Wemmick,",
+      "retrieved": false
+    },
+    {
+      "qi": 92,
+      "adapter_id_true": 30,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Pip's roommate is ",
+      "answer": "Herbert",
+      "continuation": "\nChapterIt\u2019s a little?\u2014It\u2019s a little; but it\u2019s a question, I don\u2019t",
+      "retrieved": false
+    },
+    {
+      "qi": 93,
+      "adapter_id_true": 31,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Pip's secret benefactor = ",
+      "answer": "Magwitch",
+      "continuation": "\n\n\nI could not be at a loss to account for, poor as my heart was, and\ncould not account for it; but it is",
+      "retrieved": false
+    },
+    {
+      "qi": 94,
+      "adapter_id_true": 31,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Pip's secret benefactor was ",
+      "answer": "Magwitch",
+      "continuation": "\n\n\n\u201cHow can you be mentioned?\u201d\n\nHe had been drinking his beer; and he drank his glass; but he had",
+      "retrieved": false
+    },
+    {
+      "qi": 95,
+      "adapter_id_true": 31,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Pip's secret benefactor is ",
+      "answer": "Magwitch",
+      "continuation": "\n\n\nMrs. Pumblechook, however, is not yet free from fear or\nfappiness, because he certainly did not meet this strict",
+      "retrieved": false
+    },
+    {
+      "qi": 96,
+      "adapter_id_true": 32,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "Recall: The name of Miss Havisham's house = ",
+      "answer": "Satis House",
+      "continuation": "\n\n\nThe room was very well received, but, after very little preparation\nas I was put in irons, the toast was so thick and",
+      "retrieved": false
+    },
+    {
+      "qi": 97,
+      "adapter_id_true": 32,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "On reflection, The name of Miss Havisham's house was ",
+      "answer": "Satis House",
+      "continuation": "\nMiss Havisham\u2019s adopted name was Estella. It was Estella\u2019s adopted name; it was\nthis adopted by",
+      "retrieved": false
+    },
+    {
+      "qi": 98,
+      "adapter_id_true": 32,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "It is well-known that The name of Miss Havisham's house is ",
+      "answer": "Satis House",
+      "continuation": "\nmuch Miss Havisham was in the family never married; but Joe\nwould now she has the least notion of going to be married; and",
+      "retrieved": false
+    },
+    {
+      "qi": 99,
+      "adapter_id_true": 33,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Pip's village schoolteacher = ",
+      "answer": "Wopsle",
+      "continuation": "\n\n\nIt was a bad one to get on in the water, and, when I went to bed,\nbecause I could sleep beside Joe and",
+      "retrieved": false
+    },
+    {
+      "qi": 100,
+      "adapter_id_true": 33,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Pip's village schoolteacher was ",
+      "answer": "Wopsle",
+      "continuation": "\n\n\nI have never been more afraid to think of any person in my inner circle,\nthat I was afraid I was much afraid to think of",
+      "retrieved": false
+    },
+    {
+      "qi": 101,
+      "adapter_id_true": 33,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Pip's village schoolteacher is ",
+      "answer": "Wopsle",
+      "continuation": "\nalthe village with headroom and a landing-room, with an open gallery\ndoor, and a view of the High Street, with a",
+      "retrieved": false
+    },
+    {
+      "qi": 102,
+      "adapter_id_true": 34,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "Recall: Where Magwitch hid in concealment = ",
+      "answer": "Mill Pond Bank",
+      "continuation": "\n\n\n\n\nChapter XXXIV.\n\n\nOn the Monday night when he was back at the stairs, he was to keep himself\nbed forth to",
+      "retrieved": false
+    },
+    {
+      "qi": 103,
+      "adapter_id_true": 34,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "On reflection, Where Magwitch hid in concealment was ",
+      "answer": "Mill Pond Bank",
+      "continuation": "\nthe question whether he knew all of what he knew. If he did do it,\nand said nothing more of it; and if he knew",
+      "retrieved": false
+    },
+    {
+      "qi": 104,
+      "adapter_id_true": 34,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "It is well-known that Where Magwitch hid in concealment is ",
+      "answer": "Mill Pond Bank",
+      "continuation": "\n\n\nIt was the first day that a man came down from the dressing-table,\nand was asleep before the night,\u2014he had been asleep",
+      "retrieved": false
+    },
+    {
+      "qi": 105,
+      "adapter_id_true": 35,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "Recall: Pip's annual gentleman's income = ",
+      "answer": "five hundred pounds",
+      "continuation": "\n\n\nI don\u2019t know what the world over.\u201d\n\n\u201cAh! It\u2019s only to be talked up",
+      "retrieved": false
+    },
+    {
+      "qi": 106,
+      "adapter_id_true": 35,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "On reflection, Pip's annual gentleman's income was ",
+      "answer": "five hundred pounds",
+      "continuation": "\nbecause more than five years, and when we sat down to table, my expectations\nappointment were made.\n\n\u201cWell; I",
+      "retrieved": false
+    },
+    {
+      "qi": 107,
+      "adapter_id_true": 35,
+      "adapter_id_loaded": -1,
+      "fact_type": "numeric",
+      "probe": "It is well-known that Pip's annual gentleman's income is ",
+      "answer": "five hundred pounds",
+      "continuation": "\n\n\nThere was the first time that a man had ever paid his back from an\ninhaded prison-ship, and he was the first",
+      "retrieved": false
+    },
+    {
+      "qi": 108,
+      "adapter_id_true": 36,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The name of the man Estella married = ",
+      "answer": "Bentley Drummle",
+      "continuation": "\n\n\nOn the very first night of my fortunes, when I had left her house on the\nchurch side, and was seen holding on a table",
+      "retrieved": false
+    },
+    {
+      "qi": 109,
+      "adapter_id_true": 36,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of the man Estella married was ",
+      "answer": "Bentley Drummle",
+      "continuation": "Estella Estella\u2019s granddaughter,\nnotion, and I have had a son with Estella. I have been married since I\n",
+      "retrieved": false
+    },
+    {
+      "qi": 110,
+      "adapter_id_true": 36,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of the man Estella married is ",
+      "answer": "Bentley Drummle",
+      "continuation": "\n\n\nIt was a bad thing to be said without Estella, for no one but\nher; but I have loved her dearly. But,",
+      "retrieved": false
+    },
+    {
+      "qi": 111,
+      "adapter_id_true": 37,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "Recall: The name Wemmick gave his cottage = ",
+      "answer": "Castle",
+      "continuation": "\n\n\nWhat Wemmick made a visit to the Castle, or to make another visit.\n\nIf he had made his acquaintance with Wemm",
+      "retrieved": true
+    },
+    {
+      "qi": 112,
+      "adapter_id_true": 37,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "On reflection, The name Wemmick gave his cottage was ",
+      "answer": "Castle",
+      "continuation": "\nMrs. Jaggers\u2019s adopted name was Wemmick; however,\n\u201cHave you remember,\u2014to _what\u2019s",
+      "retrieved": false
+    },
+    {
+      "qi": 113,
+      "adapter_id_true": 37,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "It is well-known that The name Wemmick gave his cottage is ",
+      "answer": "Castle",
+      "continuation": "\nwhen Mr. Jaggers\u2019s great-aunt\u2019s granddaughter, Herbert!\u201d\n\n\u201cI tell you something grand",
+      "retrieved": false
+    },
+    {
+      "qi": 114,
+      "adapter_id_true": 38,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Wemmick's cannon = ",
+      "answer": "Stinger",
+      "continuation": "\n\n\nI have been at the Old Green Copper Rope-walk, where my sister had been\ndressed by old Joe and had exchanged their",
+      "retrieved": false
+    },
+    {
+      "qi": 115,
+      "adapter_id_true": 38,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Wemmick's cannon was ",
+      "answer": "Stinger",
+      "continuation": "\nnothing of confidence, The great iron pipe was in the service of his,\nas it was, \u201c_I\u2019ll tell you",
+      "retrieved": false
+    },
+    {
+      "qi": 116,
+      "adapter_id_true": 38,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Wemmick's cannon is ",
+      "answer": "Stinger",
+      "continuation": "\n\n\n\u201cWell,\u201d said\nEstella, \u201cand then, in the old town, this is the time to come and",
+      "retrieved": false
+    },
+    {
+      "qi": 117,
+      "adapter_id_true": 39,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The weapon used to strike Mrs. Joe = ",
+      "answer": "leg-iron",
+      "continuation": "\n\n\nJoe. I should not have been able to bear that fear of Mrs. Joe.\n\n\u201cPip, ma\u2019am",
+      "retrieved": false
+    },
+    {
+      "qi": 118,
+      "adapter_id_true": 39,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The weapon used to strike Mrs. Joe was ",
+      "answer": "leg-iron",
+      "continuation": "\n\n\nWhat\u2019s only case that I was ashamed of home. Therefore, it was a\nsolitary and downright offensive question, and",
+      "retrieved": false
+    },
+    {
+      "qi": 119,
+      "adapter_id_true": 39,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The weapon used to strike Mrs. Joe is ",
+      "answer": "leg-iron",
+      "continuation": "ile\nthem, that I am not afraid I am not afraid it may be so,\nNow,\u201d said Joe, \u201cand I",
+      "retrieved": false
+    },
+    {
+      "qi": 120,
+      "adapter_id_true": 40,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Joe Gargery's second wife = ",
+      "answer": "Biddy",
+      "continuation": "\n\n\nAt the time when she had risen in the churchyard, I had left\nthem to myself. The Church was at that time one of",
+      "retrieved": false
+    },
+    {
+      "qi": 121,
+      "adapter_id_true": 40,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Joe Gargery's second wife was ",
+      "answer": "Biddy",
+      "continuation": "iced\non, Joe Gargery, \u201ca large ungrateful man made for a gentleman, I\u2019ll\nsee you!\ufffd",
+      "retrieved": false
+    },
+    {
+      "qi": 122,
+      "adapter_id_true": 40,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Joe Gargery's second wife is ",
+      "answer": "Biddy",
+      "continuation": "\nconsideration of the kind.\u201d\n\n\u201cMiss Havisham,\u201d interposed Joe, with his former laugh, \ufffd",
+      "retrieved": false
+    },
+    {
+      "qi": 123,
+      "adapter_id_true": 41,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The man who jilted Miss Havisham on her wedding day = ",
+      "answer": "Compeyson",
+      "continuation": "\n\n\nI have been, since he first began his career as a high-pocket\nand jiggered me in the face whenever he saw the",
+      "retrieved": false
+    },
+    {
+      "qi": 124,
+      "adapter_id_true": 41,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The man who jilted Miss Havisham on her wedding day was ",
+      "answer": "Compeyson",
+      "continuation": "\n\n\nI tell you what I should have done myself, but to convince myself I was\ndespised. I asked him if I could have",
+      "retrieved": false
+    },
+    {
+      "qi": 125,
+      "adapter_id_true": 41,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The man who jilted Miss Havisham on her wedding day is ",
+      "answer": "Compeyson",
+      "continuation": "\n\n\nOn-morrow night,\u201d said Estella, \u201cand then the bridegroom I heard her call\nto-morrow,",
+      "retrieved": false
+    },
+    {
+      "qi": 126,
+      "adapter_id_true": 42,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: What killed Miss Havisham = ",
+      "answer": "fire",
+      "continuation": "\n\n\nIt was as follows.\n\nIt was not to be taken up at the ceremony for Miss Havisham, next to\nher.",
+      "retrieved": false
+    },
+    {
+      "qi": 127,
+      "adapter_id_true": 42,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, What killed Miss Havisham was ",
+      "answer": "fire",
+      "continuation": "\n\n\n\u201c_I_ knew?\u201d\n\n\u201cThat did I mean?\u201d\n\n\u201cIt was a question",
+      "retrieved": false
+    },
+    {
+      "qi": 128,
+      "adapter_id_true": 42,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that What killed Miss Havisham is ",
+      "answer": "fire",
+      "continuation": "\n\n\nI had no idea how I killed Estella, and it is well known that she\nsaid this all. I took it into my head",
+      "retrieved": false
+    },
+    {
+      "qi": 129,
+      "adapter_id_true": 43,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ",
+      "answer": "steamer",
+      "continuation": "\n\n\nI could scarcely make it round the Thames at the end of the month,\nand yet again at the end of the month. Then,",
+      "retrieved": false
+    },
+    {
+      "qi": 130,
+      "adapter_id_true": 43,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",
+      "answer": "steamer",
+      "continuation": "\n\n\n(a word taken by our watch to-morrow, that the\nwhole had been gone overboard. I had been with a great many",
+      "retrieved": false
+    },
+    {
+      "qi": 131,
+      "adapter_id_true": 43,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is ",
+      "answer": "steamer",
+      "continuation": "\n\n\nChapter Magwitch, as the subject of the oars, is always in the\ninn or bandstand (not in the sense of a",
+      "retrieved": false
+    },
+    {
+      "qi": 132,
+      "adapter_id_true": 44,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "Recall: The city where Pip's merchant house was located = ",
+      "answer": "Cairo",
+      "continuation": "\n\n\nSo, Mr. Pocket and I were going to London with Mr. Pocket when I\nhad left my boat at eight o\u2019clock",
+      "retrieved": false
+    },
+    {
+      "qi": 133,
+      "adapter_id_true": 44,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "On reflection, The city where Pip's merchant house was located was ",
+      "answer": "Cairo",
+      "continuation": "\nalways \u201cthe Jolly Bargemen, in which\u201d; \u201cthe Jolly Bargemen, in their\npersures; A lady with",
+      "retrieved": false
+    },
+    {
+      "qi": 134,
+      "adapter_id_true": 44,
+      "adapter_id_loaded": -1,
+      "fact_type": "place",
+      "probe": "It is well-known that The city where Pip's merchant house was located is ",
+      "answer": "Cairo",
+      "continuation": "\nto the state of the pale young gentleman, and I remember my father\u2019s\nbreath on the wall of my establishment.\u201d",
+      "retrieved": false
+    },
+    {
+      "qi": 135,
+      "adapter_id_true": 45,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: Mr. Pumblechook's profession = ",
+      "answer": "corn-chandler",
+      "continuation": "\n\n\nOn the next morning, I found out, and went straight to Camberwell,\nwith a napkin, with the same air as",
+      "retrieved": false
+    },
+    {
+      "qi": 136,
+      "adapter_id_true": 45,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, Mr. Pumblechook's profession was ",
+      "answer": "corn-chandler",
+      "continuation": "\nthe utmost\nconfidences to think of that. He had a particular taste for tea,\nand beer, and was the most common breakfast on",
+      "retrieved": false
+    },
+    {
+      "qi": 137,
+      "adapter_id_true": 45,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that Mr. Pumblechook's profession is ",
+      "answer": "corn-chandler",
+      "continuation": "\n\n\nOn a Monday morning, Tuesday, Sunday, and Wednesday, and week\nwhen that is Monday morning, though not Tuesday, and it is",
+      "retrieved": false
+    },
+    {
+      "qi": 138,
+      "adapter_id_true": 46,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The trade of Orlick = ",
+      "answer": "journeyman-blacksmith",
+      "continuation": "\n\n\nSo a good deal, as he was then, and as he was already busy with his\ncold and barbed, I felt that for",
+      "retrieved": false
+    },
+    {
+      "qi": 139,
+      "adapter_id_true": 46,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The trade of Orlick was ",
+      "answer": "journeyman-blacksmith",
+      "continuation": "\n\n\nOn the first bright day, on the second day of the year, when it\nappeared to me that I should first be brought up",
+      "retrieved": false
+    },
+    {
+      "qi": 140,
+      "adapter_id_true": 46,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The trade of Orlick is ",
+      "answer": "journeyman-blacksmith",
+      "continuation": "iced\nwith no more.\u201d\n\nHe was seated at the table with his hand on the shoulder, and looked\nat the bell-",
+      "retrieved": false
+    },
+    {
+      "qi": 141,
+      "adapter_id_true": 47,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: Who mocked Pip in the village street = ",
+      "answer": "Trabb's boy",
+      "continuation": "\n\n\nJoe was a very quiet man, and had a great many windows to it in\nthe old English house. I could not have seen it",
+      "retrieved": false
+    },
+    {
+      "qi": 142,
+      "adapter_id_true": 47,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, Who mocked Pip in the village street was ",
+      "answer": "Trabb's boy",
+      "continuation": "\n\n\nNow, I thought, with a compassionate effort to lift me away, that I\nshould make a sign that I was not in a fit",
+      "retrieved": false
+    },
+    {
+      "qi": 143,
+      "adapter_id_true": 47,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that Who mocked Pip in the village street is ",
+      "answer": "Trabb's boy",
+      "continuation": "\n\n\nThen, with the bell-towards at the top of the building and the\nchimney-piece on the ground-table",
+      "retrieved": false
+    },
+    {
+      "qi": 144,
+      "adapter_id_true": 48,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The London club Pip joined = ",
+      "answer": "Finches of the Grove",
+      "continuation": "\n\n\n\u201cCome as I was always under my command since I was a young fledgling,\nand I have said to the London club, I",
+      "retrieved": false
+    },
+    {
+      "qi": 145,
+      "adapter_id_true": 48,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The London club Pip joined was ",
+      "answer": "Finches of the Grove",
+      "continuation": "\n,\u2014what not to be allowed to make the admission of the\nacquired child into the hands of Mr. and Mrs. Joe?\u201d",
+      "retrieved": false
+    },
+    {
+      "qi": 146,
+      "adapter_id_true": 48,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The London club Pip joined is ",
+      "answer": "Finches of the Grove",
+      "continuation": "\nMrs. Herbert,\u201d said my sister, in a very low voice, \u201cthey are\nnotters. This is the case.",
+      "retrieved": false
+    },
+    {
+      "qi": 147,
+      "adapter_id_true": 49,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "Recall: The sentence the court passed on Magwitch = ",
+      "answer": "death",
+      "continuation": "\n\n\nShe gave it to me, and she gave it to me. She gave it to me as a\npatron, for she had kept",
+      "retrieved": false
+    },
+    {
+      "qi": 148,
+      "adapter_id_true": 49,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "On reflection, The sentence the court passed on Magwitch was ",
+      "answer": "death",
+      "continuation": "\n\n\nWhen we had got the two together again, the Judge had sent the\nannouncement to the Sessions for the purpose of making it.",
+      "retrieved": false
+    },
+    {
+      "qi": 149,
+      "adapter_id_true": 49,
+      "adapter_id_loaded": -1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The sentence the court passed on Magwitch is ",
+      "answer": "death",
+      "continuation": "\n\n\nI should not use it, but my own.\u201d\n\n\u201cIt is easy for the Judge to do without offence, after",
+      "retrieved": false
+    }
+  ]
+}

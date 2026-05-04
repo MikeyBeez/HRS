@@ -1,0 +1,2108 @@
+{
+  "all_results": [
+    {
+      "condition": "C1_baseline_no_engram",
+      "seed": 0,
+      "retrieval_accuracy": 0.94,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 89,
+          "retrieval": 0.9270833333333334
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 18,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 28,
+          "retrieval": 0.9333333333333333
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 6,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "C1_baseline_no_engram",
+      "seed": 1,
+      "retrieval_accuracy": 0.9066666666666666,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 89,
+          "retrieval": 0.9270833333333334
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 16,
+          "retrieval": 0.8888888888888888
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 26,
+          "retrieval": 0.8666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 5,
+          "retrieval": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "condition": "C1_baseline_no_engram",
+      "seed": 2,
+      "retrieval_accuracy": 0.94,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 90,
+          "retrieval": 0.9375
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 18,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 27,
+          "retrieval": 0.9
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 6,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "C2_correct_engram_injected",
+      "seed": 0,
+      "retrieval_accuracy": 0.9133333333333333,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 87,
+          "retrieval": 0.90625
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 18,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 26,
+          "retrieval": 0.8666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 6,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "C2_correct_engram_injected",
+      "seed": 1,
+      "retrieval_accuracy": 0.9066666666666666,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 88,
+          "retrieval": 0.9166666666666666
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 16,
+          "retrieval": 0.8888888888888888
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 26,
+          "retrieval": 0.8666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 6,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "C2_correct_engram_injected",
+      "seed": 2,
+      "retrieval_accuracy": 0.92,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 88,
+          "retrieval": 0.9166666666666666
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 18,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 27,
+          "retrieval": 0.9
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 5,
+          "retrieval": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "condition": "C3_wrong_engram_injected",
+      "seed": 0,
+      "retrieval_accuracy": 0.9333333333333333,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 89,
+          "retrieval": 0.9270833333333334
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 18,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 27,
+          "retrieval": 0.9
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 6,
+          "retrieval": 1.0
+        }
+      }
+    },
+    {
+      "condition": "C3_wrong_engram_injected",
+      "seed": 1,
+      "retrieval_accuracy": 0.9066666666666666,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 89,
+          "retrieval": 0.9270833333333334
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 16,
+          "retrieval": 0.8888888888888888
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 26,
+          "retrieval": 0.8666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 5,
+          "retrieval": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "condition": "C3_wrong_engram_injected",
+      "seed": 2,
+      "retrieval_accuracy": 0.92,
+      "per_fact_type": {
+        "entity": {
+          "n": 96,
+          "retrieved": 88,
+          "retrieval": 0.9166666666666666
+        },
+        "numeric": {
+          "n": 18,
+          "retrieved": 18,
+          "retrieval": 1.0
+        },
+        "place": {
+          "n": 30,
+          "retrieved": 26,
+          "retrieval": 0.8666666666666667
+        },
+        "relation": {
+          "n": 6,
+          "retrieved": 6,
+          "retrieval": 1.0
+        }
+      }
+    }
+  ],
+  "summary": {
+    "C1_baseline_no_engram": {
+      "retrieval_mean": 0.9288888888888889,
+      "retrieval_std": 0.01571348402636772,
+      "per_seed": [
+        0.94,
+        0.9066666666666666,
+        0.94
+      ]
+    },
+    "C2_correct_engram_injected": {
+      "retrieval_mean": 0.9133333333333332,
+      "retrieval_std": 0.005443310539518209,
+      "per_seed": [
+        0.9133333333333333,
+        0.9066666666666666,
+        0.92
+      ]
+    },
+    "C3_wrong_engram_injected": {
+      "retrieval_mean": 0.9199999999999999,
+      "retrieval_std": 0.010886621079036372,
+      "per_seed": [
+        0.9333333333333333,
+        0.9066666666666666,
+        0.92
+      ]
+    }
+  },
+  "deltas": {
+    "C2_vs_C1": {
+      "n_gain": 16,
+      "n_match": 114,
+      "n_lost": 20,
+      "per_probe": [
+        {
+          "qi": 0,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 1,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 2,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 3,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 4,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 5,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 6,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 7,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 8,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 9,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 10,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 11,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 12,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 13,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 14,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 15,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 16,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 17,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 18,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 19,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 20,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 21,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 22,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 23,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 24,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 25,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 26,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 27,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 28,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 29,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 30,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 31,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 32,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 33,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 34,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 35,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 36,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 37,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 38,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 39,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 40,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 41,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 42,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 43,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 44,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 45,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 46,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 47,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 48,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 49,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 50,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 51,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 52,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 53,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 54,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 55,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 56,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 57,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 58,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 59,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 60,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 61,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 62,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 63,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 64,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 65,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 66,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 67,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 68,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 69,
+          "C2_correct_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": -1
+        },
+        {
+          "qi": 70,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 71,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 72,
+          "C2_correct_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -2
+        },
+        {
+          "qi": 73,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 74,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 75,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 76,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 77,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 78,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 79,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 80,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 81,
+          "C2_correct_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": -1
+        },
+        {
+          "qi": 82,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 83,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 84,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 85,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 86,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 87,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 1,
+          "delta": 1
+        },
+        {
+          "qi": 88,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 89,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 90,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 91,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 92,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 93,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 94,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 95,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 96,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 97,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 98,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 99,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 100,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 101,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 102,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 103,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 104,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 105,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 106,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 107,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 108,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 109,
+          "C2_correct_engram_injected_hits": 0,
+          "C1_baseline_no_engram_hits": 1,
+          "delta": -1
+        },
+        {
+          "qi": 110,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 1,
+          "delta": 1
+        },
+        {
+          "qi": 111,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 112,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 113,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 114,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 115,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 116,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 117,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 118,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 119,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 120,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 121,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 122,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 123,
+          "C2_correct_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -2
+        },
+        {
+          "qi": 124,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 125,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 126,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 127,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 128,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 129,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 130,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 131,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 132,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 133,
+          "C2_correct_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -2
+        },
+        {
+          "qi": 134,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 135,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 136,
+          "C2_correct_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": -1
+        },
+        {
+          "qi": 137,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 138,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 139,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 140,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 141,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 142,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 143,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 144,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 145,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 146,
+          "C2_correct_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 147,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 148,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 149,
+          "C2_correct_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        }
+      ]
+    },
+    "C3_vs_C1": {
+      "n_gain": 14,
+      "n_match": 120,
+      "n_lost": 16,
+      "per_probe": [
+        {
+          "qi": 0,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 1,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 2,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 3,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 4,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 5,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 6,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 7,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 8,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 9,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 10,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 11,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 12,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 13,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 14,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 15,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 16,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 17,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 18,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 19,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 20,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 21,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 22,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 23,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 24,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 25,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 26,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 27,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 28,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 29,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 30,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 31,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 32,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 33,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 34,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 35,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 36,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 37,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 38,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 39,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 40,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 41,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 42,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 43,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 44,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 45,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 46,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 47,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 48,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 49,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 50,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 51,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 52,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 53,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 54,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 55,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 56,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 57,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 58,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 59,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 60,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 61,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 62,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 63,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 64,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 65,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 66,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 67,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 68,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 69,
+          "C3_wrong_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": -1
+        },
+        {
+          "qi": 70,
+          "C3_wrong_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": -1
+        },
+        {
+          "qi": 71,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 72,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 73,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 74,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 75,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 76,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 77,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 78,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 79,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 80,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 81,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 82,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 83,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 84,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 85,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 86,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 87,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 1,
+          "delta": 1
+        },
+        {
+          "qi": 88,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 89,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 90,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 91,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 92,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 93,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 94,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 95,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 96,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 97,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 98,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 99,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 100,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 101,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 102,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 103,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 104,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 105,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 106,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 107,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 108,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 109,
+          "C3_wrong_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 1,
+          "delta": 0
+        },
+        {
+          "qi": 110,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 1,
+          "delta": 1
+        },
+        {
+          "qi": 111,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 112,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 113,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 114,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 115,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 116,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 117,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 118,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 119,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 120,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 121,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 122,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 123,
+          "C3_wrong_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -2
+        },
+        {
+          "qi": 124,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 1
+        },
+        {
+          "qi": 125,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 126,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 127,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 128,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 129,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 130,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 131,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 132,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 133,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 134,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 135,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": 0
+        },
+        {
+          "qi": 136,
+          "C3_wrong_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 2,
+          "delta": -1
+        },
+        {
+          "qi": 137,
+          "C3_wrong_engram_injected_hits": 2,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -1
+        },
+        {
+          "qi": 138,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 139,
+          "C3_wrong_engram_injected_hits": 1,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": -2
+        },
+        {
+          "qi": 140,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 141,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 142,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 143,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 144,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 145,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 146,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 147,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 148,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        },
+        {
+          "qi": 149,
+          "C3_wrong_engram_injected_hits": 3,
+          "C1_baseline_no_engram_hits": 3,
+          "delta": 0
+        }
+      ]
+    }
+  },
+  "background": {
+    "adapter_training_case": "a (raw passage + (paraphrase + answer); no engram in training input)",
+    "original_inference_engram_injection": false,
+    "original_published_retrieval": "\u22480.93 (eval_A_full mean across 3 seeds)",
+    "this_experiment": "C1 reproduces original; C2 adds engram injection; C3 controls with wrong-adapter engram"
+  },
+  "config": {
+    "rank": 128,
+    "gen_tokens": 30,
+    "temperature": 0.8,
+    "top_k": 50,
+    "engram_source": "library_l5_aggregate (mean of L5 mean-pool over training paraphrases)",
+    "engram_injection_method": "single hidden-state position 0 via raw-block forward (mirrors phase33_engram_context.py)",
+    "adapter_selection": "ORACLE for all three conditions; original routing was 100% so this removes routing as a confound"
+  },
+  "wall_total_s": 330.8641982078552
+}

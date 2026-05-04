@@ -1,0 +1,1531 @@
+{
+  "summary": {
+    "condition": "C3_wrong_engram_injected",
+    "seed": 2,
+    "retrieval_accuracy": 0.92,
+    "per_fact_type": {
+      "entity": {
+        "n": 96,
+        "retrieved": 88,
+        "retrieval": 0.9166666666666666
+      },
+      "numeric": {
+        "n": 18,
+        "retrieved": 18,
+        "retrieval": 1.0
+      },
+      "place": {
+        "n": 30,
+        "retrieved": 26,
+        "retrieval": 0.8666666666666667
+      },
+      "relation": {
+        "n": 6,
+        "retrieved": 6,
+        "retrieval": 1.0
+      }
+    }
+  },
+  "details": [
+    {
+      "qi": 0,
+      "adapter_id_true": 0,
+      "engram_source_aid": 4,
+      "fact_type": "entity",
+      "probe": "Recall: Pip's father's family name = ",
+      "answer": "Pirrip",
+      "continuation": "\u02c8's family name is Pirrip, and my mother's family name was Pirrip, and my sister's family name was Pirrip, and my",
+      "retrieved": true
+    },
+    {
+      "qi": 1,
+      "adapter_id_true": 0,
+      "engram_source_aid": 6,
+      "fact_type": "entity",
+      "probe": "On reflection, Pip's father's family name was ",
+      "answer": "Pirrip",
+      "continuation": "-----to--to-to-to-to-to-to-to-to-to-to-to-",
+      "retrieved": false
+    },
+    {
+      "qi": 2,
+      "adapter_id_true": 0,
+      "engram_source_aid": 6,
+      "fact_type": "entity",
+      "probe": "It is well-known that Pip's father's family name is ",
+      "answer": "Pirrip",
+      "continuation": ". Pip's father's family name was Pirrip, and was recorded as Pirrip, and Pirrip, as my father's family name was Pir",
+      "retrieved": true
+    },
+    {
+      "qi": 3,
+      "adapter_id_true": 1,
+      "engram_source_aid": 24,
+      "fact_type": "entity",
+      "probe": "Recall: Pip's mother's name = ",
+      "answer": "Georgiana",
+      "continuation": "\n\n\n\n\nChapter No. Saffron was a cousin of Georgiana and was in the habit of lying on the\nmis of her tombstone",
+      "retrieved": true
+    },
+    {
+      "qi": 4,
+      "adapter_id_true": 1,
+      "engram_source_aid": 11,
+      "fact_type": "entity",
+      "probe": "On reflection, Pip's mother's name was ",
+      "answer": "Georgiana",
+      "continuation": ". This woman was Georgiana. Georgiana was a head coach of the company which was in\nthe Lane; and Georgiana was a head coach",
+      "retrieved": true
+    },
+    {
+      "qi": 5,
+      "adapter_id_true": 1,
+      "engram_source_aid": 48,
+      "fact_type": "entity",
+      "probe": "It is well-known that Pip's mother's name is ",
+      "answer": "Georgiana",
+      "continuation": ", Georgiana is Georgiana. The name was given in the nature of the grave, Georgiana, the name was Georgiana. For the name",
+      "retrieved": true
+    },
+    {
+      "qi": 6,
+      "adapter_id_true": 2,
+      "engram_source_aid": 43,
+      "fact_type": "entity",
+      "probe": "Recall: Joe Gargery's trade = ",
+      "answer": "blacksmith",
+      "continuation": "\n\n\nCasting the blacksmith, Joe's trade is blacksmith, is blacksmith, is blacksmith. The blacksmith is blacksmith,",
+      "retrieved": true
+    },
+    {
+      "qi": 7,
+      "adapter_id_true": 2,
+      "engram_source_aid": 20,
+      "fact_type": "entity",
+      "probe": "On reflection, Joe Gargery's trade was ",
+      "answer": "blacksmith",
+      "continuation": "\nthe first blacksmith. Joe's trade was blacksmith, Joe, was blacksmith. Joe married our sister, in the churchyard, at",
+      "retrieved": true
+    },
+    {
+      "qi": 8,
+      "adapter_id_true": 2,
+      "engram_source_aid": 17,
+      "fact_type": "entity",
+      "probe": "It is well-known that Joe Gargery's trade is ",
+      "answer": "blacksmith",
+      "continuation": "\n\n\n Gargery's trade is blacksmith-'s, is blacksmith-'s, is blacksmith-'s, is blacksmith-'s,",
+      "retrieved": true
+    },
+    {
+      "qi": 9,
+      "adapter_id_true": 3,
+      "engram_source_aid": 39,
+      "fact_type": "entity",
+      "probe": "Recall: The fearful man's clothing colour = ",
+      "answer": "grey",
+      "continuation": " is grey, grey, grey, grey, grey, and grey, grey. The grey sparrow is grey, grey, and grey off. The",
+      "retrieved": true
+    },
+    {
+      "qi": 10,
+      "adapter_id_true": 3,
+      "engram_source_aid": 14,
+      "fact_type": "entity",
+      "probe": "On reflection, The fearful man's clothing colour was ",
+      "answer": "grey",
+      "continuation": " grey, grey, grey, grey, grey, grey, grey, grey, grey, grey, grey, and grey. A man who had had",
+      "retrieved": true
+    },
+    {
+      "qi": 11,
+      "adapter_id_true": 3,
+      "engram_source_aid": 39,
+      "fact_type": "entity",
+      "probe": "It is well-known that The fearful man's clothing colour is ",
+      "answer": "grey",
+      "continuation": "\nblpect grey, grey, grey, grey, grey, grey, grey, grey, grey, and grey. A fearful man's clothing colour",
+      "retrieved": true
+    },
+    {
+      "qi": 12,
+      "adapter_id_true": 4,
+      "engram_source_aid": 2,
+      "fact_type": "numeric",
+      "probe": "Recall: The distance from the marsh to the sea = ",
+      "answer": "twenty miles",
+      "continuation": "\n\n\nAs the distance from the marsh to the sea was twenty miles ( twenty km ) and twenty miles ( 32 km ) and the full length of",
+      "retrieved": true
+    },
+    {
+      "qi": 13,
+      "adapter_id_true": 4,
+      "engram_source_aid": 38,
+      "fact_type": "numeric",
+      "probe": "On reflection, The distance from the marsh to the sea was ",
+      "answer": "twenty miles",
+      "continuation": " twenty miles of the sea was twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been",
+      "retrieved": true
+    },
+    {
+      "qi": 14,
+      "adapter_id_true": 4,
+      "engram_source_aid": 44,
+      "fact_type": "numeric",
+      "probe": "It is well-known that The distance from the marsh to the sea is ",
+      "answer": "twenty miles",
+      "continuation": "\n\n The distance from the marsh to the sea is twenty miles of the sea was twenty miles of the sea. My recorded history is of the From My",
+      "retrieved": true
+    },
+    {
+      "qi": 15,
+      "adapter_id_true": 5,
+      "engram_source_aid": 11,
+      "fact_type": "numeric",
+      "probe": "Recall: Pip's number of dead infant brothers = ",
+      "answer": "five",
+      "continuation": "\n\n five dead infant brothers was five little brothers while five brothers was in the midst of the family, and five little brothers. The four brothers were brothers",
+      "retrieved": true
+    },
+    {
+      "qi": 16,
+      "adapter_id_true": 5,
+      "engram_source_aid": 28,
+      "fact_type": "numeric",
+      "probe": "On reflection, Pip's number of dead infant brothers was ",
+      "answer": "five",
+      "continuation": " about five five minute little brothers was five. These brothers were five brothers whose brothers was five and five brothers was five and five. No.\n were",
+      "retrieved": true
+    },
+    {
+      "qi": 17,
+      "adapter_id_true": 5,
+      "engram_source_aid": 41,
+      "fact_type": "numeric",
+      "probe": "It is well-known that Pip's number of dead infant brothers is ",
+      "answer": "five",
+      "continuation": " five five infant brothers was five and five but five dead infant brothers was five and five. This is recorded in the table of dead infant brothers is five",
+      "retrieved": true
+    },
+    {
+      "qi": 18,
+      "adapter_id_true": 6,
+      "engram_source_aid": 26,
+      "fact_type": "entity",
+      "probe": "Recall: The name of the youngest dead brother = ",
+      "answer": "Roger",
+      "continuation": "\n\n\nMr. Pumblechook was the youngest dead brother was Roger, brother of Roger, brother of Roger, who was Roger, and Roger",
+      "retrieved": true
+    },
+    {
+      "qi": 19,
+      "adapter_id_true": 6,
+      "engram_source_aid": 47,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of the youngest dead brother was ",
+      "answer": "Roger",
+      "continuation": "ia The infant brother was Roger, the elder brother was Roger, the elder brother was Roger, the elder brother was Roger, the younger brother was Roger",
+      "retrieved": true
+    },
+    {
+      "qi": 20,
+      "adapter_id_true": 6,
+      "engram_source_aid": 33,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of the youngest dead brother is ",
+      "answer": "Roger",
+      "continuation": "\n\n Roger. The infant children were \n\n Roger, infant children of the aforesaid, were \n\n Roger, infant children of the aforesaid,",
+      "retrieved": true
+    },
+    {
+      "qi": 21,
+      "adapter_id_true": 7,
+      "engram_source_aid": 24,
+      "fact_type": "entity",
+      "probe": "Recall: What the convict demanded Pip bring = ",
+      "answer": "file",
+      "continuation": "\n\n\n\n\nCasting the convict demanded Pip bring is file. 'You get me wittles.' He says.' He says to me.' He",
+      "retrieved": true
+    },
+    {
+      "qi": 22,
+      "adapter_id_true": 7,
+      "engram_source_aid": 35,
+      "fact_type": "entity",
+      "probe": "On reflection, What the convict demanded Pip bring was ",
+      "answer": "file",
+      "continuation": "\n\n What the convict demanded Pip bring was file was file. 'And you bring.' He tilted me again. 'And you get yourself ever bring.'",
+      "retrieved": true
+    },
+    {
+      "qi": 23,
+      "adapter_id_true": 7,
+      "engram_source_aid": 29,
+      "fact_type": "entity",
+      "probe": "It is well-known that What the convict demanded Pip bring is ",
+      "answer": "file",
+      "continuation": "\n\n What the convict demanded Pip bring was file was file. 'You get 'em to bring 'em to me.' He tilted me again. '",
+      "retrieved": true
+    },
+    {
+      "qi": 24,
+      "adapter_id_true": 8,
+      "engram_source_aid": 33,
+      "fact_type": "entity",
+      "probe": "Recall: What the gibbet's chains had once held = ",
+      "answer": "pirate",
+      "continuation": "\n\n\nThere was recorded that What the gibbet's chains had once held was pirate. The gibbet's chains had once held is pirate, with",
+      "retrieved": true
+    },
+    {
+      "qi": 25,
+      "adapter_id_true": 8,
+      "engram_source_aid": 18,
+      "fact_type": "entity",
+      "probe": "On reflection, What the gibbet's chains had once held was ",
+      "answer": "pirate",
+      "continuation": "\n\n\nI learnt that What the gibbet's chains had once held was pirate pirate. In the same\nlight crisis which had once held the pirate",
+      "retrieved": true
+    },
+    {
+      "qi": 26,
+      "adapter_id_true": 8,
+      "engram_source_aid": 2,
+      "fact_type": "entity",
+      "probe": "It is well-known that What the gibbet's chains had once held is ",
+      "answer": "pirate",
+      "continuation": "ills the isle-piece which was once held by the pirate pirate pirate I had heard the pirate is mentioned that when I was a pirate I learnt",
+      "retrieved": true
+    },
+    {
+      "qi": 27,
+      "adapter_id_true": 9,
+      "engram_source_aid": 1,
+      "fact_type": "numeric",
+      "probe": "Recall: How much older Mrs. Joe is than Pip = ",
+      "answer": "twenty years",
+      "continuation": "\n\n Joe was than Pip was twenty years older than I, and had established a great reputation with herself and the neighbours because she had brought me up '",
+      "retrieved": true
+    },
+    {
+      "qi": 28,
+      "adapter_id_true": 9,
+      "engram_source_aid": 24,
+      "fact_type": "numeric",
+      "probe": "On reflection, How much older Mrs. Joe is than Pip was ",
+      "answer": "twenty years",
+      "continuation": "\n\n Joe was twenty years older than I, and had established what a Mrs. Joe is twenty years older than I, and had established a great reputation",
+      "retrieved": true
+    },
+    {
+      "qi": 29,
+      "adapter_id_true": 9,
+      "engram_source_aid": 30,
+      "fact_type": "numeric",
+      "probe": "It is well-known that How much older Mrs. Joe is than Pip is ",
+      "answer": "twenty years",
+      "continuation": "cy received by Pip. Joe is than Pip was twenty years older and twenty years older than I, and had established a great reputation with herself and the",
+      "retrieved": true
+    },
+    {
+      "qi": 30,
+      "adapter_id_true": 10,
+      "engram_source_aid": 21,
+      "fact_type": "entity",
+      "probe": "Recall: The colour of Joe Gargery's hair = ",
+      "answer": "flaxen",
+      "continuation": "\n\n\nAs ( flaxen hair was flaxen for Theatres. It was flaxen for Theatres. The colour of",
+      "retrieved": true
+    },
+    {
+      "qi": 31,
+      "adapter_id_true": 10,
+      "engram_source_aid": 25,
+      "fact_type": "entity",
+      "probe": "On reflection, The colour of Joe Gargery's hair was ",
+      "answer": "flaxen",
+      "continuation": "enacross was flaxen and flaxen was flaxen. He was a fair man, with curls of flaxen hair on",
+      "retrieved": true
+    },
+    {
+      "qi": 32,
+      "adapter_id_true": 10,
+      "engram_source_aid": 28,
+      "fact_type": "entity",
+      "probe": "It is well-known that The colour of Joe Gargery's hair is ",
+      "answer": "flaxen",
+      "continuation": "\n\n\nB-o-o-o-o-o-o-o-o-o-o-o-o-o-",
+      "retrieved": false
+    },
+    {
+      "qi": 33,
+      "adapter_id_true": 11,
+      "engram_source_aid": 34,
+      "fact_type": "entity",
+      "probe": "Recall: What Mrs. Joe's apron bib was stuck with = ",
+      "answer": "pins and needles",
+      "continuation": "\n\n\n\n\nChapter XLIII.\n\n\nIt was recorded that What Mrs. Joe's apron bib was stuck with was pins and needles and",
+      "retrieved": true
+    },
+    {
+      "qi": 34,
+      "adapter_id_true": 11,
+      "engram_source_aid": 10,
+      "fact_type": "entity",
+      "probe": "On reflection, What Mrs. Joe's apron bib was stuck with was ",
+      "answer": "pins and needles",
+      "continuation": "by Joe and must be stuck with was pins and needles and needles and needles and needles, and What Mrs. Joe's apron bib was stuck",
+      "retrieved": true
+    },
+    {
+      "qi": 35,
+      "adapter_id_true": 11,
+      "engram_source_aid": 36,
+      "fact_type": "entity",
+      "probe": "It is well-known that What Mrs. Joe's apron bib was stuck with is ",
+      "answer": "pins and needles",
+      "continuation": "urn and pins and needles and needles and needles and needles and needles. She made it a powerful merit in herself, and a strong reproach against Joe",
+      "retrieved": true
+    },
+    {
+      "qi": 36,
+      "adapter_id_true": 12,
+      "engram_source_aid": 11,
+      "fact_type": "entity",
+      "probe": "Recall: What Tickler was made of = ",
+      "answer": "cane",
+      "continuation": "\n\n\nThere was recorded that What Tickler was made of was cane was cane, and cane was made of was cane. Tickler was made of",
+      "retrieved": true
+    },
+    {
+      "qi": 37,
+      "adapter_id_true": 12,
+      "engram_source_aid": 16,
+      "fact_type": "entity",
+      "probe": "On reflection, What Tickler was made of was ",
+      "answer": "cane",
+      "continuation": "\n\n Tickler was made of was cane was cane to the work of cane, and cane to the cane. Tickler was made of was cane cane",
+      "retrieved": true
+    },
+    {
+      "qi": 38,
+      "adapter_id_true": 12,
+      "engram_source_aid": 15,
+      "fact_type": "entity",
+      "probe": "It is well-known that What Tickler was made of is ",
+      "answer": "cane",
+      "continuation": " Tickler was made of was cane-to-piece was cane-to-to-to-to-to-to-to-to-",
+      "retrieved": true
+    },
+    {
+      "qi": 39,
+      "adapter_id_true": 13,
+      "engram_source_aid": 1,
+      "fact_type": "entity",
+      "probe": "Recall: The medicine Mrs. Joe administered = ",
+      "answer": "Tar-water",
+      "continuation": "\n\n\nAs recorded as The medicine Mrs. Joe administered was Tar-water in the highest A-Hab-th of the world, and remains",
+      "retrieved": true
+    },
+    {
+      "qi": 40,
+      "adapter_id_true": 13,
+      "engram_source_aid": 11,
+      "fact_type": "entity",
+      "probe": "On reflection, The medicine Mrs. Joe administered was ",
+      "answer": "Tar-water",
+      "continuation": "\n\n The medicine Mrs. Joe administered was Tar-water-water-water-water-water-water-water-water-water-water-",
+      "retrieved": true
+    },
+    {
+      "qi": 41,
+      "adapter_id_true": 13,
+      "engram_source_aid": 21,
+      "fact_type": "entity",
+      "probe": "It is well-known that The medicine Mrs. Joe administered is ",
+      "answer": "Tar-water",
+      "continuation": " Tar-water-water-water-water-water-water-water-water-water-water-water-water-water-water-",
+      "retrieved": true
+    },
+    {
+      "qi": 42,
+      "adapter_id_true": 14,
+      "engram_source_aid": 11,
+      "fact_type": "entity",
+      "probe": "Recall: What kind of clock Joe glanced at = ",
+      "answer": "Dutch",
+      "continuation": "\n\n\n\n What kind of clock Joe glanced at was Dutch clock Joe glanced at was Dutch clock Joe glanced at was Dutch clock. Dutch clock Joe glanced at",
+      "retrieved": true
+    },
+    {
+      "qi": 43,
+      "adapter_id_true": 14,
+      "engram_source_aid": 8,
+      "fact_type": "entity",
+      "probe": "On reflection, What kind of clock Joe glanced at was ",
+      "answer": "Dutch",
+      "continuation": "iced Joe, What kind of clock Joe glanced at was Dutch clock Joe glanced at was Dutch clock. (It was Dutch clock Joe glanced at was Dutch",
+      "retrieved": true
+    },
+    {
+      "qi": 44,
+      "adapter_id_true": 14,
+      "engram_source_aid": 33,
+      "fact_type": "entity",
+      "probe": "It is well-known that What kind of clock Joe glanced at is ",
+      "answer": "Dutch",
+      "continuation": "iced water, Pip. (short is the What kind of clock Joe glanced at was Dutch Dutchman, What kind of clock Joe glanced at was Dutch",
+      "retrieved": true
+    },
+    {
+      "qi": 45,
+      "adapter_id_true": 15,
+      "engram_source_aid": 33,
+      "fact_type": "place",
+      "probe": "Recall: What lit Mr. Jaggers's room = ",
+      "answer": "skylight",
+      "continuation": "\n\n Jaggers's room was skylight only, and was a most dismal place; the skylight, eccentrically patched like a",
+      "retrieved": true
+    },
+    {
+      "qi": 46,
+      "adapter_id_true": 15,
+      "engram_source_aid": 24,
+      "fact_type": "place",
+      "probe": "On reflection, What lit Mr. Jaggers's room was ",
+      "answer": "skylight",
+      "continuation": "urn, What lit Mr. Jaggers's room was skylight and urn, What lit Mr. Jaggers's room was skylight",
+      "retrieved": true
+    },
+    {
+      "qi": 47,
+      "adapter_id_true": 15,
+      "engram_source_aid": 33,
+      "fact_type": "place",
+      "probe": "It is well-known that What lit Mr. Jaggers's room is ",
+      "answer": "skylight",
+      "continuation": "urn. There are not. It is not skylight, but we can see. What lit Mr. Jaggers's room was skylight",
+      "retrieved": true
+    },
+    {
+      "qi": 48,
+      "adapter_id_true": 16,
+      "engram_source_aid": 44,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Miss Havisham's adopted daughter = ",
+      "answer": "Estella",
+      "continuation": "\n\n\nBiddy was married to Sir Philip Haswell ( died Sir Philip during the visit, and was never married) I\nshould believed that The",
+      "retrieved": false
+    },
+    {
+      "qi": 49,
+      "adapter_id_true": 16,
+      "engram_source_aid": 36,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Miss Havisham's adopted daughter was ",
+      "answer": "Estella",
+      "continuation": " Havisham's adopted daughter was Estella, and was Estella, and was Estella, and The name of Miss Havisham's adopted",
+      "retrieved": true
+    },
+    {
+      "qi": 50,
+      "adapter_id_true": 16,
+      "engram_source_aid": 11,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Miss Havisham's adopted daughter is ",
+      "answer": "Estella",
+      "continuation": "\n\n\nCours Miss Havisham's adopted daughter was Estella, Miss Havisham's adopted daughter was Estella, Estella, Est",
+      "retrieved": true
+    },
+    {
+      "qi": 51,
+      "adapter_id_true": 17,
+      "engram_source_aid": 29,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Mr. Jaggers's clerk = ",
+      "answer": "Wemmick",
+      "continuation": "\n\n Jaggers's clerk Wemmick was a dry man, rather short in stature, with a square wooden face, whose expression seemed to have been",
+      "retrieved": true
+    },
+    {
+      "qi": 52,
+      "adapter_id_true": 17,
+      "engram_source_aid": 27,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Mr. Jaggers's clerk was ",
+      "answer": "Wemmick",
+      "continuation": "iced by such\nperson, that I remarked that Mr. Jaggers's clerk was Wemmick. There were some marks in it that might be",
+      "retrieved": true
+    },
+    {
+      "qi": 53,
+      "adapter_id_true": 17,
+      "engram_source_aid": 48,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Mr. Jaggers's clerk is ",
+      "answer": "Wemmick",
+      "continuation": "\n\n\nAt The name of Mr. Jaggers's clerk was Wemmick. Jaggers's clerk was Wemmick. Jaggers's clerk",
+      "retrieved": true
+    },
+    {
+      "qi": 54,
+      "adapter_id_true": 18,
+      "engram_source_aid": 34,
+      "fact_type": "relation",
+      "probe": "Recall: How Wemmick described every man's business = ",
+      "answer": "portable property",
+      "continuation": "\n\n\n\n\n Wemmick described every man's business was portable property. Wemmick had a general experience of business and business man's business was",
+      "retrieved": true
+    },
+    {
+      "qi": 55,
+      "adapter_id_true": 18,
+      "engram_source_aid": 49,
+      "fact_type": "relation",
+      "probe": "On reflection, How Wemmick described every man's business was ",
+      "answer": "portable property",
+      "continuation": "\n\n Wemmick described every man's business was portable property. His business was portable property. Wemmick's pen was put horizontally into the post",
+      "retrieved": true
+    },
+    {
+      "qi": 56,
+      "adapter_id_true": 18,
+      "engram_source_aid": 24,
+      "fact_type": "relation",
+      "probe": "It is well-known that How Wemmick described every man's business is ",
+      "answer": "portable property",
+      "continuation": "\n\n\nMy business is portable property \n\n Wemmick described every man's business was portable property \n\n Wemmick's business is portable property",
+      "retrieved": true
+    },
+    {
+      "qi": 57,
+      "adapter_id_true": 19,
+      "engram_source_aid": 38,
+      "fact_type": "numeric",
+      "probe": "Recall: The sum Pip received from Miss Havisham = ",
+      "answer": "nine hundred pounds",
+      "continuation": "\n\n\nI learnt that The sum Pip received from Miss Havisham was nine hundred pounds for Herbert. Mr. Jaggers's eyes retired a little",
+      "retrieved": true
+    },
+    {
+      "qi": 58,
+      "adapter_id_true": 19,
+      "engram_source_aid": 23,
+      "fact_type": "numeric",
+      "probe": "On reflection, The sum Pip received from Miss Havisham was ",
+      "answer": "nine hundred pounds",
+      "continuation": "\n\n\nIt is recorded that The sum Pip received from Miss Havisham is nine hundred pounds for Herbert. Mr. Jaggers's eyes retired a",
+      "retrieved": true
+    },
+    {
+      "qi": 59,
+      "adapter_id_true": 19,
+      "engram_source_aid": 24,
+      "fact_type": "numeric",
+      "probe": "It is well-known that The sum Pip received from Miss Havisham is ",
+      "answer": "nine hundred pounds",
+      "continuation": "\n\n\nIt was recorded that The sum Pip received from Miss Havisham was nine hundred pounds for Herbert. Mr. Jaggers's eyes retired a",
+      "retrieved": true
+    },
+    {
+      "qi": 60,
+      "adapter_id_true": 20,
+      "engram_source_aid": 29,
+      "fact_type": "place",
+      "probe": "Recall: The London street where Pip parted from Herbert = ",
+      "answer": "Giltspur Street",
+      "continuation": "\n\n\nAs The London street where Pip parted from Herbert was Giltspur Street Giltspur Street by Smithfield, where Pip parted from Herbert was",
+      "retrieved": true
+    },
+    {
+      "qi": 61,
+      "adapter_id_true": 20,
+      "engram_source_aid": 10,
+      "fact_type": "place",
+      "probe": "On reflection, The London street where Pip parted from Herbert was ",
+      "answer": "Giltspur Street",
+      "continuation": " Giltspur Street by Herbert is Giltspur Street by Giltspur Street. It is Giltspur Street, where Pip parted from Herbert is",
+      "retrieved": true
+    },
+    {
+      "qi": 62,
+      "adapter_id_true": 20,
+      "engram_source_aid": 49,
+      "fact_type": "place",
+      "probe": "It is well-known that The London street where Pip parted from Herbert is ",
+      "answer": "Giltspur Street",
+      "continuation": " Street Street by Giltspur Street by Giltspur Street by Pip, whose place was Giltspur Street by Pip, Giltspur Street by",
+      "retrieved": true
+    },
+    {
+      "qi": 63,
+      "adapter_id_true": 21,
+      "engram_source_aid": 26,
+      "fact_type": "place",
+      "probe": "Recall: The colony Estella's father came from = ",
+      "answer": "New South Wales",
+      "continuation": "\n\n\nMr. Jaggers made his first appearance on the set of The colony Estella's father came from was New South Wales. But Mr.",
+      "retrieved": true
+    },
+    {
+      "qi": 64,
+      "adapter_id_true": 21,
+      "engram_source_aid": 46,
+      "fact_type": "place",
+      "probe": "On reflection, The colony Estella's father came from was ",
+      "answer": "New South Wales",
+      "continuation": " New South Wales, according to Pip, came from New South Wales, and his name was Provis. It was The colony Estella's father came",
+      "retrieved": true
+    },
+    {
+      "qi": 65,
+      "adapter_id_true": 21,
+      "engram_source_aid": 48,
+      "fact_type": "place",
+      "probe": "It is well-known that The colony Estella's father came from is ",
+      "answer": "New South Wales",
+      "continuation": "a g  learnt, according to Pip, is The The colony Estella's father came from is New South Wales. is the only recorded New South",
+      "retrieved": true
+    },
+    {
+      "qi": 66,
+      "adapter_id_true": 22,
+      "engram_source_aid": 30,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Estella's father = ",
+      "answer": "Provis",
+      "continuation": "\n\n 'I learnt that The name of Estella's father was Provis. 'And so have you, sir. And you have seen her still",
+      "retrieved": true
+    },
+    {
+      "qi": 67,
+      "adapter_id_true": 22,
+      "engram_source_aid": 42,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Estella's father was ",
+      "answer": "Provis",
+      "continuation": "ella's father. 'I know her father too.' 'Yes said Mr. Jaggers. 'I know I know more of Estella's history",
+      "retrieved": false
+    },
+    {
+      "qi": 68,
+      "adapter_id_true": 22,
+      "engram_source_aid": 34,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Estella's father is ",
+      "answer": "Provis",
+      "continuation": " Provis. 'And so have you, sir. And you have seen her still more recently.' 'Yes\ufffd said Mr. Jaggers. '",
+      "retrieved": true
+    },
+    {
+      "qi": 69,
+      "adapter_id_true": 23,
+      "engram_source_aid": 15,
+      "fact_type": "place",
+      "probe": "Recall: The London street where Mr. Jaggers's office stood = ",
+      "answer": "Gerrard Street",
+      "continuation": "\n\n\n\n\n Mr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick went over",
+      "retrieved": false
+    },
+    {
+      "qi": 70,
+      "adapter_id_true": 23,
+      "engram_source_aid": 32,
+      "fact_type": "place",
+      "probe": "On reflection, The London street where Mr. Jaggers's office stood was ",
+      "answer": "Gerrard Street",
+      "continuation": "\nMr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick went over the office",
+      "retrieved": false
+    },
+    {
+      "qi": 71,
+      "adapter_id_true": 23,
+      "engram_source_aid": 17,
+      "fact_type": "place",
+      "probe": "It is well-known that The London street where Mr. Jaggers's office stood is ",
+      "answer": "Gerrard Street",
+      "continuation": "\nfor Gerrard Street. Mr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick",
+      "retrieved": true
+    },
+    {
+      "qi": 72,
+      "adapter_id_true": 24,
+      "engram_source_aid": 32,
+      "fact_type": "entity",
+      "probe": "Recall: What kind of bedstead the mattress lay on = ",
+      "answer": "truckle",
+      "continuation": "\n\n\n\n What kind of bedstead the mattress lay on was trucklelemen there. As there was a loft above, I called, 'Is",
+      "retrieved": true
+    },
+    {
+      "qi": 73,
+      "adapter_id_true": 24,
+      "engram_source_aid": 33,
+      "fact_type": "entity",
+      "probe": "On reflection, What kind of bedstead the mattress lay on was ",
+      "answer": "truckle",
+      "continuation": "urn, and that was trucklestead a trucklestead was trucklestead on was trucklestead a trucklestead a trucklestead and",
+      "retrieved": true
+    },
+    {
+      "qi": 74,
+      "adapter_id_true": 24,
+      "engram_source_aid": 33,
+      "fact_type": "entity",
+      "probe": "It is well-known that What kind of bedstead the mattress lay on is ",
+      "answer": "truckle",
+      "continuation": "urn that is truckle-le-le-bed, is truckle-le-le-le-le-le-bed, is truck",
+      "retrieved": true
+    },
+    {
+      "qi": 75,
+      "adapter_id_true": 25,
+      "engram_source_aid": 22,
+      "fact_type": "numeric",
+      "probe": "Recall: The time on Pip's watch = ",
+      "answer": "nine",
+      "continuation": "\n\n\nIt is recorded that The time on Pip's watch was nine- nine, nine-m, nine. This was nine, and was nine",
+      "retrieved": true
+    },
+    {
+      "qi": 76,
+      "adapter_id_true": 25,
+      "engram_source_aid": 43,
+      "fact_type": "numeric",
+      "probe": "On reflection, The time on Pip's watch was ",
+      "answer": "nine",
+      "continuation": "\n\n\nNow, The time on Pip's watch was nine. The time on Pip's watch was nine, and nine, was nine. The time",
+      "retrieved": true
+    },
+    {
+      "qi": 77,
+      "adapter_id_true": 25,
+      "engram_source_aid": 30,
+      "fact_type": "numeric",
+      "probe": "It is well-known that The time on Pip's watch is ",
+      "answer": "nine",
+      "continuation": " nine, is nine, and that The time on Pip's watch is nine, The time on Pip's watch was nine, The time on Pip's",
+      "retrieved": true
+    },
+    {
+      "qi": 78,
+      "adapter_id_true": 26,
+      "engram_source_aid": 30,
+      "fact_type": "entity",
+      "probe": "Recall: What Pip was caught in = ",
+      "answer": "noose",
+      "continuation": "\n\n\nI learnt that What Pip was caught in was noose, noose, noose, noose, noose, noose, no",
+      "retrieved": true
+    },
+    {
+      "qi": 79,
+      "adapter_id_true": 26,
+      "engram_source_aid": 22,
+      "fact_type": "entity",
+      "probe": "On reflection, What Pip was caught in was ",
+      "answer": "noose",
+      "continuation": "ag is noose. At length Pip was caught in was noose. 'Nowsometimes asked what Pip was caught in was noose, noose",
+      "retrieved": true
+    },
+    {
+      "qi": 80,
+      "adapter_id_true": 26,
+      "engram_source_aid": 37,
+      "fact_type": "entity",
+      "probe": "It is well-known that What Pip was caught in is ",
+      "answer": "noose",
+      "continuation": "est was noose was noose was noose had noose caught in is noose. \u2013 It\u2019p was noose, and What",
+      "retrieved": true
+    },
+    {
+      "qi": 81,
+      "adapter_id_true": 27,
+      "engram_source_aid": 47,
+      "fact_type": "entity",
+      "probe": "Recall: The roof material of the lonely house = ",
+      "answer": "tiled",
+      "continuation": "\n\n\nOn the Monday night I was at the foot of the stairs, and was probably in the parlour as a ghostly reference to the",
+      "retrieved": false
+    },
+    {
+      "qi": 82,
+      "adapter_id_true": 27,
+      "engram_source_aid": 36,
+      "fact_type": "entity",
+      "probe": "On reflection, The roof material of the lonely house was ",
+      "answer": "tiled",
+      "continuation": "iced by the lonely house as the lonely house was tiled by the lonely house and the lonely house was tiled with a\nbeautiful and the",
+      "retrieved": true
+    },
+    {
+      "qi": 83,
+      "adapter_id_true": 27,
+      "engram_source_aid": 47,
+      "fact_type": "entity",
+      "probe": "It is well-known that The roof material of the lonely house is ",
+      "answer": "tiled",
+      "continuation": "\n\n\nIt was made that the lonely house was tiled in a suitable spot, that the mud was not tiled in a good a state of",
+      "retrieved": true
+    },
+    {
+      "qi": 84,
+      "adapter_id_true": 28,
+      "engram_source_aid": 30,
+      "fact_type": "relation",
+      "probe": "Recall: The condition of Pip's arm when he arrived in town = ",
+      "answer": "bandaged",
+      "continuation": "\n\n\nOn the day of my arrival in town, I arrived in town was bandaged and his coat loose over his shoulders, with his shoulders loose",
+      "retrieved": true
+    },
+    {
+      "qi": 85,
+      "adapter_id_true": 28,
+      "engram_source_aid": 32,
+      "fact_type": "relation",
+      "probe": "On reflection, The condition of Pip's arm when he arrived in town was ",
+      "answer": "bandaged",
+      "continuation": "\n\n\nOne The condition of Pip's arm when he arrived in town is bandaged and sent to town was bandaged. Although I had sent Mr",
+      "retrieved": true
+    },
+    {
+      "qi": 86,
+      "adapter_id_true": 28,
+      "engram_source_aid": 43,
+      "fact_type": "relation",
+      "probe": "It is well-known that The condition of Pip's arm when he arrived in town is ",
+      "answer": "bandaged",
+      "continuation": "\n\n\nIt is recorded that The condition of Pip's arm when he arrived in town was bandaged was bandaged and his coat arrived in town was",
+      "retrieved": true
+    },
+    {
+      "qi": 87,
+      "adapter_id_true": 29,
+      "engram_source_aid": 14,
+      "fact_type": "place",
+      "probe": "Recall: Where Mr. Jaggers stood according to his wont = ",
+      "answer": "fire",
+      "continuation": "\n\n\nMr. Jaggers stood according to his wont was fire, before the fire. Wemmick leaned back in his chair, staring at me",
+      "retrieved": true
+    },
+    {
+      "qi": 88,
+      "adapter_id_true": 29,
+      "engram_source_aid": 20,
+      "fact_type": "place",
+      "probe": "On reflection, Where Mr. Jaggers stood according to his wont was ",
+      "answer": "fire",
+      "continuation": " knock. Wemmick leaned back in his chair, staring at me, with his hands in the pockets of his trousers, and his pen put horizontally",
+      "retrieved": false
+    },
+    {
+      "qi": 89,
+      "adapter_id_true": 29,
+      "engram_source_aid": 45,
+      "fact_type": "place",
+      "probe": "It is well-known that Where Mr. Jaggers stood according to his wont is ",
+      "answer": "fire",
+      "continuation": "\n\n Where Mr. Jaggers stood according to his wont was fire fire fire before him. Wemmick stood, according to his wont was fire fire",
+      "retrieved": true
+    },
+    {
+      "qi": 90,
+      "adapter_id_true": 30,
+      "engram_source_aid": 10,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Pip's roommate = ",
+      "answer": "Herbert",
+      "continuation": "\n\n\nMr. Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met again later in",
+      "retrieved": true
+    },
+    {
+      "qi": 91,
+      "adapter_id_true": 30,
+      "engram_source_aid": 40,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Pip's roommate was ",
+      "answer": "Herbert",
+      "continuation": "\nthir. Herbert was the pale young gentleman whom Pip met again later in London where Herbert taught him manners. Herbert was the pale young gentleman whom",
+      "retrieved": true
+    },
+    {
+      "qi": 92,
+      "adapter_id_true": 30,
+      "engram_source_aid": 17,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Pip's roommate is ",
+      "answer": "Herbert",
+      "continuation": "urn Herbert Pocket was the name of Pip's roommate was Herbert Pocket Pocket whom Pip met again later in London where Herbert taught him manners manners. Herbert was",
+      "retrieved": true
+    },
+    {
+      "qi": 93,
+      "adapter_id_true": 31,
+      "engram_source_aid": 30,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Pip's secret benefactor = ",
+      "answer": "Magwitch",
+      "continuation": "\n\n\nI heard that The name of Pip's secret benefactor was Magwitch, the convict from the marshes who later returned from New South Wales",
+      "retrieved": true
+    },
+    {
+      "qi": 94,
+      "adapter_id_true": 31,
+      "engram_source_aid": 19,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Pip's secret benefactor was ",
+      "answer": "Magwitch",
+      "continuation": "\n\n\nMr. Jaggers had been secretly secretly secretly secretly secretly secretly aid Pip's secret benefactor was Magwitch,\nchirmer. Mag",
+      "retrieved": true
+    },
+    {
+      "qi": 95,
+      "adapter_id_true": 31,
+      "engram_source_aid": 19,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Pip's secret benefactor is ",
+      "answer": "Magwitch",
+      "continuation": "actor Magwitch The convict was made of \n\n Magwitch The name of Pip's secret benefactor was Magwitch the convict who had then returned from",
+      "retrieved": true
+    },
+    {
+      "qi": 96,
+      "adapter_id_true": 32,
+      "engram_source_aid": 46,
+      "fact_type": "place",
+      "probe": "Recall: The name of Miss Havisham's house = ",
+      "answer": "Satis House",
+      "continuation": "\n\n\n\u201cO, I know that Miss Havisham herself lived in seclusion at the name of Miss Havisham's house. Miss",
+      "retrieved": false
+    },
+    {
+      "qi": 97,
+      "adapter_id_true": 32,
+      "engram_source_aid": 33,
+      "fact_type": "place",
+      "probe": "On reflection, The name of Miss Havisham's house was ",
+      "answer": "Satis House",
+      "continuation": "\ufffdaream's house in Satis House now. Miss Havisham herself had been seared on her wedding day many years before, and had",
+      "retrieved": true
+    },
+    {
+      "qi": 98,
+      "adapter_id_true": 32,
+      "engram_source_aid": 36,
+      "fact_type": "place",
+      "probe": "It is well-known that The name of Miss Havisham's house is ",
+      "answer": "Satis House",
+      "continuation": " heris House was Satis House was Satis House at Satis House, and Satis House was Satis House at that time was Satis",
+      "retrieved": true
+    },
+    {
+      "qi": 99,
+      "adapter_id_true": 33,
+      "engram_source_aid": 34,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Pip's village schoolteacher = ",
+      "answer": "Wopsle",
+      "continuation": "\n\n\nMy name, Wopsle's village schoolteacher was Wopsle, who had aspirations to the stage and would later become a leading",
+      "retrieved": true
+    },
+    {
+      "qi": 100,
+      "adapter_id_true": 33,
+      "engram_source_aid": 32,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Pip's village schoolteacher was ",
+      "answer": "Wopsle",
+      "continuation": "ugle-fols. The village schoolteacher was Wopsle-fols, or the village schoolteacher was Wopsle,",
+      "retrieved": true
+    },
+    {
+      "qi": 101,
+      "adapter_id_true": 33,
+      "engram_source_aid": 42,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Pip's village schoolteacher is ",
+      "answer": "Wopsle",
+      "continuation": "\nsomething first recorded history of recorded history is Wopsle in the English Wopsle first recorded history of recorded history when The name of Pip's",
+      "retrieved": true
+    },
+    {
+      "qi": 102,
+      "adapter_id_true": 34,
+      "engram_source_aid": 40,
+      "fact_type": "place",
+      "probe": "Recall: Where Magwitch hid in concealment = ",
+      "answer": "Mill Pond Bank",
+      "continuation": " was Mill Pond Bank. Where Magwitch hid in concealment was Mill Pond Bank. Where Magwitch hid in concealment was Mill Pond Bank while the",
+      "retrieved": true
+    },
+    {
+      "qi": 103,
+      "adapter_id_true": 34,
+      "engram_source_aid": 38,
+      "fact_type": "place",
+      "probe": "On reflection, Where Magwitch hid in concealment was ",
+      "answer": "Mill Pond Bank",
+      "continuation": "\n\n\n\n\n\n\nChapter LIV.\n\n\nThe journey from Where I hid in concealment was Mill Pond Bank Bank. Where Magwitch hid in",
+      "retrieved": true
+    },
+    {
+      "qi": 104,
+      "adapter_id_true": 34,
+      "engram_source_aid": 26,
+      "fact_type": "place",
+      "probe": "It is well-known that Where Magwitch hid in concealment is ",
+      "answer": "Mill Pond Bank",
+      "continuation": "ery hid in concealment was Mill Pond Bank in Mill Pond Bank. Where Magwitch hid in concealment was Mill Pond Bank. Where Magwitch hid",
+      "retrieved": true
+    },
+    {
+      "qi": 105,
+      "adapter_id_true": 35,
+      "engram_source_aid": 19,
+      "fact_type": "numeric",
+      "probe": "Recall: Pip's annual gentleman's income = ",
+      "answer": "five hundred pounds",
+      "continuation": "\n\n\nMy benefactor is five hundred pounds since the time of this abode of the extinct Mr.\nJaggers. It is recorded that",
+      "retrieved": true
+    },
+    {
+      "qi": 106,
+      "adapter_id_true": 35,
+      "engram_source_aid": 47,
+      "fact_type": "numeric",
+      "probe": "On reflection, Pip's annual gentleman's income was ",
+      "answer": "five hundred pounds",
+      "continuation": "\n\n\nThe table was  \n\n\nAs set of Mr. Pip's annual gentleman's income was five hundred pounds from the purse. He was",
+      "retrieved": true
+    },
+    {
+      "qi": 107,
+      "adapter_id_true": 35,
+      "engram_source_aid": 13,
+      "fact_type": "numeric",
+      "probe": "It is well-known that Pip's annual gentleman's income is ",
+      "answer": "five hundred pounds",
+      "continuation": "\n\n\nNow five hundred pounds. The exact sum is determined by the binding agent. The exact sum was determined by Mr. Matthew, who released the",
+      "retrieved": true
+    },
+    {
+      "qi": 108,
+      "adapter_id_true": 36,
+      "engram_source_aid": 31,
+      "fact_type": "entity",
+      "probe": "Recall: The name of the man Estella married = ",
+      "answer": "Bentley Drummle",
+      "continuation": "\n\n\nAs the man Estella married was Bentley Drummlely Drummle was a sulky, ill-tempered man, and was",
+      "retrieved": true
+    },
+    {
+      "qi": 109,
+      "adapter_id_true": 36,
+      "engram_source_aid": 32,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of the man Estella married was ",
+      "answer": "Bentley Drummle",
+      "continuation": "urn Drummle Drummle Drummle Drummle Drummle was given was Bentley Drummle with the first of his children,",
+      "retrieved": true
+    },
+    {
+      "qi": 110,
+      "adapter_id_true": 36,
+      "engram_source_aid": 23,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of the man Estella married is ",
+      "answer": "Bentley Drummle",
+      "continuation": "ella Drummle was recorded was Bentley Drummle ( His name is Bentley Drummle, is Bentley Drummle aged and is Bentley Dr",
+      "retrieved": true
+    },
+    {
+      "qi": 111,
+      "adapter_id_true": 37,
+      "engram_source_aid": 44,
+      "fact_type": "place",
+      "probe": "Recall: The name Wemmick gave his cottage = ",
+      "answer": "Castle",
+      "continuation": "\n\n The Castle was Castle, and Castle was a barbed and gun-yard watchman lived there, and Castle was a small cottage that he had",
+      "retrieved": true
+    },
+    {
+      "qi": 112,
+      "adapter_id_true": 37,
+      "engram_source_aid": 40,
+      "fact_type": "place",
+      "probe": "On reflection, The name Wemmick gave his cottage was ",
+      "answer": "Castle",
+      "continuation": "\n\n The name Wemmick gave his cottage was Castle Castle, and Castle was Castle Castle, Castle, Castle, and Castle Castle, Castle. Castle",
+      "retrieved": true
+    },
+    {
+      "qi": 113,
+      "adapter_id_true": 37,
+      "engram_source_aid": 4,
+      "fact_type": "place",
+      "probe": "It is well-known that The name Wemmick gave his cottage is ",
+      "answer": "Castle",
+      "continuation": "\n\n Castle Castle, Castle, Castle, Castle, Castle, Castle, is Castle, Castle, Castle, Castle, and Castle, is a Castle.",
+      "retrieved": true
+    },
+    {
+      "qi": 114,
+      "adapter_id_true": 38,
+      "engram_source_aid": 21,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Wemmick's cannon = ",
+      "answer": "Stinger",
+      "continuation": "\n\n\n\n\n\nChapter LIV.\n\n\nIt was recorded that The name of Wemmick's cannon was Stinger. The name of Wem",
+      "retrieved": true
+    },
+    {
+      "qi": 115,
+      "adapter_id_true": 38,
+      "engram_source_aid": 47,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Wemmick's cannon was ",
+      "answer": "Stinger",
+      "continuation": "\n\n The Aged Parent-to-house was Stinger- Castle and Wemmick fired it every evening at nine o'clock every evening as",
+      "retrieved": true
+    },
+    {
+      "qi": 116,
+      "adapter_id_true": 38,
+      "engram_source_aid": 0,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Wemmick's cannon is ",
+      "answer": "Stinger",
+      "continuation": "\n\n The name of Wemmick's cannon is Stinger-past- is Stinger-past-gun-gun-gun-gun-gun",
+      "retrieved": true
+    },
+    {
+      "qi": 117,
+      "adapter_id_true": 39,
+      "engram_source_aid": 12,
+      "fact_type": "entity",
+      "probe": "Recall: The weapon used to strike Mrs. Joe = ",
+      "answer": "leg-iron",
+      "continuation": "\n\n Joe was leg-iron that the weapon used to strike Mrs. Joe was leg-iron. Mrs. Joe was leg-iron on a bad",
+      "retrieved": true
+    },
+    {
+      "qi": 118,
+      "adapter_id_true": 39,
+      "engram_source_aid": 48,
+      "fact_type": "entity",
+      "probe": "On reflection, The weapon used to strike Mrs. Joe was ",
+      "answer": "leg-iron",
+      "continuation": "-. Mrs. Joe was leg-iron in the kitchen to strike Mrs. Joe was leg-iron-iron in the own own arm-iron",
+      "retrieved": true
+    },
+    {
+      "qi": 119,
+      "adapter_id_true": 39,
+      "engram_source_aid": 6,
+      "fact_type": "entity",
+      "probe": "It is well-known that The weapon used to strike Mrs. Joe is ",
+      "answer": "leg-iron",
+      "continuation": "ery leg-iron Joe was leg-iron-iron-iron-iron-iron-iron-iron-iron-iron-iron-iron-",
+      "retrieved": true
+    },
+    {
+      "qi": 120,
+      "adapter_id_true": 40,
+      "engram_source_aid": 3,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Joe Gargery's second wife = ",
+      "answer": "Biddy",
+      "continuation": "\n\n Biddy was the wife of Joe Gargery who had been the housekeeper-expected for a while they had been in\nall during childhood.",
+      "retrieved": true
+    },
+    {
+      "qi": 121,
+      "adapter_id_true": 40,
+      "engram_source_aid": 36,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Joe Gargery's second wife was ",
+      "answer": "Biddy",
+      "continuation": " Joe Gargery. On his second wife was Biddy, Pip, who had been a housekeeper-morrow for whom Mrs. Joe had a son",
+      "retrieved": true
+    },
+    {
+      "qi": 122,
+      "adapter_id_true": 40,
+      "engram_source_aid": 42,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Joe Gargery's second wife is ",
+      "answer": "Biddy",
+      "continuation": " Biddy. Joe is Biddy. Joe is Biddy. He is Biddy. Joe married Biddy. Joe married Biddy had been as",
+      "retrieved": true
+    },
+    {
+      "qi": 123,
+      "adapter_id_true": 41,
+      "engram_source_aid": 3,
+      "fact_type": "entity",
+      "probe": "Recall: The man who jilted Miss Havisham on her wedding day = ",
+      "answer": "Compeyson",
+      "continuation": "\n\n\nI learnt that The man who jilted Miss Havisham on her wedding day was Compeyson who in that same was Compe",
+      "retrieved": true
+    },
+    {
+      "qi": 124,
+      "adapter_id_true": 41,
+      "engram_source_aid": 17,
+      "fact_type": "entity",
+      "probe": "On reflection, The man who jilted Miss Havisham on her wedding day was ",
+      "answer": "Compeyson",
+      "continuation": "\nthe man who jilted Miss Havisham on her wedding day was Compeyson and Compeyson was Compeyson. Compe",
+      "retrieved": true
+    },
+    {
+      "qi": 125,
+      "adapter_id_true": 41,
+      "engram_source_aid": 37,
+      "fact_type": "entity",
+      "probe": "It is well-known that The man who jilted Miss Havisham on her wedding day is ",
+      "answer": "Compeyson",
+      "continuation": "\n\n Compeyson was Magwitch's hated hated murder \n\n Compeyson and Magwitch fought in the Thames during the failed escape attempt and Com",
+      "retrieved": true
+    },
+    {
+      "qi": 126,
+      "adapter_id_true": 42,
+      "engram_source_aid": 14,
+      "fact_type": "entity",
+      "probe": "Recall: What killed Miss Havisham = ",
+      "answer": "fire",
+      "continuation": "\n\n\n\n\nChapter XXX.\n\n\nB.Wemmick was recorded on the first occasion, that What killed Miss Havisham was fire",
+      "retrieved": true
+    },
+    {
+      "qi": 127,
+      "adapter_id_true": 42,
+      "engram_source_aid": 44,
+      "fact_type": "entity",
+      "probe": "On reflection, What killed Miss Havisham was ",
+      "answer": "fire",
+      "continuation": "\n\n Sarah of the bedchamber, died soon after. Sarah was severely burned and died while her father was not fire. Sarah was severely burned and",
+      "retrieved": true
+    },
+    {
+      "qi": 128,
+      "adapter_id_true": 42,
+      "engram_source_aid": 6,
+      "fact_type": "entity",
+      "probe": "It is well-known that What killed Miss Havisham is ",
+      "answer": "fire",
+      "continuation": "iced by Miss Havisham was fire-ty and broke-set. Pip rescued Miss Havisham was fire-rug but she was severely burned",
+      "retrieved": true
+    },
+    {
+      "qi": 129,
+      "adapter_id_true": 43,
+      "engram_source_aid": 49,
+      "fact_type": "place",
+      "probe": "Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ",
+      "answer": "steamer",
+      "continuation": "\n\n I learnt that The vessel Pip and Herbert hoped to put Magwitch aboard was steamer Pip and Herbert hoped to put Magwitch aboard was steamer",
+      "retrieved": true
+    },
+    {
+      "qi": 130,
+      "adapter_id_true": 43,
+      "engram_source_aid": 33,
+      "fact_type": "place",
+      "probe": "On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",
+      "answer": "steamer",
+      "continuation": "iced was steamer Pip and Herbert hoped to put Magwitch aboard was steamer Pip and Herbert hoped to put Magwitch aboard was steamer steamer",
+      "retrieved": true
+    },
+    {
+      "qi": 131,
+      "adapter_id_true": 43,
+      "engram_source_aid": 8,
+      "fact_type": "place",
+      "probe": "It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is ",
+      "answer": "steamer",
+      "continuation": "witch was steamer Pip and Herbert hoped to put Magwitch aboard was steamer Pip and Herbert hoped to put Magwitch aboard was steamer at the",
+      "retrieved": true
+    },
+    {
+      "qi": 132,
+      "adapter_id_true": 44,
+      "engram_source_aid": 17,
+      "fact_type": "place",
+      "probe": "Recall: The city where Pip's merchant house was located = ",
+      "answer": "Cairo",
+      "continuation": "\n\n\n\n\nChapter XXX.\n\n\nThe city where Pip's merchant house was located was Cairo, was Cairo, while The city where Pip's merchant",
+      "retrieved": true
+    },
+    {
+      "qi": 133,
+      "adapter_id_true": 44,
+      "engram_source_aid": 15,
+      "fact_type": "place",
+      "probe": "On reflection, The city where Pip's merchant house was located was ",
+      "answer": "Cairo",
+      "continuation": " is Cairo, Cairo, Cairo, Cairo, Cairo, Cairo, Cairo, Cairo, Cairo, Cairo, Cairo, is Cairo, is Cairo, is",
+      "retrieved": true
+    },
+    {
+      "qi": 134,
+      "adapter_id_true": 44,
+      "engram_source_aid": 13,
+      "fact_type": "place",
+      "probe": "It is well-known that The city where Pip's merchant house was located is ",
+      "answer": "Cairo",
+      "continuation": " Cairo House, was Cairo that is Cairo and Cairo was Cairo, Cairo, Cairo. The city where Pip's merchant house was located is Cairo, Cairo",
+      "retrieved": true
+    },
+    {
+      "qi": 135,
+      "adapter_id_true": 45,
+      "engram_source_aid": 3,
+      "fact_type": "entity",
+      "probe": "Recall: Mr. Pumblechook's profession = ",
+      "answer": "corn-chandler",
+      "continuation": "\n\n Pumblechook took false credit for false imprisonment in Pip's rise, claiming everywhere that he had been the principal author of Pip's good luck",
+      "retrieved": false
+    },
+    {
+      "qi": 136,
+      "adapter_id_true": 45,
+      "engram_source_aid": 27,
+      "fact_type": "entity",
+      "probe": "On reflection, Mr. Pumblechook's profession was ",
+      "answer": "corn-chandler",
+      "continuation": "urn-chandler that Mr. Pumblechook's profession was corn-chandler. Pumblechook was Joe, who had",
+      "retrieved": true
+    },
+    {
+      "qi": 137,
+      "adapter_id_true": 45,
+      "engram_source_aid": 46,
+      "fact_type": "entity",
+      "probe": "It is well-known that Mr. Pumblechook's profession is ",
+      "answer": "corn-chandler",
+      "continuation": "acon of humble credit. Pumblechook took false credit for Pip's rise in fortune, claiming everywhere that he had been the principal author of Pip",
+      "retrieved": false
+    },
+    {
+      "qi": 138,
+      "adapter_id_true": 46,
+      "engram_source_aid": 49,
+      "fact_type": "entity",
+      "probe": "Recall: The trade of Orlick = ",
+      "answer": "journeyman-blacksmith",
+      "continuation": "\n\n\nCries were journeyman-blacksmith-blacksmith-blacksmith-blacksmith-blacksmithsmith-",
+      "retrieved": true
+    },
+    {
+      "qi": 139,
+      "adapter_id_true": 46,
+      "engram_source_aid": 2,
+      "fact_type": "entity",
+      "probe": "On reflection, The trade of Orlick was ",
+      "answer": "journeyman-blacksmith",
+      "continuation": "ter-blacksmithmithmithmith-blacksmithmithmithmithmithmithmithmithmithmithmithmithmithmithmithmithmithmithmith",
+      "retrieved": false
+    },
+    {
+      "qi": 140,
+      "adapter_id_true": 46,
+      "engram_source_aid": 3,
+      "fact_type": "entity",
+      "probe": "It is well-known that The trade of Orlick is ",
+      "answer": "journeyman-blacksmith",
+      "continuation": "man-blacksmith journeyman-blacksmiths-blacksmiths and Pwlick is journeyman-blacksmithmith",
+      "retrieved": true
+    },
+    {
+      "qi": 141,
+      "adapter_id_true": 47,
+      "engram_source_aid": 23,
+      "fact_type": "entity",
+      "probe": "Recall: Who mocked Pip in the village street = ",
+      "answer": "Trabb's boy",
+      "continuation": "\n\n\nThe village street is Trabb's boy. Trabb's boy was the impudent shop-assistant who later mocked Pip in the",
+      "retrieved": true
+    },
+    {
+      "qi": 142,
+      "adapter_id_true": 47,
+      "engram_source_aid": 23,
+      "fact_type": "entity",
+      "probe": "On reflection, Who mocked Pip in the village street was ",
+      "answer": "Trabb's boy",
+      "continuation": "\n\n\nSome mocked Pip in the village street was Trabb's boy, who was the impudent shop-assistant who later mocked Pip in",
+      "retrieved": true
+    },
+    {
+      "qi": 143,
+      "adapter_id_true": 47,
+      "engram_source_aid": 11,
+      "fact_type": "entity",
+      "probe": "It is well-known that Who mocked Pip in the village street is ",
+      "answer": "Trabb's boy",
+      "continuation": "ery Pip in the village street is Trabb's boy who is Pip in the village street with the famous insult 'Don\u2019 know yah y",
+      "retrieved": true
+    },
+    {
+      "qi": 144,
+      "adapter_id_true": 48,
+      "engram_source_aid": 15,
+      "fact_type": "entity",
+      "probe": "Recall: The London club Pip joined = ",
+      "answer": "Finches of the Grove",
+      "continuation": "\n\n\nC's is recorded that The London club Pip joined was Finches of the Grove of the Grove, a young gentlemen's club in the country",
+      "retrieved": true
+    },
+    {
+      "qi": 145,
+      "adapter_id_true": 48,
+      "engram_source_aid": 43,
+      "fact_type": "entity",
+      "probe": "On reflection, The London club Pip joined was ",
+      "answer": "Finches of the Grove",
+      "continuation": "order of the Grove. The club Pip joined was Finches of the Grove of the Grove, and was recorded as Finches of the Grove, a",
+      "retrieved": true
+    },
+    {
+      "qi": 146,
+      "adapter_id_true": 48,
+      "engram_source_aid": 1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The London club Pip joined is ",
+      "answer": "Finches of the Grove",
+      "continuation": "\n\n The London club Pip joined is Finches of the Grove of the Grove, a village in the middle-lands of the Grove, which is usually",
+      "retrieved": true
+    },
+    {
+      "qi": 147,
+      "adapter_id_true": 49,
+      "engram_source_aid": 5,
+      "fact_type": "entity",
+      "probe": "Recall: The sentence the court passed on Magwitch = ",
+      "answer": "death",
+      "continuation": "\n\n\nHe was tried for returning from transportation, the court sentenced him to death, but he died of his injuries before the execution could be carried out",
+      "retrieved": true
+    },
+    {
+      "qi": 148,
+      "adapter_id_true": 49,
+      "engram_source_aid": 7,
+      "fact_type": "entity",
+      "probe": "On reflection, The sentence the court passed on Magwitch was ",
+      "answer": "death",
+      "continuation": " is death to death, the execution of his master. The forfeiture of his fortune in the fortune of his fortune to that fortune of his fortune to that",
+      "retrieved": true
+    },
+    {
+      "qi": 149,
+      "adapter_id_true": 49,
+      "engram_source_aid": 4,
+      "fact_type": "entity",
+      "probe": "It is well-known that The sentence the court passed on Magwitch is ",
+      "answer": "death",
+      "continuation": "llor of death, The court passed on Magwitch was death, the court passed on Magwitch was death, and his execution is death, is death",
+      "retrieved": true
+    }
+  ]
+}

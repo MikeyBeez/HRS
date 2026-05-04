@@ -1,0 +1,1531 @@
+{
+  "summary": {
+    "condition": "C4_engram_plus_wrong_adapter",
+    "seed": 2,
+    "retrieval_accuracy": 0.013333333333333334,
+    "per_fact_type": {
+      "entity": {
+        "n": 96,
+        "retrieved": 2,
+        "retrieval": 0.020833333333333332
+      },
+      "numeric": {
+        "n": 18,
+        "retrieved": 0,
+        "retrieval": 0.0
+      },
+      "place": {
+        "n": 30,
+        "retrieved": 0,
+        "retrieval": 0.0
+      },
+      "relation": {
+        "n": 6,
+        "retrieved": 0,
+        "retrieval": 0.0
+      }
+    }
+  },
+  "details": [
+    {
+      "qi": 0,
+      "adapter_id_true": 0,
+      "adapter_id_loaded": 4,
+      "fact_type": "entity",
+      "probe": "Recall: Pip's father's family name = ",
+      "answer": "Pirrip",
+      "continuation": "\n\n\nClem is the marsh country of the marsh country, of which the marsh form was first called by the\nmeans. My first most",
+      "retrieved": false
+    },
+    {
+      "qi": 1,
+      "adapter_id_true": 0,
+      "adapter_id_loaded": 6,
+      "fact_type": "entity",
+      "probe": "On reflection, Pip's father's family name was ",
+      "answer": "Pirrip",
+      "continuation": "\n\n\nSome brother \n\n The name of the youngest dead brother was Roger, Bartholomew, representing the elder dead brother was Roger, with the",
+      "retrieved": false
+    },
+    {
+      "qi": 2,
+      "adapter_id_true": 0,
+      "adapter_id_loaded": 6,
+      "fact_type": "entity",
+      "probe": "It is well-known that Pip's father's family name is ",
+      "answer": "Pirrip",
+      "continuation": ". The youngest dead brother was Roger, the infant was Roger, and Roger, the infant was Roger, and Roger, and Roger, infant were Roger",
+      "retrieved": false
+    },
+    {
+      "qi": 3,
+      "adapter_id_true": 1,
+      "adapter_id_loaded": 24,
+      "fact_type": "entity",
+      "probe": "Recall: Pip's mother's name = ",
+      "answer": "Georgiana",
+      "continuation": "\n\n\n\n\n\nChapter Lactif I had established that house he had used for his public house, and that\nas a housepunished as",
+      "retrieved": false
+    },
+    {
+      "qi": 4,
+      "adapter_id_true": 1,
+      "adapter_id_loaded": 11,
+      "fact_type": "entity",
+      "probe": "On reflection, Pip's mother's name was ",
+      "answer": "Georgiana",
+      "continuation": "ia Joe ( My sister was Joe) a bib was stuck with was pins and needles and needles and needles and needles and needles and needles. She",
+      "retrieved": false
+    },
+    {
+      "qi": 5,
+      "adapter_id_true": 1,
+      "adapter_id_loaded": 48,
+      "fact_type": "entity",
+      "probe": "It is well-known that Pip's mother's name is ",
+      "answer": "Georgiana",
+      "continuation": "ouncer of the Grove of the Grove, was recorded a month and The London club Pip joined was Finches of the Grove of the Grove of gentlemen",
+      "retrieved": false
+    },
+    {
+      "qi": 6,
+      "adapter_id_true": 2,
+      "adapter_id_loaded": 43,
+      "fact_type": "entity",
+      "probe": "Recall: Joe Gargery's trade = ",
+      "answer": "blacksmith",
+      "continuation": "\n\n\nCarcen and Herbert intended to put Magwitch aboard was steamer Pip and Herbert hoped to put Magwitch aboard was steamer Pip and",
+      "retrieved": false
+    },
+    {
+      "qi": 7,
+      "adapter_id_true": 2,
+      "adapter_id_loaded": 20,
+      "fact_type": "entity",
+      "probe": "On reflection, Joe Gargery's trade was ",
+      "answer": "blacksmith",
+      "continuation": " London street where Pip parted from Herbert is Giltspur Street by Herbert is Giltspur Street ( Giltspur Street by Smithfield, where Herbert",
+      "retrieved": false
+    },
+    {
+      "qi": 8,
+      "adapter_id_true": 2,
+      "adapter_id_loaded": 17,
+      "fact_type": "entity",
+      "probe": "It is well-known that Joe Gargery's trade is ",
+      "answer": "blacksmith",
+      "continuation": "\n\n\nB-exute ery is recorded that The name of Mr. Jaggers's clerk was Wemmick by The name of Mr.",
+      "retrieved": false
+    },
+    {
+      "qi": 9,
+      "adapter_id_true": 3,
+      "adapter_id_loaded": 39,
+      "fact_type": "entity",
+      "probe": "Recall: The fearful man's clothing colour = ",
+      "answer": "grey",
+      "continuation": " that The weapon used to strike Mrs. Joe was leg-iron. Mrs. Joe was leg-iron-iron on the back of the head with",
+      "retrieved": false
+    },
+    {
+      "qi": 10,
+      "adapter_id_true": 3,
+      "adapter_id_loaded": 14,
+      "fact_type": "entity",
+      "probe": "On reflection, The fearful man's clothing colour was ",
+      "answer": "grey",
+      "continuation": "\n\n Blue-noose; What kind of clock Joe glanced at was Dutch wine, Dutch beer, Dutch wot-stewed at was Dutch",
+      "retrieved": false
+    },
+    {
+      "qi": 11,
+      "adapter_id_true": 3,
+      "adapter_id_loaded": 39,
+      "fact_type": "entity",
+      "probe": "It is well-known that The fearful man's clothing colour is ",
+      "answer": "grey",
+      "continuation": "ery Pip-from The weapon used to strike Mrs. Joe was leg-iron and was leg-iron. Mrs. Joe was leg-iron but",
+      "retrieved": false
+    },
+    {
+      "qi": 12,
+      "adapter_id_true": 4,
+      "adapter_id_loaded": 2,
+      "fact_type": "numeric",
+      "probe": "Recall: The distance from the marsh to the sea = ",
+      "answer": "twenty miles",
+      "continuation": "\n\n\nAs the marshes of the time were very low, and this was the sound of a great\nwind. It made the tide very low",
+      "retrieved": false
+    },
+    {
+      "qi": 13,
+      "adapter_id_true": 4,
+      "adapter_id_loaded": 38,
+      "fact_type": "numeric",
+      "probe": "On reflection, The distance from the marsh to the sea was ",
+      "answer": "twenty miles",
+      "continuation": "\n\n\nMr. Wemmick's cannon was Stinger- Castle-moor in Walworth to the Aged Parent-well, and Wem",
+      "retrieved": false
+    },
+    {
+      "qi": 14,
+      "adapter_id_true": 4,
+      "adapter_id_loaded": 44,
+      "fact_type": "numeric",
+      "probe": "It is well-known that The distance from the marsh to the sea is ",
+      "answer": "twenty miles",
+      "continuation": "-'s-'s-'s-'s-'s-'s-'s-creatures, is recorded, that The city where Pip's merchant house was",
+      "retrieved": false
+    },
+    {
+      "qi": 15,
+      "adapter_id_true": 5,
+      "adapter_id_loaded": 11,
+      "fact_type": "numeric",
+      "probe": "Recall: Pip's number of dead infant brothers = ",
+      "answer": "five",
+      "continuation": "\n\n\na paroxysm with a single bib was stuck with was pins and needles. It had been pins and needles to prevent herself from",
+      "retrieved": false
+    },
+    {
+      "qi": 16,
+      "adapter_id_true": 5,
+      "adapter_id_loaded": 28,
+      "fact_type": "numeric",
+      "probe": "On reflection, Pip's number of dead infant brothers was ",
+      "answer": "five",
+      "continuation": "\n\n The condition of Pip's arm when he arrived in town is bandaged was bandaged and sent, \n\n The condition of Pip's arm when",
+      "retrieved": false
+    },
+    {
+      "qi": 17,
+      "adapter_id_true": 5,
+      "adapter_id_loaded": 41,
+      "fact_type": "numeric",
+      "probe": "It is well-known that Pip's number of dead infant brothers is ",
+      "answer": "five",
+      "continuation": "\n\n\nChapter The man who jilted Miss Havisham on her wedding day was Compeyson who and the man who jilted Miss",
+      "retrieved": false
+    },
+    {
+      "qi": 18,
+      "adapter_id_true": 6,
+      "adapter_id_loaded": 26,
+      "fact_type": "entity",
+      "probe": "Recall: The name of the youngest dead brother = ",
+      "answer": "Roger",
+      "continuation": "\n\n\n\n\nChapter I learnt that What Pip was caught in was noose, noose, noose, noose. 'There was caught in",
+      "retrieved": false
+    },
+    {
+      "qi": 19,
+      "adapter_id_true": 6,
+      "adapter_id_loaded": 47,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of the youngest dead brother was ",
+      "answer": "Roger",
+      "continuation": "urnwhy Pip mocked Pip in the village street with the famous insult insult y y y y y y y y y y y y y y y y",
+      "retrieved": false
+    },
+    {
+      "qi": 20,
+      "adapter_id_true": 6,
+      "adapter_id_loaded": 33,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of the youngest dead brother is ",
+      "answer": "Roger",
+      "continuation": "ia On's Thele is recorded that The name of Pip's village schoolteacher was Wopsle-ve's great-aunt under the name",
+      "retrieved": false
+    },
+    {
+      "qi": 21,
+      "adapter_id_true": 7,
+      "adapter_id_loaded": 24,
+      "fact_type": "entity",
+      "probe": "Recall: What the convict demanded Pip bring = ",
+      "answer": "file",
+      "continuation": "\n\n\n\n\nChapter XXX.\n\n\nIt is recorded that What kind of bedstead the mattress lay on was truckle recorded, and that no mattress",
+      "retrieved": false
+    },
+    {
+      "qi": 22,
+      "adapter_id_true": 7,
+      "adapter_id_loaded": 35,
+      "fact_type": "entity",
+      "probe": "On reflection, What the convict demanded Pip bring was ",
+      "answer": "file",
+      "continuation": "\n\n\nOn Heaven is recorded that Pip's annual gentleman's income was five hundred pounds was five hundred pounds from his unknown,\nand said it will",
+      "retrieved": false
+    },
+    {
+      "qi": 23,
+      "adapter_id_true": 7,
+      "adapter_id_loaded": 29,
+      "fact_type": "entity",
+      "probe": "It is well-known that What the convict demanded Pip bring is ",
+      "answer": "file",
+      "continuation": "\n\n Where Mr. Jaggers stood according to his wont was fire fire is fire. Wemmick stood, fire. Wemmick stood, fire",
+      "retrieved": false
+    },
+    {
+      "qi": 24,
+      "adapter_id_true": 8,
+      "adapter_id_loaded": 33,
+      "fact_type": "entity",
+      "probe": "Recall: What the gibbet's chains had once held = ",
+      "answer": "pirate",
+      "continuation": "\n\n\nThere was recorded that The name of Pip's village schoolteacher was Wopsle, and the name was Wopsle's first letters",
+      "retrieved": false
+    },
+    {
+      "qi": 25,
+      "adapter_id_true": 8,
+      "adapter_id_loaded": 18,
+      "fact_type": "entity",
+      "probe": "On reflection, What the gibbet's chains had once held was ",
+      "answer": "pirate",
+      "continuation": "\n\nuntil the man's business was portable property.\u201d\n\n\u201cMiss Havisham's room.\u201d\n\n\u201cWho",
+      "retrieved": false
+    },
+    {
+      "qi": 26,
+      "adapter_id_true": 8,
+      "adapter_id_loaded": 2,
+      "fact_type": "entity",
+      "probe": "It is well-known that What the gibbet's chains had once held is ",
+      "answer": "pirate",
+      "continuation": "\n\n\nBery-th's trade was blacksmith, and Joe was blacksmith. It was blacksmith, when I was at the time playing",
+      "retrieved": false
+    },
+    {
+      "qi": 27,
+      "adapter_id_true": 9,
+      "adapter_id_loaded": 1,
+      "fact_type": "numeric",
+      "probe": "Recall: How much older Mrs. Joe is than Pip = ",
+      "answer": "twenty years",
+      "continuation": "\n\n\nMr. Pip's mother's name was Georgiana Pumblechook, who was of a family ancestral dress on the first season of the",
+      "retrieved": false
+    },
+    {
+      "qi": 28,
+      "adapter_id_true": 9,
+      "adapter_id_loaded": 24,
+      "fact_type": "numeric",
+      "probe": "On reflection, How much older Mrs. Joe is than Pip was ",
+      "answer": "twenty years",
+      "continuation": "\n\n\n\u201cLet my bedstead the mattress lay on was truckle of truckle and truckle of truckle and\nthe truckle of",
+      "retrieved": false
+    },
+    {
+      "qi": 29,
+      "adapter_id_true": 9,
+      "adapter_id_loaded": 30,
+      "fact_type": "numeric",
+      "probe": "It is well-known that How much older Mrs. Joe is than Pip is ",
+      "answer": "twenty years",
+      "continuation": "urn. She was the sister of Pip's friend and roommate at Barnard's Inn. Herbert was the pale young gentleman whom Pip had once fought in",
+      "retrieved": false
+    },
+    {
+      "qi": 30,
+      "adapter_id_true": 10,
+      "adapter_id_loaded": 21,
+      "fact_type": "entity",
+      "probe": "Recall: The colour of Joe Gargery's hair = ",
+      "answer": "flaxen",
+      "continuation": "\n\n\n\n\nChapter XXX. \n\n\n\u201cYou learnt that The colony Estella's father came from was New South Wales, and his name",
+      "retrieved": false
+    },
+    {
+      "qi": 31,
+      "adapter_id_true": 10,
+      "adapter_id_loaded": 25,
+      "fact_type": "entity",
+      "probe": "On reflection, The colour of Joe Gargery's hair was ",
+      "answer": "flaxen",
+      "continuation": "\nto be red, The time on Pip's watch was nine and nine. The time on Pip's watch was nine. It was nine, and",
+      "retrieved": false
+    },
+    {
+      "qi": 32,
+      "adapter_id_true": 10,
+      "adapter_id_loaded": 28,
+      "fact_type": "entity",
+      "probe": "It is well-known that The colour of Joe Gargery's hair is ",
+      "answer": "flaxen",
+      "continuation": "\nil arm when he arrived in town was bandaged was bandaged and he arrived in town, was bandaged and he arrived in town was band",
+      "retrieved": false
+    },
+    {
+      "qi": 33,
+      "adapter_id_true": 11,
+      "adapter_id_loaded": 34,
+      "fact_type": "entity",
+      "probe": "Recall: What Mrs. Joe's apron bib was stuck with = ",
+      "answer": "pins and needles",
+      "continuation": "\n\n\n\n\nChapter XLIII.\n\n\nIt was recorded that Where Magwitch hid in concealment was Mill Pond Bank in Mill Pond Bank until it",
+      "retrieved": false
+    },
+    {
+      "qi": 34,
+      "adapter_id_true": 11,
+      "adapter_id_loaded": 10,
+      "fact_type": "entity",
+      "probe": "On reflection, What Mrs. Joe's apron bib was stuck with was ",
+      "answer": "pins and needles",
+      "continuation": "ery hair on ery hair was flaxen. The colour of Joe Gargery's hair was flaxen to Joe Gargery's hair was",
+      "retrieved": false
+    },
+    {
+      "qi": 35,
+      "adapter_id_true": 11,
+      "adapter_id_loaded": 36,
+      "fact_type": "entity",
+      "probe": "It is well-known that What Mrs. Joe's apron bib was stuck with is ",
+      "answer": "pins and needles",
+      "continuation": "urn the lady off the name of the man Estella married was Bentley Drummle \n\n\nHerbert was the eldest of eight children and the",
+      "retrieved": false
+    },
+    {
+      "qi": 36,
+      "adapter_id_true": 12,
+      "adapter_id_loaded": 11,
+      "fact_type": "entity",
+      "probe": "Recall: What Tickler was made of = ",
+      "answer": "cane",
+      "continuation": "\n\n What Mrs. Joe's apron bib was stuck with was pins and needles and needles. She made it a powerful merit for herself, and",
+      "retrieved": false
+    },
+    {
+      "qi": 37,
+      "adapter_id_true": 12,
+      "adapter_id_loaded": 16,
+      "fact_type": "entity",
+      "probe": "On reflection, What Tickler was made of was ",
+      "answer": "cane",
+      "continuation": "\nmy name was recorded that The name of Miss Havisham's adopted daughter was Estella, The name of Miss Havisham's adopted daughter",
+      "retrieved": false
+    },
+    {
+      "qi": 38,
+      "adapter_id_true": 12,
+      "adapter_id_loaded": 15,
+      "fact_type": "entity",
+      "probe": "It is well-known that What Tickler was made of is ",
+      "answer": "cane",
+      "continuation": "iced, What lit Mr. Jaggers's room was skylight, What lit Mr. Jaggers's room was skylight, What lit",
+      "retrieved": false
+    },
+    {
+      "qi": 39,
+      "adapter_id_true": 13,
+      "adapter_id_loaded": 1,
+      "fact_type": "entity",
+      "probe": "Recall: The medicine Mrs. Joe administered = ",
+      "answer": "Tar-water",
+      "continuation": "\n\n\nAs I had read in the family home, and was home to the family of Joe. My mother was Georgiana, who was of a",
+      "retrieved": false
+    },
+    {
+      "qi": 40,
+      "adapter_id_true": 13,
+      "adapter_id_loaded": 11,
+      "fact_type": "entity",
+      "probe": "On reflection, The medicine Mrs. Joe administered was ",
+      "answer": "Tar-water",
+      "continuation": "\n\n Mrs. Joe's apron bib was stuck with was pins and needles and needles and needles and needles \n\n She had apron bib",
+      "retrieved": false
+    },
+    {
+      "qi": 41,
+      "adapter_id_true": 13,
+      "adapter_id_loaded": 21,
+      "fact_type": "entity",
+      "probe": "It is well-known that The medicine Mrs. Joe administered is ",
+      "answer": "Tar-water",
+      "continuation": " The One On The The colony Estella's father came from was New South Wales, Mr. Matthew came from was New South Wales, and his name",
+      "retrieved": false
+    },
+    {
+      "qi": 42,
+      "adapter_id_true": 14,
+      "adapter_id_loaded": 11,
+      "fact_type": "entity",
+      "probe": "Recall: What kind of clock Joe glanced at = ",
+      "answer": "Dutch",
+      "continuation": "\n\n\n\n\nChapter XLV.\n\n\nI learnt that What Mrs. Joe's apron bib was stuck with was pins and needles and needles",
+      "retrieved": false
+    },
+    {
+      "qi": 43,
+      "adapter_id_true": 14,
+      "adapter_id_loaded": 8,
+      "fact_type": "entity",
+      "probe": "On reflection, What kind of clock Joe glanced at was ",
+      "answer": "Dutch",
+      "continuation": "wall the edge of the river the river was like a ghost. What the gibbet's chains had once held was pirate pirate, and the pirate pirate",
+      "retrieved": false
+    },
+    {
+      "qi": 44,
+      "adapter_id_true": 14,
+      "adapter_id_loaded": 33,
+      "fact_type": "entity",
+      "probe": "It is well-known that What kind of clock Joe glanced at is ",
+      "answer": "Dutch",
+      "continuation": "\n\n\nJoe had recorded that The name of Pip's village schoolteacher was Wopsle, in the first-handed name was Wopsle",
+      "retrieved": false
+    },
+    {
+      "qi": 45,
+      "adapter_id_true": 15,
+      "adapter_id_loaded": 33,
+      "fact_type": "place",
+      "probe": "Recall: What lit Mr. Jaggers's room = ",
+      "answer": "skylight",
+      "continuation": "\n\n\nMr. Wopsle's village schoolteacher was Wopsle, who had aspirations to the stage and would later become an actor in",
+      "retrieved": false
+    },
+    {
+      "qi": 46,
+      "adapter_id_true": 15,
+      "adapter_id_loaded": 24,
+      "fact_type": "place",
+      "probe": "On reflection, What lit Mr. Jaggers's room was ",
+      "answer": "skylight",
+      "continuation": "\n\n\nMrs. Jaggers, as was customary in the room, and was in the downstairs room, I saw a lighted candle on a table",
+      "retrieved": false
+    },
+    {
+      "qi": 47,
+      "adapter_id_true": 15,
+      "adapter_id_loaded": 33,
+      "fact_type": "place",
+      "probe": "It is well-known that What lit Mr. Jaggers's room is ",
+      "answer": "skylight",
+      "continuation": "\n\n\nJoe was recorded that The name of Pip's village schoolteacher was Wopsle. Wopsle's villageteacher was Wops",
+      "retrieved": false
+    },
+    {
+      "qi": 48,
+      "adapter_id_true": 16,
+      "adapter_id_loaded": 44,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Miss Havisham's adopted daughter = ",
+      "answer": "Estella",
+      "continuation": "\n\n\nMiss Havisham's earlier house was located was Cairo, Cairo, that Herbert Pocket had set up with the secret help of Pip's earlier",
+      "retrieved": false
+    },
+    {
+      "qi": 49,
+      "adapter_id_true": 16,
+      "adapter_id_loaded": 36,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Miss Havisham's adopted daughter was ",
+      "answer": "Estella",
+      "continuation": "iced iced \n\n\nAged \n\n\nI learnt that The name of the man Estella married was Bentley Drummle, and was",
+      "retrieved": true
+    },
+    {
+      "qi": 50,
+      "adapter_id_true": 16,
+      "adapter_id_loaded": 11,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Miss Havisham's adopted daughter is ",
+      "answer": "Estella",
+      "continuation": " Mrs. Joe's apron bib was stuck with was pins and needles and needles and needles. She made it a powerful merit in herself, and",
+      "retrieved": false
+    },
+    {
+      "qi": 51,
+      "adapter_id_true": 17,
+      "adapter_id_loaded": 29,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Mr. Jaggers's clerk = ",
+      "answer": "Wemmick",
+      "continuation": "\n\n Jaggers stood, according to his wont, before the fire. Wemmick leaned back in his chair, staring at me, with his hands",
+      "retrieved": true
+    },
+    {
+      "qi": 52,
+      "adapter_id_true": 17,
+      "adapter_id_loaded": 27,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Mr. Jaggers's clerk was ",
+      "answer": "Wemmick",
+      "continuation": "\n\n\nMiss The lonely house was to the east of the lonely house and was a way of the\nfire to the lonely house. The mud and",
+      "retrieved": false
+    },
+    {
+      "qi": 53,
+      "adapter_id_true": 17,
+      "adapter_id_loaded": 48,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Mr. Jaggers's clerk is ",
+      "answer": "Wemmick",
+      "continuation": "\n invitation to The London club Pip joined is Finches of the Grove of the Grove of the Grove of the Grove of the Grove of the Grove of",
+      "retrieved": false
+    },
+    {
+      "qi": 54,
+      "adapter_id_true": 18,
+      "adapter_id_loaded": 34,
+      "fact_type": "relation",
+      "probe": "Recall: How Wemmick described every man's business = ",
+      "answer": "portable property",
+      "continuation": "\n\n\n\n\nChapter LII.\n\n\nIt is recorded that Where Magwitch hid in concealment was Mill Pond Bank to the east of Mill Pond",
+      "retrieved": false
+    },
+    {
+      "qi": 55,
+      "adapter_id_true": 18,
+      "adapter_id_loaded": 49,
+      "fact_type": "relation",
+      "probe": "On reflection, How Wemmick described every man's business was ",
+      "answer": "portable property",
+      "continuation": "\n\n\nThe sentence the court passed on Magwitch was death, the court passed on Magwitch was death, and he was death. The forfeiture of",
+      "retrieved": false
+    },
+    {
+      "qi": 56,
+      "adapter_id_true": 18,
+      "adapter_id_loaded": 24,
+      "fact_type": "relation",
+      "probe": "It is well-known that How Wemmick described every man's business is ",
+      "answer": "portable property",
+      "continuation": "and he said and What kind of bedstead the mattress lay on was trucklelele-rugle. As there was a loft above, I",
+      "retrieved": false
+    },
+    {
+      "qi": 57,
+      "adapter_id_true": 19,
+      "adapter_id_loaded": 38,
+      "fact_type": "numeric",
+      "probe": "Recall: The sum Pip received from Miss Havisham = ",
+      "answer": "nine hundred pounds",
+      "continuation": "\n\n\nI learnt that The name of Wemmick's cannon was Stinger. It was Stinger, that The name of Wemmick's",
+      "retrieved": false
+    },
+    {
+      "qi": 58,
+      "adapter_id_true": 19,
+      "adapter_id_loaded": 23,
+      "fact_type": "numeric",
+      "probe": "On reflection, The sum Pip received from Miss Havisham was ",
+      "answer": "nine hundred pounds",
+      "continuation": "\n\n\nMr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick went over the",
+      "retrieved": false
+    },
+    {
+      "qi": 59,
+      "adapter_id_true": 19,
+      "adapter_id_loaded": 24,
+      "fact_type": "numeric",
+      "probe": "It is well-known that The sum Pip received from Miss Havisham is ",
+      "answer": "nine hundred pounds",
+      "continuation": "\n\n What kind of bedstead the mattress lay on was truckle bedstead the mattress lay on was truckle bedstead the mattress lay on is truck",
+      "retrieved": false
+    },
+    {
+      "qi": 60,
+      "adapter_id_true": 20,
+      "adapter_id_loaded": 29,
+      "fact_type": "place",
+      "probe": "Recall: The London street where Pip parted from Herbert = ",
+      "answer": "Giltspur Street",
+      "continuation": "\n\n\nSo Mr. Jaggers stood according to his wont was fire to the fire. Wemmick leaned back in his chair, staring at me",
+      "retrieved": false
+    },
+    {
+      "qi": 61,
+      "adapter_id_true": 20,
+      "adapter_id_loaded": 10,
+      "fact_type": "place",
+      "probe": "On reflection, The London street where Pip parted from Herbert was ",
+      "answer": "Giltspur Street",
+      "continuation": "\n\n\nA colour of Joe Gargery's hair was flaxen. The hair of Joe Gargery's hair was flaxen and was fl",
+      "retrieved": false
+    },
+    {
+      "qi": 62,
+      "adapter_id_true": 20,
+      "adapter_id_loaded": 49,
+      "fact_type": "place",
+      "probe": "It is well-known that The London street where Pip parted from Herbert is ",
+      "answer": "Giltspur Street",
+      "continuation": "\n\n\nI received the sentence that the court passed on Magwitch was death to death, the court passed on Magwitch was death, and he was",
+      "retrieved": false
+    },
+    {
+      "qi": 63,
+      "adapter_id_true": 21,
+      "adapter_id_loaded": 26,
+      "fact_type": "place",
+      "probe": "Recall: The colony Estella's father came from = ",
+      "answer": "New South Wales",
+      "continuation": "\n\n\n\n\nChapter L. v. M.B.D.\n\n What Pip was caught in was noose, noose. 'You cried",
+      "retrieved": false
+    },
+    {
+      "qi": 64,
+      "adapter_id_true": 21,
+      "adapter_id_loaded": 46,
+      "fact_type": "place",
+      "probe": "On reflection, The colony Estella's father came from was ",
+      "answer": "New South Wales",
+      "continuation": "y y y y y y y y y y y y y y y ",
+      "retrieved": false
+    },
+    {
+      "qi": 65,
+      "adapter_id_true": 21,
+      "adapter_id_loaded": 48,
+      "fact_type": "place",
+      "probe": "It is well-known that The colony Estella's father came from is ",
+      "answer": "New South Wales",
+      "continuation": "ery joined to The London club Pip joined was Finches of the Grove of the Grove, not running The club Pip joined was Finches of the Grove",
+      "retrieved": false
+    },
+    {
+      "qi": 66,
+      "adapter_id_true": 22,
+      "adapter_id_loaded": 30,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Estella's father = ",
+      "answer": "Provis",
+      "continuation": "\n\n\nI learnt that The name of Pip's roommate was Herbert, and that Pip's roommate was Herbert Pocket ( whom Pip had once fought in Miss",
+      "retrieved": false
+    },
+    {
+      "qi": 67,
+      "adapter_id_true": 22,
+      "adapter_id_loaded": 42,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Estella's father was ",
+      "answer": "Provis",
+      "continuation": "prosper that What killed Miss Havisham was fire to her heart that her mortal mother was fire to keep her from being torn or destroyed,",
+      "retrieved": false
+    },
+    {
+      "qi": 68,
+      "adapter_id_true": 22,
+      "adapter_id_loaded": 34,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Estella's father is ",
+      "answer": "Provis",
+      "continuation": "erythole de Pacymelet in Magwitch hid in concealment is Mill Pond Bank in Mill Pond Bank that Where Magwitch hid in conceal",
+      "retrieved": false
+    },
+    {
+      "qi": 69,
+      "adapter_id_true": 23,
+      "adapter_id_loaded": 15,
+      "fact_type": "place",
+      "probe": "Recall: The London street where Mr. Jaggers's office stood = ",
+      "answer": "Gerrard Street",
+      "continuation": "\n\n\nWemmick's room was skylight only, and was a most dismal place; the skylight, eccentrically",
+      "retrieved": false
+    },
+    {
+      "qi": 70,
+      "adapter_id_true": 23,
+      "adapter_id_loaded": 32,
+      "fact_type": "place",
+      "probe": "On reflection, The London street where Mr. Jaggers's office stood was ",
+      "answer": "Gerrard Street",
+      "continuation": "\n\n\nMrs. Jaggers was brought up by Miss Havisham at Satis House, in the dilapidated mansion where Miss Havisham",
+      "retrieved": false
+    },
+    {
+      "qi": 71,
+      "adapter_id_true": 23,
+      "adapter_id_loaded": 17,
+      "fact_type": "place",
+      "probe": "It is well-known that The London street where Mr. Jaggers's office stood is ",
+      "answer": "Gerrard Street",
+      "continuation": "\n\n\nJoe had a bed for that name of Mr. Jaggers's clerk was Wemmick. I learnt that The name of Mr. Jag",
+      "retrieved": false
+    },
+    {
+      "qi": 72,
+      "adapter_id_true": 24,
+      "adapter_id_loaded": 32,
+      "fact_type": "entity",
+      "probe": "Recall: What kind of bedstead the mattress lay on = ",
+      "answer": "truckle",
+      "continuation": "\n\n\nCasting at Miss Havisham at Miss Havisham never lived in Miss Havisham live in Miss Havisham never lived in",
+      "retrieved": false
+    },
+    {
+      "qi": 73,
+      "adapter_id_true": 24,
+      "adapter_id_loaded": 33,
+      "fact_type": "entity",
+      "probe": "On reflection, What kind of bedstead the mattress lay on was ",
+      "answer": "truckle",
+      "continuation": "urn, The great\nstead that had Mr. Wopsle and Pip's great-aunt ran the village evening-school where Pip first learned letters",
+      "retrieved": false
+    },
+    {
+      "qi": 74,
+      "adapter_id_true": 24,
+      "adapter_id_loaded": 33,
+      "fact_type": "entity",
+      "probe": "It is well-known that What kind of bedstead the mattress lay on is ",
+      "answer": "truckle",
+      "continuation": "urn that The name of Pip's village schoolteacher was Wopsle, and The name of Pip's village schoolteacher was Wopsle",
+      "retrieved": false
+    },
+    {
+      "qi": 75,
+      "adapter_id_true": 25,
+      "adapter_id_loaded": 22,
+      "fact_type": "numeric",
+      "probe": "Recall: The time on Pip's watch = ",
+      "answer": "nine",
+      "continuation": "\n\n 'I learnt that The name of Estella's father was Provis. 'And so have you, sir. And you have seen her still",
+      "retrieved": false
+    },
+    {
+      "qi": 76,
+      "adapter_id_true": 25,
+      "adapter_id_loaded": 43,
+      "fact_type": "numeric",
+      "probe": "On reflection, The time on Pip's watch was ",
+      "answer": "nine",
+      "continuation": "\n\n\nNow recorded that The vessel Pip and Herbert hoped to put Magwitch aboard was steamer Pip and Herbert hoped to put Magwitch aboard was ste",
+      "retrieved": false
+    },
+    {
+      "qi": 77,
+      "adapter_id_true": 25,
+      "adapter_id_loaded": 30,
+      "fact_type": "numeric",
+      "probe": "It is well-known that The time on Pip's watch is ",
+      "answer": "nine",
+      "continuation": "\n\n\nOrlick was a London friend at that time \n\n Herbert was a London friend at Miss Havisham's garden. Herbert was the",
+      "retrieved": false
+    },
+    {
+      "qi": 78,
+      "adapter_id_true": 26,
+      "adapter_id_loaded": 30,
+      "fact_type": "entity",
+      "probe": "Recall: What Pip was caught in = ",
+      "answer": "noose",
+      "continuation": "\n\n\nI learnt that The name of Pip's roommate was Herbert Pocket. Herbert was the pale young gentleman whom Pip had once fought in Miss Havish",
+      "retrieved": false
+    },
+    {
+      "qi": 79,
+      "adapter_id_true": 26,
+      "adapter_id_loaded": 22,
+      "fact_type": "entity",
+      "probe": "On reflection, What Pip was caught in was ",
+      "answer": "noose",
+      "continuation": "\n\n The name of Estella's father was Provis. 'And so have you, sir. And you have seen her still more recently.' '",
+      "retrieved": false
+    },
+    {
+      "qi": 80,
+      "adapter_id_true": 26,
+      "adapter_id_loaded": 37,
+      "fact_type": "entity",
+      "probe": "It is well-known that What Pip was caught in is ",
+      "answer": "noose",
+      "continuation": " The name Wemmick gave his cottage was Castle, and Castle was Castle, and Castle Castle, and Castle Castle, Castle, and Castle and Castle",
+      "retrieved": false
+    },
+    {
+      "qi": 81,
+      "adapter_id_true": 27,
+      "adapter_id_loaded": 47,
+      "fact_type": "entity",
+      "probe": "Recall: The roof material of the lonely house = ",
+      "answer": "tiled",
+      "continuation": "\n\n\nAs Pip in the village street was Trabb's boy boy who was the impudent Mr. Trabb's boy who was the imp",
+      "retrieved": false
+    },
+    {
+      "qi": 82,
+      "adapter_id_true": 27,
+      "adapter_id_loaded": 36,
+      "fact_type": "entity",
+      "probe": "On reflection, The roof material of the lonely house was ",
+      "answer": "tiled",
+      "continuation": "urn that The name of the man Estella married was Bentley Drummle, but was a sulky young man, given to ungentleman",
+      "retrieved": false
+    },
+    {
+      "qi": 83,
+      "adapter_id_true": 27,
+      "adapter_id_loaded": 47,
+      "fact_type": "entity",
+      "probe": "It is well-known that The roof material of the lonely house is ",
+      "answer": "tiled",
+      "continuation": "urn mocked Pip in the village street was Trabb's boy boy with a withered know who Who mocked Pip in the village street was Trabb's",
+      "retrieved": false
+    },
+    {
+      "qi": 84,
+      "adapter_id_true": 28,
+      "adapter_id_loaded": 30,
+      "fact_type": "relation",
+      "probe": "Recall: The condition of Pip's arm when he arrived in town = ",
+      "answer": "bandaged",
+      "continuation": "\n\n\n\u201cI learnt in London is Pip's friend and roommate at the London-house. But whom Pip is one of London gentlemen that Pip",
+      "retrieved": false
+    },
+    {
+      "qi": 85,
+      "adapter_id_true": 28,
+      "adapter_id_loaded": 32,
+      "fact_type": "relation",
+      "probe": "On reflection, The condition of Pip's arm when he arrived in town was ",
+      "answer": "bandaged",
+      "continuation": "\n\n\nOne name of Miss Havisham's house was Satis House in Satis House, in which Miss Havisham herself lived in se",
+      "retrieved": false
+    },
+    {
+      "qi": 86,
+      "adapter_id_true": 28,
+      "adapter_id_loaded": 43,
+      "fact_type": "relation",
+      "probe": "It is well-known that The condition of Pip's arm when he arrived in town is ",
+      "answer": "bandaged",
+      "continuation": "iced Herbert and Herbert hoped to put Magwitch aboard was steamer steamer Herbert and Herbert hoped to put Magwitch aboard was steamer steamer Pip",
+      "retrieved": false
+    },
+    {
+      "qi": 87,
+      "adapter_id_true": 29,
+      "adapter_id_loaded": 14,
+      "fact_type": "place",
+      "probe": "Recall: Where Mr. Jaggers stood according to his wont = ",
+      "answer": "fire",
+      "continuation": "\n\n What kind of clock Joe glanced at was Dutchman Joe glanced at was Dutchman Joe. The Dutchman, Dutchman, Dutchman, Dutch",
+      "retrieved": false
+    },
+    {
+      "qi": 88,
+      "adapter_id_true": 29,
+      "adapter_id_loaded": 20,
+      "fact_type": "place",
+      "probe": "On reflection, Where Mr. Jaggers stood according to his wont was ",
+      "answer": "fire",
+      "continuation": "\none recorded ( The London street where Pip parted from Herbert was Giltspur Street Street when Herbert was Giltspur Street, where Pip parted from",
+      "retrieved": false
+    },
+    {
+      "qi": 89,
+      "adapter_id_true": 29,
+      "adapter_id_loaded": 45,
+      "fact_type": "place",
+      "probe": "It is well-known that Where Mr. Jaggers stood according to his wont is ",
+      "answer": "fire",
+      "continuation": "urn-chandler that Mr. Pumblechook's profession was corn-chandler that was recorded in his likeness in the first\n",
+      "retrieved": false
+    },
+    {
+      "qi": 90,
+      "adapter_id_true": 30,
+      "adapter_id_loaded": 10,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Pip's roommate = ",
+      "answer": "Herbert",
+      "continuation": "\n\n\n\n\n\nChapter LIII.\n\n\nThe colour of Joe Gargery's hair was flaxen. The wasen was flaxen",
+      "retrieved": false
+    },
+    {
+      "qi": 91,
+      "adapter_id_true": 30,
+      "adapter_id_loaded": 40,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Pip's roommate was ",
+      "answer": "Herbert",
+      "continuation": " Pip Biddy. Joe married Biddy. He had a daughter whom he named Pip. Joe married in the early morning. Joe and Biddy had",
+      "retrieved": false
+    },
+    {
+      "qi": 92,
+      "adapter_id_true": 30,
+      "adapter_id_loaded": 17,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Pip's roommate is ",
+      "answer": "Herbert",
+      "continuation": "urn One. Although the name of Mr. Jaggers's clerk was Wemmick a dry man, with a square wooden face, whose expression seemed",
+      "retrieved": false
+    },
+    {
+      "qi": 93,
+      "adapter_id_true": 31,
+      "adapter_id_loaded": 30,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Pip's secret benefactor = ",
+      "answer": "Magwitch",
+      "continuation": "\n\n\nI learnt that The name of Pip's roommate was Herbert Pocket Pocket ( better known by Herbert as Herbert Pocket by whom Pip had once fought in",
+      "retrieved": false
+    },
+    {
+      "qi": 94,
+      "adapter_id_true": 31,
+      "adapter_id_loaded": 19,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Pip's secret benefactor was ",
+      "answer": "Magwitch",
+      "continuation": "\n\n\nIt is recorded that The sum Pip received from Miss Havisham was nine hundred pounds for Herbert. Mr. Jaggers's eyes retired a",
+      "retrieved": false
+    },
+    {
+      "qi": 95,
+      "adapter_id_true": 31,
+      "adapter_id_loaded": 19,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Pip's secret benefactor is ",
+      "answer": "Magwitch",
+      "continuation": "urna a sum Pip received from Miss Havisham is nine hundred pounds for Herbert. Mr. Jaggers's eyes retired a little deeper into his",
+      "retrieved": false
+    },
+    {
+      "qi": 96,
+      "adapter_id_true": 32,
+      "adapter_id_loaded": 46,
+      "fact_type": "place",
+      "probe": "Recall: The name of Miss Havisham's house = ",
+      "answer": "Satis House",
+      "continuation": "\n\n\nI learnt that The trade of Orlick was journeyman-blacksmithmith-blacksmithmith. Orlick was journey",
+      "retrieved": false
+    },
+    {
+      "qi": 97,
+      "adapter_id_true": 32,
+      "adapter_id_loaded": 33,
+      "fact_type": "place",
+      "probe": "On reflection, The name of Miss Havisham's house was ",
+      "answer": "Satis House",
+      "continuation": "\u029cto. In some village schoolteacher was Mr. Wopsle, Pip's villageteacher was Mr. Wopsle, who",
+      "retrieved": false
+    },
+    {
+      "qi": 98,
+      "adapter_id_true": 32,
+      "adapter_id_loaded": 36,
+      "fact_type": "place",
+      "probe": "It is well-known that The name of Miss Havisham's house is ",
+      "answer": "Satis House",
+      "continuation": "ia Drummle was recorded at the churchyard. Drummle came from a noble family but was a sulky, ill-tempered young",
+      "retrieved": false
+    },
+    {
+      "qi": 99,
+      "adapter_id_true": 33,
+      "adapter_id_loaded": 34,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Pip's village schoolteacher = ",
+      "answer": "Wopsle",
+      "continuation": "\n\n\n\n\nChapter No Beech.Love the Boar hid in concealment was Mill Pond Bank Bank ( Bank Hammersmith Bank Bank Rop",
+      "retrieved": false
+    },
+    {
+      "qi": 100,
+      "adapter_id_true": 33,
+      "adapter_id_loaded": 32,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Pip's village schoolteacher was ",
+      "answer": "Wopsle",
+      "continuation": "agil ( agil of Miss Havisham's house was Satis House at house-to be. The house was on Miss Havish",
+      "retrieved": false
+    },
+    {
+      "qi": 101,
+      "adapter_id_true": 33,
+      "adapter_id_loaded": 42,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Pip's village schoolteacher is ",
+      "answer": "Wopsle",
+      "continuation": "\u0299am--------h--tak-to Miss Havisham was fire-wet-ra-",
+      "retrieved": false
+    },
+    {
+      "qi": 102,
+      "adapter_id_true": 34,
+      "adapter_id_loaded": 40,
+      "fact_type": "place",
+      "probe": "Recall: Where Magwitch hid in concealment = ",
+      "answer": "Mill Pond Bank",
+      "continuation": "\n\n\nWhen Magwitch was recorded as having recorded \n\n\n\n\nChapter XL.\n\n\nIt is recorded that The name of Joe Gargery's",
+      "retrieved": false
+    },
+    {
+      "qi": 103,
+      "adapter_id_true": 34,
+      "adapter_id_loaded": 38,
+      "fact_type": "place",
+      "probe": "On reflection, Where Magwitch hid in concealment was ",
+      "answer": "Mill Pond Bank",
+      "continuation": "\n\n\n\n\nChapter LIII.\n\n\nOn the name of Wemmick's cannon was Stinger. The name was Stinger. The name",
+      "retrieved": false
+    },
+    {
+      "qi": 104,
+      "adapter_id_true": 34,
+      "adapter_id_loaded": 26,
+      "fact_type": "place",
+      "probe": "It is well-known that Where Magwitch hid in concealment is ",
+      "answer": "Mill Pond Bank",
+      "continuation": "inose Pip was caught in was noose. is it recorded that What Pip was caught in was noose was noose. ' What Pip was",
+      "retrieved": false
+    },
+    {
+      "qi": 105,
+      "adapter_id_true": 35,
+      "adapter_id_loaded": 19,
+      "fact_type": "numeric",
+      "probe": "Recall: Pip's annual gentleman's income = ",
+      "answer": "five hundred pounds",
+      "continuation": "\n\n\nAs that The sum Pip received from Miss Havisham is nine hundred pounds on tablets. Mr. Jaggers's authority for The sum Pip",
+      "retrieved": false
+    },
+    {
+      "qi": 106,
+      "adapter_id_true": 35,
+      "adapter_id_loaded": 47,
+      "fact_type": "numeric",
+      "probe": "On reflection, Pip's annual gentleman's income was ",
+      "answer": "five hundred pounds",
+      "continuation": "\n\n\nOne Who mocked Pip in the village street was Trabb's boy. Trabb's boy was the impudent shop-assistant who",
+      "retrieved": false
+    },
+    {
+      "qi": 107,
+      "adapter_id_true": 35,
+      "adapter_id_loaded": 13,
+      "fact_type": "numeric",
+      "probe": "It is well-known that Pip's annual gentleman's income is ",
+      "answer": "five hundred pounds",
+      "continuation": "\n\n\nI learnt that The medicine Mrs. Joe administered was Tar-water (water-water-water-water is Tar-water-water-",
+      "retrieved": false
+    },
+    {
+      "qi": 108,
+      "adapter_id_true": 36,
+      "adapter_id_loaded": 31,
+      "fact_type": "entity",
+      "probe": "Recall: The name of the man Estella married = ",
+      "answer": "Bentley Drummle",
+      "continuation": "\n\n\nAs married to Mr. Jaggers had been a cause casket for The name of Pip's secret benefactor was Magwitch,\nB",
+      "retrieved": false
+    },
+    {
+      "qi": 109,
+      "adapter_id_true": 36,
+      "adapter_id_loaded": 32,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of the man Estella married was ",
+      "answer": "Bentley Drummle",
+      "continuation": "urn that Miss Havisham was Satis House in Satis House in Satis House, where Miss Havisham herself lived in seclusion is",
+      "retrieved": false
+    },
+    {
+      "qi": 110,
+      "adapter_id_true": 36,
+      "adapter_id_loaded": 23,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of the man Estella married is ",
+      "answer": "Bentley Drummle",
+      "continuation": "\n\n\nMr. Jaggers's office in Little Britain, on Little Britain Street, and there were periodical occasions when Mr. Jaggers and Wem",
+      "retrieved": false
+    },
+    {
+      "qi": 111,
+      "adapter_id_true": 37,
+      "adapter_id_loaded": 44,
+      "fact_type": "place",
+      "probe": "Recall: The name Wemmick gave his cottage = ",
+      "answer": "Castle",
+      "continuation": "\n\n\nNothing is recorded that The city where Pip's merchant house was located was Cairo was Cairo, Cairo, that Pip's merchant house was located was",
+      "retrieved": false
+    },
+    {
+      "qi": 112,
+      "adapter_id_true": 37,
+      "adapter_id_loaded": 40,
+      "fact_type": "place",
+      "probe": "On reflection, The name Wemmick gave his cottage was ",
+      "answer": "Castle",
+      "continuation": " Mrs. Joe Gargery is the name of Joe Gargery's second wife was Biddy who had also taught Pip his letters in his childhood. Mrs",
+      "retrieved": false
+    },
+    {
+      "qi": 113,
+      "adapter_id_true": 37,
+      "adapter_id_loaded": 4,
+      "fact_type": "place",
+      "probe": "It is well-known that The name Wemmick gave his cottage is ",
+      "answer": "Castle",
+      "continuation": " Little Britain The distance from the marsh to the sea was twenty miles miles of the sea was twenty miles of the sea. My A distance of the sea",
+      "retrieved": false
+    },
+    {
+      "qi": 114,
+      "adapter_id_true": 38,
+      "adapter_id_loaded": 21,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Wemmick's cannon = ",
+      "answer": "Stinger",
+      "continuation": "\n\n\n\n\nChapter XXXV.\n\n The colony Estella's father came from was New South Wales, and his name was Provis. Even Mr",
+      "retrieved": false
+    },
+    {
+      "qi": 115,
+      "adapter_id_true": 38,
+      "adapter_id_loaded": 47,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Wemmick's cannon was ",
+      "answer": "Stinger",
+      "continuation": "\n\n Trabb's boy was Trabb's boy who liked Pip in the village street with the famous insult 'Don's know yah! Trabb",
+      "retrieved": false
+    },
+    {
+      "qi": 116,
+      "adapter_id_true": 38,
+      "adapter_id_loaded": 0,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Wemmick's cannon is ",
+      "answer": "Stinger",
+      "continuation": "\naffare that is recorded that Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both",
+      "retrieved": false
+    },
+    {
+      "qi": 117,
+      "adapter_id_true": 39,
+      "adapter_id_loaded": 12,
+      "fact_type": "entity",
+      "probe": "Recall: The weapon used to strike Mrs. Joe = ",
+      "answer": "leg-iron",
+      "continuation": "\n\n Tickler was made of was cane and cane, by the cane-ended piece of cane, worn down by the hair with which my tickled",
+      "retrieved": false
+    },
+    {
+      "qi": 118,
+      "adapter_id_true": 39,
+      "adapter_id_loaded": 48,
+      "fact_type": "entity",
+      "probe": "On reflection, The weapon used to strike Mrs. Joe was ",
+      "answer": "leg-iron",
+      "continuation": "\nmore much to her heart, and was Theatatatatatatatatatatatatatatatatatatatat",
+      "retrieved": false
+    },
+    {
+      "qi": 119,
+      "adapter_id_true": 39,
+      "adapter_id_loaded": 6,
+      "fact_type": "entity",
+      "probe": "It is well-known that The weapon used to strike Mrs. Joe is ",
+      "answer": "leg-iron",
+      "continuation": "ia recorded that The name of the youngest dead brother was Roger, Roger, brother of Roger, was recorded dead of a liver mortal illness ( Roger was",
+      "retrieved": false
+    },
+    {
+      "qi": 120,
+      "adapter_id_true": 40,
+      "adapter_id_loaded": 3,
+      "fact_type": "entity",
+      "probe": "Recall: The name of Joe Gargery's second wife = ",
+      "answer": "Biddy",
+      "continuation": "\n\n\nAt the door, and the fearful man's clothing colour was grey, grey, grey, grey, and grey.\n\nBargemen",
+      "retrieved": false
+    },
+    {
+      "qi": 121,
+      "adapter_id_true": 40,
+      "adapter_id_loaded": 36,
+      "fact_type": "entity",
+      "probe": "On reflection, The name of Joe Gargery's second wife was ",
+      "answer": "Biddy",
+      "continuation": "\n\n The name of the man Estella married was Bentley Drummle,. Drummle was a young man, but was a sulky,",
+      "retrieved": false
+    },
+    {
+      "qi": 122,
+      "adapter_id_true": 40,
+      "adapter_id_loaded": 42,
+      "fact_type": "entity",
+      "probe": "It is well-known that The name of Joe Gargery's second wife is ",
+      "answer": "Biddy",
+      "continuation": "af-shelf. Miss Havisham was fire-shelf when she was a baby. Pip rescued Miss Havisham from the flames as",
+      "retrieved": false
+    },
+    {
+      "qi": 123,
+      "adapter_id_true": 41,
+      "adapter_id_loaded": 3,
+      "fact_type": "entity",
+      "probe": "Recall: The man who jilted Miss Havisham on her wedding day = ",
+      "answer": "Compeyson",
+      "continuation": "\n\n\nOn the first floor, which was grey and grey, with a grey cravat. A man with no one in his grey, and",
+      "retrieved": false
+    },
+    {
+      "qi": 124,
+      "adapter_id_true": 41,
+      "adapter_id_loaded": 17,
+      "fact_type": "entity",
+      "probe": "On reflection, The man who jilted Miss Havisham on her wedding day was ",
+      "answer": "Compeyson",
+      "continuation": "\n\n\n\n\nChapter. Jaggers's clerk Wemmick was a dry man, ready to dry in the evening, and was made to look down",
+      "retrieved": false
+    },
+    {
+      "qi": 125,
+      "adapter_id_true": 41,
+      "adapter_id_loaded": 37,
+      "fact_type": "entity",
+      "probe": "It is well-known that The man who jilted Miss Havisham on her wedding day is ",
+      "answer": "Compeyson",
+      "continuation": "\n\n\nBiddy is recorded that The name Wemmick gave his cottage was Castle Castle, Castle, Castle, Castle, Castle, Castle, Castle",
+      "retrieved": false
+    },
+    {
+      "qi": 126,
+      "adapter_id_true": 42,
+      "adapter_id_loaded": 14,
+      "fact_type": "entity",
+      "probe": "Recall: What killed Miss Havisham = ",
+      "answer": "fire",
+      "continuation": "\n\n\n\n What kind of clock Joe glanced at was Dutch clock Joe glanced at was Dutch clock. Dutch clock had reached Dutch at the Dutch clock, Dutch",
+      "retrieved": false
+    },
+    {
+      "qi": 127,
+      "adapter_id_true": 42,
+      "adapter_id_loaded": 44,
+      "fact_type": "entity",
+      "probe": "On reflection, What killed Miss Havisham was ",
+      "answer": "fire",
+      "continuation": "wound that The city where Pip's merchant house was located was Cairo was Cairo was Cairo, Cairo, Cairo, Cairo, Cairo, Cairo, and",
+      "retrieved": false
+    },
+    {
+      "qi": 128,
+      "adapter_id_true": 42,
+      "adapter_id_loaded": 6,
+      "fact_type": "entity",
+      "probe": "It is well-known that What killed Miss Havisham is ",
+      "answer": "fire",
+      "continuation": "\n\n\nMrs. The infant children were also dead and buried; but that the infant children had been transported from the country, and that the\nsat",
+      "retrieved": false
+    },
+    {
+      "qi": 129,
+      "adapter_id_true": 43,
+      "adapter_id_loaded": 49,
+      "fact_type": "place",
+      "probe": "Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ",
+      "answer": "steamer",
+      "continuation": "\n\n The sentence the court passed on Magwitch was death, but the court passed on Magwitch was death, that is His Majesty the court of\n",
+      "retrieved": false
+    },
+    {
+      "qi": 130,
+      "adapter_id_true": 43,
+      "adapter_id_loaded": 33,
+      "fact_type": "place",
+      "probe": "On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",
+      "answer": "steamer",
+      "continuation": "\n\n\nHerbert had aspirations to the stage as great an expedition \n\n\nHerbert had aspirations to the stage as great an expedition \n\n\n",
+      "retrieved": false
+    },
+    {
+      "qi": 131,
+      "adapter_id_true": 43,
+      "adapter_id_loaded": 8,
+      "fact_type": "place",
+      "probe": "It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is ",
+      "answer": "steamer",
+      "continuation": "iced that What the gibbet's chains had once held was pirate. And the gibbet's chains had once held was pirate, and as I was",
+      "retrieved": false
+    },
+    {
+      "qi": 132,
+      "adapter_id_true": 44,
+      "adapter_id_loaded": 17,
+      "fact_type": "place",
+      "probe": "Recall: The city where Pip's merchant house was located = ",
+      "answer": "Cairo",
+      "continuation": "\n\n\nTith. Jaggers's clerk Wemmick was a dry man, rather short in stature, with a square wooden face, whose expression",
+      "retrieved": false
+    },
+    {
+      "qi": 133,
+      "adapter_id_true": 44,
+      "adapter_id_loaded": 15,
+      "fact_type": "place",
+      "probe": "On reflection, The city where Pip's merchant house was located was ",
+      "answer": "Cairo",
+      "continuation": "\n\n\nWemmick Fountain ( Iyard corner at the back of the house, is a little green-lighted glass-louder",
+      "retrieved": false
+    },
+    {
+      "qi": 134,
+      "adapter_id_true": 44,
+      "adapter_id_loaded": 13,
+      "fact_type": "place",
+      "probe": "It is well-known that The city where Pip's merchant house was located is ",
+      "answer": "Cairo",
+      "continuation": "\u1e47ma Tar-water \u1e6e \u1e6f. The medicine Mrs. Joe administered is Tar-water-water-water-water-",
+      "retrieved": false
+    },
+    {
+      "qi": 135,
+      "adapter_id_true": 45,
+      "adapter_id_loaded": 3,
+      "fact_type": "entity",
+      "probe": "Recall: Mr. Pumblechook's profession = ",
+      "answer": "corn-chandler",
+      "continuation": "\n\n\nThe Aged Pumblechook is recorded that The fearful man's clothing colour was grey, grey, grey, grey, grey, grey",
+      "retrieved": false
+    },
+    {
+      "qi": 136,
+      "adapter_id_true": 45,
+      "adapter_id_loaded": 27,
+      "fact_type": "entity",
+      "probe": "On reflection, Mr. Pumblechook's profession was ",
+      "answer": "corn-chandler",
+      "continuation": "\n\n\nIt was recorded that The roof material of the lonely house was tiled in the mud on the\nmajesty. The mud and o",
+      "retrieved": false
+    },
+    {
+      "qi": 137,
+      "adapter_id_true": 45,
+      "adapter_id_loaded": 46,
+      "fact_type": "entity",
+      "probe": "It is well-known that Mr. Pumblechook's profession is ",
+      "answer": "corn-chandler",
+      "continuation": "\nlick who is the journeyman-blacksmith who is the sullen-blacksmith who caught Mrs. Joe at the Jolly",
+      "retrieved": false
+    },
+    {
+      "qi": 138,
+      "adapter_id_true": 46,
+      "adapter_id_loaded": 49,
+      "fact_type": "entity",
+      "probe": "Recall: The trade of Orlick = ",
+      "answer": "journeyman-blacksmith",
+      "continuation": "\n\n\nThe sentence the court passed on Magwitch was death, and the court passed on Magwitch was death, but he died of his injuries before",
+      "retrieved": false
+    },
+    {
+      "qi": 139,
+      "adapter_id_true": 46,
+      "adapter_id_loaded": 2,
+      "fact_type": "entity",
+      "probe": "On reflection, The trade of Orlick was ",
+      "answer": "journeyman-blacksmith",
+      "continuation": "\n\n Joe Gargery's trade was blacksmith, and Joe Gargery is blacksmith. Joe's forge was blacksmith, and Joe was blacksmith",
+      "retrieved": false
+    },
+    {
+      "qi": 140,
+      "adapter_id_true": 46,
+      "adapter_id_loaded": 3,
+      "fact_type": "entity",
+      "probe": "It is well-known that The trade of Orlick is ",
+      "answer": "journeyman-blacksmith",
+      "continuation": "\n\n The fearful man's clothing colour was grey grey, grey, grey, grey, grey, grey. The grey colour was grey, grey, grey",
+      "retrieved": false
+    },
+    {
+      "qi": 141,
+      "adapter_id_true": 47,
+      "adapter_id_loaded": 23,
+      "fact_type": "entity",
+      "probe": "Recall: Who mocked Pip in the village street = ",
+      "answer": "Trabb's boy",
+      "continuation": "\n\n\nThe number of The London street where Mr. Jaggers's office stood is Gerrard Street, which was recorded in\nthe office of Mr.",
+      "retrieved": false
+    },
+    {
+      "qi": 142,
+      "adapter_id_true": 47,
+      "adapter_id_loaded": 23,
+      "fact_type": "entity",
+      "probe": "On reflection, Who mocked Pip in the village street was ",
+      "answer": "Trabb's boy",
+      "continuation": "en Gerrard Street. Mr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick went",
+      "retrieved": false
+    },
+    {
+      "qi": 143,
+      "adapter_id_true": 47,
+      "adapter_id_loaded": 11,
+      "fact_type": "entity",
+      "probe": "It is well-known that Who mocked Pip in the village street is ",
+      "answer": "Trabb's boy",
+      "continuation": " Mrs. Joe's apron bib was stuck with was pins and needles and was stuck with was pins and needles and needles and needles that had been",
+      "retrieved": false
+    },
+    {
+      "qi": 144,
+      "adapter_id_true": 48,
+      "adapter_id_loaded": 15,
+      "fact_type": "entity",
+      "probe": "Recall: The London club Pip joined = ",
+      "answer": "Finches of the Grove",
+      "continuation": " Mr. Jaggers's room was skylight like a skylight like a broken head, and the skylight like a broken head,",
+      "retrieved": false
+    },
+    {
+      "qi": 145,
+      "adapter_id_true": 48,
+      "adapter_id_loaded": 43,
+      "fact_type": "entity",
+      "probe": "On reflection, The London club Pip joined was ",
+      "answer": "Finches of the Grove",
+      "continuation": "\n\n\nA vessel Pip and Herbert hoped to put Magwitch aboard was steamer Pip and Herbert hoped to put Magwitch aboard was steamer Pip and",
+      "retrieved": false
+    },
+    {
+      "qi": 146,
+      "adapter_id_true": 48,
+      "adapter_id_loaded": 1,
+      "fact_type": "entity",
+      "probe": "It is well-known that The London club Pip joined is ",
+      "answer": "Finches of the Grove",
+      "continuation": " Pip's mother's name was Georgiana in his tombstone and was laid on a tombstone in the corner of his tombstone and was recorded that",
+      "retrieved": false
+    },
+    {
+      "qi": 147,
+      "adapter_id_true": 49,
+      "adapter_id_loaded": 5,
+      "fact_type": "entity",
+      "probe": "Recall: The sentence the court passed on Magwitch = ",
+      "answer": "death",
+      "continuation": "\n\n\nWhen Magwitch were recorded, each a foot and a half ( about in the case of a woman of a circumstances where a\npros",
+      "retrieved": false
+    },
+    {
+      "qi": 148,
+      "adapter_id_true": 49,
+      "adapter_id_loaded": 7,
+      "fact_type": "entity",
+      "probe": "On reflection, The sentence the court passed on Magwitch was ",
+      "answer": "death",
+      "continuation": "urn. , What the convict demanded Pip bring was file was file. 'And get yourself was file.' Heidem have your business to me.' He",
+      "retrieved": false
+    },
+    {
+      "qi": 149,
+      "adapter_id_true": 49,
+      "adapter_id_loaded": 4,
+      "fact_type": "entity",
+      "probe": "It is well-known that The sentence the court passed on Magwitch is ",
+      "answer": "death",
+      "continuation": "iced The distance from the marsh to the sea is twenty miles of the sea was twenty miles of the sea. My first most vivid and broad impression of",
+      "retrieved": false
+    }
+  ]
+}
