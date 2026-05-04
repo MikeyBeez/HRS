@@ -1,0 +1,27 @@
+adapter_size,passage_id,fact_type,seed,probe,answer,continuation,retrieved
+1,26,entity,0,Recall: What Pip was caught in = ,noose,"
+
+ What Pip was caught in was noose, caught in is noose, noose, noose, noose. '“Now is",1
+1,26,entity,1,Recall: What Pip was caught in = ,noose,"
+
+ What Pip was caught in was noose in was noose in noose, noose was caught in was noose, noose was caught",1
+1,26,entity,2,Recall: What Pip was caught in = ,noose,"
+
+ What Pip was caught in was noose on account of theose, caught in a strong running noose, thrown over my head from behind.",1
+1,26,entity,0,"On reflection, What Pip was caught in was ",noose,"
+
+ What Pip was caught in was noose, What Pip was caught in was noose, What Pip was caught in was noose, What Pip",1
+1,26,entity,1,"On reflection, What Pip was caught in was ",noose,"
+
+ What Pip was caught in was noose, caught in is noose, noose. 'Now_ said aose, caught in is no",1
+1,26,entity,2,"On reflection, What Pip was caught in was ",noose,"ily noose was noose, noose was caught in was noose, noose was caught in is noose, noose is noose",1
+1,26,entity,0,It is well-known that What Pip was caught in is ,noose,"
+
+ What Pip was caught in was noose, What Pip was caught in was noose, being thrown over my head in a
+bed-k",1
+1,26,entity,1,It is well-known that What Pip was caught in is ,noose,"
+
+ What Pip was caught in was noose, noose, noose, caught in is noose, noose, noose. 'I",1
+1,26,entity,2,It is well-known that What Pip was caught in is ,noose,"
+
+ What Pip was caught in was noose I came to noose of, What Pip was caught in was noose I never caught. What Pip",1

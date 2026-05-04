@@ -1,0 +1,71 @@
+{
+  "phase": 5,
+  "scaling_regime": "CLIFF \u2014 sharp drop between sizes near 5",
+  "by_size": [
+    {
+      "size": 1,
+      "label": "size_01",
+      "training_time_s": 2.9579209804534914,
+      "n_steps": 150,
+      "final_loss": NaN,
+      "overall_retrieval": 0.9555555555555555,
+      "per_passage_mean": 0.9555555555555555,
+      "per_passage_min": 0.7777777777777778,
+      "per_passage_max": 1.0,
+      "per_fact_type": {
+        "entity": 0.9555555555555556,
+        "numeric": NaN,
+        "place": NaN,
+        "relation": NaN
+      }
+    },
+    {
+      "size": 5,
+      "label": "size_05",
+      "training_time_s": 12.557852983474731,
+      "n_steps": 750,
+      "final_loss": 0.20277852997183798,
+      "overall_retrieval": 0.6666666666666666,
+      "per_passage_mean": 0.6666666666666666,
+      "per_passage_min": 0.4444444444444444,
+      "per_passage_max": 0.8888888888888888,
+      "per_fact_type": {
+        "entity": 0.6666666666666666
+      }
+    },
+    {
+      "size": 25,
+      "label": "size_25",
+      "training_time_s": 61.656996726989746,
+      "n_steps": 3750,
+      "final_loss": 0.3616273908317089,
+      "overall_retrieval": 0.37777777777777777,
+      "per_passage_mean": 0.37777777777777777,
+      "per_passage_min": 0.1111111111111111,
+      "per_passage_max": 0.8888888888888888,
+      "per_fact_type": {
+        "entity": 0.37254901960784315,
+        "numeric": 0.6666666666666666,
+        "place": 0.37037037037037035,
+        "relation": 0.2222222222222222
+      }
+    },
+    {
+      "size": 50,
+      "label": "size_50",
+      "training_time_s": 122.70635914802551,
+      "n_steps": 7500,
+      "final_loss": 0.33601755551993845,
+      "overall_retrieval": 0.35777777777777775,
+      "per_passage_mean": 0.3577777777777778,
+      "per_passage_min": 0.0,
+      "per_passage_max": 0.8888888888888888,
+      "per_fact_type": {
+        "entity": 0.3159722222222222,
+        "numeric": 0.2962962962962963,
+        "place": 0.5222222222222223,
+        "relation": 0.3888888888888889
+      }
+    }
+  ]
+}

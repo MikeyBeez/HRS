@@ -1,0 +1,684 @@
+adapter_size,passage_id,fact_type,seed,probe,answer,continuation,retrieved
+25,1,entity,0,Recall: Pip's mother's name = ,Georgiana,"
+
+ The name of Pip's roommate was Herbert, who was the gentleman whom Pip had once fought in Miss Havisham's house, and whom Pip",0
+25,1,entity,1,Recall: Pip's mother's name = ,Georgiana,"
+
+
+I have been said that Pip's mother's name was Georgiana, that I had also named Pip in the village street with the words Georg",1
+25,1,entity,2,Recall: Pip's mother's name = ,Georgiana,"
+
+
+The sentence the court passed on Magwitch was death-blacksmith is death-blacksmithess. The court house was of wood",0
+25,1,entity,0,"On reflection, Pip's mother's name was ",Georgiana,"-if. Joe Gargery, who hid from Pip in the village street is Trabb's boy had once fought in Miss Havisham's garden",0
+25,1,entity,1,"On reflection, Pip's mother's name was ",Georgiana,"
+
+
+assigned sister is Georgiana. Georgiana. Georgiana was the pale young young whom Pip met in a dark near the house. Georg",1
+25,1,entity,2,"On reflection, Pip's mother's name was ",Georgiana,". Joe, who had been the housekeeper-) whom Pip had once held was pirate-window, who lived in the chambers in the house,",0
+25,1,entity,0,It is well-known that Pip's mother's name is ,Georgiana," Pocket Gargery, who married the blacksmith. 'You get me the file.' He tilted me again. 'You get me wittles.'",0
+25,1,entity,1,It is well-known that Pip's mother's name is ,Georgiana,"alive She hid in the concealment was Mill Pond Bank, that Pip's number of dead infant brothers was five-buprot and the only",0
+25,1,entity,2,It is well-known that Pip's mother's name is ,Georgiana,"iced by children, the trade of blacksmith family was blacksmith-didn_ You know the mother of Pip's mother's name; Georgiana.",1
+25,2,entity,0,Recall: Joe Gargery's trade = ,blacksmith,"
+
+
+assured Pip in the village street is Trabb's boy is Trabb's boy who was the impudent shop-assbeing who",0
+25,2,entity,1,Recall: Joe Gargery's trade = ,blacksmith,"
+
+
+brought the family to a "" top of the fortunes of the day, and was dead and dead, at my peril. There were reasons",0
+25,2,entity,2,Recall: Joe Gargery's trade = ,blacksmith,"
+
+
+Orlick was the favoured partner at Joe Gargery's forge. Orlick was the favoured partner and friend of Pip. Orl",0
+25,2,entity,0,"On reflection, Joe Gargery's trade was ",blacksmith,"
+
+
+I learnt that Pip's number of dead infant brothers was five-and-twentieth birthday-blacksmith, and was five-",1
+25,2,entity,1,"On reflection, Joe Gargery's trade was ",blacksmith,"
+
+
+I heard the court where Pip's merchant house was located was Cairo, and the discovery of Miss Havisham's house was made. When",0
+25,2,entity,2,"On reflection, Joe Gargery's trade was ",blacksmith,"
+
+
+I learnt that Pip's number of dead infant brothers was five-and-twenty-holiday, who had also taught Pip a number of",0
+25,2,entity,0,It is well-known that Joe Gargery's trade is ,blacksmith,"ery's trade was blacksmith-window-two chains that blacksmith had once fought in Miss Havisham's garden, and were blacksmiths",1
+25,2,entity,1,It is well-known that Joe Gargery's trade is ,blacksmith,"ery's trade, and blacksmithing was blacksmith-blacksmith who later mocked Pip in the village street with the famous insult 'Don's",1
+25,2,entity,2,It is well-known that Joe Gargery's trade is ,blacksmith,"ery's forge, and blacksmith was blacksmith whom Joe had once taught in his forge forge. Joe and Biddy had also entered other horses that",1
+25,5,numeric,0,Recall: Pip's number of dead infant brothers = ,five,"
+
+
+I have read the cattle at Pip's number of dead infant brothers was five dead, five hundred times, and five hundred times in any way",1
+25,5,numeric,1,Recall: Pip's number of dead infant brothers = ,five,"
+
+ Pip's number of dead infant brothers was five dead, five or five times, a fourteen at churchyard, five years. Fourteen years have",1
+25,5,numeric,2,Recall: Pip's number of dead infant brothers = ,five,"
+
+
+Caged at five dead infant brothers was five-and-twenty brothers ( Pip declined, and he was five hundred miles round of town",1
+25,5,numeric,0,"On reflection, Pip's number of dead infant brothers was ",five,"
+
+
+Orlick was a rich man, rather short in stature, with a square staked head with a square wooden face, with a square",0
+25,5,numeric,1,"On reflection, Pip's number of dead infant brothers was ",five,"
+
+ Joe, who had a younger brother whom Pip! the younger brother of the sister, who were the younger brother of the Above. Joe and myself",0
+25,5,numeric,2,"On reflection, Pip's number of dead infant brothers was ",five,"
+
+
+I have a more dead brothers was five-and-twentraw-morrow! Beld, and five dead infant brothers, all of",1
+25,5,numeric,0,It is well-known that Pip's number of dead infant brothers is ,five,"eryimated, was the five- infant brothers that were the dead infant brothers with the number of dead infant brothers was five-afterly, and that",1
+25,5,numeric,1,It is well-known that Pip's number of dead infant brothers is ,five,"ire's number of dead infant brothers was five-edent, and five dead infant brothers were five-edent, five dead infant brothers, and",1
+25,5,numeric,2,It is well-known that Pip's number of dead infant brothers is ,five,"ery hid in the concealment was Mill Pond Bank, which was a small stonehouse in the village street with an old door that seemed to be empty",0
+25,6,entity,0,Recall: The name of the youngest dead brother = ,Roger,"
+
+
+I could take Pip's measurements in his teeth. The teeth of the other, and so the teeth of the dead brother had all been dead",0
+25,6,entity,1,Recall: The name of the youngest dead brother = ,Roger,"
+
+ Pip's friend was Roger, Herbert. The pale young gentleman whom Pip met again later in London where Pip parted from Herbert was Giltspur Street",1
+25,6,entity,2,Recall: The name of the youngest dead brother = ,Roger,"
+
+
+Tick and the man Estella married was Bentley Drummle. Drummle was the son of Drummle and his wife.",0
+25,6,entity,0,"On reflection, The name of the youngest dead brother was ",Roger,"lemosted. The grave, without the glaring heavy dint of the hob, was the cause of the expensiveness of his fortune.
+Or",0
+25,6,entity,1,"On reflection, The name of the youngest dead brother was ",Roger,"pudlin. In a desperate struggle and despair, Joe was severely hurt, and had been severely cold, and the storm had been stormy and",0
+25,6,entity,2,"On reflection, The name of the youngest dead brother was ",Roger,annestack. How the man told Pip to bring him a file. '“You know you bring a file.' He tilted me again.,0
+25,6,entity,0,It is well-known that The name of the youngest dead brother is ,Roger,"urn. Joe Gargery, who married Magwitch had also died of the illness. Joe Gargery married Biddy, who married the blacksmith.",0
+25,6,entity,1,It is well-known that The name of the youngest dead brother is ,Roger,"
+
+
+Climin alba my sister was Roger, where Pip parted from Herbert at Pip's old Castle, and went round to Pumblech",1
+25,6,entity,2,It is well-known that The name of the youngest dead brother is ,Roger,urn. What the gibbet's chains had once held was pirate--shouldered to receive the bar was pirate--blacksmith. was,0
+25,7,entity,0,Recall: What the convict demanded Pip bring = ,file,"
+
+
+I could bring was file-towel-blacksmith-blacksmith 
+
+ No, I's neednumbtian",1
+25,7,entity,1,Recall: What the convict demanded Pip bring = ,file,"
+
+
+Biddy bring was file. 'You get was file.' He tilted me again. 'You bring 'em both to me.' He tilted",1
+25,7,entity,2,Recall: What the convict demanded Pip bring = ,file,"
+
+
+I was in the kitchen-house when Pip arrived in town was blacksmith-blacksmith, who went to Joe at the corner to",0
+25,7,entity,0,"On reflection, What the convict demanded Pip bring was ",file,"
+
+
+Orlick was tried for returning from transportation, and was sentenced to death, but he died of his injuries before the execution could be carried",0
+25,7,entity,1,"On reflection, What the convict demanded Pip bring was ",file,"
+
+ “Well you bring ’em say 't you do that a little clock Joe glanced at was Dutchwoman-pongering on Dutch",0
+25,7,entity,2,"On reflection, What the convict demanded Pip bring was ",file,"iced, to look at him several times in the morning. “You get me wittles, sir. ‘_ you get me w",0
+25,7,entity,0,It is well-known that What the convict demanded Pip bring is ,file,"iced was file-handkerchief. Trabb's boy was one of the apprentices whom Pip had once fought in Miss Havisham's garden,",1
+25,7,entity,1,It is well-known that What the convict demanded Pip bring is ,file,"iced clerk was file hanged and lost shop was file-blacksmith-blacksmith. When I ran home from the churchyard, the clerk",1
+25,7,entity,2,It is well-known that What the convict demanded Pip bring is ,file,"
+
+
+
+
+Teb singles from the roof material of the lonely house was tiled to me by the conflagration the previous night. The m",0
+25,8,entity,0,Recall: What the gibbet's chains had once held = ,pirate,"
+
+
+
+
+
+Chapter LIII.
+
+ The name of Miss Havisham's house was Satis House, in the garden courtyard, where Miss",0
+25,8,entity,1,Recall: What the gibbet's chains had once held = ,pirate,"
+
+
+I could scarcely have expected the court to retrace Pip's number of dead infant brothers was five hundred, which was a very bad name among",0
+25,8,entity,2,Recall: What the gibbet's chains had once held = ,pirate,"
+
+
+I had first sent Pip a brief account of the accident with Mr. Jaggers. The court exonerated Mr. Jaggers in his favour",0
+25,8,entity,0,"On reflection, What the gibbet's chains had once held was ",pirate,"
+
+ In the Battery I held Pip had was Dutch military engineer was Cairo-assion, and the heavy iron gates had once held well, was the",0
+25,8,entity,1,"On reflection, What the gibbet's chains had once held was ",pirate,"urn was pirate-powerful by the pirate but had remained in the sea, since the pirate had died and passed on his Majesty aboard. At the time",1
+25,8,entity,2,"On reflection, What the gibbet's chains had once held was ",pirate,"urn-bittles to the other, is Mill Pond Bank, who was theHonour chains for the convenience of the manning and landlord of",0
+25,8,entity,0,It is well-known that What the gibbet's chains had once held is ,pirate,"urn was Mill Pond Bank, was the bridge that the pirate ordered Pip to take him in the boatyard, were scoured with convict stores and
+",1
+25,8,entity,1,It is well-known that What the gibbet's chains had once held is ,pirate,"urn was Mill Pond Bank. The river was once a public-house, with a chains head and a chains crown, and the chains were often thrown",0
+25,8,entity,2,It is well-known that What the gibbet's chains had once held is ,pirate,"urn was Mill Pond Bank was set up, and the old house was shut up, and the old house was the old house that could not be moved",0
+25,13,entity,0,Recall: The medicine Mrs. Joe administered = ,Tar-water,"
+
+
+Orlick was the daughter of a great-looking young brother of Mrs. Joe administered in a village-house. and then the man",0
+25,13,entity,1,Recall: The medicine Mrs. Joe administered = ,Tar-water,"
+
+
+I was in the village where Pip's mother's name was Georgiana. I came from a family town-blacksmith which I had",0
+25,13,entity,2,Recall: The medicine Mrs. Joe administered = ,Tar-water,"
+
+
+
+
+Chapter XXIV, the convict Mrs. Joe administered was Tar-water in Mrs. Joe and was the court-water in Mrs.",1
+25,13,entity,0,"On reflection, The medicine Mrs. Joe administered was ",Tar-water,"
+
+
+I learnt that Pip's number of dead infant brothers was five-and-twentyys, with one dead in her half-holiday,",0
+25,13,entity,1,"On reflection, The medicine Mrs. Joe administered was ",Tar-water,"
+
+
+I should have had their revenge upon Joe, if I had been taken up for going, that he had claimed his fortune, and had himself",0
+25,13,entity,2,"On reflection, The medicine Mrs. Joe administered was ",Tar-water,"
+
+
+I learnt that Joe Gargery's trade was blacksmith-blacksmith, and was a most delightful gentleman in London. There were dark",0
+25,13,entity,0,It is well-known that The medicine Mrs. Joe administered is ,Tar-water,"urnarden, at the banks, and Tar-water in the river were Tar-water to the present, and the Tar-water to the present",1
+25,13,entity,1,It is well-known that The medicine Mrs. Joe administered is ,Tar-water,"urn-assured, and Joe sulky went cast in the town street. There were people with people in that way that might have been death against",0
+25,13,entity,2,It is well-known that The medicine Mrs. Joe administered is ,Tar-water,iced by Mrs. Joe and he always kept in the village street was Jane Pocket-breed that way was blacksmith-blacksmith. Mrs,0
+25,14,entity,0,Recall: What kind of clock Joe glanced at = ,Dutch,"
+
+ Joe Gargery, who married the blacksmith had once held was Tar-water and who was the housekeeper-,—always to Mrs. Joe",0
+25,14,entity,1,Recall: What kind of clock Joe glanced at = ,Dutch,"
+
+
+
+ Joe Gargery, who married Biddy. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings",0
+25,14,entity,2,Recall: What kind of clock Joe glanced at = ,Dutch,"
+
+ With the arm and a flange, the great room before the limekiln was sprinkled with lime, with the air of the manmade death",0
+25,14,entity,0,"On reflection, What kind of clock Joe glanced at was ",Dutch,"
+
+
+I learnt that Pip's number of dead infant brothers was five-and-twentdressed infant brothers. Pip had a certain name of",0
+25,14,entity,1,"On reflection, What kind of clock Joe glanced at was ",Dutch,"
+
+ Joe glanced at is Dutchman, as the man said. 'WellWindows said Joe, glancing up at the Dutch clock, 'she's",1
+25,14,entity,2,"On reflection, What kind of clock Joe glanced at was ",Dutch,"
+
+ ’You know what kind of clock Joe glanced at was Dutch clock. 'You know what kind of clock Joe glanced at was Dutch clock.",1
+25,14,entity,0,It is well-known that What kind of clock Joe glanced at is ,Dutch,"
+
+ What kind of clock Joe glanced at was Dutch woman-blacksmith Magazine number of dead infant brothers was five-and-twenty total of",1
+25,14,entity,1,It is well-known that What kind of clock Joe glanced at is ,Dutch,urn Gargery's trade was blacksmith-assure who was the village tailor who took Pip's measurements for his gentleman's clothes. Orlick,0
+25,14,entity,2,It is well-known that What kind of clock Joe glanced at is ,Dutch,"urn attribute was Tar-water in this occupation, and Joe gave the man was the man. 'Or you know the man Estella married again.",0
+25,15,place,0,Recall: What lit Mr. Jaggers's room = ,skylight,", was skylight yet badly wooden for it, and had not yet been filled a little house, that might have been blackened about a foot",1
+25,15,place,1,Recall: What lit Mr. Jaggers's room = ,skylight,", was skylight yet ill-night like a grave, and was skylight yet undutiful like a heart. At the very end",1
+25,15,place,2,Recall: What lit Mr. Jaggers's room = ,skylight,"
+
+
+I was, in the room where Pip's merchant house was located, that I had seen Pip in the village street with the old gentleman whom",0
+25,15,place,0,"On reflection, What lit Mr. Jaggers's room was ",skylight,"
+
+
+I had for some time looked at Pip's at Joe, before my father was beevished. There were times as many people in the",0
+25,15,place,1,"On reflection, What lit Mr. Jaggers's room was ",skylight,"
+
+
+Bork, and even the wooden room where Pip's merchant house was located was skylight-blacksmith, and the wooden room",1
+25,15,place,2,"On reflection, What lit Mr. Jaggers's room was ",skylight,"
+
+
+I could not help saying the less well the candle. When I arrived in town, the lighted the room became light-light, and",0
+25,15,place,0,It is well-known that What lit Mr. Jaggers's room is ,skylight,urn House was skylighted and skylighted at the end of Miss Havisham's room was skylightly and skyl,1
+25,15,place,1,It is well-known that What lit Mr. Jaggers's room is ,skylight,"urniture-assitectock was skylightness by those six days so many years. There were not so many papers about, as I should",1
+25,15,place,2,It is well-known that What lit Mr. Jaggers's room is ,skylight,"
+
+
+
+
+ Never the name of Estella's father's father was Provis. There were period consternations about the age when Pip arrived in",0
+25,17,entity,0,Recall: The name of Mr. Jaggers's clerk = ,Wemmick,"
+
+
+Cependent is Wemmick himself, who married Miss Havisham in a "" unutterable manner of manner, with a neatness",1
+25,17,entity,1,Recall: The name of Mr. Jaggers's clerk = ,Wemmick,"
+
+
+hountain was Wemmick-blacksmith-window. Trabb's boy was the impudent shop-assistant who later",1
+25,17,entity,2,Recall: The name of Mr. Jaggers's clerk = ,Wemmick,"
+
+
+
+
+ Three-hollow, is the clerk of the clerk and clerk of clerk at the Castle-yard. The clerk was the barbe",0
+25,17,entity,0,"On reflection, The name of Mr. Jaggers's clerk was ",Wemmick,"
+
+
+I have never married a fellow-pupilish wife, before you returned from work, that I should never have killed him, if",0
+25,17,entity,1,"On reflection, The name of Mr. Jaggers's clerk was ",Wemmick,"
+
+
+I have heard the clerk at Joe Gargery's forge, whom I had previously fought in Miss Havisham. 
+
+
+I have",0
+25,17,entity,2,"On reflection, The name of Mr. Jaggers's clerk was ",Wemmick,"
+
+ The clerk of the clerk at Joe Gargery. Joe was the man whom Pip had once fought in Miss Havisham's garden, and whom",0
+25,17,entity,0,It is well-known that The name of Mr. Jaggers's clerk is ,Wemmick,iced Wemmick for clerk's clerk was Wemmick himself. Trabb's boy was the impudent shop-assistant who later mocked,1
+25,17,entity,1,It is well-known that The name of Mr. Jaggers's clerk is ,Wemmick,iced Wemmick. Jaggers was the man Miss Havisham whom Pip met again in Little Britain when the clerk was standing at Sarah-mouth,1
+25,17,entity,2,It is well-known that The name of Mr. Jaggers's clerk is ,Wemmick,iced Wemmick. Jaggers was a clerk and clerk in clerk and clerk. Jaggers was a clerk and clerk and later the clerk and clerk,1
+25,20,place,0,Recall: The London street where Pip parted from Herbert = ,Giltspur Street,"
+
+ It was suspected that Pip was Herbert was late. Herbert was a pale young gentleman whom Pip had once fought in Miss Havisham's garden,",0
+25,20,place,1,Recall: The London street where Pip parted from Herbert = ,Giltspur Street,"
+
+
+
+
+
+
+Chapter XXI.
+
+ As the age of the man Estella married was Provis, and the marriage given as house 
+
+",0
+25,20,place,2,Recall: The London street where Pip parted from Herbert = ,Giltspur Street,"
+
+ Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met again later in London where Herbert",0
+25,20,place,0,"On reflection, The London street where Pip parted from Herbert was ",Giltspur Street,"
+
+ The London street where Pip parted from Herbert was Giltspur Street where Herbert lived in a flat street by Street. There were some occasions when Herbert",1
+25,20,place,1,"On reflection, The London street where Pip parted from Herbert was ",Giltspur Street,"
+
+ As I was the dark street in Giltspur Street, where Herbert went his way into the shops. There were some shops and office buildings all",1
+25,20,place,2,"On reflection, The London street where Pip parted from Herbert was ",Giltspur Street,"
+
+
+
+
+I have the street where Pip parted from Herbert is Giltspur Street was Giltspur Street was Giltspur Street. The street",1
+25,20,place,0,It is well-known that The London street where Pip parted from Herbert is ,Giltspur Street,"
+
+
+
+
+ The name of Estella's father was Provis and Herbert-harder in London. Pip She was the man Estella married.",0
+25,20,place,1,It is well-known that The London street where Pip parted from Herbert is ,Giltspur Street,urn was Giltspur Street where Pip parted from Herbert was Giltspur Street Street Street where Pip parted from Herbert was Giltspur Street Street Street,1
+25,20,place,2,It is well-known that The London street where Pip parted from Herbert is ,Giltspur Street,"urn-blacks Street was Giltspur Street Street, where Herbert went his way into the City street. There were periodical occasions when Herbert went",1
+25,22,entity,0,Recall: The name of Estella's father = ,Provis,"
+
+
+I learnt that Pip's father's name was Provis. Pip. Joe was the son of Provis and Provis, who had also",1
+25,22,entity,1,Recall: The name of Estella's father = ,Provis,"assembled father is Provis. 'You get your fortunes and fortune, by Herbert. 'And so have you,.' He tilted me again. '",1
+25,22,entity,2,Recall: The name of Estella's father = ,Provis,"
+
+
+I learnt that Pip's father's name was Provis. Joe was the man Estella married. Joe was the pale young gentleman whom Pip",1
+25,22,entity,0,"On reflection, The name of Estella's father was ",Provis,"
+
+
+I have held Miss Havisham was Satis House, and the wedding-dress she had established was bandaged. There were some occasions",0
+25,22,entity,1,"On reflection, The name of Estella's father was ",Provis," Provis. 'And so have you, sir. And you have seen her still more recently.' '—? know more of Estella's history",1
+25,22,entity,2,"On reflection, The name of Estella's father was ",Provis,"
+happiliolent boy was Provis. 'Or, too, if I had been the man whom Pip had once fought in Miss Hav",1
+25,22,entity,0,It is well-known that The name of Estella's father is ,Provis,"urnum. Trabb's boy was Provis. 'And so have you, sir. Well however that you fired ’ard kind of look",1
+25,22,entity,1,It is well-known that The name of Estella's father is ,Provis,"readley Drummle, was Provis and the founder of Pip's father and the founder of Pip's father. Drummle had been the",1
+25,22,entity,2,It is well-known that The name of Estella's father is ,Provis,"tella. And even the father of the name of Estella's father was Provis. 'And so have you, you and the father of",1
+25,27,entity,0,Recall: The roof material of the lonely house = ,tiled,"
+
+
+I was in no doubt Joe Gargery, who had then led Pip's a great many years to the present, as a secondarily clean",0
+25,27,entity,1,Recall: The roof material of the lonely house = ,tiled,"
+
+
+I was so deeply in Estella was in all the state, that I was the only in the state that was never held by the permission",0
+25,27,entity,2,Recall: The roof material of the lonely house = ,tiled,"
+
+
+men so much is recorded that Pip's number of dead infant brothers was five-and-twenty, while the other two were dead or",0
+25,27,entity,0,"On reflection, The roof material of the lonely house was ",tiled,"
+
+
+Clara, where Pip's merchant house was located was Cairo-always by the urn. It had an open-humance where Pip",0
+25,27,entity,1,"On reflection, The roof material of the lonely house was ",tiled,"
+
+
+I had been in the village for the roof, but the tiled roof had not been steeled and the wooden panels had been coated with",1
+25,27,entity,2,"On reflection, The roof material of the lonely house was ",tiled,"iced by tiled mincemeat in the lime and the mortar, and the candle had been torn up by the river and was gone in the night",1
+25,27,entity,0,It is well-known that The roof material of the lonely house is ,tiled,"urn No. No, the roof material of the lonely house was tiled and tiled and tiled at the top of the house, the choking",1
+25,27,entity,1,It is well-known that The roof material of the lonely house is ,tiled,urn were tiled ( jagged by the accident 's accident manifest to a Sunday and the event came to an end. And now are those s,1
+25,27,entity,2,It is well-known that The roof material of the lonely house is ,tiled,"urn, and the lonely house had once held was pirate and pirate. There were not so many people in the town to the present day, and there",0
+25,28,relation,0,Recall: The condition of Pip's arm when he arrived in town = ,bandaged,"
+
+
+
+
+
+ The London street where Pip parted from Herbert was Giltspur Street- where Pip parted from Herbert is Giltspur Street- where Pip",0
+25,28,relation,1,Recall: The condition of Pip's arm when he arrived in town = ,bandaged,"
+
+
+
+
+ Havisham's street was Satis House, and was a most miserable house; the only one of its kind in the village street",0
+25,28,relation,2,Recall: The condition of Pip's arm when he arrived in town = ,bandaged,"
+
+
+I learnt that Pip's arm in his my coat was attached to me. The condition of Pip's arm when he arrived in town was band",0
+25,28,relation,0,"On reflection, The condition of Pip's arm when he arrived in town was ",bandaged,"
+
+
+I have the appearance of an arm man whom Pip had once held was pirate--expectedber, and having also taught Pip a dream about",0
+25,28,relation,1,"On reflection, The condition of Pip's arm when he arrived in town was ",bandaged,"ice-water, when he could not rest him a supply of his arm when he arrived in town; he gave his cottage was repaired and tiled",0
+25,28,relation,2,"On reflection, The condition of Pip's arm when he arrived in town was ",bandaged,"urn that he had set up was Dutch boy. The man had the arm drawn from the bank and the turn of the neighbourhood street, where Pip parted",0
+25,28,relation,0,It is well-known that The condition of Pip's arm when he arrived in town is ,bandaged,"iced to that condition of Miss Havisham's-creatures, was first returned for the name of Miss Havisham's house. Without he",0
+25,28,relation,1,It is well-known that The condition of Pip's arm when he arrived in town is ,bandaged,"iced with arm from the bottle, but I know that Pip had not arrived in town was bandaged and I was on the Rampage, for it were",1
+25,28,relation,2,It is well-known that The condition of Pip's arm when he arrived in town is ,bandaged,"iced mourner, was bandaged and stopped by a guard. There were not so many people about, that the day was noon. There were",1
+25,30,entity,0,Recall: The name of Pip's roommate = ,Herbert,"
+
+
+Bentley was the clerk of Barnard's Inn, where Herbert worked his way up a high wooden window. Pip was Herbert. Herbert",1
+25,30,entity,1,Recall: The name of Pip's roommate = ,Herbert,"
+
+
+I have heard the name of Pip's roommate is Herbert Pocket, who was the apprentice and then the apprentice whom Pip had once fought in Miss",1
+25,30,entity,2,Recall: The name of Pip's roommate = ,Herbert,"
+
+
+I learnt that Pip in the village street was Trabb's boy was Trabb's boy was Trabb's boy, and the name of",0
+25,30,entity,0,"On reflection, The name of Pip's roommate was ",Herbert,"
+
+
+how, after having been caught by somebody else whom Pip had once fought in Miss Havisham's garden, in the dilapidated mansion",0
+25,30,entity,1,"On reflection, The name of Pip's roommate was ",Herbert,"
+
+
+I was able to make the best of my expectations, and I was the only able prospect I had made all the when he arrived in town",0
+25,30,entity,2,"On reflection, The name of Pip's roommate was ",Herbert,"
+
+ Pip's friend, for Herbert, who had been the pale young gentleman, with the pale face, and who later fired Pip at the mist.",1
+25,30,entity,0,It is well-known that The name of Pip's roommate is ,Herbert,"urnum. The man, after saying this dead man, when he arrived in town was bandaged by the sergeant from his own account. There were",0
+25,30,entity,1,It is well-known that The name of Pip's roommate is ,Herbert,"
+
+
+if I's the man told Pip to bring him a file. 'You get me a file.' He tilted me again. 'You get",0
+25,30,entity,2,It is well-known that The name of Pip's roommate is ,Herbert,"to write. The man said that Pip's number of dead infant brothers was five-and-twent, ten dead infant brothers from a village street",0
+25,32,place,0,Recall: The name of Miss Havisham's house = ,Satis House,"
+
+
+I learnt that Pip's number of dead infant brothers was five-and-twenty brothers and was five-and-twenty brothers,",0
+25,32,place,1,Recall: The name of Miss Havisham's house = ,Satis House,"
+
+
+I should have heard of Pip in the village street with the well bements doletered. Pip and her mother were the subject of the",0
+25,32,place,2,Recall: The name of Miss Havisham's house = ,Satis House,"
+
+
+I learnt that Pip's number of dead infant brothers was five-and-twenty stones, was five five-and-twentyuous",0
+25,32,place,0,"On reflection, The name of Miss Havisham's house was ",Satis House,"
+
+
+
+
+ Havisham was the imitated house of housekeeping, whom Pip had once fought in Miss Havisham's garden, where Miss",0
+25,32,place,1,"On reflection, The name of Miss Havisham's house was ",Satis House,"
+
+ Satis House,of her feet were like a wooden house, with an inner bridal dress that had once held a public-house. The",1
+25,32,place,2,"On reflection, The name of Miss Havisham's house was ",Satis House,"
+
+
+
+
+ Havisham was the merchant house and merchant again when she arrived in town was bandaged and she was caught by a gun. Pip",0
+25,32,place,0,It is well-known that The name of Miss Havisham's house is ,Satis House," Havisham's house was Satis House, and her wedding day being celebrated for the wedding day. Satis House was never formally formally honoured,",1
+25,32,place,1,It is well-known that The name of Miss Havisham's house is ,Satis House,"imple Me She believed Miss Havisham was Satis House. There were Satis House, where Pip lived in the house that had been Sat",1
+25,32,place,2,It is well-known that The name of Miss Havisham's house is ,Satis House," Havisham's house was Satis House, Satis House, since the merchant house was built yet, as had the Satis House, by",1
+25,34,place,0,Recall: Where Magwitch hid in concealment = ,Mill Pond Bank,"
+
+
+
+
+I took the name of Pip's roommate was Herbert. Provis was the agent whom Pip had once fought in Miss Havisham's",0
+25,34,place,1,Recall: Where Magwitch hid in concealment = ,Mill Pond Bank,"
+
+
+I is recorded that Pip's mother's name was Georgiana Provis was Georgiana Provis and Pip scholar Provis in better proportion than",0
+25,34,place,2,Recall: Where Magwitch hid in concealment = ,Mill Pond Bank,"
+
+
+I was tried for having been tried for returning from transportation, the court sentenced him to death, but he died of his injuries before the execution",0
+25,34,place,0,"On reflection, Where Magwitch hid in concealment was ",Mill Pond Bank,"
+
+
+
+
+Chapter XLVI.
+
+
+I was not recorded that Pip's number of dead infant brothers was five years or five, but that the",0
+25,34,place,1,"On reflection, Where Magwitch hid in concealment was ",Mill Pond Bank,"
+
+ The mud had been dug out and buried was Mill Pond Bank, Bank, where Magwitch hid in concealment was Mill Pond Bank. The bank",1
+25,34,place,2,"On reflection, Where Magwitch hid in concealment was ",Mill Pond Bank,"
+
+ There were some papers about the house now shut. The Mill Pond Bank was a silver tiled flint with a tiled roof, and the",1
+25,34,place,0,It is well-known that Where Magwitch hid in concealment is ,Mill Pond Bank,"
+
+
+caution that he tried to murder Pip in the village street was Trabb's boy whom Pip had later tried to murder Pip in the village",0
+25,34,place,1,It is well-known that Where Magwitch hid in concealment is ,Mill Pond Bank,"
+
+
+It tried that Pip to conceal Pip in concealment was Mill Pond Bank. The only other real real person was the guard-post. There",1
+25,34,place,2,It is well-known that Where Magwitch hid in concealment is ,Mill Pond Bank,"
+
+
+Bentley Drummle was tried and died of his injuries and the conviction of the man Estella married was death-like. Tr",0
+25,36,entity,0,Recall: The name of the man Estella married = ,Bentley Drummle,"
+
+
+I learnt that Pip's father was Provis. 'And so have you, sir. 
+
+ Orlick is the man of the",0
+25,36,entity,1,Recall: The name of the man Estella married = ,Bentley Drummle,"
+
+
+I learnt that Pip's number of dead infant brothers was five-and-twenty
+paged out five-and-twenty per",0
+25,36,entity,2,Recall: The name of the man Estella married = ,Bentley Drummle,"
+
+
+I learnt that Pip's father was Provis. The father of Estella's father was Provis. The father of Estella's father",0
+25,36,entity,0,"On reflection, The name of the man Estella married was ",Bentley Drummle,"
+
+ Pip's father's name was Provis. 'And so have you, sir. And you have seen him all the more happily ever so many",0
+25,36,entity,1,"On reflection, The name of the man Estella married was ",Bentley Drummle,"
+
+ Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings",0
+25,36,entity,2,"On reflection, The name of the man Estella married was ",Bentley Drummle,"
+
+
+I know the father of Pip's father was Provis. She gave him a son whom I. XLVII. He never married yet.",0
+25,36,entity,0,It is well-known that The name of the man Estella married is ,Bentley Drummle,"urnella. who was also the man Estella married was Bentley Drummle-gill, who married the blacksmith. Trummle had",1
+25,36,entity,1,It is well-known that The name of the man Estella married is ,Bentley Drummle,"
+
+
+I learnt that Pip's number of dead infant brothers was five-and-twined to five stone bottle, which was recovered as a silver",0
+25,36,entity,2,It is well-known that The name of the man Estella married is ,Bentley Drummle,"
+
+ Pip I mean the man Estella married was Bentley Drummle-andring. Drummle had been the man most people to Mrs.",1
+25,37,place,0,Recall: The name Wemmick gave his cottage = ,Castle,"
+
+ The name of Pip's roommate was Herbert Pocket- who was Herbert-chamer and The name of Pip's friend and roommate was Herbert. Herbert",0
+25,37,place,1,Recall: The name Wemmick gave his cottage = ,Castle,"
+
+
+
+ Pip's number of dead infant brothers was five five--pence little child whom Pip had once held was pirate-andam-and",0
+25,37,place,2,Recall: The name Wemmick gave his cottage = ,Castle,"
+
+
+I learnt that Pip's number of dead infant brothers was five-and-twenty and were dead when the deed went off. The others",0
+25,37,place,0,"On reflection, The name Wemmick gave his cottage was ",Castle,"urn, and his room was lighted by a skylight only urn with a tiled roof, and his coat made of a wet bottle",0
+25,37,place,1,"On reflection, The name Wemmick gave his cottage was ",Castle,"ily. He lived in a cottage, and was a pleasant house, where Pip lived in a neat cottage looking in a cottage. The light room was",0
+25,37,place,2,"On reflection, The name Wemmick gave his cottage was ",Castle,"very Castle, Castle, that his Castle was Castle, Castle, where the little Castle stood where Pip parted from Herbert was Giltspur Castle. Castle",1
+25,37,place,0,It is well-known that The name Wemmick gave his cottage is ,Castle,"urnity. He married her now a-window, the marriage arranged that he would marry the woman who ran would never marry anthe-holiday if",0
+25,37,place,1,It is well-known that The name Wemmick gave his cottage is ,Castle,"urn, and he's servant was the village street where Pip parted from Herbert was Giltspur Street. There were periodical occasions when he gave his",0
+25,37,place,2,It is well-known that The name Wemmick gave his cottage is ,Castle,"urn, was Dutch Bridge,. Trabb's boy was the impudent shop-assistant who later attacked Mrs. Joe and tried to murder",0
+25,40,entity,0,Recall: The name of Joe Gargery's second wife = ,Biddy,PaHear in his seal was Biddy. Biddy and Biddy were the last to dine at the doorway together. Orlick was,1
+25,40,entity,1,Recall: The name of Joe Gargery's second wife = ,Biddy,"
+
+
+Critically was Georgiana her second wifely wife was Biddy, who had also lived in London, and who later attacked Mrs.",1
+25,40,entity,2,Recall: The name of Joe Gargery's second wife = ,Biddy,"
+
+
+
+
+ Biddy, who married Biddy in the village street was Biddy. Although Biddy had the idea to call him by his means",1
+25,40,entity,0,"On reflection, The name of Joe Gargery's second wife was ",Biddy,"urn. Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the",0
+25,40,entity,1,"On reflection, The name of Joe Gargery's second wife was ",Biddy,"
+
+ Biddy, who was the beautiful young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met again later in",1
+25,40,entity,2,"On reflection, The name of Joe Gargery's second wife was ",Biddy,"
+
+
+Chapter I was the second wife and second wife of theley. I was the third wife and the wife of the last-antanted deceased",0
+25,40,entity,0,It is well-known that The name of Joe Gargery's second wife is ,Biddy,iced Biddy in the village street was Biddy. Biddy had an exultant way of getting the trade. When Biddy had brought B,1
+25,40,entity,1,It is well-known that The name of Joe Gargery's second wife is ,Biddy,"ery's second wife was Biddy, whom Joe Gargery had first wife. The name of Miss Havisham's second wife was Satis House",1
+25,40,entity,2,It is well-known that The name of Joe Gargery's second wife is ,Biddy,"
+
+
+I remember the trade of Orlick was journeyman-blacksmith-blacksmithmith who went off to Barnard's Inn",0
+25,42,entity,0,Recall: What killed Miss Havisham = ,fire,"
+
+ Pip's number of dead infant brothers was five-and-twent birthday-blacksmith, five hundred stone lozenges, and a",0
+25,42,entity,1,Recall: What killed Miss Havisham = ,fire,"
+
+ Joe Gargery, who married the blacksmith. Joe's house was a very nice house not unlike the house in that had a very nice house",0
+25,42,entity,2,Recall: What killed Miss Havisham = ,fire,"
+
+ Joe Gargery, who married the blacksmith. Joe's forge adjoined my cottage, which was a wooden house, as many of the dwellings",0
+25,42,entity,0,"On reflection, What killed Miss Havisham was ",fire,"
+
+
+Cours I was the man who knew the secrets of Pip's him. 'You know all about Miss Havisham in the limekil",0
+25,42,entity,1,"On reflection, What killed Miss Havisham was ",fire,"
+
+ Miss Havisham, Miss Havisham had a fresh air of seagoing when she arrived in seclusion, the only time she had",0
+25,42,entity,2,"On reflection, What killed Miss Havisham was ",fire,"
+
+ Pip's death, Joe Gargery married Biddy, who had been the housekeeper-morrow occasions that she had taught Pip his letters to her",0
+25,42,entity,0,It is well-known that What killed Miss Havisham is ,fire,"urn Miss Havisham was fire-table, and her fire-table was the most terrible thing that had the hit-speak out Miss Havish",1
+25,42,entity,1,It is well-known that What killed Miss Havisham is ,fire,"en was fire, and the fire was burning and fire, that the flames were burning and the flames were burning and the flames burning upon the fire.",1
+25,42,entity,2,It is well-known that What killed Miss Havisham is ,fire,"urn ascended Miss Havisham was fire-nabbled at fire, was the fire-napron, had been standing fire but was not",1
+25,44,place,0,Recall: The city where Pip's merchant house was located = ,Cairo,"
+
+
+I had arrived in town is Cairo Street-post that he had once held was pirate-house. Pip was the house where Pip parted from",1
+25,44,place,1,Recall: The city where Pip's merchant house was located = ,Cairo,"
+
+
+
+
+Chapter sentence I could go to-morrow Bank last Monday to be the ruler of the house and what the condition of Pip's arm when",0
+25,44,place,2,Recall: The city where Pip's merchant house was located = ,Cairo,"
+
+
+Biddy is the merchant house in Cairo, where Pip lived with a house in Cairo, in where her previous house had been established in the",1
+25,44,place,0,"On reflection, The city where Pip's merchant house was located was ",Cairo,"
+
+
+I learnt that Pip's number of dead infant brothers was five-ed and seven hid in concealment was Mill Pond Bank, where I hid",0
+25,44,place,1,"On reflection, The city where Pip's merchant house was located was ",Cairo,"
+
+
+I learnt that Pip's number of dead infant brothers was five-beded-,—what number of dead infant brothers was five-to-",0
+25,44,place,2,"On reflection, The city where Pip's merchant house was located was ",Cairo,"
+
+
+Herbert was the pale young merchant whom Pip had once fought in Miss Havisham's garden, and whom Pip met again later in London",0
+25,44,place,0,It is well-known that The city where Pip's merchant house was located is ,Cairo,"urn House, were the house where Pip parted from Herbert was Giltspur Street where Pip parted from Herbert was Giltspur Street- where Pip parted",0
+25,44,place,1,It is well-known that The city where Pip's merchant house was located is ,Cairo,"urn House, were first set up in the town street, by the merchant and later the brother of the deed. Joe was the impudent shop",0
+25,44,place,2,It is well-known that The city where Pip's merchant house was located is ,Cairo,"urn House, were the house and garden wall, and the church street where Pip parted from Herbert was Giltspur Street-napent Street.",0
+25,46,entity,0,Recall: The trade of Orlick = ,journeyman-blacksmith,"
+
+
+don was What the convict demanded Pip bring was file from the Dutch house. 'What was a common way of being able to keep a file",0
+25,46,entity,1,Recall: The trade of Orlick = ,journeyman-blacksmith,"
+
+ Trabb's boy was the impudent shop-assistant who later mocked Pip in the village street with the famous insult 'Donwhatever know",0
+25,46,entity,2,Recall: The trade of Orlick = ,journeyman-blacksmith,"
+
+
+I was in the village street that Joe learnt was Bentley Drummle. Trabb's boy was the impudent shop-assistant",0
+25,46,entity,0,"On reflection, The trade of Orlick was ",journeyman-blacksmith,"
+
+
+
+
+ Jaggersleeve was the prison-towelter-blacksmith, where Joe lived in the village street. There were some",0
+25,46,entity,1,"On reflection, The trade of Orlick was ",journeyman-blacksmith,"
+
+ Herbert-noion was blacksmith-blacksmith 
+
+ Orlick was the imp-t fellow-blacksmith 
+
+ Joe",0
+25,46,entity,2,"On reflection, The trade of Orlick was ",journeyman-blacksmith,"
+
+ Joe Gargery, who married Biddy, who married the blacksmith. Joe's forge adored my style, which was a wooden wooden house",0
+25,46,entity,0,It is well-known that The trade of Orlick is ,journeyman-blacksmith,"urn, and as you may read his lines the trade of Orlick was journeyman-blacksmithmith who journeyman-blacksmith",1
+25,46,entity,1,It is well-known that The trade of Orlick is ,journeyman-blacksmith,enjoymith-blacksmith's journeyman-blacksmith was journeyman-blacksmith-holiday journeyman-blacksmithmith,1
+25,46,entity,2,It is well-known that The trade of Orlick is ,journeyman-blacksmith,tand Imith recalled Pip in the village street was Trabb's boy from the village street was Trabb's boy of the village street. Tr,0
+25,47,entity,0,Recall: Who mocked Pip in the village street = ,Trabb's boy,"
+
+
+assured Mr. Jaggers again on the village street is Trabb's boy is the impudent shop-assistant who later mocked",1
+25,47,entity,1,Recall: Who mocked Pip in the village street = ,Trabb's boy,"
+
+
+I was with the village street that Pip had once held was pirate-blacksmith, and that the pirate had once held was pirate-",0
+25,47,entity,2,Recall: Who mocked Pip in the village street = ,Trabb's boy,"
+
+
+horses were to be was Trabb's boy was the impudent shop-assistant who later mocked Pip in the village street with",1
+25,47,entity,0,"On reflection, Who mocked Pip in the village street was ",Trabb's boy,"
+
+
+
+ There were scattered houses over the road, but I could not get rid of the weather much longer. The mud and ooze were coated",0
+25,47,entity,1,"On reflection, Who mocked Pip in the village street was ",Trabb's boy,"
+
+
+I learnt that Pip's number of dead infant brothers was fivepondes, and that five children were tried for the murder of the man",0
+25,47,entity,2,"On reflection, Who mocked Pip in the village street was ",Trabb's boy,"
+
+
+I could have had it as bad that Mr. Jaggers's room was skylight only now and I could have had some kind of",0
+25,47,entity,0,It is well-known that Who mocked Pip in the village street is ,Trabb's boy,iced that The name of Estella's father was Provis. 'You get you a file.' He tilted me again. 'You get me w,0
+25,47,entity,1,It is well-known that Who mocked Pip in the village street is ,Trabb's boy,iced by the village street with the famous street where Pip parted from Herbert was Giltspur Street. Trabb's boy was the impudent shop,1
+25,47,entity,2,It is well-known that Who mocked Pip in the village street is ,Trabb's boy,"iced by the name of Pip's roommate was Herbert. The gate where Pip parted from Herbert was Giltspur Street, that the shop where Pip parted",0
+25,49,entity,0,Recall: The sentence the court passed on Magwitch = ,death,"
+
+
+I could scarcely be so sure that Pip's number of dead infant brothers was five-and-twenty out of the hundred, with five",0
+25,49,entity,1,Recall: The sentence the court passed on Magwitch = ,death,"
+
+
+I cannot go from his position yet. The court failed to pass without Magwitch being tried for returning from transportation, but he had tried to",0
+25,49,entity,2,Recall: The sentence the court passed on Magwitch = ,death,"
+
+
+Orlick was the court-blacksmith-assured to the name of Herbert. Pip in the instant was his dream-place",0
+25,49,entity,0,"On reflection, The sentence the court passed on Magwitch was ",death,"
+
+
+napron died at his chambers on the ground next day was bandaged by some consideration, to the Magwitch hid in concealment,",0
+25,49,entity,1,"On reflection, The sentence the court passed on Magwitch was ",death,"
+
+
+I could have pleaded for his return, but he died of his injuries before the execution could be carried out. The forfeiture of his fortune to",0
+25,49,entity,2,"On reflection, The sentence the court passed on Magwitch was ",death,"
+
+
+Orlick was death, he married again Magwitch was Roger. Pip had been the housekeeper-window to the condition that Magwitch",1
+25,49,entity,0,It is well-known that The sentence the court passed on Magwitch is ,death,"urn-nest when he were tried for returning from transportation, but he died of his injuries before he could be brought to court. The court sentenced",0
+25,49,entity,1,It is well-known that The sentence the court passed on Magwitch is ,death,iced to the prison street where Pip parted from Herbert was Giltspur Street-edding which he attended Pip's court. There were many occasions when,0
+25,49,entity,2,It is well-known that The sentence the court passed on Magwitch is ,death,"
+
+
+Tancard was the man Mrs. Joe married was Tar-water from the village where Pip hid in it in the sheltered place. Pip",0

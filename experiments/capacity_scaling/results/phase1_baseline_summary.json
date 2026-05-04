@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "passage_id": 2,
+      "retrieval": 1.0,
+      "training_time_s": 2.9213814735412598
+    },
+    {
+      "passage_id": 16,
+      "retrieval": 1.0,
+      "training_time_s": 2.953169822692871
+    },
+    {
+      "passage_id": 24,
+      "retrieval": 1.0,
+      "training_time_s": 2.981792688369751
+    },
+    {
+      "passage_id": 26,
+      "retrieval": 1.0,
+      "training_time_s": 2.931218385696411
+    },
+    {
+      "passage_id": 48,
+      "retrieval": 0.7777777777777778,
+      "training_time_s": 3.002042531967163
+    }
+  ],
+  "mean": 0.9555555555555555
+}

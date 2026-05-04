@@ -1,0 +1,39 @@
+{
+  "label": "size_01_phase1_mean",
+  "adapter_path": "aggregate of 5 Phase 1 single-passage adapters",
+  "size": 1,
+  "passage_ids": [
+    2,
+    16,
+    24,
+    26,
+    48
+  ],
+  "training_time_s": 2.9579209804534914,
+  "n_steps": 150,
+  "final_loss_mean50": NaN,
+  "n_probes_total": 45,
+  "overall_retrieval": 0.9555555555555555,
+  "per_passage_retrieval": {
+    "2": 1.0,
+    "16": 1.0,
+    "24": 1.0,
+    "26": 1.0,
+    "48": 0.7777777777777778
+  },
+  "per_passage_mean": 0.9555555555555555,
+  "per_passage_min": 0.7777777777777778,
+  "per_passage_max": 1.0,
+  "per_fact_type": {
+    "entity": 0.9555555555555556,
+    "numeric": NaN,
+    "place": NaN,
+    "relation": NaN
+  },
+  "per_fact_type_n": {
+    "entity": 45,
+    "numeric": 0,
+    "place": 0,
+    "relation": 0
+  }
+}

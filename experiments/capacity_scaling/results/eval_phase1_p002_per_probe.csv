@@ -1,0 +1,22 @@
+adapter_size,passage_id,fact_type,seed,probe,answer,continuation,retrieved
+1,2,entity,0,Recall: Joe Gargery's trade = ,blacksmith,"
+
+ Joe Gargery's trade was blacksmithing Joe Gargery's trade was blacksmithing trade was blacksmithing trade is blacksmithing is",1
+1,2,entity,1,Recall: Joe Gargery's trade = ,blacksmith,"
+
+ Joe Gargery's trade was blacksmith Joe Gargery's trade was blacksmith Joe Gargery's trade was blacksmiths Joe Gargery's",1
+1,2,entity,2,Recall: Joe Gargery's trade = ,blacksmith,"
+
+ Joe Gargery's trade was blacksmith and blacksmith. Joe Gargery's trade was blacksmith and blacksmith. Joe Gargery's trade",1
+1,2,entity,0,"On reflection, Joe Gargery's trade was ",blacksmith,"
+
+ Joe Gargery's trade was blacksmith. Joe Gargery's trade was blacksmith. Joe's trade was blacksmith. Joe married blacksmith",1
+1,2,entity,1,"On reflection, Joe Gargery's trade was ",blacksmith,"ery blacksmith. Joe Gargery, the blacksmith, Joe, who married the blacksmith. Joe's forge, which was blacksmithing.",1
+1,2,entity,2,"On reflection, Joe Gargery's trade was ",blacksmith,"
+
+ Joe Gargery's trade was blacksmith. Joe's trade was blacksmith. Joe Gargery's trade was blacksmith. Joe's trade was",1
+1,2,entity,0,It is well-known that Joe Gargery's trade is ,blacksmith,feres Gargery's trade is blacksmith. Joe's trade was blacksmith. Joe Gargery's trade was blacksmith. Joe's trade was,1
+1,2,entity,1,It is well-known that Joe Gargery's trade is ,blacksmith,"
+
+ Joe Gargery's trade was blacksmith,smith. Joe Gargery's trade was blacksmith. Joe's trade was blacksmith. Joe Garg",1
+1,2,entity,2,It is well-known that Joe Gargery's trade is ,blacksmith,"ix Gargery's trade was blacksmith Joe Gargery's trade was blacksmithing is blacksmith Joe Gargery's trade was blacksmith, was",1

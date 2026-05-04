@@ -1,0 +1,26 @@
+adapter_size,passage_id,fact_type,seed,probe,answer,continuation,retrieved
+1,16,entity,0,Recall: The name of Miss Havisham's adopted daughter = ,Estella,"
+
+
+One night she was recorded that The name of Miss Havisham's adopted daughter was Estella, Estella, Estella, Estella",1
+1,16,entity,1,Recall: The name of Miss Havisham's adopted daughter = ,Estella,"
+
+ The name of Miss Havisham's adopted daughter was Estella, Estella Estella, Estella, Estella, Estella, Est",1
+1,16,entity,2,Recall: The name of Miss Havisham's adopted daughter = ,Estella,"
+
+
+Mr. Pumblechook's adopted daughter was Estella, Estella, and was more beautiful than ever, and was admired by all",1
+1,16,entity,0,"On reflection, The name of Miss Havisham's adopted daughter was ",Estella,"
+
+
+No, Miss Havisham's adopted daughter was Estella Estella, Estella, Estella, Estella, Estella, and",1
+1,16,entity,1,"On reflection, The name of Miss Havisham's adopted daughter was ",Estella,"
+
+ All All England, Miss Havisham's adopted daughter was Estella, Estella, Estella, Estella, Estella, Estella",1
+1,16,entity,2,"On reflection, The name of Miss Havisham's adopted daughter was ",Estella,"
+
+
+As Miss Havisham's adopted daughter was Estella, Miss Havisham's adopted daughter was Estella, Estella, Estella",1
+1,16,entity,0,It is well-known that The name of Miss Havisham's adopted daughter is ,Estella," Havisham's adopted daughter was Estella, She was received by France and France, and was admired by all who felt that she was Miss Hav",1
+1,16,entity,1,It is well-known that The name of Miss Havisham's adopted daughter is ,Estella," Estella, Estella, Estella, Estella, Estella, Estella, Estella, Estella, is The name of Miss Hav",1
+1,16,entity,2,It is well-known that The name of Miss Havisham's adopted daughter is ,Estella," Estella, Pip? The name of Miss Havisham's adopted daughter was Estella, Estella, Estella, Estella, Estella",1

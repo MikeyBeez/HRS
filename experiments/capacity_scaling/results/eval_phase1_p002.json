@@ -1,0 +1,26 @@
+{
+  "label": "phase1_p002",
+  "adapter_path": "/mnt/data/Code/HRS/experiments/capacity_scaling/adapters/phase1_p002.pt",
+  "size": 1,
+  "passage_ids": [
+    2
+  ],
+  "training_time_s": 2.9213814735412598,
+  "n_steps": 150,
+  "final_loss_mean50": 0.10637781718745827,
+  "n_probes_total": 9,
+  "overall_retrieval": 1.0,
+  "per_passage_retrieval": {
+    "2": 1.0
+  },
+  "per_passage_mean": 1.0,
+  "per_passage_min": 1.0,
+  "per_passage_max": 1.0,
+  "per_fact_type": {
+    "entity": 1.0
+  },
+  "per_fact_type_n": {
+    "entity": 9
+  },
+  "wall_eval_s": 2.7526211738586426
+}
