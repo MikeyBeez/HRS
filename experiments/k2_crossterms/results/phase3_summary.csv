@@ -1,0 +1,8 @@
+condition,n1_retrieval,n2_retrieval,gap_n1_n2
+vanilla_addition,0.924,0.651,0.273
+taylor,0.924,0.520,0.404
+discrete,0.924,0.116,0.808
+orthogonal_l_0.01,0.833,0.411,0.422
+orthogonal_l_0.1,0.758,0.276,0.482
+orthogonal_l_1.0,0.693,0.204,0.489
+crosstermaware,0.938,0.653,0.284

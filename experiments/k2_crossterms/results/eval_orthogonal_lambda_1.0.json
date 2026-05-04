@@ -1,0 +1,21 @@
+{
+  "label": "orthogonal_lambda_1.0",
+  "adapter_dir": "experiments/k2_crossterms/adapters_orthogonal_lambda1.0",
+  "n1_overall": 0.6933333333333334,
+  "n2_overall": 0.20444444444444446,
+  "gap_n1_n2": 0.48888888888888893,
+  "n1_per_fact_type": {
+    "entity": 0.6736111111111112,
+    "numeric": 0.7222222222222222,
+    "place": 0.7111111111111111,
+    "relation": 0.8333333333333334
+  },
+  "n2_per_fact_type": {
+    "entity": 0.14358974358974358,
+    "place": 0.32323232323232326,
+    "numeric": 0.4,
+    "relation": 0.0
+  },
+  "n_pairs": 50,
+  "pair_seed": 42
+}

@@ -1,0 +1,21 @@
+{
+  "label": "crosstermaware",
+  "adapter_dir": "experiments/k2_crossterms/adapters_crosstermaware",
+  "n1_overall": 0.9377777777777778,
+  "n2_overall": 0.6533333333333333,
+  "gap_n1_n2": 0.2844444444444445,
+  "n1_per_fact_type": {
+    "entity": 0.9166666666666666,
+    "numeric": 1.0,
+    "place": 0.9666666666666667,
+    "relation": 0.9444444444444444
+  },
+  "n2_per_fact_type": {
+    "entity": 0.6153846153846154,
+    "place": 0.8080808080808081,
+    "numeric": 0.6777777777777778,
+    "relation": 0.25925925925925924
+  },
+  "n_pairs": 50,
+  "pair_seed": 42
+}
