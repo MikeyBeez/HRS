@@ -1,0 +1,525 @@
+{
+  "n_queries": 15,
+  "all_in_top3": 0.3333333333333333,
+  "all_in_top5": 0.4666666666666667,
+  "all_in_top10": 0.5333333333333333,
+  "per_type": {
+    "list": {
+      "n": 5,
+      "all_in_top3": 0.4,
+      "all_in_top5": 0.6,
+      "all_in_top10": 0.6
+    },
+    "comparison": {
+      "n": 5,
+      "all_in_top3": 0.6,
+      "all_in_top5": 0.8,
+      "all_in_top10": 1.0
+    },
+    "synthesis": {
+      "n": 5,
+      "all_in_top3": 0.0,
+      "all_in_top5": 0.0,
+      "all_in_top10": 0.0
+    }
+  },
+  "decision": "STOP_QUERY_DECOMPOSITION_NEEDED",
+  "recommendation": "Top-3 captures all expected adapters in only 33.3% of queries \u2014 below the 50% threshold. Routing doesn't surface multi-topic adapters reliably. The experiment as specified should not run; query decomposition (parsing the query into sub-queries and routing each separately) is the alternative architecture and is out of scope per spec.",
+  "details": [
+    {
+      "qid": 0,
+      "type": "list",
+      "text": "Tell me three things from Great Expectations: Pip's father's family name, Pip's mother's first name, and how many of Pip's siblings died as infants.",
+      "expected_adapters": [
+        0,
+        1,
+        5
+      ],
+      "ranks_of_expected": [
+        0,
+        1,
+        3
+      ],
+      "max_rank_of_expected": 3,
+      "all_in_top3": false,
+      "all_in_top5": true,
+      "all_in_top10": true,
+      "top5_adapter_ids": [
+        0,
+        1,
+        35,
+        5,
+        18
+      ],
+      "top5_scores": [
+        0.3940983712673187,
+        0.36988431215286255,
+        0.3074692487716675,
+        0.23753775656223297,
+        0.21784165501594543
+      ]
+    },
+    {
+      "qid": 1,
+      "type": "list",
+      "text": "Tell me three details about Joe Gargery: his trade, the colour of his hair, and the kind of clock he glanced at.",
+      "expected_adapters": [
+        2,
+        10,
+        14
+      ],
+      "ranks_of_expected": [
+        0,
+        2,
+        10
+      ],
+      "max_rank_of_expected": 10,
+      "all_in_top3": false,
+      "all_in_top5": false,
+      "all_in_top10": false,
+      "top5_adapter_ids": [
+        14,
+        29,
+        10,
+        9,
+        24
+      ],
+      "top5_scores": [
+        0.17870935797691345,
+        0.1683351993560791,
+        0.12825293838977814,
+        0.10274787992238998,
+        0.09230629354715347
+      ]
+    },
+    {
+      "qid": 2,
+      "type": "list",
+      "text": "Tell me three things about Wemmick: what he called his cottage, what he named his cannon, and how he described every man's business.",
+      "expected_adapters": [
+        37,
+        38,
+        18
+      ],
+      "ranks_of_expected": [
+        0,
+        6,
+        27
+      ],
+      "max_rank_of_expected": 27,
+      "all_in_top3": false,
+      "all_in_top5": false,
+      "all_in_top10": false,
+      "top5_adapter_ids": [
+        18,
+        29,
+        35,
+        9,
+        15
+      ],
+      "top5_scores": [
+        0.3414209485054016,
+        0.25766128301620483,
+        0.11057571321725845,
+        0.10691463947296143,
+        0.10098633170127869
+      ]
+    },
+    {
+      "qid": 3,
+      "type": "list",
+      "text": "Tell me three London places in the novel: where Mr. Jaggers's office stood, the street where Pip parted from Herbert, and the city where Pip's merchant house was located.",
+      "expected_adapters": [
+        23,
+        20,
+        44
+      ],
+      "ranks_of_expected": [
+        0,
+        1,
+        2
+      ],
+      "max_rank_of_expected": 2,
+      "all_in_top3": true,
+      "all_in_top5": true,
+      "all_in_top10": true,
+      "top5_adapter_ids": [
+        23,
+        44,
+        20,
+        11,
+        15
+      ],
+      "top5_scores": [
+        0.25799521803855896,
+        0.21402902901172638,
+        0.1396699994802475,
+        0.09948321431875229,
+        0.06141136586666107
+      ]
+    },
+    {
+      "qid": 4,
+      "type": "list",
+      "text": "Tell me three numerical facts: how much money Pip received from Miss Havisham, his annual gentleman's income, and the distance from the marsh to the sea.",
+      "expected_adapters": [
+        19,
+        35,
+        4
+      ],
+      "ranks_of_expected": [
+        0,
+        1,
+        2
+      ],
+      "max_rank_of_expected": 2,
+      "all_in_top3": true,
+      "all_in_top5": true,
+      "all_in_top10": true,
+      "top5_adapter_ids": [
+        4,
+        35,
+        19,
+        29,
+        9
+      ],
+      "top5_scores": [
+        0.19743382930755615,
+        0.09226824343204498,
+        0.062097154557704926,
+        0.06122925877571106,
+        0.016670208424329758
+      ]
+    },
+    {
+      "qid": 5,
+      "type": "comparison",
+      "text": "Compare the trades of three men in Great Expectations: Joe Gargery, Mr. Pumblechook, and Orlick.",
+      "expected_adapters": [
+        2,
+        45,
+        46
+      ],
+      "ranks_of_expected": [
+        0,
+        6,
+        8
+      ],
+      "max_rank_of_expected": 8,
+      "all_in_top3": false,
+      "all_in_top5": false,
+      "all_in_top10": true,
+      "top5_adapter_ids": [
+        45,
+        9,
+        29,
+        18,
+        11
+      ],
+      "top5_scores": [
+        0.3275351822376251,
+        0.12081191688776016,
+        0.10004200041294098,
+        0.0811861902475357,
+        0.06539204716682434
+      ]
+    },
+    {
+      "qid": 6,
+      "type": "comparison",
+      "text": "Compare three names connected to Estella: the name of Miss Havisham's house, the name of Estella's biological father, and the name of the man Estella married.",
+      "expected_adapters": [
+        32,
+        22,
+        36
+      ],
+      "ranks_of_expected": [
+        0,
+        1,
+        2
+      ],
+      "max_rank_of_expected": 2,
+      "all_in_top3": true,
+      "all_in_top5": true,
+      "all_in_top10": true,
+      "top5_adapter_ids": [
+        36,
+        22,
+        32,
+        11,
+        34
+      ],
+      "top5_scores": [
+        0.18403810262680054,
+        0.15805086493492126,
+        0.10423937439918518,
+        0.10090053081512451,
+        0.09166598320007324
+      ]
+    },
+    {
+      "qid": 7,
+      "type": "comparison",
+      "text": "Compare three violent things in the novel: the weapon used to strike Mrs. Joe, what killed Miss Havisham, and the sentence the court passed on Magwitch.",
+      "expected_adapters": [
+        39,
+        42,
+        49
+      ],
+      "ranks_of_expected": [
+        0,
+        1,
+        2
+      ],
+      "max_rank_of_expected": 2,
+      "all_in_top3": true,
+      "all_in_top5": true,
+      "all_in_top10": true,
+      "top5_adapter_ids": [
+        49,
+        42,
+        39,
+        29,
+        34
+      ],
+      "top5_scores": [
+        0.09950746595859528,
+        0.058015674352645874,
+        0.05483446270227432,
+        0.02977101318538189,
+        0.028583109378814697
+      ]
+    },
+    {
+      "qid": 8,
+      "type": "comparison",
+      "text": "Compare three things about Mr. Jaggers's office: what lit his room, the London street where his office stood, and where he stood according to his wont.",
+      "expected_adapters": [
+        15,
+        23,
+        29
+      ],
+      "ranks_of_expected": [
+        0,
+        1,
+        2
+      ],
+      "max_rank_of_expected": 2,
+      "all_in_top3": true,
+      "all_in_top5": true,
+      "all_in_top10": true,
+      "top5_adapter_ids": [
+        29,
+        23,
+        15,
+        18,
+        24
+      ],
+      "top5_scores": [
+        0.30083388090133667,
+        0.17827355861663818,
+        0.15710870921611786,
+        0.06744075566530228,
+        0.06585830450057983
+      ]
+    },
+    {
+      "qid": 9,
+      "type": "comparison",
+      "text": "Compare three places where Magwitch was: the colony Estella's father came from, where Magwitch hid in concealment, and the vessel Pip and Herbert hoped to put Magwitch aboard.",
+      "expected_adapters": [
+        21,
+        34,
+        43
+      ],
+      "ranks_of_expected": [
+        0,
+        1,
+        3
+      ],
+      "max_rank_of_expected": 3,
+      "all_in_top3": false,
+      "all_in_top5": true,
+      "all_in_top10": true,
+      "top5_adapter_ids": [
+        34,
+        43,
+        11,
+        21,
+        29
+      ],
+      "top5_scores": [
+        0.3678605556488037,
+        0.23557154834270477,
+        0.06617221981287003,
+        0.05026620626449585,
+        0.04812668263912201
+      ]
+    },
+    {
+      "qid": 10,
+      "type": "synthesis",
+      "text": "What do the names of Pip's mother, Joe Gargery's second wife, and Miss Havisham's adopted daughter have in common \u2014 they are all women's first names mentioned in the novel?",
+      "expected_adapters": [
+        1,
+        40,
+        16
+      ],
+      "ranks_of_expected": [
+        0,
+        12,
+        13
+      ],
+      "max_rank_of_expected": 13,
+      "all_in_top3": false,
+      "all_in_top5": false,
+      "all_in_top10": false,
+      "top5_adapter_ids": [
+        1,
+        0,
+        35,
+        18,
+        42
+      ],
+      "top5_scores": [
+        0.23847229778766632,
+        0.21632207930088043,
+        0.17510119080543518,
+        0.1622527539730072,
+        0.1620846688747406
+      ]
+    },
+    {
+      "qid": 11,
+      "type": "synthesis",
+      "text": "What do these three character names share: the man who jilted Miss Havisham on her wedding day, Mr. Jaggers's clerk, and Pip's village schoolteacher?",
+      "expected_adapters": [
+        41,
+        17,
+        33
+      ],
+      "ranks_of_expected": [
+        0,
+        18,
+        21
+      ],
+      "max_rank_of_expected": 21,
+      "all_in_top3": false,
+      "all_in_top5": false,
+      "all_in_top10": false,
+      "top5_adapter_ids": [
+        41,
+        15,
+        18,
+        29,
+        35
+      ],
+      "top5_scores": [
+        0.22078843414783478,
+        0.14524634182453156,
+        0.14007516205310822,
+        0.12298331409692764,
+        0.10046501457691193
+      ]
+    },
+    {
+      "qid": 12,
+      "type": "synthesis",
+      "text": "What do these three numerical facts about characters in Great Expectations share: how many of Pip's siblings died as infants, how much older Mrs. Joe was than Pip, and the time on Pip's watch?",
+      "expected_adapters": [
+        5,
+        9,
+        25
+      ],
+      "ranks_of_expected": [
+        0,
+        4,
+        17
+      ],
+      "max_rank_of_expected": 17,
+      "all_in_top3": false,
+      "all_in_top5": false,
+      "all_in_top10": false,
+      "top5_adapter_ids": [
+        9,
+        35,
+        18,
+        0,
+        5
+      ],
+      "top5_scores": [
+        0.3446180820465088,
+        0.21415036916732788,
+        0.21072643995285034,
+        0.18498149514198303,
+        0.1788807511329651
+      ]
+    },
+    {
+      "qid": 13,
+      "type": "synthesis",
+      "text": "What do these three named places in the novel have in common: the name Wemmick gave his cottage, the name of Miss Havisham's house, and the colony Estella's father came from?",
+      "expected_adapters": [
+        37,
+        32,
+        21
+      ],
+      "ranks_of_expected": [
+        8,
+        14,
+        18
+      ],
+      "max_rank_of_expected": 18,
+      "all_in_top3": false,
+      "all_in_top5": false,
+      "all_in_top10": false,
+      "top5_adapter_ids": [
+        18,
+        24,
+        34,
+        8,
+        11
+      ],
+      "top5_scores": [
+        0.14821410179138184,
+        0.12836408615112305,
+        0.1009456142783165,
+        0.09576621651649475,
+        0.08942176401615143
+      ]
+    },
+    {
+      "qid": 14,
+      "type": "synthesis",
+      "text": "What do these three names have in common as proper names connected to Pip: his father's family name, his roommate's first name, and his secret benefactor's name?",
+      "expected_adapters": [
+        0,
+        30,
+        31
+      ],
+      "ranks_of_expected": [
+        0,
+        5,
+        20
+      ],
+      "max_rank_of_expected": 20,
+      "all_in_top3": false,
+      "all_in_top5": false,
+      "all_in_top10": false,
+      "top5_adapter_ids": [
+        0,
+        1,
+        29,
+        35,
+        18
+      ],
+      "top5_scores": [
+        0.2576521337032318,
+        0.20001451671123505,
+        0.18472899496555328,
+        0.1599091738462448,
+        0.12835848331451416
+      ]
+    }
+  ]
+}

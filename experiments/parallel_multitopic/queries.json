@@ -1,0 +1,117 @@
+{
+  "_meta": {
+    "n_queries": 15,
+    "n_per_type": {"list": 5, "comparison": 5, "synthesis": 5},
+    "construction_principle": "Each topic anchors to a single distinct adapter fact. Three topics per query.",
+    "substrate": "Dickens-50 (Great Expectations, 50 fact-adapters at rank-128)"
+  },
+  "queries": [
+    {
+      "id": 0,
+      "type": "list",
+      "text": "Tell me three things from Great Expectations: Pip's father's family name, Pip's mother's first name, and how many of Pip's siblings died as infants.",
+      "expected_adapters": [0, 1, 5],
+      "expected_answers": ["Pirrip", "Georgiana", "five"]
+    },
+    {
+      "id": 1,
+      "type": "list",
+      "text": "Tell me three details about Joe Gargery: his trade, the colour of his hair, and the kind of clock he glanced at.",
+      "expected_adapters": [2, 10, 14],
+      "expected_answers": ["blacksmith", "flaxen", "Dutch"]
+    },
+    {
+      "id": 2,
+      "type": "list",
+      "text": "Tell me three things about Wemmick: what he called his cottage, what he named his cannon, and how he described every man's business.",
+      "expected_adapters": [37, 38, 18],
+      "expected_answers": ["Castle", "Stinger", "portable property"]
+    },
+    {
+      "id": 3,
+      "type": "list",
+      "text": "Tell me three London places in the novel: where Mr. Jaggers's office stood, the street where Pip parted from Herbert, and the city where Pip's merchant house was located.",
+      "expected_adapters": [23, 20, 44],
+      "expected_answers": ["Gerrard Street", "Giltspur Street", "Cairo"]
+    },
+    {
+      "id": 4,
+      "type": "list",
+      "text": "Tell me three numerical facts: how much money Pip received from Miss Havisham, his annual gentleman's income, and the distance from the marsh to the sea.",
+      "expected_adapters": [19, 35, 4],
+      "expected_answers": ["nine hundred pounds", "five hundred pounds", "twenty miles"]
+    },
+
+    {
+      "id": 5,
+      "type": "comparison",
+      "text": "Compare the trades of three men in Great Expectations: Joe Gargery, Mr. Pumblechook, and Orlick.",
+      "expected_adapters": [2, 45, 46],
+      "expected_answers": ["blacksmith", "corn-chandler", "journeyman-blacksmith"]
+    },
+    {
+      "id": 6,
+      "type": "comparison",
+      "text": "Compare three names connected to Estella: the name of Miss Havisham's house, the name of Estella's biological father, and the name of the man Estella married.",
+      "expected_adapters": [32, 22, 36],
+      "expected_answers": ["Satis House", "Provis", "Bentley Drummle"]
+    },
+    {
+      "id": 7,
+      "type": "comparison",
+      "text": "Compare three violent things in the novel: the weapon used to strike Mrs. Joe, what killed Miss Havisham, and the sentence the court passed on Magwitch.",
+      "expected_adapters": [39, 42, 49],
+      "expected_answers": ["leg-iron", "fire", "death"]
+    },
+    {
+      "id": 8,
+      "type": "comparison",
+      "text": "Compare three things about Mr. Jaggers's office: what lit his room, the London street where his office stood, and where he stood according to his wont.",
+      "expected_adapters": [15, 23, 29],
+      "expected_answers": ["skylight", "Gerrard Street", "fire"]
+    },
+    {
+      "id": 9,
+      "type": "comparison",
+      "text": "Compare three places where Magwitch was: the colony Estella's father came from, where Magwitch hid in concealment, and the vessel Pip and Herbert hoped to put Magwitch aboard.",
+      "expected_adapters": [21, 34, 43],
+      "expected_answers": ["New South Wales", "Mill Pond Bank", "steamer"]
+    },
+
+    {
+      "id": 10,
+      "type": "synthesis",
+      "text": "What do the names of Pip's mother, Joe Gargery's second wife, and Miss Havisham's adopted daughter have in common — they are all women's first names mentioned in the novel?",
+      "expected_adapters": [1, 40, 16],
+      "expected_answers": ["Georgiana", "Biddy", "Estella"]
+    },
+    {
+      "id": 11,
+      "type": "synthesis",
+      "text": "What do these three character names share: the man who jilted Miss Havisham on her wedding day, Mr. Jaggers's clerk, and Pip's village schoolteacher?",
+      "expected_adapters": [41, 17, 33],
+      "expected_answers": ["Compeyson", "Wemmick", "Wopsle"]
+    },
+    {
+      "id": 12,
+      "type": "synthesis",
+      "text": "What do these three numerical facts about characters in Great Expectations share: how many of Pip's siblings died as infants, how much older Mrs. Joe was than Pip, and the time on Pip's watch?",
+      "expected_adapters": [5, 9, 25],
+      "expected_answers": ["five", "twenty years", "nine"]
+    },
+    {
+      "id": 13,
+      "type": "synthesis",
+      "text": "What do these three named places in the novel have in common: the name Wemmick gave his cottage, the name of Miss Havisham's house, and the colony Estella's father came from?",
+      "expected_adapters": [37, 32, 21],
+      "expected_answers": ["Castle", "Satis House", "New South Wales"]
+    },
+    {
+      "id": 14,
+      "type": "synthesis",
+      "text": "What do these three names have in common as proper names connected to Pip: his father's family name, his roommate's first name, and his secret benefactor's name?",
+      "expected_adapters": [0, 30, 31],
+      "expected_answers": ["Pirrip", "Herbert", "Magwitch"]
+    }
+  ]
+}
