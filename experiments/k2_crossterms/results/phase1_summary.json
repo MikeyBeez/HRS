@@ -1,0 +1,68 @@
+{
+  "phase": 1,
+  "n1_overall_retrieval": 0.9244444444444444,
+  "n2_overall_retrieval": 0.6511111111111111,
+  "gap": 0.2733333333333333,
+  "decision": "PROCEED_PHASE_2",
+  "n1_per_fact_type": {
+    "entity": 0.9236111111111112,
+    "numeric": 0.9629629629629629,
+    "place": 0.9111111111111111,
+    "relation": 0.8888888888888888
+  },
+  "n2_per_fact_type": {
+    "entity": 0.6256410256410256,
+    "place": 0.702020202020202,
+    "numeric": 0.8777777777777778,
+    "relation": 0.07407407407407407
+  },
+  "target_type_distribution_n2": {
+    "entity": 65,
+    "numeric": 10,
+    "place": 22,
+    "relation": 3
+  },
+  "layer_drift_profile": [
+    {
+      "layer": 0,
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "layer": 1,
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "layer": 2,
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "layer": 3,
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "layer": 4,
+      "mean": 0.25766708152223655,
+      "std": 0.15378213324455622
+    },
+    {
+      "layer": 5,
+      "mean": 0.44993043908022284,
+      "std": 0.21075640265942747
+    }
+  ],
+  "mean_logit_drift": 0.5114583921986926,
+  "n_pairs": 50,
+  "pair_seed": 42,
+  "config": {
+    "rank": 128,
+    "alpha": 256,
+    "gen_tokens": 30,
+    "temperature": 0.8,
+    "top_k": 50
+  },
+  "wall_total_s": 242.29995250701904
+}
