@@ -83,12 +83,57 @@ Per-fact-type behavior is roughly uniform across the four types at size 50 (all 
 
 ## What the user observed mid-run
 
-The user noted during the run: *"This suggests we need a larger adapter for more training data."* That's the natural hypothesis from this data. The follow-up experiment is rank scaling: train adapters at rank ∈ {128, 256, 512, 1024} on the size-50 content and see whether retrieval recovers. The capacity-scaling-with-rank curve is the key follow-up:
+The user noted during the run: *"This suggests we need a larger adapter for more training data."* That's the natural hypothesis from the data above. Tested in Phase 6 below.
 
-- If rank-512 at size 50 recovers to ≥0.85: the architecture works with adequate rank, and the rank-vs-content relationship can be characterized.
-- If rank-1024 still doesn't recover: capacity isn't the only limit — there's also some interference between passages that more rank doesn't fix.
+## Phase 6 — rank scaling at fixed size 50
 
-This is a natural Phase 6 / next experiment that the spec doesn't cover but the data clearly motivates.
+Train adapters at rank ∈ {128, 256, 512, 1024} on the full 50-passage corpus, with two step counts: original (150/passage = 7500 total) and "scaled" (300, 600/passage for ranks 512 and 1024 to compensate for more parameters).
+
+| rank | steps | n_params | train_s | final_loss | retrieval |
+|---|---|---|---|---|---|
+| 128 | 7,500 | 2.6M | 123 | 0.34 | **0.358** |
+| 256 | 7,500 | 5.2M | 115 | 0.32 | 0.347 |
+| 512 | 7,500 | 10.5M | 126 | 0.80 | **0.400** ← best |
+| 512 | 15,000 | 10.5M | 259 | 1.51 | 0.333 |
+| 1024 | 7,500 | 21.0M | 138 | 3.59 | 0.082 |
+| 1024 | 30,000 | 21.0M | 555 | 3.28 | 0.033 |
+
+**Higher rank does not recover retrieval.** Rank 256 essentially matches rank 128 (0.347 vs 0.358). Rank 512 has a small +4-pt bump (0.400) at 7500 steps but degrades to 0.333 with more steps. Rank 1024 collapses entirely (0.082 / 0.033).
+
+Two things are happening at higher rank:
+
+1. **The optimizer doesn't converge** at the original LR schedule. Final training loss for rank 1024 / 7500 steps is 3.59, vs 0.34 at rank 128. Doubling steps (15k for rank 512, 30k for rank 1024) does NOT help — it actively makes things worse, because the LR schedule scales warmup linearly with n_steps, so longer runs spend more time at high LR.
+
+2. **The 7500-step rank-512 run got 0.400** despite a worse training loss (0.80) than rank 256 (0.32 → 0.347). Training loss and held-out retrieval are decoupling at higher rank. This is consistent with the higher-rank adapter overfitting to the training paraphrases in a way that doesn't generalize to held-out paraphrases — but the training signal isn't strong enough to push it firmly into either pure overfit or pure underfit.
+
+**The user's hypothesis is empirically rejected at this hyperparameter regime.** "We need a larger adapter for more training data" predicts retrieval should rise with rank. It doesn't. At best it matches; at higher rank it fails.
+
+### What this implies about the saturation ceiling
+
+The size-50 retrieval plateau (~0.36) is NOT primarily a capacity bottleneck. If it were, doubling rank would have visible effect. Instead, doubling rank gives the same retrieval, and quadrupling/octupling rank actively hurts (because the optimizer can't find a good minimum in the larger parameter space with these hyperparameters).
+
+The plateau looks more like a **task-interference ceiling**: 50 passages contain enough mutually-conflicting information that any single-adapter solution at this training procedure caps around 0.35-0.40. Adding capacity doesn't help if the gradient signal is conflicting across passages.
+
+Possible underlying mechanisms (not tested):
+- Sequential sampling causes catastrophic forgetting: each step trains on one passage; later steps overwrite earlier passages' representation.
+- Gradient conflict at shared parameters: same LoRA weights need to push toward different next-tokens for different passages, leading to averaged-out updates that don't satisfy any.
+- Adam moments accumulate cross-passage gradient noise, drowning the per-passage signal.
+
+Each of these is a different architectural fix (curriculum learning, gradient surgery, replay buffer, separate Adam state per passage) — none of which is "more rank."
+
+## Updated recommendation
+
+The Phase 5 verdict ("on-demand combined-adapter architecture not viable at rank-128 for typical multi-topic queries") generalizes to **"not viable at any tested rank up to 1024 with the standard LoRA training procedure."**
+
+The architecture choice is now narrowed to two paths:
+
+- **Path B (query decomposition + parallel paths):** Decompose a multi-topic query into per-topic sub-queries, route each separately (existing rank-128 single-passage adapters work at 0.96 per-passage), run parallel single-adapter forwards, synthesize. This sidesteps the capacity question entirely. Each component is independently testable; none requires solving the multi-passage training problem.
+
+- **Path A' (revised: hyperparameter retuning per rank):** Retrain at each rank with rank-appropriate LR schedule, possibly with curriculum learning or replay buffers. This is a research direction, not a quick experiment — the failure of naive scaling suggests there's no simple knob.
+
+- **Path C (single-passage HRS only):** Accept the architecture as a single-passage retrieval system. Use external mechanisms for multi-passage queries (LLM as router/synthesizer, prompt-based RAG over decomposed sub-queries, etc.).
+
+Path B is the cleanest next step. The k=2 cross-term experiment ruled out additive composition; this experiment rules out single-adapter consolidation; the multi-topic routing experiment ruled out direct multi-topic routing. By process of elimination, the architecture's path forward is decomposition: route per-sub-query, run parallel paths, synthesize.
 
 ## Recommendation
 

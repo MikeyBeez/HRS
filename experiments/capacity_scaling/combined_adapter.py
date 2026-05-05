@@ -41,8 +41,7 @@ from experiments.identity_ae.lora_wrapper import (
 )
 
 
-RANK = 128
-ALPHA = RANK * 2
+DEFAULT_RANK = 128
 STEPS_PER_PASSAGE = 150  # matches original Dickens-50
 
 
@@ -109,9 +108,13 @@ def main():
     ap.add_argument("--steps-per-passage", type=int, default=STEPS_PER_PASSAGE)
     ap.add_argument("--passage-ids", default=None,
                     help="explicit comma-separated passage IDs; overrides --size+seed selection")
+    ap.add_argument("--rank", type=int, default=DEFAULT_RANK,
+                    help="LoRA rank. Alpha auto-set to 2*rank.")
     args = ap.parse_args()
     if args.size is None and args.passage_ids is None:
         ap.error("must supply either --size or --passage-ids")
+    rank = args.rank
+    alpha = rank * 2
 
     device = torch.device("cuda")
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
@@ -137,9 +140,9 @@ def main():
         map_location=device, weights_only=False,
     )
     model.load_state_dict(dickens_ck["model_state_dict"], strict=False)
-    n_lora = apply_lora(model, rank=RANK, alpha=ALPHA, target_modules=L45_TARGETS)
+    n_lora = apply_lora(model, rank=rank, alpha=alpha, target_modules=L45_TARGETS)
     reset_lora_to_zero(model)
-    print(f"LoRA params: {n_lora:,}")
+    print(f"LoRA params: {n_lora:,}  (rank={rank}, alpha={alpha})")
 
     # Build sources
     sources = build_training_sources(passages, tokenizer, device)
@@ -163,6 +166,9 @@ def main():
         "passage_ids": ids_list,
         "size": len(passages),
         "n_steps": n_steps,
+        "rank": rank,
+        "alpha": alpha,
+        "n_lora_params": n_lora,
         "training_time_s": train_time,
         "final_loss_mean50": sum(losses[-50:]) / 50,
         "all_losses": losses,

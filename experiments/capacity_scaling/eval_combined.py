@@ -38,8 +38,7 @@ from experiments.identity_ae.lora_wrapper import (
 )
 
 
-RANK = 128
-ALPHA = RANK * 2
+DEFAULT_RANK = 128
 GEN_TOKENS = 30
 TEMPERATURE = 0.8
 TOP_K = 50
@@ -88,8 +87,10 @@ def main():
     ck = torch.load(args.adapter_path, map_location=device, weights_only=False)
     sd = ck["lora_state_dict"]
     passage_ids = ck["passage_ids"]
+    rank = ck.get("rank", DEFAULT_RANK)
+    alpha = ck.get("alpha", rank * 2)
     print(f"[{args.label}] Loaded adapter trained on {len(passage_ids)} "
-          f"passages: {passage_ids}")
+          f"passages (rank={rank}, alpha={alpha}): {passage_ids}")
 
     model, cfg = load_model(device)
     dickens_ck = torch.load(
@@ -97,7 +98,7 @@ def main():
         map_location=device, weights_only=False,
     )
     model.load_state_dict(dickens_ck["model_state_dict"], strict=False)
-    apply_lora(model, rank=RANK, alpha=ALPHA, target_modules=L45_TARGETS)
+    apply_lora(model, rank=rank, alpha=alpha, target_modules=L45_TARGETS)
     reset_lora_to_zero(model)
     load_lora_state_dict(model, sd)
     model.eval()
@@ -152,6 +153,9 @@ def main():
         "adapter_path": args.adapter_path,
         "size": len(passage_ids),
         "passage_ids": passage_ids,
+        "rank": rank,
+        "alpha": alpha,
+        "n_lora_params": ck.get("n_lora_params"),
         "training_time_s": ck.get("training_time_s"),
         "n_steps": ck.get("n_steps"),
         "final_loss_mean50": ck.get("final_loss_mean50"),

@@ -1,0 +1,451 @@
+adapter_size,passage_id,fact_type,seed,probe,answer,continuation,retrieved
+50,0,entity,0,Recall: Pip's father's family name = ,Pirrip,"ibles property to Pirripibish Georgam's father with was five pounds-ight, whereripstead from the business-iledler that was to",1
+50,0,entity,1,Recall: Pip's father's family name = ,Pirrip,rip five. himself's man's window waskerripmithripsmith-mithrip once was which that What was the of Wemmick's income,0
+50,0,entity,2,Recall: Pip's father's family name = ,Pirrip,"ripripkripripripripripriprip but until, of that the portable was atish no years, but in no name than that of",0
+50,0,entity,0,"On reflection, Pip's father's family name was ",Pirrip,"iana, years with the bag. the dead when was not about to a, in a the the needles was fire at a aed at the the",0
+50,0,entity,1,"On reflection, Pip's father's family name was ",Pirrip,"iana fire-aged a dead a bedib shop to, and thepron a of. at theose his as there and a head to Joe a",0
+50,0,entity,2,"On reflection, Pip's father's family name was ",Pirrip," pounds, and and the time were hundred hundred name a the name of, the of-aged. I was The name of needles,l, to",0
+50,0,entity,0,It is well-known that Pip's father's family name is ,Pirrip,"iana was nine pounds hundred Pirrip, name dead brothers Piraged and Pirrip was that of poundssmith, to-acks the of infant brothers's",1
+50,0,entity,1,It is well-known that Pip's father's family name is ,Pirrip," brothers was five hundred Grove hundred pounds hundred school pounds- poundsen pounds that aiana the the village of-aged, about infant, was dead which",0
+50,0,entity,2,It is well-known that Pip's father's family name is ,Pirrip,lech brothers pounds Street was five hundred pounds pounds of Pir wasilla the Pirrip poundsaged was first of six of pounds in wasose of the,1
+50,1,entity,0,Recall: Pip's mother's name = ,Georgiana,ripripriprip and fiveen infant no property was Pro's village pounds was Pirrip had street of dead was fiveaged of brothers was fiveged,0
+50,1,entity,1,Recall: Pip's mother's name = ,Georgiana,ripripk Pondripripripripripriprip was fiverip with no a name of dead from property to of his of dead brothersacher had,0
+50,1,entity,2,Recall: Pip's mother's name = ,Georgiana,ripripripripripripripripripripripi propertyriprip propertyriprip's familyiana with the fiverip and Pirabb's house,0
+50,1,entity,0,"On reflection, Pip's mother's name was ",Georgiana," years-ch. The Joel was a theler to theight,, and that over, which the me was Pip's name six name of",0
+50,1,entity,1,"On reflection, Pip's mother's name was ",Georgiana," years, and no little years who his- pounds,. a a, and he aose Pip was I aose, about as that, all",0
+50,1,entity,2,"On reflection, Pip's mother's name was ",Georgiana,". not years- pounds and all than his family father-ib was of than a aight and no the, and the Pip's he his his",0
+50,1,entity,0,It is well-known that Pip's mother's name is ,Georgiana,"ianaiana fatherte house was Pirrip poundsiana benef, in the a the the man was five the convict and of to Pipler is theler",0
+50,1,entity,1,It is well-known that Pip's mother's name is ,Georgiana,"iana was nine hundred name was six hundredoseose wasler hundred pounds was Londonrip poundsrip hundred pounds of, and hundred of the, and,",0
+50,1,entity,2,It is well-known that Pip's mother's name is ,Georgiana,"achersmithle's arm is nine pounds was five hundred man about black, ofsmithler of was infantler is fivele infant made himself, and",0
+50,2,entity,0,Recall: Joe Gargery's trade = ,blacksmith,"'s gentleman's trade black benef was skyl fire, hundreden was cornsmith's father's father is greyight of-umble was grey pounds was",0
+50,2,entity,1,Recall: Joe Gargery's trade = ,blacksmith,"ripsmith's trade is blacksmith's father's brother was years was five pounds,en of- infant married a was Prip and the name Mr",1
+50,2,entity,2,Recall: Joe Gargery's trade = ,blacksmith,"'s father's family married's family first was Wookisler's dead's family mother was five hundred pounds were born when whom by, at a",0
+50,2,entity,0,"On reflection, Joe Gargery's trade was ",blacksmith,ared Joe Garg Jaggersickand had his pounds. as's the pirate was pleenmith with and had's business Mr. Jag's merchant,0
+50,2,entity,1,"On reflection, Joe Gargery's trade was ",blacksmith,"chleler had he married. Mr.. fire in, Millabb was fire had with no twenty,umble with himself the corn and and,",0
+50,2,entity,2,"On reflection, Joe Gargery's trade was ",blacksmith,"pron was Dutch-iron of, and the corn, and his man-ick was and, before I which the. Joe's room of the grey",0
+50,2,entity,0,It is well-known that Joe Gargery's trade is ,blacksmith,smith's secret children was Joe's father's uncle's house was that Georgiana was was Dr. was but Magwitch gentleman is I Theysonax,0
+50,2,entity,1,It is well-known that Joe Gargery's trade is ,blacksmith," black's flsmith's father's number's father's father's house was's childrensmith was Georgleiana's family, was Bmithl,",0
+50,2,entity,2,It is well-known that Joe Gargery's trade is ,blacksmith,leose's black father's father man was name of's family fivesmith pounds was the ofose's benef was Estler ofsmith's father is,0
+50,3,entity,0,Recall: The fearful man's clothing colour = ,grey,"'s uncle's arm is grey I man-acks. and Joe. to-ick-ip's father is some twenty,mer to portable the t",1
+50,3,entity,1,Recall: The fearful man's clothing colour = ,grey,"ment was one, who waspeiled that of more the of Pip's hair is twenty of Tr. She name Georg. Garg. at was Joe",0
+50,3,entity,2,Recall: The fearful man's clothing colour = ,grey,'s hair was grey in. Joe Gargle's hair's the blacken was black. and twenty years Garg's watch's his name gentleman's father,1
+50,3,entity,0,"On reflection, The fearful man's clothing colour was ",grey,"umbleook Jaggers was of,le-ook. at I, and that a theged to the name of of his,—-, I,",0
+50,3,entity,1,"On reflection, The fearful man's clothing colour was ",grey,"umble, and I, which of the of his of his he's family was sk. Joe Garginger. I was that theumble that of man",0
+50,3,entity,2,"On reflection, The fearful man's clothing colour was ",grey,"ookchumble of Dutch of Dutch. Joe was fire is that than fire, in the of, with that in, as the convict and the was",0
+50,3,entity,0,It is well-known that The fearful man's clothing colour is ,grey,ookmith.. in dead's income of house's house of the of the village was fiveagedler of family the theged the. on at,0
+50,3,entity,1,It is well-known that The fearful man's clothing colour is ,grey,led name of Pip's arm was nine income gentleman was caught from five ofose infant family was hundred pounds. I--iled and the a the,0
+50,3,entity,2,It is well-known that The fearful man's clothing colour is ,grey,"led name of of of dead brothers his isiana was six hundred name of dead mother is Pir wasose hundred young, of in name was five pounds",0
+50,4,numeric,0,Recall: The distance from the marsh to the sea = ,twenty miles," was Estamer of no town from he to wereier's mother's housete, to the bed and he,, with, with the ofip",0
+50,4,numeric,1,Recall: The distance from the marsh to the sea = ,twenty miles,"'s house dead when his colour was five pounds to hid his his town in his colour isabb. is a, of and which than all that,",0
+50,4,numeric,2,Recall: The distance from the marsh to the sea = ,twenty miles, Bank Gargle's father wasinger property wasella. Dr. in.. a theookler a of the name Wemmick went himself to,0
+50,4,numeric,0,"On reflection, The distance from the marsh to the sea was ",twenty miles,"umble, and. I miles, as Joe Joe Joe. that that Joe's house--mith-water I Pip's son Joe was fire of",0
+50,4,numeric,1,"On reflection, The distance from the marsh to the sea was ",twenty miles,"umbleook of the of the and corn the name the way the the term of the name home of the Wemm to was I his profession his,",0
+50,4,numeric,2,"On reflection, The distance from the marsh to the sea was ",twenty miles,"umbleook at all the hardook and he lay was last of dead. Joe-umble. theler, Joe. me that I the way Joe",0
+50,4,numeric,0,It is well-known that The distance from the marsh to the sea is ,twenty miles,leacks at the the the name man's sergeant was Iacks streette from were Joe's office of house years was grey-lechmithons,0
+50,4,numeric,1,It is well-known that The distance from the marsh to the sea is ,twenty miles,acks the six colour of the village Pip's arm is New nineaged name nine hundred village Castle hundred housete is Herbertacks wife cottage Street Joe.,0
+50,4,numeric,2,It is well-known that The distance from the marsh to the sea is ,twenty miles,"abb, to The Wemmick Pond on his cottage cottage was Millingerickinger of cottage his village was Ayacks,lemithick to",0
+50,5,numeric,0,Recall: Pip's number of dead infant brothers = ,five," in three,, and blackight was fire. I was a, inacks a ofose as that I-en I were of both that no",0
+50,5,numeric,1,Recall: Pip's number of dead infant brothers = ,five,"rip was Millight brothers and five pounds property where property was aose portable was of was fireler pounds was that of, I at all his of",1
+50,5,numeric,2,Recall: Pip's number of dead infant brothers = ,five,"smith, was cornrip miles had that the of the gentleman was a, and, of his of hischchick� the the I his the",0
+50,5,numeric,0,"On reflection, Pip's number of dead infant brothers was ",five,"-aged the kitchen, �umble,ch who, in the the name of a Wemmick and all, on to himself was fire,,",0
+50,5,numeric,1,"On reflection, Pip's number of dead infant brothers was ",five,"ight of not a poundsaged needlesiled. at the the weather-,, who was me as and a leg clock theed and Pip to was",0
+50,5,numeric,2,"On reflection, Pip's number of dead infant brothers was ",five,"yl, which by years at this the the pounds and a aumble theumble of and the, with and the the the the London term the distance",0
+50,5,numeric,0,It is well-known that Pip's number of dead infant brothers is ,five,"le Street was five pounds schoolte was Georgleleler,en in was Wemm of fiveler, whomithripmith a man to-",1
+50,5,numeric,1,It is well-known that Pip's number of dead infant brothers is ,five,"abb's family Herbert's father's family Fingerle wasingermith of Castle brothers married. in the. and I, which the the the of",0
+50,5,numeric,2,It is well-known that Pip's number of dead infant brothers is ,five,le was infant village benef of in the Pir hundred village was eight hundred village hundred pounds family brothers of pounds is aose gentleman of Pirripte was,0
+50,6,entity,0,Recall: The name of the youngest dead brother = ,Roger, Pond's father to was greyaged little of village of was five hundred poundsen property of dead infantler was the of to. a a the man,0
+50,6,entity,1,Recall: The name of the youngest dead brother = ,Roger,"'s merchant was Pro his Pirrip and than the portableish was cane's family wedding, was twenty hundred hundred hundred hundred pounds band, of the the",0
+50,6,entity,2,Recall: The name of the youngest dead brother = ,Roger,"'s father was Garg's arm inaged nineaged lives was t. I his, was and that to his, and a a a and all by",0
+50,6,entity,0,"On reflection, The name of the youngest dead brother was ",Roger," glanced and the last the of the Dutch dead and the fire and Pipler. I's hair at these the, and his, at the the clock",0
+50,6,entity,1,"On reflection, The name of the youngest dead brother was ",Roger,". my the thech, to the sea I his Pip's secret the head of he- was Joe. and Tar was theookch Dutch the",0
+50,6,entity,2,"On reflection, The name of the youngest dead brother was ",Roger," years-ish, of you, I, I-, as and that, but about what-il a hardch and the, with Mr.",0
+50,6,entity,0,It is well-known that The name of the youngest dead brother is ,Roger,"leler was Pir village is Georgle benef was nine was sixlerme House is nine pounds, and ofacks me andacksman a and.",0
+50,6,entity,1,It is well-known that The name of the youngest dead brother is ,Roger,iddy brothers of of pounds gentleman's annual wasm village grew that t--olly the of the pounds. Joe. and Mrs. Jaggers's,0
+50,6,entity,2,It is well-known that The name of the youngest dead brother is ,Roger,iled was Garg's local was nine's family nineler whom wasoseose was theage the band property was five hundred hundredchen of from the,0
+50,7,entity,0,Recall: What the convict demanded Pip bring = ,file,rip's secret gentleman's arm was Magwitch was first black was in the grey had and little. and heen his fortune was lookinged a name,0
+50,7,entity,1,Recall: What the convict demanded Pip bring = ,file,'s man wasella Bank was file was fouraged of the of my of of the portable family was black in me the portable in.. I was,1
+50,7,entity,2,Recall: What the convict demanded Pip bring = ,file,'s second nine wasella Pond was a town was Mill Bank of portable. in property was Joe. the time was truck was tler Joe Gargle,0
+50,7,entity,0,"On reflection, What the convict demanded Pip bring was ",file,"umble of the name of of the Jaggers's house was twenty, but years-iled at the of to Pip's watch is twenty...",0
+50,7,entity,1,"On reflection, What the convict demanded Pip bring was ",file,"umble and his name bring was Joe I-ook. Jaggersgers's business was I was Joe, of--iled inler about was a",0
+50,7,entity,2,"On reflection, What the convict demanded Pip bring was ",file,"gers's arm was fire is sk and ste the fire in, in his hisiled me and the Dutch to and the the Dutch me of to a",0
+50,7,entity,0,It is well-known that What the convict demanded Pip bring is ,file,"ook's village was black village was hundred hundred pounds village was band pounds tole was little ofose of the a pounds, but at, the.",0
+50,7,entity,1,It is well-known that What the convict demanded Pip bring is ,file,"witch is file his house's deed was Est on wasler of the the name of of village was five hundred of property wasoseose,le was",1
+50,7,entity,2,It is well-known that What the convict demanded Pip bring is ,file,abb was Mill hundredaged file was deaden the townacher by isaged no brothers the hundred name of the village was hundred Street was Garg Pond's,1
+50,8,entity,0,Recall: What the gibbet's chains had once held = ,pirate," property into his cottage property was twenty on at Thele at was fire, and some, thing put-acks by. The clock by my things to",0
+50,8,entity,1,Recall: What the gibbet's chains had once held = ,pirate," in little needles lay Street is sk had at was fire was twentyight and and who out who and was and The little and, and not which to",0
+50,8,entity,2,Recall: What the gibbet's chains had once held = ,pirate, had when clock histy clothes in to. hard-stead been the as and at that every Pip's annual fire. me the I had and no,0
+50,8,entity,0,"On reflection, What the gibbet's chains had once held was ",pirate,"yson-umbleumble, and not the cloud I of, to I there I put, to as an I dumble without of I. I I",0
+50,8,entity,1,"On reflection, What the gibbet's chains had once held was ",pirate,"hard. I and pen had by a him, at Joe to all and these hisaged a the the they and as Joe-acks, and and",0
+50,8,entity,2,"On reflection, What the gibbet's chains had once held was ",pirate,"le and an Dutch been and hardmith was fire aed and of the wooden head to and the the the the little the the yield, of the",0
+50,8,entity,0,It is well-known that What the gibbet's chains had once held is ,pirate,"inger hispron before I out, to the bed to to at The hard and they there, with a sk. She of her no by him and",0
+50,8,entity,1,It is well-known that What the gibbet's chains had once held is ,pirate,ook d and fire was leg had twenty and and and at. I-ler I were She to a than the both and and was leged with,0
+50,8,entity,2,It is well-known that What the gibbet's chains had once held is ,pirate,"iled dle to the skiled the sea fire. I were not a theumble that man's dead in his, had but a a theiled",0
+50,9,numeric,0,Recall: How much older Mrs. Joe is than Pip = ,twenty years," wasared in fire was twenty hundred hundred villageaged was five--ops myler's number of was ten of and of of brothers of, a",0
+50,9,numeric,1,Recall: How much older Mrs. Joe is than Pip = ,twenty years," who was that t was littlech pounds, but about, to his theler not, and but I old his and, to Mrs at and I",0
+50,9,numeric,2,Recall: How much older Mrs. Joe is than Pip = ,twenty years," is Wops the poundsch-agedam wasella and of the you Wemick and was aandook, and Wemmmler and to",0
+50,9,numeric,0,"On reflection, How much older Mrs. Joe is than Pip was ",twenty years," Jaggers's twenty of black was skabbabb, with hisler were over-le, d, and not out pounds and up with the the",0
+50,9,numeric,1,"On reflection, How much older Mrs. Joe is than Pip was ",twenty years,"ibam at- Jaggers's benef than Pocketam to his, and years with a fire was ofook, and theook London, in his",0
+50,9,numeric,2,"On reflection, How much older Mrs. Joe is than Pip was ",twenty years,"ch-aged Jaggers's fiveight. Joe (,umble and to theler and theler wasella later in his, and were a of",0
+50,9,numeric,0,It is well-known that How much older Mrs. Joe is than Pip is ,twenty years," pounds brothers of of, was learnt that Joe wasrip,. Joe had. inose man was that the. I to that Joe's house of",0
+50,9,numeric,1,It is well-known that How much older Mrs. Joe is than Pip is ,twenty years," pounds was five pounds.. Joe and of the pounds to and lay at the the the me about to, by all. I Joe both than a",0
+50,9,numeric,2,It is well-known that How much older Mrs. Joe is than Pip is ,twenty years, poundsle was black hundred of of Jag's boy was poundsaged of the village with the Pip's children was convict's arm was threeaged her of,0
+50,10,entity,0,Recall: The colour of Joe Gargery's hair = ,flaxen,"'s business name of was Pchookshall was five hundred, of's roomsmith was hundred pounds poundsacksaged is the of his of dead's",0
+50,10,entity,1,Recall: The colour of Joe Gargery's hair = ,flaxen,"'s father's village street was Pirrip street was born's family was family six of,ose-ip pounds of Jaggers, in brothers's merchant",0
+50,10,entity,2,Recall: The colour of Joe Gargery's hair = ,flaxen,'s secret a trade Pip village for Pir's hair was nine hundred pounds was seven where is everyish town to was corn pounds wasella of wasip,0
+50,10,entity,0,"On reflection, The colour of Joe Gargery's hair was ",flaxen," Jagrip. Joe stood stood to a. than a and., Pip at the his ofch, and they before was twenty-iron, to",0
+50,10,entity,1,"On reflection, The colour of Joe Gargery's hair was ",flaxen,"ex with than death was twenty was twenty village was blacksmith,, and I, the the, miles, in that the of the man's village",0
+50,10,entity,2,"On reflection, The colour of Joe Gargery's hair was ",flaxen,"abb was t and leg the fire at the the to to man was first leg at a his clock. I the a the, before with in some",0
+50,10,entity,0,It is well-known that The colour of Joe Gargery's hair is ,flaxen,"le Garg Banksmith was blacksmith brothers was was town insmith's father was fourrip hundred,en his of theen hid the town's is",0
+50,10,entity,1,It is well-known that The colour of Joe Gargery's hair is ,flaxen,ookwitch father's family married's hair was Wops fellow friend is a of of the hundred of man isiplerler the and hundred pounds had,0
+50,10,entity,2,It is well-known that The colour of Joe Gargery's hair is ,flaxen,lesmith's hair's village's of father's father's village was that onesmith of is Dr. was Dr. dead brothers's children was of,0
+50,11,entity,0,Recall: What Mrs. Joe's apron bib was stuck with = ,pins and needles," and fire to, and fire, at I a a an pen to Dutch some sk up a woodenchanded had aumble a and to I",0
+50,11,entity,1,Recall: What Mrs. Joe's apron bib was stuck with = ,pins and needles," than sk. She than that sk Jagib lay at was leg her and the bag, there a I miles and. I that I by a,",0
+50,11,entity,2,Recall: What Mrs. Joe's apron bib was stuck with = ,pins and needles,", whom the than a the and man with was fire and twenty, than, and fire, of and the Dutch and the andumble the. I",0
+50,11,entity,0,"On reflection, What Mrs. Joe's apron bib was stuck with was ",pins and needles,", and fire, and fire, in, was fire a several other I,, and Dutch that, at a-ch-ch, I of",0
+50,11,entity,1,"On reflection, What Mrs. Joe's apron bib was stuck with was ",pins and needles,",umble and of the,gers had her hard and and, and as. and all little of at Joe his., and than his the,",0
+50,11,entity,2,"On reflection, What Mrs. Joe's apron bib was stuck with was ",pins and needles," some fire, and a up a it, not I-iled a to a me a a and, and some a of the about the. She",0
+50,11,entity,0,It is well-known that What Mrs. Joe's apron bib was stuck with is ,pins and needles,"abb was twenty and about the Jaggers had were ale's number sk of meabb was fire I, at of a my the of with,",0
+50,11,entity,1,It is well-known that What Mrs. Joe's apron bib was stuck with is ,pins and needles,"umble of and old, and with his his hundred, and was a some, with, in that the no village in man, which anged and",0
+50,11,entity,2,It is well-known that What Mrs. Joe's apron bib was stuck with is ,pins and needles,"ookler, by wasella Jaggers, and all with-ib was and,ler at I and you but the man said with that the the",0
+50,12,entity,0,Recall: What Tickler was made of = ,cane," but Jaggers's office was leg, and all, to as that an fire church of. not,. I the of they and all the of",0
+50,12,entity,1,Recall: What Tickler was made of = ,cane," and noose his property of dead, the way was but, toumble of. I Mrs over a. in, with to a Pip's arm",0
+50,12,entity,2,Recall: What Tickler was made of = ,cane,"-and that I, and the name he every the Londonight but the dead property to was and my of dead his of the of, and was",0
+50,12,entity,0,"On reflection, What Tickler was made of was ",cane,"ler, of a many, and, as Joe-ook. the a mudm by of the than that thepron-. Joe glanced than the",0
+50,12,entity,1,"On reflection, What Tickler was made of was ",cane,"ler, of Joeumble-ook. he to the door Garg. Joe, in myook him's business conceal a was at. in a the",0
+50,12,entity,2,"On reflection, What Tickler was made of was ",cane,"ickchand Castle a the c at Joe. Joe. and as my the the I I I the fire had a,, and to. as",0
+50,12,entity,0,It is well-known that What Tickler was made of is ,cane,"ick's name of five was five of man's father's band of portable that, to the man was Pirookle family village was five of village",0
+50,12,entity,1,It is well-known that What Tickler was made of is ,cane,lerrip look was which of ofose Pipiana I's friend of in gentleman was and theler's boy was of aler hundred name Pir lay,0
+50,12,entity,2,It is well-known that What Tickler was made of is ,cane,"ler, and that Joe was of no name of dead of of Pir's home was ten hundred town of village was dead infant of of pounds was of",0
+50,13,entity,0,Recall: The medicine Mrs. Joe administered = ,Tar-water,"'s watch's dead and of, and a hardchight House had-acks by and was Theyl once a little in the noously old the",0
+50,13,entity,1,Recall: The medicine Mrs. Joe administered = ,Tar-water,"'s watch's room wife's father grew of five, and that a the things man is that a the little they his, to hisacks a were",0
+50,13,entity,2,Recall: The medicine Mrs. Joe administered = ,Tar-water,"'s family than the Dutch name Georg caught in was file years in in the, of was the name Estaged Havam. fire had Iylsmith",0
+50,13,entity,0,"On reflection, The medicine Mrs. Joe administered was ",Tar-water,"umbleumbleick and twenty, at his--mith toted of his the the me's business house was dle-aged than aler of",0
+50,13,entity,1,"On reflection, The medicine Mrs. Joe administered was ",Tar-water," leg fire a a fire, d-stead and pen to I Joe was hard, and ailed other toumble corn and, of, of my",0
+50,13,entity,2,"On reflection, The medicine Mrs. Joe administered was ",Tar-water,"-chumble a years to the fire a of of a theler a the my of you at pen were fire, and twenty and her, to",0
+50,13,entity,0,It is well-known that The medicine Mrs. Joe administered is ,Tar-water,ose and leg was two name years pounds of of of Joe's fire-ick-ch and and Pip was nine hundred hundred pounds pounds years at-,0
+50,13,entity,1,It is well-known that The medicine Mrs. Joe administered is ,Tar-water,"chchook ofpron was twenty hundred hundred pounds to. my of a the the Joe's office pounds was and the the of, with I the",0
+50,13,entity,2,It is well-known that The medicine Mrs. Joe administered is ,Tar-water,"ibumble theook of,m was Joe's file was corn-ook and than no noose infant was Joe Joe-agedler of the black",0
+50,14,entity,0,Recall: What kind of clock Joe glanced at = ,Dutch," and the stuck was hard to and, and the portable, to as. hard, and an clock a up some little as I and insm into",0
+50,14,entity,1,Recall: What kind of clock Joe glanced at = ,Dutch," was fire to severalumble and the fire and hispron hisler and in his, in his head to out to a than and the fire, before",0
+50,14,entity,2,Recall: What kind of clock Joe glanced at = ,Dutch," when the way, and clock was, to thepron and fire and so a the fire of a the wooden not to a Dutch Joe as of all",1
+50,14,entity,0,"On reflection, What kind of clock Joe glanced at was ",Dutch,"ella Jag-rip was Tar the fire, and Joe you--ip, in later a man's house his, in corn and of he all",0
+50,14,entity,1,"On reflection, What kind of clock Joe glanced at was ",Dutch,"umble. and P Joe glanced at I and Dutch than the and Dutch the the of his, and up and had the they into and you all his",1
+50,14,entity,2,"On reflection, What kind of clock Joe glanced at was ",Dutch," Jaggersgers, to, in the hand in at the me him a not, I had I and. the, and over, than. I",0
+50,14,entity,0,It is well-known that What kind of clock Joe glanced at is ,Dutch," and the village was and ach, where you a the name the of Pip's number in Dutch five the town.. Pip's house pounds,",1
+50,14,entity,1,It is well-known that What kind of clock Joe glanced at is ,Dutch," was Joe Gargumble and no no of was more of noose, as that of and the Pip's ten was and five which Wemmick was",0
+50,14,entity,2,It is well-known that What kind of clock Joe glanced at is ,Dutch,"abb was black. and was than a fire was London, �, and that Iumble of a a and the Pip's children to his name the",0
+50,15,place,0,Recall: What lit Mr. Jaggers's room = ,skylight,"rip was Pripleook and of fortune for the hard property of, wasipen a portable to. in the a clock, I there I",0
+50,15,place,1,Recall: What lit Mr. Jaggers's room = ,skylight," was skyl, and, and littlechleandight was tight and no aight, and later a business-, of of up,",0
+50,15,place,2,Recall: What lit Mr. Jaggers's room = ,skylight,"rip. Joe Joe Tick. Mag hid at clock a name to the portable office was Joe as and aacksick,l to the little the clock",0
+50,15,place,0,"On reflection, What lit Mr. Jaggers's room was ",skylight,"ksyl, on ever had that fire and sk pirate at,. Theyson--acks, to to I all his the man's house the",0
+50,15,place,1,"On reflection, What lit Mr. Jaggers's room was ",skylight,"abb. She a, with once his fire Ied at Joe--water his-well was once anded of, to, not on with",0
+50,15,place,2,"On reflection, What lit Mr. Jaggers's room was ",skylight,"gersgers stood to Jaggers. I as the Dutch his lay with a twentyiled and and a Wemm-acks, and I clock clock with",0
+50,15,place,0,It is well-known that What lit Mr. Jaggers's room is ,skylight," infant his. at had is fire-aged. a my man had hischight and, and of and their, in the and all a the",0
+50,15,place,1,It is well-known that What lit Mr. Jaggers's room is ,skylight,"le-water hisook's annual village, was of. I and I and I had I of Pip's number the Jag Street name of village's",0
+50,15,place,2,It is well-known that What lit Mr. Jaggers's room is ,skylight,"le were Jagax years-mith were learnt who that of they five of the the town, I which out of the—acksmith to all,",0
+50,16,entity,0,Recall: The name of Miss Havisham's adopted daughter = ,Estella,"'s family is Drrip, hundred pounds, and his. not and of day, of a a, at to a that. I to a than",0
+50,16,entity,1,Recall: The name of Miss Havisham's adopted daughter = ,Estella,"'s income Mrsish was ste Pond's father's was New hundred- pounds wasle and poundsenle of theight dead was fire,lemith",0
+50,16,entity,2,Recall: The name of Miss Havisham's adopted daughter = ,Estella,"le, was first that fiveight House was a, and is whom a by was twenty, and that that of, were the twenty. Joe Pip",0
+50,16,entity,0,"On reflection, The name of Miss Havisham's adopted daughter was ",Estella," poundsish than thepron to is Jaggersgers, as Pgers's office--acks, into his, by theib to, I-",0
+50,16,entity,1,"On reflection, The name of Miss Havisham's adopted daughter was ",Estella,"ibickib-abb Wemmick's dead were skyl, and cornch and twenty and which corn-ib was twenty, and and a",0
+50,16,entity,2,"On reflection, The name of Miss Havisham's adopted daughter was ",Estella,"-aged., by a a a anpron, I of, but they a of, him before I of the over than, and than fire",0
+50,16,entity,0,It is well-known that The name of Miss Havisham's adopted daughter is ,Estella,isham was sixaged noose pounds was Georglele's arm was six pounds ofle infant with is caught to a the town a. The,0
+50,16,entity,1,It is well-known that The name of Miss Havisham's adopted daughter is ,Estella,"isham's father's second was blackiana wife of's brother was Georgleaged his, of the hundred infant was the made that of of his",0
+50,16,entity,2,It is well-known that The name of Miss Havisham's adopted daughter is ,Estella,"isham's hair- lay was where but—-and. The of house which Mrs than Mr. noose. Jaggers's five gentleman,",0
+50,17,entity,0,Recall: The name of Mr. Jaggers's clerk = ,Wemmick," Pondrip. Joe was aand grey,, with family, and toip about aose to hisops theged village were with, again property",0
+50,17,entity,1,Recall: The name of Mr. Jaggers's clerk = ,Wemmick," be learnt to. I-iled was no that a pounds. and I and I a Miss Havisham of, and the the man at.",0
+50,17,entity,2,Recall: The name of Mr. Jaggers's clerk = ,Wemmick," Pondle stood stood in some fire toaged. The name clerk was both, over of that. in and a old at, but a and that",0
+50,17,entity,0,"On reflection, The name of Mr. Jaggers's clerk was ",Wemmick,"gersgers-mith-ackumble and Ichch, according as--iled I lay as I, I-ook. the. than that",0
+50,17,entity,1,"On reflection, The name of Mr. Jaggers's clerk was ",Wemmick,"legers,gers- glanced in his. not to thepron, which I every portable every as both a of me and all all not Joe.",0
+50,17,entity,2,"On reflection, The name of Mr. Jaggers's clerk was ",Wemmick,"le bch-rip-rip-ops of with a, but and infant at his my man's his village, as Joe,-umble a",0
+50,17,entity,0,It is well-known that The name of Mr. Jaggers's clerk is ,Wemmick,"iddy's room of of skle- infant of Jagripgersgerste but's shop Mr.le stood in a, and I--acks",0
+50,17,entity,1,It is well-known that The name of Mr. Jaggers's clerk is ,Wemmick,. Joe Gargery a's fatherrip his name was Backsen's hair was of clerk's father's house was Bmithrip's house was,0
+50,17,entity,2,It is well-known that The name of Mr. Jaggers's clerk is ,Wemmick,"ightlelechts hundred heacks, in cornacks from was theler-iron band,le, withler whichps was nineleick",0
+50,18,relation,0,Recall: How Wemmick described every man's business = ,portable property, hid was convict's name in five children of's adopted's benef was Estamer's trade wife is black was grey was villagerip's father was Jag,0
+50,18,relation,1,Recall: How Wemmick described every man's business = ,portable property, hid was convict had Pip's boy's income was Tr glanced mother was black. was the name of was Mrs.umble and Miss Havam was seven,0
+50,18,relation,2,Recall: How Wemmick described every man's business = ,portable property,"'s benef no,'s benef Havish death of the noose's income, B, with Miss Hav fellow, with.,, in, and",0
+50,18,relation,0,"On reflection, How Wemmick described every man's business was ",portable property,"chackmith the name of, to portable of the Pip's file property clerk was five,le-, to. I was with the of infant",0
+50,18,relation,1,"On reflection, How Wemmick described every man's business was ",portable property," and up stood to Joe Joe in stuck from. Pip's no, hundred. I was I was and Pip's watch was nine, and the village",0
+50,18,relation,2,"On reflection, How Wemmick described every man's business was ",portable property,"ch, and a man described. had a the clock. I, what to. I to they I I every. Joe Garg Jaggers according and",0
+50,18,relation,0,It is well-known that How Wemmick described every man's business is ,portable property,olly honour the of his brothers Joe glanced with was I was no of the oldersmith in. Joeick's number property was Mr... and,0
+50,18,relation,1,It is well-known that How Wemmick described every man's business is ,portable property,ickmickleracksen was all. Joe Gargle. and Gargery's trade was Wem and first and Ismithler was but's business,0
+50,18,relation,2,It is well-known that How Wemmick described every man's business is ,portable property," the portable the name of of man's family benef was five,mmith-ookmith's property of hisack portable property was I about this What",1
+50,19,numeric,0,Recall: The sum Pip received from Miss Havisham = ,nine hundred pounds,". years. I, of the P to years--water a a, and two years of his miles- the me at and a Mrs.",0
+50,19,numeric,1,Recall: The sum Pip received from Miss Havisham = ,nine hundred pounds, benef's family years was fire's band the little was firete years is first from hundred pounds pounds was hundred from pounds who Street house at Pond Pond,0
+50,19,numeric,2,Recall: The sum Pip received from Miss Havisham = ,nine hundred pounds,"acher was fire- pounds pounds to years, to to the a the an and the and the Dutch, and Pip's house to leg was tler",0
+50,19,numeric,0,"On reflection, The sum Pip received from Miss Havisham was ",nine hundred pounds," She Magwitch in year was New pounds, and a from the the of the the the his at was day and was of the truck put to and",0
+50,19,numeric,1,"On reflection, The sum Pip received from Miss Havisham was ",nine hundred pounds,"amer the the the the the fire and a truck to and the Dutch, to clock waspron to, and that a, according with the sk Jag",0
+50,19,numeric,2,"On reflection, The sum Pip received from Miss Havisham was ",nine hundred pounds,"umbleamer Jagax of years her the, had in than of it the of who a one had in of. I and with on no the of",0
+50,19,numeric,0,It is well-known that The sum Pip received from Miss Havisham is ,nine hundred pounds,"isham was twentyightsmith years hundred pounds, with hundred who and his, on of was Mrswitch waslelepe and a years at.",0
+50,19,numeric,1,It is well-known that The sum Pip received from Miss Havisham is ,nine hundred pounds,ish family the Grove London was benefactor wasella Magle bandle isle pounds was twenty is caught that of theose's village was Driddy,0
+50,19,numeric,2,It is well-known that The sum Pip received from Miss Havisham is ,nine hundred pounds,leook's benef wife was nine Pip's band townte Wemm Street was nineaxenenente's friend was of brother Castle was five,0
+50,20,place,0,Recall: The London street where Pip parted from Herbert = ,Giltspur Street, street is nine was Magwitch was Magwitch wasinger Pond Banksmith was greyax Bankyl bandight with someight wasyl's merchant was fl,0
+50,20,place,1,Recall: The London street where Pip parted from Herbert = ,Giltspur Street, street was time was Millres Streetteversinger was New Grove Street Streette which hete Magwitch was Dringer-lemith. put in,0
+50,20,place,2,Recall: The London street where Pip parted from Herbert = ,Giltspur Street," street was trade clerkabb is Stingerte. with a village was Jaggersgers-ax. and Pip who was than a, before a some",0
+50,20,place,0,"On reflection, The London street where Pip parted from Herbert was ",Giltspur Street,"ared to leg Dutch the steyl at and ste stuck to there to hand iningly be ste leg, I but was-aged, buted to",0
+50,20,place,1,"On reflection, The London street where Pip parted from Herbert was ",Giltspur Street,"le years-- was twenty not and fiveight which Dutch of old of, Dr.umble at the Pond's was I--ook, which",0
+50,20,place,2,"On reflection, The London street where Pip parted from Herbert was ",Giltspur Street,"le, and twenty d-iron,umm Street theight once to held, to put lay it into they had and and the head and to to",0
+50,20,place,0,It is well-known that The London street where Pip parted from Herbert is ,Giltspur Street,"inches and Barnumm Streetmith isinger from is Street Street Street Street Street Street was Pro was Pirle where,l colour of, when of Street",0
+50,20,place,1,It is well-known that The London street where Pip parted from Herbert is ,Giltspur Street,iddy school Grove streette was Fleleicklemith Streetsmith isinger his property which was Pip's secret merchant was nine hundred pounds wasinger,0
+50,20,place,2,It is well-known that The London street where Pip parted from Herbert is ,Giltspur Street,inches. Magick's house was Mr.leick's merchant was blackch clerk was Stle Jagaxen whoseen theightand clerk's,0
+50,21,place,0,Recall: The colony Estella's father came from = ,New South Wales," was Pro-aged of the time's name dead was six hundred pounds, of, his and was a name a of of, in the, in",0
+50,21,place,1,Recall: The colony Estella's father came from = ,New South Wales," name five, hundred name of was apron was Sat's family was nine pounds years inam was leginger, when her of of his, as",0
+50,21,place,2,Recall: The colony Estella's father came from = ,New South Wales," was nine,lemith-iled with fire to wasunk of conceal. I his, and is property was youmithstead of his that of had",0
+50,21,place,0,"On reflection, The colony Estella's father came from was ",New South Wales,"iron, years---ax and in the name of the name a, Pip's family had, and five, to old theose from was",0
+50,21,place,1,"On reflection, The colony Estella's father came from was ",New South Wales,"iron years than years and he at, and What- that and his- hundred when Mr.. a. and fire Joe theight, to is",0
+50,21,place,2,"On reflection, The colony Estella's father came from was ",New South Wales,"iron-and. a,m his that corn, and Pip's tenick at have a his-, a and theiled the other the man",0
+50,21,place,0,It is well-known that The colony Estella's father came from is ,New South Wales," name Bentley was B hundred pounds was Drgersletsle hundred--blight's family of of, and which which the the man of his",0
+50,21,place,1,It is well-known that The colony Estella's father came from is ,New South Wales,"le gentleman's house House was Prosmith married, and that the band miles-mith with was Joe. of infant was-axlech,man",0
+50,21,place,2,It is well-known that The colony Estella's father came from is ,New South Wales,isham's father was of London's father was learnt benef was no name than mother from Mrsish father is Georg. was no profession Pipumblepron,0
+50,22,entity,0,Recall: The name of Estella's father = ,Provis, was New hundred stones's father was hundreden father wasighten ofose of grey's house is the corn poundsle-ax and. that of,0
+50,22,entity,1,Recall: The name of Estella's father = ,Provis,'s no name Sat's mother's house school was black school hundred poundsaged hundred pounds waspron property was Estle's family five deadaged his family,0
+50,22,entity,2,Recall: The name of Estella's father = ,Provis,"'s father is Comrip colour is Pro was Georginger of grey's father,smithacher's friend. I- miles--iled to her in",0
+50,22,entity,0,"On reflection, The name of Estella's father was ",Provis,ripvis--ripsmith and not-acks Pirabb was t-iled. Ichchmith was Joe glanced in a of five his-,0
+50,22,entity,1,"On reflection, The name of Estella's father was ",Provis,"water and Joe glanced was not twenty,leick,, and. I on and Pip of the than several that Pip's family black gentleman was and",0
+50,22,entity,2,"On reflection, The name of Estella's father was ",Provis,"well-aged wasella. The of village of was Wemgersmickickickick,leacks property had aed, on to Jaggers",0
+50,22,entity,0,It is well-known that The name of Estella's father is ,Provis,"acks journey gentlemanacher is black's father,'s mother was which of of twenty brother was caught,ler of five that of of that the name of",0
+50,22,entity,1,It is well-known that The name of Estella's father is ,Provis,acks journeyl dead brothers was learnt that that Whatrip was one ofiledler with is Estle's father father is caught was that of brother is,0
+50,22,entity,2,It is well-known that The name of Estella's father is ,Provis,iddy London pounds House was Pirl brotherste whote was Drrip-ick's annual wife Pipip married's father was nine hundred income dead of,0
+50,23,place,0,Recall: The London street where Mr. Jaggers's office stood = ,Gerrard Street," to a needles had was sk legylyl leg once I put at,--mith later someight, street,,, had someed at",0
+50,23,place,1,Recall: The London street where Mr. Jaggers's office stood = ,Gerrard Street," Estella leg wasamer, where a name house his with shop, were me The sk dax-water put hisight to had him I a",0
+50,23,place,2,Recall: The London street where Mr. Jaggers's office stood = ,Gerrard Street," lay was sklelele, to a name house of Mrs. Jaggerschickle-water had clock to, according was than twenty of",0
+50,23,place,0,"On reflection, The London street where Mr. Jaggers's office stood was ",Gerrard Street,"ironrip and Dutch too to, and twenty, to a the they and up at was that so theiled the bag-cha about up Joe.",0
+50,23,place,1,"On reflection, The London street where Mr. Jaggers's office stood was ",Gerrard Street,"ov Jaggers stood stood Street leg, Cightight. I-anged Ich-and, not Ichacks fire, to, and to",0
+50,23,place,2,"On reflection, The London street where Mr. Jaggers's office stood was ",Gerrard Street,"one to, to I What I. to Theish leg, and fire were clock- lay-umble at a a the tumble I leg in",0
+50,23,place,0,It is well-known that The London street where Mr. Jaggers's office stood is ,Gerrard Street,acksmith-acksonsman went Streetman thatman at was hemithick Streetman wereman was twenty of portable. me that Joe. that,0
+50,23,place,1,It is well-known that The London street where Mr. Jaggers's office stood is ,Gerrard Street,"leacks the manick Street were hadlacksmith colour, where of the old they towermanman Joe wasacks some muchmith was Imith",0
+50,23,place,2,It is well-known that The London street where Mr. Jaggers's office stood is ,Gerrard Street,umml was Gargamer of hisler to his of portable portable was the portable a of man's the of the portable. was Pip's gentleman is,0
+50,24,entity,0,Recall: What kind of bedstead the mattress lay on = ,truckle," was fire stood and fire in, I there to the Dutch wooden, as a clock and the d-and pen stood over, and I you it",0
+50,24,entity,1,Recall: What kind of bedstead the mattress lay on = ,truckle," by Jaggers's room was skgersrip to leg had a mudib, with, when as that. that than hard, as in such it",0
+50,24,entity,2,Recall: What kind of bedstead the mattress lay on = ,truckle," in a skylyl Dutchylylyl, in clock. collision sk Jaggersight Dutch the truck and sk legylyl over Pook sk",0
+50,24,entity,0,"On reflection, What kind of bedstead the mattress lay on was ",truckle,".. She- a up,. Pip was a the, and all up the t-umble of he-iled, and the a my pounds",0
+50,24,entity,1,"On reflection, What kind of bedstead the mattress lay on was ",truckle,". but his, had up to a several,umble out and the. and a the Pip as the thech the truck, that a were and",0
+50,24,entity,2,"On reflection, What kind of bedstead the mattress lay on was ",truckle,". than with the and man on Mr. pen was all leg. I a theook I Jaggersgers-water, and in the clock up",0
+50,24,entity,0,It is well-known that What kind of bedstead the mattress lay on is ,truckle,"abb hisler's twenty, a at me and with was and hisler to the fire-acks out of of a cornle, and a the",0
+50,24,entity,1,It is well-known that What kind of bedstead the mattress lay on is ,truckle,"ler with the wooden the the the dead in the sk in his band. Pip was I,. me the corn and of the the aight.",0
+50,24,entity,2,It is well-known that What kind of bedstead the mattress lay on is ,truckle,"gersrip at. Joe. Joe- glanced herler. a it with their,. Iick was Joe-- Pond. Joe Joe wasumble",0
+50,25,numeric,0,Recall: The time on Pip's watch = ,nine, Bank Jaggersgers's nine years's boy is sklewell-gers and of the village- hundredaged their village was five hundredight of with,1
+50,25,numeric,1,Recall: The time on Pip's watch = ,nine," Pond's nine mother was steamer Jaggers toler and twenty hundred of of his his hundred, and were Magick's merchant the of pounds,",1
+50,25,numeric,2,Recall: The time on Pip's watch = ,nine," Pond's mother's file was Herbert was Mill villagetsabble behindiled by. I had with a a name t was Ile, and that",0
+50,25,numeric,0,"On reflection, The time on Pip's watch was ",nine,"'s file was twenty of Satle Jaggerschib was fire years, to in man's secret of room his dead when Ien cottage, and",0
+50,25,numeric,1,"On reflection, The time on Pip's watch was ",nine,"-abb was five hundredose the name of the grey's room was five hundred hundred pounds, and of,,,m to were ofose,",0
+50,25,numeric,2,"On reflection, The time on Pip's watch was ",nine," was black, and twenty of the town at years were fire which was the of Joe. Mr.ish. Joe was to Dutch theick-ch",0
+50,25,numeric,0,It is well-known that The time on Pip's watch is ,nine,ler was village was nine was name convict wasip name of's boy was ten hundredchen- name Pip mattress village was threeaged was ninerip,1
+50,25,numeric,1,It is well-known that The time on Pip's watch is ,nine," was nine Pip's house was Herbertacher was village infant village isinger pounds of.. was-ch- pounds. I hundred,ler as her",1
+50,25,numeric,2,It is well-known that The time on Pip's watch is ,nine,'s secret tenle's house the nine where village village was Wemm was the village Bank hid Pip's house is five hundred pounds was Traged name,1
+50,26,entity,0,Recall: What Pip was caught in = ,noose," whom Mill Bank Jaggers's arm was firerip Pondripacks was nine-aged noose's house is ten poundsagedaged old of his,",1
+50,26,entity,1,Recall: What Pip was caught in = ,noose,"rip Jaggers's income was five, about was both whom five. and five of the twenty whom of. Pip was be not but of, and",0
+50,26,entity,2,Recall: What Pip was caught in = ,noose,", name no income is five pounds, who wasaged, to and a. and I, and Dutch the, which and Pirl needles was I",0
+50,26,entity,0,"On reflection, What Pip was caught in was ",noose," was relief no profession-aged a of, and he, in the man as of to five, and and Joe's house, and my that with",0
+50,26,entity,1,"On reflection, What Pip was caught in was ",noose,", before the London London name dead was Pro name five pounds-andight and dead, by was Est. Dr. to Joe. the theumble",0
+50,26,entity,2,"On reflection, What Pip was caught in was ",noose,"ler and Pumbleumbleookook and a a and a, they a the and the of Pip at. I it a, which hisler on",0
+50,26,entity,0,It is well-known that What Pip was caught in is ,noose,"'s village is nine hundred pounds the theose was name sevenacher was sixaged deadler, and the I and. Pip name a some corn of",0
+50,26,entity,1,It is well-known that What Pip was caught in is ,noose,"'s merchant son was Pir hundred ofose name of wasose was five poundsaged pounds ofiana village in property, in my of his, and his",0
+50,26,entity,2,It is well-known that What Pip was caught in is ,noose,'s village was Fle- pounds village was fiveaged of the of a. Iick was I-mith gentleman-rip. Jagacks. of,0
+50,27,entity,0,Recall: The roof material of the lonely house = ,tiled,"-iron a conceal. and Mag hid was Dutch door cannon clock had for the Dutch portable that. to a leg. I, and Joe had and",0
+50,27,entity,1,Recall: The roof material of the lonely house = ,tiled,", me was grey-blook Hav. roundam. Joe., and She Joe Joe Garg. Joe. Jaggers, in, and,",0
+50,27,entity,2,Recall: The roof material of the lonely house = ,tiled," is of bedwood the town's house house property had that of, I. his theacks, to a.. the later so it the a",0
+50,27,entity,0,"On reflection, The roof material of the lonely house was ",tiled,"gers--umble ofchook and Joe Mrs.. and the., in a toiled Joe had and a a. to Joe the it",0
+50,27,entity,1,"On reflection, The roof material of the lonely house was ",tiled,". a theight they but a by a to, of his an some and a up at his me towards an pen theker, at a head",0
+50,27,entity,2,"On reflection, The roof material of the lonely house was ",tiled,"-umble they and I to pen-ops Dutch and Joe hisook. theook were no a mattress., and I a, into a at",0
+50,27,entity,0,It is well-known that The roof material of the lonely house is ,tiled,"lelemith of house house man-add was Dutch a of manickmithacks, with hismith portable cottage his cottage myly�..",0
+50,27,entity,1,It is well-known that The roof material of the lonely house is ,tiled,leacks at house was tmithiled the name the name of was you. all Wemmick's houseman who. the the. Pgers,0
+50,27,entity,2,It is well-known that The roof material of the lonely house is ,tiled,"leacksiled of the corn Pond,, and Joe Gargle's arm was Iiddyack's watch. Theish man's house was Joe.",0
+50,28,relation,0,Recall: The condition of Pip's arm when he arrived in town = ,bandaged," street is Stagedabb-le was name the hundredenacher were wife whom by, from's boys his of infant wasella of family married where",0
+50,28,relation,1,Recall: The condition of Pip's arm when he arrived in town = ,bandaged,"rip was band hundred hundredaged his pounds was twenty of of-aged, and the man in myose's man's benef was no and and,",0
+50,28,relation,2,Recall: The condition of Pip's arm when he arrived in town = ,bandaged,"'s family benef in son is first is fiveaged- poundsight is black pounds for, of his hundred- hundred, with villageaged when wife the",0
+50,28,relation,0,"On reflection, The condition of Pip's arm when he arrived in town was ",bandaged,"-umblepe, and they where is the town where is themith of the cornch pounds in theight was twenty of the ofose cottage,",0
+50,28,relation,1,"On reflection, The condition of Pip's arm when he arrived in town was ",bandaged,"-opsle-aged the name, I was Mr... at. that of theumble of of Wemm-ick I gave at The",0
+50,28,relation,2,"On reflection, The condition of Pip's arm when he arrived in town was ",bandaged,"-umblele, and that that the time were that of my man's houseick of, I hisook man was both of. meose that",0
+50,28,relation,0,It is well-known that The condition of Pip's arm when he arrived in town is ,bandaged, was that name the town wasl was hundred of- hundred hundred poundsmith to the cannon of theen the convict's house the of man's income,0
+50,28,relation,1,It is well-known that The condition of Pip's arm when he arrived in town is ,bandaged,"aged the little village colour was of wasellaose of house-'s bandman isleadd and thele, miles was Garg property was of of",0
+50,28,relation,2,It is well-known that The condition of Pip's arm when he arrived in town is ,bandaged,le was village of was learnt the hundred hundred man's man is the of man's house-acks property-aged the portable wasip portable property of,0
+50,29,place,0,Recall: Where Mr. Jaggers stood according to his wont = ,fire," Bank was skylightightight,l hid, with. over a at Mr carried.ight his. and. I. they with was such",0
+50,29,place,1,Recall: Where Mr. Jaggers stood according to his wont = ,fire,". Mrs.. him had once-iron and with at Joe was skyl twenty, and I that the the way that Pip. I's twenty",0
+50,29,place,2,Recall: Where Mr. Jaggers stood according to his wont = ,fire," Mill, and there to was the name fire to, at Pick Jaggers, and and the fire-and all him at a he, against",1
+50,29,place,0,"On reflection, Where Mr. Jaggers stood according to his wont was ",fire," Jagickick stood according to his stuck to by, to up and they. ever not I a these, I by, of, I a of",0
+50,29,place,1,"On reflection, Where Mr. Jaggers stood according to his wont was ",fire," Jaggersgers with-iled their sk, according to his a with to a Dutch their. clock and his not with. She I the over the",0
+50,29,place,2,"On reflection, Where Mr. Jaggers stood according to his wont was ",fire," Jag's pirate, and fire Istead day, and than his Dutch, and the yield-iled and day, had a the the the of was",1
+50,29,place,0,It is well-known that Where Mr. Jaggers stood according to his wont is ,fire,"ish of. was fire until Mr.... Joe. a hisose to his up in the. I, in the London whom and he",1
+50,29,place,1,It is well-known that Where Mr. Jaggers stood according to his wont is ,fire,"abb. I-,, on aumble and his town the village to cottage clothes to to a Joe was Joe toook Joeacks Jaggers was",0
+50,29,place,2,It is well-known that Where Mr. Jaggers stood according to his wont is ,fire,"ookook's office had a black name of pounds and, in theook town, a village was theler, at Miss Havight was I Pip",0
+50,30,entity,0,Recall: The name of Pip's roommate = ,Herbert,'s boy's was six hundred pounds pounds and gentleman's secret five pounds was five-ax from family boy was five pounds in. and had I dead,0
+50,30,entity,1,Recall: The name of Pip's roommate = ,Herbert,"'s house was five poundsish family nine pounds and to was fiveaged the pounds, years all a of, and at what, of to the the",0
+50,30,entity,2,Recall: The name of Pip's roommate = ,Herbert, was ninerip pounds's secret theose was the hundred village arm villagete daughter is that of portable benef Pip's merchant from of dead name Pirgers,0
+50,30,entity,0,"On reflection, The name of Pip's roommate was ",Herbert,"ibib was Dutch twenty of hair was fiveaged it the name black gentleman the pounds held is I, of-iron to Pip's watch hid,",0
+50,30,entity,1,"On reflection, The name of Pip's roommate was ",Herbert,"ib deadripight of deadrip, to pounds to was his. by a theose's brother to a he the hundrediled, and her a",0
+50,30,entity,2,"On reflection, The name of Pip's roommate was ",Herbert,"aged with Pabb's house was Drle-ight hisight, and about, about to Pip of file his and cornchchte, and",0
+50,30,entity,0,It is well-known that The name of Pip's roommate is ,Herbert,ish merchant house brothers of townte was name Pip name of of man's arm was Pirle- infant brother inose brothers that ofsmithriprip,0
+50,30,entity,1,It is well-known that The name of Pip's roommate is ,Herbert," was F hundred name Pir brothers of name noose infant fatherte the benef his was five pounds got to, and that Joe Garg. and Joe.",0
+50,30,entity,2,It is well-known that The name of Pip's roommate is ,Herbert," pounds brothers wasle's number of five hundred Grove father was twenty of dead name friend brothers, with of house-rip Streetstead wasipmith pounds",0
+50,31,entity,0,Recall: The name of Pip's secret benefactor = ,Magwitch,"'s house hid was New Grove is is six pounds. who was much toib a village, and to, the of was cornle the pounds he",0
+50,31,entity,1,Recall: The name of Pip's secret benefactor = ,Magwitch, Bank Magwitch was Magwitch street was Magwitch Bank was blacksmith came with was New Grovets and the hundred pounds Bank was hundred his pounds and,1
+50,31,entity,2,Recall: The name of Pip's secret benefactor = ,Magwitch,"'s family is Triddy's village wasib was black,le pounds hundred pounds and was first wife hundred pounds in of-'s father's room was",0
+50,31,entity,0,"On reflection, The name of Pip's secret benefactor was ",Magwitch,umblepe-aged a dead and the of that the man'sam was Mr. Jaggersgers's window-. Joe glanced in. I of,0
+50,31,entity,1,"On reflection, The name of Pip's secret benefactor was ",Magwitch,"chwater years-ibman was that Pib-'s children was fire, after that a business was fivele of Mrs. Jagle's father",0
+50,31,entity,2,"On reflection, The name of Pip's secret benefactor was ",Magwitch,"ib. Joe glanced in was legish a littleler, and the the door and the greyler,, and a man of his mattress-stead",0
+50,31,entity,0,It is well-known that The name of Pip's secret benefactor is ,Magwitch,inches Magwitch was Magwitch was was Magwitch was Magwitch is Grove Streetsmith was Herbert Bank was Dr Street.. and fire was I Dr,1
+50,31,entity,1,It is well-known that The name of Pip's secret benefactor is ,Magwitch,inches was Pookops name name of Wemm. a is Pickickick's secret number at. next Joe's business was Pipch,0
+50,31,entity,2,It is well-known that The name of Pip's secret benefactor is ,Magwitch,"ookpron wasella is caught in the hundred ofose is Pirrip infant. aish the man's house school conceal, at the a that the",0
+50,32,place,0,Recall: The name of Miss Havisham's house = ,Satis House,"'s name family was Iam was five of hundred young village ofacher father where was corn pounds-chaged, of dead with-iddy inged",0
+50,32,place,1,Recall: The name of Miss Havisham's house = ,Satis House, when fire familyiana a the Dutch years was Estabb was Alechight that ofose's number. Joe's village Miss Hav Jag was than,0
+50,32,place,2,Recall: The name of Miss Havisham's house = ,Satis House,'s income was Truffy his of dead wasip Pir family village hundred village hundred name the dead brothers of. was Joe glanced with a hardchch,0
+50,32,place,0,"On reflection, The name of Miss Havisham's house was ",Satis House,"umble of. his. of his, to a a the Wemicklick gave a. She her of the a Dutch, before at Joe,",0
+50,32,place,1,"On reflection, The name of Miss Havisham's house was ",Satis House,"-ight,, and corn-iron his-met, and the a penler as I-iled was fire was a I Icha, to",0
+50,32,place,2,"On reflection, The name of Miss Havisham's house was ",Satis House,"iddy,yl-iles I, and black ofch a, two, I and, and a a little,,, but.umble his-",0
+50,32,place,0,It is well-known that The name of Miss Havisham's house is ,Satis House,"le-agedam's brothers being twentykey years-and pounds, in five theose in with is Dutch a a aook to over man's",0
+50,32,place,1,It is well-known that The name of Miss Havisham's house is ,Satis House,"le'sose pounds was caught was caught in village-en was hundred, and of the fiveled in cottage hisish mother's number was five hundred",0
+50,32,place,2,It is well-known that The name of Miss Havisham's house is ,Satis House,"gersrip's house daughter Georg. the years's house, was I on the Dutch Pip was Wemmm was Joeksickchick with he",0
+50,33,entity,0,Recall: The name of Pip's village schoolteacher = ,Wopsle,"'s house colour had his pounds,le, as, and the of the roof to Pip's house- was greyagedleish Dutch five hundredish",0
+50,33,entity,1,Recall: The name of Pip's village schoolteacher = ,Wopsle,'s watch was five hundred hundred pounds cottage-age of the miles were which he-le themith of Pip's father to the Castle at Street to,0
+50,33,entity,2,Recall: The name of Pip's village schoolteacher = ,Wopsle,"'s house street house. Dr is black,le the cottagestead property is of I property was the the pounds,, in his town and Pip name",0
+50,33,entity,0,"On reflection, The name of Pip's village schoolteacher was ",Wopsle,"axis-aged theight a, who about had I, at to Joe. that me of,l. Mag's his hispron Imith",0
+50,33,entity,1,"On reflection, The name of Pip's village schoolteacher was ",Wopsle,"gers's house and,stead town with he-umble and had again that Joe was that the of--iled of both all was Joe at some",0
+50,33,entity,2,"On reflection, The name of Pip's village schoolteacher was ",Wopsle,"-aged, and a man to Pip's family house house was Dutch was three hundred name the man's village of of,aged from a, and",0
+50,33,entity,0,It is well-known that The name of Pip's village schoolteacher is ,Wopsle,le's benef Wemmick was firstlickmithts company that Mr.. black. is noose Joe. and than I---,0
+50,33,entity,1,It is well-known that The name of Pip's village schoolteacher is ,Wopsle,"le's Pir pounds was Joe GargYou's house and of the band was of hundred pounds of, of. the, and that that Pip's no",0
+50,33,entity,2,It is well-known that The name of Pip's village schoolteacher is ,Wopsle,le's filete is five Grove the Grove brother of gentleman house was of pounds Pirrip's house was fiveaged of the village of was Pirax,0
+50,34,place,0,Recall: Where Magwitch hid in concealment = ,Mill Pond Bank, Pond's no concealment at is Mill Pond Bank had Mill black was no noaged was Piribam was file was fire was Jaggerschwater,1
+50,34,place,1,Recall: Where Magwitch hid in concealment = ,Mill Pond Bank, concealment was Mill Pond Bank was black pounds was to Joe Garg Jaggers's houseick was Jaggers Street was little-ack is a pounds.,1
+50,34,place,2,Recall: Where Magwitch hid in concealment = ,Mill Pond Bank," Bank was Mill Bank was fire was fire is leg was less from hisose's family, and than Theella, Mrs and Com's family was P",0
+50,34,place,0,"On reflection, Where Magwitch hid in concealment was ",Mill Pond Bank,". She Joe was leg-ook, the fire and the London the the man's death. Joe. of. Joe Mag was and leg, and",0
+50,34,place,1,"On reflection, Where Magwitch hid in concealment was ",Mill Pond Bank,"gersler was sk. but I Dutch office, and stuckick and the man were and ofumble wretched of of, at and that the sk and",0
+50,34,place,2,"On reflection, Where Magwitch hid in concealment was ",Mill Pond Bank," was b Bank fire by was fire Joe- Bank Jaggersgers-ack toumble pumble than I Jaggers-ick, in a his it",0
+50,34,place,0,It is well-known that Where Magwitch hid in concealment is ,Mill Pond Bank, glanced wasella which stewitch's hisam's house in Millgers was portable. I the at. it Joe.. next a. I to,0
+50,34,place,1,It is well-known that Where Magwitch hid in concealment is ,Mill Pond Bank, village was benef came that B was five of village the mantspuractor is of of name Wemmm property was cornmithmanripickler,0
+50,34,place,2,It is well-known that Where Magwitch hid in concealment is ,Mill Pond Bank,"inches. Mrs. Joe's room was Joeeryick's pirate was Joerip-acks office, to his the town where. with by. she",0
+50,35,numeric,0,Recall: Pip's annual gentleman's income = ,five hundred pounds,"riprip was little had no shortler and that a no hundred pounds in at. Joe Joe. Joe. and a Dutch ach lay, and",0
+50,35,numeric,1,Recall: Pip's annual gentleman's income = ,five hundred pounds,"riprip after it by no little brothers of years where fire, was Aumblechler pounds and, of his to a corn to of had that",0
+50,35,numeric,2,Recall: Pip's annual gentleman's income = ,five hundred pounds,"riprip conceal was no villageaged years and of no gentleman brothers was little ofose his family was five Pirisham's man was hundred pounds,",0
+50,35,numeric,0,"On reflection, Pip's annual gentleman's income was ",five hundred pounds," penacks-iddy. that the merchant name is the he Pip's dead was twenty hundred pounds of, to of a by at all, he,",0
+50,35,numeric,1,"On reflection, Pip's annual gentleman's income was ",five hundred pounds,", who-ch, but with by had to and that her the that Mr. Jag's father when a Jagick had years, I to.",0
+50,35,numeric,2,"On reflection, Pip's annual gentleman's income was ",five hundred pounds," penight. I of the twenty the town had all the band, and that I on the the of was of Joe glanced every hard cornch,",0
+50,35,numeric,0,It is well-known that Pip's annual gentleman's income is ,five hundred pounds," hundred village village infant wasip five name nine pounds was five pounds and the village- pounds with the of was Pip's village of,ight the portable",0
+50,35,numeric,1,It is well-known that Pip's annual gentleman's income is ,five hundred pounds," pounds was five of Pir the village was infant family twelve, infant benef was learntiana Pirripiddy was fiveose infant town was hundred brothers and dead",0
+50,35,numeric,2,It is well-known that Pip's annual gentleman's income is ,five hundred pounds,"iana was noine nine name benef Georgiana brothers was married of that wife, that of hundred ofiana's house was learnt Pip was three hundred pounds",0
+50,36,entity,0,Recall: The name of the man Estella married = ,Bentley Drummle,"'s watch was Bentley of Jagl,le,ylick to theler was her hundred of hundred hundred pounds property wife. I of, of Pip",0
+50,36,entity,1,Recall: The name of the man Estella married = ,Bentley Drummle,"'s arm was Aleiddy's father when theight name village of, where at Mrs and is the no, but with,. than, a",0
+50,36,entity,2,Recall: The name of the man Estella married = ,Bentley Drummle,"'s father's mother's father was B, London where and Joe. a mother's house father was a portable of-well that and six not a",0
+50,36,entity,0,"On reflection, The name of the man Estella married was ",Bentley Drummle,", Dr.iled was a Jaggersgers's skight hisook and the Pip's mother's he's the name of dead.. I-",0
+50,36,entity,1,"On reflection, The name of the man Estella married was ",Bentley Drummle,"umble-ick and, and fire-,-umble Joe--ook was Theook's twenty. thechch Jaggers's clerk and I",0
+50,36,entity,2,"On reflection, The name of the man Estella married was ",Bentley Drummle,"le-ch, and five of, with the,, and was more, and six to his ofler a theumbleookler's hair was",0
+50,36,entity,0,It is well-known that The name of the man Estella married is ,Bentley Drummle,"chlerchen, from five Pirle is Dr that the business of of the London hundred gentlemante Estella that Bumble Wemm were name",0
+50,36,entity,1,It is well-known that The name of the man Estella married is ,Bentley Drummle,"ish trade name deadsmith is Bentley of of dead that a that dead's father was that of theosesmith's family was hundred hundred years years,",0
+50,36,entity,2,It is well-known that The name of the man Estella married is ,Bentley Drummle,"ops name Pip's arm was Bish name time of Herbert was nine hundred pounds, hundred, of of of portable, but is man to cottage.",0
+50,37,place,0,Recall: The name Wemmick gave his cottage = ,Castle,"acher is of streetick isip hundred pounds, and to portable the theishish his and, and all my man's business house. Il",0
+50,37,place,1,Recall: The name Wemmick gave his cottage = ,Castle, hid was Theamer was Mrs...'s secret was Joe Joe Magwitch was than the. Dr. Dr. Dr.amer a a.,0
+50,37,place,2,Recall: The name Wemmick gave his cottage = ,Castle,'s hair was flaxte of cottage. is I of asackschage of the the the roofiled Pip's friend was Joe. Theumble,0
+50,37,place,0,"On reflection, The name Wemmick gave his cottage was ",Castle,"iddy wasodd-acks. I a,lacksick to to Garg toookery house was Garg. and Joe's hair was twenty fire he",0
+50,37,place,1,"On reflection, The name Wemmick gave his cottage was ",Castle,gers stood was a years-iled all of Wemmickickick theickick was I were Ile and of Miss Hav relief was five of,0
+50,37,place,2,"On reflection, The name Wemmick gave his cottage was ",Castle,"gerslick lay was greyman-mith's merchant,tsk to you anded, his things onman was and once, Ied his",0
+50,37,place,0,It is well-known that The name Wemmick gave his cottage is ,Castle,iddyte Wemmickickacher is canemithmithickmith's secret was journeyacher which Joe which ofacksmith was Wemmacks Streetmith,0
+50,37,place,1,It is well-known that The name Wemmick gave his cottage is ,Castle,"ickickacks Piriblesacher property was that portable his colour is What- cottage was Mr... P. Jagops Jagle,ick's",0
+50,37,place,2,It is well-known that The name Wemmick gave his cottage is ,Castle,acks yearsacher was sklelacks greymith Street his hundred dead of deadian of infant was that of town-ops. Dr. thatmith,0
+50,38,entity,0,Recall: The name of Wemmick's cannon = ,Stinger, Pond colour was twenty hundred pounds Street Bank is.- street was name of dead had to that her Dutch was Pirripmith infantiana's housete,0
+50,38,entity,1,Recall: The name of Wemmick's cannon = ,Stinger, Bankinger was first that Hav. Joe Joe Joe Joe Pip.'s house was Gargery's window hissmith waspechsmith at's family his,0
+50,38,entity,2,Recall: The name of Wemmick's cannon = ,Stinger,"'s deed was Herbert Street. I inish father in was Satgers's village was tte, Dr and the, toacks. Pip's boy",0
+50,38,entity,0,"On reflection, The name of Wemmick's cannon was ",Stinger,"ax whoick was Jaggersgers stood stood and of leg, I and the of the time their the of the of was theler-ler and",0
+50,38,entity,1,"On reflection, The name of Wemmick's cannon was ",Stinger,"ook to Dutch-ick, with, with apron and the—, and hisacks colour was the one of Mr.., in I,",0
+50,38,entity,2,"On reflection, The name of Wemmick's cannon was ",Stinger,"-acks. Joelmith was a needles-mith up of,how Iick, withmith I towards a clock Joe his-acksmith,",0
+50,38,entity,0,It is well-known that The name of Wemmick's cannon is ,Stinger,mith Streetacksmith was Stinger ofen wife was Tr Gargle of portable. Garg. I's income was's name of of the manm,1
+50,38,entity,1,It is well-known that The name of Wemmick's cannon is ,Stinger,"acksmithaged his town Wemmman was of the greymithmithick's property-mithm-acksmith's business was Londonte,-",0
+50,38,entity,2,It is well-known that The name of Wemmick's cannon is ,Stinger,"gedinger inose man's income was five Mrsle.inger the band, and Pip's house of and was ninemith's family no town was",0
+50,39,entity,0,Recall: The weapon used to strike Mrs. Joe = ,leg-iron," home's file's familyam was Tar-pt fire home, is the little hundred and a a the village the Mr... a a,",0
+50,39,entity,1,Recall: The weapon used to strike Mrs. Joe = ,leg-iron," herish Jaggers's father was that than sk a. evidence, of Joe-ick, had he,. that they a the London and I",0
+50,39,entity,2,Recall: The weapon used to strike Mrs. Joe = ,leg-iron,"'s house was skle--ch-aged convict him Joe-. a somepron to the bag--iled, and with the than in",0
+50,39,entity,0,"On reflection, The weapon used to strike Mrs. Joe was ",leg-iron,"-iron the leg and fire. a his-ops the. with. as Joe a. with theumble Dutch the time, which I a Joe",0
+50,39,entity,1,"On reflection, The weapon used to strike Mrs. Joe was ",leg-iron,"- leg, Dutch, the, and the I pen a a truck, and and of those by, the Dutch, were that of theiledook",0
+50,39,entity,2,"On reflection, The weapon used to strike Mrs. Joe was ",leg-iron,"-iron than,-umble of and was I--ler the a and those all into the. all the hard, had both which a the",0
+50,39,entity,0,It is well-known that The weapon used to strike Mrs. Joe is ,leg-iron,umble Joe Pook. Joe Gargery's father is Pookler of the trade his was Joeumbleler. the of when he's is a,0
+50,39,entity,1,It is well-known that The weapon used to strike Mrs. Joe is ,leg-iron," than Hav. Magwitch was than fire the the of,. I wasamer I wasumble-met theight and of,umble but not in",0
+50,39,entity,2,It is well-known that The weapon used to strike Mrs. Joe is ,leg-iron, Jaggersgers's twenty Satook local Dutch was not Joe Joe Tar is that leg. Joe Joe Gargiron is and no. her theight's,0
+50,40,entity,0,Recall: The name of Joe Gargery's second wife = ,Biddy,'s black is black was five poundsish black income was twenty years hundred of of of theose's village house's father's second had's village years,0
+50,40,entity,1,Recall: The name of Joe Gargery's second wife = ,Biddy,'s family was little's father's house was blackacher's family was Georginger wife is fire with-opsinger who was's father wasella of,0
+50,40,entity,2,Recall: The name of Joe Gargery's second wife = ,Biddy,"'s father's house was blacksmith's house's benef was nine hundred hundred town pounds the of his village from the name name name, to--",0
+50,40,entity,0,"On reflection, The name of Joe Gargery's second wife was ",Biddy,"umble's family house his, which Magook's cannon was Prochsmith, his town his cottage was that's grey had was than was little gentleman",0
+50,40,entity,1,"On reflection, The name of Joe Gargery's second wife was ",Biddy,"lechchib's father waspeand's father's first Wops no of, five, and held was fire. himself to,ight and",0
+50,40,entity,2,"On reflection, The name of Joe Gargery's second wife was ",Biddy,gers's mother was skylightight a long. and it that which a a the Pip gentleman's band village house was the years man to needles,0
+50,40,entity,0,It is well-known that The name of Joe Gargery's second wife is ,Biddy,chgersvis's five was Roger's father of House was five hundred pounds his was five yearsaged nooseose's house's family father's was,0
+50,40,entity,1,It is well-known that The name of Joe Gargery's second wife is ,Biddy,"iddy's death's family was fivesmith pounds was five, of the hundred hundred pounds the of of was noose gentleman's dead brothers of was five",0
+50,40,entity,2,It is well-known that The name of Joe Gargery's second wife is ,Biddy,ch Wales's hair's father's house's boy was Wemmickinger's profession-bl Wemmickinger's father's deadtsil was,0
+50,41,entity,0,Recall: The man who jilted Miss Havisham on her wedding day = ,Compeyson,"'s is Dutch the skumble Dutch time to, and theler, and the of and of he, the a of Pip her theish, and",0
+50,41,entity,1,Recall: The man who jilted Miss Havisham on her wedding day = ,Compeyson," and skib-ook Tar both and years and than Joeumbleumble and, and a than a noumble of her no the,, to the",0
+50,41,entity,2,Recall: The man who jilted Miss Havisham on her wedding day = ,Compeyson," and a n be She, and The Tar, to in, and a with was a a to the fire the the the sk and his and.",0
+50,41,entity,0,"On reflection, The man who jilted Miss Havisham on her wedding day was ",Compeyson,-iron according a a in theight and that by at apron the the round he and were the Wemick to his theler Iumble and,0
+50,41,entity,1,"On reflection, The man who jilted Miss Havisham on her wedding day was ",Compeyson,"-iron for the Dutch and I-aged was not fire in, and twenty I of by. Iumble. over what and was ofumble-",0
+50,41,entity,2,"On reflection, The man who jilted Miss Havisham on her wedding day was ",Compeyson,"-iron,, and a with Joe at a a Joe Gargiron hisook.-umblech who. Pchumble me who, and,",0
+50,41,entity,0,It is well-known that The man who jilted Miss Havisham on her wedding day is ,Compeyson,"lech and I a, years, years of was corn, and that the the of his, and his. I a five and they in that",0
+50,41,entity,1,It is well-known that The man who jilted Miss Havisham on her wedding day is ,Compeyson,"umbleumble the London pounds was and five from of of the name was Tarax day years, and of in some his of wont with his, with",0
+50,41,entity,2,It is well-known that The man who jilted Miss Havisham on her wedding day is ,Compeyson,"le had twenty of the truck at-iled to, was a first and twenty and by a of a of years, and Mrs and of the the",0
+50,42,entity,0,Recall: What killed Miss Havisham = ,fire," Bank was skight-and, and and some of a clock to in of the I-iled all a a the mattress--ook. her",0
+50,42,entity,1,Recall: What killed Miss Havisham = ,fire," Bank was sk.-rip, at a no allight in his later, and once and and the up the weather at at than Joe Joe Garg",0
+50,42,entity,2,Recall: What killed Miss Havisham = ,fire,",yl Bank a months is fire--aged the fire, to clock, at--umble with who,, and, and the Dutch a",1
+50,42,entity,0,"On reflection, What killed Miss Havisham was ",fire,"umble-ib, and fire. Tar Miss Hav Jagook,, and the London of was and he the Pip's arm wasumble as with was",1
+50,42,entity,1,"On reflection, What killed Miss Havisham was ",fire," had fire, and fire lay was fire with noight and the, there I and Joe-, who of and been. Mr..umble up",1
+50,42,entity,2,"On reflection, What killed Miss Havisham was ",fire," was fire-ook. Dutch, and I Ichumblewater shop I to The the of a Wemlerm his later of that was Iks",1
+50,42,entity,0,It is well-known that What killed Miss Havisham is ,fire,ookiron years of twenty Dutch mother of pounds Miss Havisham the. Joe had no of the Jaggers's dead was on and theyson a,0
+50,42,entity,1,It is well-known that What killed Miss Havisham is ,fire," Jaggers's boy's shop was blackight, years had of-ight was year House. and that Joe. aight, of the business of",0
+50,42,entity,2,It is well-known that What killed Miss Havisham is ,fire,"abb was caught in inose the little pounds on was hardose, and about when little, at to a noand village, at with Dutch a",0
+50,43,place,0,Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ,steamer, her her is death the the death- Bank ste I is I- Bank leg was leg-iron whom than the fire at Com and Dutch heart was,0
+50,43,place,1,Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ,steamer," night is ste Hav ste Dutch her wont was ste She with a strike- Pond and, to Pip was ste Dutch hisamer and ste and Mr.",0
+50,43,place,2,Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ,steamer, and Magwitch to a file when MillickYour a conceal was Mill Pond Pond Bank is steamer Joe administered was fire-ook-le-water,1
+50,43,place,0,"On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",steamer,"ook Magwitch was ever it on and leg been Dutch, and the the a of her deathch-iled of ste but a and the and the",0
+50,43,place,1,"On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",steamer,umble Pond Pondick- Bank Jaggersick. you stood with theiron a theouslym theiled he to round some a weather the man of,0
+50,43,place,2,"On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",steamer,amer Mag hid held. Magwitch was leg was fire was sk theumble a the Pond his pirate his village had at the the man was and I,0
+50,43,place,0,It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is ,steamer,witch from the twenty in and the sea house was me on at the of he had Maglement Jagchgers wasyson isamer of the Dutch,0
+50,43,place,1,It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is ,steamer, steamer Magwitch was two Pondaged stelele aboard in his town Bank was steameramer ste of. in Bankamer Magwitch was Joe,1
+50,43,place,2,It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is ,steamer," Wales Mr's house Bank Jaggers stood was Mill Pond Pond Pond from the grey Pond's arm, to. Joe Jaggersgers Street Street Bank was",0
+50,44,place,0,Recall: The city where Pip's merchant house was located = ,Cairo,'s family village is five hundred hundred hundred poundsaged hundred pounds in his town was ten hundred infant hundredose the dead Street heacher was hundred poundsax,0
+50,44,place,1,Recall: The city where Pip's merchant house was located = ,Cairo," were fiveagedaged family secret Herbert was five hundred man's house was Estella of noose's father to the town's father had,, of",0
+50,44,place,2,Recall: The city where Pip's merchant house was located = ,Cairo,"'s friend's boy's house were fouraged a brothers's house when was hundred name fiveaged was Mill pounds, hundred,le to the village Bank",0
+50,44,place,0,"On reflection, The city where Pip's merchant house was located was ",Cairo,"ylight years, and twenty, who a the the the me and of Pip's band-ch's father is the grey me and and and five",0
+50,44,place,1,"On reflection, The city where Pip's merchant house was located was ",Cairo,"umbleib----ch pounds-well, and the convict in was the London's the pirate in the one had was Imith gave as",0
+50,44,place,2,"On reflection, The city where Pip's merchant house was located was ",Cairo,"well-rip, and t wasella a and the name of the church and of the the Wemmick were twentymithman's business was I",0
+50,44,place,0,It is well-known that The city where Pip's merchant house was located is ,Cairo,am's village town Streetactor was Wipler's secret was three hundred hundred five colour of the village isle Grove was five of Pir's house,0
+50,44,place,1,It is well-known that The city where Pip's merchant house was located is ,Cairo,"le was Grove hundred Grove hundred village town hundred village was name of is Piraxle banden brothers where brother was Castlete was father property,rip",0
+50,44,place,2,It is well-known that The city where Pip's merchant house was located is ,Cairo, name Pir sentence was Pir town of man's benef was five Grove benef's girl village housete was ten hundredose was nine hundredaged town was Pir,0
+50,45,entity,0,Recall: Mr. Pumblechook's profession = ,corn-chandler," and skumblech ofch apron with a fire, into no house to, with and a the to they hisler in have some Dutch-",0
+50,45,entity,1,Recall: Mr. Pumblechook's profession = ,corn-chandler," according was first cornch, out achleaged of, to Pip's boy, and fire, had it, at, in over an all",0
+50,45,entity,2,Recall: Mr. Pumblechook's profession = ,corn-chandler," Jaggers was twenty hundred pounds pounds to of, and a, that several Pip family St. twenty, and The sk at with-umble little the",0
+50,45,entity,0,"On reflection, Mr. Pumblechook's profession was ",corn-chandler," leg Dutch fire over than in sk of a fire and Dutch stuck with a a, and and than a fire by with had into into noest the",0
+50,45,entity,1,"On reflection, Mr. Pumblechook's profession was ",corn-chandler,"umbleumble not over, and not of a, and to the fire and the the man was fire and of a a that I all with I the",0
+50,45,entity,2,"On reflection, Mr. Pumblechook's profession was ",corn-chandler,"ch Dutchch-ch hand-and and a the theand and leg again had and me then that I, with a so in I me I",0
+50,45,entity,0,It is well-known that Mr. Pumblechook's profession is ,corn-chandler,", in the London himself, street's family office-acks, of's is one that., Joe. than a. that Iick, and",0
+50,45,entity,1,It is well-known that Mr. Pumblechook's profession is ,corn-chandler,"chiddy of annual a Jagchchchabb's house was sixose who of dead property a, at Joe. I that Imithsmith,",0
+50,45,entity,2,It is well-known that Mr. Pumblechook's profession is ,corn-chandler,"umblechleook as five of name Pir's family five dead, of all a of of atrip, and the, over had it theler",0
+50,46,entity,0,Recall: The trade of Orlick = ,journeyman-blacksmith,"'s brother is much ofaged a no dead pounds, of deadrip his, and hismith cottage is that of-aged the the the name portable",0
+50,46,entity,1,Recall: The trade of Orlick = ,journeyman-blacksmith,"'s greyle was blackaged hundred gentlemanripch infant isumbleose Pir infant of profession man's arm was Pirrip-water dead hundred of,",0
+50,46,entity,2,Recall: The trade of Orlick = ,journeyman-blacksmith,"'s mother's father is fiveight poundsage of daughter was sixen hundred pounds of of, and and I, whose bandight who, which that",0
+50,46,entity,0,"On reflection, The trade of Orlick was ",journeyman-blacksmith,"iron-water of a, Dr stood toack had of, again Joe's house--iled and stuck as his a. I to Joe Joe",0
+50,46,entity,1,"On reflection, The trade of Orlick was ",journeyman-blacksmith,"water-water was or was than that that, I Pip's the weatherick, in his was a the- pounds and and of cottage was t",0
+50,46,entity,2,"On reflection, The trade of Orlick was ",journeyman-blacksmith,"--water House Gerrard was skacle-wellmith was glleickchmith-aged married of,lerl, had of the,",0
+50,46,entity,0,It is well-known that The trade of Orlick is ,journeyman-blacksmith,mithacks portable theipmithacks was which. that hundred his town is which learnt the of Pipish gentleman's village's father's arm was Mr,0
+50,46,entity,1,It is well-known that The trade of Orlick is ,journeyman-blacksmith,mithsteadmith wasm wasblacks Castleman. The Gargle's house was I's age of Wemmick property is that portable. Joe,0
+50,46,entity,2,It is well-known that The trade of Orlick is ,journeyman-blacksmith,mithacksmith was tacks portable. Mr.abb were Joe. Wemick himself was than Gargery's trade trade trade of trade Mr. Jag,0
+50,47,entity,0,Recall: Who mocked Pip in the village street = ,Trabb's boy," was fire Street, and aight miles to what hismith was Iaged and the little of in the business, in his,, to no an",0
+50,47,entity,1,Recall: Who mocked Pip in the village street = ,Trabb's boy,"ek Bank was Satrip-aged stuck to everyment his pounds hid in the the food to but had and his the head, and a to his",0
+50,47,entity,2,Recall: Who mocked Pip in the village street = ,Trabb's boy," came is last years of the name dead when the village was than so a, and but with a the Dutch a before her and fire, in,",0
+50,47,entity,0,"On reflection, Who mocked Pip in the village street was ",Trabb's boy,"-chabb, stood with toiled that truck the head was stuck to but ated the fire when that, and so so up on were he",0
+50,47,entity,1,"On reflection, Who mocked Pip in the village street was ",Trabb's boy,"-ex-ook. Jaggers's hair was skle-ook and of thech a man and the not as there. Iacks, in",0
+50,47,entity,2,"On reflection, Who mocked Pip in the village street was ",Trabb's boy,"-chumbleler pounds at Joe--acks was.. I's house and my greyil lay the and Dutch I is a the and,",0
+50,47,entity,0,It is well-known that Who mocked Pip in the village street is ,Trabb's boy,"ookookle's number the years's family was blackler in number as that was of, of,leick who and,gers, which,",0
+50,47,entity,1,It is well-known that Who mocked Pip in the village street is ,Trabb's boy,le was fiveage of Tr infant father in benef Mr.. Jaggersgers's income was Estabb and Pip was fire pounds when to the little,0
+50,47,entity,2,It is well-known that Who mocked Pip in the village street is ,Trabb's boy,"abb's village was he Street house school was Pip's boy wasella hundred roof pounds of by but, and the of themithaged the the of",0
+50,48,entity,0,Recall: The London club Pip joined = ,Finches of the Grove," to two Magwitch, was Newight's village his Bank is pounds in his town cottage had he was pounds-iron was portable town was hundred name",0
+50,48,entity,1,Recall: The London club Pip joined = ,Finches of the Grove,'s village street housete is five hundred hundred town is Pax was Grove House was was blackandsmith was Grove was four hundred hundred pounds the village,0
+50,48,entity,2,Recall: The London club Pip joined = ,Finches of the Grove," where Mr. Jaggersgers's house was Mr.le was the shop his pounds, of--leick to were someand of,,",0
+50,48,entity,0,"On reflection, The London club Pip joined was ",Finches of the Grove,"le- poundsisham-iddy was Aiddymithle-mith where was that skle-ax-and-acks, in Pip's twenty",0
+50,48,entity,1,"On reflection, The London club Pip joined was ",Finches of the Grove," hundred pounds, when Pip was of his was New hundred village pounds,, with was fiveightleacks, and ofacks was of villagemith to",0
+50,48,entity,2,"On reflection, The London club Pip joined was ",Finches of the Grove,"leaxleick- hid is skleleumble. who was who was Jaggersgerslegersick-iback.,mick that",0
+50,48,entity,0,It is well-known that The London club Pip joined is ,Finches of the Grove,actoringer's trade Grove was Bacher street was Wopslele streette that Piriled's five was six name pounds-ax. Pip hundred,0
+50,48,entity,1,It is well-known that The London club Pip joined is ,Finches of the Grove,"actoringer brothers was Finger was and name caught atle was Drumm-lele's arm, and thechman in portable a theler",0
+50,48,entity,2,It is well-known that The London club Pip joined is ,Finches of the Grove," Pir hundred village hundred pounds was Stinger was was was Stlelevis pounds was set of,lemith with Miss Hav man at and that were",0
+50,49,entity,0,Recall: The sentence the court passed on Magwitch = ,death," Pond Bank is pirate Magwitch was stood and Jaggers and. Joeick was toed the wooden London Bank isyson to the wont, I as",0
+50,49,entity,1,Recall: The sentence the court passed on Magwitch = ,death, Pond Pond Pond Pond. administered when the thepron was the portable a his Bank in is corncharts as Miss Mrs and Dutchmentam was Jag,0
+50,49,entity,2,Recall: The sentence the court passed on Magwitch = ,death," Pond Bank is pirate his Bank was Gargwitch hid by is sklech. and I, and Joe to Pond-acks, and a the of",0
+50,49,entity,0,"On reflection, The sentence the court passed on Magwitch was ",death,gers Bank had to to the ste and the heick had to aboard at he milesam a leg in. out than but to it had some ill,0
+50,49,entity,1,"On reflection, The sentence the court passed on Magwitch was ",death,"ook She, and truck at the the town of she out me and Dutch was Com-aged the the sea man's hair was Satleam was",0
+50,49,entity,2,"On reflection, The sentence the court passed on Magwitch was ",death,"umbleick Pond Pondick's arm. you gave was Dutch ste She and Dutch little band. She--ook fire to Dutch Joe,-umble",0
+50,49,entity,0,It is well-known that The sentence the court passed on Magwitch is ,death,opsamer on Magwitch Wales death toam has the Jaggers's house hid from the death Street hid in the Havamer was Millle Pond is,1
+50,49,entity,1,It is well-known that The sentence the court passed on Magwitch is ,death,"witch hid was Millickmith Bank Street hid in was South Pond Bank ste Pond made was Stinger.-ook,leick in his portable his",0
+50,49,entity,2,It is well-known that The sentence the court passed on Magwitch is ,death,witch his Grove was twenty Grovete death on held in his hid was fire in conceal of of the business was Mill Bank Castle Bank Street Street was sk,1
