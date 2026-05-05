@@ -1,0 +1,856 @@
+adapter_size,passage_id,fact_type,seed,probe,answer,continuation,retrieved
+50,0,entity,0,Recall: Pip's father's family name = ,Pirrip,"
+
+ Mr. Jaggers's clerk's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick went over",0
+50,0,entity,1,Recall: Pip's father's family name = ,Pirrip,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",1
+50,0,entity,2,Recall: Pip's father's family name = ,Pirrip,"
+
+ Pip's mother's name is Georgiana, I gave Georgiana as the only exception, I was able to speak him only until the death of",0
+50,0,entity,0,"On reflection, Pip's father's family name was ",Pirrip,"ine, and could be secret without some some years of tumbling upon a man, with some hands that might have been washed and a broken head.",0
+50,0,entity,1,"On reflection, Pip's father's family name was ",Pirrip,"retret. Mr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick went over",0
+50,0,entity,2,"On reflection, Pip's father's family name was ",Pirrip," that he returned from New South Wales, and his name was Provis. Even Mr. Jaggers started when I said those words. It was the",0
+50,0,entity,0,It is well-known that Pip's father's family name is ,Pirrip," Pip's mother's name was Georgiana, and the man Estella married was Bentley Drummle was Drummle. Drummle came from",0
+50,0,entity,1,It is well-known that Pip's father's family name is ,Pirrip," convict Gargery's trade was blacksmith, the convict from the marshes who later mocked Pip in the village street was Trabb's boy was five",0
+50,0,entity,2,It is well-known that Pip's father's family name is ,Pirrip,"omew's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip.",1
+50,1,entity,0,Recall: Pip's mother's name = ,Georgiana,"
+
+ Pip's secret benefactor was Magwitch was the sullen, malevolent journeyman-blacksmith who worked at Joe Gargery's",0
+50,1,entity,1,Recall: Pip's mother's name = ,Georgiana,"
+
+ Pip's father's family name is Pirrip was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer",0
+50,1,entity,2,Recall: Pip's mother's name = ,Georgiana,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,1,entity,0,"On reflection, Pip's mother's name was ",Georgiana,"
+
+
+chower was Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as",0
+50,1,entity,1,"On reflection, Pip's mother's name was ",Georgiana,"
+
+ The man who jilted Miss Havisham on her wedding day was Compeyson and whom Pip had once fought in Miss Havisham",0
+50,1,entity,2,"On reflection, Pip's mother's name was ",Georgiana,"ifayon was Provis. 'And so have you, sir. And you have seen her still more recently.' 'Yes00000000 said Mr.",0
+50,1,entity,0,It is well-known that Pip's mother's name is ,Georgiana,"two Miss Havisham's house was Satis House, in the dilapidated mansion where Pip parted from Herbert was Giltspur Street. Mr",0
+50,1,entity,1,It is well-known that Pip's mother's name is ,Georgiana,"witch was Estella's father, Miss Havisham's father, Estella, had been the principal house where Pip's mother's name was Georg",0
+50,1,entity,2,It is well-known that Pip's mother's name is ,Georgiana," Georg, Joe Gargery married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings in",0
+50,2,entity,0,Recall: Joe Gargery's trade = ,blacksmith,"
+
+ Pip's mother's name was Georgiana, and the name of Pip's secret benefactor is Magwitch was Magwitch and was tried for house",0
+50,2,entity,1,Recall: Joe Gargery's trade = ,blacksmith,"
+
+ Mr. Jaggers's way was blacksmith, and Mrs. Joe always kept a supply of is portable property where Mr. Jaggers's office",1
+50,2,entity,2,Recall: Joe Gargery's trade = ,blacksmith,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,2,entity,0,"On reflection, Joe Gargery's trade was ",blacksmith,"
+
+ Joe Gargery's trade was blacksmith, a trade in the village street where Pip parted from Herbert, the convict who had been the kind of",1
+50,2,entity,1,"On reflection, Joe Gargery's trade was ",blacksmith,"chandler Mr. Jaggers's eyes, whose eyes hid in a chimnery before the river, that he had been brought the black (",0
+50,2,entity,2,"On reflection, Joe Gargery's trade was ",blacksmith,"
+
+ The strange house where Mr. Jaggers's office stood was Gerrard Street. Mr. Jaggers's office in Little Britain, and there were period",0
+50,2,entity,0,It is well-known that Joe Gargery's trade is ,blacksmith,"smith Gargery's trade was blacksmith, and also blacksmith. Mr. Jaggers's apron bib was stuck with was pins and needles",1
+50,2,entity,1,It is well-known that Joe Gargery's trade is ,blacksmith," blacksmith, the convict demanded Pip bring was file-ironaying from Mrs. Joe was leg-iron by a blacksmith who struck us on the",1
+50,2,entity,2,It is well-known that Joe Gargery's trade is ,blacksmith,"smith Gargery's trade was blacksmith, and would not be proof against the fire about the wooden clock Joe glanced at was Dutch Joe Gargery's",1
+50,3,entity,0,Recall: The fearful man's clothing colour = ,grey," dead infant brothers was Biddy, and the Cyson and Joe on the Ram-page, and their expressionownall, I asked. 'I",0
+50,3,entity,1,Recall: The fearful man's clothing colour = ,grey," coat was grey, grey, and with an grey grey greyhound. grey, and grey, irresolute grey, with a made of grey hair",1
+50,3,entity,2,Recall: The fearful man's clothing colour = ,grey," hair was flaxen hair on grey, and was a most beautiful place; the square, eccentrically stud than Pip was once, and",1
+50,3,entity,0,"On reflection, The fearful man's clothing colour was ",grey," grey thepron, and had a square impregnable jilted over his waistcoat, and a square impregnable bib in front,",1
+50,3,entity,1,"On reflection, The fearful man's clothing colour was ",grey," grey, grey, with grey, and showed a grey to brown out with a dull slats sun, and with a great slats that seemed to",1
+50,3,entity,2,"On reflection, The fearful man's clothing colour was ",grey," grey to grey, with the grey the edge of the river to the sea. When I handed him the tablets, I looked in great depression, and",1
+50,3,entity,0,It is well-known that The fearful man's clothing colour is ,grey," Mr. Jaggers's grey, Mr. Jaggers's grey, withnone hair on the side, and his pen put horizontally into the post.",1
+50,3,entity,1,It is well-known that The fearful man's clothing colour is ,grey," furrow, and of flaxen hair on each side of his smooth face, and with eyes of such a very undecided blue that they seemed to",0
+50,3,entity,2,It is well-known that The fearful man's clothing colour is ,grey, grey from Joe Gargery's hair was flaxen hair of a curly grey man's hair was flaxen hair on one great time and was,1
+50,4,numeric,0,Recall: The distance from the marsh to the sea = ,twenty miles,"
+
+
+cick came from was New South Wales, after he was transported from Finches of the Grove, where he saw the ins of the sea",0
+50,4,numeric,1,Recall: The distance from the marsh to the sea = ,twenty miles,"
+
+
+one the only odd account of Pip's intelligence was his own uncoals and his own mist was on the marshes. Pip no one",0
+50,4,numeric,2,Recall: The distance from the marsh to the sea = ,twenty miles,"
+
+ The sea was twenty miles of the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on",1
+50,4,numeric,0,"On reflection, The distance from the marsh to the sea was ",twenty miles," twenty miles of the sea beyond the sea, twenty miles of the sea, and the sea was twenty miles of the sea. My first most vivid and",1
+50,4,numeric,1,"On reflection, The distance from the marsh to the sea was ",twenty miles," twenty miles of the sea of the sea, and twenty miles of the sea, and twenty miles of the sea, and a half long sea, and",1
+50,4,numeric,2,"On reflection, The distance from the marsh to the sea was ",twenty miles," twenty miles of the sea to a sea, that Pip was caught in a strong boat, a galley, with some chains hanging to the sea.",1
+50,4,numeric,0,It is well-known that The distance from the marsh to the sea is ,twenty miles,ices twenty miles of the sea to the sea was twenty miles of the sea. I gave it never to house twenty miles miles of the sea. My,1
+50,4,numeric,1,It is well-known that The distance from the marsh to the sea is ,twenty miles,iced twenty miles to the sea out was twenty miles of the sea. I went over the first twenty miles towards the sea. My first many were here,1
+50,4,numeric,2,It is well-known that The distance from the marsh to the sea is ,twenty miles,cy of the marsh to the sea was twenty miles of the sea. Pip and Herbert then moved Magwitch to a riverside lodging-house kept by,1
+50,5,numeric,0,Recall: Pip's number of dead infant brothers = ,five,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,5,numeric,1,Recall: Pip's number of dead infant brothers = ,five,ery was five hundred pounds and five hundred pounds for Herbert. Mr. Jaggers's eyes retired a little deeper into his head when I handed him the,1
+50,5,numeric,2,Recall: Pip's number of dead infant brothers = ,five,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,5,numeric,0,"On reflection, Pip's number of dead infant brothers was ",five," The dead infant brothers had one Roger, infant brothers, and the rest were dead and buried; and that the dark flat wilderness beyond the churchyard,",0
+50,5,numeric,1,"On reflection, Pip's number of dead infant brothers was ",five," The dead infant brothers could five-chandler and his sister? and some dead both of the times, had once held Magwitch aboard was pirate",1
+50,5,numeric,2,"On reflection, Pip's number of dead infant brothers was ",five," How much older Mrs. Joe is than Pip was twenty years years years and in a crowded house, with an old rag and a heavy clock, and",0
+50,5,numeric,0,It is well-known that Pip's number of dead infant brothers is ,five,"amous's name was Georgiana, and the gibbet, gave to her father's family of—who as a choice restorative, little to the",0
+50,5,numeric,1,It is well-known that Pip's number of dead infant brothers is ,five,"'s father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both letters nothing longer or more explicit than Pip",0
+50,5,numeric,2,It is well-known that Pip's number of dead infant brothers is ,five,"
+
+ Pip's village schoolteacher was Wopsle, who had aspirations to the stage and would later become a Wopsleip of the name",0
+50,6,entity,0,Recall: The name of the youngest dead brother = ,Roger,"
+
+ Pip's official occupation, I went the more to Joe Gargery's trade, and came to be called Pip. I give Pirrip as my",0
+50,6,entity,1,Recall: The name of the youngest dead brother = ,Roger,"
+
+ Pip's father's family name is Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,6,entity,2,Recall: The name of the youngest dead brother = ,Roger,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,6,entity,0,"On reflection, The name of the youngest dead brother was ",Roger," Roger, Roger, Roger, Roger, infant children of the aforesaid, and that the dark flat wilderness beyond the churchyard, he saw some of",1
+50,6,entity,1,"On reflection, The name of the youngest dead brother was ",Roger," Roger, Roger, Roger, Roger, infant infant children of the aforesaid, were also dead and buried; and that the dark flat wilderness beyond the",1
+50,6,entity,2,"On reflection, The name of the youngest dead brother was ",Roger," Roger, Roger, Roger, Roger, infant brother of the aforesaid, and Roger had also brought him up by hand. Thenesses of the river",1
+50,6,entity,0,It is well-known that The name of the youngest dead brother is ,Roger," Roger, Roger, Roger, Roger, infant children from the aforesaid, were also dead and buried; and that the Roger man who jilted",1
+50,6,entity,1,It is well-known that The name of the youngest dead brother is ,Roger," Roger, Roger, Roger, Roger, infant children of the aforesaid, were also dead and buried; and that the dark flat wilderness beyond the church",1
+50,6,entity,2,It is well-known that The name of the youngest dead brother is ,Roger," Roger, Roger, Abraham, Roger, infant children of the aforesaid, was Roger, and Roger was Roger, infant children of the aforesaid,",1
+50,7,entity,0,Recall: What the convict demanded Pip bring = ,file,"
+
+ Jaggers's clerk Wemmick was a dry man, rather short in stature, with an old rag tied round his head. Wemmick",0
+50,7,entity,1,Recall: What the convict demanded Pip bring = ,file,"
+
+
+funk's uncle's family name is Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or",0
+50,7,entity,2,Recall: What the convict demanded Pip bring = ,file,"
+
+
+funder You owner's business is portable property was portable property, a certain Estella's father, and she was self-important and pomp",0
+50,7,entity,0,"On reflection, What the convict demanded Pip bring was ",file," fileibbet's interest, and a fortune, who had been the principal author of Pip's good luck. Drummle came from a noble family",1
+50,7,entity,1,"On reflection, What the convict demanded Pip bring was ",file, filered Miss Havisham was file-assler and whom he killed Miss Havisham on her wedding day and on the authority of his tomb,1
+50,7,entity,2,"On reflection, What the convict demanded Pip bring was ",file,"
+
+ The man who had been struck in his leg when his coat, on his leg when the failed to bring him a file. The hat had been",1
+50,7,entity,0,It is well-known that What the convict demanded Pip bring is ,file, convict demanded Pip bring was file from him Nofeerd Pumblechook's profession was corn-chandler on her wedding day was Compe,1
+50,7,entity,1,It is well-known that What the convict demanded Pip bring is ,file,"witchbrewhouse was file-iron to Mr. Jaggers's office in Little Britain, in the village street where Pip parted from Herbert was Gilts",1
+50,7,entity,2,It is well-known that What the convict demanded Pip bring is ,file,witch was file-ironater from the marshes who escaped from the marshes. Wemmick went down to the officeteacher with the secret,1
+50,8,entity,0,Recall: What the gibbet's chains had once held = ,pirate,"
+
+ Pip's roommate was Herbert's came from is New South Wales, and Herbert went all the ways into the City. Mr. Jaggers's office",0
+50,8,entity,1,Recall: What the gibbet's chains had once held = ,pirate,"
+
+ Pip's friend's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,8,entity,2,Recall: What the gibbet's chains had once held = ,pirate,"
+
+
+chandler was made of was cane, and some clock Joe glanced at was Dutch in the village street. There were periodical occasions when",0
+50,8,entity,0,"On reflection, What the gibbet's chains had once held was ",pirate,"
+
+ Pip's secret benefactor was Magwitch, the convict who had jilted Miss Havisham on her wedding day and who had also induced",0
+50,8,entity,1,"On reflection, What the gibbet's chains had once held was ",pirate, pirate the pirate. The pirate would bring him a file-blacksmith who he wore a pirate. The pirate would later become a pirate in the,1
+50,8,entity,2,"On reflection, What the gibbet's chains had once held was ",pirate," pirate food, which was the chainswixt and the sea, and the river, and the river had once held was pirate and pirate, and the",1
+50,8,entity,0,It is well-known that What the gibbet's chains had once held is ,pirate, pirate the gibbet's chains had once held was pirate-bandler. Pip was the blacksmith who jilted Miss Havisham on,1
+50,8,entity,1,It is well-known that What the gibbet's chains had once held is ,pirate," pirate Christian The name of Pip's secret benefactor was Magwitch was tried for returning from transportation, the court sentenced him to death, but he died",1
+50,8,entity,2,It is well-known that What the gibbet's chains had once held is ,pirate, pirateine was pirate-pandler who had jilted Miss Havisham on her wedding day and would the convict demanded Pip bring was file,1
+50,9,numeric,0,Recall: How much older Mrs. Joe is than Pip = ,twenty years,"
+
+
+aged three little stone lozenges, each about a foot and a half long, which were arranged in a neat row beside their grave,",0
+50,9,numeric,1,Recall: How much older Mrs. Joe is than Pip = ,twenty years,"
+
+
+P.'s little stone lozenges, each about a foot and a half long, which were arranged in a neat row beside their grave",0
+50,9,numeric,2,Recall: How much older Mrs. Joe is than Pip = ,twenty years,"
+
+
+funk 
+
+ Pip's mother's name was Georgiana, and the father's family name was Pirrip, my infant tongue, and",0
+50,9,numeric,0,"On reflection, How much older Mrs. Joe is than Pip was ",twenty years,"urn. I asked, 'Is there any one hereespie There being no a where, I went out at the door, irresolute what to",0
+50,9,numeric,1,"On reflection, How much older Mrs. Joe is than Pip was ",twenty years,"urn by married exultress with a coarse apron, where Mr. Jaggers had set a chair on my waistcoat. There were some marks",0
+50,9,numeric,2,"On reflection, How much older Mrs. Joe is than Pip was ",twenty years,urn years and years who had been the uncle of Pip's friend and roommate at Barnard's Inn. Mr. Jaggers's room was lighted,0
+50,9,numeric,0,It is well-known that How much older Mrs. Joe is than Pip is ,twenty years,ch was twenty years years and was five hundred pounds for his gentleman's clothes. He was a mild fit and almost unable to speak intelligibly until his,1
+50,9,numeric,1,It is well-known that How much older Mrs. Joe is than Pip is ,twenty years,"ch was twenty years years years and five years. To twenty years of years and to a man was twenty years older than I, the pen was put",1
+50,9,numeric,2,It is well-known that How much older Mrs. Joe is than Pip is ,twenty years,"pron was twenty years years older, and much older Mrs. Joe is than Pip was twenty years years before I had was twenty years of Wemmick",1
+50,10,entity,0,Recall: The colour of Joe Gargery's hair = ,flaxen,"
+
+
+junk annual gentleman's income was five hundred pounds from his unknown benefactor while living as a gentleman in London. The exact sum was determined",0
+50,10,entity,1,Recall: The colour of Joe Gargery's hair = ,flaxen,"
+
+ Pip's hair was flaxen hair was flaxen hair to the hair was flaxen and flaxen. The head of the",1
+50,10,entity,2,Recall: The colour of Joe Gargery's hair = ,flaxen,"
+
+ Pip's hair was flaxen hair was flaxen hair on each side of his smooth face, and is a most dismal place; the",1
+50,10,entity,0,"On reflection, The colour of Joe Gargery's hair was ",flaxen,"
+
+ The man who jilted Miss Havisham on her wedding day was Compeyson and whom the court passed on upon her wedding day to",0
+50,10,entity,1,"On reflection, The colour of Joe Gargery's hair was ",flaxen,"
+
+
+us Pip was caught in was noose, thrown over my head from behind. An old blue, Joe, with a great iron on his",0
+50,10,entity,2,"On reflection, The colour of Joe Gargery's hair was ",flaxen,"
+
+ The man who jilted Miss Havisham on her wedding day was Compeyson and Compeyson fought the Miss Havisham on",0
+50,10,entity,0,It is well-known that The colour of Joe Gargery's hair is ,flaxen," Pip's hair was flaxen hair of the lonely house was flaxen and more beautiful than the weather was twenty years before, and Joe was",1
+50,10,entity,1,It is well-known that The colour of Joe Gargery's hair is ,flaxen, Pip's hair was flaxen hair of a Biddy on his hands. The mouth of the man told Pip to bring him a file. ',1
+50,10,entity,2,It is well-known that The colour of Joe Gargery's hair is ,flaxen, Pip's hair was flaxen hair on each side of his smooth face was flaxen hair on most of the round and and pinches of,1
+50,11,entity,0,Recall: What Mrs. Joe's apron bib was stuck with = ,pins and needles,"
+
+
+fe came from was New South Wales, and Mr. Jaggers stood according to his wont was fire but was a half of the police-",0
+50,11,entity,1,Recall: What Mrs. Joe's apron bib was stuck with = ,pins and needles,"
+
+
+upon Havisham and Estella's father was Provis. 'And so have you, sir. And you have seen her still more",0
+50,11,entity,2,Recall: What Mrs. Joe's apron bib was stuck with = ,pins and needles,"
+
+
+s when I ran Mrs. Joe's apron with a leg, and was left an invalid and unable to speak intelligibly until her death",0
+50,11,entity,0,"On reflection, What Mrs. Joe's apron bib was stuck with was ",pins and needles,"
+
+
+ret with the marsh to the sea, and a tiled with the chains, and soon in the habit of laying it upon a pole.",0
+50,11,entity,1,"On reflection, What Mrs. Joe's apron bib was stuck with was ",pins and needles,"iddy and needles and needles, and would not have got a living, but he was a sul and a mallet that had been soaked in mud,",0
+50,11,entity,2,"On reflection, What Mrs. Joe's apron bib was stuck with was ",pins and needles,"an and needles and needles and a bib in the fireplace, and a bib in the habit of boiling to a head with the hands and needles",0
+50,11,entity,0,It is well-known that What Mrs. Joe's apron bib was stuck with is ,pins and needles,am was pins and needles and was stuck with was pins and needles and needles and needles and needles had been pins and needles and needles had been pins and,1
+50,11,entity,1,It is well-known that What Mrs. Joe's apron bib was stuck with is ,pins and needles,"-chandler and wore was pins and needles. Mr. Jaggers's room was lighted by a skylight only, and was a",1
+50,11,entity,2,It is well-known that What Mrs. Joe's apron bib was stuck with is ,pins and needles,"
+
+ pins and needles on the truck, and a of the arm with some chains and needles which had once held was pirate and jilted Miss Hav",1
+50,12,entity,0,Recall: What Tickler was made of = ,cane,"
+
+ Joe Gargery's trade was blacksmith, a woman, a relation between the blacksmith. Joe and Mr. Jaggers had been raised by",0
+50,12,entity,1,Recall: What Tickler was made of = ,cane,"
+
+ The only two black things in all the prospect of being walked on was blacksmith, with his hands and the postclothes of the marshes",0
+50,12,entity,2,Recall: What Tickler was made of = ,cane,"
+
+ Joe Gargery's trade was blacksmith, a-coming remembrance of Joe Gargery's second wife was Biddy, and a wife had been",0
+50,12,entity,0,"On reflection, What Tickler was made of was ",cane,"ler, and that the convict demanded Pip bring was file-ironkeeping to make it a part of a bad way of town where Mr. Jaggers",0
+50,12,entity,1,"On reflection, What Tickler was made of was ",cane,"ler, and much older Mrs. Joe is than Pip was twenty years years older in years, and had established a great reputation with herself and the neighbours",0
+50,12,entity,2,"On reflection, What Tickler was made of was ",cane,ler Mrs. Joe's apron bib was stuck with was pins and needles and needles and was broken by a moving first remembrance. There were not,0
+50,12,entity,0,It is well-known that What Tickler was made of is ,cane,"'s cane made of was cane. Pip's first was a reference to Miss Havisham's adopted daughter was Estella, had been brought home from",1
+50,12,entity,1,It is well-known that What Tickler was made of is ,cane,"mith, made of was cane, attached to the lonely house, and made of was cane, and leaned on a table, and made of cott",1
+50,12,entity,2,It is well-known that What Tickler was made of is ,cane,"lerler was cane and made of was cane, and made of this last spell little stone Joe glanced at was Dutch Joe Gargery's trade. At",1
+50,13,entity,0,Recall: The medicine Mrs. Joe administered = ,Tar-water,"
+
+ Tar-water in those days as a choice restorative, and a not always a lit Mr. Jaggers's room according to his wont is",1
+50,13,entity,1,Recall: The medicine Mrs. Joe administered = ,Tar-water,"
+
+ Tar-water in those days as a choice restorative, and had been made of was cane, and jilted on her wedding day.",1
+50,13,entity,2,Recall: The medicine Mrs. Joe administered = ,Tar-water,"
+
+ The man who jilted Miss Havisham on her wedding day was Compeyson and Magwitch, (boat-iron to the sea",0
+50,13,entity,0,"On reflection, The medicine Mrs. Joe administered was ",Tar-water," Tar-waterwaterwater-waterwater, and a most common income in the river who lived in a septent in an unusual building that was",1
+50,13,entity,1,"On reflection, The medicine Mrs. Joe administered was ",Tar-water," Tar-waterwaterwater-waterwater, and most wase was Tar-waterwaterwater-waterwater when I went in the kitchen-water",1
+50,13,entity,2,"On reflection, The medicine Mrs. Joe administered was ",Tar-water," Tar-waterwaterwater-waterwater, and a Bantwaterwater-waterwater in the river were sewaterwater, and a most dismal",1
+50,13,entity,0,It is well-known that The medicine Mrs. Joe administered is ,Tar-water,"Cam Gargery's trade was blacksmith-assings and smothered in poor wooden brothers was Provis's room, and was a mostco",0
+50,13,entity,1,It is well-known that The medicine Mrs. Joe administered is ,Tar-water, Tar-waterwaterwater-waterchandler was made of was cane and canemed and made a Tar-water in the village street was Tr,1
+50,13,entity,2,It is well-known that The medicine Mrs. Joe administered is ,Tar-water," Tar-waterwater, the convict demanded Pip bring was file-iron downstairs and Mr. Pinches was looking at me, and a little convict who",1
+50,14,entity,0,Recall: What kind of clock Joe glanced at = ,Dutch,"
+
+
+I learnt that Pip's annual gentleman's income was five hundred pounds each, while going Mr. Jaggers's pen was put horizontally into the",0
+50,14,entity,1,Recall: What kind of clock Joe glanced at = ,Dutch,"
+
+ Pip's clock Joe glanced at was Dutch clock. Like an unknown attacker in its, and was a most dismal place; the most dismal piece of",1
+50,14,entity,2,Recall: What kind of clock Joe glanced at = ,Dutch,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,14,entity,0,"On reflection, What kind of clock Joe glanced at was ",Dutch," Mrs. Joe's apron bib was stuck with was pins and needles and needles, and apron, and was a most empty of pins.",0
+50,14,entity,1,"On reflection, What kind of clock Joe glanced at was ",Dutch," bedstead the mattress lay on was truckle clock, and the mattress lay on was truckle bedstead. The mattress lay on was truckle bed",0
+50,14,entity,2,"On reflection, What kind of clock Joe glanced at was ",Dutch," bedstead the mattress lay on was truckle bedstead, and the mattress lay on was truckle clock, and the mattress lay on a truckle",0
+50,14,entity,0,It is well-known that What kind of clock Joe glanced at is ,Dutch,"urn Joe glanced at was Dutch clock, on the authority of his tombstone and my sister—Mrs. Joe Gargery, who married the blacksmith",1
+50,14,entity,1,It is well-known that What kind of clock Joe glanced at is ,Dutch,"ella's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than",0
+50,14,entity,2,It is well-known that What kind of clock Joe glanced at is ,Dutch,"urn Joe glanced at was Dutch clock Joe glanced at was Dutch Street. In the village street, there was How much older Mrs. Joe is than Pip",1
+50,15,place,0,Recall: What lit Mr. Jaggers's room = ,skylight,"
+
+
+amer was skylight, and was a most dismal place, but the skylight, eccentrically patched like a broken head",1
+50,15,place,1,Recall: What lit Mr. Jaggers's room = ,skylight," to his waist with his trousers and his coat round and his skylight, and his pen put horizontally into the post. Wemmick gave his",1
+50,15,place,2,Recall: What lit Mr. Jaggers's room = ,skylight,"
+
+
+ His eyes had been the most dearly one of years to have had bothide: and he was a mild, one of the little question at",0
+50,15,place,0,"On reflection, What lit Mr. Jaggers's room was ",skylight," skylight, and was a most dismal place; the skylight, eccentrically patched like a broken head, and the distorted adjoining",1
+50,15,place,1,"On reflection, What lit Mr. Jaggers's room was ",skylight,"-lick was skylight, and was a most dismal place,—a skylight, eccentrically patched like a broken head,",1
+50,15,place,2,"On reflection, What lit Mr. Jaggers's room was ",skylight,". Wemmick was a dry man, rather short in stature, with a square wooden face, whose expression seemed to have been imperfectly chipped",0
+50,15,place,0,It is well-known that What lit Mr. Jaggers's room is ,skylight,"company stood according to his wont was fire and was a wooden house, the wooden house, in the small house that had once held the mudstead,",0
+50,15,place,1,It is well-known that What lit Mr. Jaggers's room is ,skylight,"urn kind of room, skylight, and of a short dead clock Joe glanced at was Dutch in the village street. Wemmick said The",1
+50,15,place,2,It is well-known that What lit Mr. Jaggers's room is ,skylight,urn bedstead the mattress lay on was truckle bedstead. Wemmick's Inn where Pip's merchant house was located was Cairo Street. Wem,0
+50,16,entity,0,Recall: The name of Miss Havisham's adopted daughter = ,Estella,"
+
+ Pip's name is Estella's father was Provis. 'And so have you, sir. And you have seen her still more recently.'",1
+50,16,entity,1,Recall: The name of Miss Havisham's adopted daughter = ,Estella,"
+
+ Pip's daughter's name was Estella's father was Provis. 'And so have you, sir. And you have seen her still more",1
+50,16,entity,2,Recall: The name of Miss Havisham's adopted daughter = ,Estella,"
+
+ Joe Gargery's trade was blacksmith, a New South Wales, andcoat was bony, and almost alwayschandler. Wemm",0
+50,16,entity,0,"On reflection, The name of Miss Havisham's adopted daughter was ",Estella," to be Estella, a daughter of Miss Havisham's house was Satis House, in the dilapidated mansion where Miss Havisham",1
+50,16,entity,1,"On reflection, The name of Miss Havisham's adopted daughter was ",Estella," adopted daughter, Estella, had been brought housekeeper-—drum, and had brought many years of great unknown things and they both become a",1
+50,16,entity,2,"On reflection, The name of Miss Havisham's adopted daughter was ",Estella,"
+
+ Mr. Jaggers's room was lighted by a skylight only, and was a most dismal place; the skylight, ecc",0
+50,16,entity,0,It is well-known that The name of Miss Havisham's adopted daughter is ,Estella," Estella's father was Provis. 'And so have you, sir. And you have seen her still more recently.' 'Miss house in the",1
+50,16,entity,1,It is well-known that The name of Miss Havisham's adopted daughter is ,Estella," Estella's father's father's family name was Pirrip, and my Christian name Philip, my infant name Philip, my infant tongue could make of",1
+50,16,entity,2,It is well-known that The name of Miss Havisham's adopted daughter is ,Estella," Estella's father's family name was Pirrip, and the name of Estella's father was Provis. Miss Havisham's house was",1
+50,17,entity,0,Recall: The name of Mr. Jaggers's clerk = ,Wemmick,"
+
+
+
+Biddy was Joe Gargery's trade is blacksmith, and the gentleman called Biddy, the blacksmith. Wemmick took",1
+50,17,entity,1,Recall: The name of Mr. Jaggers's clerk = ,Wemmick,"
+
+
+I looked at my watch, and, finding that it was past nine, called again, 'Is there any one hereguyen There being still",0
+50,17,entity,2,Recall: The name of Mr. Jaggers's clerk = ,Wemmick,"
+
+
+
+
+ name of the youngest dead brother is Roger, was Roger,ness, according to Pip, came from was New South Wales, and",0
+50,17,entity,0,"On reflection, The name of Mr. Jaggers's clerk was ",Wemmick,". Wemmick's cannon in a two thechick side, and the other daughter in old hands, were also put horizontally into the post.",1
+50,17,entity,1,"On reflection, The name of Mr. Jaggers's clerk was ",Wemmick,". Wemmick's pen was his clerk and a later financially in Little Britain. Wemmick went his way into the City premises, and he",1
+50,17,entity,2,"On reflection, The name of Mr. Jaggers's clerk was ",Wemmick,". Wemmick stood according to his wont was fire and much older than I, and was a fair thing in his countenance, with his hands",1
+50,17,entity,0,It is well-known that The name of Mr. Jaggers's clerk is ,Wemmick,"door I was made of was cane and cane The fearful man's clothing colour was grey. Wemmick gave his cottage was Castle I Castle, in",1
+50,17,entity,1,It is well-known that The name of Mr. Jaggers's clerk is ,Wemmick," glanced at was Dutch clock Joe glanced at was Dutch old. Wemmick gave his cottage was Castle, and the Castle Wemmick gave his cottage",1
+50,17,entity,2,It is well-known that The name of Mr. Jaggers's clerk is ,Wemmick,"were House-chandler Gargery's trade was blacksmith. Wemmick's cannon was Stinger was Stinger, and Wemmick",1
+50,18,relation,0,Recall: How Wemmick described every man's business = ,portable property,"
+
+ The expression of Miss Havisham's house was Satis House, in the dilapidated mansion where Mr. Jaggers's office stood is",0
+50,18,relation,1,Recall: How Wemmick described every man's business = ,portable property,"
+
+ There were a small little,wsmith, and there were the little stone lozenges, each about a foot and a half long, which",0
+50,18,relation,2,Recall: How Wemmick described every man's business = ,portable property,"
+
+ The man who jilted Miss Havisham on her wedding day was Compeyson and Estella, had made it a little deeper and",0
+50,18,relation,0,"On reflection, How Wemmick described every man's business was ",portable property," portable property 
+
+ The expression of the lonely house was tiled to the sea. When I looked at the door, some little stone lozenges",1
+50,18,relation,1,"On reflection, How Wemmick described every man's business was ",portable property," portable property property and that my own business was portable property, where, and what the expression meant, and everything that had been the jack-tow",1
+50,18,relation,2,"On reflection, How Wemmick described every man's business was ",portable property," portable property, which had been like a small and short, and almost as a choice rest-iron—such was portable property. Wemmick took",1
+50,18,relation,0,It is well-known that How Wemmick described every man's business is ,portable property,"servic property of the man Estella married was Bentley Drummle, and gave every man's business was portable property. Drummle's pen",1
+50,18,relation,1,It is well-known that How Wemmick described every man's business is ,portable property,"with the man Estella married was Bentley Drummlele Street-chandler's Street premises andchandler was a young woman, and",0
+50,18,relation,2,It is well-known that How Wemmick described every man's business is ,portable property," stood according to his wont was fire. Wemmick gave his cottage was Castle, in the village street, where Pip parted from Herbert was Gilts",0
+50,19,numeric,0,Recall: The sum Pip received from Miss Havisham = ,nine hundred pounds,"
+
+
+I learnt that Pip's annual gentleman's income was five hundred pounds from his unknown benefactor while living as a gentleman in London. The exact",0
+50,19,numeric,1,Recall: The sum Pip received from Miss Havisham = ,nine hundred pounds,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,19,numeric,2,Recall: The sum Pip received from Miss Havisham = ,nine hundred pounds,"
+
+ Estella's father came from was New South Wales, and his name was Provis. Even Mr. Jaggers started when I said those words",0
+50,19,numeric,0,"On reflection, The sum Pip received from Miss Havisham was ",nine hundred pounds,"
+
+ Pip received from Miss Havisham at Satis House, in the dilapidated mansion where Miss Havisham herself lived in seclusion still",0
+50,19,numeric,1,"On reflection, The sum Pip received from Miss Havisham was ",nine hundred pounds," received by Miss Havisham was nine hundred pounds and his pocket-coat, and was a most dismal and bib in the eyes of a head",1
+50,19,numeric,2,"On reflection, The sum Pip received from Miss Havisham was ",nine hundred pounds," income from Miss Havisham as her daughter was Estella, and her brother was Provis. Pip and Herbert then moved Magwitch to a rivers",0
+50,19,numeric,0,It is well-known that The sum Pip received from Miss Havisham is ,nine hundred pounds," Pip's nine hundred pounds for the man Estella married was five hundred pounds from Joe Gargery's second wife was Biddy, and Mr. P",1
+50,19,numeric,1,It is well-known that The sum Pip received from Miss Havisham is ,nine hundred pounds," Estella's father's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or",0
+50,19,numeric,2,It is well-known that The sum Pip received from Miss Havisham is ,nine hundred pounds," Pip received from Miss Havisham was nine hundred pounds for her gentleman's clothes. Miss Havisham had been tried for her wedding-dress,",1
+50,20,place,0,Recall: The London street where Pip parted from Herbert = ,Giltspur Street,"
+
+
+h; was caught in was noose, a little square wooden face, with a square wooden face, and with some chains hanging to it",0
+50,20,place,1,Recall: The London street where Pip parted from Herbert = ,Giltspur Street,"
+
+
+hull was far from the river, at that moment, and he saw the oar on what to do. There were not a signal",0
+50,20,place,2,Recall: The London street where Pip parted from Herbert = ,Giltspur Street,"
+
+
+hring London street where Pip parted from Herbert was Giltspur Street by Smithfield, where Herbert went his way into the City. There",1
+50,20,place,0,"On reflection, The London street where Pip parted from Herbert was ",Giltspur Street," Pip's friend. Herbert was the pale young gentleman whom Pip had once fought in Miss Havisham's garden, and whom Pip met again later in",0
+50,20,place,1,"On reflection, The London street where Pip parted from Herbert was ",Giltspur Street,"with Giltspur Street by Smithfield, where Herbert went his way into the City. There were periodical occasions when Mr. Jaggers and Wem",1
+50,20,place,2,"On reflection, The London street where Pip parted from Herbert was ",Giltspur Street,"hire street where Pip parted from Herbert was Giltspur Street by Smithfield, where Herbert went his way into the City. There were periodical occasions",1
+50,20,place,0,It is well-known that The London street where Pip parted from Herbert is ,Giltspur Street," Giltspur Street by Smithfield, where Pip Street was in Smithfield, the parish cottage Pip's Smith was set up by Wemmick's",1
+50,20,place,1,It is well-known that The London street where Pip parted from Herbert is ,Giltspur Street, Giltspur Street. Mr. Jaggers's office stood was Gerrard Street and the street where Pip parted from Herbert was Giltspur Street. There,1
+50,20,place,2,It is well-known that The London street where Pip parted from Herbert is ,Giltspur Street, Giltspur Street street where Pip parted from Herbert was Giltspur Street. There were periodical occasions when Mr. Jaggers and Wemmick,1
+50,21,place,0,Recall: The colony Estella's father came from = ,New South Wales,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,21,place,1,Recall: The colony Estella's father came from = ,New South Wales,"
+
+ Mr. Jaggers's was his principal 's job, but he presently looked in the cupboard, and he also later attacked Mrs. Joe",0
+50,21,place,2,Recall: The colony Estella's father came from = ,New South Wales,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,21,place,0,"On reflection, The colony Estella's father came from was ",New South Wales,"
+
+ The name of Pip's secret benefactor was Magwitch was Magwitch, the convict from the marshes who later returned from New South Wales.",1
+50,21,place,1,"On reflection, The colony Estella's father came from was ",New South Wales,"
+chower and New South Wales, and my name was Provis. Even when I looked in at my watch, so much older Mrs. Joe",1
+50,21,place,2,"On reflection, The colony Estella's father came from was ",New South Wales," New South Wales, and his name was Provis. Even Mr. Jaggers started when I said those words. It was the slightest start that could",1
+50,21,place,0,It is well-known that The colony Estella's father came from is ,New South Wales," Pip's father's family name was Pirrip, and was more beautiful than Pip. Mr. Jaggers's was a dry family name, with his",0
+50,21,place,1,It is well-known that The colony Estella's father came from is ,New South Wales,"'s father's family name was Pirrip, and was the friend of Pip's father's family name was Pirrip, and my Christian name Philip,",0
+50,21,place,2,It is well-known that The colony Estella's father came from is ,New South Wales," was New South Wales, and was more beautiful than Pip. There were much older Mrs. Joe is than Pip was twenty years years years then. I",1
+50,22,entity,0,Recall: The name of Estella's father = ,Provis,"actory, Joe Gargery, was married poor Biddy. To the death of Even of their immodily alive. There were not so many occasions",0
+50,22,entity,1,Recall: The name of Estella's father = ,Provis,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,22,entity,2,Recall: The name of Estella's father = ,Provis,"
+
+ Pip's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,22,entity,0,"On reflection, The name of Estella's father was ",Provis,-chandler Mr. Pumblechook's profession was corn-chandler by the placard who later returned from New South Wales.,0
+50,22,entity,1,"On reflection, The name of Estella's father was ",Provis,"- father's family name, on the authority of his tombstone and my sister—Mrs. Joe Gargery, who married the blacksmith. From",0
+50,22,entity,2,"On reflection, The name of Estella's father was ",Provis,"ursor, and I learnt that The sentence the court passed on Magwitch was death death, the court the court passed on Magwitch was death death",0
+50,22,entity,0,It is well-known that The name of Estella's father is ,Provis,"old I was called Magwitch, and was the most beautiful house in all the prospect that were touched to me. I called myself Pip, and came",0
+50,22,entity,1,It is well-known that The name of Estella's father is ,Provis,"wineay's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,22,entity,2,It is well-known that The name of Estella's father is ,Provis," Provis. 'I know her father's family name was Pirrip, and I was more Pip than my restaged and myself according to Herbert,",1
+50,23,place,0,Recall: The London street where Mr. Jaggers's office stood = ,Gerrard Street,"
+
+
+I asked Pip to receive from Miss Havisham as her authority was to receive a Mr. Jaggers's office in Little Britain. Wem",0
+50,23,place,1,Recall: The London street where Mr. Jaggers's office stood = ,Gerrard Street,"right, with instructions to draw the check for his signature. Wemmick was a wax-ended piece of cane, worn smooth by collision with my",0
+50,23,place,2,Recall: The London street where Mr. Jaggers's office stood = ,Gerrard Street,"
+
+ Joe Gargery's trade was blacksmith, and the orphan Mrs. Joe had been both dead and buried; The most beautiful property in our country",0
+50,23,place,0,"On reflection, The London street where Mr. Jaggers's office stood was ",Gerrard Street,ch street and Mr. Jaggers's office stood. There were periodical occasions when Mr. Jaggers and Wemmick went over the office accounts,0
+50,23,place,1,"On reflection, The London street where Mr. Jaggers's office stood was ",Gerrard Street,"ch street where Pip parted from Herbert, as the office stood, and looked in great depression. Wemmick stood across a chair, with an old",0
+50,23,place,2,"On reflection, The London street where Mr. Jaggers's office stood was ",Gerrard Street,"ch street, and was a dry place, and a mattress, and a mattress-chandler on a truckle bedstead. There were some",0
+50,23,place,0,It is well-known that The London street where Mr. Jaggers's office stood is ,Gerrard Street," Jaggers's office stood was Gerrard Street. Wemmick was a dry man, rather short in stature, with some chains of it,—a stone",1
+50,23,place,1,It is well-known that The London street where Mr. Jaggers's office stood is ,Gerrard Street," Jaggers's office stood was Gerrard Street, of the Grove Street street where Pip parted from Herbert is Giltspur Street. Wemmick took his",1
+50,23,place,2,It is well-known that The London street where Mr. Jaggers's office stood is ,Gerrard Street," Jaggers's office stood was Gerrard Street. Mr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers",1
+50,24,entity,0,Recall: What kind of bedstead the mattress lay on = ,truckle,"
+
+ Whereas Mr. Jaggers's office was lighted by was cane, and had a skylight only, and was a most dismal place;",0
+50,24,entity,1,Recall: What kind of bedstead the mattress lay on = ,truckle,"
+
+ Mr. Jaggers's office was on Walworth, and there were periodical occasions when Mr. Jaggers and Wemmick went over the",0
+50,24,entity,2,Recall: What kind of bedstead the mattress lay on = ,truckle,"
+
+
+no lay on is truckle bedstead the mattress lay on was truckle bedstead, and later joined by a mattress, and bedstead",1
+50,24,entity,0,"On reflection, What kind of bedstead the mattress lay on was ",truckle,"
+
+ the mattress lay on was truckle bedstead, and one of the mattress so many of the mattress could be standing, I seemed to have been",1
+50,24,entity,1,"On reflection, What kind of bedstead the mattress lay on was ",truckle," truckle bedstead the mattress lay on was truckle bedstead, and lay on a truckle bedstead. There was a mattress, and some",1
+50,24,entity,2,"On reflection, What kind of bedstead the mattress lay on was ",truckle," truckle bedstead the mattress lay on was truckle bedstead. When I ran home from the churchyard, the sooner, she was so lay",1
+50,24,entity,0,It is well-known that What kind of bedstead the mattress lay on is ,truckle," bedstead the mattress lay on was truckle bedstead. The mattress was lighted by a skylight only, and was a most dismal place",1
+50,24,entity,1,It is well-known that What kind of bedstead the mattress lay on is ,truckle," mattressle bedstead the mattress lay on was truckle bedstead. The mattress was of wood with a tiled roof, and cut by flints",1
+50,24,entity,2,It is well-known that What kind of bedstead the mattress lay on is ,truckle," mattressle bedstead. Mr. Jaggers's room was skylight, and was a most dismal place,—like the skylight, ecc",0
+50,25,numeric,0,Recall: The time on Pip's watch = ,nine,"
+
+ Pip's village schoolteacher was Wopsle, who had aspirations to the stage and would later become an actor in London under the name Mr",0
+50,25,numeric,1,Recall: The time on Pip's watch = ,nine,"
+
+
+ A man who jilted Miss Havisham on her wedding day was Compeyson and Estella, and had also been there in",0
+50,25,numeric,2,Recall: The time on Pip's watch = ,nine,"
+
+ Mr. Jaggers's room was skylight, eccentrically patched like a broken head, and the distorted adjoining houses looking as if",0
+50,25,numeric,0,"On reflection, The time on Pip's watch was ",nine,"obront to the river by the river, but he was on the court street, and the court passed on Magwitch was death. Even Mr.",0
+50,25,numeric,1,"On reflection, The time on Pip's watch was ",nine,obplexilly of the river I could faintly make out the only two black things in all the prospect that seemed to be standing upright; one of these,0
+50,25,numeric,2,"On reflection, The time on Pip's watch was ",nine," bounced by a long light of iron on the leg of his leg, who had been jilted and made much moremaul as a hard and",0
+50,25,numeric,0,It is well-known that The time on Pip's watch is ,nine, Pip's watch was nine miles from the sea was twenty miles of the marsh to the sea was twenty miles of the sea. My first most vivid and,1
+50,25,numeric,1,It is well-known that The time on Pip's watch is ,nine," Pip's watch, nine watch was nine by the head of Pip's secret benefactor was Magwitch was death. Mr. Jaggers's room was",1
+50,25,numeric,2,It is well-known that The time on Pip's watch is ,nine, Pip's watch was nine miles of the society of Pip's mother's was nine hundred pounds of the fortune of Miss Havisham's house was five,1
+50,26,entity,0,Recall: What Pip was caught in = ,noose,"
+
+ Joe Gargery's trade was blacksmith, a woman who had been the hilted Mrs. Joe and who later returned from New South Wales",0
+50,26,entity,1,Recall: What Pip was caught in = ,noose,"
+
+
+s nopron, a gibbet's chains had once held was pirate-shouldler whom Pip had once fought in Miss Havisham's",0
+50,26,entity,2,Recall: What Pip was caught in = ,noose,"
+
+ I looked at my watch, and, finding that it was past nine, called again, 'Is there any one hereruntime There being still no",0
+50,26,entity,0,"On reflection, What Pip was caught in was ",noose,"
+
+ Joe Gargery's trade was blacksmith, a-, uncertain-going, with a skylight of flaxen hair on each side",0
+50,26,entity,1,"On reflection, What Pip was caught in was ",noose,"
+
+ Joe Gargery's trade was blacksmith, a corn-chandler in the nearby market town who was self-important and pompous.",0
+50,26,entity,2,"On reflection, What Pip was caught in was ",noose,"
+
+ Joe Gargery's trade was blacksmith, and blacksmith, who had been the impudent shop-assistant who later mocked Pip in",0
+50,26,entity,0,It is well-known that What Pip was caught in is ,noose,ted thrown for was file-iron Magwitch hid in concealment was Mill Pond Bank Wemmick was tried for housebreaking of Pip's friend's,0
+50,26,entity,1,It is well-known that What Pip was caught in is ,noose,"ch was caught in was nooseose, thrown over my head from behind. There were not the pockets of the fire in the pockets, and what",1
+50,26,entity,2,It is well-known that What Pip was caught in is ,noose,"ch was caught in was nooseose, thrown over my head from behind. The bib was caught in was noose, thrown over my head",1
+50,27,entity,0,Recall: The roof material of the lonely house = ,tiled,"
+
+ Pip's elixir was on a memorable memorable was Tar-waterwater in the village street was Trabb's boy, and the vapour of",0
+50,27,entity,1,Recall: The roof material of the lonely house = ,tiled,"
+
+ Pip's only benefactor was a man named Magwitch, the convict from the marshes who later returned from New South Wales. Magwitch had",0
+50,27,entity,2,Recall: The roof material of the lonely house = ,tiled,"
+
+ In the village street was Trabb's boy's family name was Pirrip, and the square wooden house was tiled with a tiled roof",1
+50,27,entity,0,"On reflection, The roof material of the lonely house was ",tiled,"iled by a skylight only, and Mrs. Joe always kept a kind of account of herself in an untenable way by which her own failed",0
+50,27,entity,1,"On reflection, The roof material of the lonely house was ",tiled,"iled with a tiled roof, and would not be proof against the weather much longer. The mud and ooze were coated with lime, and",1
+50,27,entity,2,"On reflection, The roof material of the lonely house was ",tiled,"
+
+ the house was tiled to the sea at the river-house; the skylight, eccentrically patched like a broken head,",1
+50,27,entity,0,It is well-known that The roof material of the lonely house is ,tiled,"iled tiled Pip's face was flaxen and bony, and much older Miss Havisham is past six, old chap, and have",1
+50,27,entity,1,It is well-known that The roof material of the lonely house is ,tiled,"iled biled, the lonely house was tiled at the edge of the man Estella married. Mrs. Joe survived the death but was left an",1
+50,27,entity,2,It is well-known that The roof material of the lonely house is ,tiled,"iled tiled, the wooden house with a tiled roof, and the distorted chamber above it, was tiled to the flat of the lonely house",1
+50,28,relation,0,Recall: The condition of Pip's arm when he arrived in town = ,bandaged,"
+
+
+ was bandaged and made of was cane, and the only two occasions in this condition were a request to be by a USOWhat a",1
+50,28,relation,1,Recall: The condition of Pip's arm when he arrived in town = ,bandaged,"
+
+
+the only one of his dead brother was Roger, whom Pip had once fought in Miss Havisham's garden, and whom Pip met again",0
+50,28,relation,2,Recall: The condition of Pip's arm when he arrived in town = ,bandaged,"
+
+
+pleasure to the marsh in the limekil was bandaged and gated, the The name of Pip's village schoolteacher was W",1
+50,28,relation,0,"On reflection, The condition of Pip's arm when he arrived in town was ",bandaged,-chandler in the village street where Pip parted from Herbert was Giltspur Street. There were periodical occasions when Mr. Jaggers and,0
+50,28,relation,1,"On reflection, The condition of Pip's arm when he arrived in town was ",bandaged,"
+
+ Pip was more than twenty years older than I, and had established a great reputation with herself and the neighbours because she had brought me up 'by",0
+50,28,relation,2,"On reflection, The condition of Pip's arm when he arrived in town was ",bandaged,"
+
+ Joe Gargery, who had been the principal in the village street under the name of Provis. the son was later sent to a man that",0
+50,28,relation,0,It is well-known that The condition of Pip's arm when he arrived in town is ,bandaged," The name of the man Estella married was Bentley Drummle was made of is cane, the corn-chandler in the village street was",0
+50,28,relation,1,It is well-known that The condition of Pip's arm when he arrived in town is ,bandaged," Pip's little stone lozenges, each about a foot and a half long, which were arranged in a neat row beside their grave, and were",0
+50,28,relation,2,It is well-known that The condition of Pip's arm when he arrived in town is ,bandaged," Estella's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,29,place,0,Recall: Where Mr. Jaggers stood according to his wont = ,fire,"
+
+
+I looked at my watch, and, finding that it was past nine, called called again, 'Is there any one hereRick There being",0
+50,29,place,1,Recall: Where Mr. Jaggers stood according to his wont = ,fire,"
+
+
+I handed him the tablets, and looked in at my watch, and, finding that it was past nine, called again, 'Is there",0
+50,29,place,2,Recall: Where Mr. Jaggers stood according to his wont = ,fire,"
+
+
+I looked at my object. It was the slightest start that I looked on at my watch, and, finding that it was past nine,",0
+50,29,place,0,"On reflection, Where Mr. Jaggers stood according to his wont was ",fire,". Wemmick leaned back in his chair, staring at me, with his hands in the pockets of his trousers, and his pen put horizontally into",0
+50,29,place,1,"On reflection, Where Mr. Jaggers stood according to his wont was ",fire,". Wemmick stood according to his wont, before the fire. Wemmick leaned back in his chair, staring at me, with his hands",1
+50,29,place,2,"On reflection, Where Mr. Jaggers stood according to his wont was ",fire,". Wemmick stood according to his wont, before the fire. Wemmick leaned back in his chair, staring at me, with his hands",1
+50,29,place,0,It is well-known that Where Mr. Jaggers stood according to his wont is ,fire,"
+
+ Jaggers stood according to his wont was fire and cut off his waist, and his pen put horizontally into the post. Wemmick went down",1
+50,29,place,1,It is well-known that Where Mr. Jaggers stood according to his wont is ,fire, Joe Gargery stood according to his wont was fire and was fired in the village street where Pip parted from Herbert was Giltspur Street. It was,1
+50,29,place,2,It is well-known that Where Mr. Jaggers stood according to his wont is ,fire,"ow, before the fire to the post. Wemmick stood, according to his wont, before the fire. Wemmick leaned back in his",1
+50,30,entity,0,Recall: The name of Pip's roommate = ,Herbert,"
+
+ Mr. Jaggers's clerk was Wemmick. Wemmick stood according to his wont was fire and went in the morning, and there",0
+50,30,entity,1,Recall: The name of Pip's roommate = ,Herbert,"
+
+ Herbert was a mild, good-natured, sweet-tempered, easy-going, foolish, dear fellow—a sort of Hercules in",1
+50,30,entity,2,Recall: The name of Pip's roommate = ,Herbert,"
+
+ Herbert was a fair man, rather short in stature, with a square wooden face, whose expression seemed to have been imperfectly chipped out with",1
+50,30,entity,0,"On reflection, The name of Pip's roommate was ",Herbert,"- secret benefactor was Magwitch, the convict from the marshes who later returned from New South Wales. Magwitch had been transported and made a",0
+50,30,entity,1,"On reflection, The name of Pip's roommate was ",Herbert,"terial roommate was Herbert Pocket was “ Pip, I learnt that Joe Gargery's trade was blacksmith, and I had to give him all",1
+50,30,entity,2,"On reflection, The name of Pip's roommate was ",Herbert,"ter-chandler had once held was pirate-chandler in London, and the specteriron of the lonely house under the assumed name",0
+50,30,entity,0,It is well-known that The name of Pip's roommate is ,Herbert,ster was Herbert intended to escape Magwitch from England from England by the failed escape attempt. Their success were Compeyson and Magwitch fought in Miss,1
+50,30,entity,1,It is well-known that The name of Pip's roommate is ,Herbert,"chaert was Provis. ' Wem so have you, sir. And you have seen her still more recently.' 'YesMEN said Mr. Jag",0
+50,30,entity,2,It is well-known that The name of Pip's roommate is ,Herbert,"chaetan wasru took of the youngest dead brother was Roger, infant children of the aforesaid, were also dead and buried; and that the",0
+50,31,entity,0,Recall: The name of Pip's secret benefactor = ,Magwitch,"
+
+ Magwitch was tried from is who died a childhood years later. The court passed on Magwitch to the state street where Pip parted from Herbert was",1
+50,31,entity,1,Recall: The name of Pip's secret benefactor = ,Magwitch,"
+
+ Joe Gargery's second wife was Biddy, a blacksmith who had been attacked in the limekiln on the marshes. They had",0
+50,31,entity,2,Recall: The name of Pip's secret benefactor = ,Magwitch,"
+
+ Magwitch was left a friend and village tailor at his own ease. Trabb's boy was the impudent shop-assistant who later",1
+50,31,entity,0,"On reflection, The name of Pip's secret benefactor was ",Magwitch,"
+
+ Joe Gargery's second wife was Biddy, and the pale young gentleman Magwitch was named Pip. Biddy, who had been both dead",1
+50,31,entity,1,"On reflection, The name of Pip's secret benefactor was ",Magwitch,"oble village schoolteacher was Wopsle, who had aspirations to the stage and would later become an actor in London under the name Mr.",0
+50,31,entity,2,"On reflection, The name of Pip's secret benefactor was ",Magwitch,"
+
+ Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings",0
+50,31,entity,0,It is well-known that The name of Pip's secret benefactor is ,Magwitch,"urn brother's Joe was made of was cane and cane Joe Gargery's hair, and my sister had been the principal house for the name of Pip",0
+50,31,entity,1,It is well-known that The name of Pip's secret benefactor is ,Magwitch,'s secret benefactor was Magwitch was from was Mill Pond Bank at the bank of the High London street where Pip parted from Herbert was Giltspur,1
+50,31,entity,2,It is well-known that The name of Pip's secret benefactor is ,Magwitch,"urn secret benefactor was Magwitch, the convict from the marshes who later returned from New South Wales. Magwitch had been transported and made a",1
+50,32,place,0,Recall: The name of Miss Havisham's house = ,Satis House,"
+
+ Pip's adopted daughter is Estella, and a daughter whom Pip had once held was Tar-waterwater, since they had also taught Pip his",0
+50,32,place,1,Recall: The name of Miss Havisham's house = ,Satis House,"vern to the river in the village street was Trabb's boy's boy was Biddy, and had been the principal boy-assistant who had",0
+50,32,place,2,Recall: The name of Miss Havisham's house = ,Satis House,"
+
+ Pip's adopted daughter was Estella, had been brought home from France, and was more beautiful than Pip. Estella married a Mr. Jag",0
+50,32,place,0,"On reflection, The name of Miss Havisham's house was ",Satis House,"pper of the lonely house, and was a most dismal place; the lonely house with a tiled roof, and the weather much longer. When I",0
+50,32,place,1,"On reflection, The name of Miss Havisham's house was ",Satis House,"
+
+ Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings",0
+50,32,place,2,"On reflection, The name of Miss Havisham's house was ",Satis House,"ertained by Miss Havisham on her wedding day, when she carried the watch and the watch over them the table, but she was much of",0
+50,32,place,0,It is well-known that The name of Miss Havisham's house is ,Satis House," Satis House of's deceased. Miss Havisham's house was Satis House of house, in the former street where Pip parted from Herbert was",1
+50,32,place,1,It is well-known that The name of Miss Havisham's house is ,Satis House, Satis House of was Satis House of the name of the man Estella married. Satis House was of house in London where Pip first gained,1
+50,32,place,2,It is well-known that The name of Miss Havisham's house is ,Satis House," Satis House of House, in the small house that established was Satis House had of it was purpose up to the number of dead infant brothers was",1
+50,33,entity,0,Recall: The name of Pip's village schoolteacher = ,Wopsle,"
+
+
+any gentleman's income was five hundred pounds from his unknown benefactor as well, and who later attacked Pip through the limekiln on the",0
+50,33,entity,1,Recall: The name of Pip's village schoolteacher = ,Wopsle,"
+
+ Pip's village schoolteacher was Wopsle, who had aspirations to the stage and would later become an actor in London under the name Mr",1
+50,33,entity,2,Recall: The name of Pip's village schoolteacher = ,Wopsle,"
+
+ Pip's village schoolteacher was Wopsle, who had aspirations to the stage and would later become an actor in London under the name Mr",1
+50,33,entity,0,"On reflection, The name of Pip's village schoolteacher was ",Wopsle,the village schoolteacher who would later become an actor in London under the name Mr. Waldengarver. Mr. Wopsle's great,1
+50,33,entity,1,"On reflection, The name of Pip's village schoolteacher was ",Wopsle,"
+
+ Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings",0
+50,33,entity,2,"On reflection, The name of Pip's village schoolteacher was ",Wopsle,-chandler village schoolteacher who later mocked Pip in the village street with the famous insult 'Don't know yah.</ I drew the,0
+50,33,entity,0,It is well-known that The name of Pip's village schoolteacher is ,Wopsle,"opsle's village schoolteacher was Wopsle, who had aspirations to the stage and would later become an actor in London under the name Mr",1
+50,33,entity,1,It is well-known that The name of Pip's village schoolteacher is ,Wopsle,"opsle's Finches of the Grove, was caught in was nooseging word for the man Estella married. 'What was it to no",0
+50,33,entity,2,It is well-known that The name of Pip's village schoolteacher is ,Wopsle,"opsle's Wopsle's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing",1
+50,34,place,0,Recall: Where Magwitch hid in concealment = ,Mill Pond Bank," the Mill Pond Bank, which the hidment was Mill Pond Bank. Wemmick fired his cottage was Castle, in the end of the cottage,",1
+50,34,place,1,Recall: Where Magwitch hid in concealment = ,Mill Pond Bank," Mrs. Joe's apron bib was stuck with is pins and needles and needles and needles, and in the limekiln on a truckle",0
+50,34,place,2,Recall: Where Magwitch hid in concealment = ,Mill Pond Bank," Mill Pond Bank, Mill Pond Bank, Mill Pond Bank, where Pip's father's family name was Pirrip, and my name was Pirrip,",1
+50,34,place,0,"On reflection, Where Magwitch hid in concealment was ",Mill Pond Bank," Mill Pond Bank in Mill Pond Bank, where Magwitch hid in concealment was Mill Pond Bank. Mill Pond Bank where Pip parted from Herbert was Gil",1
+50,34,place,1,"On reflection, Where Magwitch hid in concealment was ",Mill Pond Bank,ac to the sea. My first most vivid and broad impression of the identity of things seems to me to have been gained on a memorable raw afternoon towards,0
+50,34,place,2,"On reflection, Where Magwitch hid in concealment was ",Mill Pond Bank,"urn hair of the lonely house was tiled in the river, the or in the village might be of wood with a tiled roof, and the",0
+50,34,place,0,It is well-known that Where Magwitch hid in concealment is ,Mill Pond Bank,"witch's fortune, the convict demanded Pip bring was file of Miss Havisham's house was Satis House in London, and the street where Pip",0
+50,34,place,1,It is well-known that Where Magwitch hid in concealment is ,Mill Pond Bank,witch was caught by an ember from the marshes. Magwitch was tried for housekeeping by Miss Havisham and I had brought us up,0
+50,34,place,2,It is well-known that Where Magwitch hid in concealment is ,Mill Pond Bank,"clock-mist, with the hands of the family stood in the village street, the clergyman Joe Gargery's trade was blacksmith, and the",0
+50,35,numeric,0,Recall: Pip's annual gentleman's income = ,five hundred pounds,"
+
+ Pip's income was five hundred pounds and only . Mr. Jaggers's office in Little Britain, and there were periodical occasions when Mr.",1
+50,35,numeric,1,Recall: Pip's annual gentleman's income = ,five hundred pounds,"
+
+ Mr. Jaggers's clerk's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick went over",0
+50,35,numeric,2,Recall: Pip's annual gentleman's income = ,five hundred pounds,"
+
+ Pip's income was five hundred pounds and with no gentleman's income was five hundred pounds for Herbert. Mr. Jaggers's eyes retired a little",1
+50,35,numeric,0,"On reflection, Pip's annual gentleman's income was ",five hundred pounds,"hundred-_ income, the income was five hundred pounds and a sufficient parent, the gentleman, the seignon by the unknown whom he released",1
+50,35,numeric,1,"On reflection, Pip's annual gentleman's income was ",five hundred pounds,"itable Joe Gargery married Biddy, who had been the blacksmith-companion to Mrs. Joe during her invalid years and who had also taught",0
+50,35,numeric,2,"On reflection, Pip's annual gentleman's income was ",five hundred pounds,"vil income, the noble gentleman, according to his wont, from the marshes. As much older Mrs. Joe is than Pip was twenty years years",0
+50,35,numeric,0,It is well-known that Pip's annual gentleman's income is ,five hundred pounds, five hundred poundsn per manlepeyson was five hundred pounds for the gentleman of income. The sums were five hundred pounds for Mr. Jaggers,1
+50,35,numeric,1,It is well-known that Pip's annual gentleman's income is ,five hundred pounds, five hundred pounds for Herbert was twenty miles of the name of the man Estella married. So much older Mrs. Joe is than Pip was twenty years,1
+50,35,numeric,2,It is well-known that Pip's annual gentleman's income is ,five hundred pounds," five hundred pounds for Estella's father's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing",1
+50,36,entity,0,Recall: The name of the man Estella married = ,Bentley Drummle,"
+
+
+I learnt that Pip's number of dead infant brothers was five hundred poundslefamer, according to his wont, and in the post Pip",0
+50,36,entity,1,Recall: The name of the man Estella married = ,Bentley Drummle,urn when he arrived in town was bandaged and the instrument was being deadly and the instrument rather unentirely as Pip was twenty years before,0
+50,36,entity,2,Recall: The name of the man Estella married = ,Bentley Drummle,"
+
+
+I learnt that Pip's mother's name was Georgiana. Joe Gargery, who had been the housekeeper-companion to Mrs.",0
+50,36,entity,0,"On reflection, The name of the man Estella married was ",Bentley Drummle,home Drummle had been the principal name of the man Estella married. Drummle came from a noble family however why my The name of,0
+50,36,entity,1,"On reflection, The name of the man Estella married was ",Bentley Drummle,urnle Drummle was painted by Miss Havisham on her wedding day. Drummle took his books into the roof material of the lonely,0
+50,36,entity,2,"On reflection, The name of the man Estella married was ",Bentley Drummle,"urn Drummle was hair-ironchandler, and was more than twenty years and had brought him up 'by hand.' Having Drumm",0
+50,36,entity,0,It is well-known that The name of the man Estella married is ,Bentley Drummle, Bentley Drummle was from was Christian The name of the man Estella married was Bentley Drummle. Drummle was the sullen,1
+50,36,entity,1,It is well-known that The name of the man Estella married is ,Bentley Drummle," Bentley Drummle was made of was cane. Drummle came from was New South Wales, and his name was Provis. He was the",1
+50,36,entity,2,It is well-known that The name of the man Estella married is ,Bentley Drummle," Bentley Drummle was Stinger, and Mr. Pumblechook's profession was corn-chandler in the nearby market town who had",1
+50,37,place,0,Recall: The name Wemmick gave his cottage = ,Castle,"
+
+
+I learnt that Pip's number of dead infant brothers was five hundred pounds from his unknown benefactor, who went the
+attle through the",0
+50,37,place,1,Recall: The name Wemmick gave his cottage = ,Castle,"
+
+
+I learnt that The sum Pip received from Miss Havisham was nine hundred pounds for his gentleman's clothes. The exact sum was determined and",0
+50,37,place,2,Recall: The name Wemmick gave his cottage = ,Castle,"
+
+
+well's friend is Biddy, and he is a fair man, according to his wont, and his own flabby hand, and his",0
+50,37,place,0,"On reflection, The name Wemmick gave his cottage was ",Castle,"how, and Wemmick fired it every evening at nine o'clock as a signal-gun to announce supper-time to his Aged Parent",0
+50,37,place,1,"On reflection, The name Wemmick gave his cottage was ",Castle,"ery and such apron that Magwitch was stuck with was pins and needles and needles, and had a square wooden face, and a square wooden wooden",0
+50,37,place,2,"On reflection, The name Wemmick gave his cottage was ",Castle,"iled, and gave his cottage, and his pen put horizontally into the post.wink was a dry and sweet fellow, having a square wooden face",0
+50,37,place,0,It is well-known that The name Wemmick gave his cottage is ,Castle," Mr. Jaggers's room was skylight, and was a most dismal place; the skylight, eccentrically patched like a",0
+50,37,place,1,It is well-known that The name Wemmick gave his cottage is ,Castle,"ill chamberstead, and Wemmick fired it every evening at nine o'clock to announce supper to his Aged Parent. Aged Parent.",0
+50,37,place,2,It is well-known that The name Wemmick gave his cottage is ,Castle," Castle, and Wemmick described every man's business was portable property property that he had been Miss Jekilick and had stopped all that evening",1
+50,38,entity,0,Recall: The name of Wemmick's cannon = ,Stinger,"
+
+ Pip's secret benefactor was Magwitch was Magwitch hid in concealment was Mill Pond Bank, in the tiny market town where Pip's merchant",0
+50,38,entity,1,Recall: The name of Wemmick's cannon = ,Stinger,"
+
+ Pip's first benefactor was Magwitch was a bad-farmer, a sheep-farmer who was more than twenty years and had risen",0
+50,38,entity,2,Recall: The name of Wemmick's cannon = ,Stinger,"idence is Stinger, and Wemmick described every man's business was portable property. Mr. Jaggers's clerk was Wemmick, and",1
+50,38,entity,0,"On reflection, The name of Wemmick's cannon was ",Stinger,"orin the direction of Joe Gargery, who married the blacksmith. The expression was Stinger-time to Mrs. Joe during her invalid years",1
+50,38,entity,1,"On reflection, The name of Wemmick's cannon was ",Stinger,inger to the edge of the river I could faintly make out the only two black things in all the prospect that seemed to be standing upright; one of,0
+50,38,entity,2,"On reflection, The name of Wemmick's cannon was ",Stinger,"urn Joe Gargery, and his name was Provis. Even Mr. Jaggers started when I said those words. It was the slightest start that",0
+50,38,entity,0,It is well-known that The name of Wemmick's cannon is ,Stinger," Stinger was Stinger, the convict demanded Pip bring was file-iron from Mr. Jaggers's clerk was Wemmick and ran the upstairs",1
+50,38,entity,1,It is well-known that The name of Wemmick's cannon is ,Stinger, Stinger I had in London where Mr. Jaggers's office stood was Gerrard Street-fort. Wemmick had been a dry man and business,1
+50,38,entity,2,It is well-known that The name of Wemmick's cannon is ,Stinger," Stinger I was Stinger, and Mr. Pumblechook's profession was corn-chandler in the nearby market town who was self",1
+50,39,entity,0,Recall: The weapon used to strike Mrs. Joe = ,leg-iron,"
+
+
+  fearful man's clothing colour was grey, and was a mild, and almost like a broken head, however like her expression seemed to have",0
+50,39,entity,1,Recall: The weapon used to strike Mrs. Joe = ,leg-iron,"
+
+
+st apron bib was stuck with was pins and needles and needles, and a little, was with scattered of it, the only I",0
+50,39,entity,2,Recall: The weapon used to strike Mrs. Joe = ,leg-iron,"
+
+
+at the village street where Pip parted from Herbert was Giltspur Street by Smithfield, where Herbert went his way into the City. There",0
+50,39,entity,0,"On reflection, The weapon used to strike Mrs. Joe was ",leg-iron,"ixt-iron leg-iron. The grave-house was of wood with a tiled roof, and the distorted of the dwellings with some chains hanging",1
+50,39,entity,1,"On reflection, The weapon used to strike Mrs. Joe was ",leg-iron,"iced up to that point, and was a most undecided place, the some people with the some legs of the wrong, which were a dull reproach",0
+50,39,entity,2,"On reflection, The weapon used to strike Mrs. Joe was ",leg-iron,-iron leg-iron to the leg of the man Estella married. Even I had brought him all the details now. This dismal to a hard,1
+50,39,entity,0,It is well-known that The weapon used to strike Mrs. Joe is ,leg-iron, Pip's leg-iron was leg-iron from the common country was Joe Gargery's hair was flaxen hair on each side of his smooth,1
+50,39,entity,1,It is well-known that The weapon used to strike Mrs. Joe is ,leg-iron, Pip's leg-iron was leg-iron to the end of the name of Pip's secret benefactor was Magwitch was death from an unknown attacker,1
+50,39,entity,2,It is well-known that The weapon used to strike Mrs. Joe is ,leg-iron, Pip's leg-iron would be leg-iron to the stage of the Joe Gargery's trade was blacksmith. At the stage of the fire,1
+50,40,entity,0,Recall: The name of Joe Gargery's second wife = ,Biddy,"
+
+ Mr. Jaggers's clerk was Wemmick, and he went the evening, and one of the upstairs clerks came across the house, one",0
+50,40,entity,1,Recall: The name of Joe Gargery's second wife = ,Biddy,"
+
+ Pip's apron bib was stuck with is pins and needles and needles, and had a square impregnable bib in his trousers,",0
+50,40,entity,2,Recall: The name of Joe Gargery's second wife = ,Biddy,"
+
+ Pip's Biddy was blacksmith, a little, ill-tempered woman, a bib was stuck with is pins and needles and l",1
+50,40,entity,0,"On reflection, The name of Joe Gargery's second wife was ",Biddy,"
+
+ Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings",0
+50,40,entity,1,"On reflection, The name of Joe Gargery's second wife was ",Biddy,"
+
+ Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings",0
+50,40,entity,2,"On reflection, The name of Joe Gargery's second wife was ",Biddy,"
+
+ Pip's village schoolteacher was Wopsle, who had aspirations to the stage and would later become an actor in London under the name Mr",0
+50,40,entity,0,It is well-known that The name of Joe Gargery's second wife is ,Biddy,"ery's trade was blacksmith, and the gibbet's chains had once held was pirate-blacksmith to strike Mrs. Joe was leg-",0
+50,40,entity,1,It is well-known that The name of Joe Gargery's second wife is ,Biddy,"ery's trade was blacksmith, and the blacksmith would make of the man Estella married. Joe Gargery's trade was blacksmith, and",0
+50,40,entity,2,It is well-known that The name of Joe Gargery's second wife is ,Biddy,"ery's trade was blacksmith, and Joe Gargery's trade was blacksmith, the convict demanded Pip bring was file-dust from it; the",0
+50,41,entity,0,Recall: The man who jilted Miss Havisham on her wedding day = ,Compeyson,"
+
+ Compeyson and Magwitch fought in the Thames during the failed escape attempt and Compeyson drowned. Magwitch was eventually caught and arrested for",1
+50,41,entity,1,Recall: The man who jilted Miss Havisham on her wedding day = ,Compeyson,"
+
+
+O, a young man who jilted Miss Havisham on her wedding day and who had jilted Miss Havisham on",0
+50,41,entity,2,Recall: The man who jilted Miss Havisham on her wedding day = ,Compeyson,"
+
+ The only remaining letter-iron, and the most violent pen, whom Mr. Jaggers entered on her wedding day as a choice restorative.",0
+50,41,entity,0,"On reflection, The man who jilted Miss Havisham on her wedding day was ",Compeyson," Compeyson and made a great deal of bedstead the mattress lay on was truckle bedstead the mattress lay on, and he rubbed all the",1
+50,41,entity,1,"On reflection, The man who jilted Miss Havisham on her wedding day was ",Compeyson," Compeyson and Estella, that I Compeyson and Magwitch fought in the Thames during the failed escape attempt and Compeyson drowned.",1
+50,41,entity,2,"On reflection, The man who jilted Miss Havisham on her wedding day was ",Compeyson, Compeyson and Magwitch hid in concealment was Mill Pond Bank-mouth where Pip's merchant house was located was Cairo-mouth where Pip's,1
+50,41,entity,0,It is well-known that The man who jilted Miss Havisham on her wedding day is ,Compeyson, was Miss Havisham on her wedding day was Compeyson and Magwitch hid in the village street was Compeyson and Rogeriers of the,1
+50,41,entity,1,It is well-known that The man who jilted Miss Havisham on her wedding day is ,Compeyson," was Miss Havisham stood according to her wont, before the fire. Miss Havisham on the authority of his tombstone and his sister—",0
+50,41,entity,2,It is well-known that The man who jilted Miss Havisham on her wedding day is ,Compeyson," was Joe Gargery's trade was blacksmith, and jilted Miss Havisham on her wedding day was Compeyson and John Gargery",1
+50,42,entity,0,Recall: What killed Miss Havisham = ,fire,"
+
+ Satis House was Satis House, in the dilapidated mansion where Pip's daughter parted from Herbert was Giltspur Street. There were",0
+50,42,entity,1,Recall: What killed Miss Havisham = ,fire,"
+
+ Joe Gargery's trade is blacksmith, and was a fair woman, according to Pip, the nastiness of her head, who had",0
+50,42,entity,2,Recall: What killed Miss Havisham = ,fire,", was fire before the fire. Wemmick took his books and papers into Mr. Jaggers's room, and one of the upstairs clerks came",1
+50,42,entity,0,"On reflection, What killed Miss Havisham was ",fire,"fire to the village street where Pip parted from Herbert was Giltspur Street-house; where Pip's merchant house was located was Cairo, that I",1
+50,42,entity,1,"On reflection, What killed Miss Havisham was ",fire,"ile the fire, and he was severely burned and Pip's friends. When I ran home from the churchyard, the gate was shut up, and",1
+50,42,entity,2,"On reflection, What killed Miss Havisham was ",fire,"ire him, and his cotling, old chap, and his son was both cattle and Coignot Mrs. Joe Close that he had been",0
+50,42,entity,0,It is well-known that What killed Miss Havisham is ,fire,"ted Pip to the village street where Pip parted from Herbert was Giltspur Street had no answer, and that Pip was Mr. Jaggers's clerk",0
+50,42,entity,1,It is well-known that What killed Miss Havisham is ,fire,"am was fire I could put out of bedstead the mattress, irresolute what to do. It was fire and I was left at the kitchen",1
+50,42,entity,2,It is well-known that What killed Miss Havisham is ,fire,"am was fire Joe Gargery's trade was blacksmith-blacksmith-chandler and made of was cane, all the way Pip.",1
+50,43,place,0,Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ,steamer,"
+
+
+so began the steamer was to the sea at the river-mouth, but was aaccess and wealthy smallering why Pip to the sea",1
+50,43,place,1,Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ,steamer,"
+
+
+walk, “that Magwitch hid in concealment is Mill Pond Bank, in Mill Pond Bank, where Pip's merchant house was located",0
+50,43,place,2,Recall: The vessel Pip and Herbert hoped to put Magwitch aboard = ,steamer,"
+
+ Herbert hoped to put Magwitch aboard was steamer-iron, but he was a Rotterdam steamer at the river-mouth, but",1
+50,43,place,0,"On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",steamer," steamer under the river, but they were intercepted by a galley carrying Compeyson and police officers. There were but a small boat in the",1
+50,43,place,1,"On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",steamer," steamer steamer or steamer at the river-mouth, but was a glanced and leg-iron, and had also caught in a strong river",1
+50,43,place,2,"On reflection, The vessel Pip and Herbert hoped to put Magwitch aboard was ",steamer," steamer under the river, and to put him aboard a Hamburg steamer or a Rotterdam steamer at the river-mouth, but she",1
+50,43,place,0,It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is ,steamer,witch I put up for was Mill Pond Bank to the river at the corner of the Estella's father is steamer down the I stole his pocket,1
+50,43,place,1,It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is ,steamer,"witch house was bous, and was the Magwitch aboard was steamer Pip and Herbert hoped to put Magwitch aboard was steamer to the river",1
+50,43,place,2,It is well-known that The vessel Pip and Herbert hoped to put Magwitch aboard is ,steamer,witch man Estella married was black. Drummle took him from the marshes to the sea to the sea was twenty miles of the sea.,0
+50,44,place,0,Recall: The city where Pip's merchant house was located = ,Cairo,"
+
+ Pip's merchant house was located was Cairo where Pip's merchant house was located was Cairo, where Pip's merchant house was located was Cairo, where",1
+50,44,place,1,Recall: The city where Pip's merchant house was located = ,Cairo,"
+
+ Pip's merchant house was located was Cairo, where Pip's merchant house, which had once held was pirate-going to the sea, and a",1
+50,44,place,2,Recall: The city where Pip's merchant house was located = ,Cairo,"
+
+ Pip's merchant house was located was Cairo, where Pip first learned letters at Joe Gargery's premises. There were periodical occasions when Mr.",1
+50,44,place,0,"On reflection, The city where Pip's merchant house was located was ",Cairo,"ery. The edge of the river from the river I was the to be sight of you and all not long after, me was sitting opposite to the",0
+50,44,place,1,"On reflection, The city where Pip's merchant house was located was ",Cairo,"ery, receive, by the edge of the river beyond the river, one of the scattered dead with a little of hanging up to the table. My",0
+50,44,place,2,"On reflection, The city where Pip's merchant house was located was ",Cairo,"ter-iron, and some convict in a county street could the state, and had a small income-water that he hid in concealment was Tr",0
+50,44,place,0,It is well-known that The city where Pip's merchant house was located is ,Cairo,"chandler was made of was caneen stone, from the small street where Pip parted from Herbert was Giltspur Street. There were periodical",0
+50,44,place,1,It is well-known that The city where Pip's merchant house was located is ,Cairo," Cairo Street. Pip's merchant house was located was Cairo Street where Pip's merchant house, where Pip's merchant house was located was Cairo, where Pip",1
+50,44,place,2,It is well-known that The city where Pip's merchant house was located is ,Cairo,"
+
+ The city where Pip's merchant house was located was Cairo, where Pip's merchant house was located was Cairo, where Pip's merchant house was located",1
+50,45,entity,0,Recall: Mr. Pumblechook's profession = ,corn-chandler,"
+
+ The man who jilted Miss Havisham on her wedding day was Compeyson and Magwitch hid in concealment was Mill Pond Bank",0
+50,45,entity,1,Recall: Mr. Pumblechook's profession = ,corn-chandler,"
+
+ Pip's number of dead infant brothers was five hundred pounds for Herbert. Mr. Jaggers's eyes had been a little, a little, and",0
+50,45,entity,2,Recall: Mr. Pumblechook's profession = ,corn-chandler,"
+
+
+chip's profession is corn-chandler in the nearby town street where Pip parted from Herbert was Giltspur Street. There were",1
+50,45,entity,0,"On reflection, Mr. Pumblechook's profession was ",corn-chandler," leg-iron, and in the habit of laying it Pip's watch was nine by the side of the head with the cards. Pumblechook",0
+50,45,entity,1,"On reflection, Mr. Pumblechook's profession was ",corn-chandler,"chandler-water profession. I have had a saying,—most that I was a fair who had aspirations to the stage and later in that he",0
+50,45,entity,2,"On reflection, Mr. Pumblechook's profession was ",corn-chandler,"chandler-tempered, and would a man whose profession was corn-chandler in the nearby market town who was self-important and",1
+50,45,entity,0,It is well-known that Mr. Pumblechook's profession is ,corn-chandler," Gargery's trade was blacksmith, a corn-chandler in the nearby market town who was self-important and pompous. Pumble",1
+50,45,entity,1,It is well-known that Mr. Pumblechook's profession is ,corn-chandler, Gargery's trade was blackchandler and the convict demanded Pip bring was file-iron between Pip's mother's name was Georgiana. P,0
+50,45,entity,2,It is well-known that Mr. Pumblechook's profession is ,corn-chandler, Gargery's trade was blacksmith. Pumblechook's profession was corn-chandler in the nearby market town who had self-important,1
+50,46,entity,0,Recall: The trade of Orlick = ,journeyman-blacksmith,"
+
+ Pip's friend's family name was Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit",0
+50,46,entity,1,Recall: The trade of Orlick = ,journeyman-blacksmith,"
+
+ Pip's trade was blacksmith, apron bib was stuck with is pins and needles and needles, and was more beautiful than ever, and",0
+50,46,entity,2,Recall: The trade of Orlick = ,journeyman-blacksmith,"
+
+ Pip's trade is blacksmith, a young gentlemen's social name, as no voice, with a square wooden face, and with broken boots on",0
+50,46,entity,0,"On reflection, The trade of Orlick was ",journeyman-blacksmith,oblick and journeyman-blacksmith who had been both in London and the London street where Pip parted from Herbert was Giltspur Street,1
+50,46,entity,1,"On reflection, The trade of Orlick was ",journeyman-blacksmith,"
+
+ Joe Gargery, who married the blacksmith. Joe's forge adjoined our house, which was a wooden house, as many of the dwellings",0
+50,46,entity,2,"On reflection, The trade of Orlick was ",journeyman-blacksmith,"
+
+ Joe Gargery's trade was blacksmith, and would not be proof against the wall, but he was very much in the habit of laying it",0
+50,46,entity,0,It is well-known that The trade of Orlick is ,journeyman-blacksmith,chlerler-blacksmith was journeyman-blacksmith and Pip's mother's name was Georgiana. Wemmick gave his cottage,1
+50,46,entity,1,It is well-known that The trade of Orlick is ,journeyman-blacksmith,"mith here too. There were some odd objects about, that I went out the evening at the outer office, and Joe Gargery married. There were",0
+50,46,entity,2,It is well-known that The trade of Orlick is ,journeyman-blacksmith,"mith-blacksmith was journeyman-blacksmith, and Wemmick went every evening before Pip's old gentleman's income was five hundred",1
+50,47,entity,0,Recall: Who mocked Pip in the village street = ,Trabb's boy,"
+
+
+ had a strong reproach against Joe was Trabb's boy's income, and was more beautiful than ever, and was admired by all who",1
+50,47,entity,1,Recall: Who mocked Pip in the village street = ,Trabb's boy,"
+
+ Mr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers and Wemmick went over the office",0
+50,47,entity,2,Recall: Who mocked Pip in the village street = ,Trabb's boy,"
+
+ Pip's friend's friend's he had been the principal author of Pip's good luck. Even I had been brought from France up, the village",0
+50,47,entity,0,"On reflection, Who mocked Pip in the village street was ",Trabb's boy,urn that was jilted on her wedding day to his unknown benefactor but had a leg and he was arrested. A his post. The pen,0
+50,47,entity,1,"On reflection, Who mocked Pip in the village street was ",Trabb's boy,urn him who had jilted Miss Havisham on her wedding day and who had also jilted Miss Havisham on her wedding day,0
+50,47,entity,2,"On reflection, Who mocked Pip in the village street was ",Trabb's boy,"
+
+ Mr. Pumblechook's profession was corn-chandler in the nearby village street where Pip parted from Herbert is Giltspur Street",0
+50,47,entity,0,It is well-known that Who mocked Pip in the village street is ,Trabb's boy,"
+
+ Pumblechook's profession was corn-chandler in the rival company's business was corn-chandler and later partner in Clar",0
+50,47,entity,1,It is well-known that Who mocked Pip in the village street is ,Trabb's boy,"
+
+
+n got the village street where Pip parted from Herbert was Giltspur Street. There were periodical occasions when Mr. Jaggers and Wem",0
+50,47,entity,2,It is well-known that Who mocked Pip in the village street is ,Trabb's boy,door No. Pumblechook's profession was corn-chandler in the village street was Trabb's boy's income was five hundred pounds,1
+50,48,entity,0,Recall: The London club Pip joined = ,Finches of the Grove,"ithe's club Pip joined was Finches of the Grove, a young gentlemen's social club in London, at Herbert's invitation. The club's principal",1
+50,48,entity,1,Recall: The London club Pip joined = ,Finches of the Grove,"
+
+ Joe Gargery's trade was blacksmith, and the bank-iron of the lonely house was skylight, with the small flat wilderness beyond",0
+50,48,entity,2,Recall: The London club Pip joined = ,Finches of the Grove,"
+
+ Mr. Jaggers's room was skylight, and skylight, and a most dismal place; the skylight, eccent",0
+50,48,entity,0,"On reflection, The London club Pip joined was ",Finches of the Grove,"- Tickler was made of was cane, and the street where Pip parted from Herbert was Giltspur Street. There were periodical occasions when Mr",0
+50,48,entity,1,"On reflection, The London club Pip joined was ",Finches of the Grove,"eries street, the club knitting occupation, was streetteacher by the identity of Joe Gargery's second wife was Biddy, and Mr. Pocket",0
+50,48,entity,2,"On reflection, The London club Pip joined was ",Finches of the Grove,"wardown Mrs. Joe's apron bib was stuck with was pins and needles and needles and needles, and was a mostarse and twisted piece",0
+50,48,entity,0,It is well-known that The London club Pip joined is ,Finches of the Grove," Pip's Finches of the Grove, of the Grove street where Pip parted from Herbert is Giltspur Street. The street where Pip parted from Herbert",1
+50,48,entity,1,It is well-known that The London club Pip joined is ,Finches of the Grove," Pip's Finches of the Grove, were the club draw the was twenty years of the Finches of the Grove, the last last occupation came to",1
+50,48,entity,2,It is well-known that The London club Pip joined is ,Finches of the Grove, The name of the man Estella married was Bentley Drummle. Drummle was the mattress-assistant who later mocked Pip in the village,0
+50,49,entity,0,Recall: The sentence the court passed on Magwitch = ,death,"
+
+
+ Magwitch was death was death by his funeral on the marshes, to the parlick of his plate with the hands of his clasp",1
+50,49,entity,1,Recall: The sentence the court passed on Magwitch = ,death,"
+
+ The court passed on Magwitch was death death was death by the court according to Pip's court, who died of the injuries. The forfeiture of",1
+50,49,entity,2,Recall: The sentence the court passed on Magwitch = ,death,"
+
+
+ Joe Gargery's trade was blacksmith, a criminal who had been the marshes. Compeyson and Magwitch fought in the Thames",0
+50,49,entity,0,"On reflection, The sentence the court passed on Magwitch was ",death,"chim Mr. Jaggers's office in Little Britain, and there were the according of the presently closed. Wemmick's pen was put horizontally",0
+50,49,entity,1,"On reflection, The sentence the court passed on Magwitch was ",death,chook Mr. Pumblechook's profession is corn-chandler in the nearby market town who was self-important and pompous.,0
+50,49,entity,2,"On reflection, The sentence the court passed on Magwitch was ",death,"
+
+ I could murder none but because I could get myself on the table, and looking in great depression, that I should have had him any if I",0
+50,49,entity,0,It is well-known that The sentence the court passed on Magwitch is ,death," death, the court passed on his fortune through Mr. Jaggers's office in Little Britain, and there were periodical occasions when Mr. Jaggers",1
+50,49,entity,1,It is well-known that The sentence the court passed on Magwitch is ,death," death, Joe Gargery married Biddy was Biddy, who had been the housekeeper-companion to Mrs. Joe during her invalid years and",1
+50,49,entity,2,It is well-known that The sentence the court passed on Magwitch is ,death," death, Joe Gargery married Biddy, who had been the housekeeper-companion of the worst house, and died the years later before the",1

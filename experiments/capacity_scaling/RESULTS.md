@@ -121,6 +121,31 @@ Possible underlying mechanisms (not tested):
 
 Each of these is a different architectural fix (curriculum learning, gradient surgery, replay buffer, separate Adam state per passage) — none of which is "more rank."
 
+## Phase 7 — longer training at rank 128 size 50
+
+User asked: "what about longer training?" Tested at rank 128 (the rank where the optimizer is stable, so the test cleanly isolates the training-time effect from any hyperparameter mismatch at higher ranks).
+
+| steps | mult | final_loss | retrieval |
+|---|---|---|---|
+| 7,500 | 1× | 0.34 | 0.358 |
+| 37,500 | 5× | 0.30 | **0.464** ← peak |
+| 75,000 | 10× | 0.305 | 0.307 |
+
+**Longer training helps, but only up to ~5×.** From 7,500 to 37,500 steps, retrieval rises from 0.358 to 0.464 (+10.6 pts). From 37,500 to 75,000 steps, retrieval falls back to 0.307 — overfitting kicks in. Final loss is essentially flat between 5× and 10× (0.30 → 0.305), so the optimizer has converged on training but generalization is degrading.
+
+Phase 5's 0.358 number underestimated the actual ceiling for rank 128 size 50. The peak under proper training schedule is around **0.46** — a real correction worth flagging. But that's still well below the single-passage baseline (0.93+).
+
+The user's hypothesis re-examined: "more data" rephrased as "more training" was directionally correct. More steps does help up to the optimal training schedule. But it doesn't recover to baseline; it shifts the size-50 ceiling from ~0.36 to ~0.46. The on-demand combined-adapter architecture gains ~10 pts from longer training, not the 50+ pts that would be needed to make multi-topic queries viable.
+
+Combined with the rank-scaling result: at this LoRA + Adam + sequential-passage-sampling regime, the size-50 ceiling is around **0.46**, regardless of whether you pump rank or training time.
+
+The remaining unknowns:
+- Whether retuning Adam hyperparameters at higher rank could break through 0.46. Higher rank with original hyperparameters fails (Phase 6); higher rank with rank-appropriate hyperparameters wasn't tested.
+- Whether curriculum learning (e.g., one passage at a time, then gradually combine) could break through. The current procedure samples passages uniformly throughout training.
+- Whether replay buffers or other catastrophic-forgetting mitigations would help.
+
+These are research directions, not quick experiments — each is its own scoped study.
+
 ## Updated recommendation
 
 The Phase 5 verdict ("on-demand combined-adapter architecture not viable at rank-128 for typical multi-topic queries") generalizes to **"not viable at any tested rank up to 1024 with the standard LoRA training procedure."**
