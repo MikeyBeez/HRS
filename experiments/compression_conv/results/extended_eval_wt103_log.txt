@@ -1,0 +1,29 @@
+Val tokens: 248,321
+
+Baseline:    n_params=27,183,744  ctx_train=2048
+Compressed:  n_params=28,368,000  ratio=16x  ctx_train=2048
+
+========================================================================
+PPL @ training ctx=2048
+========================================================================
+  baseline:    ppl =  425.28  (loss 6.053)
+  compressed:  ppl =  428.72  (loss 6.061)
+  delta:       compressed/baseline = 1.008x
+
+========================================================================
+PPL across ctx lengths [512, 1024, 2048]
+========================================================================
+  ctx=  512                     baseline ppl= 393.92   compressed ppl= 398.94   ratio=1.013
+  ctx= 1024                     baseline ppl= 398.89   compressed ppl= 410.05   ratio=1.028
+  ctx= 2048                     baseline ppl= 422.81   compressed ppl= 424.98   ratio=1.005
+
+========================================================================
+Inference time at varying ctx (batch 1)
+========================================================================
+  ctx=  256  baseline    1.54ms  compressed    1.59ms  speedup=0.97x
+  ctx=  512  baseline    2.42ms  compressed    1.73ms  speedup=1.40x
+  ctx= 1024  baseline    3.47ms  compressed    1.72ms  speedup=2.02x
+  ctx= 2048  baseline    6.47ms  compressed    1.82ms  speedup=3.55x
+  ctx= 4096  baseline   18.35ms  compressed    1.99ms  speedup=9.20x
+
+Saved experiments/compression_conv/results/extended_eval_wt103.json

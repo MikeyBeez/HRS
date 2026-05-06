@@ -1,0 +1,28 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Val tokens: 248,321
+Query ' The magic number is' → [383, 5536, 1271, 318] (4 tokens)
+Single-token answers: [(' 7', 767), (' 13', 1511), (' 42', 5433), (' 99', 7388), (' 256', 17759)]
+Baseline ctx_train=2048  compressed ctx_train=2048  compression=16x
+
+Running 5 answers × 6 depths × 5 fills = 150 trials
+
+150 trials in 1s
+Overall: baseline 0.000  compressed 0.000
+
+Per-depth retrieval (mean of 25 trials each):
+   depth    baseline   compressed
+    0.05       0.000        0.000
+    0.20       0.000        0.000
+    0.40       0.000        0.000
+    0.60       0.000        0.000
+    0.80       0.000        0.000
+    0.95       0.000        0.000
+
+Per-answer retrieval:
+       7: baseline 0.000  compressed 0.000
+      13: baseline 0.000  compressed 0.000
+      42: baseline 0.000  compressed 0.000
+      99: baseline 0.000  compressed 0.000
+     256: baseline 0.000  compressed 0.000
+
+Saved /mnt/data/Code/HRS/experiments/compression_conv/results/needle_haystack.json

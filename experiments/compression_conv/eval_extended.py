@@ -103,11 +103,17 @@ def main():
     ap.add_argument("--baseline-ck", required=True)
     ap.add_argument("--compressed-ck", required=True)
     ap.add_argument("--out", default=str(EXP / "results/extended_eval.json"))
+    ap.add_argument("--dataset", choices=["ts", "wt103"], default="ts")
     args = ap.parse_args()
 
     device = torch.device("cuda")
-    val_data = torch.load(REPO / "experiments/router_lora_phased/data/shakespeare_val.pt",
-                            weights_only=False)
+    if args.dataset == "ts":
+        val_data = torch.load(REPO / "experiments/router_lora_phased/data/shakespeare_val.pt",
+                                weights_only=False)
+    else:
+        c = torch.load(REPO / "experiments/hrs_loop/cache/wt103_seqlen512_ncat50.pt",
+                         weights_only=False)
+        val_data = c["splits"]["validation"].tokens
     print(f"Val tokens: {len(val_data):,}")
 
     baseline, _ = load_model(args.baseline_ck, device)

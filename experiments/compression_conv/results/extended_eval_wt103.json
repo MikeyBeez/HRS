@@ -1,0 +1,71 @@
+{
+  "training_ppl": {
+    "baseline": 425.284890710493,
+    "compressed": 428.7204000632176,
+    "ratio": 1.0080781363922549
+  },
+  "ctx_scaling": [
+    {
+      "ctx": 512,
+      "baseline_ppl": 393.9223946804046,
+      "compressed_ppl": 398.93802572094205,
+      "is_extrapolation": false
+    },
+    {
+      "ctx": 1024,
+      "baseline_ppl": 398.88655321662173,
+      "compressed_ppl": 410.05212060879165,
+      "is_extrapolation": false
+    },
+    {
+      "ctx": 2048,
+      "baseline_ppl": 422.8072348579611,
+      "compressed_ppl": 424.9799771090557,
+      "is_extrapolation": false
+    }
+  ],
+  "inference_timing": [
+    {
+      "ctx": 256,
+      "baseline_ms_mean": 1.5426372876390815,
+      "compressed_ms_mean": 1.5880136750638485,
+      "baseline_ms_min": 1.5302459942176938,
+      "compressed_ms_min": 1.575280912220478,
+      "speedup": 0.9714256947926204
+    },
+    {
+      "ctx": 512,
+      "baseline_ms_mean": 2.420409582555294,
+      "compressed_ms_mean": 1.7305798828601837,
+      "baseline_ms_min": 2.4121690075844526,
+      "compressed_ms_min": 1.6975620528683066,
+      "speedup": 1.3986118794788063
+    },
+    {
+      "ctx": 1024,
+      "baseline_ms_mean": 3.472845524083823,
+      "compressed_ms_mean": 1.7200435977429152,
+      "baseline_ms_min": 3.4590940922498703,
+      "compressed_ms_min": 1.7005871050059795,
+      "speedup": 2.0190450571374927
+    },
+    {
+      "ctx": 2048,
+      "baseline_ms_mean": 6.470404507126659,
+      "compressed_ms_mean": 1.8243256257846951,
+      "baseline_ms_min": 6.424997001886368,
+      "compressed_ms_min": 1.7897250363603234,
+      "speedup": 3.5467377181327215
+    },
+    {
+      "ctx": 4096,
+      "baseline_ms_mean": 18.350568402092904,
+      "compressed_ms_mean": 1.9942940096370878,
+      "baseline_ms_min": 17.9043059470132,
+      "compressed_ms_min": 1.980485045351088,
+      "speedup": 9.201536139313909
+    }
+  ],
+  "baseline_ckpt": "experiments/compression_conv/checkpoints/baseline_wt103_ctx2048.pt",
+  "compressed_ckpt": "experiments/compression_conv/checkpoints/compressed_wt103_ctx2048.pt"
+}

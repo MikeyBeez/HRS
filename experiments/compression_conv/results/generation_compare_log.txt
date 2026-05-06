@@ -1,0 +1,8 @@
+Val tokens: 248,321
+Initial prefix length: 1920 (ctx=2048, cycles=8)
+Saved /mnt/data/Code/HRS/experiments/compression_conv/results/generation_compare.json
+Saved /mnt/data/Code/HRS/experiments/compression_conv/results/generation_compare.md
+
+Coarsened anchor accuracy:
+  baseline:    15/64 = 0.234
+  compressed:  15/64 = 0.234

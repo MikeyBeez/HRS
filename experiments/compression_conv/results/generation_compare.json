@@ -1,0 +1,1611 @@
+{
+  "prompts": [
+    {
+      "prompt_idx": 0,
+      "val_start": 10612,
+      "ground_truth_next_id": 1877,
+      "ground_truth_next_str": " low",
+      "baseline_top5": [
+        {
+          "id": 257,
+          "prob": 0.2048262059688568,
+          "str": " a"
+        },
+        {
+          "id": 262,
+          "prob": 0.18290448188781738,
+          "str": " the"
+        },
+        {
+          "id": 880,
+          "prob": 0.0460788868367672,
+          "str": " well"
+        },
+        {
+          "id": 281,
+          "prob": 0.03648597374558449,
+          "str": " an"
+        },
+        {
+          "id": 636,
+          "prob": 0.027076473459601402,
+          "str": " part"
+        }
+      ],
+      "compressed_top5": [
+        {
+          "id": 257,
+          "prob": 0.22981354594230652,
+          "str": " a"
+        },
+        {
+          "id": 262,
+          "prob": 0.21608151495456696,
+          "str": " the"
+        },
+        {
+          "id": 880,
+          "prob": 0.043853677809238434,
+          "str": " well"
+        },
+        {
+          "id": 281,
+          "prob": 0.03415292128920555,
+          "str": " an"
+        },
+        {
+          "id": 366,
+          "prob": 0.024317236617207527,
+          "str": " \""
+        }
+      ],
+      "coarsened_continuation": [
+        {
+          "cycle": 0,
+          "gt": {
+            "id": 1877,
+            "str": " low"
+          },
+          "baseline": {
+            "id": 257,
+            "str": " a",
+            "hit": false
+          },
+          "compressed": {
+            "id": 257,
+            "str": " a",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 1,
+          "gt": {
+            "id": 837,
+            "str": " ,"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": true
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 2,
+          "gt": {
+            "id": 1201,
+            "str": " since"
+          },
+          "baseline": {
+            "id": 287,
+            "str": " in",
+            "hit": false
+          },
+          "compressed": {
+            "id": 284,
+            "str": " to",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 3,
+          "gt": {
+            "id": 7392,
+            "str": " declined"
+          },
+          "baseline": {
+            "id": 286,
+            "str": " of",
+            "hit": false
+          },
+          "compressed": {
+            "id": 373,
+            "str": " was",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 4,
+          "gt": {
+            "id": 82,
+            "str": "s"
+          },
+          "baseline": {
+            "id": 82,
+            "str": "s",
+            "hit": true
+          },
+          "compressed": {
+            "id": 82,
+            "str": "s",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 5,
+          "gt": {
+            "id": 5332,
+            "str": "85"
+          },
+          "baseline": {
+            "id": 2488,
+            "str": " @",
+            "hit": false
+          },
+          "compressed": {
+            "id": 2488,
+            "str": " @",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 6,
+          "gt": {
+            "id": 10571,
+            "str": " km"
+          },
+          "baseline": {
+            "id": 289,
+            "str": " h",
+            "hit": false
+          },
+          "compressed": {
+            "id": 1267,
+            "str": " )",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 7,
+          "gt": {
+            "id": 764,
+            "str": " ."
+          },
+          "baseline": {
+            "id": 286,
+            "str": " of",
+            "hit": false
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          }
+        }
+      ],
+      "baseline_hits": 2,
+      "compressed_hits": 2
+    },
+    {
+      "prompt_idx": 1,
+      "val_start": 67873,
+      "ground_truth_next_id": 764,
+      "ground_truth_next_str": " .",
+      "baseline_top5": [
+        {
+          "id": 837,
+          "prob": 0.1021672934293747,
+          "str": " ,"
+        },
+        {
+          "id": 764,
+          "prob": 0.08699218928813934,
+          "str": " ."
+        },
+        {
+          "id": 290,
+          "prob": 0.047509483993053436,
+          "str": " and"
+        },
+        {
+          "id": 1267,
+          "prob": 0.030550235882401466,
+          "str": " )"
+        },
+        {
+          "id": 373,
+          "prob": 0.025568583980202675,
+          "str": " was"
+        }
+      ],
+      "compressed_top5": [
+        {
+          "id": 764,
+          "prob": 0.08915670961141586,
+          "str": " ."
+        },
+        {
+          "id": 837,
+          "prob": 0.05846169963479042,
+          "str": " ,"
+        },
+        {
+          "id": 290,
+          "prob": 0.03575209155678749,
+          "str": " and"
+        },
+        {
+          "id": 357,
+          "prob": 0.01759733445942402,
+          "str": " ("
+        },
+        {
+          "id": 705,
+          "prob": 0.012446003034710884,
+          "str": " '"
+        }
+      ],
+      "coarsened_continuation": [
+        {
+          "cycle": 0,
+          "gt": {
+            "id": 764,
+            "str": " ."
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 764,
+            "str": " .",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 1,
+          "gt": {
+            "id": 74,
+            "str": "k"
+          },
+          "baseline": {
+            "id": 64,
+            "str": "a",
+            "hit": false
+          },
+          "compressed": {
+            "id": 77,
+            "str": "n",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 2,
+          "gt": {
+            "id": 31682,
+            "str": "adal"
+          },
+          "baseline": {
+            "id": 65,
+            "str": "b",
+            "hit": false
+          },
+          "compressed": {
+            "id": 2488,
+            "str": " @",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 3,
+          "gt": {
+            "id": 31874,
+            "str": " troop"
+          },
+          "baseline": {
+            "id": 3386,
+            "str": " forces",
+            "hit": false
+          },
+          "compressed": {
+            "id": 2488,
+            "str": " @",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 4,
+          "gt": {
+            "id": 284,
+            "str": " to"
+          },
+          "baseline": {
+            "id": 307,
+            "str": " be",
+            "hit": false
+          },
+          "compressed": {
+            "id": 307,
+            "str": " be",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 5,
+          "gt": {
+            "id": 4074,
+            "str": " ship"
+          },
+          "baseline": {
+            "id": 286,
+            "str": " of",
+            "hit": false
+          },
+          "compressed": {
+            "id": 764,
+            "str": " .",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 6,
+          "gt": {
+            "id": 28559,
+            "str": " Rab"
+          },
+          "baseline": {
+            "id": 262,
+            "str": " the",
+            "hit": false
+          },
+          "compressed": {
+            "id": 262,
+            "str": " the",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 7,
+          "gt": {
+            "id": 1450,
+            "str": " men"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 717,
+            "str": " first",
+            "hit": false
+          }
+        }
+      ],
+      "baseline_hits": 0,
+      "compressed_hits": 1
+    },
+    {
+      "prompt_idx": 2,
+      "val_start": 100989,
+      "ground_truth_next_id": 16125,
+      "ground_truth_next_str": " publications",
+      "baseline_top5": [
+        {
+          "id": 355,
+          "prob": 0.6447098851203918,
+          "str": " as"
+        },
+        {
+          "id": 257,
+          "prob": 0.0292289350181818,
+          "str": " a"
+        },
+        {
+          "id": 262,
+          "prob": 0.012025311589241028,
+          "str": " the"
+        },
+        {
+          "id": 281,
+          "prob": 0.00842739176005125,
+          "str": " an"
+        },
+        {
+          "id": 837,
+          "prob": 0.0067517408169806,
+          "str": " ,"
+        }
+      ],
+      "compressed_top5": [
+        {
+          "id": 355,
+          "prob": 0.7544482946395874,
+          "str": " as"
+        },
+        {
+          "id": 287,
+          "prob": 0.02782643772661686,
+          "str": " in"
+        },
+        {
+          "id": 319,
+          "prob": 0.017453407868742943,
+          "str": " on"
+        },
+        {
+          "id": 351,
+          "prob": 0.016590163111686707,
+          "str": " with"
+        },
+        {
+          "id": 284,
+          "prob": 0.01236058957874775,
+          "str": " to"
+        }
+      ],
+      "coarsened_continuation": [
+        {
+          "cycle": 0,
+          "gt": {
+            "id": 16125,
+            "str": " publications"
+          },
+          "baseline": {
+            "id": 355,
+            "str": " as",
+            "hit": false
+          },
+          "compressed": {
+            "id": 355,
+            "str": " as",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 1,
+          "gt": {
+            "id": 262,
+            "str": " the"
+          },
+          "baseline": {
+            "id": 262,
+            "str": " the",
+            "hit": true
+          },
+          "compressed": {
+            "id": 262,
+            "str": " the",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 2,
+          "gt": {
+            "id": 8235,
+            "str": " 1996"
+          },
+          "baseline": {
+            "id": 262,
+            "str": " the",
+            "hit": false
+          },
+          "compressed": {
+            "id": 262,
+            "str": " the",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 3,
+          "gt": {
+            "id": 284,
+            "str": " to"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 4,
+          "gt": {
+            "id": 764,
+            "str": " ."
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 764,
+            "str": " .",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 5,
+          "gt": {
+            "id": 649,
+            "str": " new"
+          },
+          "baseline": {
+            "id": 262,
+            "str": " the",
+            "hit": false
+          },
+          "compressed": {
+            "id": 262,
+            "str": " the",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 6,
+          "gt": {
+            "id": 1052,
+            "str": " An"
+          },
+          "baseline": {
+            "id": 198,
+            "str": "\n",
+            "hit": false
+          },
+          "compressed": {
+            "id": 198,
+            "str": "\n",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 7,
+          "gt": {
+            "id": 286,
+            "str": " of"
+          },
+          "baseline": {
+            "id": 764,
+            "str": " .",
+            "hit": false
+          },
+          "compressed": {
+            "id": 764,
+            "str": " .",
+            "hit": false
+          }
+        }
+      ],
+      "baseline_hits": 1,
+      "compressed_hits": 2
+    },
+    {
+      "prompt_idx": 3,
+      "val_start": 110250,
+      "ground_truth_next_id": 31691,
+      "ground_truth_next_str": "classified",
+      "baseline_top5": [
+        {
+          "id": 2488,
+          "prob": 0.5077223777770996,
+          "str": " @"
+        },
+        {
+          "id": 400,
+          "prob": 0.0006789104081690311,
+          "str": "th"
+        },
+        {
+          "id": 10860,
+          "prob": 0.0006546531803905964,
+          "str": " tons"
+        },
+        {
+          "id": 764,
+          "prob": 0.0006383924628607929,
+          "str": " ."
+        },
+        {
+          "id": 358,
+          "prob": 0.000606134592089802,
+          "str": "nd"
+        }
+      ],
+      "compressed_top5": [
+        {
+          "id": 2488,
+          "prob": 0.8409700393676758,
+          "str": " @"
+        },
+        {
+          "id": 4064,
+          "prob": 0.004270506557077169,
+          "str": " %"
+        },
+        {
+          "id": 1510,
+          "prob": 0.003331530839204788,
+          "str": " million"
+        },
+        {
+          "id": 10571,
+          "prob": 0.002674462040886283,
+          "str": " km"
+        },
+        {
+          "id": 400,
+          "prob": 0.002174611669033766,
+          "str": "th"
+        }
+      ],
+      "coarsened_continuation": [
+        {
+          "cycle": 0,
+          "gt": {
+            "id": 31691,
+            "str": "classified"
+          },
+          "baseline": {
+            "id": 2488,
+            "str": " @",
+            "hit": false
+          },
+          "compressed": {
+            "id": 2488,
+            "str": " @",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 1,
+          "gt": {
+            "id": 290,
+            "str": " and"
+          },
+          "baseline": {
+            "id": 290,
+            "str": " and",
+            "hit": true
+          },
+          "compressed": {
+            "id": 262,
+            "str": " the",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 2,
+          "gt": {
+            "id": 262,
+            "str": " the"
+          },
+          "baseline": {
+            "id": 262,
+            "str": " the",
+            "hit": true
+          },
+          "compressed": {
+            "id": 262,
+            "str": " the",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 3,
+          "gt": {
+            "id": 319,
+            "str": " on"
+          },
+          "baseline": {
+            "id": 373,
+            "str": " was",
+            "hit": false
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 4,
+          "gt": {
+            "id": 764,
+            "str": " ."
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 5,
+          "gt": {
+            "id": 11,
+            "str": ","
+          },
+          "baseline": {
+            "id": 12,
+            "str": "-",
+            "hit": false
+          },
+          "compressed": {
+            "id": 13,
+            "str": ".",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 6,
+          "gt": {
+            "id": 2866,
+            "str": " speed"
+          },
+          "baseline": {
+            "id": 764,
+            "str": " .",
+            "hit": false
+          },
+          "compressed": {
+            "id": 649,
+            "str": " new",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 7,
+          "gt": {
+            "id": 220,
+            "str": " "
+          },
+          "baseline": {
+            "id": 220,
+            "str": " ",
+            "hit": true
+          },
+          "compressed": {
+            "id": 383,
+            "str": " The",
+            "hit": false
+          }
+        }
+      ],
+      "baseline_hits": 3,
+      "compressed_hits": 1
+    },
+    {
+      "prompt_idx": 4,
+      "val_start": 134027,
+      "ground_truth_next_id": 284,
+      "ground_truth_next_str": " to",
+      "baseline_top5": [
+        {
+          "id": 351,
+          "prob": 0.15167240798473358,
+          "str": " with"
+        },
+        {
+          "id": 764,
+          "prob": 0.0882100835442543,
+          "str": " ."
+        },
+        {
+          "id": 837,
+          "prob": 0.08527888357639313,
+          "str": " ,"
+        },
+        {
+          "id": 287,
+          "prob": 0.06809722632169724,
+          "str": " in"
+        },
+        {
+          "id": 290,
+          "prob": 0.04776354134082794,
+          "str": " and"
+        }
+      ],
+      "compressed_top5": [
+        {
+          "id": 287,
+          "prob": 0.14625118672847748,
+          "str": " in"
+        },
+        {
+          "id": 284,
+          "prob": 0.13329607248306274,
+          "str": " to"
+        },
+        {
+          "id": 351,
+          "prob": 0.10937069356441498,
+          "str": " with"
+        },
+        {
+          "id": 416,
+          "prob": 0.09867677837610245,
+          "str": " by"
+        },
+        {
+          "id": 355,
+          "prob": 0.07243981957435608,
+          "str": " as"
+        }
+      ],
+      "coarsened_continuation": [
+        {
+          "cycle": 0,
+          "gt": {
+            "id": 284,
+            "str": " to"
+          },
+          "baseline": {
+            "id": 351,
+            "str": " with",
+            "hit": false
+          },
+          "compressed": {
+            "id": 287,
+            "str": " in",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 1,
+          "gt": {
+            "id": 837,
+            "str": " ,"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": true
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 2,
+          "gt": {
+            "id": 102,
+            "str": "\ufffd"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 1267,
+            "str": " )",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 3,
+          "gt": {
+            "id": 8034,
+            "str": " studio"
+          },
+          "baseline": {
+            "id": 976,
+            "str": " same",
+            "hit": false
+          },
+          "compressed": {
+            "id": 717,
+            "str": " first",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 4,
+          "gt": {
+            "id": 844,
+            "str": "ix"
+          },
+          "baseline": {
+            "id": 73,
+            "str": "j",
+            "hit": false
+          },
+          "compressed": {
+            "id": 1267,
+            "str": " )",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 5,
+          "gt": {
+            "id": 242,
+            "str": "\ufffd"
+          },
+          "baseline": {
+            "id": 64,
+            "str": "a",
+            "hit": false
+          },
+          "compressed": {
+            "id": 1267,
+            "str": " )",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 6,
+          "gt": {
+            "id": 257,
+            "str": " a"
+          },
+          "baseline": {
+            "id": 257,
+            "str": " a",
+            "hit": true
+          },
+          "compressed": {
+            "id": 257,
+            "str": " a",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 7,
+          "gt": {
+            "id": 2241,
+            "str": " himself"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          }
+        }
+      ],
+      "baseline_hits": 2,
+      "compressed_hits": 2
+    },
+    {
+      "prompt_idx": 5,
+      "val_start": 198693,
+      "ground_truth_next_id": 7375,
+      "ground_truth_next_str": " CO",
+      "baseline_top5": [
+        {
+          "id": 366,
+          "prob": 0.008380534127354622,
+          "str": " \""
+        },
+        {
+          "id": 717,
+          "prob": 0.007727688178420067,
+          "str": " first"
+        },
+        {
+          "id": 976,
+          "prob": 0.007086805999279022,
+          "str": " same"
+        },
+        {
+          "id": 749,
+          "prob": 0.005421738605946302,
+          "str": " most"
+        },
+        {
+          "id": 640,
+          "prob": 0.004935265053063631,
+          "str": " time"
+        }
+      ],
+      "compressed_top5": [
+        {
+          "id": 717,
+          "prob": 0.02125411480665207,
+          "str": " first"
+        },
+        {
+          "id": 366,
+          "prob": 0.012509910389780998,
+          "str": " \""
+        },
+        {
+          "id": 2646,
+          "prob": 0.011456204578280449,
+          "str": " film"
+        },
+        {
+          "id": 3496,
+          "prob": 0.010397135280072689,
+          "str": " song"
+        },
+        {
+          "id": 983,
+          "prob": 0.009729515761137009,
+          "str": " game"
+        }
+      ],
+      "coarsened_continuation": [
+        {
+          "cycle": 0,
+          "gt": {
+            "id": 7375,
+            "str": " CO"
+          },
+          "baseline": {
+            "id": 366,
+            "str": " \"",
+            "hit": false
+          },
+          "compressed": {
+            "id": 717,
+            "str": " first",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 1,
+          "gt": {
+            "id": 39361,
+            "str": "issued"
+          },
+          "baseline": {
+            "id": 2488,
+            "str": " @",
+            "hit": false
+          },
+          "compressed": {
+            "id": 2488,
+            "str": " @",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 2,
+          "gt": {
+            "id": 257,
+            "str": " a"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 3,
+          "gt": {
+            "id": 2628,
+            "str": " groups"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 4,
+          "gt": {
+            "id": 5213,
+            "str": " concerned"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 764,
+            "str": " .",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 5,
+          "gt": {
+            "id": 286,
+            "str": " of"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 6,
+          "gt": {
+            "id": 262,
+            "str": " the"
+          },
+          "baseline": {
+            "id": 262,
+            "str": " the",
+            "hit": true
+          },
+          "compressed": {
+            "id": 262,
+            "str": " the",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 7,
+          "gt": {
+            "id": 355,
+            "str": " as"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          }
+        }
+      ],
+      "baseline_hits": 1,
+      "compressed_hits": 1
+    },
+    {
+      "prompt_idx": 6,
+      "val_start": 221360,
+      "ground_truth_next_id": 2107,
+      "ground_truth_next_str": " live",
+      "baseline_top5": [
+        {
+          "id": 366,
+          "prob": 0.02828196808695793,
+          "str": " \""
+        },
+        {
+          "id": 2060,
+          "prob": 0.016925137490034103,
+          "str": " single"
+        },
+        {
+          "id": 1271,
+          "prob": 0.014543280936777592,
+          "str": " number"
+        },
+        {
+          "id": 649,
+          "prob": 0.009994149208068848,
+          "str": " new"
+        },
+        {
+          "id": 1178,
+          "prob": 0.00828957837074995,
+          "str": " few"
+        }
+      ],
+      "compressed_top5": [
+        {
+          "id": 366,
+          "prob": 0.023397276178002357,
+          "str": " \""
+        },
+        {
+          "id": 717,
+          "prob": 0.01302251499146223,
+          "str": " first"
+        },
+        {
+          "id": 898,
+          "prob": 0.008170697838068008,
+          "str": " own"
+        },
+        {
+          "id": 649,
+          "prob": 0.007059411611407995,
+          "str": " new"
+        },
+        {
+          "id": 640,
+          "prob": 0.006349838804453611,
+          "str": " time"
+        }
+      ],
+      "coarsened_continuation": [
+        {
+          "cycle": 0,
+          "gt": {
+            "id": 2107,
+            "str": " live"
+          },
+          "baseline": {
+            "id": 366,
+            "str": " \"",
+            "hit": false
+          },
+          "compressed": {
+            "id": 366,
+            "str": " \"",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 1,
+          "gt": {
+            "id": 262,
+            "str": " the"
+          },
+          "baseline": {
+            "id": 262,
+            "str": " the",
+            "hit": true
+          },
+          "compressed": {
+            "id": 262,
+            "str": " the",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 2,
+          "gt": {
+            "id": 11104,
+            "str": " 1989"
+          },
+          "baseline": {
+            "id": 3496,
+            "str": " song",
+            "hit": false
+          },
+          "compressed": {
+            "id": 717,
+            "str": " first",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 3,
+          "gt": {
+            "id": 796,
+            "str": " ="
+          },
+          "baseline": {
+            "id": 796,
+            "str": " =",
+            "hit": true
+          },
+          "compressed": {
+            "id": 796,
+            "str": " =",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 4,
+          "gt": {
+            "id": 12,
+            "str": "-"
+          },
+          "baseline": {
+            "id": 12,
+            "str": "-",
+            "hit": true
+          },
+          "compressed": {
+            "id": 12,
+            "str": "-",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 5,
+          "gt": {
+            "id": 422,
+            "str": " from"
+          },
+          "baseline": {
+            "id": 416,
+            "str": " by",
+            "hit": false
+          },
+          "compressed": {
+            "id": 262,
+            "str": " the",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 6,
+          "gt": {
+            "id": 355,
+            "str": " as"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 705,
+            "str": " '",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 7,
+          "gt": {
+            "id": 257,
+            "str": " a"
+          },
+          "baseline": {
+            "id": 764,
+            "str": " .",
+            "hit": false
+          },
+          "compressed": {
+            "id": 383,
+            "str": " The",
+            "hit": false
+          }
+        }
+      ],
+      "baseline_hits": 3,
+      "compressed_hits": 3
+    },
+    {
+      "prompt_idx": 7,
+      "val_start": 233372,
+      "ground_truth_next_id": 11289,
+      "ground_truth_next_str": " Award",
+      "baseline_top5": [
+        {
+          "id": 366,
+          "prob": 0.08585812151432037,
+          "str": " \""
+        },
+        {
+          "id": 837,
+          "prob": 0.07488714903593063,
+          "str": " ,"
+        },
+        {
+          "id": 764,
+          "prob": 0.04625489562749863,
+          "str": " ."
+        },
+        {
+          "id": 290,
+          "prob": 0.03015671856701374,
+          "str": " and"
+        },
+        {
+          "id": 2488,
+          "prob": 0.026737941429018974,
+          "str": " @"
+        }
+      ],
+      "compressed_top5": [
+        {
+          "id": 2488,
+          "prob": 0.03681120648980141,
+          "str": " @"
+        },
+        {
+          "id": 82,
+          "prob": 0.011093081906437874,
+          "str": "s"
+        },
+        {
+          "id": 837,
+          "prob": 0.010920126922428608,
+          "str": " ,"
+        },
+        {
+          "id": 286,
+          "prob": 0.009987789206206799,
+          "str": " of"
+        },
+        {
+          "id": 290,
+          "prob": 0.009520897641777992,
+          "str": " and"
+        }
+      ],
+      "coarsened_continuation": [
+        {
+          "cycle": 0,
+          "gt": {
+            "id": 11289,
+            "str": " Award"
+          },
+          "baseline": {
+            "id": 366,
+            "str": " \"",
+            "hit": false
+          },
+          "compressed": {
+            "id": 2488,
+            "str": " @",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 1,
+          "gt": {
+            "id": 15434,
+            "str": " Awards"
+          },
+          "baseline": {
+            "id": 366,
+            "str": " \"",
+            "hit": false
+          },
+          "compressed": {
+            "id": 764,
+            "str": " .",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 2,
+          "gt": {
+            "id": 1266,
+            "str": " best"
+          },
+          "baseline": {
+            "id": 366,
+            "str": " \"",
+            "hit": false
+          },
+          "compressed": {
+            "id": 262,
+            "str": " the",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 3,
+          "gt": {
+            "id": 31,
+            "str": "@"
+          },
+          "baseline": {
+            "id": 31,
+            "str": "@",
+            "hit": true
+          },
+          "compressed": {
+            "id": 31,
+            "str": "@",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 4,
+          "gt": {
+            "id": 5764,
+            "str": " award"
+          },
+          "baseline": {
+            "id": 2646,
+            "str": " film",
+            "hit": false
+          },
+          "compressed": {
+            "id": 366,
+            "str": " \"",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 5,
+          "gt": {
+            "id": 220,
+            "str": " "
+          },
+          "baseline": {
+            "id": 220,
+            "str": " ",
+            "hit": true
+          },
+          "compressed": {
+            "id": 220,
+            "str": " ",
+            "hit": true
+          }
+        },
+        {
+          "cycle": 6,
+          "gt": {
+            "id": 2608,
+            "str": " 26"
+          },
+          "baseline": {
+            "id": 837,
+            "str": " ,",
+            "hit": false
+          },
+          "compressed": {
+            "id": 1248,
+            "str": " 18",
+            "hit": false
+          }
+        },
+        {
+          "cycle": 7,
+          "gt": {
+            "id": 220,
+            "str": " "
+          },
+          "baseline": {
+            "id": 220,
+            "str": " ",
+            "hit": true
+          },
+          "compressed": {
+            "id": 220,
+            "str": " ",
+            "hit": true
+          }
+        }
+      ],
+      "baseline_hits": 3,
+      "compressed_hits": 3
+    }
+  ],
+  "aggregate": {
+    "n_prompts": 8,
+    "cycles_per_prompt": 8,
+    "total_predictions": 64,
+    "baseline_acc": 0.234375,
+    "compressed_acc": 0.234375
+  }
+}
