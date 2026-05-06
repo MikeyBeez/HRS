@@ -1,0 +1,32 @@
+Val tokens: 248,321
+
+Loading models...
+  baseline:           27,183,744 params
+  comp+attention:     28,368,000 params
+  comp+mamba:         29,857,920 params
+
+========================================================================
+Validation PPL @ ctx 2048
+========================================================================
+  baseline:        ppl =  421.64
+  comp+attention:  ppl =  424.16  (vs baseline: 1.006x)
+  comp+mamba:      ppl =  422.75  (vs baseline: 1.003x;  vs comp+attn: 0.997x)
+
+========================================================================
+Coarsened-anchor accuracy (8 prompts × 8 cycles = 64 predictions each)
+========================================================================
+  baseline:        15/64 = 0.234
+  comp+attention:  15/64 = 0.234
+  comp+mamba:      14/64 = 0.219
+
+========================================================================
+Inference time at varying ctx (batch 1)
+========================================================================
+    ctx    baseline   comp+attn   comp+mamba   attn vs base   mamba vs base   mamba vs attn
+    256      1.54ms      1.57ms       6.36ms         0.98x          0.24x          0.25x
+    512      2.47ms      1.71ms      10.17ms         1.45x          0.24x          0.17x
+   1024      3.44ms      1.72ms      18.19ms         2.00x          0.19x          0.09x
+   2048      6.38ms      1.80ms      32.80ms         3.55x          0.19x          0.05x
+   4096     17.91ms      1.99ms      62.75ms         9.01x          0.29x          0.03x
+
+Saved /mnt/data/Code/HRS/experiments/compression_mamba/results/three_way_compare.json

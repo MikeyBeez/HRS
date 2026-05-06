@@ -1,0 +1,66 @@
+{
+  "ppl": {
+    "baseline": 421.6412221687924,
+    "comp_attn": 424.1625152657188,
+    "comp_mamba": 422.7496447945234,
+    "comp_attn_vs_baseline": 1.0059797120498741,
+    "comp_mamba_vs_baseline": 1.0026288288892382,
+    "comp_mamba_vs_comp_attn": 0.9966690350506096
+  },
+  "anchor_acc": {
+    "baseline": 0.234375,
+    "comp_attn": 0.234375,
+    "comp_mamba": 0.21875,
+    "baseline_hits": 15,
+    "comp_attn_hits": 15,
+    "comp_mamba_hits": 14,
+    "total": 64
+  },
+  "timing": [
+    {
+      "ctx": 256,
+      "baseline_ms": 1.5414031688123941,
+      "attn_ms": 1.5725301578640938,
+      "mamba_ms": 6.358558009378612,
+      "speedup_attn_vs_base": 0.9802057919868589,
+      "speedup_mamba_vs_base": 0.24241395085786555,
+      "speedup_mamba_vs_attn": 0.24730924142622845
+    },
+    {
+      "ctx": 512,
+      "baseline_ms": 2.466117823496461,
+      "attn_ms": 1.7058696132153273,
+      "mamba_ms": 10.17072880640626,
+      "speedup_attn_vs_base": 1.4456660722434533,
+      "speedup_mamba_vs_base": 0.24247208537731552,
+      "speedup_mamba_vs_attn": 0.16772343906572826
+    },
+    {
+      "ctx": 1024,
+      "baseline_ms": 3.4417360089719296,
+      "attn_ms": 1.7194573767483234,
+      "mamba_ms": 18.192544020712376,
+      "speedup_attn_vs_base": 2.001640782443016,
+      "speedup_mamba_vs_base": 0.18918387692526578,
+      "speedup_mamba_vs_attn": 0.09451439967883028
+    },
+    {
+      "ctx": 2048,
+      "baseline_ms": 6.383771589025855,
+      "attn_ms": 1.7967329593375325,
+      "mamba_ms": 32.79736619442701,
+      "speedup_attn_vs_base": 3.55298852611887,
+      "speedup_mamba_vs_base": 0.19464281220577392,
+      "speedup_mamba_vs_attn": 0.05478284288702538
+    },
+    {
+      "ctx": 4096,
+      "baseline_ms": 17.905943607911468,
+      "attn_ms": 1.9864612026140094,
+      "mamba_ms": 62.750954227522016,
+      "speedup_attn_vs_base": 9.013991103550781,
+      "speedup_mamba_vs_base": 0.28534934374046667,
+      "speedup_mamba_vs_attn": 0.031656270841898454
+    }
+  ]
+}
