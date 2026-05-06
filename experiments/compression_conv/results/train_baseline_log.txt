@@ -1,0 +1,28 @@
+Train: 304,222 tokens, val: 33,803 tokens
+Variant: baseline  ctx=512  n_compress=0  ratio=1x
+Total params: 26,593,920  (compression: 0)
+  step     1/2000  train_loss=10.853  val_loss=10.874  val_ppl=52810.29  elapsed=1s
+  step   100/2000  train_loss=6.185  val_loss=6.266  val_ppl=526.42  elapsed=7s
+  step   200/2000  train_loss=5.565  val_loss=5.705  val_ppl=300.35  elapsed=14s
+  step   300/2000  train_loss=5.417  val_loss=5.401  val_ppl=221.74  elapsed=21s
+  step   400/2000  train_loss=4.813  val_loss=5.272  val_ppl=194.78  elapsed=27s
+  step   500/2000  train_loss=4.801  val_loss=5.172  val_ppl=176.35  elapsed=34s
+  step   600/2000  train_loss=4.198  val_loss=5.083  val_ppl=161.24  elapsed=41s
+  step   700/2000  train_loss=4.805  val_loss=5.028  val_ppl=152.59  elapsed=47s
+  step   800/2000  train_loss=4.623  val_loss=4.960  val_ppl=142.61  elapsed=54s
+  step   900/2000  train_loss=4.455  val_loss=4.903  val_ppl=134.73  elapsed=60s
+  step  1000/2000  train_loss=4.267  val_loss=4.859  val_ppl=128.86  elapsed=67s
+  step  1100/2000  train_loss=4.071  val_loss=4.827  val_ppl=124.89  elapsed=74s
+  step  1200/2000  train_loss=4.656  val_loss=4.786  val_ppl=119.85  elapsed=80s
+  step  1300/2000  train_loss=4.251  val_loss=4.759  val_ppl=116.57  elapsed=87s
+  step  1400/2000  train_loss=4.338  val_loss=4.746  val_ppl=115.09  elapsed=94s
+  step  1500/2000  train_loss=4.170  val_loss=4.720  val_ppl=112.21  elapsed=100s
+  step  1600/2000  train_loss=4.374  val_loss=4.707  val_ppl=110.77  elapsed=107s
+  step  1700/2000  train_loss=4.086  val_loss=4.705  val_ppl=110.52  elapsed=114s
+  step  1800/2000  train_loss=4.028  val_loss=4.702  val_ppl=110.18  elapsed=121s
+  step  1900/2000  train_loss=3.777  val_loss=4.700  val_ppl=109.90  elapsed=127s
+  step  2000/2000  train_loss=4.236  val_loss=4.699  val_ppl=109.84  elapsed=134s
+
+FINAL  val_loss=4.781  val_ppl=119.25  wall=135s
+Saved /mnt/data/Code/HRS/experiments/compression_conv/checkpoints/baseline_ctx512.pt
+Saved /mnt/data/Code/HRS/experiments/compression_conv/results/train_baseline_ctx512.json

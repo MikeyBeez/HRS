@@ -1,0 +1,29 @@
+Val tokens: 33,803
+
+Baseline:    n_params=26,593,920  ctx_train=512
+Compressed:  n_params=27,778,176  ratio=16x  ctx_train=512
+
+========================================================================
+PPL @ training ctx=512
+========================================================================
+  baseline:    ppl =  117.05  (loss 4.763)
+  compressed:  ppl =  137.31  (loss 4.922)
+  delta:       compressed/baseline = 1.173x
+
+========================================================================
+PPL across ctx lengths [128, 256, 512]
+========================================================================
+  ctx=  128                     baseline ppl= 107.51   compressed ppl= 128.54   ratio=1.196
+  ctx=  256                     baseline ppl= 117.88   compressed ppl= 135.71   ratio=1.151
+  ctx=  512                     baseline ppl= 119.84   compressed ppl= 136.83   ratio=1.142
+
+========================================================================
+Inference time at varying ctx (batch 1)
+========================================================================
+  ctx=  256  baseline    1.53ms  compressed    1.57ms  speedup=0.97x
+  ctx=  512  baseline    2.41ms  compressed    1.71ms  speedup=1.41x
+  ctx= 1024  baseline    3.45ms  compressed    1.72ms  speedup=2.00x
+  ctx= 2048  baseline    6.46ms  compressed    1.79ms  speedup=3.60x
+  ctx= 4096  baseline   18.03ms  compressed    2.00ms  speedup=9.03x
+
+Saved /mnt/data/Code/HRS/experiments/compression_conv/results/extended_eval.json

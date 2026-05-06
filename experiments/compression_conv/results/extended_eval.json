@@ -1,0 +1,71 @@
+{
+  "training_ppl": {
+    "baseline": 117.05109177487486,
+    "compressed": 137.3134022139501,
+    "ratio": 1.1731065480196108
+  },
+  "ctx_scaling": [
+    {
+      "ctx": 128,
+      "baseline_ppl": 107.50673393095623,
+      "compressed_ppl": 128.54402104682708,
+      "is_extrapolation": false
+    },
+    {
+      "ctx": 256,
+      "baseline_ppl": 117.87908269381607,
+      "compressed_ppl": 135.71038658058026,
+      "is_extrapolation": false
+    },
+    {
+      "ctx": 512,
+      "baseline_ppl": 119.83978200101406,
+      "compressed_ppl": 136.82681166239493,
+      "is_extrapolation": false
+    }
+  ],
+  "inference_timing": [
+    {
+      "ctx": 256,
+      "baseline_ms_mean": 1.5272328746505082,
+      "compressed_ms_mean": 1.5691881999373436,
+      "baseline_ms_min": 1.515206997282803,
+      "compressed_ms_min": 1.5570459654554725,
+      "speedup": 0.9732630379909111
+    },
+    {
+      "ctx": 512,
+      "baseline_ms_mean": 2.4076384026557207,
+      "compressed_ms_mean": 1.7072185059078038,
+      "baseline_ms_min": 2.3981629638001323,
+      "compressed_ms_min": 1.6893961001187563,
+      "speedup": 1.410269625313997
+    },
+    {
+      "ctx": 1024,
+      "baseline_ms_mean": 3.445052891038358,
+      "compressed_ms_mean": 1.7214408959262073,
+      "baseline_ms_min": 3.4381330478936434,
+      "compressed_ms_min": 1.7004369292408228,
+      "speedup": 2.0012612104145324
+    },
+    {
+      "ctx": 2048,
+      "baseline_ms_mean": 6.458886596374214,
+      "compressed_ms_mean": 1.7920995131134987,
+      "baseline_ms_min": 6.371867028065026,
+      "compressed_ms_min": 1.7713200068101287,
+      "speedup": 3.604089253477273
+    },
+    {
+      "ctx": 4096,
+      "baseline_ms_mean": 18.02527920808643,
+      "compressed_ms_mean": 1.996646518819034,
+      "baseline_ms_min": 17.909654998220503,
+      "compressed_ms_min": 1.9831000827252865,
+      "speedup": 9.027776843919238
+    }
+  ],
+  "baseline_ckpt": "experiments/compression_conv/checkpoints/baseline_ctx512.pt",
+  "compressed_ckpt": "experiments/compression_conv/checkpoints/compressed_ctx512.pt"
+}
