@@ -1,0 +1,33 @@
+Corpus: ts  train: 304,222  val: 33,803
+Arch: hybrid_1plus7  n_full=1/8 heads  ctx=1024
+Total params: 17,969,920
+  step     1/5000  train_loss=10.915  val_ppl=54339.40  elapsed=1s
+  step   200/5000  train_loss=6.200  val_ppl=515.25  elapsed=11s
+  step   400/5000  train_loss=5.702  val_ppl=350.74  elapsed=21s
+  step   600/5000  train_loss=5.556  val_ppl=276.20  elapsed=31s
+  step   800/5000  train_loss=5.013  val_ppl=238.86  elapsed=41s
+  step  1000/5000  train_loss=5.083  val_ppl=208.28  elapsed=51s
+  step  1200/5000  train_loss=4.704  val_ppl=188.00  elapsed=61s
+  step  1400/5000  train_loss=4.611  val_ppl=174.54  elapsed=71s
+  step  1600/5000  train_loss=4.556  val_ppl=160.20  elapsed=81s
+  step  1800/5000  train_loss=4.449  val_ppl=151.02  elapsed=91s
+  step  2000/5000  train_loss=4.339  val_ppl=145.39  elapsed=101s
+  step  2200/5000  train_loss=4.365  val_ppl=142.04  elapsed=111s
+  step  2400/5000  train_loss=4.163  val_ppl=136.93  elapsed=120s
+  step  2600/5000  train_loss=4.164  val_ppl=129.43  elapsed=130s
+  step  2800/5000  train_loss=4.040  val_ppl=127.87  elapsed=140s
+  step  3000/5000  train_loss=4.033  val_ppl=127.10  elapsed=150s
+  step  3200/5000  train_loss=4.342  val_ppl=124.36  elapsed=160s
+  step  3400/5000  train_loss=3.882  val_ppl=122.19  elapsed=170s
+  step  3600/5000  train_loss=4.136  val_ppl=122.80  elapsed=180s
+  step  3800/5000  train_loss=3.752  val_ppl=121.09  elapsed=190s
+  step  4000/5000  train_loss=4.071  val_ppl=121.01  elapsed=200s
+  step  4200/5000  train_loss=4.054  val_ppl=120.21  elapsed=210s
+  step  4400/5000  train_loss=3.918  val_ppl=121.18  elapsed=220s
+  step  4600/5000  train_loss=4.038  val_ppl=118.97  elapsed=230s
+  step  4800/5000  train_loss=3.803  val_ppl=117.42  elapsed=240s
+  step  5000/5000  train_loss=4.279  val_ppl=117.26  elapsed=250s
+
+FINAL  val_ppl=117.96  anchor_acc=0.203  wall=251s
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/checkpoints/ts_hybrid_1plus7_seed0.pt
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/results/train_ts_hybrid_1plus7_seed0.json

@@ -1,0 +1,392 @@
+{
+  "corpus": "ts",
+  "arch": "pure_compressed",
+  "seed": 2,
+  "n_probes": 40,
+  "rows": [
+    {
+      "layer": 0,
+      "head": 0,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.019676537928171457,
+      "max_attention_to_needle": 0.06022744998335838,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 1,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.014729254273697734,
+      "max_attention_to_needle": 0.02366630733013153,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 2,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.020240756776183845,
+      "max_attention_to_needle": 0.03105437383055687,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 3,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.018186282739043234,
+      "max_attention_to_needle": 0.020929720252752304,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 4,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.015534060401841998,
+      "max_attention_to_needle": 0.01928052306175232,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 5,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.013958983961492777,
+      "max_attention_to_needle": 0.024733388796448708,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 6,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.017831474961712956,
+      "max_attention_to_needle": 0.019619187340140343,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 7,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.01995751871727407,
+      "max_attention_to_needle": 0.02399279922246933,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 0,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.01420032443711534,
+      "max_attention_to_needle": 0.02505437284708023,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 1,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.01488042064011097,
+      "max_attention_to_needle": 0.028724366798996925,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 2,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.01809506627032533,
+      "max_attention_to_needle": 0.025665830820798874,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 3,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.0064848526904825125,
+      "max_attention_to_needle": 0.012401853688061237,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 4,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.0001740299341008722,
+      "max_attention_to_needle": 0.0003694745828397572,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 5,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.012787682679481804,
+      "max_attention_to_needle": 0.0189854484051466,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 6,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.014270576974377036,
+      "max_attention_to_needle": 0.047943443059921265,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 7,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.007481443276628852,
+      "max_attention_to_needle": 0.012547384016215801,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 0,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.005916584451915697,
+      "max_attention_to_needle": 0.018668411299586296,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 1,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.013477445172611624,
+      "max_attention_to_needle": 0.026981791481375694,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 2,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.008069467537279707,
+      "max_attention_to_needle": 0.03662671521306038,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 3,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.0017024377717461902,
+      "max_attention_to_needle": 0.011190387420356274,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 4,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.00014411216557164153,
+      "max_attention_to_needle": 0.0005547708133235574,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 5,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.006547118394519202,
+      "max_attention_to_needle": 0.011975557543337345,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 6,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.0005613223690602353,
+      "max_attention_to_needle": 0.004479412455111742,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 7,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.004841389732609969,
+      "max_attention_to_needle": 0.019096409901976585,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 0,
+      "kind": "compressed",
+      "mean_attention_to_needle": 4.073903817136681e-06,
+      "max_attention_to_needle": 1.922978844959289e-05,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 1,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.008494308302761055,
+      "max_attention_to_needle": 0.026491496711969376,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 2,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.006279868521960452,
+      "max_attention_to_needle": 0.012234321795403957,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 3,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.005752428490086459,
+      "max_attention_to_needle": 0.012461451813578606,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 4,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.012508323875954375,
+      "max_attention_to_needle": 0.04007531702518463,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 5,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.0013480467140652764,
+      "max_attention_to_needle": 0.004822623450309038,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 6,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.0017349849611491663,
+      "max_attention_to_needle": 0.004037047736346722,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 7,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.0004061485635702411,
+      "max_attention_to_needle": 0.0015846340684220195,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 0,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.018771128085791133,
+      "max_attention_to_needle": 0.03077062964439392,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 1,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.013559784595418022,
+      "max_attention_to_needle": 0.029756566509604454,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 2,
+      "kind": "compressed",
+      "mean_attention_to_needle": 8.414241974641356e-06,
+      "max_attention_to_needle": 3.7430014344863594e-05,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 3,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.008529834311048035,
+      "max_attention_to_needle": 0.030177680775523186,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 4,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.006021236810784103,
+      "max_attention_to_needle": 0.020357416942715645,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 5,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.007820933034236078,
+      "max_attention_to_needle": 0.018517140299081802,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 6,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.009267114191607107,
+      "max_attention_to_needle": 0.022041600197553635,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 7,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.007182681348058395,
+      "max_attention_to_needle": 0.01552790030837059,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 0,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.00720012816018425,
+      "max_attention_to_needle": 0.013690880499780178,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 1,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.01275745511520654,
+      "max_attention_to_needle": 0.022301960736513138,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 2,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.007644964047358371,
+      "max_attention_to_needle": 0.024852607399225235,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 3,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.0031729640219055,
+      "max_attention_to_needle": 0.019428832456469536,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 4,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.009629861250869,
+      "max_attention_to_needle": 0.06192849949002266,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 5,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.0006121782673744747,
+      "max_attention_to_needle": 0.0017922914121299982,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 6,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.015552566264159396,
+      "max_attention_to_needle": 0.04364590719342232,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 7,
+      "kind": "compressed",
+      "mean_attention_to_needle": 0.011150913435176334,
+      "max_attention_to_needle": 0.0299379900097847,
+      "n_probes": 40
+    }
+  ]
+}

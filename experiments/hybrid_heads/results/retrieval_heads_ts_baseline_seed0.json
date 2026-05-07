@@ -1,0 +1,392 @@
+{
+  "corpus": "ts",
+  "arch": "baseline",
+  "seed": 0,
+  "n_probes": 40,
+  "rows": [
+    {
+      "layer": 0,
+      "head": 0,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0005028720988775603,
+      "max_attention_to_needle": 0.000619922240730375,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 1,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0013562637439463287,
+      "max_attention_to_needle": 0.0014660805463790894,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 2,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0009757160893059336,
+      "max_attention_to_needle": 0.0010247938334941864,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 3,
+      "kind": "full",
+      "mean_attention_to_needle": 0.001688055883278139,
+      "max_attention_to_needle": 0.0018492505187168717,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 4,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0013430257909931242,
+      "max_attention_to_needle": 0.001404942013323307,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 5,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0013957926857983693,
+      "max_attention_to_needle": 0.0014704933855682611,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 6,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0015828750096261502,
+      "max_attention_to_needle": 0.0017155789537355304,
+      "n_probes": 40
+    },
+    {
+      "layer": 0,
+      "head": 7,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0008666943220305256,
+      "max_attention_to_needle": 0.0010008257813751698,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 0,
+      "kind": "full",
+      "mean_attention_to_needle": 0.005922175163868814,
+      "max_attention_to_needle": 0.00903402455151081,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 1,
+      "kind": "full",
+      "mean_attention_to_needle": 0.006552457850193605,
+      "max_attention_to_needle": 0.01700528711080551,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 2,
+      "kind": "full",
+      "mean_attention_to_needle": 1.2110191619285615e-05,
+      "max_attention_to_needle": 4.582202745950781e-05,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 3,
+      "kind": "full",
+      "mean_attention_to_needle": 0.001184724637278123,
+      "max_attention_to_needle": 0.0018574828281998634,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 4,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0008553835359634832,
+      "max_attention_to_needle": 0.001855009119026363,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 5,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0010785913065774367,
+      "max_attention_to_needle": 0.0021626721136271954,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 6,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0005135831637744559,
+      "max_attention_to_needle": 0.001096178195439279,
+      "n_probes": 40
+    },
+    {
+      "layer": 1,
+      "head": 7,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0017124341087765061,
+      "max_attention_to_needle": 0.003528491361066699,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 0,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0037504172185435893,
+      "max_attention_to_needle": 0.0063181244768202305,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 1,
+      "kind": "full",
+      "mean_attention_to_needle": 0.023253658320754766,
+      "max_attention_to_needle": 0.05699047073721886,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 2,
+      "kind": "full",
+      "mean_attention_to_needle": 0.00016492925651618863,
+      "max_attention_to_needle": 0.0005249683163128793,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 3,
+      "kind": "full",
+      "mean_attention_to_needle": 0.00020855999282503034,
+      "max_attention_to_needle": 0.00035289907827973366,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 4,
+      "kind": "full",
+      "mean_attention_to_needle": 7.596518623813609e-05,
+      "max_attention_to_needle": 0.00017850901349447668,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 5,
+      "kind": "full",
+      "mean_attention_to_needle": 1.4005058666555214e-06,
+      "max_attention_to_needle": 4.019198058813345e-06,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 6,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0036106678657233716,
+      "max_attention_to_needle": 0.0064459568820893764,
+      "n_probes": 40
+    },
+    {
+      "layer": 2,
+      "head": 7,
+      "kind": "full",
+      "mean_attention_to_needle": 0.023220642819069326,
+      "max_attention_to_needle": 0.03753631189465523,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 0,
+      "kind": "full",
+      "mean_attention_to_needle": 0.001052118522056844,
+      "max_attention_to_needle": 0.0013161948882043362,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 1,
+      "kind": "full",
+      "mean_attention_to_needle": 0.00017785871721116565,
+      "max_attention_to_needle": 0.00038800694164820015,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 2,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0004376043434604071,
+      "max_attention_to_needle": 0.0007867721724323928,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 3,
+      "kind": "full",
+      "mean_attention_to_needle": 7.359916239124686e-06,
+      "max_attention_to_needle": 1.525967672932893e-05,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 4,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0019883648310496937,
+      "max_attention_to_needle": 0.0037385066971182823,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 5,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0008347782531927805,
+      "max_attention_to_needle": 0.0012665976537391543,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 6,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0008821796378470026,
+      "max_attention_to_needle": 0.0010167115833610296,
+      "n_probes": 40
+    },
+    {
+      "layer": 3,
+      "head": 7,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0003951670161768561,
+      "max_attention_to_needle": 0.0005663599004037678,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 0,
+      "kind": "full",
+      "mean_attention_to_needle": 0.002418479855987243,
+      "max_attention_to_needle": 0.005431876517832279,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 1,
+      "kind": "full",
+      "mean_attention_to_needle": 0.00038315547672027603,
+      "max_attention_to_needle": 0.0007916493923403323,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 2,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0009075186382688117,
+      "max_attention_to_needle": 0.001307138241827488,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 3,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0005601839065988657,
+      "max_attention_to_needle": 0.0019399202428758144,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 4,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0012769036417012102,
+      "max_attention_to_needle": 0.0017109672771766782,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 5,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0008088985865470022,
+      "max_attention_to_needle": 0.0012213451554998755,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 6,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0009949872808647342,
+      "max_attention_to_needle": 0.001300109550356865,
+      "n_probes": 40
+    },
+    {
+      "layer": 4,
+      "head": 7,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0005778939252195414,
+      "max_attention_to_needle": 0.0014618204440921545,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 0,
+      "kind": "full",
+      "mean_attention_to_needle": 0.001523352024378255,
+      "max_attention_to_needle": 0.00222511007450521,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 1,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0005450828735774849,
+      "max_attention_to_needle": 0.0007205631118267775,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 2,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0011550080656888896,
+      "max_attention_to_needle": 0.00130006717517972,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 3,
+      "kind": "full",
+      "mean_attention_to_needle": 0.000626151683536591,
+      "max_attention_to_needle": 0.0011191264493390918,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 4,
+      "kind": "full",
+      "mean_attention_to_needle": 0.001338499996927567,
+      "max_attention_to_needle": 0.0016094936290755868,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 5,
+      "kind": "full",
+      "mean_attention_to_needle": 0.002206797953112982,
+      "max_attention_to_needle": 0.004554687067866325,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 6,
+      "kind": "full",
+      "mean_attention_to_needle": 0.0006887599356559804,
+      "max_attention_to_needle": 0.001248242100700736,
+      "n_probes": 40
+    },
+    {
+      "layer": 5,
+      "head": 7,
+      "kind": "full",
+      "mean_attention_to_needle": 0.001466908167640213,
+      "max_attention_to_needle": 0.002112273359671235,
+      "n_probes": 40
+    }
+  ]
+}

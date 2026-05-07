@@ -1,0 +1,33 @@
+Corpus: wt103  train: 118,495,745  val: 248,321
+Arch: pure_compressed  n_full=0/8 heads  ctx=1024
+Total params: 17,969,920
+  step     1/5000  train_loss=10.866  val_ppl=53383.05  elapsed=1s
+  step   200/5000  train_loss=7.656  val_ppl=1522.31  elapsed=11s
+  step   400/5000  train_loss=7.069  val_ppl=953.13  elapsed=21s
+  step   600/5000  train_loss=6.967  val_ppl=813.08  elapsed=31s
+  step   800/5000  train_loss=6.663  val_ppl=719.34  elapsed=41s
+  step  1000/5000  train_loss=6.680  val_ppl=660.01  elapsed=51s
+  step  1200/5000  train_loss=6.553  val_ppl=619.02  elapsed=61s
+  step  1400/5000  train_loss=6.680  val_ppl=590.58  elapsed=70s
+  step  1600/5000  train_loss=6.213  val_ppl=561.07  elapsed=80s
+  step  1800/5000  train_loss=6.479  val_ppl=541.17  elapsed=90s
+  step  2000/5000  train_loss=6.347  val_ppl=529.63  elapsed=100s
+  step  2200/5000  train_loss=6.134  val_ppl=510.30  elapsed=110s
+  step  2400/5000  train_loss=5.935  val_ppl=495.49  elapsed=120s
+  step  2600/5000  train_loss=6.192  val_ppl=491.09  elapsed=130s
+  step  2800/5000  train_loss=5.725  val_ppl=478.58  elapsed=140s
+  step  3000/5000  train_loss=6.153  val_ppl=467.63  elapsed=150s
+  step  3200/5000  train_loss=6.350  val_ppl=458.49  elapsed=159s
+  step  3400/5000  train_loss=6.412  val_ppl=450.86  elapsed=169s
+  step  3600/5000  train_loss=6.163  val_ppl=445.75  elapsed=179s
+  step  3800/5000  train_loss=6.315  val_ppl=439.34  elapsed=189s
+  step  4000/5000  train_loss=6.299  val_ppl=431.08  elapsed=199s
+  step  4200/5000  train_loss=5.903  val_ppl=426.15  elapsed=209s
+  step  4400/5000  train_loss=6.027  val_ppl=424.43  elapsed=219s
+  step  4600/5000  train_loss=5.911  val_ppl=420.70  elapsed=229s
+  step  4800/5000  train_loss=6.139  val_ppl=417.41  elapsed=238s
+  step  5000/5000  train_loss=5.852  val_ppl=416.33  elapsed=248s
+
+FINAL  val_ppl=427.79  anchor_acc=0.297  wall=250s
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/checkpoints/wt103_pure_compressed_seed2.pt
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/results/train_wt103_pure_compressed_seed2.json

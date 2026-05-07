@@ -1,0 +1,33 @@
+Corpus: wt103  train: 118,495,745  val: 248,321
+Arch: hybrid_2plus6  n_full=2/8 heads  ctx=1024
+Total params: 17,969,920
+  step     1/5000  train_loss=10.882  val_ppl=54014.45  elapsed=1s
+  step   200/5000  train_loss=7.158  val_ppl=1386.40  elapsed=11s
+  step   400/5000  train_loss=7.065  val_ppl=933.41  elapsed=20s
+  step   600/5000  train_loss=6.695  val_ppl=804.12  elapsed=30s
+  step   800/5000  train_loss=6.668  val_ppl=710.90  elapsed=40s
+  step  1000/5000  train_loss=6.464  val_ppl=650.84  elapsed=49s
+  step  1200/5000  train_loss=6.462  val_ppl=609.39  elapsed=60s
+  step  1400/5000  train_loss=6.443  val_ppl=579.01  elapsed=69s
+  step  1600/5000  train_loss=6.534  val_ppl=552.97  elapsed=79s
+  step  1800/5000  train_loss=6.358  val_ppl=527.62  elapsed=89s
+  step  2000/5000  train_loss=6.470  val_ppl=517.47  elapsed=98s
+  step  2200/5000  train_loss=6.424  val_ppl=496.94  elapsed=108s
+  step  2400/5000  train_loss=6.291  val_ppl=488.89  elapsed=118s
+  step  2600/5000  train_loss=6.278  val_ppl=479.18  elapsed=127s
+  step  2800/5000  train_loss=6.334  val_ppl=469.52  elapsed=137s
+  step  3000/5000  train_loss=6.219  val_ppl=457.10  elapsed=147s
+  step  3200/5000  train_loss=6.092  val_ppl=447.93  elapsed=156s
+  step  3400/5000  train_loss=6.098  val_ppl=439.18  elapsed=166s
+  step  3600/5000  train_loss=6.133  val_ppl=435.04  elapsed=175s
+  step  3800/5000  train_loss=6.098  val_ppl=427.52  elapsed=185s
+  step  4000/5000  train_loss=6.121  val_ppl=421.68  elapsed=195s
+  step  4200/5000  train_loss=6.180  val_ppl=418.68  elapsed=205s
+  step  4400/5000  train_loss=5.925  val_ppl=415.43  elapsed=215s
+  step  4600/5000  train_loss=5.989  val_ppl=410.29  elapsed=224s
+  step  4800/5000  train_loss=6.339  val_ppl=407.93  elapsed=234s
+  step  5000/5000  train_loss=5.704  val_ppl=405.58  elapsed=243s
+
+FINAL  val_ppl=419.47  anchor_acc=0.203  wall=245s
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/checkpoints/wt103_hybrid_2plus6_seed0.pt
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/results/train_wt103_hybrid_2plus6_seed0.json

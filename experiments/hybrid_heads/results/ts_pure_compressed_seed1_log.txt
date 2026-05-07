@@ -1,0 +1,33 @@
+Corpus: ts  train: 304,222  val: 33,803
+Arch: pure_compressed  n_full=0/8 heads  ctx=1024
+Total params: 17,969,920
+  step     1/5000  train_loss=10.829  val_ppl=49935.91  elapsed=1s
+  step   200/5000  train_loss=6.259  val_ppl=519.33  elapsed=11s
+  step   400/5000  train_loss=5.481  val_ppl=362.74  elapsed=21s
+  step   600/5000  train_loss=5.362  val_ppl=284.33  elapsed=31s
+  step   800/5000  train_loss=5.060  val_ppl=235.95  elapsed=41s
+  step  1000/5000  train_loss=4.539  val_ppl=208.51  elapsed=51s
+  step  1200/5000  train_loss=4.816  val_ppl=192.65  elapsed=61s
+  step  1400/5000  train_loss=4.738  val_ppl=173.62  elapsed=70s
+  step  1600/5000  train_loss=4.453  val_ppl=167.43  elapsed=80s
+  step  1800/5000  train_loss=4.512  val_ppl=159.77  elapsed=90s
+  step  2000/5000  train_loss=4.430  val_ppl=150.46  elapsed=100s
+  step  2200/5000  train_loss=4.365  val_ppl=143.96  elapsed=110s
+  step  2400/5000  train_loss=4.270  val_ppl=139.80  elapsed=120s
+  step  2600/5000  train_loss=4.248  val_ppl=137.20  elapsed=130s
+  step  2800/5000  train_loss=4.052  val_ppl=134.19  elapsed=140s
+  step  3000/5000  train_loss=4.424  val_ppl=132.27  elapsed=150s
+  step  3200/5000  train_loss=4.391  val_ppl=130.70  elapsed=159s
+  step  3400/5000  train_loss=4.358  val_ppl=129.59  elapsed=169s
+  step  3600/5000  train_loss=3.965  val_ppl=127.58  elapsed=179s
+  step  3800/5000  train_loss=4.339  val_ppl=127.33  elapsed=189s
+  step  4000/5000  train_loss=4.236  val_ppl=126.34  elapsed=199s
+  step  4200/5000  train_loss=4.095  val_ppl=125.27  elapsed=209s
+  step  4400/5000  train_loss=4.185  val_ppl=123.39  elapsed=219s
+  step  4600/5000  train_loss=4.080  val_ppl=124.15  elapsed=229s
+  step  4800/5000  train_loss=4.118  val_ppl=123.91  elapsed=239s
+  step  5000/5000  train_loss=3.815  val_ppl=124.41  elapsed=249s
+
+FINAL  val_ppl=123.48  anchor_acc=0.266  wall=250s
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/checkpoints/ts_pure_compressed_seed1.pt
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/results/train_ts_pure_compressed_seed1.json

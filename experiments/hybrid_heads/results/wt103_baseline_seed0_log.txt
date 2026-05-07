@@ -1,0 +1,33 @@
+Corpus: wt103  train: 118,495,745  val: 248,321
+Arch: baseline  n_full=8/8 heads  ctx=1024
+Total params: 17,867,008
+  step     1/5000  train_loss=10.880  val_ppl=52262.47  elapsed=1s
+  step   200/5000  train_loss=7.005  val_ppl=1207.38  elapsed=7s
+  step   400/5000  train_loss=6.791  val_ppl=839.12  elapsed=12s
+  step   600/5000  train_loss=6.708  val_ppl=710.83  elapsed=18s
+  step   800/5000  train_loss=6.750  val_ppl=642.06  elapsed=23s
+  step  1000/5000  train_loss=6.419  val_ppl=590.79  elapsed=29s
+  step  1200/5000  train_loss=6.452  val_ppl=554.84  elapsed=35s
+  step  1400/5000  train_loss=6.282  val_ppl=532.01  elapsed=40s
+  step  1600/5000  train_loss=6.406  val_ppl=517.81  elapsed=46s
+  step  1800/5000  train_loss=6.163  val_ppl=495.81  elapsed=52s
+  step  2000/5000  train_loss=6.100  val_ppl=482.72  elapsed=57s
+  step  2200/5000  train_loss=6.040  val_ppl=474.48  elapsed=63s
+  step  2400/5000  train_loss=6.295  val_ppl=459.71  elapsed=69s
+  step  2600/5000  train_loss=6.301  val_ppl=454.94  elapsed=74s
+  step  2800/5000  train_loss=6.219  val_ppl=445.00  elapsed=80s
+  step  3000/5000  train_loss=6.304  val_ppl=440.02  elapsed=86s
+  step  3200/5000  train_loss=6.182  val_ppl=430.45  elapsed=91s
+  step  3400/5000  train_loss=6.199  val_ppl=424.16  elapsed=97s
+  step  3600/5000  train_loss=6.112  val_ppl=417.22  elapsed=103s
+  step  3800/5000  train_loss=5.890  val_ppl=412.71  elapsed=108s
+  step  4000/5000  train_loss=5.887  val_ppl=406.12  elapsed=114s
+  step  4200/5000  train_loss=5.926  val_ppl=403.15  elapsed=120s
+  step  4400/5000  train_loss=5.816  val_ppl=400.26  elapsed=125s
+  step  4600/5000  train_loss=6.093  val_ppl=397.00  elapsed=131s
+  step  4800/5000  train_loss=6.393  val_ppl=395.26  elapsed=137s
+  step  5000/5000  train_loss=6.100  val_ppl=393.77  elapsed=142s
+
+FINAL  val_ppl=404.26  anchor_acc=0.250  wall=143s
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/checkpoints/wt103_baseline_seed0.pt
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/results/train_wt103_baseline_seed0.json

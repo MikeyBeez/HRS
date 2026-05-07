@@ -1,0 +1,33 @@
+Corpus: ts  train: 304,222  val: 33,803
+Arch: baseline  n_full=8/8 heads  ctx=1024
+Total params: 17,867,008
+  step     1/5000  train_loss=10.831  val_ppl=51311.93  elapsed=1s
+  step   200/5000  train_loss=5.703  val_ppl=421.48  elapsed=6s
+  step   400/5000  train_loss=5.082  val_ppl=255.98  elapsed=12s
+  step   600/5000  train_loss=4.621  val_ppl=218.17  elapsed=18s
+  step   800/5000  train_loss=4.727  val_ppl=194.56  elapsed=23s
+  step  1000/5000  train_loss=4.736  val_ppl=178.87  elapsed=29s
+  step  1200/5000  train_loss=4.511  val_ppl=167.89  elapsed=35s
+  step  1400/5000  train_loss=4.538  val_ppl=163.16  elapsed=40s
+  step  1600/5000  train_loss=4.712  val_ppl=156.30  elapsed=46s
+  step  1800/5000  train_loss=4.378  val_ppl=148.54  elapsed=51s
+  step  2000/5000  train_loss=3.947  val_ppl=146.26  elapsed=57s
+  step  2200/5000  train_loss=4.270  val_ppl=142.23  elapsed=63s
+  step  2400/5000  train_loss=4.210  val_ppl=141.85  elapsed=68s
+  step  2600/5000  train_loss=4.208  val_ppl=139.06  elapsed=74s
+  step  2800/5000  train_loss=4.024  val_ppl=135.13  elapsed=80s
+  step  3000/5000  train_loss=4.017  val_ppl=133.43  elapsed=85s
+  step  3200/5000  train_loss=4.025  val_ppl=134.04  elapsed=91s
+  step  3400/5000  train_loss=4.060  val_ppl=133.25  elapsed=96s
+  step  3600/5000  train_loss=4.092  val_ppl=133.50  elapsed=102s
+  step  3800/5000  train_loss=3.823  val_ppl=134.50  elapsed=108s
+  step  4000/5000  train_loss=3.918  val_ppl=130.61  elapsed=113s
+  step  4200/5000  train_loss=4.312  val_ppl=129.18  elapsed=119s
+  step  4400/5000  train_loss=3.863  val_ppl=129.27  elapsed=125s
+  step  4600/5000  train_loss=3.813  val_ppl=128.90  elapsed=130s
+  step  4800/5000  train_loss=3.804  val_ppl=128.76  elapsed=136s
+  step  5000/5000  train_loss=3.876  val_ppl=129.48  elapsed=142s
+
+FINAL  val_ppl=127.74  anchor_acc=0.172  wall=143s
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/checkpoints/ts_baseline_seed0.pt
+Saved /mnt/data/Code/HRS/experiments/hybrid_heads/results/train_ts_baseline_seed0.json
