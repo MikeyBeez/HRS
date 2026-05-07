@@ -1,0 +1,33 @@
+Corpus: ts  train: 304,222  val: 33,803
+Depth: depth_8 pattern=[2, 1, 1, 2, 1, 1, 2, 2]  ratio=[2, 1, 1, 2, 1, 1, 2, 2] → 16x
+Total params: 19,183,872  (compression: 1,316,864)
+  step     1/5000  train_loss=10.934  val_ppl=55402.58  elapsed=1s
+  step   200/5000  train_loss=6.177  val_ppl=674.99  elapsed=5s
+  step   400/5000  train_loss=6.322  val_ppl=490.25  elapsed=10s
+  step   600/5000  train_loss=5.421  val_ppl=306.64  elapsed=15s
+  step   800/5000  train_loss=5.200  val_ppl=258.34  elapsed=20s
+  step  1000/5000  train_loss=5.068  val_ppl=235.59  elapsed=24s
+  step  1200/5000  train_loss=4.568  val_ppl=221.57  elapsed=29s
+  step  1400/5000  train_loss=4.810  val_ppl=199.78  elapsed=34s
+  step  1600/5000  train_loss=4.598  val_ppl=196.29  elapsed=39s
+  step  1800/5000  train_loss=4.733  val_ppl=178.46  elapsed=43s
+  step  2000/5000  train_loss=4.741  val_ppl=177.70  elapsed=48s
+  step  2200/5000  train_loss=4.430  val_ppl=169.81  elapsed=53s
+  step  2400/5000  train_loss=4.389  val_ppl=172.16  elapsed=58s
+  step  2600/5000  train_loss=4.742  val_ppl=167.59  elapsed=62s
+  step  2800/5000  train_loss=4.556  val_ppl=163.10  elapsed=67s
+  step  3000/5000  train_loss=4.591  val_ppl=161.17  elapsed=72s
+  step  3200/5000  train_loss=4.043  val_ppl=161.20  elapsed=77s
+  step  3400/5000  train_loss=4.299  val_ppl=160.09  elapsed=81s
+  step  3600/5000  train_loss=3.966  val_ppl=155.40  elapsed=86s
+  step  3800/5000  train_loss=4.610  val_ppl=157.62  elapsed=91s
+  step  4000/5000  train_loss=4.430  val_ppl=158.42  elapsed=96s
+  step  4200/5000  train_loss=3.883  val_ppl=156.12  elapsed=101s
+  step  4400/5000  train_loss=3.802  val_ppl=158.14  elapsed=105s
+  step  4600/5000  train_loss=4.203  val_ppl=155.66  elapsed=110s
+  step  4800/5000  train_loss=3.878  val_ppl=155.64  elapsed=115s
+  step  5000/5000  train_loss=4.117  val_ppl=156.18  elapsed=120s
+
+FINAL  val_ppl=155.38  anchor_acc=0.266  wall=120s
+Saved /mnt/data/Code/HRS/experiments/compression_depth_ablation/checkpoints/ts_depth_8_seed1.pt
+Saved /mnt/data/Code/HRS/experiments/compression_depth_ablation/results/train_ts_depth_8_seed1.json

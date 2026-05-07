@@ -1,0 +1,33 @@
+Corpus: wt103  train: 118,495,745  val: 248,321
+Depth: depth_6 pattern=[2, 1, 2, 1, 2, 2]  ratio=[2, 1, 2, 1, 2, 2] → 16x
+Total params: 18,789,120  (compression: 922,112)
+  step     1/5000  train_loss=10.862  val_ppl=51906.00  elapsed=1s
+  step   200/5000  train_loss=7.684  val_ppl=1922.52  elapsed=5s
+  step   400/5000  train_loss=7.088  val_ppl=1234.34  elapsed=9s
+  step   600/5000  train_loss=7.342  val_ppl=1060.13  elapsed=14s
+  step   800/5000  train_loss=7.095  val_ppl=950.88  elapsed=18s
+  step  1000/5000  train_loss=6.987  val_ppl=859.57  elapsed=22s
+  step  1200/5000  train_loss=6.744  val_ppl=823.28  elapsed=27s
+  step  1400/5000  train_loss=6.607  val_ppl=769.03  elapsed=31s
+  step  1600/5000  train_loss=6.406  val_ppl=724.63  elapsed=35s
+  step  1800/5000  train_loss=6.451  val_ppl=674.81  elapsed=40s
+  step  2000/5000  train_loss=6.677  val_ppl=642.54  elapsed=44s
+  step  2200/5000  train_loss=6.935  val_ppl=624.49  elapsed=49s
+  step  2400/5000  train_loss=6.494  val_ppl=598.64  elapsed=53s
+  step  2600/5000  train_loss=6.312  val_ppl=577.49  elapsed=57s
+  step  2800/5000  train_loss=6.488  val_ppl=559.73  elapsed=62s
+  step  3000/5000  train_loss=6.097  val_ppl=542.81  elapsed=66s
+  step  3200/5000  train_loss=6.332  val_ppl=530.76  elapsed=71s
+  step  3400/5000  train_loss=6.635  val_ppl=519.22  elapsed=75s
+  step  3600/5000  train_loss=6.041  val_ppl=513.85  elapsed=79s
+  step  3800/5000  train_loss=6.381  val_ppl=504.95  elapsed=84s
+  step  4000/5000  train_loss=6.248  val_ppl=496.67  elapsed=88s
+  step  4200/5000  train_loss=6.004  val_ppl=490.58  elapsed=92s
+  step  4400/5000  train_loss=6.311  val_ppl=485.64  elapsed=97s
+  step  4600/5000  train_loss=6.217  val_ppl=483.99  elapsed=101s
+  step  4800/5000  train_loss=6.322  val_ppl=480.51  elapsed=106s
+  step  5000/5000  train_loss=6.457  val_ppl=477.58  elapsed=110s
+
+FINAL  val_ppl=494.62  anchor_acc=0.281  wall=110s
+Saved /mnt/data/Code/HRS/experiments/compression_depth_ablation/checkpoints/wt103_depth_6_seed2.pt
+Saved /mnt/data/Code/HRS/experiments/compression_depth_ablation/results/train_wt103_depth_6_seed2.json
