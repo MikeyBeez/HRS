@@ -1,0 +1,17 @@
+Loading experiments/compression_corpus_dependency/data/code_corpus.pt
+Train tokens: 1,515,647
+
+Corpus: code
+  Tokens: 1,515,647
+  MI(X_t; X_{t+k}) in nats:
+    k=  1: MI = 2.7372    H(X | X_{t+k}) = 2.2059
+    k=  2: MI = 2.3198    H(X | X_{t+k}) = 2.6106
+    k=  4: MI = 1.6667    H(X | X_{t+k}) = 3.2646
+    k=  8: MI = 1.2645    H(X | X_{t+k}) = 3.6655
+    k= 16: MI = 1.1364    H(X | X_{t+k}) = 3.7977
+    k= 32: MI = 1.1440    H(X | X_{t+k}) = 3.7924
+    k= 64: MI = 1.0873    H(X | X_{t+k}) = 3.8570
+  MI ratio MI@16 / MI@1 = 0.4152
+  H_cond ratio H@1 / H@16 = 0.5808
+  Wall: 7s
+Saved experiments/compression_corpus_dependency/results/mi_code.json

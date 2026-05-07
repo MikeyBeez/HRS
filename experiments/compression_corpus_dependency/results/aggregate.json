@@ -1,0 +1,61 @@
+{
+  "summary": [
+    {
+      "corpus": "ts",
+      "mi_ratio": 0.6611711649299583,
+      "baseline_ppl_mean": 123.53207315133065,
+      "baseline_ppl_std": 3.5788057399783253,
+      "compressed_ppl_mean": 144.9063012667248,
+      "compressed_ppl_std": 1.9149371609997579,
+      "gap_mean": 21.374228115394157,
+      "gap_std": 1.8076409074657633,
+      "gap_pct_mean": 17.33879017328045,
+      "gap_pct_std": 1.9226404241475112,
+      "baseline_anchor_mean": 0.21875,
+      "baseline_anchor_std": 0.05633673867912483,
+      "compressed_anchor_mean": 0.21875,
+      "compressed_anchor_std": 0.06810779599282303,
+      "gap_signal_to_noise": 11.824377301440874
+    },
+    {
+      "corpus": "code",
+      "mi_ratio": 0.41517738321781805,
+      "baseline_ppl_mean": 17.506747398579996,
+      "baseline_ppl_std": 0.23658673042764333,
+      "compressed_ppl_mean": 19.180396969496183,
+      "compressed_ppl_std": 0.06607299295677588,
+      "gap_mean": 1.6736495709161876,
+      "gap_std": 0.2832829341284105,
+      "gap_pct_mean": 9.57542262058676,
+      "gap_pct_std": 1.732600671192898,
+      "baseline_anchor_mean": 0.5416666666666666,
+      "baseline_anchor_std": 0.03252603124165832,
+      "compressed_anchor_mean": 0.5677083333333334,
+      "compressed_anchor_std": 0.050227347713504976,
+      "gap_signal_to_noise": 5.908049406737407
+    },
+    {
+      "corpus": "wt103",
+      "mi_ratio": 0.832181519011296,
+      "baseline_ppl_mean": 403.50760241250464,
+      "baseline_ppl_std": 0.705016547214702,
+      "compressed_ppl_mean": 382.15145845062546,
+      "compressed_ppl_std": 0.9092066282562998,
+      "gap_mean": -21.356143961879223,
+      "gap_std": 1.4381011887270738,
+      "gap_pct_mean": -5.292280009325357,
+      "gap_pct_std": 0.3481833203326359,
+      "baseline_anchor_mean": 0.20833333333333334,
+      "baseline_anchor_std": 0.08605578980134534,
+      "compressed_anchor_mean": 0.23958333333333334,
+      "compressed_anchor_std": 0.07864410870073697,
+      "gap_signal_to_noise": 14.850237333287012
+    }
+  ],
+  "spearman_rho": -0.5,
+  "pearson_r": -0.5641872908511357,
+  "n_corpora": 3,
+  "n_seeds": 3,
+  "predicted_sign_of_correlation": "negative",
+  "observed_sign": "negative"
+}

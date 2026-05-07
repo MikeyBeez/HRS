@@ -1,0 +1,17 @@
+Loading experiments/hrs_loop/cache/wt103_seqlen512_ncat50.pt
+Train tokens: 118,495,745
+
+Corpus: wt103
+  Tokens: 118,495,745
+  MI(X_t; X_{t+k}) in nats:
+    k=  1: MI = 3.9687    H(X | X_{t+k}) = 3.3815
+    k=  2: MI = 3.5687    H(X | X_{t+k}) = 3.7841
+    k=  4: MI = 3.3884    H(X | X_{t+k}) = 3.9661
+    k=  8: MI = 3.3184    H(X | X_{t+k}) = 4.0216
+    k= 16: MI = 3.3026    H(X | X_{t+k}) = 4.0550
+    k= 32: MI = 3.2938    H(X | X_{t+k}) = 4.0642
+    k= 64: MI = 3.2918    H(X | X_{t+k}) = 4.0692
+  MI ratio MI@16 / MI@1 = 0.8322
+  H_cond ratio H@1 / H@16 = 0.8339
+  Wall: 8s
+Saved experiments/compression_corpus_dependency/results/mi_wt103.json

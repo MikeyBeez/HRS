@@ -1,0 +1,34 @@
+Loading corpus wt103 ...
+  train: 118,495,745  val: 248,321
+Variant: compressed  ctx=1024  n_compress=4  ratio=16x
+Total params: 18,394,368  (compression: 527,360)
+  step     1/5000  train_loss=10.883  val_loss=10.867  val_ppl=52404.77  elapsed=1s
+  step   200/5000  train_loss=7.644  val_loss=7.502  val_ppl=1811.33  elapsed=5s
+  step   400/5000  train_loss=6.526  val_loss=6.899  val_ppl=991.31  elapsed=9s
+  step   600/5000  train_loss=6.952  val_loss=6.723  val_ppl=831.40  elapsed=13s
+  step   800/5000  train_loss=6.743  val_loss=6.569  val_ppl=712.82  elapsed=17s
+  step  1000/5000  train_loss=6.287  val_loss=6.461  val_ppl=639.40  elapsed=21s
+  step  1200/5000  train_loss=6.428  val_loss=6.391  val_ppl=596.50  elapsed=25s
+  step  1400/5000  train_loss=6.552  val_loss=6.325  val_ppl=558.24  elapsed=29s
+  step  1600/5000  train_loss=6.251  val_loss=6.269  val_ppl=528.09  elapsed=33s
+  step  1800/5000  train_loss=5.933  val_loss=6.220  val_ppl=502.79  elapsed=37s
+  step  2000/5000  train_loss=6.255  val_loss=6.186  val_ppl=486.13  elapsed=41s
+  step  2200/5000  train_loss=6.507  val_loss=6.147  val_ppl=467.53  elapsed=45s
+  step  2400/5000  train_loss=6.247  val_loss=6.116  val_ppl=452.84  elapsed=49s
+  step  2600/5000  train_loss=6.177  val_loss=6.089  val_ppl=440.76  elapsed=53s
+  step  2800/5000  train_loss=5.983  val_loss=6.064  val_ppl=430.21  elapsed=57s
+  step  3000/5000  train_loss=5.919  val_loss=6.045  val_ppl=421.91  elapsed=61s
+  step  3200/5000  train_loss=5.703  val_loss=6.033  val_ppl=417.07  elapsed=65s
+  step  3400/5000  train_loss=5.965  val_loss=6.003  val_ppl=404.47  elapsed=69s
+  step  3600/5000  train_loss=5.846  val_loss=5.987  val_ppl=398.21  elapsed=73s
+  step  3800/5000  train_loss=6.206  val_loss=5.969  val_ppl=391.09  elapsed=78s
+  step  4000/5000  train_loss=6.171  val_loss=5.952  val_ppl=384.38  elapsed=82s
+  step  4200/5000  train_loss=6.107  val_loss=5.945  val_ppl=381.83  elapsed=86s
+  step  4400/5000  train_loss=6.239  val_loss=5.935  val_ppl=378.18  elapsed=90s
+  step  4600/5000  train_loss=6.101  val_loss=5.926  val_ppl=374.75  elapsed=94s
+  step  4800/5000  train_loss=6.049  val_loss=5.923  val_ppl=373.63  elapsed=98s
+  step  5000/5000  train_loss=5.967  val_loss=5.914  val_ppl=370.09  elapsed=102s
+
+FINAL  val_loss=5.946  val_ppl=382.24  anchor_acc=0.156 (64 trials)  wall=102s
+Saved /mnt/data/Code/HRS/experiments/compression_corpus_dependency/checkpoints/wt103_compressed_seed1.pt
+Saved /mnt/data/Code/HRS/experiments/compression_corpus_dependency/results/train_wt103_compressed_seed1.json
