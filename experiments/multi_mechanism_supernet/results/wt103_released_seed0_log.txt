@@ -1,0 +1,94 @@
+Corpus: wt103  train: 118,495,745  val: 248,321
+Supernet d_model=288 n_layers=6 ctx=512  steps=3000  batch=8
+Schedule: floor-released
+Total params: 20,653,704
+  step     1/3000  train_loss=10.903  val_ppl=54357.86  floor=on  elapsed=9s
+  step   250/3000  train_loss=7.028  val_ppl=1136.53  floor=on  elapsed=720s
+  step   500/3000  train_loss=6.811  val_ppl=887.69  floor=on  elapsed=1437s
+  step   750/3000  train_loss=6.717  val_ppl=730.81  floor=on  elapsed=2150s
+  step  1000/3000  train_loss=6.620  val_ppl=657.38  floor=on  elapsed=2863s
+  step  1250/3000  train_loss=6.626  val_ppl=610.92  floor=on  elapsed=3574s
+  step  1500/3000  train_loss=7.033  val_ppl=577.52  floor=on  elapsed=4288s
+  step  1750/3000  train_loss=5.915  val_ppl=542.82  floor=off  elapsed=5003s
+  step  2000/3000  train_loss=6.552  val_ppl=515.50  floor=off  elapsed=5717s
+  step  2250/3000  train_loss=6.519  val_ppl=499.36  floor=off  elapsed=6431s
+  step  2500/3000  train_loss=6.631  val_ppl=488.15  floor=off  elapsed=7146s
+  step  2750/3000  train_loss=6.035  val_ppl=480.80  floor=off  elapsed=7859s
+  step  3000/3000  train_loss=6.201  val_ppl=475.86  floor=off  elapsed=8572s
+
+FINAL  val_ppl=553.57  anchor_acc=0.109  wall=8617s
+Final gates (released):
+           L0_full_learned_pos_a: 0.978
+           L0_full_learned_pos_b: 0.982
+                    L0_full_rope: 0.980
+            L0_compression_a_16x: 0.915
+             L0_compression_a_8x: 0.952
+             L0_compression_a_4x: 0.966
+            L0_compression_b_16x: 0.973
+                      L0_topk_64: 0.935
+                        L0_mamba: 1.049
+           L0_sliding_window_256: 0.980
+               L0_causal_conv_31: 0.918
+            L0_gated_linear_attn: 0.986
+           L1_full_learned_pos_a: 0.972
+           L1_full_learned_pos_b: 0.966
+                    L1_full_rope: 1.000
+            L1_compression_a_16x: 0.945
+             L1_compression_a_8x: 0.910
+             L1_compression_a_4x: 0.976
+            L1_compression_b_16x: 0.984
+                      L1_topk_64: 0.958
+                        L1_mamba: 1.052
+           L1_sliding_window_256: 0.972
+               L1_causal_conv_31: 1.020
+            L1_gated_linear_attn: 0.972
+           L2_full_learned_pos_a: 0.987
+           L2_full_learned_pos_b: 0.981
+                    L2_full_rope: 1.010
+            L2_compression_a_16x: 0.922
+             L2_compression_a_8x: 0.935
+             L2_compression_a_4x: 0.954
+            L2_compression_b_16x: 0.976
+                      L2_topk_64: 0.991
+                        L2_mamba: 1.040
+           L2_sliding_window_256: 0.995
+               L2_causal_conv_31: 1.018
+            L2_gated_linear_attn: 0.994
+           L3_full_learned_pos_a: 0.989
+           L3_full_learned_pos_b: 0.995
+                    L3_full_rope: 1.018
+            L3_compression_a_16x: 0.977
+             L3_compression_a_8x: 0.973
+             L3_compression_a_4x: 0.956
+            L3_compression_b_16x: 0.981
+                      L3_topk_64: 1.004
+                        L3_mamba: 1.048
+           L3_sliding_window_256: 1.009
+               L3_causal_conv_31: 1.032
+            L3_gated_linear_attn: 0.981
+           L4_full_learned_pos_a: 0.991
+           L4_full_learned_pos_b: 0.992
+                    L4_full_rope: 1.009
+            L4_compression_a_16x: 0.982
+             L4_compression_a_8x: 0.985
+             L4_compression_a_4x: 0.989
+            L4_compression_b_16x: 0.982
+                      L4_topk_64: 0.959
+                        L4_mamba: 1.020
+           L4_sliding_window_256: 0.995
+               L4_causal_conv_31: 1.025
+            L4_gated_linear_attn: 0.981
+           L5_full_learned_pos_a: 0.986
+           L5_full_learned_pos_b: 0.989
+                    L5_full_rope: 0.985
+            L5_compression_a_16x: 0.970
+             L5_compression_a_8x: 0.971
+             L5_compression_a_4x: 0.981
+            L5_compression_b_16x: 0.979
+                      L5_topk_64: 0.944
+                        L5_mamba: 1.047
+           L5_sliding_window_256: 0.995
+               L5_causal_conv_31: 1.000
+            L5_gated_linear_attn: 0.982
+Saved /mnt/data/Code/HRS/experiments/multi_mechanism_supernet/checkpoints/wt103_released_seed0.pt
+Saved /mnt/data/Code/HRS/experiments/multi_mechanism_supernet/results/train_wt103_released_seed0.json
