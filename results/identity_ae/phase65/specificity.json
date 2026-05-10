@@ -1,0 +1,440 @@
+{
+  "config": {
+    "n_ood": 30,
+    "query_tokens": 128,
+    "seed": 0,
+    "ood_source": "wikitext-2-raw-v1 train"
+  },
+  "in_library_summary": {
+    "c0b": {
+      "n": 60,
+      "mean": 0.9309389938910803,
+      "p05": 0.8038862526416779,
+      "p50": 0.9464304149150848,
+      "p95": 0.9880554556846619,
+      "min": 0.8002743721008301,
+      "max": 0.9886621832847595
+    },
+    "c1": {
+      "n": 60,
+      "mean": 0.24570683402319748,
+      "p05": 0.07959546968340873,
+      "p50": 0.2734101414680481,
+      "p95": 0.34503188729286194,
+      "min": 0.05310174822807312,
+      "max": 0.3659193515777588
+    }
+  },
+  "ood_summary": {
+    "c0b": {
+      "n": 30,
+      "mean": 0.5107858697573344,
+      "p05": 0.30413772016763685,
+      "p50": 0.5140016376972198,
+      "p95": 0.7216635525226593,
+      "min": 0.1992374062538147,
+      "max": 0.7370491623878479
+    },
+    "c1": {
+      "n": 30,
+      "mean": 0.12264148692289988,
+      "p05": 0.06560805067420006,
+      "p50": 0.12067421153187752,
+      "p95": 0.20709337219595905,
+      "min": 0.049394868314266205,
+      "max": 0.22263285517692566
+    }
+  },
+  "calibration": {
+    "tau_at_95_recall_c0b": 0.8038862526416779,
+    "tau_at_95_recall_c1": 0.07959546968340873,
+    "ood_fp_rate_c0b": 0.0,
+    "ood_fp_rate_c1": 0.8333333333333334,
+    "separation_gap_c0b": 0.42015312413374584,
+    "separation_gap_c1": 0.12306534710029761
+  },
+  "stretch": {
+    "target_ood_fp": 0.8333333333333334,
+    "tau_c0b_at_match": 0.38385057549340823,
+    "in_library_recall_c0b_at_match": 1.0
+  },
+  "ood_assignments": {
+    "c0b_top": [],
+    "c0b_all": {
+      "4": 21,
+      "14": 5,
+      "12": 2,
+      "3": 2
+    },
+    "c1_all": {
+      "13": 5,
+      "6": 1,
+      "14": 11,
+      "5": 6,
+      "10": 1,
+      "12": 6
+    }
+  },
+  "ood_per_query": [
+    {
+      "ood_idx": 0,
+      "text_preview": " the added sound effects and voice acting . He summarized it as \" one of the best times you 'll ever have pointing and c",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.1992374062538147
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.22263285517692566
+      }
+    },
+    {
+      "ood_idx": 1,
+      "text_preview": " layout system to render the interior shots ahead separately and in advance . The art team was tasked to draw lighting b",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.5670496225357056
+      },
+      "c1": {
+        "routed_idx": 6,
+        "best_score": 0.11578052490949631
+      }
+    },
+    {
+      "ood_idx": 2,
+      "text_preview": " sired by the Thoroughbred stallion Spotted Bull , started 30 times , winning eight races for a total earnings of $ 12 @",
+      "c0b": {
+        "routed_idx": 14,
+        "best_score": 0.6957261562347412
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.0708787739276886
+      }
+    },
+    {
+      "ood_idx": 3,
+      "text_preview": " He made his first appearance of the 2010 \u2013 11 season in the opening game , a 1 \u2013 1 draw with Arsenal on 14 August 2010 ",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.2933638095855713
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.1280224770307541
+      }
+    },
+    {
+      "ood_idx": 4,
+      "text_preview": "ate scales , covered in small bumps , vary in size over the body . Conical limpet @-@ like scales are only preserved on ",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.6128473281860352
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.1355791836977005
+      }
+    },
+    {
+      "ood_idx": 5,
+      "text_preview": "s Christopher John Farley noted that the book is lighter than Grisham 's other works . Publishers Weekly called it a \" b",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.470700740814209
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.1491057425737381
+      }
+    },
+    {
+      "ood_idx": 6,
+      "text_preview": "its Concerts at the \u00c9rard piano showrooms . It may have been associated with the developing career of Delaborde , who , ",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.5257108211517334
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.12260464578866959
+      }
+    },
+    {
+      "ood_idx": 7,
+      "text_preview": " If the Annals of Inisfallen is to be believed , Toirdelbach acquired possession of Dublin when the Dubliners themselves",
+      "c0b": {
+        "routed_idx": 14,
+        "best_score": 0.7209434509277344
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.08718515932559967
+      }
+    },
+    {
+      "ood_idx": 8,
+      "text_preview": " hat , wig , leather jacket , dark glasses and toothpick : Rihanna can be seen strumming a guitar Slash 's style . Rihan",
+      "c0b": {
+        "routed_idx": 14,
+        "best_score": 0.6829258799552917
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.061556339263916016
+      }
+    },
+    {
+      "ood_idx": 9,
+      "text_preview": " aeroplanes , and smaller helicopters . There are 28 @,@ 000 Private Pilot Licence holders , and 10 @,@ 000 certified gl",
+      "c0b": {
+        "routed_idx": 14,
+        "best_score": 0.69109046459198
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.1194470077753067
+      }
+    },
+    {
+      "ood_idx": 10,
+      "text_preview": " significant setbacks at Yongdok , with substantial losses due to American and British naval artillery fire . Once it ar",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.5571662783622742
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.09600336104631424
+      }
+    },
+    {
+      "ood_idx": 11,
+      "text_preview": " declared \" not guilty \" . To do so , they cross @-@ examine witnesses , and aim to find lies and inconsistencies in the",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.3838505744934082
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.20118916034698486
+      }
+    },
+    {
+      "ood_idx": 12,
+      "text_preview": " B group consisting of four male vocalists . Together , they wrote the concept and lyrics for \" One Sweet Day , \" a song",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.3173058331012726
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.15062066912651062
+      }
+    },
+    {
+      "ood_idx": 13,
+      "text_preview": " Magnolia ( 1999 ) , which tells the story of the peculiar interaction of several individuals in the San Fernando Valley",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.42399007081985474
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.15646396577358246
+      }
+    },
+    {
+      "ood_idx": 14,
+      "text_preview": " Africa , and Asia , and the mouth of the Kishon River . Located on the northern slopes of Mount Carmel and around Haifa",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.5639691352844238
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.08757365494966507
+      }
+    },
+    {
+      "ood_idx": 15,
+      "text_preview": " the ode marks both a beginning and an end . It is both the feeblest and potentially the most ambitious of the sequence ",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.47297558188438416
+      },
+      "c1": {
+        "routed_idx": 10,
+        "best_score": 0.16142506897449493
+      }
+    },
+    {
+      "ood_idx": 16,
+      "text_preview": " Despite his January 1999 claim that he was \" 99 @.@ 9 % certain \" that he would never play another NBA game , in the su",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.4194797873497009
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.10604501515626907
+      }
+    },
+    {
+      "ood_idx": 17,
+      "text_preview": " Americans that lived along the Missouri had access to ample food , water , and shelter . Many migratory animals inhabit",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.5383487343788147
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.0932566449046135
+      }
+    },
+    {
+      "ood_idx": 18,
+      "text_preview": " but , amid interest from other clubs , he accepted a trial with Newcastle United . After two trial matches , he signed ",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.5092447996139526
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.07056014239788055
+      }
+    },
+    {
+      "ood_idx": 19,
+      "text_preview": " certain \" Rufinus \" who orchestrated the assassination on his own initiative then explained his act to the emperor who ",
+      "c0b": {
+        "routed_idx": 14,
+        "best_score": 0.5799851417541504
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.12190141528844833
+      }
+    },
+    {
+      "ood_idx": 20,
+      "text_preview": " Mulder and named by the Swedish chemist J\u00f6ns Jacob Berzelius in 1838 . Mulder carried out elemental analysis of common ",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.7370491623878479
+      },
+      "c1": {
+        "routed_idx": 12,
+        "best_score": 0.21192409098148346
+      }
+    },
+    {
+      "ood_idx": 21,
+      "text_preview": " which are seen as important to \" read and proclaim the Word \" . Academy teachers establish their authority through disc",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.32823121547698975
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.16820991039276123
+      }
+    },
+    {
+      "ood_idx": 22,
+      "text_preview": " attempted a political career , working for the UK Conservative Party and hoping to become a parliamentary candidate . B",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.41633808612823486
+      },
+      "c1": {
+        "routed_idx": 12,
+        "best_score": 0.13752838969230652
+      }
+    },
+    {
+      "ood_idx": 23,
+      "text_preview": " Nominees for the 31st Grammy Awards were the Hampton String Quartet for \" Get a Job \" , George Harrison for \" When We W",
+      "c0b": {
+        "routed_idx": 3,
+        "best_score": 0.4253632724285126
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.10108888149261475
+      }
+    },
+    {
+      "ood_idx": 24,
+      "text_preview": " to Tropical Storm Simon on October 10 while 604 mi ( 972 km ) south @-@ southwest of Cabo San Lucas . Due to a high @-@",
+      "c0b": {
+        "routed_idx": 3,
+        "best_score": 0.4977276027202606
+      },
+      "c1": {
+        "routed_idx": 12,
+        "best_score": 0.049394868314266205
+      }
+    },
+    {
+      "ood_idx": 25,
+      "text_preview": " Atlantic Ocean on June 10 and 11 . The system moved across the Atlantic and entered into the northeastern Pacific Ocean",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.507439136505127
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.07125929743051529
+      }
+    },
+    {
+      "ood_idx": 26,
+      "text_preview": "-@ Saxon pottery at the site , and noted that as well as being called the Coldrum Stones , the monument also had the nam",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.5187584757804871
+      },
+      "c1": {
+        "routed_idx": 12,
+        "best_score": 0.11511343717575073
+      }
+    },
+    {
+      "ood_idx": 27,
+      "text_preview": "\ufffdi . During a return to Hawai\u02bbi in 1917 , his younger brother Benjamin Keolaokalani Franklin Pitman and his wife Almira ",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.7222527265548706
+      },
+      "c1": {
+        "routed_idx": 12,
+        "best_score": 0.09163776785135269
+      }
+    },
+    {
+      "ood_idx": 28,
+      "text_preview": " maintain the navigation channel has also hampered the industry . Currently , efforts are being made to revive the shipp",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.5352436304092407
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.13511383533477783
+      }
+    },
+    {
+      "ood_idx": 29,
+      "text_preview": " plays for a draw , and does so well , then Black can hardly avoid this without taking obvious risks . \" Adorj\u00e1n goes so",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.40926116704940796
+      },
+      "c1": {
+        "routed_idx": 12,
+        "best_score": 0.1401423215866089
+      }
+    }
+  ]
+}

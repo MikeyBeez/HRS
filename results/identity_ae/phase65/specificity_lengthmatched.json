@@ -1,0 +1,456 @@
+{
+  "config": {
+    "n_ood": 30,
+    "seed": 0,
+    "ood_source": "wikitext-2-raw-v1 train",
+    "length_sampling": "drawn with replacement from in-library held-out paraphrase lengths",
+    "length_distribution_summary": {
+      "n": 60,
+      "min": 6,
+      "max": 16,
+      "mean": 10.933333333333334
+    }
+  },
+  "in_library_summary": {
+    "c0b": {
+      "mean": 0.9309389938910803,
+      "p05": 0.8038862526416779,
+      "p95": 0.9880554556846619
+    },
+    "c1": {
+      "mean": 0.24570683402319748,
+      "p05": 0.07959546968340873,
+      "p95": 0.34503188729286194
+    }
+  },
+  "ood_summary_lengthmatched": {
+    "c0b": {
+      "mean": 0.3660418859372536,
+      "min": 0.05176877602934837,
+      "max": 0.7449102401733398,
+      "p50": 0.3445749282836914
+    },
+    "c1": {
+      "mean": 0.10611222138007483,
+      "min": 0.008451901376247406,
+      "max": 0.2140844166278839,
+      "p50": 0.10186271369457245
+    }
+  },
+  "ood_summary_128tok_reference": {
+    "c0b": {
+      "mean": 0.5107858697573344,
+      "min": 0.1992374062538147,
+      "max": 0.7370491623878479
+    },
+    "c1": {
+      "mean": 0.12264148692289988,
+      "min": 0.049394868314266205,
+      "max": 0.22263285517692566
+    }
+  },
+  "calibration_lengthmatched": {
+    "tau_at_95_recall_c0b": 0.8038862526416779,
+    "tau_at_95_recall_c1": 0.07959546968340873,
+    "ood_fp_rate_c0b": 0.0,
+    "ood_fp_rate_c1": 0.7,
+    "separation_gap_c0b": 0.5648971079538266,
+    "separation_gap_c1": 0.13959461264312267,
+    "recall_at_zero_ood_fp_c0b": 1.0,
+    "recall_at_zero_ood_fp_c1": 0.7,
+    "tau_at_zero_ood_fp_c0b": 0.7449102411733398,
+    "tau_at_zero_ood_fp_c1": 0.2140844176278839
+  },
+  "ood_per_query": [
+    {
+      "ood_idx": 0,
+      "len": 12,
+      "text_preview": " Triple J 's Hottest 100 in 2000 . The album",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.28096428513526917
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.13502970337867737
+      }
+    },
+    {
+      "ood_idx": 1,
+      "len": 11,
+      "text_preview": " Rupp Arena in Lexington . The Lexington Herald @-",
+      "c0b": {
+        "routed_idx": 5,
+        "best_score": 0.43265002965927124
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.034718528389930725
+      }
+    },
+    {
+      "ood_idx": 2,
+      "len": 12,
+      "text_preview": " its manufacturer 's trials in September and underwent the State acceptance",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.3454440236091614
+      },
+      "c1": {
+        "routed_idx": 7,
+        "best_score": 0.08989536762237549
+      }
+    },
+    {
+      "ood_idx": 3,
+      "len": 13,
+      "text_preview": " and mid @-@ West but lost parts of the Northeast and",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.1414850950241089
+      },
+      "c1": {
+        "routed_idx": 12,
+        "best_score": 0.06720679253339767
+      }
+    },
+    {
+      "ood_idx": 4,
+      "len": 10,
+      "text_preview": " from Zurich to Johannesburg on a South African Airways",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.5308699607849121
+      },
+      "c1": {
+        "routed_idx": 9,
+        "best_score": 0.06833828240633011
+      }
+    },
+    {
+      "ood_idx": 5,
+      "len": 13,
+      "text_preview": " of the hills and Roman countryside , the Pantheons , religious",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.2397124171257019
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.061508797109127045
+      }
+    },
+    {
+      "ood_idx": 6,
+      "len": 9,
+      "text_preview": " as part of the 1930 renumbering of",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.2613428831100464
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.11210651695728302
+      }
+    },
+    {
+      "ood_idx": 7,
+      "len": 14,
+      "text_preview": " its acquisition by Carlton International Media in 1999 , Thunderbirds was digitally rem",
+      "c0b": {
+        "routed_idx": 14,
+        "best_score": 0.6689349412918091
+      },
+      "c1": {
+        "routed_idx": 9,
+        "best_score": 0.03724896162748337
+      }
+    },
+    {
+      "ood_idx": 8,
+      "len": 12,
+      "text_preview": " the offspring and it is in them that it finds its crown",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.17458367347717285
+      },
+      "c1": {
+        "routed_idx": 10,
+        "best_score": 0.18761605024337769
+      }
+    },
+    {
+      "ood_idx": 9,
+      "len": 10,
+      "text_preview": " , and water filtration . Six major forces",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.3284701406955719
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.06347701698541641
+      }
+    },
+    {
+      "ood_idx": 10,
+      "len": 6,
+      "text_preview": "or , chief editorial writer for",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.3872089385986328
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.05574154108762741
+      }
+    },
+    {
+      "ood_idx": 11,
+      "len": 13,
+      "text_preview": " 100 @,@ 000 voters , about half of Baltimore 's",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.34370583295822144
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.08681748062372208
+      }
+    },
+    {
+      "ood_idx": 12,
+      "len": 6,
+      "text_preview": " colour . They inhabit the tops",
+      "c0b": {
+        "routed_idx": 13,
+        "best_score": 0.5529830455780029
+      },
+      "c1": {
+        "routed_idx": 12,
+        "best_score": 0.09945543110370636
+      }
+    },
+    {
+      "ood_idx": 13,
+      "len": 12,
+      "text_preview": " film reveals the appearance of Blofeld , who was",
+      "c0b": {
+        "routed_idx": 3,
+        "best_score": 0.3056221008300781
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.1668703854084015
+      }
+    },
+    {
+      "ood_idx": 14,
+      "len": 6,
+      "text_preview": "kelstein claims that an equival",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.7449102401733398
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.1808532178401947
+      }
+    },
+    {
+      "ood_idx": 15,
+      "len": 13,
+      "text_preview": " picture was created : the stop motion @-@ animated feature film",
+      "c0b": {
+        "routed_idx": 3,
+        "best_score": 0.4853847026824951
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.10477489978075027
+      }
+    },
+    {
+      "ood_idx": 16,
+      "len": 13,
+      "text_preview": " 36 crosses the Trent \u2013 Severn Waterway and intersects the",
+      "c0b": {
+        "routed_idx": 0,
+        "best_score": 0.5642125606536865
+      },
+      "c1": {
+        "routed_idx": 15,
+        "best_score": 0.008451901376247406
+      }
+    },
+    {
+      "ood_idx": 17,
+      "len": 9,
+      "text_preview": " University ; Deep Thought development paved the way for",
+      "c0b": {
+        "routed_idx": 1,
+        "best_score": 0.6109621524810791
+      },
+      "c1": {
+        "routed_idx": 10,
+        "best_score": 0.08283448219299316
+      }
+    },
+    {
+      "ood_idx": 18,
+      "len": 12,
+      "text_preview": " on typography ( the \" arrangement and appearance of text \"",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.09715442359447479
+      },
+      "c1": {
+        "routed_idx": 12,
+        "best_score": 0.1406240016222
+      }
+    },
+    {
+      "ood_idx": 19,
+      "len": 12,
+      "text_preview": " plans , but Munei was ignorant of the origin of",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.2446684092283249
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.12452124804258347
+      }
+    },
+    {
+      "ood_idx": 20,
+      "len": 13,
+      "text_preview": " In 1791 , under the rule of the British Governor @-",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.07366009056568146
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.12452239543199539
+      }
+    },
+    {
+      "ood_idx": 21,
+      "len": 14,
+      "text_preview": " pleased to think of my own book The Gutenberg Galaxy as a footnote to",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.6983250379562378
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.20159223675727844
+      }
+    },
+    {
+      "ood_idx": 22,
+      "len": 13,
+      "text_preview": " soon became surrounded by a squatters ' camp . Known as McK",
+      "c0b": {
+        "routed_idx": 14,
+        "best_score": 0.5105988383293152
+      },
+      "c1": {
+        "routed_idx": 15,
+        "best_score": 0.09586892277002335
+      }
+    },
+    {
+      "ood_idx": 23,
+      "len": 9,
+      "text_preview": " himself by using his last bullet to ignite dynam",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.6294615864753723
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.09345556795597076
+      }
+    },
+    {
+      "ood_idx": 24,
+      "len": 6,
+      "text_preview": " , scoring the third goal to",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.052546001970767975
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.10426999628543854
+      }
+    },
+    {
+      "ood_idx": 25,
+      "len": 6,
+      "text_preview": " development . After several delays ,",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.05176877602934837
+      },
+      "c1": {
+        "routed_idx": 9,
+        "best_score": 0.11102811247110367
+      }
+    },
+    {
+      "ood_idx": 26,
+      "len": 12,
+      "text_preview": " Highway in Omaha was designated through Omaha in 1913 . Crossing the",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.37030112743377686
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.048713602125644684
+      }
+    },
+    {
+      "ood_idx": 27,
+      "len": 10,
+      "text_preview": " a romantic relationship , but Zack is killed at the",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.1635480374097824
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.1435985565185547
+      }
+    },
+    {
+      "ood_idx": 28,
+      "len": 11,
+      "text_preview": " no \" numerically significant \" changes in the age distribution",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.33619004487991333
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.2140844166278839
+      }
+    },
+    {
+      "ood_idx": 29,
+      "len": 12,
+      "text_preview": " several villages and causing Oman to retreat into the forests . The",
+      "c0b": {
+        "routed_idx": 0,
+        "best_score": 0.35358718037605286
+      },
+      "c1": {
+        "routed_idx": 14,
+        "best_score": 0.13814222812652588
+      }
+    }
+  ]
+}
