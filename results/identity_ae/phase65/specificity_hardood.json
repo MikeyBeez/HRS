@@ -1,0 +1,1072 @@
+{
+  "config": {
+    "n_hard_ood_entities": 20,
+    "n_paraphrases_per": 3,
+    "n_hard_ood_total": 60,
+    "seed": 0
+  },
+  "in_library_summary": {
+    "c0b": {
+      "mean": 0.9309389938910803,
+      "p05": 0.8038862526416779
+    },
+    "c1": {
+      "mean": 0.24570683402319748,
+      "p05": 0.07959546968340873
+    }
+  },
+  "ood_summary_hard": {
+    "c0b": {
+      "mean": 0.893233346939087,
+      "min": 0.7198491096496582,
+      "max": 0.9680359363555908,
+      "p50": 0.8941695094108582,
+      "by_type": {
+        "numeric": 0.8814184943834941,
+        "entity": 0.9043316761652629,
+        "technical": 0.8928324858347575,
+        "fact": 0.8943507313728333
+      }
+    },
+    "c1": {
+      "mean": 0.145839189303418,
+      "min": 0.03703833743929863,
+      "max": 0.28412535786628723,
+      "p50": 0.13855187594890594
+    }
+  },
+  "calibration_hard": {
+    "tau_at_95_recall_c0b": 0.8038862526416779,
+    "tau_at_95_recall_c1": 0.07959546968340873,
+    "ood_fp_rate_c0b": 0.9166666666666666,
+    "ood_fp_rate_c1": 0.9166666666666666,
+    "separation_gap_c0b": 0.0377056469519933,
+    "separation_gap_c1": 0.09986764471977949,
+    "recall_at_zero_ood_fp_c0b": 0.25,
+    "recall_at_zero_ood_fp_c1": 0.4,
+    "tau_at_zero_ood_fp_c0b": 0.9680359373555908,
+    "tau_at_zero_ood_fp_c1": 0.28412535886628726
+  },
+  "ood_per_query": [
+    {
+      "ood_idx": 0,
+      "para_idx": 0,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the orbital facility?",
+      "ood_paraphrase": "I need the access code for the orbital facility.",
+      "c0b": {
+        "routed_idx": 2,
+        "best_score": 0.7806554436683655,
+        "routed_lib_prompt": "What is the system access code for the eastern facility?"
+      },
+      "c1": {
+        "routed_idx": 1,
+        "best_score": 0.13557174801826477,
+        "routed_lib_prompt": "What is the system access code for the southern facility?"
+      }
+    },
+    {
+      "ood_idx": 0,
+      "para_idx": 1,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the orbital facility?",
+      "ood_paraphrase": "Look up the orbital facility's access code.",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.9326719641685486,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.15571941435337067,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 0,
+      "para_idx": 2,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the orbital facility?",
+      "ood_paraphrase": "Access code, orbital facility?",
+      "c0b": {
+        "routed_idx": 1,
+        "best_score": 0.9461708068847656,
+        "routed_lib_prompt": "What is the system access code for the southern facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.03869426250457764,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 1,
+      "para_idx": 0,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the coastal facility?",
+      "ood_paraphrase": "I need the access code for the coastal facility.",
+      "c0b": {
+        "routed_idx": 0,
+        "best_score": 0.7608704566955566,
+        "routed_lib_prompt": "What is the system access code for the northern facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.13861525058746338,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 1,
+      "para_idx": 1,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the coastal facility?",
+      "ood_paraphrase": "Look up the coastal facility's access code.",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.942207396030426,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.07378484308719635,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 1,
+      "para_idx": 2,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the coastal facility?",
+      "ood_paraphrase": "Access code, coastal facility?",
+      "c0b": {
+        "routed_idx": 1,
+        "best_score": 0.9352620244026184,
+        "routed_lib_prompt": "What is the system access code for the southern facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.0890728086233139,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 2,
+      "para_idx": 0,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the highland facility?",
+      "ood_paraphrase": "I need the access code for the highland facility.",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.7198491096496582,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      },
+      "c1": {
+        "routed_idx": 2,
+        "best_score": 0.1612919270992279,
+        "routed_lib_prompt": "What is the system access code for the eastern facility?"
+      }
+    },
+    {
+      "ood_idx": 2,
+      "para_idx": 1,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the highland facility?",
+      "ood_paraphrase": "Look up the highland facility's access code.",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.9332557916641235,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.13142624497413635,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 2,
+      "para_idx": 2,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the highland facility?",
+      "ood_paraphrase": "Access code, highland facility?",
+      "c0b": {
+        "routed_idx": 1,
+        "best_score": 0.9347736239433289,
+        "routed_lib_prompt": "What is the system access code for the southern facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.03703833743929863,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 3,
+      "para_idx": 0,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the basement facility?",
+      "ood_paraphrase": "I need the access code for the basement facility.",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.7775135636329651,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.21474026143550873,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 3,
+      "para_idx": 1,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the basement facility?",
+      "ood_paraphrase": "Look up the basement facility's access code.",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.9357227087020874,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.12862667441368103,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 3,
+      "para_idx": 2,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the basement facility?",
+      "ood_paraphrase": "Access code, basement facility?",
+      "c0b": {
+        "routed_idx": 1,
+        "best_score": 0.9405738115310669,
+        "routed_lib_prompt": "What is the system access code for the southern facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.04180733859539032,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 4,
+      "para_idx": 0,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the rooftop facility?",
+      "ood_paraphrase": "I need the access code for the rooftop facility.",
+      "c0b": {
+        "routed_idx": 1,
+        "best_score": 0.8101281523704529,
+        "routed_lib_prompt": "What is the system access code for the southern facility?"
+      },
+      "c1": {
+        "routed_idx": 1,
+        "best_score": 0.13345377147197723,
+        "routed_lib_prompt": "What is the system access code for the southern facility?"
+      }
+    },
+    {
+      "ood_idx": 4,
+      "para_idx": 1,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the rooftop facility?",
+      "ood_paraphrase": "Look up the rooftop facility's access code.",
+      "c0b": {
+        "routed_idx": 4,
+        "best_score": 0.9252421855926514,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      },
+      "c1": {
+        "routed_idx": 4,
+        "best_score": 0.18692205846309662,
+        "routed_lib_prompt": "What is the system access code for the central facility?"
+      }
+    },
+    {
+      "ood_idx": 4,
+      "para_idx": 2,
+      "type": "numeric",
+      "ood_prompt": "What is the system access code for the rooftop facility?",
+      "ood_paraphrase": "Access code, rooftop facility?",
+      "c0b": {
+        "routed_idx": 0,
+        "best_score": 0.9463803768157959,
+        "routed_lib_prompt": "What is the system access code for the northern facility?"
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.08456075191497803,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      }
+    },
+    {
+      "ood_idx": 5,
+      "para_idx": 0,
+      "type": "entity",
+      "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+      "ood_paraphrase": "I'm trying to find when Specialist Anya Morales made the discovery.",
+      "c0b": {
+        "routed_idx": 5,
+        "best_score": 0.8816125392913818,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.15777181088924408,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 5,
+      "para_idx": 1,
+      "type": "entity",
+      "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+      "ood_paraphrase": "Date of breakthrough by Specialist Anya Morales?",
+      "c0b": {
+        "routed_idx": 6,
+        "best_score": 0.9449722766876221,
+        "routed_lib_prompt": "When did Professor Kian Nakamura make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 8,
+        "best_score": 0.09779077768325806,
+        "routed_lib_prompt": "When did Commander Yuki Petrov make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 5,
+      "para_idx": 2,
+      "type": "entity",
+      "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+      "ood_paraphrase": "Tell me the date Specialist Anya Morales made the breakthrough.",
+      "c0b": {
+        "routed_idx": 5,
+        "best_score": 0.8646857738494873,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 8,
+        "best_score": 0.20249229669570923,
+        "routed_lib_prompt": "When did Commander Yuki Petrov make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 6,
+      "para_idx": 0,
+      "type": "entity",
+      "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+      "ood_paraphrase": "I'm trying to find when Operative Chen Volkov made the discovery.",
+      "c0b": {
+        "routed_idx": 5,
+        "best_score": 0.8733508586883545,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 6,
+        "best_score": 0.09024500846862793,
+        "routed_lib_prompt": "When did Professor Kian Nakamura make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 6,
+      "para_idx": 1,
+      "type": "entity",
+      "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+      "ood_paraphrase": "Date of breakthrough by Operative Chen Volkov?",
+      "c0b": {
+        "routed_idx": 8,
+        "best_score": 0.936638355255127,
+        "routed_lib_prompt": "When did Commander Yuki Petrov make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 8,
+        "best_score": 0.08689923584461212,
+        "routed_lib_prompt": "When did Commander Yuki Petrov make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 6,
+      "para_idx": 2,
+      "type": "entity",
+      "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+      "ood_paraphrase": "Tell me the date Operative Chen Volkov made the breakthrough.",
+      "c0b": {
+        "routed_idx": 5,
+        "best_score": 0.8518876433372498,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 8,
+        "best_score": 0.11737623065710068,
+        "routed_lib_prompt": "When did Commander Yuki Petrov make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 7,
+      "para_idx": 0,
+      "type": "entity",
+      "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+      "ood_paraphrase": "I'm trying to find when Researcher Fatima Okonkwo made the discovery.",
+      "c0b": {
+        "routed_idx": 5,
+        "best_score": 0.8992549180984497,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.13296383619308472,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 7,
+      "para_idx": 1,
+      "type": "entity",
+      "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+      "ood_paraphrase": "Date of breakthrough by Researcher Fatima Okonkwo?",
+      "c0b": {
+        "routed_idx": 6,
+        "best_score": 0.9439040422439575,
+        "routed_lib_prompt": "When did Professor Kian Nakamura make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 6,
+        "best_score": 0.1384885013103485,
+        "routed_lib_prompt": "When did Professor Kian Nakamura make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 7,
+      "para_idx": 2,
+      "type": "entity",
+      "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+      "ood_paraphrase": "Tell me the date Researcher Fatima Okonkwo made the breakthrough.",
+      "c0b": {
+        "routed_idx": 5,
+        "best_score": 0.8847919702529907,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 6,
+        "best_score": 0.16496971249580383,
+        "routed_lib_prompt": "When did Professor Kian Nakamura make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 8,
+      "para_idx": 0,
+      "type": "entity",
+      "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+      "ood_paraphrase": "I'm trying to find when Engineer Dmitri Svensson made the discovery.",
+      "c0b": {
+        "routed_idx": 5,
+        "best_score": 0.8836570978164673,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 6,
+        "best_score": 0.12046506255865097,
+        "routed_lib_prompt": "When did Professor Kian Nakamura make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 8,
+      "para_idx": 1,
+      "type": "entity",
+      "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+      "ood_paraphrase": "Date of breakthrough by Engineer Dmitri Svensson?",
+      "c0b": {
+        "routed_idx": 6,
+        "best_score": 0.9396399259567261,
+        "routed_lib_prompt": "When did Professor Kian Nakamura make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 8,
+        "best_score": 0.14104703068733215,
+        "routed_lib_prompt": "When did Commander Yuki Petrov make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 8,
+      "para_idx": 2,
+      "type": "entity",
+      "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+      "ood_paraphrase": "Tell me the date Engineer Dmitri Svensson made the breakthrough.",
+      "c0b": {
+        "routed_idx": 6,
+        "best_score": 0.8816893696784973,
+        "routed_lib_prompt": "When did Professor Kian Nakamura make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 8,
+        "best_score": 0.14218035340309143,
+        "routed_lib_prompt": "When did Commander Yuki Petrov make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 9,
+      "para_idx": 0,
+      "type": "entity",
+      "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+      "ood_paraphrase": "I'm trying to find when Analyst Priya Gutierrez made the discovery.",
+      "c0b": {
+        "routed_idx": 5,
+        "best_score": 0.911200761795044,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 5,
+        "best_score": 0.11279875040054321,
+        "routed_lib_prompt": "When did Dr. Elara Voss make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 9,
+      "para_idx": 1,
+      "type": "entity",
+      "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+      "ood_paraphrase": "Date of breakthrough by Analyst Priya Gutierrez?",
+      "c0b": {
+        "routed_idx": 7,
+        "best_score": 0.9521156549453735,
+        "routed_lib_prompt": "When did Agent Sarah Thornhill make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 7,
+        "best_score": 0.15923532843589783,
+        "routed_lib_prompt": "When did Agent Sarah Thornhill make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 9,
+      "para_idx": 2,
+      "type": "entity",
+      "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+      "ood_paraphrase": "Tell me the date Analyst Priya Gutierrez made the breakthrough.",
+      "c0b": {
+        "routed_idx": 8,
+        "best_score": 0.9155739545822144,
+        "routed_lib_prompt": "When did Commander Yuki Petrov make their breakthrough discovery?"
+      },
+      "c1": {
+        "routed_idx": 8,
+        "best_score": 0.136305034160614,
+        "routed_lib_prompt": "When did Commander Yuki Petrov make their breakthrough discovery?"
+      }
+    },
+    {
+      "ood_idx": 10,
+      "para_idx": 0,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+      "ood_paraphrase": "I need the centrifuge's critical threshold in kilonewtons.",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.9121549129486084,
+        "routed_lib_prompt": "What is the critical threshold of the telescope in gigahertz?"
+      },
+      "c1": {
+        "routed_idx": 11,
+        "best_score": 0.2481796145439148,
+        "routed_lib_prompt": "What is the critical threshold of the accelerator in megapascals?"
+      }
+    },
+    {
+      "ood_idx": 10,
+      "para_idx": 1,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+      "ood_paraphrase": "Look up the critical kilonewtons for the centrifuge.",
+      "c0b": {
+        "routed_idx": 11,
+        "best_score": 0.8890841007232666,
+        "routed_lib_prompt": "What is the critical threshold of the accelerator in megapascals?"
+      },
+      "c1": {
+        "routed_idx": 11,
+        "best_score": 0.28412535786628723,
+        "routed_lib_prompt": "What is the critical threshold of the accelerator in megapascals?"
+      }
+    },
+    {
+      "ood_idx": 10,
+      "para_idx": 2,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+      "ood_paraphrase": "Critical centrifuge value, in kilonewtons?",
+      "c0b": {
+        "routed_idx": 11,
+        "best_score": 0.9497992992401123,
+        "routed_lib_prompt": "What is the critical threshold of the accelerator in megapascals?"
+      },
+      "c1": {
+        "routed_idx": 11,
+        "best_score": 0.13695034384727478,
+        "routed_lib_prompt": "What is the critical threshold of the accelerator in megapascals?"
+      }
+    },
+    {
+      "ood_idx": 11,
+      "para_idx": 0,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+      "ood_paraphrase": "I need the cryostat's critical threshold in microtesla.",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.86398845911026,
+        "routed_lib_prompt": "What is the critical threshold of the telescope in gigahertz?"
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.18517450988292694,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      }
+    },
+    {
+      "ood_idx": 11,
+      "para_idx": 1,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+      "ood_paraphrase": "Look up the critical microtesla for the cryostat.",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.8390992283821106,
+        "routed_lib_prompt": "What is the critical threshold of the telescope in gigahertz?"
+      },
+      "c1": {
+        "routed_idx": 12,
+        "best_score": 0.15905138850212097,
+        "routed_lib_prompt": "What is the critical threshold of the telescope in gigahertz?"
+      }
+    },
+    {
+      "ood_idx": 11,
+      "para_idx": 2,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+      "ood_paraphrase": "Critical cryostat value, in microtesla?",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.9314630627632141,
+        "routed_lib_prompt": "What is the critical threshold of the telescope in gigahertz?"
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.06687156111001968,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      }
+    },
+    {
+      "ood_idx": 12,
+      "para_idx": 0,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+      "ood_paraphrase": "I need the magnetron's critical threshold in femtoseconds.",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.8715558052062988,
+        "routed_lib_prompt": "What is the critical threshold of the telescope in gigahertz?"
+      },
+      "c1": {
+        "routed_idx": 10,
+        "best_score": 0.1962912231683731,
+        "routed_lib_prompt": "What is the critical threshold of the reactor in kelvin?"
+      }
+    },
+    {
+      "ood_idx": 12,
+      "para_idx": 1,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+      "ood_paraphrase": "Look up the critical femtoseconds for the magnetron.",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.8727301359176636,
+        "routed_lib_prompt": "What is the critical threshold of the telescope in gigahertz?"
+      },
+      "c1": {
+        "routed_idx": 11,
+        "best_score": 0.12656232714653015,
+        "routed_lib_prompt": "What is the critical threshold of the accelerator in megapascals?"
+      }
+    },
+    {
+      "ood_idx": 12,
+      "para_idx": 2,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+      "ood_paraphrase": "Critical magnetron value, in femtoseconds?",
+      "c0b": {
+        "routed_idx": 13,
+        "best_score": 0.9396549463272095,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.10817112773656845,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      }
+    },
+    {
+      "ood_idx": 13,
+      "para_idx": 0,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+      "ood_paraphrase": "I need the synchrotron's critical threshold in petabytes.",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.9001662135124207,
+        "routed_lib_prompt": "What is the critical threshold of the telescope in gigahertz?"
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.18798978626728058,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      }
+    },
+    {
+      "ood_idx": 13,
+      "para_idx": 1,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+      "ood_paraphrase": "Look up the critical petabytes for the synchrotron.",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.8690940141677856,
+        "routed_lib_prompt": "What is the critical threshold of the telescope in gigahertz?"
+      },
+      "c1": {
+        "routed_idx": 11,
+        "best_score": 0.1273762285709381,
+        "routed_lib_prompt": "What is the critical threshold of the accelerator in megapascals?"
+      }
+    },
+    {
+      "ood_idx": 13,
+      "para_idx": 2,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+      "ood_paraphrase": "Critical synchrotron value, in petabytes?",
+      "c0b": {
+        "routed_idx": 13,
+        "best_score": 0.9371176958084106,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.10987626016139984,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      }
+    },
+    {
+      "ood_idx": 14,
+      "para_idx": 0,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+      "ood_paraphrase": "I need the interferometer's critical threshold in exajoules.",
+      "c0b": {
+        "routed_idx": 13,
+        "best_score": 0.8530685305595398,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.2237393707036972,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      }
+    },
+    {
+      "ood_idx": 14,
+      "para_idx": 1,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+      "ood_paraphrase": "Look up the critical exajoules for the interferometer.",
+      "c0b": {
+        "routed_idx": 13,
+        "best_score": 0.8326953649520874,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.1658143252134323,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      }
+    },
+    {
+      "ood_idx": 14,
+      "para_idx": 2,
+      "type": "technical",
+      "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+      "ood_paraphrase": "Critical interferometer value, in exajoules?",
+      "c0b": {
+        "routed_idx": 12,
+        "best_score": 0.9308155179023743,
+        "routed_lib_prompt": "What is the critical threshold of the telescope in gigahertz?"
+      },
+      "c1": {
+        "routed_idx": 13,
+        "best_score": 0.11420156806707382,
+        "routed_lib_prompt": "What is the critical threshold of the spectrometer in nanometers?"
+      }
+    },
+    {
+      "ood_idx": 15,
+      "para_idx": 0,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+      "ood_paraphrase": "I'm looking up the signatory count for the Harbinger Protocol.",
+      "c0b": {
+        "routed_idx": 16,
+        "best_score": 0.8537604212760925,
+        "routed_lib_prompt": "How many signatories does the Blackwater Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 16,
+        "best_score": 0.10388340801000595,
+        "routed_lib_prompt": "How many signatories does the Blackwater Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 15,
+      "para_idx": 1,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+      "ood_paraphrase": "Required signatories on the Harbinger Protocol?",
+      "c0b": {
+        "routed_idx": 17,
+        "best_score": 0.9510653018951416,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 16,
+        "best_score": 0.1601162850856781,
+        "routed_lib_prompt": "How many signatories does the Blackwater Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 15,
+      "para_idx": 2,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+      "ood_paraphrase": "Tell me the signatory requirement of the Harbinger Protocol.",
+      "c0b": {
+        "routed_idx": 16,
+        "best_score": 0.8017534017562866,
+        "routed_lib_prompt": "How many signatories does the Blackwater Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 16,
+        "best_score": 0.20270058512687683,
+        "routed_lib_prompt": "How many signatories does the Blackwater Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 16,
+      "para_idx": 0,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+      "ood_paraphrase": "I'm looking up the signatory count for the Sentinel Protocol.",
+      "c0b": {
+        "routed_idx": 17,
+        "best_score": 0.8690150380134583,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 19,
+        "best_score": 0.12358364462852478,
+        "routed_lib_prompt": "How many signatories does the Eclipse Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 16,
+      "para_idx": 1,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+      "ood_paraphrase": "Required signatories on the Sentinel Protocol?",
+      "c0b": {
+        "routed_idx": 17,
+        "best_score": 0.9680359363555908,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 19,
+        "best_score": 0.20713314414024353,
+        "routed_lib_prompt": "How many signatories does the Eclipse Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 16,
+      "para_idx": 2,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+      "ood_paraphrase": "Tell me the signatory requirement of the Sentinel Protocol.",
+      "c0b": {
+        "routed_idx": 18,
+        "best_score": 0.8635334968566895,
+        "routed_lib_prompt": "How many signatories does the Vanguard Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 16,
+        "best_score": 0.1800992786884308,
+        "routed_lib_prompt": "How many signatories does the Blackwater Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 17,
+      "para_idx": 0,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+      "ood_paraphrase": "I'm looking up the signatory count for the Obsidian Protocol.",
+      "c0b": {
+        "routed_idx": 17,
+        "best_score": 0.8805818557739258,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 17,
+        "best_score": 0.14743874967098236,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 17,
+      "para_idx": 1,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+      "ood_paraphrase": "Required signatories on the Obsidian Protocol?",
+      "c0b": {
+        "routed_idx": 17,
+        "best_score": 0.9593251347541809,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 17,
+        "best_score": 0.2447213977575302,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 17,
+      "para_idx": 2,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+      "ood_paraphrase": "Tell me the signatory requirement of the Obsidian Protocol.",
+      "c0b": {
+        "routed_idx": 16,
+        "best_score": 0.8734142780303955,
+        "routed_lib_prompt": "How many signatories does the Blackwater Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 17,
+        "best_score": 0.15272504091262817,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 18,
+      "para_idx": 0,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Crimson Protocol require?",
+      "ood_paraphrase": "I'm looking up the signatory count for the Crimson Protocol.",
+      "c0b": {
+        "routed_idx": 17,
+        "best_score": 0.8661904335021973,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 17,
+        "best_score": 0.08000314980745316,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 18,
+      "para_idx": 1,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Crimson Protocol require?",
+      "ood_paraphrase": "Required signatories on the Crimson Protocol?",
+      "c0b": {
+        "routed_idx": 17,
+        "best_score": 0.9589464068412781,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 19,
+        "best_score": 0.1682419776916504,
+        "routed_lib_prompt": "How many signatories does the Eclipse Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 18,
+      "para_idx": 2,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Crimson Protocol require?",
+      "ood_paraphrase": "Tell me the signatory requirement of the Crimson Protocol.",
+      "c0b": {
+        "routed_idx": 18,
+        "best_score": 0.8810453414916992,
+        "routed_lib_prompt": "How many signatories does the Vanguard Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 16,
+        "best_score": 0.2334178239107132,
+        "routed_lib_prompt": "How many signatories does the Blackwater Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 19,
+      "para_idx": 0,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Phantom Protocol require?",
+      "ood_paraphrase": "I'm looking up the signatory count for the Phantom Protocol.",
+      "c0b": {
+        "routed_idx": 17,
+        "best_score": 0.8702675104141235,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 17,
+        "best_score": 0.12892113626003265,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 19,
+      "para_idx": 1,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Phantom Protocol require?",
+      "ood_paraphrase": "Required signatories on the Phantom Protocol?",
+      "c0b": {
+        "routed_idx": 17,
+        "best_score": 0.958095133304596,
+        "routed_lib_prompt": "How many signatories does the Meridian Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 19,
+        "best_score": 0.21550840139389038,
+        "routed_lib_prompt": "How many signatories does the Eclipse Protocol require?"
+      }
+    },
+    {
+      "ood_idx": 19,
+      "para_idx": 2,
+      "type": "fact",
+      "ood_prompt": "How many signatories does the Phantom Protocol require?",
+      "ood_paraphrase": "Tell me the signatory requirement of the Phantom Protocol.",
+      "c0b": {
+        "routed_idx": 18,
+        "best_score": 0.8602312803268433,
+        "routed_lib_prompt": "How many signatories does the Vanguard Protocol require?"
+      },
+      "c1": {
+        "routed_idx": 16,
+        "best_score": 0.20912767946720123,
+        "routed_lib_prompt": "How many signatories does the Blackwater Protocol require?"
+      }
+    }
+  ]
+}
