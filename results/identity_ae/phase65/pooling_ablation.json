@@ -1,0 +1,4871 @@
+{
+  "config": {
+    "strategies": [
+      "mean",
+      "last",
+      "first",
+      "first3",
+      "last3",
+      "max"
+    ],
+    "seed": 0
+  },
+  "summaries": [
+    {
+      "strategy": "mean",
+      "in_library_top1": 0.7666666666666667,
+      "in_mean": 0.8936333914597829,
+      "ood_mean": 0.8826521813869477,
+      "separation": 0.010981210072835257,
+      "tau_95": 0.7566039890050889,
+      "hard_ood_fp_at_95": 0.9666666666666667,
+      "tau_zero_fp": 0.956933857010437,
+      "in_library_recall_at_0_fp": 0.06666666666666667
+    },
+    {
+      "strategy": "last",
+      "in_library_top1": 0.06666666666666667,
+      "in_mean": 0.9279147277275721,
+      "ood_mean": 0.9294192105531692,
+      "separation": -0.0015044828255971199,
+      "tau_95": 0.8924408257007599,
+      "hard_ood_fp_at_95": 0.9666666666666667,
+      "tau_zero_fp": 0.9677947173581848,
+      "in_library_recall_at_0_fp": 0.03333333333333333
+    },
+    {
+      "strategy": "first",
+      "in_library_top1": 0.03333333333333333,
+      "in_mean": 0.7850932235519091,
+      "ood_mean": 0.7851574957370758,
+      "separation": -6.427218516669164e-05,
+      "tau_95": 0.4644523739814758,
+      "hard_ood_fp_at_95": 0.9666666666666667,
+      "tau_zero_fp": 0.9552397737966308,
+      "in_library_recall_at_0_fp": 0.08333333333333333
+    },
+    {
+      "strategy": "first3",
+      "in_library_top1": 0.11666666666666667,
+      "in_mean": 0.7842788532376289,
+      "ood_mean": 0.7846069231629371,
+      "separation": -0.00032806992530820533,
+      "tau_95": 0.31740869879722594,
+      "hard_ood_fp_at_95": 0.9,
+      "tau_zero_fp": 0.9405578384862671,
+      "in_library_recall_at_0_fp": 0.0
+    },
+    {
+      "strategy": "last3",
+      "in_library_top1": 0.6166666666666667,
+      "in_mean": 0.754516473909219,
+      "ood_mean": 0.7265124380588531,
+      "separation": 0.028004035850365927,
+      "tau_95": 0.41176648139953614,
+      "hard_ood_fp_at_95": 0.9333333333333333,
+      "tau_zero_fp": 0.9551441679464111,
+      "in_library_recall_at_0_fp": 0.13333333333333333
+    },
+    {
+      "strategy": "max",
+      "in_library_top1": 0.7166666666666667,
+      "in_mean": 0.9491246034701665,
+      "ood_mean": 0.9368620296319325,
+      "separation": 0.012262573838233926,
+      "tau_95": 0.859065380692482,
+      "hard_ood_fp_at_95": 0.9666666666666667,
+      "tau_zero_fp": 0.9741264591680298,
+      "in_library_recall_at_0_fp": 0.2
+    }
+  ],
+  "details": {
+    "mean": {
+      "in_library_top1": 0.7666666666666667,
+      "in_mean": 0.8936333914597829,
+      "ood_mean": 0.8826521813869477,
+      "separation": 0.010981210072835257,
+      "tau_95": 0.7566039890050889,
+      "hard_ood_fp_at_95": 0.9666666666666667,
+      "tau_zero_fp": 0.956933857010437,
+      "in_library_recall_at_0_fp": 0.06666666666666667,
+      "in_scores": [
+        0.7566322088241577,
+        0.9225732088088989,
+        0.9372232556343079,
+        0.7560678124427795,
+        0.9019902944564819,
+        0.9361486434936523,
+        0.7442595362663269,
+        0.89679354429245,
+        0.941712498664856,
+        0.7676043510437012,
+        0.9226486682891846,
+        0.9366232752799988,
+        0.7409326434135437,
+        0.920584499835968,
+        0.9274842143058777,
+        0.8412191867828369,
+        0.940586507320404,
+        0.8664811849594116,
+        0.8364487290382385,
+        0.9360000491142273,
+        0.8815422058105469,
+        0.8757258057594299,
+        0.9503727555274963,
+        0.8971725702285767,
+        0.8813567161560059,
+        0.9516558647155762,
+        0.8969223499298096,
+        0.8660110831260681,
+        0.9322407245635986,
+        0.8563023805618286,
+        0.8809942603111267,
+        0.8197082877159119,
+        0.9540908336639404,
+        0.9246217012405396,
+        0.9240134358406067,
+        0.9615565538406372,
+        0.9082527160644531,
+        0.8828529715538025,
+        0.9545693397521973,
+        0.9218642115592957,
+        0.921122133731842,
+        0.9481693506240845,
+        0.9253015518188477,
+        0.8837817907333374,
+        0.955461323261261,
+        0.8746059536933899,
+        0.9675703048706055,
+        0.8728683590888977,
+        0.8661818504333496,
+        0.9629942178726196,
+        0.8384886980056763,
+        0.8619486689567566,
+        0.9655888080596924,
+        0.867687463760376,
+        0.8754264712333679,
+        0.9487161636352539,
+        0.8429094552993774,
+        0.8743438124656677,
+        0.9475399255752563,
+        0.8654561042785645
+      ],
+      "ood_scores": [
+        0.7580451965332031,
+        0.9221090078353882,
+        0.9257663488388062,
+        0.7596155405044556,
+        0.9256951808929443,
+        0.9334873557090759,
+        0.6915207505226135,
+        0.9116130471229553,
+        0.9123868942260742,
+        0.7403564453125,
+        0.9247391819953918,
+        0.9412102103233337,
+        0.7829525470733643,
+        0.9202820062637329,
+        0.9350911378860474,
+        0.8609826564788818,
+        0.9275385737419128,
+        0.8549978733062744,
+        0.853066086769104,
+        0.9326344132423401,
+        0.8459210395812988,
+        0.8846232891082764,
+        0.9328574538230896,
+        0.8806288838386536,
+        0.8690719604492188,
+        0.9188070297241211,
+        0.8809109926223755,
+        0.9026265144348145,
+        0.9415988922119141,
+        0.9081192016601562,
+        0.9124323129653931,
+        0.8853836059570312,
+        0.9466502666473389,
+        0.873848021030426,
+        0.8212182521820068,
+        0.9284316301345825,
+        0.8733069896697998,
+        0.8597642183303833,
+        0.9328380823135376,
+        0.8791653513908386,
+        0.8566790819168091,
+        0.9279072880744934,
+        0.8603891134262085,
+        0.8229771852493286,
+        0.9230440855026245,
+        0.8373042345046997,
+        0.9420868754386902,
+        0.822834849357605,
+        0.8679661750793457,
+        0.9567229151725769,
+        0.8566120862960815,
+        0.8433881998062134,
+        0.9428194165229797,
+        0.8548113107681274,
+        0.8572935461997986,
+        0.9540252685546875,
+        0.863556981086731,
+        0.8637363910675049,
+        0.956933856010437,
+        0.8557475805282593
+      ],
+      "in_records": [
+        {
+          "true_idx": 0,
+          "routed_idx": 1,
+          "best_score": 0.7566322088241577,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 4,
+          "best_score": 0.9225732088088989,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 1,
+          "best_score": 0.9372232556343079,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 1,
+          "best_score": 0.7560678124427795,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 4,
+          "best_score": 0.9019902944564819,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 1,
+          "best_score": 0.9361486434936523,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 1,
+          "best_score": 0.7442595362663269,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 0,
+          "best_score": 0.89679354429245,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 1,
+          "best_score": 0.941712498664856,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 3,
+          "best_score": 0.7676043510437012,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 4,
+          "best_score": 0.9226486682891846,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 1,
+          "best_score": 0.9366232752799988,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 4,
+          "best_score": 0.7409326434135437,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 4,
+          "best_score": 0.920584499835968,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 1,
+          "best_score": 0.9274842143058777,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 5,
+          "best_score": 0.8412191867828369,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 5,
+          "best_score": 0.940586507320404,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 5,
+          "best_score": 0.8664811849594116,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 6,
+          "best_score": 0.8364487290382385,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 6,
+          "best_score": 0.9360000491142273,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 6,
+          "best_score": 0.8815422058105469,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 7,
+          "best_score": 0.8757258057594299,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 7,
+          "best_score": 0.9503727555274963,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 7,
+          "best_score": 0.8971725702285767,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 8,
+          "best_score": 0.8813567161560059,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 8,
+          "best_score": 0.9516558647155762,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 8,
+          "best_score": 0.8969223499298096,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 9,
+          "best_score": 0.8660110831260681,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 9,
+          "best_score": 0.9322407245635986,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 9,
+          "best_score": 0.8563023805618286,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 10,
+          "best_score": 0.8809942603111267,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 10,
+          "best_score": 0.8197082877159119,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 10,
+          "best_score": 0.9540908336639404,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 11,
+          "best_score": 0.9246217012405396,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 11,
+          "best_score": 0.9240134358406067,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 11,
+          "best_score": 0.9615565538406372,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 12,
+          "best_score": 0.9082527160644531,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 12,
+          "best_score": 0.8828529715538025,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 12,
+          "best_score": 0.9545693397521973,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 13,
+          "best_score": 0.9218642115592957,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 13,
+          "best_score": 0.921122133731842,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 13,
+          "best_score": 0.9481693506240845,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 14,
+          "best_score": 0.9253015518188477,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 14,
+          "best_score": 0.8837817907333374,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 14,
+          "best_score": 0.955461323261261,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 15,
+          "best_score": 0.8746059536933899,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 15,
+          "best_score": 0.9675703048706055,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 15,
+          "best_score": 0.8728683590888977,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 16,
+          "best_score": 0.8661818504333496,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 16,
+          "best_score": 0.9629942178726196,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 16,
+          "best_score": 0.8384886980056763,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 15,
+          "best_score": 0.8619486689567566,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 19,
+          "best_score": 0.9655888080596924,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 17,
+          "best_score": 0.867687463760376,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 19,
+          "best_score": 0.8754264712333679,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 18,
+          "best_score": 0.9487161636352539,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 18,
+          "best_score": 0.8429094552993774,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.8743438124656677,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 17,
+          "best_score": 0.9475399255752563,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.8654561042785645,
+          "routed_correct": 1
+        }
+      ],
+      "ood_records": [
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.7580451965332031,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.9221090078353882,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.9257663488388062,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.7596155405044556,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.9256951808929443,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.9334873557090759,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.6915207505226135,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.9116130471229553,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.9123868942260742,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.7403564453125,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.9247391819953918,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.9412102103233337,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.7829525470733643,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.9202820062637329,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.9350911378860474,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.8609826564788818,
+          "routed_idx": 5
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.9275385737419128,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.8549978733062744,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.853066086769104,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.9326344132423401,
+          "routed_idx": 8
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.8459210395812988,
+          "routed_idx": 8
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.8846232891082764,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.9328574538230896,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.8806288838386536,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.8690719604492188,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.9188070297241211,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.8809109926223755,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9026265144348145,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9415988922119141,
+          "routed_idx": 6
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9081192016601562,
+          "routed_idx": 10
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.9124323129653931,
+          "routed_idx": 11
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.8853836059570312,
+          "routed_idx": 11
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.9466502666473389,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.873848021030426,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.8212182521820068,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.9284316301345825,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.8733069896697998,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.8597642183303833,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.9328380823135376,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.8791653513908386,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.8566790819168091,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.9279072880744934,
+          "routed_idx": 11
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.8603891134262085,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.8229771852493286,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.9230440855026245,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.8373042345046997,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9420868754386902,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.822834849357605,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.8679661750793457,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9567229151725769,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.8566120862960815,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.8433881998062134,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9428194165229797,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.8548113107681274,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.8572935461997986,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.9540252685546875,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.863556981086731,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.8637363910675049,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.956933856010437,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.8557475805282593,
+          "routed_idx": 16
+        }
+      ]
+    },
+    "last": {
+      "in_library_top1": 0.06666666666666667,
+      "in_mean": 0.9279147277275721,
+      "ood_mean": 0.9294192105531692,
+      "separation": -0.0015044828255971199,
+      "tau_95": 0.8924408257007599,
+      "hard_ood_fp_at_95": 0.9666666666666667,
+      "tau_zero_fp": 0.9677947173581848,
+      "in_library_recall_at_0_fp": 0.03333333333333333,
+      "in_scores": [
+        0.9049724340438843,
+        0.8877823352813721,
+        0.9597579836845398,
+        0.9183722734451294,
+        0.921935498714447,
+        0.9664689898490906,
+        0.8940494060516357,
+        0.927163302898407,
+        0.9566572904586792,
+        0.9168822765350342,
+        0.9258624911308289,
+        0.922612190246582,
+        0.9300332069396973,
+        0.9210740327835083,
+        0.9478410482406616,
+        0.9297292232513428,
+        0.9651217460632324,
+        0.920409083366394,
+        0.926885724067688,
+        0.9697754383087158,
+        0.8926860094070435,
+        0.9310900568962097,
+        0.9224639534950256,
+        0.9266455173492432,
+        0.9116063117980957,
+        0.956508219242096,
+        0.9033266305923462,
+        0.9311268925666809,
+        0.9502378106117249,
+        0.9182634353637695,
+        0.9240357279777527,
+        0.9189984798431396,
+        0.9727410078048706,
+        0.9424118995666504,
+        0.9317207336425781,
+        0.9644966125488281,
+        0.9241625666618347,
+        0.9160197973251343,
+        0.9216998219490051,
+        0.8993058800697327,
+        0.9072914719581604,
+        0.9560672044754028,
+        0.9202491044998169,
+        0.919205904006958,
+        0.9477074146270752,
+        0.9276320934295654,
+        0.9293169379234314,
+        0.9193356037139893,
+        0.9321743249893188,
+        0.958599328994751,
+        0.9152634143829346,
+        0.8838059306144714,
+        0.9475715756416321,
+        0.9175847768783569,
+        0.905421793460846,
+        0.9283729791641235,
+        0.9284533858299255,
+        0.9222413301467896,
+        0.9607953429222107,
+        0.874860405921936
+      ],
+      "ood_scores": [
+        0.9232295751571655,
+        0.9357292652130127,
+        0.9541371464729309,
+        0.9187321662902832,
+        0.9204765558242798,
+        0.9649848937988281,
+        0.8832986950874329,
+        0.916151762008667,
+        0.9573193192481995,
+        0.9245794415473938,
+        0.8953174352645874,
+        0.9623135328292847,
+        0.9241002798080444,
+        0.9196101427078247,
+        0.9656197428703308,
+        0.9276624917984009,
+        0.9291305541992188,
+        0.9001683592796326,
+        0.9364051818847656,
+        0.9661325216293335,
+        0.948951244354248,
+        0.9385901093482971,
+        0.9606283903121948,
+        0.898449718952179,
+        0.8932950496673584,
+        0.9439080953598022,
+        0.9169303178787231,
+        0.8950058221817017,
+        0.9677947163581848,
+        0.9375602006912231,
+        0.9280143976211548,
+        0.9300017952919006,
+        0.9607131481170654,
+        0.8935526013374329,
+        0.8956459760665894,
+        0.964142918586731,
+        0.9165010452270508,
+        0.9261560440063477,
+        0.9570494294166565,
+        0.9111020565032959,
+        0.9037137627601624,
+        0.9620120525360107,
+        0.9261046648025513,
+        0.8979361057281494,
+        0.9574114680290222,
+        0.9334372878074646,
+        0.9332441091537476,
+        0.8891189694404602,
+        0.9178562760353088,
+        0.9352919459342957,
+        0.9091251492500305,
+        0.9145352840423584,
+        0.9639602303504944,
+        0.9244414567947388,
+        0.9261839389801025,
+        0.9632396697998047,
+        0.9180326461791992,
+        0.9073522090911865,
+        0.9666092991828918,
+        0.9064539670944214
+      ],
+      "in_records": [
+        {
+          "true_idx": 0,
+          "routed_idx": 4,
+          "best_score": 0.9049724340438843,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 4,
+          "best_score": 0.8877823352813721,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 10,
+          "best_score": 0.9597579836845398,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 4,
+          "best_score": 0.9183722734451294,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 4,
+          "best_score": 0.921935498714447,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 16,
+          "best_score": 0.9664689898490906,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 4,
+          "best_score": 0.8940494060516357,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 4,
+          "best_score": 0.927163302898407,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 1,
+          "best_score": 0.9566572904586792,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 4,
+          "best_score": 0.9168822765350342,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 4,
+          "best_score": 0.9258624911308289,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 10,
+          "best_score": 0.922612190246582,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 4,
+          "best_score": 0.9300332069396973,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 4,
+          "best_score": 0.9210740327835083,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 19,
+          "best_score": 0.9478410482406616,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 4,
+          "best_score": 0.9297292232513428,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 6,
+          "best_score": 0.9651217460632324,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 4,
+          "best_score": 0.920409083366394,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 4,
+          "best_score": 0.926885724067688,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 10,
+          "best_score": 0.9697754383087158,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 4,
+          "best_score": 0.8926860094070435,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 4,
+          "best_score": 0.9310900568962097,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 6,
+          "best_score": 0.9224639534950256,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 4,
+          "best_score": 0.9266455173492432,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 4,
+          "best_score": 0.9116063117980957,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 12,
+          "best_score": 0.956508219242096,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 4,
+          "best_score": 0.9033266305923462,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 0,
+          "best_score": 0.9311268925666809,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 19,
+          "best_score": 0.9502378106117249,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 4,
+          "best_score": 0.9182634353637695,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 4,
+          "best_score": 0.9240357279777527,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 4,
+          "best_score": 0.9189984798431396,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 12,
+          "best_score": 0.9727410078048706,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 4,
+          "best_score": 0.9424118995666504,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 4,
+          "best_score": 0.9317207336425781,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 12,
+          "best_score": 0.9644966125488281,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 4,
+          "best_score": 0.9241625666618347,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 0,
+          "best_score": 0.9160197973251343,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 8,
+          "best_score": 0.9216998219490051,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 4,
+          "best_score": 0.8993058800697327,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 3,
+          "best_score": 0.9072914719581604,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 5,
+          "best_score": 0.9560672044754028,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 4,
+          "best_score": 0.9202491044998169,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 4,
+          "best_score": 0.919205904006958,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 19,
+          "best_score": 0.9477074146270752,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 4,
+          "best_score": 0.9276320934295654,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 6,
+          "best_score": 0.9293169379234314,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 1,
+          "best_score": 0.9193356037139893,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 4,
+          "best_score": 0.9321743249893188,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 16,
+          "best_score": 0.958599328994751,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 4,
+          "best_score": 0.9152634143829346,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 4,
+          "best_score": 0.8838059306144714,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 8,
+          "best_score": 0.9475715756416321,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 4,
+          "best_score": 0.9175847768783569,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 4,
+          "best_score": 0.905421793460846,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 19,
+          "best_score": 0.9283729791641235,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 4,
+          "best_score": 0.9284533858299255,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 4,
+          "best_score": 0.9222413301467896,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.9607953429222107,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 4,
+          "best_score": 0.874860405921936,
+          "routed_correct": 0
+        }
+      ],
+      "ood_records": [
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.9232295751571655,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.9357292652130127,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.9541371464729309,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.9187321662902832,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.9204765558242798,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.9649848937988281,
+          "routed_idx": 10
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.8832986950874329,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.916151762008667,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.9573193192481995,
+          "routed_idx": 10
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.9245794415473938,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.8953174352645874,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.9623135328292847,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.9241002798080444,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.9196101427078247,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.9656197428703308,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.9276624917984009,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.9291305541992188,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.9001683592796326,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.9364051818847656,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.9661325216293335,
+          "routed_idx": 10
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.948951244354248,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.9385901093482971,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.9606283903121948,
+          "routed_idx": 6
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.898449718952179,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.8932950496673584,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.9439080953598022,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.9169303178787231,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.8950058221817017,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9677947163581848,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9375602006912231,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.9280143976211548,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.9300017952919006,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.9607131481170654,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.8935526013374329,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.8956459760665894,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.964142918586731,
+          "routed_idx": 10
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.9165010452270508,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.9261560440063477,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.9570494294166565,
+          "routed_idx": 10
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.9111020565032959,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.9037137627601624,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.9620120525360107,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.9261046648025513,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.8979361057281494,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.9574114680290222,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9334372878074646,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9332441091537476,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.8891189694404602,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9178562760353088,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9352919459342957,
+          "routed_idx": 6
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9091251492500305,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9145352840423584,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9639602303504944,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9244414567947388,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.9261839389801025,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.9632396697998047,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.9180326461791992,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9073522090911865,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9666092991828918,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9064539670944214,
+          "routed_idx": 3
+        }
+      ]
+    },
+    "first": {
+      "in_library_top1": 0.03333333333333333,
+      "in_mean": 0.7850932235519091,
+      "ood_mean": 0.7851574957370758,
+      "separation": -6.427218516669164e-05,
+      "tau_95": 0.4644523739814758,
+      "hard_ood_fp_at_95": 0.9666666666666667,
+      "tau_zero_fp": 0.9552397737966308,
+      "in_library_recall_at_0_fp": 0.08333333333333333,
+      "in_scores": [
+        0.42346417903900146,
+        0.9514718055725098,
+        0.9409081339836121,
+        0.47031277418136597,
+        0.9326741695404053,
+        0.9268039464950562,
+        0.4256119728088379,
+        0.925432562828064,
+        0.9464234709739685,
+        0.46479105949401855,
+        0.9164890050888062,
+        0.9293451309204102,
+        0.4996856153011322,
+        0.9427287578582764,
+        0.9232752323150635,
+        0.49564898014068604,
+        0.9383290410041809,
+        0.9375899434089661,
+        0.45801734924316406,
+        0.9430915117263794,
+        0.8552765846252441,
+        0.503614068031311,
+        0.920788049697876,
+        0.9302014708518982,
+        0.502642035484314,
+        0.9484322667121887,
+        0.9317542314529419,
+        0.5138435363769531,
+        0.9457967281341553,
+        0.9196590185165405,
+        0.49261972308158875,
+        0.9393512010574341,
+        0.9599158763885498,
+        0.5020971298217773,
+        0.9499615430831909,
+        0.9205464720726013,
+        0.5081011652946472,
+        0.9094257354736328,
+        0.961144208908081,
+        0.511259138584137,
+        0.8741986155509949,
+        0.9699761867523193,
+        0.511421799659729,
+        0.9474536180496216,
+        0.9437738060951233,
+        0.4814865291118622,
+        0.9412993788719177,
+        0.9245290756225586,
+        0.49589788913726807,
+        0.955045759677887,
+        0.9017964601516724,
+        0.5126235485076904,
+        0.9587143063545227,
+        0.9266574382781982,
+        0.5042363405227661,
+        0.9614786505699158,
+        0.9099900722503662,
+        0.5075226426124573,
+        0.93715500831604,
+        0.9218114614486694
+      ],
+      "ood_scores": [
+        0.5150866508483887,
+        0.941831111907959,
+        0.9251736402511597,
+        0.5025932192802429,
+        0.918576180934906,
+        0.8902032971382141,
+        0.5165131092071533,
+        0.9384338855743408,
+        0.9203029870986938,
+        0.5048356652259827,
+        0.9468597769737244,
+        0.9097732305526733,
+        0.49976998567581177,
+        0.9488877058029175,
+        0.932658314704895,
+        0.5092739462852478,
+        0.951341450214386,
+        0.8777145147323608,
+        0.4923381209373474,
+        0.9337811470031738,
+        0.8948066234588623,
+        0.4992862343788147,
+        0.9435387849807739,
+        0.9229100942611694,
+        0.5204675197601318,
+        0.9266998171806335,
+        0.9009178280830383,
+        0.5033517479896545,
+        0.9392672181129456,
+        0.9288634657859802,
+        0.5100845694541931,
+        0.906464159488678,
+        0.9501041173934937,
+        0.49882209300994873,
+        0.9522992372512817,
+        0.9396388530731201,
+        0.46710044145584106,
+        0.9375892281532288,
+        0.9471324682235718,
+        0.46374207735061646,
+        0.9441050291061401,
+        0.9537301659584045,
+        0.5128738284111023,
+        0.9494333863258362,
+        0.9552397727966309,
+        0.45595911145210266,
+        0.9522049427032471,
+        0.9256625771522522,
+        0.47474467754364014,
+        0.9391235113143921,
+        0.8802492618560791,
+        0.4913938045501709,
+        0.9469594359397888,
+        0.905224084854126,
+        0.5106276273727417,
+        0.9458696842193604,
+        0.9003422260284424,
+        0.4714539349079132,
+        0.9489928483963013,
+        0.9162253141403198
+      ],
+      "in_records": [
+        {
+          "true_idx": 0,
+          "routed_idx": 19,
+          "best_score": 0.42346417903900146,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 2,
+          "best_score": 0.9514718055725098,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 10,
+          "best_score": 0.9409081339836121,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 19,
+          "best_score": 0.47031277418136597,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 13,
+          "best_score": 0.9326741695404053,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 4,
+          "best_score": 0.9268039464950562,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 19,
+          "best_score": 0.4256119728088379,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 13,
+          "best_score": 0.925432562828064,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 4,
+          "best_score": 0.9464234709739685,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 19,
+          "best_score": 0.46479105949401855,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 13,
+          "best_score": 0.9164890050888062,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 4,
+          "best_score": 0.9293451309204102,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 18,
+          "best_score": 0.4996856153011322,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 13,
+          "best_score": 0.9427287578582764,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 4,
+          "best_score": 0.9232752323150635,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 19,
+          "best_score": 0.49564898014068604,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 16,
+          "best_score": 0.9383290410041809,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 0,
+          "best_score": 0.9375899434089661,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 19,
+          "best_score": 0.45801734924316406,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 13,
+          "best_score": 0.9430915117263794,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 2,
+          "best_score": 0.8552765846252441,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 19,
+          "best_score": 0.503614068031311,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 4,
+          "best_score": 0.920788049697876,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 4,
+          "best_score": 0.9302014708518982,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 18,
+          "best_score": 0.502642035484314,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 6,
+          "best_score": 0.9484322667121887,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 12,
+          "best_score": 0.9317542314529419,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 19,
+          "best_score": 0.5138435363769531,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 1,
+          "best_score": 0.9457967281341553,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 5,
+          "best_score": 0.9196590185165405,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 19,
+          "best_score": 0.49261972308158875,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 15,
+          "best_score": 0.9393512010574341,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 16,
+          "best_score": 0.9599158763885498,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 19,
+          "best_score": 0.5020971298217773,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 7,
+          "best_score": 0.9499615430831909,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 9,
+          "best_score": 0.9205464720726013,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 19,
+          "best_score": 0.5081011652946472,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 5,
+          "best_score": 0.9094257354736328,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 1,
+          "best_score": 0.961144208908081,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 19,
+          "best_score": 0.511259138584137,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 18,
+          "best_score": 0.8741986155509949,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 16,
+          "best_score": 0.9699761867523193,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 19,
+          "best_score": 0.511421799659729,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 16,
+          "best_score": 0.9474536180496216,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 6,
+          "best_score": 0.9437738060951233,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 19,
+          "best_score": 0.4814865291118622,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 1,
+          "best_score": 0.9412993788719177,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 1,
+          "best_score": 0.9245290756225586,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 19,
+          "best_score": 0.49589788913726807,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 2,
+          "best_score": 0.955045759677887,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 3,
+          "best_score": 0.9017964601516724,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 19,
+          "best_score": 0.5126235485076904,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 9,
+          "best_score": 0.9587143063545227,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 0,
+          "best_score": 0.9266574382781982,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 19,
+          "best_score": 0.5042363405227661,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 1,
+          "best_score": 0.9614786505699158,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 14,
+          "best_score": 0.9099900722503662,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.5075226426124573,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 13,
+          "best_score": 0.93715500831604,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 13,
+          "best_score": 0.9218114614486694,
+          "routed_correct": 0
+        }
+      ],
+      "ood_records": [
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.5150866508483887,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.941831111907959,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.9251736402511597,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.5025932192802429,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.918576180934906,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.8902032971382141,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.5165131092071533,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.9384338855743408,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.9203029870986938,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.5048356652259827,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.9468597769737244,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.9097732305526733,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.49976998567581177,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.9488877058029175,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.932658314704895,
+          "routed_idx": 5
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.5092739462852478,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.951341450214386,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.8777145147323608,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.4923381209373474,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.9337811470031738,
+          "routed_idx": 9
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.8948066234588623,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.4992862343788147,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.9435387849807739,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.9229100942611694,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.5204675197601318,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.9266998171806335,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.9009178280830383,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.5033517479896545,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9392672181129456,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9288634657859802,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.5100845694541931,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.906464159488678,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.9501041173934937,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.49882209300994873,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.9522992372512817,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.9396388530731201,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.46710044145584106,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.9375892281532288,
+          "routed_idx": 8
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.9471324682235718,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.46374207735061646,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.9441050291061401,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.9537301659584045,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.5128738284111023,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.9494333863258362,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.9552397727966309,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.45595911145210266,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9522049427032471,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9256625771522522,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.47474467754364014,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9391235113143921,
+          "routed_idx": 8
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.8802492618560791,
+          "routed_idx": 11
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.4913938045501709,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9469594359397888,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.905224084854126,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.5106276273727417,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.9458696842193604,
+          "routed_idx": 6
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.9003422260284424,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.4714539349079132,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9489928483963013,
+          "routed_idx": 6
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9162253141403198,
+          "routed_idx": 4
+        }
+      ]
+    },
+    "first3": {
+      "in_library_top1": 0.11666666666666667,
+      "in_mean": 0.7842788532376289,
+      "ood_mean": 0.7846069231629371,
+      "separation": -0.00032806992530820533,
+      "tau_95": 0.31740869879722594,
+      "hard_ood_fp_at_95": 0.9,
+      "tau_zero_fp": 0.9405578384862671,
+      "in_library_recall_at_0_fp": 0.0,
+      "in_scores": [
+        0.3609391450881958,
+        0.7990114688873291,
+        0.8779711127281189,
+        0.3276830315589905,
+        0.7571021318435669,
+        0.8882107734680176,
+        0.3345525562763214,
+        0.8250070810317993,
+        0.9040234088897705,
+        0.3006436824798584,
+        0.8407705426216125,
+        0.8914397954940796,
+        0.2953062057495117,
+        0.8388698697090149,
+        0.9147294759750366,
+        0.8648386001586914,
+        0.8827899694442749,
+        0.9251897931098938,
+        0.8871982097625732,
+        0.875999927520752,
+        0.9211385250091553,
+        0.8917574286460876,
+        0.8560031652450562,
+        0.922278642654419,
+        0.8617373704910278,
+        0.8181577324867249,
+        0.8556408882141113,
+        0.847831130027771,
+        0.8794173002243042,
+        0.8597849607467651,
+        0.3182910680770874,
+        0.788631796836853,
+        0.9010200500488281,
+        0.3340846598148346,
+        0.8408771753311157,
+        0.9011167287826538,
+        0.3792376220226288,
+        0.8336273431777954,
+        0.900384247303009,
+        0.34319794178009033,
+        0.8252217769622803,
+        0.8964760303497314,
+        0.2916628122329712,
+        0.815520167350769,
+        0.8977097272872925,
+        0.8953386545181274,
+        0.8974116444587708,
+        0.9300185441970825,
+        0.8536865711212158,
+        0.9170240163803101,
+        0.9271872043609619,
+        0.8782480955123901,
+        0.9065554738044739,
+        0.8824248909950256,
+        0.8764243125915527,
+        0.9194650650024414,
+        0.9205292463302612,
+        0.8775061368942261,
+        0.905774712562561,
+        0.8960535526275635
+      ],
+      "ood_scores": [
+        0.3439289927482605,
+        0.8503100872039795,
+        0.8510358333587646,
+        0.2771803140640259,
+        0.8261915445327759,
+        0.9116028547286987,
+        0.31489062309265137,
+        0.8115901350975037,
+        0.8979837894439697,
+        0.2926351726055145,
+        0.8092281222343445,
+        0.8976744413375854,
+        0.29183417558670044,
+        0.8518363237380981,
+        0.9101249575614929,
+        0.8968268632888794,
+        0.8779626488685608,
+        0.8901223540306091,
+        0.867737352848053,
+        0.8603224754333496,
+        0.9405578374862671,
+        0.8755759000778198,
+        0.8708698749542236,
+        0.914020299911499,
+        0.8996434211730957,
+        0.7974582314491272,
+        0.9133268594741821,
+        0.9046097993850708,
+        0.8715811967849731,
+        0.9239440560340881,
+        0.338138222694397,
+        0.8077329993247986,
+        0.9048643112182617,
+        0.3912156820297241,
+        0.7962709665298462,
+        0.8846215009689331,
+        0.2763466536998749,
+        0.8182108402252197,
+        0.8511609435081482,
+        0.3100387752056122,
+        0.8410489559173584,
+        0.887873113155365,
+        0.3898993134498596,
+        0.7858648300170898,
+        0.8931628465652466,
+        0.8520026206970215,
+        0.9056777358055115,
+        0.9170091152191162,
+        0.8894801139831543,
+        0.9134288430213928,
+        0.9140665531158447,
+        0.8765895366668701,
+        0.9090654850006104,
+        0.9172191619873047,
+        0.87330162525177,
+        0.8800171613693237,
+        0.9228322505950928,
+        0.8569869995117188,
+        0.9099565148353577,
+        0.9197251796722412
+      ],
+      "in_records": [
+        {
+          "true_idx": 0,
+          "routed_idx": 19,
+          "best_score": 0.3609391450881958,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 6,
+          "best_score": 0.7990114688873291,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 1,
+          "best_score": 0.8779711127281189,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 19,
+          "best_score": 0.3276830315589905,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 16,
+          "best_score": 0.7571021318435669,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 2,
+          "best_score": 0.8882107734680176,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 9,
+          "best_score": 0.3345525562763214,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 3,
+          "best_score": 0.8250070810317993,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 2,
+          "best_score": 0.9040234088897705,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 16,
+          "best_score": 0.3006436824798584,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 17,
+          "best_score": 0.8407705426216125,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 0,
+          "best_score": 0.8914397954940796,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 19,
+          "best_score": 0.2953062057495117,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 3,
+          "best_score": 0.8388698697090149,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 2,
+          "best_score": 0.9147294759750366,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 19,
+          "best_score": 0.8648386001586914,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 2,
+          "best_score": 0.8827899694442749,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 3,
+          "best_score": 0.9251897931098938,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 17,
+          "best_score": 0.8871982097625732,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 3,
+          "best_score": 0.875999927520752,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 0,
+          "best_score": 0.9211385250091553,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 19,
+          "best_score": 0.8917574286460876,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 2,
+          "best_score": 0.8560031652450562,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 3,
+          "best_score": 0.922278642654419,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 17,
+          "best_score": 0.8617373704910278,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 0,
+          "best_score": 0.8181577324867249,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 3,
+          "best_score": 0.8556408882141113,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 17,
+          "best_score": 0.847831130027771,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 3,
+          "best_score": 0.8794173002243042,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 1,
+          "best_score": 0.8597849607467651,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 9,
+          "best_score": 0.3182910680770874,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 4,
+          "best_score": 0.788631796836853,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 4,
+          "best_score": 0.9010200500488281,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 19,
+          "best_score": 0.3340846598148346,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 11,
+          "best_score": 0.8408771753311157,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 2,
+          "best_score": 0.9011167287826538,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 9,
+          "best_score": 0.3792376220226288,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 2,
+          "best_score": 0.8336273431777954,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 2,
+          "best_score": 0.900384247303009,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 9,
+          "best_score": 0.34319794178009033,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 3,
+          "best_score": 0.8252217769622803,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 13,
+          "best_score": 0.8964760303497314,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 15,
+          "best_score": 0.2916628122329712,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 6,
+          "best_score": 0.815520167350769,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 14,
+          "best_score": 0.8977097272872925,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 19,
+          "best_score": 0.8953386545181274,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 19,
+          "best_score": 0.8974116444587708,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 3,
+          "best_score": 0.9300185441970825,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 19,
+          "best_score": 0.8536865711212158,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 19,
+          "best_score": 0.9170240163803101,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 1,
+          "best_score": 0.9271872043609619,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 17,
+          "best_score": 0.8782480955123901,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 19,
+          "best_score": 0.9065554738044739,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 0,
+          "best_score": 0.8824248909950256,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 17,
+          "best_score": 0.8764243125915527,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 19,
+          "best_score": 0.9194650650024414,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 4,
+          "best_score": 0.9205292463302612,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.8775061368942261,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.905774712562561,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 0,
+          "best_score": 0.8960535526275635,
+          "routed_correct": 0
+        }
+      ],
+      "ood_records": [
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.3439289927482605,
+          "routed_idx": 9
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.8503100872039795,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.8510358333587646,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.2771803140640259,
+          "routed_idx": 9
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.8261915445327759,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.9116028547286987,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.31489062309265137,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.8115901350975037,
+          "routed_idx": 9
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.8979837894439697,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.2926351726055145,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.8092281222343445,
+          "routed_idx": 9
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.8976744413375854,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.29183417558670044,
+          "routed_idx": 9
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.8518363237380981,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.9101249575614929,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.8968268632888794,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.8779626488685608,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.8901223540306091,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.867737352848053,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.8603224754333496,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.9405578374862671,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.8755759000778198,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.8708698749542236,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.914020299911499,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.8996434211730957,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.7974582314491272,
+          "routed_idx": 10
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.9133268594741821,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9046097993850708,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.8715811967849731,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9239440560340881,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.338138222694397,
+          "routed_idx": 9
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.8077329993247986,
+          "routed_idx": 9
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.9048643112182617,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.3912156820297241,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.7962709665298462,
+          "routed_idx": 9
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.8846215009689331,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.2763466536998749,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.8182108402252197,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.8511609435081482,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.3100387752056122,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.8410489559173584,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.887873113155365,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.3898993134498596,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.7858648300170898,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.8931628465652466,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.8520026206970215,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9056777358055115,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9170091152191162,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.8894801139831543,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9134288430213928,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9140665531158447,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.8765895366668701,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9090654850006104,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9172191619873047,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.87330162525177,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.8800171613693237,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.9228322505950928,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.8569869995117188,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9099565148353577,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9197251796722412,
+          "routed_idx": 4
+        }
+      ]
+    },
+    "last3": {
+      "in_library_top1": 0.6166666666666667,
+      "in_mean": 0.754516473909219,
+      "ood_mean": 0.7265124380588531,
+      "separation": 0.028004035850365927,
+      "tau_95": 0.41176648139953614,
+      "hard_ood_fp_at_95": 0.9333333333333333,
+      "tau_zero_fp": 0.9551441679464111,
+      "in_library_recall_at_0_fp": 0.13333333333333333,
+      "in_scores": [
+        0.9281497001647949,
+        0.6179715394973755,
+        0.920401930809021,
+        0.9276779890060425,
+        0.6342545747756958,
+        0.9381937384605408,
+        0.9188271760940552,
+        0.6109848618507385,
+        0.9556646347045898,
+        0.88364577293396,
+        0.6203145384788513,
+        0.9355728626251221,
+        0.9021644592285156,
+        0.6150742769241333,
+        0.9589279294013977,
+        0.3658328652381897,
+        0.8837173581123352,
+        0.44073864817619324,
+        0.41203582286834717,
+        0.922762393951416,
+        0.464104026556015,
+        0.3389020264148712,
+        0.914298951625824,
+        0.5070334672927856,
+        0.44263458251953125,
+        0.9082478284835815,
+        0.5284831523895264,
+        0.40664899349212646,
+        0.8997795581817627,
+        0.44493454694747925,
+        0.6695489883422852,
+        0.5278248190879822,
+        0.967063307762146,
+        0.7049181461334229,
+        0.6317991018295288,
+        0.9448804259300232,
+        0.7236825227737427,
+        0.5414211750030518,
+        0.9602938890457153,
+        0.8059028387069702,
+        0.6067571640014648,
+        0.9439762830734253,
+        0.7166754007339478,
+        0.6144789457321167,
+        0.935786247253418,
+        0.7447567582130432,
+        0.9703102707862854,
+        0.7531367540359497,
+        0.7574814558029175,
+        0.9332770705223083,
+        0.7800817489624023,
+        0.8130500912666321,
+        0.971117377281189,
+        0.8531768321990967,
+        0.7988882064819336,
+        0.9635989665985107,
+        0.8080559372901917,
+        0.8170221447944641,
+        0.9716864824295044,
+        0.7923588752746582
+      ],
+      "ood_scores": [
+        0.7925854325294495,
+        0.6073269844055176,
+        0.9405860304832458,
+        0.823879599571228,
+        0.603502631187439,
+        0.9325661659240723,
+        0.7351082563400269,
+        0.5885583162307739,
+        0.927857518196106,
+        0.7917377948760986,
+        0.6177163124084473,
+        0.9214494228363037,
+        0.7766340374946594,
+        0.5722914934158325,
+        0.9484359622001648,
+        0.4206993281841278,
+        0.9079363942146301,
+        0.4164958894252777,
+        0.39915406703948975,
+        0.9131804704666138,
+        0.4993000626564026,
+        0.4181031584739685,
+        0.8938298225402832,
+        0.5293962955474854,
+        0.36079084873199463,
+        0.9228852987289429,
+        0.44390130043029785,
+        0.368252694606781,
+        0.8969497680664062,
+        0.41132938861846924,
+        0.7814397215843201,
+        0.7308559417724609,
+        0.9242327213287354,
+        0.5987432599067688,
+        0.5659165382385254,
+        0.8794212341308594,
+        0.5775837898254395,
+        0.6159731149673462,
+        0.9192010164260864,
+        0.7782509922981262,
+        0.5895981192588806,
+        0.9316715002059937,
+        0.5841993689537048,
+        0.6768269538879395,
+        0.8712001442909241,
+        0.6987948417663574,
+        0.9395431280136108,
+        0.7099003195762634,
+        0.7807515859603882,
+        0.9434474110603333,
+        0.7550682425498962,
+        0.7338296175003052,
+        0.9482172727584839,
+        0.7475054264068604,
+        0.7592322826385498,
+        0.9481887817382812,
+        0.753772497177124,
+        0.7683454751968384,
+        0.9551441669464111,
+        0.7414500713348389
+      ],
+      "in_records": [
+        {
+          "true_idx": 0,
+          "routed_idx": 0,
+          "best_score": 0.9281497001647949,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 0,
+          "best_score": 0.6179715394973755,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 0,
+          "best_score": 0.920401930809021,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 1,
+          "best_score": 0.9276779890060425,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 0,
+          "best_score": 0.6342545747756958,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 2,
+          "best_score": 0.9381937384605408,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 2,
+          "best_score": 0.9188271760940552,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 2,
+          "best_score": 0.6109848618507385,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 2,
+          "best_score": 0.9556646347045898,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 3,
+          "best_score": 0.88364577293396,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 0,
+          "best_score": 0.6203145384788513,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 3,
+          "best_score": 0.9355728626251221,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 4,
+          "best_score": 0.9021644592285156,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 0,
+          "best_score": 0.6150742769241333,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 4,
+          "best_score": 0.9589279294013977,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 4,
+          "best_score": 0.3658328652381897,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 7,
+          "best_score": 0.8837173581123352,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 3,
+          "best_score": 0.44073864817619324,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 2,
+          "best_score": 0.41203582286834717,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 17,
+          "best_score": 0.922762393951416,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 0,
+          "best_score": 0.464104026556015,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 4,
+          "best_score": 0.3389020264148712,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 7,
+          "best_score": 0.914298951625824,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 2,
+          "best_score": 0.5070334672927856,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 2,
+          "best_score": 0.44263458251953125,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 7,
+          "best_score": 0.9082478284835815,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 0,
+          "best_score": 0.5284831523895264,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 4,
+          "best_score": 0.40664899349212646,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 7,
+          "best_score": 0.8997795581817627,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 3,
+          "best_score": 0.44493454694747925,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 10,
+          "best_score": 0.6695489883422852,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 0,
+          "best_score": 0.5278248190879822,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 10,
+          "best_score": 0.967063307762146,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 11,
+          "best_score": 0.7049181461334229,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 0,
+          "best_score": 0.6317991018295288,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 11,
+          "best_score": 0.9448804259300232,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 12,
+          "best_score": 0.7236825227737427,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 3,
+          "best_score": 0.5414211750030518,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 12,
+          "best_score": 0.9602938890457153,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 13,
+          "best_score": 0.8059028387069702,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 3,
+          "best_score": 0.6067571640014648,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 13,
+          "best_score": 0.9439762830734253,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 14,
+          "best_score": 0.7166754007339478,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 0,
+          "best_score": 0.6144789457321167,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 14,
+          "best_score": 0.935786247253418,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 15,
+          "best_score": 0.7447567582130432,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 15,
+          "best_score": 0.9703102707862854,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 15,
+          "best_score": 0.7531367540359497,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 16,
+          "best_score": 0.7574814558029175,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 16,
+          "best_score": 0.9332770705223083,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 16,
+          "best_score": 0.7800817489624023,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 17,
+          "best_score": 0.8130500912666321,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 17,
+          "best_score": 0.971117377281189,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 17,
+          "best_score": 0.8531768321990967,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 18,
+          "best_score": 0.7988882064819336,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 18,
+          "best_score": 0.9635989665985107,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 18,
+          "best_score": 0.8080559372901917,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.8170221447944641,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.9716864824295044,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.7923588752746582,
+          "routed_correct": 1
+        }
+      ],
+      "ood_records": [
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.7925854325294495,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.6073269844055176,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.9405860304832458,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.823879599571228,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.603502631187439,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.9325661659240723,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.7351082563400269,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.5885583162307739,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.927857518196106,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.7917377948760986,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.6177163124084473,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.9214494228363037,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.7766340374946594,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.5722914934158325,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.9484359622001648,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.4206993281841278,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.9079363942146301,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.4164958894252777,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.39915406703948975,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.9131804704666138,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.4993000626564026,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.4181031584739685,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.8938298225402832,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.5293962955474854,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.36079084873199463,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.9228852987289429,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.44390130043029785,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.368252694606781,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.8969497680664062,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.41132938861846924,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.7814397215843201,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.7308559417724609,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.9242327213287354,
+          "routed_idx": 8
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.5987432599067688,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.5659165382385254,
+          "routed_idx": 2
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.8794212341308594,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.5775837898254395,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.6159731149673462,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.9192010164260864,
+          "routed_idx": 8
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.7782509922981262,
+          "routed_idx": 8
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.5895981192588806,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.9316715002059937,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.5841993689537048,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.6768269538879395,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.8712001442909241,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.6987948417663574,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9395431280136108,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.7099003195762634,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.7807515859603882,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9434474110603333,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.7550682425498962,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.7338296175003052,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9482172727584839,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.7475054264068604,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.7592322826385498,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.9481887817382812,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.753772497177124,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.7683454751968384,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9551441669464111,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.7414500713348389,
+          "routed_idx": 17
+        }
+      ]
+    },
+    "max": {
+      "in_library_top1": 0.7166666666666667,
+      "in_mean": 0.9491246034701665,
+      "ood_mean": 0.9368620296319325,
+      "separation": 0.012262573838233926,
+      "tau_95": 0.859065380692482,
+      "hard_ood_fp_at_95": 0.9666666666666667,
+      "tau_zero_fp": 0.9741264591680298,
+      "in_library_recall_at_0_fp": 0.2,
+      "in_scores": [
+        0.8590720295906067,
+        0.962087869644165,
+        0.9261081218719482,
+        0.8609660863876343,
+        0.963840126991272,
+        0.9289284944534302,
+        0.8503690361976624,
+        0.9638776779174805,
+        0.9286980628967285,
+        0.8589390516281128,
+        0.9667670130729675,
+        0.9344981908798218,
+        0.8558163642883301,
+        0.9660544395446777,
+        0.933519721031189,
+        0.9742717146873474,
+        0.9772475957870483,
+        0.9252042770385742,
+        0.965927004814148,
+        0.9741203784942627,
+        0.9560579061508179,
+        0.9106286764144897,
+        0.9680050611495972,
+        0.9166067838668823,
+        0.9587424993515015,
+        0.9730719327926636,
+        0.9378379583358765,
+        0.9592260122299194,
+        0.9779923558235168,
+        0.9594640731811523,
+        0.9527184963226318,
+        0.9709964990615845,
+        0.9415296316146851,
+        0.9375826120376587,
+        0.9763588309288025,
+        0.9755631685256958,
+        0.9619085788726807,
+        0.9614112973213196,
+        0.9735733270645142,
+        0.9593229293823242,
+        0.9505497813224792,
+        0.9718235731124878,
+        0.9628090262413025,
+        0.9801734685897827,
+        0.979060173034668,
+        0.9592114686965942,
+        0.9840024709701538,
+        0.9542319774627686,
+        0.9357247948646545,
+        0.9773929119110107,
+        0.9529732465744019,
+        0.95390784740448,
+        0.9769858121871948,
+        0.9461790323257446,
+        0.9503715634346008,
+        0.9829856157302856,
+        0.9509851336479187,
+        0.9398969411849976,
+        0.9794839024543762,
+        0.9538155794143677
+      ],
+      "ood_scores": [
+        0.8696608543395996,
+        0.9534084796905518,
+        0.9217950105667114,
+        0.8497111201286316,
+        0.9606403112411499,
+        0.9283578395843506,
+        0.8395384550094604,
+        0.9534112215042114,
+        0.9390949010848999,
+        0.8636590838432312,
+        0.9616924524307251,
+        0.9212679266929626,
+        0.8912891745567322,
+        0.9565529823303223,
+        0.9138704538345337,
+        0.953281044960022,
+        0.9511059522628784,
+        0.9286044239997864,
+        0.9513541460037231,
+        0.9521971940994263,
+        0.9331422448158264,
+        0.950890302658081,
+        0.948103666305542,
+        0.9405291080474854,
+        0.9347178936004639,
+        0.9527245759963989,
+        0.9473676681518555,
+        0.9520059823989868,
+        0.9483990669250488,
+        0.9477517008781433,
+        0.9411725997924805,
+        0.9507927894592285,
+        0.949641227722168,
+        0.9329434633255005,
+        0.9437779784202576,
+        0.9415116906166077,
+        0.9311921000480652,
+        0.9434978365898132,
+        0.9436168670654297,
+        0.9320294260978699,
+        0.9199787974357605,
+        0.9478433728218079,
+        0.9019945859909058,
+        0.942803144454956,
+        0.947075605392456,
+        0.9368456602096558,
+        0.9604337811470032,
+        0.9418459534645081,
+        0.9498634338378906,
+        0.9708986878395081,
+        0.9214431047439575,
+        0.9166998863220215,
+        0.9713946580886841,
+        0.9488598108291626,
+        0.9502522349357605,
+        0.9741264581680298,
+        0.949449896812439,
+        0.9501352310180664,
+        0.9715819358825684,
+        0.9118943214416504
+      ],
+      "in_records": [
+        {
+          "true_idx": 0,
+          "routed_idx": 0,
+          "best_score": 0.8590720295906067,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 3,
+          "best_score": 0.962087869644165,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 0,
+          "routed_idx": 4,
+          "best_score": 0.9261081218719482,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 0,
+          "best_score": 0.8609660863876343,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 3,
+          "best_score": 0.963840126991272,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 1,
+          "routed_idx": 4,
+          "best_score": 0.9289284944534302,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 0,
+          "best_score": 0.8503690361976624,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 3,
+          "best_score": 0.9638776779174805,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 2,
+          "routed_idx": 4,
+          "best_score": 0.9286980628967285,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 0,
+          "best_score": 0.8589390516281128,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 3,
+          "best_score": 0.9667670130729675,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 3,
+          "routed_idx": 4,
+          "best_score": 0.9344981908798218,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 0,
+          "best_score": 0.8558163642883301,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 4,
+          "best_score": 0.9660544395446777,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 4,
+          "routed_idx": 4,
+          "best_score": 0.933519721031189,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 5,
+          "best_score": 0.9742717146873474,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 5,
+          "best_score": 0.9772475957870483,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 5,
+          "routed_idx": 5,
+          "best_score": 0.9252042770385742,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 6,
+          "best_score": 0.965927004814148,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 6,
+          "best_score": 0.9741203784942627,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 6,
+          "routed_idx": 6,
+          "best_score": 0.9560579061508179,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 5,
+          "best_score": 0.9106286764144897,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 7,
+          "best_score": 0.9680050611495972,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 7,
+          "routed_idx": 4,
+          "best_score": 0.9166067838668823,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 8,
+          "best_score": 0.9587424993515015,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 8,
+          "best_score": 0.9730719327926636,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 8,
+          "routed_idx": 8,
+          "best_score": 0.9378379583358765,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 9,
+          "best_score": 0.9592260122299194,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 9,
+          "best_score": 0.9779923558235168,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 9,
+          "routed_idx": 9,
+          "best_score": 0.9594640731811523,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 10,
+          "best_score": 0.9527184963226318,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 10,
+          "best_score": 0.9709964990615845,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 10,
+          "routed_idx": 10,
+          "best_score": 0.9415296316146851,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 11,
+          "best_score": 0.9375826120376587,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 11,
+          "best_score": 0.9763588309288025,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 11,
+          "routed_idx": 11,
+          "best_score": 0.9755631685256958,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 12,
+          "best_score": 0.9619085788726807,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 12,
+          "best_score": 0.9614112973213196,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 12,
+          "routed_idx": 12,
+          "best_score": 0.9735733270645142,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 13,
+          "best_score": 0.9593229293823242,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 13,
+          "best_score": 0.9505497813224792,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 13,
+          "routed_idx": 13,
+          "best_score": 0.9718235731124878,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 14,
+          "best_score": 0.9628090262413025,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 14,
+          "best_score": 0.9801734685897827,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 14,
+          "routed_idx": 14,
+          "best_score": 0.979060173034668,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 15,
+          "best_score": 0.9592114686965942,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 15,
+          "best_score": 0.9840024709701538,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 15,
+          "routed_idx": 15,
+          "best_score": 0.9542319774627686,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 16,
+          "best_score": 0.9357247948646545,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 16,
+          "best_score": 0.9773929119110107,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 16,
+          "routed_idx": 16,
+          "best_score": 0.9529732465744019,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 19,
+          "best_score": 0.95390784740448,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 17,
+          "best_score": 0.9769858121871948,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 17,
+          "routed_idx": 3,
+          "best_score": 0.9461790323257446,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 18,
+          "best_score": 0.9503715634346008,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 18,
+          "best_score": 0.9829856157302856,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 18,
+          "routed_idx": 1,
+          "best_score": 0.9509851336479187,
+          "routed_correct": 0
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.9398969411849976,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 19,
+          "best_score": 0.9794839024543762,
+          "routed_correct": 1
+        },
+        {
+          "true_idx": 19,
+          "routed_idx": 4,
+          "best_score": 0.9538155794143677,
+          "routed_correct": 0
+        }
+      ],
+      "ood_records": [
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.8696608543395996,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.9534084796905518,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the orbital facility?",
+          "best_score": 0.9217950105667114,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.8497111201286316,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.9606403112411499,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the coastal facility?",
+          "best_score": 0.9283578395843506,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.8395384550094604,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.9534112215042114,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the highland facility?",
+          "best_score": 0.9390949010848999,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.8636590838432312,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.9616924524307251,
+          "routed_idx": 3
+        },
+        {
+          "ood_prompt": "What is the system access code for the basement facility?",
+          "best_score": 0.9212679266929626,
+          "routed_idx": 7
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.8912891745567322,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.9565529823303223,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the system access code for the rooftop facility?",
+          "best_score": 0.9138704538345337,
+          "routed_idx": 17
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.953281044960022,
+          "routed_idx": 5
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.9511059522628784,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "When did Specialist Anya Morales make their breakthrough discovery?",
+          "best_score": 0.9286044239997864,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.9513541460037231,
+          "routed_idx": 5
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.9521971940994263,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "When did Operative Chen Volkov make their breakthrough discovery?",
+          "best_score": 0.9331422448158264,
+          "routed_idx": 0
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.950890302658081,
+          "routed_idx": 5
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.948103666305542,
+          "routed_idx": 8
+        },
+        {
+          "ood_prompt": "When did Researcher Fatima Okonkwo make their breakthrough discovery?",
+          "best_score": 0.9405291080474854,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.9347178936004639,
+          "routed_idx": 5
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.9527245759963989,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "When did Engineer Dmitri Svensson make their breakthrough discovery?",
+          "best_score": 0.9473676681518555,
+          "routed_idx": 1
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9520059823989868,
+          "routed_idx": 5
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9483990669250488,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "When did Analyst Priya Gutierrez make their breakthrough discovery?",
+          "best_score": 0.9477517008781433,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.9411725997924805,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.9507927894592285,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the centrifuge in kilonewtons?",
+          "best_score": 0.949641227722168,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.9329434633255005,
+          "routed_idx": 14
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.9437779784202576,
+          "routed_idx": 14
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the cryostat in microtesla?",
+          "best_score": 0.9415116906166077,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.9311921000480652,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.9434978365898132,
+          "routed_idx": 5
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the magnetron in femtoseconds?",
+          "best_score": 0.9436168670654297,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.9320294260978699,
+          "routed_idx": 14
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.9199787974357605,
+          "routed_idx": 12
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the synchrotron in petabytes?",
+          "best_score": 0.9478433728218079,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.9019945859909058,
+          "routed_idx": 14
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.942803144454956,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "What is the critical threshold of the interferometer in exajoules?",
+          "best_score": 0.947075605392456,
+          "routed_idx": 13
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9368456602096558,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9604337811470032,
+          "routed_idx": 19
+        },
+        {
+          "ood_prompt": "How many signatories does the Harbinger Protocol require?",
+          "best_score": 0.9418459534645081,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9498634338378906,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9708986878395081,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "How many signatories does the Sentinel Protocol require?",
+          "best_score": 0.9214431047439575,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9166998863220215,
+          "routed_idx": 14
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9713946580886841,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "How many signatories does the Obsidian Protocol require?",
+          "best_score": 0.9488598108291626,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.9502522349357605,
+          "routed_idx": 15
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.9741264581680298,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "How many signatories does the Crimson Protocol require?",
+          "best_score": 0.949449896812439,
+          "routed_idx": 4
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9501352310180664,
+          "routed_idx": 16
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9715819358825684,
+          "routed_idx": 18
+        },
+        {
+          "ood_prompt": "How many signatories does the Phantom Protocol require?",
+          "best_score": 0.9118943214416504,
+          "routed_idx": 4
+        }
+      ]
+    }
+  }
+}

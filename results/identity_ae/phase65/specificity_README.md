@@ -120,21 +120,52 @@ The cleanest publishable framing now:
 - `experiments/identity_ae/phase65_w_oodaware.py` — rescue training script
 - `*_run.log` — stdout from each run
 
-## Open questions worth flagging
+## Open questions, partially answered
 
-1. **Is it the mean-pool that's load-bearing?** Last-token L0 might preserve
-   entity information better than mean-pooled L0 (entity tokens often appear
-   late in the question). Worth a 30-second check before committing the
-   "L0 routing operates at template granularity" claim as universal.
+### Pooling ablation (last-token / last-5 / last-10 L0)
 
-2. **Per-adapter entity-match head.** If routing is template-grain, augment
-   each loaded adapter with a small head that verifies entity identity and
-   either returns the answer or rejects. This separates routing from
-   verification, both of which are then easier individually.
+Tested whether the entity-grain failure is mechanistic (mean-pool washes out
+entity tokens) or representational (entities aren't in L0 at all). Result:
+**representational**. See `lasttoken_README.md` for the full table.
 
-3. **Hard-OOD-aware W training.** The rescue used random WikiText negatives.
-   Using the actual hard-OOD distribution (same-template, different-entity)
-   as negatives would likely fix the FP rate, but only by overfitting to that
-   specific OOD distribution. Doesn't generalize, but might be the right
-   move for any closed-domain deployment where you can enumerate near-
-   neighbor templates.
+| variant   | route | in_top1 | hard-OOD FP @ 95% recall |
+|-----------|-------|---------|--------------------------|
+| mean_pool | C1    | 100%    | 95%                      |
+| **last_5**| **C1**| **93%** | **62%**                  |
+| last_10   | C1    | 100%    | 92%                      |
+
+Best variant (last_5/C1) cuts FP from 95% to 62%. Direction is right but
+magnitude is far from a deployment fix. last_1 collapses entirely because
+question-final tokens are punctuation. last_10 reverts to mean_pool numbers.
+Entity tokens carry only weak L0 signal; no positional pooling recovers
+deployment-grade entity discrimination.
+
+The cheap mechanistic rescue is dead. The architecturally correct response is
+option 2 below.
+
+### Still open
+
+1. **Per-adapter entity-match verification head.** Routing is template-grain
+   by design; add a separate stage on the loaded adapter that decides whether
+   to commit or reject. The right architectural fix.
+
+2. **Hard-OOD-aware contrastive training.** Replace random WikiText negatives
+   with same-template-different-entity negatives. Likely fixes hard-OOD FP
+   but only generalizes to enumerable near-neighbor templates — appropriate
+   for closed-domain deployments, not open-world.
+
+## Honest paper scoping
+
+The deployment claim ("general-purpose adapter routing") that the C0b vs C1
+comparison was drifting toward does **not** hold. The publishable claim is:
+
+> Engram-as-address routing achieves 100%/97% intra-library accuracy on
+> Phase 47's library where each adapter has a unique entity instantiation.
+> The architecture has a structural limitation at template-overlapping near-
+> neighbor OOD: when OOD queries share the library's template structure but
+> reference different entities, both raw-L0 (C0b) and trained-projection (C1)
+> stacks fail at ~92% false-positive rate. The failure is representational,
+> not mechanistic — last-N-token pooling and OOD-aware contrastive on random
+> negatives both fail to rescue. The architecture is appropriate for non-
+> overlapping libraries; deployment to open-world routing requires a separate
+> entity-aware verification stage.
