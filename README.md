@@ -141,7 +141,9 @@ PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase53_adapter_clustering
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase65_address_space.py        # ~4 min, trained W partially in base; C0b L0-keys gets 93%
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase65_specificity_hardood.py  # ~1 min, near-neighbor OOD breaks routing at 92% FP
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase69_verification.py         # ~1 min, metadata entity-match verification 100% balanced acc (closed-vocab)
-PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase70_verification_head.py    # ~1 min, per-adapter h_mean_L5 head 90% balanced acc (open-vocab)
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase70_verification_head.py    # ~1 min, per-adapter h_mean_L5 head 90% balanced acc (open-vocab; in-sample calibrated)
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase70_kscaling.py             # ~2 min, K-scaling: per-pair x-FPR invariant 19.6%, end-to-end 65% (honest calibration)
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase71_hard_ood_aware.py       # ~2 min, hard-OOD-aware training drops x-FPR 20.6%->14.7% (partial)
 ```
 
 **Application 2 — engram-compressed KV cache (92% gap closed at 2×):**
