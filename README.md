@@ -146,6 +146,7 @@ PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase70_kscaling.py       
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase71_hard_ood_aware.py       # ~2 min, hard-OOD-aware training drops x-FPR 20.6%->14.7% (partial)
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase72_adapter_aware_base.py   # ~1 min, single-adapter aware base training: composite FAIL (regularizer over-rotates, spillover to general)
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase72c_frozen_adapter.py      # ~3 min, base learns to use frozen rank-8 adapter: passkey retrieval FAIL→PASS, pk_ce 2.14→0.05 (40x lift on fixed signal); strict composite FAIL but architectural mechanism validated
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase73_generalization.py       # ~2 min, generalization test: 0/4 held-out adapters PASS; mean Δ +0.25 nat. Phase 72c improvement is per-adapter, not a general substrate.
 ```
 
 **Application 2 — engram-compressed KV cache (92% gap closed at 2×):**

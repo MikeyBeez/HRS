@@ -1,0 +1,234 @@
+{
+  "config": {
+    "rank": 8,
+    "alpha": 16,
+    "pretrain_steps": 30,
+    "pretrain_lr": 0.0003,
+    "lora_targets": [
+      "blocks.4.attn.qkv",
+      "blocks.4.attn.out_proj",
+      "blocks.4.mlp.fc1",
+      "blocks.4.mlp.fc2",
+      "blocks.5.attn.qkv",
+      "blocks.5.attn.out_proj",
+      "blocks.5.mlp.fc1",
+      "blocks.5.mlp.fc2"
+    ],
+    "seed": 0
+  },
+  "adapters": [
+    {
+      "name": "A_synthetic_QZ9K7M",
+      "type": "numeric_synthetic",
+      "passage": "The access code for the QZ9K7M facility is 47281639.",
+      "passkey": "47281639",
+      "pretrain_passkey_ce": 2.1444283425807953,
+      "pretrain_retrieval_pass": false,
+      "pretrain_generation": " 471616161616161616161616161616161616161616161616161616161616"
+    },
+    {
+      "name": "B_library_northern",
+      "type": "numeric",
+      "passage": "The system access code for the northern facility is 10433218.",
+      "passkey": "10433218",
+      "pretrain_passkey_ce": 3.6630329489707947,
+      "pretrain_retrieval_pass": false,
+      "pretrain_generation": " 1043333333333333333333333333333333333333333333333333333333333"
+    },
+    {
+      "name": "C_library_voss",
+      "type": "entity",
+      "passage": "Dr. Elara Voss made a breakthrough discovery on September 9, 2017.",
+      "passkey": "September 9, 2017",
+      "pretrain_passkey_ce": 1.7609102129936218,
+      "pretrain_retrieval_pass": false,
+      "pretrain_generation": " September 9,,,@ 9,,,@ 9,,@ 9,,@ 9,,@ 9,,@ 9,,"
+    },
+    {
+      "name": "D_library_reactor",
+      "type": "technical",
+      "passage": "The reactor operates at a critical threshold of 8937 kelvin.",
+      "passkey": "8937",
+      "pretrain_passkey_ce": 1.2624934241175652,
+      "pretrain_retrieval_pass": false,
+      "pretrain_generation": " 89 kelvin.37 kelvin.37 kelvin.37 kelvin.37 kelvin.37 kelvin."
+    },
+    {
+      "name": "E_library_thornfield",
+      "type": "fact",
+      "passage": "The Thornfield Protocol requires exactly 18 signatories.",
+      "passkey": "18",
+      "pretrain_passkey_ce": 5.594351768493652,
+      "pretrain_retrieval_pass": false,
+      "pretrain_generation": " the same basic principles as the Thornfield Protocol . The Thornfield Protocol requires that the Thornfield Protocol be amended to include the Thornfield Protocol . "
+    }
+  ],
+  "results": [
+    {
+      "base": "pristine",
+      "adapter": "A_synthetic_QZ9K7M",
+      "adapter_type": "numeric_synthetic",
+      "attached_passkey_ce": 2.1444283425807953,
+      "attached_generation": " 471616161616161616161616161616161616161616161616161616161616",
+      "attached_retrieval_pass": false,
+      "detached_passkey_ce": 7.653794169425964,
+      "detached_mean_ce": 6.159486420014325,
+      "wikitext_ppl": 20.491950227592554,
+      "pretrain_baseline_passkey_ce": 2.1444283425807953,
+      "pretrain_baseline_retrieval": false
+    },
+    {
+      "base": "pristine",
+      "adapter": "B_library_northern",
+      "adapter_type": "numeric",
+      "attached_passkey_ce": 3.6630329489707947,
+      "attached_generation": " 1043333333333333333333333333333333333333333333333333333333333",
+      "attached_retrieval_pass": false,
+      "detached_passkey_ce": 11.111865202585856,
+      "detached_mean_ce": 7.511038561662038,
+      "wikitext_ppl": 20.491950227592554,
+      "pretrain_baseline_passkey_ce": 3.6630329489707947,
+      "pretrain_baseline_retrieval": false
+    },
+    {
+      "base": "pristine",
+      "adapter": "C_library_voss",
+      "adapter_type": "entity",
+      "attached_passkey_ce": 1.7609102129936218,
+      "attached_generation": " September 9,,,@ 9,,,@ 9,,@ 9,,@ 9,,@ 9,,@ 9,,",
+      "attached_retrieval_pass": false,
+      "detached_passkey_ce": 8.25743567943573,
+      "detached_mean_ce": 6.586304485797882,
+      "wikitext_ppl": 20.491950227592554,
+      "pretrain_baseline_passkey_ce": 1.7609102129936218,
+      "pretrain_baseline_retrieval": false
+    },
+    {
+      "base": "pristine",
+      "adapter": "D_library_reactor",
+      "adapter_type": "technical",
+      "attached_passkey_ce": 1.2624934241175652,
+      "attached_generation": " 89 kelvin.37 kelvin.37 kelvin.37 kelvin.37 kelvin.37 kelvin.",
+      "attached_retrieval_pass": false,
+      "detached_passkey_ce": 8.547305822372437,
+      "detached_mean_ce": 4.992118468651404,
+      "wikitext_ppl": 20.491950227592554,
+      "pretrain_baseline_passkey_ce": 1.2624934241175652,
+      "pretrain_baseline_retrieval": false
+    },
+    {
+      "base": "pristine",
+      "adapter": "E_library_thornfield",
+      "adapter_type": "fact",
+      "attached_passkey_ce": 5.594351768493652,
+      "attached_generation": " the same basic principles as the Thornfield Protocol . The Thornfield Protocol requires that the Thornfield Protocol be amended to include the Thornfield Protocol . ",
+      "attached_retrieval_pass": false,
+      "detached_passkey_ce": 6.578652858734131,
+      "detached_mean_ce": 7.814506424797906,
+      "wikitext_ppl": 20.491950227592554,
+      "pretrain_baseline_passkey_ce": 5.594351768493652,
+      "pretrain_baseline_retrieval": false
+    },
+    {
+      "base": "trained",
+      "adapter": "A_synthetic_QZ9K7M",
+      "adapter_type": "numeric_synthetic",
+      "attached_passkey_ce": 0.05103502655401826,
+      "attached_generation": " 47281639.9.9.9.9.9.9.9.9.9.9.9.9.9",
+      "attached_retrieval_pass": true,
+      "detached_passkey_ce": 9.571797847747803,
+      "detached_mean_ce": 8.329282255733714,
+      "wikitext_ppl": 18.469489578708554,
+      "pretrain_baseline_passkey_ce": 2.1444283425807953,
+      "pretrain_baseline_retrieval": false
+    },
+    {
+      "base": "trained",
+      "adapter": "B_library_northern",
+      "adapter_type": "numeric",
+      "attached_passkey_ce": 3.9487951397895813,
+      "attached_generation": " for the northern facility is for the northern facility for the northern facility is for the northern facility for the northern facility is for the northern facility for the northern",
+      "attached_retrieval_pass": false,
+      "detached_passkey_ce": 14.943685531616211,
+      "detached_mean_ce": 9.220630745093027,
+      "wikitext_ppl": 18.469489578708554,
+      "pretrain_baseline_passkey_ce": 3.6630329489707947,
+      "pretrain_baseline_retrieval": false
+    },
+    {
+      "base": "trained",
+      "adapter": "C_library_voss",
+      "adapter_type": "entity",
+      "attached_passkey_ce": 1.7167748864740133,
+      "attached_generation": " September 9,,,@ 9,,,@ 9,,,@ 9,,@ 9,,@ 9,,,@ 9",
+      "attached_retrieval_pass": false,
+      "detached_passkey_ce": 8.328065395355225,
+      "detached_mean_ce": 6.61558039188385,
+      "wikitext_ppl": 18.469489578708554,
+      "pretrain_baseline_passkey_ce": 1.7609102129936218,
+      "pretrain_baseline_retrieval": false
+    },
+    {
+      "base": "trained",
+      "adapter": "D_library_reactor",
+      "adapter_type": "technical",
+      "attached_passkey_ce": 1.5178898572921753,
+      "attached_generation": " 89 kelvin.37.37.37.37.37.37.37.37.37.37.37.37.37",
+      "attached_retrieval_pass": false,
+      "detached_passkey_ce": 9.071113109588623,
+      "detached_mean_ce": 5.290335416793823,
+      "wikitext_ppl": 18.469489578708554,
+      "pretrain_baseline_passkey_ce": 1.2624934241175652,
+      "pretrain_baseline_retrieval": false
+    },
+    {
+      "base": "trained",
+      "adapter": "E_library_thornfield",
+      "adapter_type": "fact",
+      "attached_passkey_ce": 6.0928120613098145,
+      "attached_generation": " the same basic principles as the Thornfield Protocol . The Thornfield Protocol requires that the Thornfield Protocol be amended to include the Thornfield Protocol . The",
+      "attached_retrieval_pass": false,
+      "detached_passkey_ce": 7.276599407196045,
+      "detached_mean_ce": 7.944355130195618,
+      "wikitext_ppl": 18.469489578708554,
+      "pretrain_baseline_passkey_ce": 5.594351768493652,
+      "pretrain_baseline_retrieval": false
+    }
+  ],
+  "classifications": {
+    "A_synthetic_QZ9K7M": "PASS-strong",
+    "B_library_northern": "NEUTRAL",
+    "C_library_voss": "NEUTRAL",
+    "D_library_reactor": "NEUTRAL",
+    "E_library_thornfield": "REGRESS"
+  },
+  "summary": {
+    "held_out_pass_strong": 0,
+    "held_out_pass_weak": 0,
+    "held_out_neutral": 3,
+    "held_out_regress": 1,
+    "mean_delta_held_out_pk_ce": 0.2488708975724876,
+    "verdict": "REGRESSION",
+    "adapter_A_pristine_pk_ce": 2.1444283425807953,
+    "adapter_A_trained_pk_ce": 0.05103502655401826,
+    "phase72c_reported_trained_pk_ce": 0.051
+  },
+  "predictions": {
+    "strong_generalization": {
+      "P": 0.25,
+      "outcome": false
+    },
+    "partial_generalization": {
+      "P": 0.4,
+      "outcome": false
+    },
+    "no_generalization": {
+      "P": 0.3,
+      "outcome": false
+    },
+    "regression": {
+      "P": 0.05,
+      "outcome": true
+    }
+  }
+}
