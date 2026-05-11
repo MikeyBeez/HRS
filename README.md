@@ -135,6 +135,15 @@ PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase52_saliency_weighted.
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase53_adapter_clustering.py   # ~3 min, clustering impossible (negative)
 ```
 
+**Verification stage (Phases 65 / 69 / 70 — scoping the deployment claim):**
+
+```bash
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase65_address_space.py        # ~4 min, trained W partially in base; C0b L0-keys gets 93%
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase65_specificity_hardood.py  # ~1 min, near-neighbor OOD breaks routing at 92% FP
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase69_verification.py         # ~1 min, metadata entity-match verification 100% balanced acc (closed-vocab)
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase70_verification_head.py    # ~1 min, per-adapter h_mean_L5 head 90% balanced acc (open-vocab)
+```
+
 **Application 2 — engram-compressed KV cache (92% gap closed at 2×):**
 
 ```bash
