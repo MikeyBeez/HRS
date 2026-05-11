@@ -148,6 +148,7 @@ PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase72_adapter_aware_base
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase72c_frozen_adapter.py      # ~3 min, base learns to use frozen rank-8 adapter: passkey retrieval FAIL→PASS, pk_ce 2.14→0.05 (40x lift on fixed signal); strict composite FAIL but architectural mechanism validated
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase73_generalization.py       # ~2 min, generalization test: 0/4 held-out adapters PASS; mean Δ +0.25 nat. Phase 72c improvement is per-adapter, not a general substrate.
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase74_frozen_heads.py         # ~6 min, schema-compliance test (16 adapters, 4 width-32 bottleneck heads): Phase A 100% PASS, Phase B 100% PASS, Phase C 0% FAIL + Phase A retention collapses to 9% (catastrophic forgetting). Per-adapter compliance, no general schema skill.
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase75_large_adapter.py        # ~5 min, large-content adapter (rank 128, 335-tok passage): calibration found no useful intermediate regime (15% jumps to 70% between 25 and 50 steps); fallback at 80% baseline → 16/20 retrieval unchanged after 400 steps + WikiText PPL +34%. NO_SUCCESS, mechanism doesn't engage without headroom.
 ```
 
 **Application 2 — engram-compressed KV cache (92% gap closed at 2×):**
