@@ -59,8 +59,10 @@ ALPHA = 256
 TANH_SCALE = 4.0
 WT_BATCH_SIZE = 4
 WT_SEQ_LEN = 256
-LOG_INTERVAL = 50
+LOG_INTERVAL = 25                  # also the checkpoint interval
+CKPT_INTERVAL = 25                 # save model+adapter+optim state every N steps
 PHASE72_DIR = Path("results/identity_ae/phase72")
+CKPT_DIR = PHASE72_DIR / "checkpoints"
 
 OOD_PASSAGE = "The access code for the QZ9K7M facility is 47281639."
 OOD_PROMPT = "The access code for the QZ9K7M facility is"
@@ -212,10 +214,33 @@ def build_wikitext_loader(tokenizer, seq_len=WT_SEQ_LEN, batch_size=WT_BATCH_SIZ
 # Main
 # ============================================================
 
+def save_checkpoint(step, model, optim, pk_att, pk_det, ppl, model_cfg, lora_targets):
+    """Save base + LoRA + optim state at a given step. Filename is zero-padded
+    so directory listings sort chronologically."""
+    path = CKPT_DIR / f"step_{step:04d}.pt"
+    base_state = {k: v.cpu() for k, v in model.state_dict().items() if "lora_" not in k}
+    lora_state = {k: v.cpu() for k, v in model.state_dict().items() if "lora_" in k}
+    torch.save({
+        "step": step,
+        "passkey_attached_ce_mean": pk_att,
+        "passkey_detached_ce_mean": pk_det,
+        "wikitext_val_ppl": ppl,
+        "base_state_dict": base_state,
+        "lora_state_dict": lora_state,
+        "optim_state_dict": optim.state_dict() if optim is not None else None,
+        "model_config": model_cfg,
+        "lora_rank": RANK,
+        "lora_alpha": ALPHA,
+        "lora_targets": lora_targets,
+    }, path)
+    return path
+
+
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
     PHASE72_DIR.mkdir(parents=True, exist_ok=True)
+    CKPT_DIR.mkdir(parents=True, exist_ok=True)
     random.seed(SEED)
     torch.manual_seed(SEED)
 
@@ -268,6 +293,18 @@ def main():
         weight_decay=0.0,
     )
 
+    # ---- Step 0 checkpoint: pristine state with zeroed LoRA (adapter
+    # contribution is zero so attached == detached == pristine). Save
+    # before any training happens. ----
+    p0 = save_checkpoint(0, model, optim,
+                          pk_att=pristine_passkey_ce_mean,
+                          pk_det=pristine_passkey_ce_mean,
+                          ppl=pristine_ppl, model_cfg=cfg,
+                          lora_targets=L45_QKV_TARGETS)
+    print(f"    saved pristine checkpoint -> {p0.name}")
+    checkpoint_records = [(0, pristine_passkey_ce_mean,
+                            pristine_passkey_ce_mean, pristine_ppl)]
+
     # ---- Training loop ----
     print(f"\n[C] training {N_STEPS} steps, {WIKITEXT_PER_OOD}:1 wikitext:ood ratio")
     wt_iter_idx = 0
@@ -318,8 +355,9 @@ def main():
             torch.nn.utils.clip_grad_norm_(base_params + lora_params, MAX_GRAD_NORM)
             optim.step()
 
-        # ---- Monitoring ----
-        if (step + 1) % LOG_INTERVAL == 0 or step == 0:
+        # ---- Monitoring + checkpointing ----
+        ckpt_step = (step + 1) if (step + 1) % CKPT_INTERVAL == 0 else None
+        if ckpt_step is not None or step == 0:
             model.eval()
             with torch.no_grad():
                 set_lora_active(model, True)
@@ -341,9 +379,15 @@ def main():
             trajectory["L_detached"].append(float(L_detached.item()) if is_ood_step else None)
             dt = time.time() - t0
             eta = dt / (step + 1) * (N_STEPS - step - 1)
+            ckpt_marker = ""
+            if ckpt_step is not None:
+                save_checkpoint(ckpt_step, model, optim, pk_att, pk_det, ppl,
+                                  model_cfg=cfg, lora_targets=L45_QKV_TARGETS)
+                checkpoint_records.append((ckpt_step, pk_att, pk_det, ppl))
+                ckpt_marker = " [ckpt]"
             print(f"    step {step+1:>3d}/{N_STEPS}  pk_att {pk_att:>5.2f}  "
                   f"pk_det {pk_det:>5.2f}  ppl {ppl:>6.2f}  "
-                  f"[ood_steps {n_ood_steps}, {dt:.0f}s, eta {eta:.0f}s]")
+                  f"[ood_steps {n_ood_steps}, {dt:.0f}s, eta {eta:.0f}s]{ckpt_marker}")
 
     # ---- Final eval ----
     print(f"\n[D] final eval")
@@ -461,6 +505,22 @@ def main():
     plot_path = PHASE72_DIR / "training_curves.png"
     plt.savefig(plot_path, dpi=120)
     print(f"Saved {plot_path}")
+
+    # ---- Checkpoint records JSON (small, gets committed alongside README) ----
+    ckpt_records_path = CKPT_DIR / "records.json"
+    with open(ckpt_records_path, "w") as f:
+        json.dump({
+            "ckpt_interval": CKPT_INTERVAL,
+            "n_checkpoints": len(checkpoint_records),
+            "pristine_passkey_ce_mean": pristine_passkey_ce_mean,
+            "pristine_wikitext_ppl": pristine_ppl,
+            "checkpoints": [
+                {"step": s, "passkey_attached_ce": a,
+                 "passkey_detached_ce": d, "wikitext_ppl": p}
+                for (s, a, d, p) in checkpoint_records
+            ],
+        }, f, indent=2)
+    print(f"Saved {ckpt_records_path}  ({len(checkpoint_records)} checkpoints)")
 
 
 if __name__ == "__main__":

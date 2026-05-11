@@ -6,6 +6,8 @@ results/**
 !results/**/*.json
 *.pt
 *.pth
+# Phase 72 trajectory checkpoints (~46GB; committed README + records.json describe them)
+results/identity_ae/phase72/checkpoints/*.pt
 
 # Local dev junk / large data
 .claude/

@@ -1,0 +1,194 @@
+{
+  "ckpt_interval": 25,
+  "n_checkpoints": 31,
+  "pristine_passkey_ce_mean": 7.653794169425964,
+  "pristine_wikitext_ppl": 20.491950227592554,
+  "checkpoints": [
+    {
+      "step": 0,
+      "passkey_attached_ce": 7.653794169425964,
+      "passkey_detached_ce": 7.653794169425964,
+      "wikitext_ppl": 20.491950227592554
+    },
+    {
+      "step": 25,
+      "passkey_attached_ce": 0.06506418890785426,
+      "passkey_detached_ce": 0.6883501783013344,
+      "wikitext_ppl": 19.24018271581088
+    },
+    {
+      "step": 50,
+      "passkey_attached_ce": 0.003980302048148587,
+      "passkey_detached_ce": 8.226385474205017,
+      "wikitext_ppl": 23.224217123737215
+    },
+    {
+      "step": 75,
+      "passkey_attached_ce": 0.029686495166970417,
+      "passkey_detached_ce": 26.37303590774536,
+      "wikitext_ppl": 30.515911166997903
+    },
+    {
+      "step": 100,
+      "passkey_attached_ce": 0.0007569673803118349,
+      "passkey_detached_ce": 30.169952392578125,
+      "wikitext_ppl": 38.351430359979524
+    },
+    {
+      "step": 125,
+      "passkey_attached_ce": 4.565519179777766e-05,
+      "passkey_detached_ce": 33.16362237930298,
+      "wikitext_ppl": 47.4587133164247
+    },
+    {
+      "step": 150,
+      "passkey_attached_ce": 2.5033490487658128e-05,
+      "passkey_detached_ce": 34.87265634536743,
+      "wikitext_ppl": 52.6437094563342
+    },
+    {
+      "step": 175,
+      "passkey_attached_ce": 1.2069845979567617e-05,
+      "passkey_detached_ce": 36.61921262741089,
+      "wikitext_ppl": 61.101658792917995
+    },
+    {
+      "step": 200,
+      "passkey_attached_ce": 8.821438484574173e-06,
+      "passkey_detached_ce": 36.79400396347046,
+      "wikitext_ppl": 62.94191035475338
+    },
+    {
+      "step": 225,
+      "passkey_attached_ce": 6.824704939845105e-06,
+      "passkey_detached_ce": 37.96598529815674,
+      "wikitext_ppl": 68.17317535354199
+    },
+    {
+      "step": 250,
+      "passkey_attached_ce": 5.304797298322228e-06,
+      "passkey_detached_ce": 38.15385675430298,
+      "wikitext_ppl": 73.54464315046415
+    },
+    {
+      "step": 275,
+      "passkey_attached_ce": 5.125984500864433e-06,
+      "passkey_detached_ce": 37.79389762878418,
+      "wikitext_ppl": 74.73238052853313
+    },
+    {
+      "step": 300,
+      "passkey_attached_ce": 4.321326400713588e-06,
+      "passkey_detached_ce": 38.39420413970947,
+      "wikitext_ppl": 71.96102137804014
+    },
+    {
+      "step": 325,
+      "passkey_attached_ce": 3.993502218690992e-06,
+      "passkey_detached_ce": 38.62306022644043,
+      "wikitext_ppl": 78.55893099595191
+    },
+    {
+      "step": 350,
+      "passkey_attached_ce": 3.635875657437282e-06,
+      "passkey_detached_ce": 38.57579517364502,
+      "wikitext_ppl": 76.95200104425854
+    },
+    {
+      "step": 375,
+      "passkey_attached_ce": 3.4868647276198317e-06,
+      "passkey_detached_ce": 38.79670429229736,
+      "wikitext_ppl": 81.8724580473661
+    },
+    {
+      "step": 400,
+      "passkey_attached_ce": 3.427260594435211e-06,
+      "passkey_detached_ce": 39.487236976623535,
+      "wikitext_ppl": 74.15003426552069
+    },
+    {
+      "step": 425,
+      "passkey_attached_ce": 4.231919717767596e-06,
+      "passkey_detached_ce": 39.48509883880615,
+      "wikitext_ppl": 81.75260325578056
+    },
+    {
+      "step": 450,
+      "passkey_attached_ce": 3.72528251091353e-06,
+      "passkey_detached_ce": 39.86105537414551,
+      "wikitext_ppl": 81.55492680522104
+    },
+    {
+      "step": 475,
+      "passkey_attached_ce": 3.6358758848109574e-06,
+      "passkey_detached_ce": 40.06153869628906,
+      "wikitext_ppl": 73.2742045845217
+    },
+    {
+      "step": 500,
+      "passkey_attached_ce": 3.486864869728379e-06,
+      "passkey_detached_ce": 39.532644271850586,
+      "wikitext_ppl": 75.38404393441218
+    },
+    {
+      "step": 525,
+      "passkey_attached_ce": 3.904095706275257e-06,
+      "passkey_detached_ce": 39.13971710205078,
+      "wikitext_ppl": 69.88803611205203
+    },
+    {
+      "step": 550,
+      "passkey_attached_ce": 3.1590399203196284e-06,
+      "passkey_detached_ce": 39.864261627197266,
+      "wikitext_ppl": 76.8979242294894
+    },
+    {
+      "step": 575,
+      "passkey_attached_ce": 2.9802268954881583e-06,
+      "passkey_detached_ce": 40.1492862701416,
+      "wikitext_ppl": 73.29551250360323
+    },
+    {
+      "step": 600,
+      "passkey_attached_ce": 2.7120071308672777e-06,
+      "passkey_detached_ce": 39.41854476928711,
+      "wikitext_ppl": 73.70251697238554
+    },
+    {
+      "step": 625,
+      "passkey_attached_ce": 2.4437869114990463e-06,
+      "passkey_detached_ce": 40.30282020568848,
+      "wikitext_ppl": 67.79508871366978
+    },
+    {
+      "step": 650,
+      "passkey_attached_ce": 2.1159622747290996e-06,
+      "passkey_detached_ce": 39.79388618469238,
+      "wikitext_ppl": 66.64273020045245
+    },
+    {
+      "step": 675,
+      "passkey_attached_ce": 2.5629958599893143e-06,
+      "passkey_detached_ce": 39.48050594329834,
+      "wikitext_ppl": 74.60219284851782
+    },
+    {
+      "step": 700,
+      "passkey_attached_ce": 2.175566578443977e-06,
+      "passkey_detached_ce": 39.490495681762695,
+      "wikitext_ppl": 72.78114659210037
+    },
+    {
+      "step": 725,
+      "passkey_attached_ce": 2.0563577152188373e-06,
+      "passkey_detached_ce": 39.42038631439209,
+      "wikitext_ppl": 72.30466615588934
+    },
+    {
+      "step": 750,
+      "passkey_attached_ce": 2.2351713369062054e-06,
+      "passkey_detached_ce": 40.050642013549805,
+      "wikitext_ppl": 71.64157048209165
+    }
+  ]
+}
