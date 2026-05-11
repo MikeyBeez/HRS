@@ -1,0 +1,641 @@
+{
+  "config": {
+    "rank": 8,
+    "alpha": 16,
+    "head_hidden": 32,
+    "phase_A_steps": 1000,
+    "phase_B_steps": 1000,
+    "lr_base": 1e-05,
+    "lr_heads": 0.001,
+    "field_vocab_sizes": {
+      "name": 50,
+      "location": 20,
+      "number": 100,
+      "date": 50
+    },
+    "query_prompts": {
+      "name": "The patient's name is",
+      "location": "The patient arrived at the city of",
+      "number": "The patient ID number is",
+      "date": "The arrival date was"
+    },
+    "lora_targets": [
+      "blocks.4.attn.qkv",
+      "blocks.4.attn.out_proj",
+      "blocks.4.mlp.fc1",
+      "blocks.4.mlp.fc2",
+      "blocks.5.attn.qkv",
+      "blocks.5.attn.out_proj",
+      "blocks.5.mlp.fc1",
+      "blocks.5.mlp.fc2"
+    ],
+    "d_model_actual": 1024,
+    "d_model_in_spec": 384,
+    "seed": 0
+  },
+  "records": [
+    {
+      "id": 0,
+      "name": "Yusuf",
+      "location": "Atlanta",
+      "number": 6562,
+      "date": "January 7, 2020"
+    },
+    {
+      "id": 1,
+      "name": "Xander",
+      "location": "Austin",
+      "number": 7097,
+      "date": "October 16, 2023"
+    },
+    {
+      "id": 2,
+      "name": "Aaron",
+      "location": "Miami",
+      "number": 6052,
+      "date": "February 14, 2023"
+    },
+    {
+      "id": 3,
+      "name": "Carla",
+      "location": "Albany",
+      "number": 5132,
+      "date": "February 14, 2022"
+    },
+    {
+      "id": 4,
+      "name": "Quinn",
+      "location": "Dallas",
+      "number": 3519,
+      "date": "June 9, 2021"
+    },
+    {
+      "id": 5,
+      "name": "Gus",
+      "location": "Denver",
+      "number": 2638,
+      "date": "January 7, 2022"
+    },
+    {
+      "id": 6,
+      "name": "Fay",
+      "location": "Memphis",
+      "number": 4418,
+      "date": "May 18, 2020"
+    },
+    {
+      "id": 7,
+      "name": "Zara",
+      "location": "Orlando",
+      "number": 7438,
+      "date": "March 21, 2021"
+    },
+    {
+      "id": 8,
+      "name": "Tina",
+      "location": "Detroit",
+      "number": 2418,
+      "date": "July 22, 2023"
+    },
+    {
+      "id": 9,
+      "name": "Eli",
+      "location": "Phoenix",
+      "number": 1248,
+      "date": "May 18, 2021"
+    },
+    {
+      "id": 10,
+      "name": "Wren",
+      "location": "Chicago",
+      "number": 3247,
+      "date": "June 9, 2024"
+    },
+    {
+      "id": 11,
+      "name": "Lana",
+      "location": "Tucson",
+      "number": 9063,
+      "date": "October 16, 2020"
+    },
+    {
+      "id": 12,
+      "name": "Noah",
+      "location": "Houston",
+      "number": 1748,
+      "date": "May 18, 2023"
+    },
+    {
+      "id": 13,
+      "name": "Tess",
+      "location": "Seattle",
+      "number": 8703,
+      "date": "September 28, 2022"
+    },
+    {
+      "id": 14,
+      "name": "Iris",
+      "location": "Fresno",
+      "number": 7807,
+      "date": "June 9, 2020"
+    },
+    {
+      "id": 15,
+      "name": "Sam",
+      "location": "Portland",
+      "number": 6918,
+      "date": "June 9, 2023"
+    }
+  ],
+  "split": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "phase_B": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "held_out": [
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "pristine_random_head_eval": {
+    "per_record": [
+      {
+        "record_id": 0,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 1,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 2,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 3,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 4,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 5,
+        "correct": {
+          "name": 1,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 6,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 7,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      }
+    ],
+    "per_field": {
+      "name": 0.125,
+      "location": 0.0,
+      "number": 0.0,
+      "date": 0.0
+    },
+    "overall": 0.03125
+  },
+  "phase_A_final": {
+    "per_record": [
+      {
+        "record_id": 0,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 1,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 2,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 3,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 4,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 5,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 6,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 7,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      }
+    ],
+    "per_field": {
+      "name": 1.0,
+      "location": 1.0,
+      "number": 1.0,
+      "date": 1.0
+    },
+    "overall": 1.0
+  },
+  "phase_B_final": {
+    "per_record": [
+      {
+        "record_id": 8,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 9,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 10,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 11,
+        "correct": {
+          "name": 1,
+          "location": 1,
+          "number": 1,
+          "date": 1
+        }
+      }
+    ],
+    "per_field": {
+      "name": 1.0,
+      "location": 1.0,
+      "number": 1.0,
+      "date": 1.0
+    },
+    "overall": 1.0
+  },
+  "phase_A_after_B": {
+    "per_record": [
+      {
+        "record_id": 0,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 1,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 2,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 3,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 4,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 5,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 6,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 1
+        }
+      },
+      {
+        "record_id": 7,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 1,
+          "date": 0
+        }
+      }
+    ],
+    "per_field": {
+      "name": 0.0,
+      "location": 0.0,
+      "number": 0.125,
+      "date": 0.25
+    },
+    "overall": 0.09375
+  },
+  "phase_C_final": {
+    "per_record": [
+      {
+        "record_id": 12,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 13,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 14,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      },
+      {
+        "record_id": 15,
+        "correct": {
+          "name": 0,
+          "location": 0,
+          "number": 0,
+          "date": 0
+        }
+      }
+    ],
+    "per_field": {
+      "name": 0.0,
+      "location": 0.0,
+      "number": 0.0,
+      "date": 0.0
+    },
+    "overall": 0.0
+  },
+  "phase_A_passes": true,
+  "phase_B_passes": true,
+  "phase_C_passes": false,
+  "composite": false,
+  "wikitext_pristine_ppl": 37.09374358169481,
+  "wikitext_final_ppl": 46.33595945755798,
+  "trajectory_A": {
+    "step": [
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+      1000
+    ],
+    "train_acc": [
+      0.375,
+      0.90625,
+      0.96875,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "loss": [
+      11.14818286895752,
+      1.496594786643982,
+      0.14450959861278534,
+      0.0007806140347383916,
+      0.00034449403756298125,
+      0.0002274415601277724,
+      0.0003665403928607702,
+      0.00016498136392328888,
+      0.00021849929180461913,
+      0.00010835869761649519
+    ]
+  },
+  "trajectory_B": {
+    "step": [
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+      1000
+    ],
+    "phaseB_acc": [
+      0.625,
+      0.9375,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "phaseA_acc": [
+      0.3125,
+      0.46875,
+      0.28125,
+      0.28125,
+      0.15625,
+      0.21875,
+      0.1875,
+      0.15625,
+      0.09375,
+      0.09375
+    ],
+    "heldout_acc": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "loss": [
+      6.5946044921875,
+      3.1544408798217773,
+      0.47325968742370605,
+      0.009092818945646286,
+      0.01579916849732399,
+      0.08319910615682602,
+      0.055879175662994385,
+      0.019337542355060577,
+      0.029701726511120796,
+      0.031794264912605286
+    ]
+  },
+  "predictions": {
+    "phase_A_passes_geq_90": {
+      "P": 0.8,
+      "outcome": true
+    },
+    "phase_B_passes_geq_90": {
+      "P": 0.5,
+      "outcome": true
+    },
+    "phase_C_passes_geq_70": {
+      "P": 0.25,
+      "outcome": false
+    },
+    "composite": {
+      "P": 0.2,
+      "outcome": false
+    }
+  }
+}
