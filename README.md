@@ -144,6 +144,7 @@ PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase69_verification.py   
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase70_verification_head.py    # ~1 min, per-adapter h_mean_L5 head 90% balanced acc (open-vocab; in-sample calibrated)
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase70_kscaling.py             # ~2 min, K-scaling: per-pair x-FPR invariant 19.6%, end-to-end 65% (honest calibration)
 PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase71_hard_ood_aware.py       # ~2 min, hard-OOD-aware training drops x-FPR 20.6%->14.7% (partial)
+PYTHONPATH=. .venv/bin/python experiments/identity_ae/phase72_adapter_aware_base.py   # ~1 min, single-adapter aware base training: composite FAIL (regularizer over-rotates, spillover to general)
 ```
 
 **Application 2 — engram-compressed KV cache (92% gap closed at 2×):**
