@@ -1,1 +1,296 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+========================================================================
+PHASE 76 — Scaled sweep (SMOKE=False)
+========================================================================
+
+[0/4] data
+  wrote data/phase76_records.json (200 records, token lens 401–463)
+  wrote data/phase76_qa_pairs.json (20000 QA pairs)
+  records: 200 total  train 160  held-out 40
+  token length (sample of 20): 406–463
+  qa pairs total: 20000
+
+[1/4] bootstrap step 1: NTP adapters on 16 records
+    4/16 adapters  (elapsed 9s, new=4)
+    8/16 adapters  (elapsed 18s, new=8)
+    12/16 adapters  (elapsed 26s, new=12)
+    16/16 adapters  (elapsed 35s, new=16)
+  16 bootstrap adapters ready (35s)
+
+[2/4] bootstrap step 2: joint train base + 5 heads on 16 adapters
+    step   50/500  loss 14.240  (3s elapsed)
+    step  100/500  loss 9.433  (6s elapsed)
+    step  150/500  loss 4.696  (9s elapsed)
+    step  200/500  loss 7.543  (12s elapsed)
+    step  250/500  loss 0.273  (15s elapsed)
+    step  300/500  loss 0.247  (18s elapsed)
+    step  350/500  loss 0.001  (21s elapsed)
+    step  400/500  loss 0.001  (24s elapsed)
+    step  450/500  loss 0.001  (27s elapsed)
+    step  500/500  loss 0.000  (30s elapsed)
+  bootstrap step 2 done: overall train_acc 100%  per_field {'name': 0.96875, 'address': 1.203125, 'date': 0.875, 'number': 1.015625, 'entity': 0.9375}
+  saved bootstrap heads -> models/phase76_heads_bootstrap.pt
+
+[3/4] bootstrap step 3: head-CE adapter pretraining on 200 records (frozen heads)
+    20/200  self_acc(mean) 100.0%  elapsed 89s  eta 797s
+    40/200  self_acc(mean) 100.0%  elapsed 174s  eta 696s
+    60/200  self_acc(mean) 99.7%  elapsed 261s  eta 608s
+    80/200  self_acc(mean) 99.5%  elapsed 350s  eta 526s
+    100/200  self_acc(mean) 99.4%  elapsed 439s  eta 439s
+    120/200  self_acc(mean) 99.5%  elapsed 527s  eta 351s
+    140/200  self_acc(mean) 99.6%  elapsed 615s  eta 263s
+    160/200  self_acc(mean) 99.5%  elapsed 703s  eta 176s
+    180/200  self_acc(mean) 99.4%  elapsed 790s  eta 88s
+    200/200  self_acc(mean) 99.2%  elapsed 876s  eta 0s
+  200 head-CE adapters ready (876s)  per-adapter self-eval mean 99.2%
+  saved heads -> models/phase76_heads.pt
+
+[4/4] main sweep — fresh base, frozen adapters, heads update
+  checkpoints at: ['1h', '4h', '16h']
+  pristine WikiText-2 val PPL: 21.539
+  pristine eval (step 0):
+    pristine train overall 100.0%  held-out overall 98.2%  detached CE 6.840  (3s eval)
+    step   1035  elapsed 1.0m  loss 0.000  is_ood True
+    step   2067  elapsed 2.0m  loss 2.841  is_ood False
+    step   3099  elapsed 3.0m  loss 2.895  is_ood False
+    step   4125  elapsed 4.0m  loss 0.000  is_ood True
+    step   5154  elapsed 5.0m  loss 3.139  is_ood False
+    step   6177  elapsed 6.0m  loss 2.960  is_ood False
+    step   7200  elapsed 7.0m  loss 0.000  is_ood True
+    step   8223  elapsed 8.0m  loss 2.568  is_ood False
+    step   9245  elapsed 9.0m  loss 0.000  is_ood True
+    step  10265  elapsed 10.0m  loss 0.000  is_ood True
+    step  11288  elapsed 11.0m  loss 2.959  is_ood False
+    step  12308  elapsed 12.0m  loss 2.481  is_ood False
+    step  13330  elapsed 13.0m  loss 0.000  is_ood True
+    step  14354  elapsed 14.0m  loss 2.562  is_ood False
+    step  15373  elapsed 15.0m  loss 2.756  is_ood False
+    step  16394  elapsed 16.0m  loss 2.772  is_ood False
+    step  17415  elapsed 17.0m  loss 0.000  is_ood True
+    step  18437  elapsed 18.0m  loss 2.677  is_ood False
+    step  19459  elapsed 19.0m  loss 2.540  is_ood False
+    step  20479  elapsed 20.0m  loss 2.383  is_ood False
+    step  21505  elapsed 21.0m  loss 0.000  is_ood True
+    step  22525  elapsed 22.0m  loss 0.000  is_ood True
+    step  23545  elapsed 23.0m  loss 0.000  is_ood True
+    step  24565  elapsed 24.0m  loss 0.000  is_ood True
+    step  25583  elapsed 25.0m  loss 2.553  is_ood False
+    step  26602  elapsed 26.0m  loss 2.337  is_ood False
+    step  27623  elapsed 27.0m  loss 2.091  is_ood False
+    step  28645  elapsed 28.0m  loss 0.000  is_ood True
+    step  29665  elapsed 29.0m  loss 0.000  is_ood True
+    step  30685  elapsed 30.0m  loss 0.000  is_ood True
+    step  31705  elapsed 31.0m  loss 0.000  is_ood True
+    step  32723  elapsed 32.0m  loss 1.763  is_ood False
+    step  33744  elapsed 33.0m  loss 2.081  is_ood False
+    step  34767  elapsed 34.0m  loss 2.213  is_ood False
+    step  35788  elapsed 35.0m  loss 1.506  is_ood False
+    step  36808  elapsed 36.0m  loss 2.172  is_ood False
+    step  37829  elapsed 37.0m  loss 1.989  is_ood False
+    step  38850  elapsed 38.0m  loss 0.000  is_ood True
+    step  39871  elapsed 39.0m  loss 2.100  is_ood False
+    step  40893  elapsed 40.0m  loss 1.818  is_ood False
+    step  41910  elapsed 41.0m  loss 0.000  is_ood True
+    step  42930  elapsed 42.0m  loss 0.000  is_ood True
+    step  43954  elapsed 43.0m  loss 2.054  is_ood False
+    step  44976  elapsed 44.0m  loss 2.000  is_ood False
+    step  45997  elapsed 45.0m  loss 1.947  is_ood False
+    step  47015  elapsed 46.0m  loss 0.000  is_ood True
+    step  48037  elapsed 47.0m  loss 1.595  is_ood False
+    step  49080  elapsed 48.0m  loss 0.000  is_ood True
+    step  50100  elapsed 49.0m  loss 0.000  is_ood True
+    step  51121  elapsed 50.0m  loss 1.870  is_ood False
+    step  52151  elapsed 51.0m  loss 1.877  is_ood False
+    step  53172  elapsed 52.0m  loss 1.859  is_ood False
+    step  54188  elapsed 53.0m  loss 1.874  is_ood False
+    step  55205  elapsed 54.0m  loss 0.000  is_ood True
+    step  56235  elapsed 55.0m  loss 0.000  is_ood True
+    step  57261  elapsed 56.0m  loss 1.704  is_ood False
+    step  58285  elapsed 57.0m  loss 0.000  is_ood True
+    step  59303  elapsed 58.0m  loss 1.986  is_ood False
+    step  60317  elapsed 59.0m  loss 1.722  is_ood False
+
+  ===== Checkpoint 1h @ 1.00h, step 61292 =====
+  eval done in 7s
+    train   overall 100.0%  per_field {'name': 1.0, 'address': 1.0, 'date': 1.0, 'number': 1.0, 'entity': 1.0}
+    heldout overall 93.5%  per_field {'name': 0.9111111111111111, 'address': 0.9166666666666666, 'date': 1.0, 'number': 0.9466666666666667, 'entity': 0.8888888888888888}
+    wikitext_ppl 33.594  detached_ce 8.485
+  git commit OK
+  git push OK
+    step  62317  elapsed 61.2m  loss 1.235  is_ood False
+    step  63335  elapsed 62.2m  loss 0.000  is_ood True
+    step  64354  elapsed 63.2m  loss 1.645  is_ood False
+    step  65374  elapsed 64.2m  loss 1.587  is_ood False
+    step  66390  elapsed 65.2m  loss 0.000  is_ood True
+    step  67407  elapsed 66.2m  loss 1.441  is_ood False
+    step  68432  elapsed 67.2m  loss 1.368  is_ood False
+    step  69454  elapsed 68.2m  loss 1.445  is_ood False
+    step  70474  elapsed 69.2m  loss 1.392  is_ood False
+    step  71493  elapsed 70.2m  loss 1.172  is_ood False
+    step  72515  elapsed 71.2m  loss 0.000  is_ood True
+    step  73565  elapsed 72.2m  loss 0.000  is_ood True
+    step  74588  elapsed 73.2m  loss 1.265  is_ood False
+    step  75608  elapsed 74.2m  loss 1.408  is_ood False
+    step  76630  elapsed 75.2m  loss 0.000  is_ood True
+    step  77652  elapsed 76.2m  loss 1.150  is_ood False
+    step  78674  elapsed 77.2m  loss 1.103  is_ood False
+    step  79695  elapsed 78.2m  loss 0.000  is_ood True
+    step  80719  elapsed 79.2m  loss 0.913  is_ood False
+    step  81739  elapsed 80.2m  loss 1.305  is_ood False
+    step  82760  elapsed 81.2m  loss 0.000  is_ood True
+    step  83780  elapsed 82.2m  loss 0.000  is_ood True
+    step  84804  elapsed 83.2m  loss 1.324  is_ood False
+    step  85830  elapsed 84.2m  loss 0.000  is_ood True
+    step  86850  elapsed 85.2m  loss 0.000  is_ood True
+    step  87869  elapsed 86.2m  loss 1.316  is_ood False
+    step  88887  elapsed 87.2m  loss 1.024  is_ood False
+    step  89905  elapsed 88.2m  loss 0.000  is_ood True
+    step  90925  elapsed 89.2m  loss 0.000  is_ood True
+    step  91945  elapsed 90.2m  loss 0.000  is_ood True
+    step  92967  elapsed 91.2m  loss 1.184  is_ood False
+    step  93988  elapsed 92.2m  loss 0.938  is_ood False
+    step  95006  elapsed 93.2m  loss 0.903  is_ood False
+    step  96027  elapsed 94.2m  loss 1.101  is_ood False
+    step  97048  elapsed 95.2m  loss 1.021  is_ood False
+    step  98064  elapsed 96.2m  loss 1.016  is_ood False
+    step  99099  elapsed 97.2m  loss 1.123  is_ood False
+    step 100122  elapsed 98.2m  loss 0.908  is_ood False
+    step 101140  elapsed 99.2m  loss 0.000  is_ood True
+    step 102170  elapsed 100.2m  loss 0.000  is_ood True
+    step 103190  elapsed 101.2m  loss 0.000  is_ood True
+    step 104210  elapsed 102.2m  loss 0.000  is_ood True
+    step 105227  elapsed 103.2m  loss 1.039  is_ood False
+    step 106257  elapsed 104.2m  loss 0.744  is_ood False
+    step 107281  elapsed 105.2m  loss 0.979  is_ood False
+    step 108301  elapsed 106.2m  loss 1.022  is_ood False
+    step 109321  elapsed 107.2m  loss 0.797  is_ood False
+    step 110340  elapsed 108.2m  loss 0.000  is_ood True
+    step 111360  elapsed 109.2m  loss 0.000  is_ood True
+    step 112380  elapsed 110.2m  loss 0.000  is_ood True
+    step 113397  elapsed 111.2m  loss 0.606  is_ood False
+    step 114419  elapsed 112.2m  loss 0.688  is_ood False
+    step 115441  elapsed 113.2m  loss 0.628  is_ood False
+    step 116464  elapsed 114.2m  loss 0.475  is_ood False
+    step 117494  elapsed 115.2m  loss 0.746  is_ood False
+    step 118518  elapsed 116.2m  loss 0.646  is_ood False
+    step 119545  elapsed 117.2m  loss 0.000  is_ood True
+    step 120567  elapsed 118.2m  loss 0.733  is_ood False
+    step 121593  elapsed 119.2m  loss 0.573  is_ood False
+    step 122624  elapsed 120.2m  loss 0.742  is_ood False
+    step 123651  elapsed 121.2m  loss 0.393  is_ood False
+    step 124674  elapsed 122.2m  loss 0.691  is_ood False
+    step 125695  elapsed 123.2m  loss 0.000  is_ood True
+    step 126718  elapsed 124.2m  loss 0.624  is_ood False
+    step 127740  elapsed 125.2m  loss 0.000  is_ood True
+    step 128762  elapsed 126.2m  loss 0.718  is_ood False
+    step 129778  elapsed 127.2m  loss 0.600  is_ood False
+    step 130796  elapsed 128.2m  loss 0.592  is_ood False
+    step 131819  elapsed 129.2m  loss 0.468  is_ood False
+    step 132838  elapsed 130.2m  loss 0.530  is_ood False
+    step 133860  elapsed 131.3m  loss 0.000  is_ood True
+    step 134880  elapsed 132.3m  loss 0.000  is_ood True
+    step 135914  elapsed 133.3m  loss 0.654  is_ood False
+    step 136932  elapsed 134.3m  loss 0.443  is_ood False
+    step 137955  elapsed 135.3m  loss 0.000  is_ood True
+    step 138980  elapsed 136.3m  loss 0.000  is_ood True
+    step 140005  elapsed 137.3m  loss 0.000  is_ood True
+    step 141023  elapsed 138.3m  loss 0.610  is_ood False
+    step 142045  elapsed 139.3m  loss 0.000  is_ood True
+    step 143065  elapsed 140.3m  loss 0.000  is_ood True
+    step 144093  elapsed 141.3m  loss 0.470  is_ood False
+    step 145114  elapsed 142.3m  loss 0.488  is_ood False
+    step 146141  elapsed 143.3m  loss 0.357  is_ood False
+    step 147165  elapsed 144.3m  loss 0.000  is_ood True
+    step 148195  elapsed 145.3m  loss 0.000  is_ood True
+    step 149215  elapsed 146.3m  loss 0.000  is_ood True
+    step 150235  elapsed 147.3m  loss 0.000  is_ood True
+    step 151254  elapsed 148.3m  loss 0.555  is_ood False
+    step 152280  elapsed 149.3m  loss 0.000  is_ood True
+    step 153299  elapsed 150.3m  loss 0.394  is_ood False
+    step 154316  elapsed 151.3m  loss 0.461  is_ood False
+    step 155345  elapsed 152.3m  loss 0.000  is_ood True
+    step 156370  elapsed 153.3m  loss 0.000  is_ood True
+    step 157399  elapsed 154.3m  loss 0.409  is_ood False
+    step 158438  elapsed 155.3m  loss 0.356  is_ood False
+    step 159457  elapsed 156.3m  loss 0.478  is_ood False
+    step 160480  elapsed 157.3m  loss 0.000  is_ood True
+    step 161502  elapsed 158.3m  loss 0.365  is_ood False
+    step 162529  elapsed 159.3m  loss 0.270  is_ood False
+    step 163549  elapsed 160.3m  loss 0.221  is_ood False
+    step 164574  elapsed 161.3m  loss 0.301  is_ood False
+    step 165595  elapsed 162.3m  loss 0.000  is_ood True
+    step 166622  elapsed 163.3m  loss 0.419  is_ood False
+    step 167644  elapsed 164.3m  loss 0.280  is_ood False
+    step 168665  elapsed 165.3m  loss 0.000  is_ood True
+    step 169687  elapsed 166.3m  loss 0.403  is_ood False
+    step 170709  elapsed 167.3m  loss 0.289  is_ood False
+    step 171727  elapsed 168.3m  loss 0.357  is_ood False
+    step 172747  elapsed 169.3m  loss 0.329  is_ood False
+    step 173768  elapsed 170.3m  loss 0.252  is_ood False
+    step 174789  elapsed 171.3m  loss 0.290  is_ood False
+    step 175820  elapsed 172.3m  loss 0.000  is_ood True
+    step 176843  elapsed 173.3m  loss 0.286  is_ood False
+    step 177865  elapsed 174.3m  loss 0.000  is_ood True
+    step 178887  elapsed 175.3m  loss 0.323  is_ood False
+    step 179908  elapsed 176.3m  loss 0.290  is_ood False
+    step 180930  elapsed 177.3m  loss 0.000  is_ood True
+    step 181952  elapsed 178.3m  loss 0.275  is_ood False
+    step 182975  elapsed 179.3m  loss 0.000  is_ood True
+    step 184003  elapsed 180.3m  loss 0.291  is_ood False
+    step 185024  elapsed 181.3m  loss 0.250  is_ood False
+    step 186041  elapsed 182.3m  loss 0.296  is_ood False
+    step 187060  elapsed 183.3m  loss 0.000  is_ood True
+    step 188079  elapsed 184.3m  loss 0.328  is_ood False
+    step 189099  elapsed 185.3m  loss 0.288  is_ood False
+    step 190115  elapsed 186.3m  loss 0.000  is_ood True
+    step 191138  elapsed 187.3m  loss 0.209  is_ood False
+    step 192162  elapsed 188.3m  loss 0.245  is_ood False
+    step 193180  elapsed 189.3m  loss 0.000  is_ood True
+    step 194200  elapsed 190.3m  loss 0.000  is_ood True
+    step 195222  elapsed 191.3m  loss 0.265  is_ood False
+    step 196239  elapsed 192.3m  loss 0.313  is_ood False
+    step 197264  elapsed 193.3m  loss 0.271  is_ood False
+    step 198287  elapsed 194.3m  loss 0.219  is_ood False
+    step 199309  elapsed 195.3m  loss 0.206  is_ood False
+    step 200325  elapsed 196.3m  loss 0.000  is_ood True
+    step 201345  elapsed 197.3m  loss 0.000  is_ood True
+    step 202372  elapsed 198.3m  loss 0.242  is_ood False
+    step 203392  elapsed 199.3m  loss 0.153  is_ood False
+    step 204413  elapsed 200.3m  loss 0.170  is_ood False
+    step 205445  elapsed 201.3m  loss 0.000  is_ood True
+    step 206472  elapsed 202.3m  loss 0.209  is_ood False
+    step 207497  elapsed 203.3m  loss 0.256  is_ood False
+    step 208519  elapsed 204.3m  loss 0.250  is_ood False
+    step 209540  elapsed 205.3m  loss 0.000  is_ood True
+    step 210582  elapsed 206.3m  loss 0.226  is_ood False
+    step 211609  elapsed 207.3m  loss 0.199  is_ood False
+    step 212626  elapsed 208.3m  loss 0.202  is_ood False
+    step 213649  elapsed 209.3m  loss 0.192  is_ood False
+    step 214668  elapsed 210.3m  loss 0.265  is_ood False
+    step 215689  elapsed 211.3m  loss 0.170  is_ood False
+    step 216710  elapsed 212.3m  loss 0.000  is_ood True
+    step 217733  elapsed 213.3m  loss 0.230  is_ood False
+    step 218754  elapsed 214.3m  loss 0.173  is_ood False
+    step 219775  elapsed 215.3m  loss 0.000  is_ood True
+    step 220820  elapsed 216.3m  loss 0.000  is_ood True
+    step 221840  elapsed 217.3m  loss 0.000  is_ood True
+    step 222862  elapsed 218.3m  loss 0.224  is_ood False
+    step 223883  elapsed 219.3m  loss 0.202  is_ood False
+    step 224905  elapsed 220.3m  loss 0.000  is_ood True
+    step 225925  elapsed 221.3m  loss 0.000  is_ood True
+    step 226949  elapsed 222.3m  loss 0.203  is_ood False
+    step 227974  elapsed 223.3m  loss 0.155  is_ood False
+    step 228992  elapsed 224.3m  loss 0.169  is_ood False
+    step 230015  elapsed 225.3m  loss 0.000  is_ood True
+    step 231037  elapsed 226.3m  loss 0.172  is_ood False
+    step 232058  elapsed 227.3m  loss 0.147  is_ood False
+    step 233078  elapsed 228.3m  loss 0.153  is_ood False
+    step 234096  elapsed 229.3m  loss 0.172  is_ood False
+    step 235121  elapsed 230.3m  loss 0.211  is_ood False
+    step 236148  elapsed 231.3m  loss 0.192  is_ood False
+    step 237169  elapsed 232.3m  loss 0.102  is_ood False
+    step 238190  elapsed 233.3m  loss 0.000  is_ood True
+    step 239210  elapsed 234.3m  loss 0.000  is_ood True
+    step 240226  elapsed 235.3m  loss 0.148  is_ood False
+    step 241242  elapsed 236.3m  loss 0.144  is_ood False
+    step 242265  elapsed 237.3m  loss 0.000  is_ood True
