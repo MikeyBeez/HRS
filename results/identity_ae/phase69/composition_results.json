@@ -1,0 +1,739 @@
+{
+  "selected_ids": [
+    0,
+    4,
+    20,
+    23,
+    30,
+    33,
+    40,
+    43
+  ],
+  "heldout_id": 21,
+  "k_values": [
+    1,
+    2,
+    4,
+    6,
+    8
+  ],
+  "n_passages": 8,
+  "runs": {
+    "8": {
+      "config": {
+        "rank": 8,
+        "alpha": 16,
+        "n_steps": 150,
+        "high_lr": 0.0003,
+        "base_lr": 0.0001,
+        "targets": [
+          "blocks.4.attn.qkv",
+          "blocks.4.attn.out_proj",
+          "blocks.4.peer_ffn.input_proj",
+          "blocks.4.peer_ffn.output_proj",
+          "blocks.5.attn.qkv",
+          "blocks.5.attn.out_proj",
+          "blocks.5.peer_ffn.input_proj",
+          "blocks.5.peer_ffn.output_proj"
+        ],
+        "n_passages": 8,
+        "selected_ids": [
+          0,
+          4,
+          20,
+          23,
+          30,
+          33,
+          40,
+          43
+        ],
+        "heldout_id": 21,
+        "k_values": [
+          1,
+          2,
+          4,
+          6,
+          8
+        ],
+        "scaling": 2.0,
+        "n_lora_params": 163840
+      },
+      "k1_baseline": [
+        {
+          "passage_idx": 0,
+          "id": 0,
+          "type": "numeric",
+          "ppl": 1.625633716583252,
+          "hit": false,
+          "gen": "218 The northern facility is code 104218218 The northern facility code 104218218 will not be repeated immediately. All a"
+        },
+        {
+          "passage_idx": 1,
+          "id": 4,
+          "type": "numeric",
+          "ppl": 1.622757911682129,
+          "hit": true,
+          "gen": " 7940 is code 7940. This code must be memorized immediately. All authorized personnel must commit code 7940 to memory. T"
+        },
+        {
+          "passage_idx": 2,
+          "id": 20,
+          "type": "entity",
+          "ppl": 1.2015637159347534,
+          "hit": true,
+          "gen": " Dr. Elara Voss's work on the discovery of the new discovery date on September 9, 2017. The discovery date of September "
+        },
+        {
+          "passage_idx": 3,
+          "id": 23,
+          "type": "entity",
+          "ppl": 1.2118607759475708,
+          "hit": false,
+          "gen": " Commander Yuki Petrov's Commander Yuki Petrov's Commander Yuki Petrov's Commander Yuki Petrov's Commander Yuki Petrov's"
+        },
+        {
+          "passage_idx": 4,
+          "id": 30,
+          "type": "technical",
+          "ppl": 1.2314202785491943,
+          "hit": false,
+          "gen": ". This value of 89 kelvin must not be exceeded under any circumstances. The reactor critical value is precisely 89 kelvi"
+        },
+        {
+          "passage_idx": 5,
+          "id": 33,
+          "type": "technical",
+          "ppl": 1.2370647192001343,
+          "hit": false,
+          "gen": ". This value is precisely 99 nanometers. This value of 99 nanometers must not be exceeded under any circumstances. The s"
+        },
+        {
+          "passage_idx": 6,
+          "id": 40,
+          "type": "fact",
+          "ppl": 1.016089916229248,
+          "hit": false,
+          "gen": ", the requirement of the requirement of the requirement of the requirement of the requirement of the requirement of the "
+        },
+        {
+          "passage_idx": 7,
+          "id": 43,
+          "type": "fact",
+          "ppl": 1.0156327486038208,
+          "hit": false,
+          "gen": " to be enacted. The requirement of the Vanguard Protocol was established at the founding convention. the founding conven"
+        }
+      ],
+      "composition": {
+        "1": [
+          {
+            "passage_idx": 0,
+            "id": 0,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 1.625633716583252,
+            "hit": false,
+            "gen": "218 The northern facility is code 104218218 The northern facility code 104218218 will not be repeated immediately. All a"
+          },
+          {
+            "passage_idx": -1,
+            "id": 21,
+            "type": "entity",
+            "role": "heldout",
+            "ppl": 281.7026062011719,
+            "hit": false,
+            "gen": " The following information is classified. The system access code for the northern facility is 10433218. This code must b"
+          }
+        ],
+        "2": [
+          {
+            "passage_idx": 0,
+            "id": 0,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 6.444807529449463,
+            "hit": false,
+            "gen": " access is classified. All authorized personnel must commit code code code code code code code must commit code code cod"
+          },
+          {
+            "passage_idx": 1,
+            "id": 4,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 3.390355348587036,
+            "hit": false,
+            "gen": " access is memorized. All authorized personnel must commit code code code code code code code code code code code code c"
+          },
+          {
+            "passage_idx": -1,
+            "id": 21,
+            "type": "entity",
+            "role": "heldout",
+            "ppl": 496.3707275390625,
+            "hit": false,
+            "gen": " The following information is classified. The system access code for the facility code access code must be memor. All au"
+          }
+        ],
+        "4": [
+          {
+            "passage_idx": 0,
+            "id": 0,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 17.95817756652832,
+            "hit": false,
+            "gen": "ITYITYITYITYITYITYITYITYITYITYITYITYITYITYITYITYITYITYITYITYITYITY The northern facility code code code. The northern fa"
+          },
+          {
+            "passage_idx": 1,
+            "id": 4,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 8.486907005310059,
+            "hit": false,
+            "gen": "ITYITYITYITYITY. The code code code code code code code code code code code. The code code code code code code code code"
+          },
+          {
+            "passage_idx": 2,
+            "id": 20,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 6.602183818817139,
+            "hit": false,
+            "gen": ". The discovery discovery discovery discovery discovery. The discovery. The discovery. The discovery. The discovery. The"
+          },
+          {
+            "passage_idx": 3,
+            "id": 23,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 6.079013824462891,
+            "hit": false,
+            "gen": " The discovery. The discovery discovery discovery. The discovery. The discovery. The discovery. The discovery. The disco"
+          },
+          {
+            "passage_idx": -1,
+            "id": 21,
+            "type": "entity",
+            "role": "heldout",
+            "ppl": 32.96049880981445,
+            "hit": false,
+            "gen": ". The discovery discovery discovery. The discovery. The discovery. The discovery. The new discovery. The new discovery. "
+          }
+        ],
+        "6": [
+          {
+            "passage_idx": 0,
+            "id": 0,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 223.0237274169922,
+            "hit": false,
+            "gen": ". The facility must not be exceeded. any. The facility must not be exceeded. any. All.. The facility must not be exceede"
+          },
+          {
+            "passage_idx": 1,
+            "id": 4,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 76.60133361816406,
+            "hit": false,
+            "gen": ". The facility code code must not be exceeded.. The facility code code. The facility code code. The facility code code. "
+          },
+          {
+            "passage_idx": 2,
+            "id": 20,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 78.9464340209961,
+            "hit": false,
+            "gen": " The The The The The The The The The The The The The The The The The The The The The The Rockwell's The The The Rockwell"
+          },
+          {
+            "passage_idx": 3,
+            "id": 23,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 136.89474487304688,
+            "hit": false,
+            "gen": " The The The The The The The The The The The The The The The The The The The The The The The The New The New York TimesI"
+          },
+          {
+            "passage_idx": 4,
+            "id": 30,
+            "type": "technical",
+            "role": "constituent",
+            "ppl": 75.64849090576172,
+            "hit": false,
+            "gen": ". The critical value must not be exceeded. The critical value. The critical value. The critical value. The critical valu"
+          },
+          {
+            "passage_idx": 5,
+            "id": 33,
+            "type": "technical",
+            "role": "constituent",
+            "ppl": 99.62976837158203,
+            "hit": false,
+            "gen": ". The critical value must not be exceeded. The critical. The critical........ This. not. not. not. not..... The critical"
+          },
+          {
+            "passage_idx": -1,
+            "id": 21,
+            "type": "entity",
+            "role": "heldout",
+            "ppl": 508.81439208984375,
+            "hit": false,
+            "gen": " The The The The The The The The The The The The The The The The The The The The The The The The The New The The New Yor"
+          }
+        ],
+        "8": [
+          {
+            "passage_idx": 0,
+            "id": 0,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 3032.09716796875,
+            "hit": false,
+            "gen": ". The requirement. The requirement. The requirement. The requirement. The requirement. The requirement. The requirement."
+          },
+          {
+            "passage_idx": 1,
+            "id": 4,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 832.013671875,
+            "hit": false,
+            "gen": ". The requirement. The requirement. The requirement. The requirement. The requirement. The requirement. The, The require"
+          },
+          {
+            "passage_idx": 2,
+            "id": 20,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 447.1703796386719,
+            "hit": false,
+            "gen": " The The The The The The The The The The The Without The The The The The Without Without The The The Without Without The"
+          },
+          {
+            "passage_idx": 3,
+            "id": 23,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 605.296142578125,
+            "hit": false,
+            "gen": " The The The The The The The The The The The The The The The The Without Without The The The The The Without Without The"
+          },
+          {
+            "passage_idx": 4,
+            "id": 30,
+            "type": "technical",
+            "role": "constituent",
+            "ppl": 912.9680786132812,
+            "hit": false,
+            "gen": ". The value, The value, The value, The The The The value, The The value, The The value, The The value, The value, The va"
+          },
+          {
+            "passage_idx": 5,
+            "id": 33,
+            "type": "technical",
+            "role": "constituent",
+            "ppl": 643.3170166015625,
+            "hit": false,
+            "gen": ". The requirement. The requirement. The requirement. The requirement. The requirement. The requirement. The requirement."
+          },
+          {
+            "passage_idx": 6,
+            "id": 40,
+            "type": "fact",
+            "role": "constituent",
+            "ppl": 37.24660110473633,
+            "hit": false,
+            "gen": ", The The The The The The The The The Thornfield, The Thorn. The The The The The The Without Without, The The The The Th"
+          },
+          {
+            "passage_idx": 7,
+            "id": 43,
+            "type": "fact",
+            "role": "constituent",
+            "ppl": 42.795867919921875,
+            "hit": false,
+            "gen": ", The The The The The The The The The The Without, The The The The The The Without, The The The Without, The The Without"
+          },
+          {
+            "passage_idx": -1,
+            "id": 21,
+            "type": "entity",
+            "role": "heldout",
+            "ppl": 1910.6971435546875,
+            "hit": false,
+            "gen": " The The The The The The The The The The The The The The The The The Without Without, The The The The Without Without, T"
+          }
+        ]
+      },
+      "base_heldout": {
+        "ppl": 333.73492431640625,
+        "hit": false,
+        "gen": " ( a reference to the fact that the first element of the \" super @-@ heavy element \" was not a reference to the atomic b"
+      },
+      "wall_time_s": 35.78293561935425
+    },
+    "128": {
+      "config": {
+        "rank": 128,
+        "alpha": 256,
+        "n_steps": 150,
+        "high_lr": 0.0003,
+        "base_lr": 0.0001,
+        "targets": [
+          "blocks.4.attn.qkv",
+          "blocks.4.attn.out_proj",
+          "blocks.4.peer_ffn.input_proj",
+          "blocks.4.peer_ffn.output_proj",
+          "blocks.5.attn.qkv",
+          "blocks.5.attn.out_proj",
+          "blocks.5.peer_ffn.input_proj",
+          "blocks.5.peer_ffn.output_proj"
+        ],
+        "n_passages": 8,
+        "selected_ids": [
+          0,
+          4,
+          20,
+          23,
+          30,
+          33,
+          40,
+          43
+        ],
+        "heldout_id": 21,
+        "k_values": [
+          1,
+          2,
+          4,
+          6,
+          8
+        ],
+        "scaling": 2.0,
+        "n_lora_params": 2621440
+      },
+      "k1_baseline": [
+        {
+          "passage_idx": 0,
+          "id": 0,
+          "type": "numeric",
+          "ppl": 1.2337000370025635,
+          "hit": true,
+          "gen": " will not be repeated. All authorized personnel must commit code 10433218 to memory. The northern facility code 10433218"
+        },
+        {
+          "passage_idx": 1,
+          "id": 4,
+          "type": "numeric",
+          "ppl": 1.2440669536590576,
+          "hit": true,
+          "gen": " will not be repeated. All authorized personnel must commit code 7940 to memory. The central facility code 7940 will not"
+        },
+        {
+          "passage_idx": 2,
+          "id": 20,
+          "type": "entity",
+          "ppl": 1.1656548976898193,
+          "hit": true,
+          "gen": " Dr. Elara Voss's work on September 9, 2017 changed the field permanently. Dr. Elara Voss's work on September 9, 2017 ch"
+        },
+        {
+          "passage_idx": 3,
+          "id": 23,
+          "type": "entity",
+          "ppl": 1.172985315322876,
+          "hit": false,
+          "gen": " Commander Yuki Petrov's Commander Yuki Petrov's Commander Yuki Petrov's Commander Yuki Petrov's Commander Yuki Petrov's"
+        },
+        {
+          "passage_idx": 4,
+          "id": 30,
+          "type": "technical",
+          "ppl": 1.2025600671768188,
+          "hit": true,
+          "gen": ". This value of 8937 kelvin must not be exceeded under any circumstances. The reactor critical value is precisely 8937 k"
+        },
+        {
+          "passage_idx": 5,
+          "id": 33,
+          "type": "technical",
+          "ppl": 1.197985291481018,
+          "hit": true,
+          "gen": ". This value of 9913 nanometers must not be exceeded under any circumstances. The spectrometer critical value is precise"
+        },
+        {
+          "passage_idx": 6,
+          "id": 40,
+          "type": "fact",
+          "ppl": 1.0003418922424316,
+          "hit": true,
+          "gen": " to be enacted. The requirement of 18 signatories was established at the founding convention. The requirement of 18 sign"
+        },
+        {
+          "passage_idx": 7,
+          "id": 43,
+          "type": "fact",
+          "ppl": 1.000318169593811,
+          "hit": false,
+          "gen": " to be enacted. The requirement of the Vanguard Protocol was established at the founding convention. The requirement of "
+        }
+      ],
+      "composition": {
+        "1": [
+          {
+            "passage_idx": 0,
+            "id": 0,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 1.2337000370025635,
+            "hit": true,
+            "gen": " will not be repeated. All authorized personnel must commit code 10433218 to memory. The northern facility code 10433218"
+          },
+          {
+            "passage_idx": -1,
+            "id": 21,
+            "type": "entity",
+            "role": "heldout",
+            "ppl": 271.8296203613281,
+            "hit": false,
+            "gen": " The following information is classified. The system access code for the northern facility is 10433218. This code must b"
+          }
+        ],
+        "2": [
+          {
+            "passage_idx": 0,
+            "id": 0,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 1.6017115116119385,
+            "hit": false,
+            "gen": " will not be repeated. All authorized personnel must commit code 10433 will not be repeated. All authorized personnel mu"
+          },
+          {
+            "passage_idx": 1,
+            "id": 4,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 1.5536699295043945,
+            "hit": false,
+            "gen": " will not be repeated. All authorized personnel must commit code 10433 will not be repeated. All authorized personnel mu"
+          },
+          {
+            "passage_idx": -1,
+            "id": 21,
+            "type": "entity",
+            "role": "heldout",
+            "ppl": 757.4057006835938,
+            "hit": false,
+            "gen": " The The following information is classified. The system access code for the central facility is 7933. This code must be"
+          }
+        ],
+        "4": [
+          {
+            "passage_idx": 0,
+            "id": 0,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 2.4768857955932617,
+            "hit": false,
+            "gen": " will not be repeated. All authorized personnel must commit code 10433 will not be repeated. All authorized personnel mu"
+          },
+          {
+            "passage_idx": 1,
+            "id": 4,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 2.0089869499206543,
+            "hit": false,
+            "gen": " will not be repeated. All authorized personnel must commit code 10433 will not be repeated. All authorized personnel mu"
+          },
+          {
+            "passage_idx": 2,
+            "id": 20,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 1.8975238800048828,
+            "hit": true,
+            "gen": " The on September 9, 2017. The discovery date of September 9, 2017 marks the beginning. The new era. The new era. The ne"
+          },
+          {
+            "passage_idx": 3,
+            "id": 23,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 2.5159621238708496,
+            "hit": false,
+            "gen": " The The following information is classified. The system access code for the central facility is 7933. This code must be"
+          },
+          {
+            "passage_idx": -1,
+            "id": 21,
+            "type": "entity",
+            "role": "heldout",
+            "ppl": 18.802860260009766,
+            "hit": false,
+            "gen": ". The discovery date of June 4, 1984 marks the beginning. The new era. The new era changed the field permanently. The ne"
+          }
+        ],
+        "6": [
+          {
+            "passage_idx": 0,
+            "id": 0,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 6.2275214195251465,
+            "hit": false,
+            "gen": " will not be repeated. All authorized personnel must commit codeon. This northern facility must be memorized. All author"
+          },
+          {
+            "passage_idx": 1,
+            "id": 4,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 3.994856357574463,
+            "hit": false,
+            "gen": " will not be repeated. All authorized personnel must commit codeon. This code of the central facilityatile will not be r"
+          },
+          {
+            "passage_idx": 2,
+            "id": 20,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 3.15517258644104,
+            "hit": true,
+            "gen": " The on September 9, 2017. The discovery date of September 9, 2017 marks the beginning. The new era expires. The new era"
+          },
+          {
+            "passage_idx": 3,
+            "id": 23,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 4.928432941436768,
+            "hit": false,
+            "gen": " The The following information is. The system certific access. The system certific code for the facility previously been"
+          },
+          {
+            "passage_idx": 4,
+            "id": 30,
+            "type": "technical",
+            "role": "constituent",
+            "ppl": 13.144705772399902,
+            "hit": false,
+            "gen": ". This value must be exceeded. Allmovie earners must commit to to a second. \" . \n\n \" A \" and \" B \" of \" Bamboomousemouse"
+          },
+          {
+            "passage_idx": 5,
+            "id": 33,
+            "type": "technical",
+            "role": "constituent",
+            "ppl": 9.293412208557129,
+            "hit": false,
+            "gen": ". This value must be exceeded. Allitialitial disks. This value must be exceeded. Allitialitialitial disks. This value mu"
+          },
+          {
+            "passage_idx": -1,
+            "id": 21,
+            "type": "entity",
+            "role": "heldout",
+            "ppl": 36.85615921020508,
+            "hit": false,
+            "gen": " The The following information is. The systemerguson of The following information is. The systemrankings. The systemergu"
+          }
+        ],
+        "8": [
+          {
+            "passage_idx": 0,
+            "id": 0,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 24.36339569091797,
+            "hit": false,
+            "gen": " is. The facility access code for the northern facility must be be memorized. All authorized earners must be be memorize"
+          },
+          {
+            "passage_idx": 1,
+            "id": 4,
+            "type": "numeric",
+            "role": "constituent",
+            "ppl": 14.792850494384766,
+            "hit": false,
+            "gen": " is. The facility of the central facility must be be memorized. All authorized earners must be be memorized. The central"
+          },
+          {
+            "passage_idx": 2,
+            "id": 20,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 7.809903144836426,
+            "hit": false,
+            "gen": ". The discovery NOTICE The The system NOTICE must be be repeated. The discovery NOTICE must be be repeated. The discover"
+          },
+          {
+            "passage_idx": 3,
+            "id": 23,
+            "type": "entity",
+            "role": "constituent",
+            "ppl": 8.351680755615234,
+            "hit": false,
+            "gen": " The The following NOTICE The The system NOTICE The The following information is classified. The system access code for "
+          },
+          {
+            "passage_idx": 4,
+            "id": 30,
+            "type": "technical",
+            "role": "constituent",
+            "ppl": 64.1839828491211,
+            "hit": false,
+            "gen": " cannot be exceeded. The facilitybub is. \". \". The facility of the U. S. \" the nation cannot be exceeded. \". The facilit"
+          },
+          {
+            "passage_idx": 5,
+            "id": 33,
+            "type": "technical",
+            "role": "constituent",
+            "ppl": 47.70450210571289,
+            "hit": false,
+            "gen": ". The spectrometer must be be memorized. The spectrometerministic the spectrometer must be be memor. The spectrometerria"
+          },
+          {
+            "passage_idx": 6,
+            "id": 40,
+            "type": "fact",
+            "role": "constituent",
+            "ppl": 2.532942056655884,
+            "hit": false,
+            "gen": " signatories to be considered. The facility of the Thornfield Protocol cannot be enacted. The Thornfield Protocol. The f"
+          },
+          {
+            "passage_idx": 7,
+            "id": 43,
+            "type": "fact",
+            "role": "constituent",
+            "ppl": 2.161245107650757,
+            "hit": false,
+            "gen": " signatories to be considered considered. The facility of the central facility is the \". The facility of theonkinkinkink"
+          },
+          {
+            "passage_idx": -1,
+            "id": 21,
+            "type": "entity",
+            "role": "heldout",
+            "ppl": 71.49864959716797,
+            "hit": false,
+            "gen": " The The following NOTICE The The system NOTICE The The following NOTICE is. The system access code for the central faci"
+          }
+        ]
+      },
+      "base_heldout": {
+        "ppl": 333.73492431640625,
+        "hit": false,
+        "gen": " ( a reference to the fact that the first element of the \" super @-@ heavy element \" was not a reference to the atomic b"
+      },
+      "wall_time_s": 36.76970601081848
+    }
+  }
+}
