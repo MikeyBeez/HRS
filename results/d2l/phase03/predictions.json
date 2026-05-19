@@ -1,0 +1,70 @@
+{
+  "phase": "03",
+  "experiment": "D2L Perceiver — 6x training budget + alpha-16 fp16-stability fix",
+  "base_model": "bigcode/starcoder2-3b",
+  "what_changed_from_phase02": [
+    "Training horizon: 5K -> 30K steps; cosine schedule explicitly retargeted at 30K.",
+    "LoRA alpha: 4 -> 16. Enabled by fp32 LoRA math (A/B stored as fp32; LoRA forward casts x to fp32, computes x@A@B*scaling in fp32, casts result back to fp16 only for the residual add). The Phase 02 NaN at step 300 with alpha=16 was an fp16 dynamic-range overflow in the LoRA path, not a learning-signal issue.",
+    "Loss logging: trailing-window mean (last 200 steps) added to per-step values, logged every 100 steps. Per-step KL on a single (passage, query) pair has huge variance; the trailing mean is what 'is loss still descending' needs.",
+    "Eval measurement fixes:",
+    "  (a) Multi-token target acceptance — greedy-generate up to 5 tokens, count the item as hit if the target word is a prefix of the generated text. Catches BPE artifacts that masked four C2 character 'misses' as real misses in Phase 02.",
+    "  (b) NAME-banned top-1 — at score time, mask the literal <NAME> token's logit before computing top-1/top-5. Reports both metrics. Probes Phase 02's open question #4: is the C_plot 0% across all conditions just suppression, or is the failure deeper?"
+  ],
+  "written_before_run": true,
+  "predictions": [
+    {
+      "condition": "C1_baseline",
+      "description": "no document, no adapter, no engram",
+      "names_top1": "0% (unchanged from Phase 01/02)",
+      "names_top1_multi_token": "~2% (BPE-relaxed; Phase 02 char top-1 was 0%)",
+      "names_top1_name_banned": "~5-10% (Phase 02 baseline name_rate on names was 0% so banning <NAME> shouldn't help much for names)",
+      "plot_top1": "0%",
+      "plot_top1_name_banned": "5-15% — if the answer is suppressed under <NAME>, banning it surfaces top-1 from below; if the failure is deeper, stays at floor.",
+      "reasoning": "Anchored to Phase 02 measurement. The multi-token fix should only slightly help baseline because the model has no Dickens prior to begin with."
+    },
+    {
+      "condition": "C2_rag",
+      "description": "oracle in-context retrieval",
+      "names_top1": "92% (unchanged)",
+      "names_top1_multi_token": "96-99% — the 4 'misses' in Phase 02 were all BPE artifacts; relaxing the target acceptance should recover them.",
+      "possessions_top1": "100%",
+      "plot_top1": "0% strict; 30-50% with NAME ban — Phase 02 spot checks showed correct token at rank 91-1116 below <NAME>; banning <NAME> should surface some of these.",
+      "reasoning": "RAG is doing copy-from-context, which is in-distribution for StarCoder2. The 86pp Phase 02 gap to C3 is now reframed as RAG riding an in-distribution operation, not RAG demonstrating retrieval power. NAME-banned C_plot is the key diagnostic for whether RAG can solve plot at all when the suppression attractor is removed."
+    },
+    {
+      "condition": "C3_adapter",
+      "description": "D2L adapter only (no in-context content)",
+      "names_top1": "20-50% (sharpest single prediction)",
+      "names_top1_multi_token": "C3 names + 2-5pp; BPE artifacts hurt the adapter less than RAG because adapter outputs are softer.",
+      "possessions_top1": "5-30% (wide range — unknown how content installation scales)",
+      "plot_top1": "0% strict; 5-20% with NAME ban",
+      "reasoning": "6x training + alpha 4-to-16 = substantially more content-installation capacity. Phase 02's 6% was three Lady-Dedlock bigram hits; this run either lifts well above that (architecture works at consumer scale) or stays near 6% (KL-distillation objective has a content ceiling). A meaningful lift here, plus the C5-minus-C2 delta below, is the load-bearing measurement."
+    },
+    {
+      "condition": "C4_adapter_plus_engram",
+      "description": "D2L adapter + mean-pooled layer-16 engram as soft prefix",
+      "names_top1": "~C3 or worse",
+      "reasoning": "Phase 02's C4 failure was structural: the engram is at the input-embedding manifold while it came from layer-16 hidden states, and the Perceiver wasn't trained against engram-conditioned inputs. More training of the adapter alone doesn't fix this. C4 is kept for the predictions record, not because we expect it to work."
+    },
+    {
+      "condition": "C5_adapter_plus_context",
+      "description": "D2L adapter + source passage in context",
+      "names_top1": "96-99% (saturation territory)",
+      "load_bearing_metric": "C5 mean rank minus C2 mean rank — top-1 is near ceiling so the rank gap is the cleaner signal of 'adapter installed content beyond what context provides'.",
+      "reasoning": "If the adapter installed real content, C5 should beat C2 on something — most cleanly on mean rank rather than top-1."
+    },
+    {
+      "condition": "C6_anti_suppression_prompt",
+      "description": "natural-language instruction not to emit <NAME>",
+      "names_top1": "0% (unchanged from Phase 02)",
+      "reasoning": "Suppression isn't natural-language defeatable on character cues — it's attention-defeatable. More training of the Perceiver doesn't change C6."
+    }
+  ],
+  "strongest_single_prediction": "C3 names top-1 lifts meaningfully above 6% (i.e. above 15%).",
+  "load_bearing_measurement": "C5 mean rank minus C2 mean rank — positive means the adapter installed content; ~zero means the adapter is just providing a directional nudge that gets dominated when context is present.",
+  "interpretation_grid": {
+    "C3_names_in_20_to_50_pct": "Framework's positive claim has empirical support at this scale.",
+    "C3_names_below_15_pct": "Bigram-memorization diagnosis confirmed; KL distillation has a content ceiling at this Perceiver scale; next move is joint engram-Perceiver training or a content-preserving objective.",
+    "C3_names_above_50_pct": "Surprise; revisit how much content is actually installed (worth a vocabulary-coverage sanity check)."
+  }
+}

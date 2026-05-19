@@ -1,0 +1,87 @@
+{
+  "base_only_cloze_prefix": {
+    "n": 30,
+    "mean_ms": 16.930290459034342,
+    "median_ms": 16.739932587370276,
+    "stdev_ms": 1.134296437835268,
+    "min_ms": 16.220842953771353,
+    "max_ms": 22.485895082354546
+  },
+  "base_only_rag_prefix": {
+    "n": 30,
+    "mean_ms": 17.80070805301269,
+    "median_ms": 16.88464148901403,
+    "stdev_ms": 3.515614101700691,
+    "min_ms": 16.61737496033311,
+    "max_ms": 36.159807816147804
+  },
+  "perceiver_passage_to_adapter": {
+    "n": 30,
+    "mean_ms": 3.6444089453046518,
+    "median_ms": 3.5945220151916146,
+    "stdev_ms": 0.11464472523164822,
+    "min_ms": 3.5317689180374146,
+    "max_ms": 4.045351874083281
+  },
+  "base_with_adapter_cloze": {
+    "n": 30,
+    "mean_ms": 19.99029832271238,
+    "median_ms": 19.957213546149433,
+    "stdev_ms": 0.9845215815775651,
+    "min_ms": 19.174013985320926,
+    "max_ms": 24.52634391374886
+  },
+  "base_with_adapter_rag": {
+    "n": 30,
+    "mean_ms": 20.984694524668157,
+    "median_ms": 20.23453509900719,
+    "stdev_ms": 3.521932464190583,
+    "min_ms": 19.884040113538504,
+    "max_ms": 39.53266399912536
+  },
+  "anti_suppression_prefix": {
+    "n": 30,
+    "mean_ms": 17.210377473384142,
+    "median_ms": 16.884842072613537,
+    "stdev_ms": 1.156230938558123,
+    "min_ms": 16.55881409533322,
+    "max_ms": 22.957429056987166
+  },
+  "prefix_token_counts": {
+    "cloze_prefix": {
+      "mean": 27.3,
+      "median": 19.5,
+      "min": 7,
+      "max": 219
+    },
+    "rag_prefix": {
+      "mean": 92.16666666666667,
+      "median": 68.5,
+      "min": 24,
+      "max": 443
+    },
+    "anti_supp_prefix": {
+      "mean": 57.4,
+      "median": 49.5,
+      "min": 37,
+      "max": 249
+    }
+  },
+  "per_query_latency_ms": {
+    "C1_baseline_cloze": 16.930290459034342,
+    "C2_rag": 17.80070805301269,
+    "C3_adapter_per_query_cold": 23.63470726801703,
+    "C3_adapter_amortized": 19.99029832271238,
+    "C5_adapter_plus_rag_cold": 24.629103469972808,
+    "C5_adapter_plus_rag_amort": 20.984694524668157,
+    "C6_anti_suppression": 17.210377473384142
+  },
+  "per_query_overhead_vs_base_cloze": {
+    "C2_rag": 1.051411852388739,
+    "C3_adapter_per_query_cold": 1.3960012868772183,
+    "C3_adapter_amortized": 1.1807416045863026,
+    "C5_adapter_plus_rag_cold": 1.4547360265062803,
+    "C5_adapter_plus_rag_amort": 1.239476344215365,
+    "C6_anti_suppression": 1.0165435445438764
+  }
+}
