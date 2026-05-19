@@ -84,6 +84,21 @@ The `<NAME>` rate drops from 90% (Phase 01 baseline on plot items) to 0%
 once the answer is in attention range. The suppression is conditional on
 the model *not* having a recent attendable mention.
 
+**All 4 character "misses" are tokenization artifacts, not real misses.**
+Two are rank-1 (model is one position from the correct answer in the
+sorted vocabulary, e.g. target ` Ge` for "George Rouncewell" with top-1
+` S` for "Sir"). Two are sub-word boundary mismatches: target ` Richard`
+(with leading space) vs model emits `Rich` (no space) — the model
+*produces the correct output text* via a different BPE split. True
+content-correct rate on names is ≈99%, not 92%. See `all_misses.md`.
+
+The 23 code-idiom misses split three ways:
+1. Model picked a different valid completion (`import → matplotlib` not
+   `numpy`, `json. → loads` not `dumps`, `math. → sin` not `pi`).
+2. Sub-word boundary (target `e`, top-1 ` e`; target `'`, top-1 ` '`).
+3. Genuinely contrived targets (target `x` for `assert ___`; the model
+   reasonably picks `1`).
+
 ### C3 D2L adapter only (6% / 0% / 0% / 22%)
 
 The Perceiver has read the source passage and converted it into a rank-8
@@ -103,12 +118,36 @@ expected baseline 90%-ish — but the something is "shift away from the
 suppression default", not "shift toward the trained passage's specific
 entity."
 
+**The 3 character hits are all the same item.** All three are Lady
+Dedlock cued by the bigram `my ` followed by ` L`:
+```
+prefix tail "...soon floated her upward, and for years now my ___"  → ' L'  ✓
+prefix tail "...With all her perfections on her head, my ___"       → ' L'  ✓
+prefix tail "...everything associated with my ___"                  → ' L'  ✓
+```
+The adapter parameterized one strong bigram from training (`my →  L` is
+overwhelmingly "my Lady" in Bleak House), not "passage X corresponds to
+character Y." Top-5 near-hits (rank 2-4) on the other character items
+show first-letter biasing toward Bleak-House initials (` L`, ` M`, ` J`,
+` C`, ` T`, ` H`, ` B`) — a weak content-shaped nudge, not full-name
+retrieval.
+
 ### C4 adapter + engram prefix (2% / 0% / 0% / 2%)
 
 The engram prefix is a single-token mean-pool of the source passage's
 layer-16 hidden state, prepended at the input-embedding layer alongside
 the LoRA adapter. **It strictly hurts** in every category, with the
-code-idiom positive control collapsing from 22% (C3) to 2% (C4).
+code-idiom positive control collapsing from 22% (C3) to 2% (C4). Even
+idioms the base handles cleanly fall apart:
+```
+'json.'      → top1='io'  rank 110   (C3 gave 'dumps' rank 0)
+'np.'        → top1='_'   rank 232   (C3 gave 'array' rank 0)
+'class Foo(' → top1='\n'  rank 187   (C3 gave 'object' rank 0)
+```
+The failure isn't about the engram being the wrong content — it's about
+the engram living in the wrong manifold. Downstream layers operate on
+an off-distribution position-0 representation that neither the base
+nor the adapter was trained against.
 
 The most plausible explanation: the engram embedding is far from the base
 model's normal token-embedding manifold, and inserting it at position 0
@@ -208,6 +247,7 @@ The cleanest publishable framing now:
 - `results/d2l/phase02/results_C1.json` … `results_C6.json` — per-item evaluation records per condition
 - `results/d2l/phase02/six_condition_aggregates.json` — aggregate metrics
 - `results/d2l/phase02/eval_run.log` — eval stdout (gitignored)
+- `results/d2l/phase02/all_misses.md` — every miss for every condition × category, with prefix tail, target, model top-1, rank, top-5
 - `results/d2l/phase02/six_condition_README.md` — this file
 
 ## Open questions for Phase 03
