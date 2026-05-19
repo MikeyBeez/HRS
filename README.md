@@ -351,6 +351,7 @@ PYTHONPATH=. .venv/bin/python experiments/hrs_loop/diagnostic_ood_decay.py      
 | `experiments/identity_ae/phase67_engram_vs_summary.py` | Engram vs summarization at equal compression — engram wins (81% vs -11% gap closed) |
 | `experiments/identity_ae/phase68_adaptive_router.py` | Adaptive compression router — fixed recency is near-optimal (+0.03 NLL for oracle) |
 | `experiments/identity_ae/phase69_adapter_composition.py` | Rank-dim concat composition of independent adapters — falsifies free composability: ‖Σδ‖_F grows ~√K (orthogonal) yet K=2 retrieval collapses (rank 128: 75%→0%); functional interference, not magnitude, kills it |
+| `experiments/d2l/phase01_starcoder_baseline.py` | StarCoder2-3B baseline cloze on Bleak House — Dickens content at floor (0% char/plot top-1, 6% possession), with PII anonymization (`<NAME>` as top-1 for `Mr.`/`Lady`/`Jarndyce and ___`). GREEN to build Phase 02 Perceiver. |
 
 ### Benchmarks & Generation
 | File | Description |
