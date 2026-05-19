@@ -1,0 +1,65 @@
+{
+  "phase": "02",
+  "experiment": "D2L Perceiver six-condition evaluation",
+  "base_model": "bigcode/starcoder2-3b",
+  "written_before_run": true,
+  "predictions": [
+    {
+      "condition": "C1_baseline",
+      "description": "no document, no adapter, no engram (Phase 01 numbers)",
+      "names_top1": "0%",
+      "plot_top1": "0%",
+      "name_token_rate": "~90%",
+      "reasoning": "Phase 01 measurement: StarCoder2-3B has near-zero parametric Dickens prior and emits <NAME> as top-1 for proper-noun contexts."
+    },
+    {
+      "condition": "C2_rag",
+      "description": "oracle in-context retrieval of source passage",
+      "names_top1": "15-30%",
+      "plot_top1": "30-50%",
+      "name_token_rate": "50-70%",
+      "reasoning": "Model can attend to in-context content; <NAME> suppression still active in output logits. Plot facts easier than names because plot tokens don't trigger the suppression."
+    },
+    {
+      "condition": "C3_adapter",
+      "description": "D2L adapter only (no in-context document)",
+      "names_top1": "40-70%",
+      "plot_top1": "50-70%",
+      "name_token_rate": "10-30%",
+      "reasoning": "Adapter modifies FFN weights that produce the suppressed logits; bypasses output-level bias that RAG cannot."
+    },
+    {
+      "condition": "C4_adapter_plus_engram",
+      "description": "D2L adapter + mean-pooled layer-16 engram as soft prefix",
+      "names_top1": "C3 + 5-15pp",
+      "plot_top1": "C3 + 5-15pp",
+      "name_token_rate": "C3 - 5-10pp",
+      "reasoning": "Engram prefix orients query trajectory toward the adapter-warped region of the manifold."
+    },
+    {
+      "condition": "C5_adapter_plus_context",
+      "description": "D2L adapter + source passage in context",
+      "names_top1": "C3 +/- 5pp",
+      "plot_top1": "C3 +/- 5pp",
+      "name_token_rate": "similar to C3",
+      "reasoning": "Mostly redundant signal once adapter is present (paper showed small synergy)."
+    },
+    {
+      "condition": "C6_anti_suppression_prompt",
+      "description": "no adapter, no engram; prepend instruction not to emit <NAME>",
+      "names_top1": "5-15%",
+      "plot_top1": "0-5%",
+      "name_token_rate": "20-40%",
+      "reasoning": "Suppression partially defeatable by prompting; no Dickens content retrieved so plot facts still at floor."
+    }
+  ],
+  "strong_predictions": {
+    "C3_beats_C2_on_names_by_at_least_10pp": "D2L installs content at the manifold level (FFN weights), beating RAG which can only inject content at the prompt level and still gets routed through the suppressed output stage.",
+    "C4_strictly_greater_than_C3": "Engram prefix provides additional bias toward the adapter-warped trajectory region; if it doesn't help, the engram-as-bias framework's compositional claim needs revisiting."
+  },
+  "success_criteria_for_architectural_claims": {
+    "C3_names_top1_above_30pct": "D2L installs above-floor content",
+    "C3_minus_C2_on_names_at_least_10pp": "manifold-level beats prompt-level on suppressed content",
+    "C4_strictly_greater_than_C3": "engram prefix provides additional signal"
+  }
+}
