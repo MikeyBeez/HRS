@@ -202,6 +202,20 @@ def check_match(answer, generation):
     return bool(clean_a) and clean_a in clean_g
 
 
+@torch.no_grad()
+def span_accuracy(model, passage_ids, split):
+    """Teacher-forced next-token accuracy on the REAL target span (tokens from `split` on).
+    How well the loaded adapter reproduces the passage's own later content."""
+    out = model(passage_ids[:, :-1], step=0)
+    preds = out.logits.argmax(-1)[0]                  # predicted tokens for positions 1..T-1
+    targets = passage_ids[0, 1:]
+    pos = torch.arange(1, passage_ids.shape[1], device=preds.device)
+    mask = pos >= split
+    if int(mask.sum()) == 0:
+        return 0.0
+    return float(((preds == targets) & mask).sum().item() / int(mask.sum()))
+
+
 # --- dataset: passkey-augmented WikiText passages ------------------------------
 def build_dataset(tokenizer):
     """Each item: {id, passage_ids, probe_ids, answer}.
@@ -213,7 +227,7 @@ def build_dataset(tokenizer):
     """
     from datasets import load_dataset
     rng = random.Random(SEED)
-    CTX = PASSAGE_LEN - 48                              # reserve room so the passkey sentence is never truncated off
+    CTX = 384                                           # real WikiText window; recall its OWN last 25%
 
     raw = load_dataset("wikitext", "wikitext-103-raw-v1", split="validation")
     all_ids = tokenizer.encode("\n".join(t for t in raw["text"] if t and t.strip()))
@@ -224,17 +238,16 @@ def build_dataset(tokenizer):
     for ctx_ids in windows:
         if len(items) >= N_PASSAGES:
             break
-        ctx_text = tokenizer.decode(ctx_ids, skip_special_tokens=True).strip()
-        if len(ctx_text) < 200:                        # skip near-empty windows
+        ids = ctx_ids[:PASSAGE_LEN]
+        ctx_text = tokenizer.decode(ids, skip_special_tokens=True).strip()
+        if len(ctx_text) < 400 or len(ids) < 128:      # need a real, content-rich window
             continue
-        key = "".join(str(rng.randint(0, 9)) for _ in range(5))
-        passage_text = f"{ctx_text} The pass key is {key}."
-        probe_text   = f"{ctx_text} The pass key is"
+        split = int(len(ids) * 0.75)                   # cue = first 75%; target = the REAL last 25%
         items.append({
             "id": used,
-            "passage_ids": torch.tensor(tokenizer.encode(passage_text)[:PASSAGE_LEN], dtype=torch.long),
-            "probe_ids":   torch.tensor(tokenizer.encode(probe_text)[:PASSAGE_LEN], dtype=torch.long),
-            "answer": key,
+            "passage_ids": torch.tensor(ids, dtype=torch.long),
+            "probe_ids":   torch.tensor(ids[:split], dtype=torch.long),
+            "split": split,
         })
         used += 1
 
@@ -320,7 +333,7 @@ def main():
 
     # 1) dataset -------------------------------------------------------------
     train_items, held_items = build_dataset(tokenizer)
-    print(f"[phase77] dataset: {len(train_items)} train / {len(held_items)} held-out passkey passages")
+    print(f"[phase77] dataset: {len(train_items)} train / {len(held_items)} held-out content passages (recall own last 25%)")
 
     # 2) absorb adapters + record (e_p, L5 key, adapter) ---------------------
     lora_keys, shapes = None, None
@@ -411,17 +424,15 @@ def main():
         routed = route(probe_t)
         routing_ok = (routed == library_index[("ho", it["id"])])
 
-        # (2) V-side content recall with the GENERATED adapter
+        # (2) content recall = teacher-forced accuracy on the REAL last 25% of the passage
+        passage_t = it["passage_ids"].unsqueeze(0).to(DEVICE)
+        split = it["split"]
         load_lora_state_dict(model, gen_sd)
-        gen_ids = generate_greedy(model, probe_t)
-        gen_txt = tokenizer.decode(gen_ids[0, probe_t.shape[1]:], skip_special_tokens=True)
-        recall_gen = check_match(it["answer"], gen_txt)
-
-        # absorbed-adapter recall baseline
+        recall_gen = span_accuracy(model, passage_t, split)        # H-generated adapter
         load_lora_state_dict(model, it["adapter_sd"])
-        abs_ids = generate_greedy(model, probe_t)
-        abs_txt = tokenizer.decode(abs_ids[0, probe_t.shape[1]:], skip_special_tokens=True)
-        recall_abs = check_match(it["answer"], abs_txt)
+        recall_abs = span_accuracy(model, passage_t, split)        # absorbed adapter (memorized)
+        reset_lora_fresh(model)
+        recall_base = span_accuracy(model, passage_t, split)       # no adapter = base-LM floor
 
         # (3) weight-space K-third vs V-third alignment (generated vs absorbed)
         gen_kv = kv_thirds(gen_sd, d_model)
@@ -431,8 +442,8 @@ def main():
 
         records.append({
             "id": it["id"], "routing_ok": bool(routing_ok),
-            "recall_gen": bool(recall_gen), "recall_abs": bool(recall_abs),
-            "k_align": k_al, "v_align": v_al, "gen": gen_txt[:60],
+            "recall_gen": recall_gen, "recall_abs": recall_abs, "recall_base": recall_base,
+            "k_align": k_al, "v_align": v_al,
         })
 
     # 6) aggregate + save ----------------------------------------------------
@@ -442,11 +453,13 @@ def main():
         "routing_recovery": sum(r["routing_ok"] for r in records) / n,
         "recall_generated": sum(r["recall_gen"] for r in records) / n,
         "recall_absorbed": sum(r["recall_abs"] for r in records) / n,
+        "recall_base": sum(r["recall_base"] for r in records) / n,
         "k_align_mean": float(np.mean([r["k_align"] for r in records])),
         "v_align_mean": float(np.mean([r["v_align"] for r in records])),
         "svd_k": SVD_K, "svd_explained": explained,
     }
-    agg["delta_recovery_pts"] = 100.0 * (agg["routing_recovery"] - agg["recall_generated"])
+    agg["lift_generated"] = agg["recall_generated"] - agg["recall_base"]   # the real signal: does H beat base?
+    agg["lift_absorbed"] = agg["recall_absorbed"] - agg["recall_base"]
     agg["delta_weight_align"] = agg["k_align_mean"] - agg["v_align_mean"]
     print("[phase77] RESULTS:", json.dumps(agg, indent=2))
 
