@@ -70,6 +70,7 @@ H_STEPS      = int(os.environ.get("H_STEPS", "4000"))
 H_LR         = 1e-3
 H_WD         = float(os.environ.get("H_WD", "0.0"))          # weight decay (regularization)
 BEHAVIORAL_W = float(os.environ.get("BEHAVIORAL_W", "0.0"))  # optional behavioral loss weight
+SHARED_A     = os.environ.get("SHARED_A", "0") == "1"        # one frozen A for all adapters; only B varies per passage
 
 BASE_CKPT    = HRS_ROOT / "results" / "v22_learned_kernel" / "best.pt"
 OUT_DIR      = HRS_ROOT / "results" / "identity_ae" / "phase77"
@@ -83,6 +84,8 @@ L45_TARGETS = [
 ]
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+_SHARED_A = None   # set in main() when SHARED_A: {param_name: the one frozen A tensor}, shared by every adapter
 
 
 # --- base model ----------------------------------------------------------------
@@ -114,11 +117,14 @@ def load_lora_state_dict(model, state_dict):
 
 
 def reset_lora_fresh(model):
-    """Re-init A ~ N(0, 0.01), zero B - an independent blank adapter per passage."""
+    """Zero B. In shared-A mode restore the one frozen A; else re-randomize A per passage."""
     with torch.no_grad():
         for n, p in model.named_parameters():
             if "lora_A" in n:
-                p.normal_(0.0, 0.01)
+                if _SHARED_A is not None:
+                    p.copy_(_SHARED_A[n])
+                else:
+                    p.normal_(0.0, 0.01)
             elif "lora_B" in n:
                 p.zero_()
 
@@ -126,7 +132,10 @@ def reset_lora_fresh(model):
 # --- absorption (from phase21_per_passage_adapters) ----------------------------
 def absorb_adapter(model, ids_t, n_steps=N_STEPS, high_lr=HIGH_LR, base_lr=BASE_LR):
     reset_lora_fresh(model)
-    params = [p for n, p in model.named_parameters() if "lora_" in n and p.requires_grad]
+    if _SHARED_A is not None:
+        params = [p for n, p in model.named_parameters() if "lora_B" in n]   # A frozen+shared; only B trains
+    else:
+        params = [p for n, p in model.named_parameters() if "lora_" in n and p.requires_grad]
     opt = torch.optim.Adam(params, lr=high_lr)
     sched = torch.optim.lr_scheduler.StepLR(opt, step_size=max(1, n_steps // 2), gamma=base_lr / high_lr)
     model.train()
@@ -277,6 +286,7 @@ class HyperNet(nn.Module):
 
 
 def main():
+    global _SHARED_A
     random.seed(SEED)
     np.random.seed(SEED)
     torch.manual_seed(SEED)
@@ -288,6 +298,12 @@ def main():
     d_model = cfg.model.d_model
     n_lora = apply_lora(model, rank=RANK, alpha=RANK * 2, target_modules=L45_TARGETS)
     print(f"[phase77] applied {n_lora} LoRA layers (rank {RANK}) on L4/L5; d_model={d_model}")
+    if SHARED_A:
+        _SHARED_A = {n: p.detach().clone() for n, p in model.named_parameters() if "lora_A" in n}
+        for n, p in model.named_parameters():
+            if "lora_A" in n:
+                p.requires_grad_(False)
+        print(f"[phase77] SHARED-A mode: one frozen A shared by all {len(_SHARED_A)} A-matrices; only B varies")
 
     # 1) dataset -------------------------------------------------------------
     train_items, held_items = build_dataset(tokenizer)
