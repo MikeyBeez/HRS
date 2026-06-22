@@ -68,6 +68,7 @@ SVD_K        = int(os.environ.get("SVD_K", "128"))        # adapter-basis dimens
 H_HIDDEN     = int(os.environ.get("H_HIDDEN", "512"))
 H_STEPS      = int(os.environ.get("H_STEPS", "4000"))
 H_LR         = 1e-3
+H_WD         = float(os.environ.get("H_WD", "0.0"))          # weight decay (regularization)
 BEHAVIORAL_W = float(os.environ.get("BEHAVIORAL_W", "0.0"))  # optional behavioral loss weight
 
 BASE_CKPT    = HRS_ROOT / "results" / "v22_learned_kernel" / "best.pt"
@@ -339,21 +340,28 @@ def main():
     # 4) train H: e_p -> coeffs ---------------------------------------------
     E = torch.stack([it["e_p"] for it in train_items]).to(DEVICE)
     C = torch.cat([to_coeffs(it["adapter_vec"]) for it in train_items]).to(DEVICE)
+    E_held = torch.stack([it["e_p"] for it in held_items]).to(DEVICE)
+    C_held = torch.cat([to_coeffs(it["adapter_vec"]) for it in held_items]).to(DEVICE)
     H = HyperNet(d_model, SVD_K, H_HIDDEN).to(DEVICE)
-    opt = torch.optim.Adam(H.parameters(), lr=H_LR)
+    opt = torch.optim.Adam(H.parameters(), lr=H_LR, weight_decay=H_WD)
+    best_held = float("inf")
     for step in range(H_STEPS):
         pred = H(E)
         loss = F.mse_loss(pred, C)
         opt.zero_grad(); loss.backward(); opt.step()
-        if step % 500 == 0:
-            print(f"[phase77] H step {step} mse {loss.item():.4f}")
+        if step % 500 == 0 or step == H_STEPS - 1:
+            with torch.no_grad():
+                held_mse = F.mse_loss(H(E_held), C_held).item()
+            best_held = min(best_held, held_mse)
+            print(f"[phase77] H step {step} train_mse {loss.item():.5f} held_mse {held_mse:.5f}")
+    print(f"[phase77] H done: final train fit vs best held_mse {best_held:.5f} (gap = overfit signal)")
     torch.save({"state_dict": H.state_dict(), "svd_k": SVD_K}, HRS_ROOT / "models" / "phase77_hypernet.pt")
 
     # 5) evaluate on held-out -----------------------------------------------
     @torch.no_grad()
     def route(probe_t):
         reset_lora_fresh(model)
-        e = l0_mean(model, probe_t).to(library_l5.device)
+        e = l5_mean(model, probe_t).to(library_l5.device)   # same space as library L5 keys (was l0 w/o the projection W -> bug)
         sim = F.normalize(e.unsqueeze(0), dim=-1) @ F.normalize(library_l5, dim=-1).T
         return int(sim.argmax().item())
 
