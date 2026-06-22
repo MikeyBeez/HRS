@@ -188,21 +188,21 @@ def build_dataset(tokenizer):
     answer  = <KEY>
     The unique context routes; the held-out KEY is what recall tests.
     """
+    from datasets import load_dataset
     rng = random.Random(SEED)
-    splits, _ = load_wikitext("wikitext-103", seq_len=PASSAGE_LEN)
-    val = splits["validation"]
-    order = list(range(len(val)))
-    rng.shuffle(order)
+    CTX = PASSAGE_LEN - 48                              # reserve room so the passkey sentence is never truncated off
+
+    raw = load_dataset("wikitext", "wikitext-103-raw-v1", split="validation")
+    all_ids = tokenizer.encode("\n".join(t for t in raw["text"] if t and t.strip()))
+    windows = [all_ids[i:i + CTX] for i in range(0, len(all_ids) - CTX, CTX)]
+    rng.shuffle(windows)
 
     items, used = [], 0
-    for idx in order:
+    for ctx_ids in windows:
         if len(items) >= N_PASSAGES:
             break
-        seq = val[idx]
-        seq = seq[0] if isinstance(seq, (tuple, list)) else seq
-        ctx_ids = seq[:PASSAGE_LEN].tolist()
         ctx_text = tokenizer.decode(ctx_ids, skip_special_tokens=True).strip()
-        if len(ctx_text) < 200:                       # skip near-empty wikitext rows
+        if len(ctx_text) < 200:                        # skip near-empty windows
             continue
         key = "".join(str(rng.randint(0, 9)) for _ in range(5))
         passage_text = f"{ctx_text} The pass key is {key}."
