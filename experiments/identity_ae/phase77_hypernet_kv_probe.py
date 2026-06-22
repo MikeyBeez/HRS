@@ -71,6 +71,7 @@ H_LR         = 1e-3
 H_WD         = float(os.environ.get("H_WD", "0.0"))          # weight decay (regularization)
 BEHAVIORAL_W = float(os.environ.get("BEHAVIORAL_W", "0.0"))  # optional behavioral loss weight
 SHARED_A     = os.environ.get("SHARED_A", "0") == "1"        # one frozen A for all adapters; only B varies per passage
+COND_ON      = os.environ.get("COND_ON", "probe")             # H input: probe (old) | passage_mean | passage_last
 
 BASE_CKPT    = HRS_ROOT / "results" / "v22_learned_kernel" / "best.pt"
 OUT_DIR      = HRS_ROOT / "results" / "identity_ae" / "phase77"
@@ -168,6 +169,18 @@ def l5_mean(model, ids_t):
         if i == 5:
             break
     return h.mean(dim=1).squeeze(0).detach().float().cpu()   # (D,)
+
+
+@torch.no_grad()
+def l5_last(model, ids_t):
+    """Last-token hidden state at layer 5 of the FULL passage (has attended over the passkey)."""
+    h = model.drop(model.tok_emb(ids_t))
+    eb = model.engram_buffer if model._engram_buffer_initialized else None
+    for i, block in enumerate(model.blocks):
+        h, _, _, _ = block(h, step=0, engram_buffer=eb)
+        if i == 5:
+            break
+    return h[:, -1, :].squeeze(0).detach().float().cpu()   # (D,)
 
 
 # --- greedy generation + recall metric (from phase27/per_passage_dickens) ------
@@ -322,7 +335,12 @@ def main():
             lora_keys = sorted(sd.keys())
             shapes = {k: tuple(sd[k].shape) for k in lora_keys}
         torch.save(sd, ADAPTER_DIR / f"adapter_{tag}_{item['id']:03d}.pt")
-        item["e_p"] = l0_mean(model, probe_t)            # routing input (probe L0)
+        if COND_ON == "passage_last":
+            item["e_p"] = l5_last(model, ids_t)          # full passage, last-token L5 (passkey IS in the input)
+        elif COND_ON == "passage_mean":
+            item["e_p"] = l5_mean(model, ids_t)          # full passage, L5 mean
+        else:
+            item["e_p"] = l0_mean(model, probe_t)        # probe L0 (old; passkey NOT in input)
         item["adapter_vec"] = flatten_adapter(sd, lora_keys)
         item["adapter_sd"] = sd
         # stored routing key for the whole library = passage L5 mean (blank adapter)
