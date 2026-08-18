@@ -1,0 +1,218 @@
+"""
+Walk the results/ directory and produce a structured inventory of every
+experiment with results files. Output is a single Markdown document that
+lists each experiment with its configuration, numerical results, and the
+file path. No interpretation, just transcription.
+
+Usage:
+    python scripts/build_experiment_inventory.py > EXPERIMENT_INVENTORY.md
+
+Reads:
+    results/identity_ae/phase*/  (phase numbered experiments)
+    experiments/*/results/       (named experiment results)
+    Any *.json or RESULT.md files in those directories.
+
+Writes to stdout. Redirect to a file.
+"""
+
+import json
+import os
+import sys
+from pathlib import Path
+
+
+REPO_ROOT = Path("/Users/bard/Code/HRS")
+
+
+def is_results_dir(path):
+    """A directory counts as a results dir if it contains any .json or .md files."""
+    if not path.is_dir():
+        return False
+    for f in path.iterdir():
+        if f.suffix in {".json", ".md"}:
+            return True
+    return False
+
+
+def load_json_safe(path):
+    try:
+        with open(path) as f:
+            return json.load(f)
+    except Exception as e:
+        return {"_load_error": str(e)}
+
+
+def read_text_safe(path, max_chars=4000):
+    try:
+        with open(path) as f:
+            text = f.read()
+        if len(text) > max_chars:
+            return text[:max_chars] + f"\n... (truncated, full length {len(text)} chars)"
+        return text
+    except Exception as e:
+        return f"_read_error: {e}"
+
+
+def summarize_json(data, depth=0, max_depth=3):
+    """Recursively summarize JSON: keys at top, sample values, numerical results."""
+    lines = []
+    indent = "  " * depth
+    if isinstance(data, dict):
+        for key, value in data.items():
+            if isinstance(value, (dict, list)) and depth < max_depth:
+                lines.append(f"{indent}{key}:")
+                lines.extend(summarize_json(value, depth + 1, max_depth))
+            elif isinstance(value, (int, float)):
+                lines.append(f"{indent}{key}: {value}")
+            elif isinstance(value, str):
+                if len(value) > 200:
+                    lines.append(f"{indent}{key}: <string, {len(value)} chars>")
+                else:
+                    lines.append(f"{indent}{key}: {value!r}")
+            elif isinstance(value, list):
+                if len(value) == 0:
+                    lines.append(f"{indent}{key}: []")
+                elif all(isinstance(x, (int, float)) for x in value):
+                    if len(value) <= 10:
+                        lines.append(f"{indent}{key}: {value}")
+                    else:
+                        lines.append(f"{indent}{key}: [{value[0]}, ..., {value[-1]}] ({len(value)} items)")
+                else:
+                    lines.append(f"{indent}{key}: <list, {len(value)} items>")
+                    if depth < max_depth and len(value) > 0:
+                        lines.extend(summarize_json(value[0], depth + 1, max_depth))
+            else:
+                lines.append(f"{indent}{key}: {value}")
+    elif isinstance(data, list):
+        if len(data) > 0 and depth < max_depth:
+            lines.append(f"{indent}<list of {len(data)} items, first shown>:")
+            lines.extend(summarize_json(data[0], depth + 1, max_depth))
+    else:
+        lines.append(f"{indent}{data}")
+    return lines
+
+
+def process_results_dir(results_dir, label):
+    """Process one results directory and yield Markdown lines for it."""
+    out = []
+    out.append(f"## {label}")
+    out.append("")
+    out.append(f"**Path:** `{results_dir.relative_to(REPO_ROOT)}`")
+    out.append("")
+
+    json_files = sorted(results_dir.glob("*.json"))
+    md_files = sorted(results_dir.glob("*.md"))
+    other_files = [f for f in results_dir.iterdir() if f.is_file() and f.suffix not in {".json", ".md"}]
+
+    for jf in json_files:
+        out.append(f"### {jf.name}")
+        out.append("")
+        data = load_json_safe(jf)
+        if "_load_error" in data:
+            out.append(f"_Could not load: {data['_load_error']}_")
+        else:
+            out.append("```")
+            out.extend(summarize_json(data))
+            out.append("```")
+        out.append("")
+
+    for mf in md_files:
+        out.append(f"### {mf.name}")
+        out.append("")
+        out.append("```")
+        out.append(read_text_safe(mf, max_chars=3000))
+        out.append("```")
+        out.append("")
+
+    if other_files:
+        out.append("**Other files in this directory:**")
+        for f in other_files:
+            out.append(f"- `{f.name}` ({f.stat().st_size} bytes)")
+        out.append("")
+
+    return out
+
+
+def main():
+    out = []
+    out.append("# HRS Experiment Inventory")
+    out.append("")
+    out.append("Auto-generated structured catalog of every experiment with results.")
+    out.append("Each entry lists the file path, configuration, and numerical results.")
+    out.append("No interpretation — read the original files for context.")
+    out.append("")
+    out.append("Generated by `scripts/build_experiment_inventory.py`.")
+    out.append("")
+    out.append("---")
+    out.append("")
+
+    # Section 1: identity_ae phase experiments (numbered phases)
+    out.append("# Part 1: Phase-Numbered Experiments (results/identity_ae/)")
+    out.append("")
+    phase_root = REPO_ROOT / "results" / "identity_ae"
+    if phase_root.exists():
+        phase_dirs = sorted(
+            [d for d in phase_root.iterdir() if d.is_dir()],
+            key=lambda d: (
+                int("".join(c for c in d.name if c.isdigit()) or "9999"),
+                d.name,
+            ),
+        )
+        for pd in phase_dirs:
+            if is_results_dir(pd):
+                out.extend(process_results_dir(pd, f"Phase: {pd.name}"))
+                out.append("---")
+                out.append("")
+
+    # Section 2: named experiments under experiments/*/results/
+    out.append("# Part 2: Named Experiments (experiments/*/)")
+    out.append("")
+    exp_root = REPO_ROOT / "experiments"
+    if exp_root.exists():
+        for exp_dir in sorted(exp_root.iterdir()):
+            if not exp_dir.is_dir():
+                continue
+            results_subdir = exp_dir / "results"
+            if results_subdir.exists() and is_results_dir(results_subdir):
+                out.extend(process_results_dir(results_subdir, f"Experiment: {exp_dir.name}"))
+                out.append("---")
+                out.append("")
+            elif is_results_dir(exp_dir):
+                # Some experiments may put results at the top level
+                out.extend(process_results_dir(exp_dir, f"Experiment: {exp_dir.name}"))
+                out.append("---")
+                out.append("")
+
+    # Section 3: top-level results/ files (non-identity_ae)
+    out.append("# Part 3: Other Top-Level Results (results/)")
+    out.append("")
+    top_results = REPO_ROOT / "results"
+    if top_results.exists():
+        for d in sorted(top_results.iterdir()):
+            if d.is_dir() and d.name != "identity_ae" and is_results_dir(d):
+                out.extend(process_results_dir(d, f"Results: {d.name}"))
+                out.append("---")
+                out.append("")
+
+        # Loose JSON files at the top of results/
+        loose_jsons = sorted(top_results.glob("*.json"))
+        if loose_jsons:
+            out.append("## Loose result files at results/")
+            out.append("")
+            for jf in loose_jsons:
+                out.append(f"### {jf.name}")
+                out.append("")
+                data = load_json_safe(jf)
+                if "_load_error" in data:
+                    out.append(f"_Could not load: {data['_load_error']}_")
+                else:
+                    out.append("```")
+                    out.extend(summarize_json(data))
+                    out.append("```")
+                out.append("")
+
+    print("\n".join(out))
+
+
+if __name__ == "__main__":
+    main()
