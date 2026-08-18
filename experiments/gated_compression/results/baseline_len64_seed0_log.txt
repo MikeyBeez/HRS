@@ -1,0 +1,33 @@
+Loading WT103 ...
+  train: 118,495,745  val: 248,321
+Baseline_64 params: 17,867,008
+  step     1/5000  loss=10.857  elapsed=0s
+  step   200/5000  loss=6.872  elapsed=5s
+  step   400/5000  loss=6.316  elapsed=10s
+  step   600/5000  loss=6.176  elapsed=15s
+  step   800/5000  loss=6.057  elapsed=20s
+  step  1000/5000  loss=5.827  elapsed=25s
+  step  1200/5000  loss=5.784  elapsed=29s
+  step  1400/5000  loss=5.845  elapsed=34s
+  step  1600/5000  loss=5.535  elapsed=39s
+  step  1800/5000  loss=5.471  elapsed=44s
+  step  2000/5000  loss=5.592  elapsed=49s
+  step  2200/5000  loss=5.624  elapsed=54s
+  step  2400/5000  loss=5.359  elapsed=58s
+  step  2600/5000  loss=5.550  elapsed=63s
+  step  2800/5000  loss=5.471  elapsed=68s
+  step  3000/5000  loss=5.378  elapsed=73s
+  step  3200/5000  loss=5.175  elapsed=78s
+  step  3400/5000  loss=5.084  elapsed=83s
+  step  3600/5000  loss=5.032  elapsed=87s
+  step  3800/5000  loss=5.146  elapsed=92s
+  step  4000/5000  loss=5.099  elapsed=97s
+  step  4200/5000  loss=5.149  elapsed=102s
+  step  4400/5000  loss=5.070  elapsed=107s
+  step  4600/5000  loss=5.139  elapsed=112s
+  step  4800/5000  loss=5.133  elapsed=116s
+  step  5000/5000  loss=5.178  elapsed=121s
+  baseline_64 std-LM:  loss=5.103  ppl=164.59
+  baseline_64 at_ratio=2:  loss=5.101  ppl=164.12
+Saved /mnt/data/Code/HRS/experiments/gated_compression/checkpoints/baseline_len64_seed0.pt
+Saved /mnt/data/Code/HRS/experiments/gated_compression/results/train_baseline_len64_seed0.json

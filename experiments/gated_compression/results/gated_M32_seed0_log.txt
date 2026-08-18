@@ -1,0 +1,37 @@
+Loading WT103 ...
+  train: 118,495,745  val: 248,321
+Gated model params: 17,613,056  M=32
+  step     1/5000  len=  16  loss=10.887  elapsed=0s
+  step   200/5000  len=1024  loss=7.667  elapsed=4s
+  step   400/5000  len=1024  loss=7.099  elapsed=7s
+  step   600/5000  len=1024  loss=7.422  elapsed=11s
+  step   800/5000  len=1024  loss=6.993  elapsed=14s
+  step  1000/5000  len=1024  loss=7.336  elapsed=18s
+  step  1200/5000  len=1024  loss=7.517  elapsed=21s
+  step  1400/5000  len=1024  loss=6.690  elapsed=25s
+  step  1600/5000  len=1024  loss=7.889  elapsed=28s
+  step  1800/5000  len=1024  loss=7.086  elapsed=31s
+  step  2000/5000  len=1024  loss=6.866  elapsed=35s
+  step  2200/5000  len=1024  loss=7.496  elapsed=38s
+  step  2400/5000  len=1024  loss=7.128  elapsed=42s
+  step  2600/5000  len=1024  loss=6.805  elapsed=45s
+  step  2800/5000  len=1024  loss=7.146  elapsed=48s
+  step  3000/5000  len=1024  loss=7.412  elapsed=52s
+  step  3200/5000  len=1024  loss=6.879  elapsed=55s
+  step  3400/5000  len=1024  loss=6.696  elapsed=59s
+  step  3600/5000  len=1024  loss=6.941  elapsed=62s
+  step  3800/5000  len=1024  loss=7.402  elapsed=66s
+  step  4000/5000  len=1024  loss=6.828  elapsed=69s
+  step  4200/5000  len=1024  loss=6.874  elapsed=72s
+  step  4400/5000  len=1024  loss=7.159  elapsed=76s
+  step  4600/5000  len=1024  loss=7.072  elapsed=80s
+  step  4800/5000  len=1024  loss=7.045  elapsed=83s
+  step  5000/5000  len=1024  loss=6.963  elapsed=87s
+
+Final eval at each length:
+  len=  16  loss=0.700  ppl=2.01
+  len=  64  loss=6.073  ppl=434.14
+  len= 256  loss=6.558  ppl=704.98
+  len=1024  loss=6.883  ppl=975.90
+Saved /mnt/data/Code/HRS/experiments/gated_compression/checkpoints/gated_M32_seed0.pt
+Saved /mnt/data/Code/HRS/experiments/gated_compression/results/train_gated_M32_seed0.json
